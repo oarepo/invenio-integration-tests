@@ -25,7 +25,7 @@ before_install:
   - "sudo service postgresql stop"
 
 install:
-  - "./scripts/bootstrap.sh"
+  - "./scripts/bootstrap"
 
 script:
-  - ./scripts/test.sh
+  - ./run_tests.sh
