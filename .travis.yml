@@ -5,8 +5,10 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-sudo: true
-
+language: python
+python:
+  - "3.8"
+  
 notifications:
   email: # sent to the committer and the author
     on_success: never # default: always
@@ -16,9 +18,6 @@ env:
   global:
     - E2E=no
 
-python:
-  - "3.8"
-  
 before_install:
   # Stop default travis services
   - "sudo service mysql stop"
