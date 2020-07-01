@@ -8,12 +8,10 @@
 
 set -e
 
-echo "invenio-integration-tests/run_tests.sh"
+EXTRAS=$1
 
-echo ".requirements.txt:"
-cat .requirements.txt
-
-echo "invenio shell:"
-invenio shell --simple-prompt -c "app.config['THEME_SITENAME']"
+pip install --upgrade pip setuptools py
+pip install requirements-builder
+requirements-builder -e $EXTRAS setup.py > .requirements.txt
 
 exit 0

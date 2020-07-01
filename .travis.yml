@@ -12,19 +12,36 @@ python:
 notifications:
   email: # sent to the committer and the author
     on_success: never # default: always
-    on_failure: always # default: always
+    on_failure: never # default: always   #TODO: change to always
+
+branches:
+  only:
+  - master
 
 env:
   global:
     - E2E=no
+  matrix:
+    - REQUIREMENTS=test EXTRAS=invenio3.2
+
+cache: pip
+
+addons:
+  postgresql: 9.6
+
+services:
+  - postgresql
+  - redis
+  - rabbitmq
 
 before_install:
   # Stop default travis services
   - "sudo service mysql stop"
-  - "sudo service postgresql stop"
+  - "./scripts/init ${EXTRAS}"
 
 install:
   - "./scripts/bootstrap"
 
 script:
   - ./run_tests.sh
+
