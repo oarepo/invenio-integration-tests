@@ -13,5 +13,3 @@ EXTRAS=$1
 pip install --upgrade pip setuptools py
 pip install requirements-builder
 requirements-builder -e $EXTRAS setup.py > .requirements.txt
-
-exit 0

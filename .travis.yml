@@ -26,13 +26,13 @@ env:
 
 cache: pip
 
-addons:
-  postgresql: 9.6
+#addons:
+#  postgresql: 9.6
 
-services:
-  - postgresql
-  - redis
-  - rabbitmq
+#services:
+#  - postgresql
+#  - redis
+#  - rabbitmq
 
 before_install:
   # Stop default travis services

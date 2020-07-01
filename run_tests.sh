@@ -15,5 +15,3 @@ cat .requirements.txt
 
 echo "invenio shell:"
 invenio shell --simple-prompt -c "app.config"
-
-exit 0
