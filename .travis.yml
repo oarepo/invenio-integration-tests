@@ -45,3 +45,11 @@ install:
 script:
   - ./run_tests.sh
 
+deploy:
+  provider: releases
+  api_key:
+    secure: ${{ secrets.INVENIO_INTEGRATION_TESTS_TRAVIS }}
+  file: ".requirements.txt"
+  skip_cleanup: true
+  draft: true
+  overwrite: true
