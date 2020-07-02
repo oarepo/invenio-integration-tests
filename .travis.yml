@@ -47,8 +47,7 @@ script:
 
 deploy:
   provider: releases
-  api_key:
-    secure: ${{ secrets.INVENIO_INTEGRATION_TESTS_TRAVIS }}
+  api_key: ${{ secrets.INVENIO_INTEGRATION_TESTS_TRAVIS }}
   file: ".requirements.txt"
   skip_cleanup: true
   draft: true
