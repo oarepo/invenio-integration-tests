@@ -17,6 +17,6 @@ echo "invenio shell:"
 invenio shell --simple-prompt -c "app.config"
 
 echo "pip freeze"
-pip freeze > .requirements.txt
-echo ".requirements.txt:"
-cat .requirements.txt
+pip freeze > upload/requirements.txt
+echo "upload/requirements.txt:"
+cat upload/requirements.txt
