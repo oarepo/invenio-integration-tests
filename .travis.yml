@@ -47,7 +47,8 @@ script:
 
 deploy:
   provider: releases
-  api_key: ${{ secrets.INVENIO_INTEGRATION_TESTS_TRAVIS }}
+  api_key:
+    secure: "FJPw2IHfYg7L94ciiR9JsCnUdn3e0ZAVhdX8ZIRyYjIv/kK42IVgBq/Jy8L/u+yR+CtYDLL6crsOoRB3hnkSgDUfl+iiexzrzYgqUBNzY/eRWrFRras/kmDGz9AteYmYbxQEGPxGw8D8r1wLk/5ABki5Em09BD9vORWGsB0tJeAYJdbHEXc1j+VZjGoZjxXMXE7sEX3PIaZgHXkP+idIrmiwgcFgRGAersvOA9ZKlY2FRhujPAA3rfCexzF2HimZb2LMLm18usGpdCx9LLqOnWs/VVgM6la2yTONWopMCZJlxynwwEWVuHzFKlLCPYjnXc+LohtTZ9usYEm2WsnzXx5cf4XdLcj4CHwJBihI1f3XD4aslyvPkF85J5RtcBQ5cUVvYnKltpkQRVhHCj8JDtofUTa/i/aBvR0hPwdCJqT9jqdd6FWQPJhralIlv7b00ZDu0+A/6xT5GlLyix0uYJ4WeEk18rxk2fgRSB/gLaj3YLHBcrCVObTDMdUBLB3KESrQqndkuUYgRf8dwZWqMpbQ9ZFs8R8kiW5Sl/IiyCDETrzK0XeIEFrZU0DLXIw7VDpH3G4J+XCFqOptASm8W8QQhhefZYoA/FdlEhN0q/BNg4Ju27LrAPOxAayZw3DC+m7Ng9/ppAtpMDmvEjZ85G2F1nDoIoCQVz4EsSWYY0k="
   file: ".requirements.txt"
   skip_cleanup: true
   draft: true
