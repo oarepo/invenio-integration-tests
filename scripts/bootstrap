@@ -8,4 +8,4 @@
 
 set -e
 
-pip install -r .requirements.txt
+pip install -r .travis-requirements.txt

@@ -10,8 +10,13 @@ set -e
 
 echo "invenio-integration-tests/run_tests.sh"
 
-echo ".requirements.txt:"
-cat .requirements.txt
+echo ".travis-requirements.txt:"
+cat .travis-requirements.txt
 
 echo "invenio shell:"
 invenio shell --simple-prompt -c "app.config"
+
+echo "pip freeze"
+pip freeze > .requirements.txt
+echo ".requirements.txt:"
+cat .requirements.txt
