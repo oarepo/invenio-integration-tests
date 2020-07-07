@@ -16,7 +16,10 @@ readme = open('README.md').read()
 
 extras_require = {
     'invenio3.2': [
-        'invenio[base]>=3.2.1<3.3.0',
+        'invenio[base]>=3.2.0<3.3.0',
+    ],
+    'invenio3.3': [
+        'invenio[base]>=3.3.0<3.4.0',
     ],
 }
 
