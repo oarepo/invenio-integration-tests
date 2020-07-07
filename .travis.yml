@@ -21,6 +21,7 @@ branches:
 env:
   global:
     - E2E=no
+    - secure: E4CzGkIoeGazRYvQ+scacn1bEkS/TRBcAAM4DFWrFU3wZ+1QEkRqO7pFOO93TjLkJn40xyq/4RXSKV9bihpSFx/pWNN2kZXTYkTQBoMH88+himwBMFQmbzMKfdlFW5Wn2C+hJaEgoCKS1IeVwbv7hSPaqRQzdMbcJuM3PRanfu111xxAtRh/5kktHwLz3r7Ei93B+QpfrBjuUgWm4HZ704ysNZxZ++3FDWBMUf1w6Syn67P8SIgHkK7g51yvGZEMHO1BkIZeKPxFJ8ndnCWobbvqedsELocfZ110+zelOymGD/o+znGGTS/TBfgsuPXSR5825obBN7yoU/SPT5yQJJLMd4BI9cV3ZpVV6hozne9jf4hgXHH/y4TOjyzf3TM0RAiPheHZPOD0Ls6Esb1KiYg3SMFcqiBjtf5/iNDMcneLSeIWQ6XK3tR7YBcqjW3lrYSkBpuFh/IQstEfnovuJj9gcZrb5imfaYdh7bg7Q1MF245Dot+RyNNp3FZCQP7mKFDVi5OABgmogzc5nOAQXL+YRqcwD8110cisG/n4YG9XvjNz4FtHNYxV9RycKnIkPiWekwAWKOVDUGYyZvifwPdF18ZNer/Jm1896T9aDvmBQyCrhTfdmJMW2B8oP8+/axwq7jcFZeopFq4TwAxoBjt70TFy/bDcmL2a7lTnFCU=
   matrix:
     - REQUIREMENTS=test EXTRAS=invenio3.2
 
@@ -45,11 +46,5 @@ install:
 script:
   - ./run_tests.sh
 
-deploy:
-  provider: releases
-  api_key:
-    secure: "pYDiAmOE/S2GZuFxMOHluIEMriuKu09Ip9/DVN89WfkBKvGcSpsdBXZZWrrAjOQvTB1NEu/6TXJJx4oPlQnAUJP3+IHuFe74lMoBN92k6Ecu2BbLH3RDiUL3LJGL/wD756sIu2jTN9H1D0eO9ANF+9sjHk6off7DMz9jYdMGtuUByRdI0gOBsznMNGR9TLA8GcE068OJvg1aATzOJ8yAtX9GtiFsO0Tib7HvOyHSN3W+Bh8daT0x1prHObGBEbCmIyhiMlnufpBSmy/M6AeoaRqARLGFoaS9Gri9ZNVdHAHsFY0vhEKbFTG6iU4ClE/dYVj97U6ch5IykcCRONRUiEVGlLbDKbyTo/C63X+RbA+D6MpWSE8HqPxPWfEW+NJjGrMIstBMk4MWD6LFall/IuVD9M1z/Ck+7L/towDpsplXiMI+5/Lpbtr8DlFYoLhWNekWP8mPFkfl5KM3b5nWpuC/QIUZItt4xeMgqmLzIjpgKfDbVNLFOM3TRGU62sQB/DKyWqbyTbJ697ISGfw/N91aAy7UMAqxFWxBojqnCsFPCsALT+59ESk8I1qEH11j6oaJJrY6ayfFenarvAWlMyXxMWVV9d9Rz1YEjYxJoZsla00SfaJzhOWaNw00EExs7v4uWEEzwcC35YBA3wpJ/tg9J14Q7QIu3dloY03Uo5U="
-  file: "upload/requirements.txt"
-  skip_cleanup: true
-  draft: true
-  overwrite: true
+after_success:
+  - ./scripts/travis-push.sh
