@@ -14,7 +14,9 @@ echo ".travis-requirements.txt:"
 cat .travis-requirements.txt
 
 echo "invenio shell:"
-invenio shell --simple-prompt -c "from invenio import __version__; __version__"
+invenio shell --simple-prompt -c "app.config"
+VER=$(invenio shell --simple-prompt -c "from invenio import __version__; __version__")
+echo "invenio version: $VER"
 
 echo "pip freeze"
 pip freeze > upload/requirements-py${TRAVIS_PYTHON_VERSION}-${REQUIREMENTS}.txt
