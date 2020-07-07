@@ -45,15 +45,11 @@ install:
 script:
   - ./run_tests.sh
 
-before_deploy:
-  - git config --local user.name "travis"
-  - git config --local user.email "hlava@cesnet.cz"
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG
-
 deploy:
-  provider: script
-  script: git add upload/requirements.txt && git commit -m 'travis upload' && git push origin master
+  provider: releases
+  api_key:
+    secure: "pYDiAmOE/S2GZuFxMOHluIEMriuKu09Ip9/DVN89WfkBKvGcSpsdBXZZWrrAjOQvTB1NEu/6TXJJx4oPlQnAUJP3+IHuFe74lMoBN92k6Ecu2BbLH3RDiUL3LJGL/wD756sIu2jTN9H1D0eO9ANF+9sjHk6off7DMz9jYdMGtuUByRdI0gOBsznMNGR9TLA8GcE068OJvg1aATzOJ8yAtX9GtiFsO0Tib7HvOyHSN3W+Bh8daT0x1prHObGBEbCmIyhiMlnufpBSmy/M6AeoaRqARLGFoaS9Gri9ZNVdHAHsFY0vhEKbFTG6iU4ClE/dYVj97U6ch5IykcCRONRUiEVGlLbDKbyTo/C63X+RbA+D6MpWSE8HqPxPWfEW+NJjGrMIstBMk4MWD6LFall/IuVD9M1z/Ck+7L/towDpsplXiMI+5/Lpbtr8DlFYoLhWNekWP8mPFkfl5KM3b5nWpuC/QIUZItt4xeMgqmLzIjpgKfDbVNLFOM3TRGU62sQB/DKyWqbyTbJ697ISGfw/N91aAy7UMAqxFWxBojqnCsFPCsALT+59ESk8I1qEH11j6oaJJrY6ayfFenarvAWlMyXxMWVV9d9Rz1YEjYxJoZsla00SfaJzhOWaNw00EExs7v4uWEEzwcC35YBA3wpJ/tg9J14Q7QIu3dloY03Uo5U="
+  file: "upload/requirements.txt"
   skip_cleanup: true
   draft: true
   overwrite: true
