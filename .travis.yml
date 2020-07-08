@@ -43,7 +43,7 @@ env:
 before_install:
   # Stop default travis services
   - "sudo service mysql stop"
-  - "psql -c 'CREATE DATABASE invenio;' -U postgres"
+#  - "psql -c 'CREATE DATABASE invenio;' -U postgres"
   - "./scripts/init ${EXTRAS}"
 
 install:
