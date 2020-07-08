@@ -30,9 +30,7 @@ env:
 #    - REQUIREMENTS=devel EXTRAS=devel
 
 addons:
-  postgresql:
-    - "9.6"
-    - "10"
+  postgresql: 9.6
 
 #services:
 #  - postgresql
