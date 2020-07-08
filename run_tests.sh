@@ -13,24 +13,28 @@ echo "invenio-integration-tests/run_tests.sh"
 echo ".travis-requirements.txt:"
 cat .travis-requirements.txt
 
-echo "invenio shell:"
+echo -e "\ninvenio shell:"
 invenio shell --simple-prompt -c "app.config"
 
-echo "psql version:"
+echo -e "\npsql version:"
 psql --version
-echo "DB init, create:"
+echo "invenio db init,create:"
 invenio db init
 invenio db create
 # invenio >=3.3 only:
-# echo "user create:"
-# invenio users create -a noreply@cesnet.cz --password 112233
+if [ "${REQUIREMENTS}" != "invenio3.2" ] ; then
+  echo "user create:"
+  invenio users create -a noreply@cesnet.cz --password 112233
+fi
 
-echo "es version:"
-/tmp/elasticsearch/bin/elasticsearch --version
-echo "es:"
+echo -e "\nelasticsearch GET:"
 curl -sX GET "http://127.0.0.1:9200" || cat /tmp/local-es.log
+echo "invenio index init,check,list:"
+invenio index init
+invenio index check
+invenio index list
 
-echo "pip freeze"
+echo -e "\npip freeze"
 REQFILE="upload/requirements-py${TRAVIS_PYTHON_VERSION}-${REQUIREMENTS}.txt"
 pip freeze > $REQFILE
-grep -F -e invenio= -e invenio-base $REQFILE
+grep -F -e invenio= -e invenio-base -e invenio-search -e invenio-db $REQFILE
