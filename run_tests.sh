@@ -25,6 +25,11 @@ invenio db create
 # echo "user create:"
 # invenio users create -a noreply@cesnet.cz --password 112233
 
+echo "es:"
+curl -X GET "http://127.0.0.1:9200"
+echo "es version:"
+elasticsearch --version
+
 echo "pip freeze"
 REQFILE="upload/requirements-py${TRAVIS_PYTHON_VERSION}-${REQUIREMENTS}.txt"
 pip freeze > $REQFILE

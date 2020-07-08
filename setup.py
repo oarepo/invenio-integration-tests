@@ -16,13 +16,13 @@ readme = open('README.md').read()
 
 extras_require = {
     'invenio3.2': [
-        'invenio[base]>=3.2.0,<3.3.0',
+        'invenio[base,postgresql,elasticsearch7]>=3.2.0,<3.3.0',
     ],
     'invenio3.3': [
-        'invenio[base]>=3.3.0,<3.4.0',
+        'invenio[base,postgresql,elasticsearch7]>=3.3.0,<3.4.0',
     ],
     'devel': [
-        'invenio[base]',
+        'invenio[base,postgresql,elasticsearch7]',
     ],
 }
 
