@@ -18,7 +18,7 @@ notifications:
 branches:
   only:
   - master
-  - es7
+  - el7
 
 env:
   global:
