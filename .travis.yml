@@ -28,7 +28,7 @@ env:
   matrix:
     - REQUIREMENTS=invenio3.2 EXTRAS=invenio3.2 ES_URL=$ES7_DOWNLOAD_URL
     - REQUIREMENTS=invenio3.3 EXTRAS=invenio3.3 ES_URL=$ES7_DOWNLOAD_URL
-    - REQUIREMENTS=devel EXTRAS=devel
+    - REQUIREMENTS=devel EXTRAS=devel ES_URL=$ES7_DOWNLOAD_URL
 
 addons:
   postgresql: 9.6
