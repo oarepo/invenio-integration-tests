@@ -25,27 +25,25 @@ env:
     - E2E=no
     - secure: E4CzGkIoeGazRYvQ+scacn1bEkS/TRBcAAM4DFWrFU3wZ+1QEkRqO7pFOO93TjLkJn40xyq/4RXSKV9bihpSFx/pWNN2kZXTYkTQBoMH88+himwBMFQmbzMKfdlFW5Wn2C+hJaEgoCKS1IeVwbv7hSPaqRQzdMbcJuM3PRanfu111xxAtRh/5kktHwLz3r7Ei93B+QpfrBjuUgWm4HZ704ysNZxZ++3FDWBMUf1w6Syn67P8SIgHkK7g51yvGZEMHO1BkIZeKPxFJ8ndnCWobbvqedsELocfZ110+zelOymGD/o+znGGTS/TBfgsuPXSR5825obBN7yoU/SPT5yQJJLMd4BI9cV3ZpVV6hozne9jf4hgXHH/y4TOjyzf3TM0RAiPheHZPOD0Ls6Esb1KiYg3SMFcqiBjtf5/iNDMcneLSeIWQ6XK3tR7YBcqjW3lrYSkBpuFh/IQstEfnovuJj9gcZrb5imfaYdh7bg7Q1MF245Dot+RyNNp3FZCQP7mKFDVi5OABgmogzc5nOAQXL+YRqcwD8110cisG/n4YG9XvjNz4FtHNYxV9RycKnIkPiWekwAWKOVDUGYyZvifwPdF18ZNer/Jm1896T9aDvmBQyCrhTfdmJMW2B8oP8+/axwq7jcFZeopFq4TwAxoBjt70TFy/bDcmL2a7lTnFCU=
     - SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://postgres@localhost:5432/invenio"
+    - ES7_DOWNLOAD_URL="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
   matrix:
-    - REQUIREMENTS=invenio3.2 EXTRAS=invenio3.2
-    - REQUIREMENTS=invenio3.3 EXTRAS=invenio3.3
+    - REQUIREMENTS=invenio3.2 EXTRAS=invenio3.2 ES_URL=$ES7_DOWNLOAD_URL
+    - REQUIREMENTS=invenio3.3 EXTRAS=invenio3.3 ES_URL=$ES7_DOWNLOAD_URL
 #    - REQUIREMENTS=devel EXTRAS=devel
 
 addons:
   postgresql: 9.6
 
-services:
-  - elasticsearch
-#  - postgresql
-#  - redis
-#  - rabbitmq
+#services:
+#  - elasticsearch
 
 before_install:
   # Stop default travis services
   - "sudo service mysql stop"
-  - "./scripts/init ${EXTRAS}"
+  - ./scripts/init
 
 install:
-  - "./scripts/bootstrap"
+  - ./scripts/bootstrap
 
 script:
   - ./run_tests.sh
