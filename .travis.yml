@@ -30,10 +30,10 @@ env:
     - REQUIREMENTS=invenio3.3 EXTRAS=invenio3.3
 #    - REQUIREMENTS=devel EXTRAS=devel
 
-#addons:
-#  postgresql:
-#    - "9.6"
-#    - "10"
+addons:
+  postgresql:
+    - "9.6"
+    - "10"
 
 #services:
 #  - postgresql
@@ -43,7 +43,6 @@ env:
 before_install:
   # Stop default travis services
   - "sudo service mysql stop"
-#  - "psql -c 'CREATE DATABASE invenio;' -U postgres"
   - "./scripts/init ${EXTRAS}"
 
 install:
