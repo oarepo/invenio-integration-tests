@@ -27,8 +27,6 @@ env:
     - REQUIREMENTS=invenio3.2 EXTRAS=invenio3.2
     - REQUIREMENTS=invenio3.3 EXTRAS=invenio3.3
 
-cache: pip
-
 #addons:
 #  postgresql: 9.6
 
