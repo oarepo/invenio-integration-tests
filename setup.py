@@ -21,8 +21,8 @@ extras_require = {
     'invenio3.3': [
         'invenio[base]>=3.3.0,<3.4.0',
     ],
-    'head': [
-        'invenio[base]',
+    'devel': [
+        'invenio[base]>=3.4.0',
     ],
 }
 
