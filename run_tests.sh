@@ -18,6 +18,7 @@ invenio shell --simple-prompt -c "app.config"
 
 echo "psql version:"
 psql --version
+PSQL_VERSION=$(psql --version | sed 's/^psql \+(PostgreSQL) \+\([0-9.]\+\).*$/\1/')
 echo "DB init, create:"
 invenio db init
 invenio db create
@@ -25,5 +26,6 @@ echo "user create:"
 invenio users create -a noreply@cesnet.cz --password 112233
 
 echo "pip freeze"
-pip freeze > upload/requirements-py${TRAVIS_PYTHON_VERSION}-${REQUIREMENTS}.txt
-grep -F -e invenio= -e invenio-base upload/requirements-py${TRAVIS_PYTHON_VERSION}-${REQUIREMENTS}.txt
+REQFILE="upload/requirements-py${TRAVIS_PYTHON_VERSION}-psql${PSQL_VERSION}-${REQUIREMENTS}.txt"
+pip freeze > $REQFILE
+grep -F -e invenio= -e invenio-base $REQFILE
