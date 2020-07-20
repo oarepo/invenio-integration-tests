@@ -8,4 +8,6 @@
 
 set -e
 
-pip install --pre -r .travis-requirements.txt
+OPTS=""
+if [ "${REQUIREMENTS}" = "devel" ] ; then OPTS="--pre"; fi
+pip install $OPTS -r .travis-requirements.txt
