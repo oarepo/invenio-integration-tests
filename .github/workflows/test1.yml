@@ -38,5 +38,5 @@ jobs:
         echo test1 output2 line1
         git log -1 --stat upload
         git status
-        git brach -avv
+        git branch -avv
         #git diff --name-only HEAD^..HEAD
