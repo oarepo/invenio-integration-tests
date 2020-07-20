@@ -5,14 +5,16 @@ name: test1
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  #push:
-  #  branches: [ master ]
-  workflow_dispatch:
-    inputs:
-      txt:
-        decription: TXT_field
-        required: true
-        default: Lorem ipsum
+  push:
+#    branches: [ master ]
+    branches: [ actions-tests ]
+    paths: [ 'upload/*' ]
+  #workflow_dispatch:
+  #  inputs:
+  #    txt:
+  #      decription: TXT_field
+  #      required: true
+  #      default: Lorem ipsum
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
