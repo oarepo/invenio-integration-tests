@@ -53,14 +53,14 @@ invenio-search==1.2.4
 invenio-theme==1.1.4
 ipython==7.16.1
 ipython-genutils==0.2.0
-itsdangerous==2.0.0a1
+itsdangerous==1.1.0
 jedi==0.17.2
-Jinja2==3.0.0a1
+Jinja2==2.11.2
 jsmin==2.2.2
 kombu==4.6.11
 limits==1.5.1
 Mako==1.1.3
-MarkupSafe==2.0.0a1
+MarkupSafe==1.1.1
 marshmallow==3.7.1
 mock==2.0.0
 more-itertools==4.3.0
@@ -81,7 +81,7 @@ ptyprocess==0.6.0
 py==1.9.0
 Pygments==2.6.1
 pynpm==0.1.2
-pyparsing==3.0.0a2
+pyparsing==2.4.7
 pytest==4.3.1
 python-dateutil==2.8.1
 python-editor==1.0.4
