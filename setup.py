@@ -1,4 +1,4 @@
-2# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2020 CESNET.
 #
