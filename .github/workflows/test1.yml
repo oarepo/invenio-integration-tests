@@ -44,8 +44,8 @@ jobs:
         echo ${{ github.event.before }}
         echo ${{ github.sha }}
         git diff --name-only ${{ github.sha }}
-        echo ".${{ secrets.integration_test }}."
-        echo ".$env:TOK."
+        echo ". ${{ secrets.integration_test }} ."
+        echo ". $env:TOK ."
         #git diff --name-only ${{ github.event.before }} ${{ github.sha }}
         echo "Done."
         
