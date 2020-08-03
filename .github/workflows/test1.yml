@@ -42,4 +42,7 @@ jobs:
         echo ${{ github.event.before }}
         echo ${{ github.sha }}
         git diff --name-only ${{ github.sha }}
+        echo ".${{ secrets.intergration_test }}."
         #git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+        echo "Done."
+        
