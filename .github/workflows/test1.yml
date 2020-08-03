@@ -39,4 +39,5 @@ jobs:
         git log -1 --stat upload
         git status
         git branch -avv
-        #git diff --name-only HEAD^..HEAD
+        #git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+        git diff --name-only ${{ github.sha }}
