@@ -40,6 +40,6 @@ jobs:
         git status
         git branch -avv
         echo ${{ github.event.before }}
-        git diff --name-only ${{ github.event.before }}
         echo ${{ github.sha }}
+        git diff --name-only ${{ github.sha }}
         #git diff --name-only ${{ github.event.before }} ${{ github.sha }}
