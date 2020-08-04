@@ -1,0 +1,31 @@
+
+name: p2oarepo
+
+on:
+  push:
+#    branches: [ master ]
+    branches: [ actions-tests ]
+    paths: [ 'upload/*' ]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Preprocessing step
+      run: |
+        echo 'Preprocessing step [${{ job.status }}]'
+    - uses: seanmiddleditch/gha-publish-to-git@master
+      with:
+        repository: oarepo/oarepo
+        branch: integration-tests
+        github_pat: '${{ secrets.OAR_BOT }}'
+        source_folder: comm2test2
+        target_folder: commFtest1
+      if: success() && github.event_name == 'push'
+    - name: Success test step
+      run: echo 'Success test [${{ job.status }}]'
+      if: success()
+      

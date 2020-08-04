@@ -7,7 +7,8 @@ name: test1
 on:
   push:
 #    branches: [ master ]
-    branches: [ actions-tests ]
+#    branches: [ actions-tests ]
+    branches: [ ]
     paths: [ 'upload/*' ]
   #workflow_dispatch:
   #  inputs:
@@ -44,8 +45,6 @@ jobs:
         echo ${{ github.event.before }}
         echo ${{ github.sha }}
         git diff --name-only ${{ github.sha }}
-        echo ". ${{ secrets.integration_test }} ."
-        echo ". $env:TOK ."
         #git diff --name-only ${{ github.event.before }} ${{ github.sha }}
         echo "Done."
         
