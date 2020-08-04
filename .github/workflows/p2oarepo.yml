@@ -21,7 +21,7 @@ jobs:
       with:
         repository: oarepo/oarepo
         branch: integration-tests
-        github_pat: '${{ secrets.OAR_BOT }}'
+        github_pat: '${{ secrets.INTEGRATION_TEST }}'
         source_folder: comm2test2
         target_folder: commFtest1
       if: success() && github.event_name == 'push'
