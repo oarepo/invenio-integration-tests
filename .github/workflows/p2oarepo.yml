@@ -22,8 +22,8 @@ jobs:
         repository: oarepo/oarepo
         branch: integration-tests
         github_pat: '${{ secrets.INTEGRATION_TEST }}'
-        source_folder: comm2test2
-        target_folder: commFtest1
+        source_folder: upload
+        target_folder: invenio-integration-tests
       if: success() && github.event_name == 'push'
     - name: Success test step
       run: echo 'Success test [${{ job.status }}]'
