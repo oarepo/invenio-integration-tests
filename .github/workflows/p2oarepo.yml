@@ -17,6 +17,7 @@ jobs:
     - name: Preprocessing step
       run: |
         echo 'Preprocessing step [${{ job.status }}]'
+        ./scripts/process_reqs.sh
     - uses: seanmiddleditch/gha-publish-to-git@master
       with:
         repository: oarepo/oarepo
