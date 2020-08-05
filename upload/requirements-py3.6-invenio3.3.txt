@@ -1,5 +1,5 @@
 alembic==1.4.2
-amqp==2.6.0
+amqp==2.6.1
 arrow==0.15.8
 atomicwrites==1.2.1
 attrs==18.2.0
@@ -8,14 +8,14 @@ backcall==0.2.0
 billiard==3.6.3.0
 bleach==3.1.5
 blinker==1.4
-celery==4.4.6
+celery==4.4.7
 certifi==2018.10.15
 cffi==1.14.1
 click==7.1.2
 cryptography==3.0
 decorator==4.4.2
 dnspython==2.0.0
-elasticsearch==7.8.0
+elasticsearch==7.8.1
 elasticsearch-dsl==7.2.1
 email-validator==1.1.1
 Flask==1.1.2
@@ -121,5 +121,5 @@ webargs==5.5.3
 webassets==2.0
 webencodings==0.5.1
 Werkzeug==1.0.1
-WTForms==2.3.1
+WTForms==2.3.3
 zipp==0.5.1
