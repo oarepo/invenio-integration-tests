@@ -13,8 +13,8 @@ echo -e "\ninvenio-integration-tests/run_tests.sh"
 echo ".travis-requirements.txt:"
 cat .travis-requirements.txt
 
-echo -e "\ninvenio shell:"
-invenio shell --simple-prompt -c "app.config"
+echo -e "\ninvenio shell, print(version.__version__):"
+invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)"
 
 echo -e "\npython version: ${TRAVIS_PYTHON_VERSION}"
 
