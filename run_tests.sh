@@ -14,7 +14,7 @@ echo ".travis-requirements.txt:"
 cat .travis-requirements.txt
 
 echo -e "\ninvenio shell, print(version.__version__):"
-invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)"
+invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)" 2>&1
 
 echo -e "\npython version: ${TRAVIS_PYTHON_VERSION}"
 
