@@ -8,24 +8,39 @@ on:
     paths: [ 'upload/*' ]
 
 jobs:
-  job1:
+  publish-setup:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Preprocessing step
-      run: |
-        echo 'Preprocessing step [${{ job.status }}]'
-        ./scripts/process_reqs.sh
-    - uses: seanmiddleditch/gha-publish-to-git@master
+    - name: Checkout oarepo/inveio-integration-tests
+      uses: actions/checkout@v2
+#    - name: Upload tested requirements artifact
+#      uses: actions/upload-artifact@v2
+#        with:
+#          name: requirements-py3.8-invenio3.2
+#          path: upload/requirements-py3.8-invenio3.2.txt
+    - name: Checkout oarepo/oarepo under ./oarepo
+      uses: actions/checkout@v2
       with:
-        repository: oarepo/oarepo
-        branch: integration-tests
-        github_pat: '${{ secrets.OAR_BOT }}'
-        source_folder: upload/setup
+        repository: 'oarepo/oarepo'
+        ref: 'integration-tests'
+        token: '${{ secrets.OAR_BOT }}'
+        path: 'oarepo'
+#    - name: Download tested requirements artifact
+#      uses: actions/download-artifact@v2
+#      with:
+#          name: requirements-py3.8-invenio3.2
+    - name: Generate OARepo setup.py from tested requirements artifact
+      run: |
+        ./scripts/generate_setup.sh
+    - name: Commit and Push generated OARepo setup.py
+      uses: github-actions-x/commit@v2.6
+      with:
+        github-token: ${{ secrets.OAR_BOT }}
+        push-branch: 'integration-tests'
+        commit-message: '[p2oarepo] update setup.py from oarepo/invenio-integration-tests:actions-tests'
+        force-add: 'true'
+        files: setup.py
+        name: p2oarepo-workflow
+        email: noreply@oarepo.org
       if: success() && github.event_name == 'push'
-    - name: Success test step
-      run: echo 'Success test [${{ job.status }}]'
-      if: success()
-      
