@@ -16,6 +16,7 @@ SETUP_URL="https://raw.githubusercontent.com/oarepo/oarepo/${OAREPO_BRANCH}/setu
 REQ_FILE="requirements-py3.8-invenio3.2.txt"
 
 cd upload
+mkdir setup
 
 SETUP_PY=$(mktemp "${HOME}/gitrepo.XXXXXX")
 trap "rm '${SETUP_PY}'" EXIT
@@ -26,5 +27,5 @@ sed -e "s/^\(.*\)$/  '\1',/" ${REQ_FILE} \
  | sed "${SETUP_PY}" \
     -e "/^INVENIO_VERSION = / s/ = '[0-9.]\+'/ = '3.2.0'/" \
     -e "/^install_requires/ r /dev/stdin" \
-    > setup.py
+    > setup/setup.py
 echo "Done."

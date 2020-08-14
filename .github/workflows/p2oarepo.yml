@@ -23,8 +23,7 @@ jobs:
         repository: oarepo/oarepo
         branch: integration-tests
         github_pat: '${{ secrets.OAR_BOT }}'
-        source_folder: upload
-        target_folder: invenio-integration-tests
+        source_folder: upload/setup
       if: success() && github.event_name == 'push'
     - name: Success test step
       run: echo 'Success test [${{ job.status }}]'
