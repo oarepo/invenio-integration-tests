@@ -10,12 +10,9 @@ set -e
 
 echo "process_reqs.sh"
 
-#OAREPO_BRANCH="invenio-3.2"
-OAREPO_BRANCH="integration-tests"
 REQ_FILE="upload/requirements-py3.8-invenio3.2.txt"
 SETUP_PY='oarepo/setup.py'
 
 sed -e "s/^\(.*\)$/  '\1',/" ${REQ_FILE} \
- | sed -i -e "/^INVENIO_VERSION = / s/ = '[0-9.]\+'/ = '3.2.0'/" \
-          -e "/^install_requires/ r /dev/stdin" ${SETUP_PY}
+ | sed -i '/^install_requires/,/\]/!b;//!d;/^install_requires/r /dev/stdin' ${SETUP_PY}
 echo "Done."
