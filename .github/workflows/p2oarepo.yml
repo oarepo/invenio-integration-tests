@@ -35,7 +35,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: '[p2oarepo] update setup.py from oarepo/invenio-integration-tests:actions-tests'
-          branch: inegration-tests
+          branch: integration-tests
           file_pattern: setup.py
           repository: oarepo
           commit_user_name: p2oarepo-workflow
