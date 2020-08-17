@@ -1,46 +1,45 @@
-
 name: p2oarepo
 
 on:
   push:
-#    branches: [ master ]
+    #    branches: [ master ]
     branches: [ actions-tests ]
     paths: [ 'upload/*' ]
 
 jobs:
   publish-setup:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout oarepo/inveio-integration-tests
-      uses: actions/checkout@v2
-#    - name: Upload tested requirements artifact
-#      uses: actions/upload-artifact@v2
-#        with:
-#          name: requirements-py3.8-invenio3.2
-#          path: upload/requirements-py3.8-invenio3.2.txt
-    - name: Checkout oarepo/oarepo under ./oarepo
-      uses: actions/checkout@v2
-      with:
-        repository: 'oarepo/oarepo'
-        ref: 'integration-tests'
-        token: '${{ secrets.OAR_BOT }}'
-        path: 'oarepo'
-#    - name: Download tested requirements artifact
-#      uses: actions/download-artifact@v2
-#      with:
-#          name: requirements-py3.8-invenio3.2
-    - name: Generate OARepo setup.py from tested requirements artifact
-      run: |
-        ./scripts/generate_setup.sh
-    - name: Commit and Push generated OARepo setup.py
-      uses: github-actions-x/commit@v2.6
-      with:
-        github-token: ${{ secrets.OAR_BOT }}
-        push-branch: 'integration-tests'
-        commit-message: '[p2oarepo] update setup.py from oarepo/invenio-integration-tests:actions-tests'
-        force-add: 'true'
-        files: setup.py
-        name: p2oarepo-workflow
-        email: noreply@oarepo.org
-      if: success() && github.event_name == 'push'
+      - name: Checkout oarepo/inveio-integration-tests
+        uses: actions/checkout@v2
+      #    - name: Upload tested requirements artifact
+      #      uses: actions/upload-artifact@v2
+      #        with:
+      #          name: requirements-py3.8-invenio3.2
+      #          path: upload/requirements-py3.8-invenio3.2.txt
+      - name: Checkout oarepo/oarepo under ./oarepo
+        uses: actions/checkout@v2
+        with:
+          repository: 'oarepo/oarepo'
+          ref: 'integration-tests'
+          token: '${{ secrets.OAR_BOT }}'
+          path: 'oarepo'
+      #    - name: Download tested requirements artifact
+      #      uses: actions/download-artifact@v2
+      #      with:
+      #          name: requirements-py3.8-invenio3.2
+      - name: Generate OARepo setup.py from tested requirements artifact
+        run: |
+          ./scripts/generate_setup.sh
+      - name: Commit and Push generated OARepo setup.py
+        uses: stefanzweifel/git-auto-commit-action
+        with:
+          commit_message: '[p2oarepo] update setup.py from oarepo/invenio-integration-tests:actions-tests'
+          branch: inegration-tests
+          file_pattern: setup.py
+          repository: oarepo
+          commit_user_name: p2oarepo-workflow
+          commit_user_email: p2oarepo-workflow@oarepo.org
+          # Optional options appended to `git-push`
+          push_options: '--force'
+        if: success() && github.event_name == 'push'
