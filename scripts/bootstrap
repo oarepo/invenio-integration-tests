@@ -8,6 +8,6 @@
 
 set -e
 
-OPTS="--force-reinstall"
+OPTS="--force-reinstall --no-cache-dir"
 if [ "${REQUIREMENTS}" = "devel" ] ; then OPTS="--pre"; fi
 pip install $OPTS -r .travis-requirements.txt
