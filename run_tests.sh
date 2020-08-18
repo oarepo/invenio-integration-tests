@@ -16,8 +16,6 @@ cat .travis-requirements.txt
 echo -e "\ninvenio shell, print(version.__version__):"
 invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)"
 
-echo -e "\npython version: ${TRAVIS_PYTHON_VERSION}"
-
 echo -e "\npsql version:"
 psql --version
 echo "invenio db init,create:"
@@ -37,6 +35,6 @@ invenio index check
 invenio index list
 
 echo -e "\npip freeze"
-REQFILE="upload/requirements-py${TRAVIS_PYTHON_VERSION}-${REQUIREMENTS}.txt"
+REQFILE="upload/requirements-${REQUIREMENTS}.txt"
 pip freeze > $REQFILE
 grep -F -e invenio= -e invenio-base -e invenio-search -e invenio-db $REQFILE

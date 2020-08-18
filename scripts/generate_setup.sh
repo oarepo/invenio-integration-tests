@@ -10,7 +10,9 @@ set -e
 
 echo "process_reqs.sh"
 
-REQ_FILE="upload/requirements-py3.8-invenio3.2.txt"
+INVENIO_VERSION=$1
+
+REQ_FILE="upload/requirements-${INVENIO_VERSION}.txt"
 SETUP_PY='oarepo/setup.py'
 
 sed -e "s/^\(.*\)$/  '\1',/" ${REQ_FILE} \

@@ -7,39 +7,59 @@ on:
     paths: [ 'upload/*' ]
 
 jobs:
-  publish-setup:
+  publish-setup-invenio3.2:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout oarepo/inveio-integration-tests
+      - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v2
-      #    - name: Upload tested requirements artifact
-      #      uses: actions/upload-artifact@v2
-      #        with:
-      #          name: requirements-py3.8-invenio3.2
-      #          path: upload/requirements-py3.8-invenio3.2.txt
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v2
         with:
           repository: 'oarepo/oarepo'
-          ref: 'integration-tests'
+          ref: 'invenio3.2'
           token: '${{ secrets.OAR_BOT }}'
           path: 'oarepo'
-      #    - name: Download tested requirements artifact
-      #      uses: actions/download-artifact@v2
-      #      with:
-      #          name: requirements-py3.8-invenio3.2
       - name: Generate OARepo setup.py from tested requirements artifact
         run: |
-          ./scripts/generate_setup.sh
+          ./scripts/generate_setup.sh invenio3.2
       - name: Commit and Push generated OARepo setup.py
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: '[p2oarepo] update setup.py from oarepo/invenio-integration-tests:actions-tests'
-          branch: integration-tests
+          branch: invenio3.2
           file_pattern: setup.py
           repository: oarepo
           commit_user_name: p2oarepo-workflow
           commit_user_email: p2oarepo-workflow@oarepo.org
+          # TODO: tag the commit in format 3.2.X.20200818 where first 3 digits are concrete invenio version
+          # Optional options appended to `git-push`
+          push_options: '--force'
+        if: success() && github.event_name == 'push'
+  publish-setup-invenio3.3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v2
+      - name: Checkout oarepo/oarepo under ./oarepo
+        uses: actions/checkout@v2
+        with:
+          repository: 'oarepo/oarepo'
+          ref: 'invenio3.3'
+          token: '${{ secrets.OAR_BOT }}'
+          path: 'oarepo'
+      - name: Generate OARepo setup.py from tested requirements artifact
+        run: |
+          ./scripts/generate_setup.sh invenio3.3
+      - name: Commit and Push generated OARepo setup.py
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: '[p2oarepo] update setup.py from oarepo/invenio-integration-tests:actions-tests'
+          branch: invenio3.3
+          file_pattern: setup.py
+          repository: oarepo
+          commit_user_name: p2oarepo-workflow
+          commit_user_email: p2oarepo-workflow@oarepo.org
+          # TODO: tag the commit in format 3.2.X.20200818 where first 3 digits are concrete invenio version
           # Optional options appended to `git-push`
           push_options: '--force'
         if: success() && github.event_name == 'push'
