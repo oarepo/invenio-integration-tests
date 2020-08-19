@@ -10,12 +10,12 @@ bleach==3.1.5
 blinker==1.4
 celery==4.4.7
 certifi==2019.9.11
-cffi==1.14.1
+cffi==1.14.2
 click==7.1.2
 cryptography==3.0
 decorator==4.4.2
 dnspython==2.0.0
-elasticsearch==7.8.1
+elasticsearch==7.9.0
 elasticsearch-dsl==7.2.1
 email-validator==1.1.1
 Flask==1.1.2
@@ -104,7 +104,7 @@ requirements-builder==0.4.2
 simplekv==0.14.1
 six==1.12.0
 speaklater==1.3
-SQLAlchemy==1.3.18
+SQLAlchemy==1.3.19
 SQLAlchemy-Continuum==1.3.11
 SQLAlchemy-Utils==0.35.0
 traitlets==4.3.3
