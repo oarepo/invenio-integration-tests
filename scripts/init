@@ -13,6 +13,6 @@ mkdir /tmp/elasticsearch
 wget --no-verbose -O - ${ES_URL} | tar xz --directory=/tmp/elasticsearch --strip-components=1
 /tmp/elasticsearch/bin/elasticsearch > /tmp/local-es.log &
 
-pip install --upgrade pip setuptools py
+pip install --upgrade pip setuptools py pip-tools
 pip install requirements-builder
-requirements-builder -e ${EXTRAS} setup.py > .travis-requirements.txt
+requirements-builder -e ${EXTRAS} setup.py | pip-compile -U -o .travis-requirements.txt -
