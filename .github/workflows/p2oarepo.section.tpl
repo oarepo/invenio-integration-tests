@@ -1,4 +1,4 @@
-  publish-setup-invenio-X.Y:
+  publish-setup-invenio-X-Y:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout oarepo/invenio-integration-tests

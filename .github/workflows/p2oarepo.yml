@@ -6,7 +6,7 @@ on:
     paths: [ 'upload/*' ]
 
 jobs:
-  publish-setup-invenio-3.3:
+  publish-setup-invenio-3-3:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout oarepo/invenio-integration-tests
