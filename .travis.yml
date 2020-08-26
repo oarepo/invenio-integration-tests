@@ -26,8 +26,7 @@ env:
     - INVENIO_SQLALCHEMY_DATABASE_URI="$SQLALCHEMY_DATABASE_URI"
     - ES7_DOWNLOAD_URL="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
   matrix:
-    - REQUIREMENTS=invenio3.2 EXTRAS=invenio3.2 ES_URL=$ES7_DOWNLOAD_URL
-    - REQUIREMENTS=invenio3.3 EXTRAS=invenio3.3 ES_URL=$ES7_DOWNLOAD_URL
+#    - REQUIREMENTS=invenio3.3 EXTRAS=invenio3.3 ES_URL=$ES7_DOWNLOAD_URL
     - REQUIREMENTS=devel EXTRAS=devel ES_URL=$ES7_DOWNLOAD_URL
 
 addons:
