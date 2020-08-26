@@ -12,7 +12,7 @@
           path: 'oarepo'
       - name: Generate OARepo setup.py from tested requirements artifact
         run: |
-          ./scripts/generate_setup.sh invenio-X.Y
+          ./scripts/generate_setup.sh invenioX.Y
       - name: Commit and Push generated OARepo setup.py
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
