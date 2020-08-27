@@ -15,6 +15,8 @@ INVENIO_VERSION=$1
 REQ_FILE="upload/requirements-${INVENIO_VERSION}.txt"
 SETUP_PY='oarepo/setup.py'
 
+test -s "$REQ_FILE" || exit 1
+
 sed -e "s/^\(.*\)$/  '\1',/" ${REQ_FILE} \
  | sed -i '/^install_requires/,/\]/!b;//!d;/^install_requires/r /dev/stdin' ${SETUP_PY}
 echo "Done."
