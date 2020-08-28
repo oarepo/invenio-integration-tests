@@ -19,6 +19,8 @@ TAG_TXT='oarepo/oarepo/tag.txt'
 
 test -s "$REQ_FILE" || { echo "ERR: REQ_FILE not exists or empty"; exit 1; }
 
+pip install bump
+
 # version bump
 INVENIO_VERSION=$(sed -n '/^invenio==/ {s/^invenio==//; p;}' "$REQ_FILE")
 PREV_INVENIO_VERSION=$(sed -n '/^__version__ / {s/^[^"]\+"\([0-9.]\+\)\.[0-9]"$/\1/;p}' "$VERSION_PY")
