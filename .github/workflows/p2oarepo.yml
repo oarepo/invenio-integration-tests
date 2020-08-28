@@ -15,8 +15,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'oarepo/oarepo'
-          # TODO change back to:
-          # ref: 'invenio-3.3'
+          ref: 'invenio-3.3'
           ref: 'test-invenio-3.3'
           token: '${{ secrets.OAR_BOT }}'
           path: 'oarepo'
@@ -32,9 +31,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[p2oarepo] update setup.py from oarepo/invenio-integration-tests (tag ${{ env.NEWTAG }})"
-          # TODO change back to:
-          # branch: invenio-3.3
-          branch: test-invenio-3.3
+          branch: invenio-3.3
           file_pattern: setup.py oarepo/version.py
           repository: oarepo
           commit_user_name: p2oarepo-workflow
