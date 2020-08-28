@@ -19,6 +19,7 @@ TAG_TXT='oarepo/oarepo/tag.txt'
 
 test -s "$REQ_FILE" || { echo "ERR: REQ_FILE not exists or empty"; exit 1; }
 
+pip install --upgrade pip setuptools wheel
 pip install bump
 
 # version bump
