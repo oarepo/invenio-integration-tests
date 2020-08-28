@@ -29,7 +29,7 @@ if [[ "$PREV_INVENIO_VERSION" == "$INVENIO_VERSION" ]]; then
   # bump utility probably can't use four-number format, temporarily switched to three-number format without major ver.num.:
   MAJOR=$(sed -n '/^__version__ / {s/^[^"]\+"\([0-9]\+\)\..*$/\1/;p}' "$VERSION_PY")
   BUMP_INPUT=$(sed -n '/^__version__ / {s/^[^"]\+"[0-9]\.\([0-9.]\+\)"[^"]*$/\1/;p}' "$VERSION_PY")
-  BUMPED=$(sed -n '/^__version__ / {s/"[0-9]\./"/;p}' "$VERSION_PY" | bump - /dev/null)
+  BUMPED=$(sed -n '/^__version__ / {s/"[0-9]\./"/;p}' "$VERSION_PY" | /home/runner/.local/bin/bump - /dev/null)
   # and back with major ver.num.:
   NEWTAG="$MAJOR.$BUMPED"
 else
