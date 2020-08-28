@@ -16,7 +16,6 @@ jobs:
         with:
           repository: 'oarepo/oarepo'
           ref: 'invenio-3.3'
-          ref: 'test-invenio-3.3'
           token: '${{ secrets.OAR_BOT }}'
           path: 'oarepo'
       - name: Set up Python 3.6
