@@ -2,6 +2,10 @@
 
 set -e
 
+echo "travis-push.sh"
+
+[[ "$1" == "dryrun" ]] && { echo "dryrun"; exit 0; }
+
 DATE=$(date '+%y%m%d-%H%M%S')
 
 git config --global user.name du-cesnet-travis

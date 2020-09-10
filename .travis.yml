@@ -16,7 +16,8 @@ notifications:
 
 branches:
   only:
-  - master
+    - master
+    - tests
 
 env:
   global:
@@ -44,4 +45,4 @@ script:
   - ./run_tests.sh
 
 after_success:
-  - ./scripts/travis-push.sh
+  - ./scripts/travis-push.sh dryrun
