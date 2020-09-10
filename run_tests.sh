@@ -40,8 +40,8 @@ export FLASK_RUN_HOST=127.0.0.1
 export FLASK_RUN_PORT=5000
 export INVENIO_SERVER_NAME=127.0.0.1:5000
 invenio run --cert ./ssl/test.crt --key ./ssl/test.key 2>&1 > invenio_run.log &
-
-curl -k -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
+sleep 10
+curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 
 #echo -e "\npip freeze"
 #REQFILE="upload/requirements-${REQUIREMENTS}.txt"
