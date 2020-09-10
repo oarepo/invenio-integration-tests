@@ -18,10 +18,10 @@ jobs:
           ref: 'invenio-3.3'
           token: '${{ secrets.OAR_BOT }}'
           path: 'oarepo'
-      - name: Set up Python 3.6
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.8
       - name: Generate OARepo setup.py from tested requirements artifact
         run: |
           ./scripts/generate_setup.sh invenio3.3
