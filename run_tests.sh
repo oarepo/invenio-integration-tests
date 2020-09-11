@@ -40,6 +40,8 @@ export FLASK_RUN_HOST=127.0.0.1
 export FLASK_RUN_PORT=5000
 export INVENIO_SERVER_NAME=127.0.0.1:5000
 export INVENIO_SEARCH_ELASTIC_HOSTS=127.0.0.1:9200
+export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
+export APP_ALLOWED_HOSTS=127.0.0.1:5000
 invenio run --cert ./ssl/test.crt --key ./ssl/test.key > invenio_run.log 2>&1 &
 sleep 20
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1

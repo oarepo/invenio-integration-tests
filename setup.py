@@ -22,7 +22,8 @@ extras_require = {
         'invenio[base,metadata,files,postgresql,elasticsearch7]>=3.3.0,<3.4.0',
     ],
     'devel': [
-        'invenio[base,metadata,files,postgresql,elasticsearch7,records-rest]',
+        'invenio[base,metadata,files,postgresql,elasticsearch7]',
+        'nbconvert==5.6.1',
     ],
 }
 
