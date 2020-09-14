@@ -34,16 +34,24 @@ invenio index init
 invenio index check
 invenio index list
 
-echo -e "\ninvenio run:"
+echo -e "\ninvenio run (testing REST):"
 #export FLASK_ENV=development
 export FLASK_RUN_HOST=127.0.0.1
 export FLASK_RUN_PORT=5000
 export INVENIO_SERVER_NAME=127.0.0.1:5000
 export INVENIO_SEARCH_ELASTIC_HOSTS=127.0.0.1:9200
 export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
+export JSONSCHEMAS_HOST=repozitar.cesnet.cz
 export APP_ALLOWED_HOSTS=127.0.0.1:5000
+sed -i '/^RECORDS_REST_DEFAULT_CREATE_PERMISSION_FACTORY/ s/deny_all/allow_all/; /^RECORDS_REST_DEFAULT_UPDATE_PERMISSION_FACTORY/ s/deny_all/allow_all/; /^RECORDS_REST_DEFAULT_DELETE_PERMISSION_FACTORY/ s/deny_all/allow_all/' /usr/local/lib/python3.8/site-packages/invenio_records_rest/config.py
 invenio run --cert ./ssl/test.crt --key ./ssl/test.key > invenio_run.log 2>&1 &
 sleep 20
+curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
+curl -sk -H 'Content-Type:application/json' -d '{"title": "Test Record 1"}' -XPOST https://127.0.0.1:5000/api/records/?prettyprint=1
+curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
+curl -sk -H 'Content-Type:application/json' -d '{"title": "Test Record 1 UPDATED","control_number": "1"}' -XPUT https://27.0.0.1:5000/api/records/1?prettyprint=1
+curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
+curl -sk -XDELETE https://127.0.0.1:5000/api/records/1?prettyprint=1
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 
 cat invenio_run.log
