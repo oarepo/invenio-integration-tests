@@ -27,12 +27,12 @@ if [ "${REQUIREMENTS}" != "invenio3.2" ] ; then
   invenio users create -a noreply@cesnet.cz --password 112233
 fi
 
-echo -e "\nelasticsearch GET:"
-curl -sX GET "http://127.0.0.1:9200" || cat /tmp/local-es.log
+#echo -e "\nelasticsearch GET:"
+#curl -sX GET "http://127.0.0.1:9200" || cat /tmp/local-es.log
 echo "invenio index init,check,list:"
 invenio index init
 invenio index check
-invenio index list
+#invenio index list
 
 echo -e "\ninvenio run (testing REST):"
 #export FLASK_ENV=development
@@ -45,7 +45,7 @@ export JSONSCHEMAS_HOST=repozitar.cesnet.cz
 export APP_ALLOWED_HOSTS=127.0.0.1:5000
 sed -i '/^RECORDS_REST_DEFAULT_CREATE_PERMISSION_FACTORY/ s/deny_all/allow_all/; /^RECORDS_REST_DEFAULT_UPDATE_PERMISSION_FACTORY/ s/deny_all/allow_all/; /^RECORDS_REST_DEFAULT_DELETE_PERMISSION_FACTORY/ s/deny_all/allow_all/' /home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/invenio_records_rest/config.py
 invenio run --cert ./ssl/test.crt --key ./ssl/test.key > invenio_run.log 2>&1 &
-sleep 20
+sleep 12
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
 curl -sk -H 'Content-Type:application/json' -d '{"title": "Test Record 1"}' -XPOST https://127.0.0.1:5000/api/records/?prettyprint=1
