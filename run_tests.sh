@@ -14,8 +14,8 @@ echo ".travis-requirements.txt:"
 cat .travis-requirements.txt
 
 export JSONSCHEMAS_HOST=repozitar.cesnet.cz
-echo -e "\ninvenio shell, print(version.__version__):"
-invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)"
+#echo -e "\ninvenio shell, print(version.__version__):"
+#invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)"
 
 echo -e "\npsql version:"
 psql --version
