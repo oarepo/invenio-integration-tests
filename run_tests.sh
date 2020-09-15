@@ -60,26 +60,12 @@ echo "list records:"
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
 
-#kill $INVEPID
-#sleep 2
-#invenio run --cert ./ssl/test.crt --key ./ssl/test.key > invenio_run.log 2>&1 &
-#INVEPID=$!
-#trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
-#sleep 8
-
 echo "UPDATE (PUT) existing record:"
 curl -sk -H 'Content-Type:application/json' -d '{"title": "Test Record 1 UPDATED","control_number": "1"}' -XPUT https://127.0.0.1:5000/api/records/1?prettyprint=1
 sleep 1
 echo "list records:"
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
-
-#kill $INVEPID
-#sleep 2
-#invenio run --cert ./ssl/test.crt --key ./ssl/test.key > invenio_run.log 2>&1 &
-#INVEPID=$!
-#trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
-#sleep 8
 
 echo "DELETE existing record:"
 curl -sk -XDELETE https://127.0.0.1:5000/api/records/1?prettyprint=1
@@ -88,6 +74,8 @@ echo "list records:"
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
 
+kill $INVEPID
+trap - EXIT
 cat invenio_run.log
 
 #echo -e "\npip freeze"
