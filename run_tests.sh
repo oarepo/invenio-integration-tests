@@ -45,6 +45,8 @@ export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
 export APP_ALLOWED_HOSTS=127.0.0.1:5000
 sed -i '/^RECORDS_REST_DEFAULT_CREATE_PERMISSION_FACTORY/ s/deny_all/allow_all/; /^RECORDS_REST_DEFAULT_UPDATE_PERMISSION_FACTORY/ s/deny_all/allow_all/; /^RECORDS_REST_DEFAULT_DELETE_PERMISSION_FACTORY/ s/deny_all/allow_all/' /home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/invenio_records_rest/config.py
 invenio run --cert ./ssl/test.crt --key ./ssl/test.key > invenio_run.log 2>&1 &
+INVEPID=$!
+trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
 sleep 8
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
