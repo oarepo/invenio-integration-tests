@@ -36,7 +36,7 @@ invenio index check
 #invenio index list
 
 echo -e "\ninvenio run (testing REST):"
-#export FLASK_ENV=development
+export FLASK_ENV=development
 export FLASK_RUN_HOST=127.0.0.1
 export FLASK_RUN_PORT=5000
 export INVENIO_SERVER_NAME=127.0.0.1:5000
@@ -48,18 +48,25 @@ invenio run --cert ./ssl/test.crt --key ./ssl/test.key > invenio_run.log 2>&1 &
 INVEPID=$!
 trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
 sleep 8
+echo "list records:"
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
+echo "ADD (POST) new record:"
 curl -sk -H 'Content-Type:application/json' -d '{"title": "Test Record 1"}' -XPOST https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
+echo "list records:"
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
+echo "UPDATE (PUT) existing record:"
 curl -sk -H 'Content-Type:application/json' -d '{"title": "Test Record 1 UPDATED","control_number": "1"}' -XPUT https://27.0.0.1:5000/api/records/1?prettyprint=1
 sleep 1
+echo "list records:"
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
+echo "DELETE existing record:"
 curl -sk -XDELETE https://127.0.0.1:5000/api/records/1?prettyprint=1
 sleep 1
+echo "list records:"
 curl -sk -XGET https://127.0.0.1:5000/api/records/?prettyprint=1
 sleep 1
 
