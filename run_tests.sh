@@ -13,6 +13,7 @@ echo -e "\ninvenio-integration-tests/run_tests.sh"
 echo ".travis-requirements.txt:"
 cat .travis-requirements.txt
 
+export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
 echo -e "\ninvenio shell, print(version.__version__):"
 invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)"
 
@@ -29,10 +30,32 @@ fi
 
 echo -e "\nelasticsearch GET:"
 curl -sX GET "http://127.0.0.1:9200" || cat /tmp/local-es.log
-echo "invenio index init,check,list:"
+echo "invenio index init,check:"
 invenio index init
 invenio index check
-invenio index list
+
+echo -e "\ninvenio run (testing REST):"
+#export FLASK_ENV=development
+export FLASK_RUN_HOST=127.0.0.1
+export FLASK_RUN_PORT=5000
+export INVENIO_SERVER_NAME=127.0.0.1:5000
+export INVENIO_SEARCH_ELASTIC_HOSTS=127.0.0.1:9200
+export APP_ALLOWED_HOSTS=127.0.0.1:5000
+export INVENIO_RECORDS_REST_DEFAULT_CREATE_PERMISSION_FACTORY='invenio_records_rest.utils:allow_all'
+export INVENIO_RECORDS_REST_DEFAULT_UPDATE_PERMISSION_FACTORY='invenio_records_rest.utils:allow_all'
+export INVENIO_RECORDS_REST_DEFAULT_DELETE_PERMISSION_FACTORY='invenio_records_rest.utils:allow_all'
+
+invenio run --cert ./ssl/test.crt --key ./ssl/test.key > invenio_run.log 2>&1 &
+INVEPID=$!
+trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
+sleep 8
+
+./scripts/test_rest.sh
+
+kill $INVEPID
+trap - EXIT
+echo -e "\ninvenio_run.log:"
+cat invenio_run.log
 
 echo -e "\npip freeze"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
