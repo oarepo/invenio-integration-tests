@@ -54,7 +54,7 @@ sleep 8
 
 kill $INVEPID
 trap - EXIT
-echo "invenio_run.log:"
+echo -e "\ninvenio_run.log:"
 cat invenio_run.log
 
 echo -e "\npip freeze"

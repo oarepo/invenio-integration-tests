@@ -21,6 +21,7 @@ ID1="$VAL"
 CN1=$(echo "$RESULT" | jq -r '.metadata.control_number')
 echo "  OK new id: $ID1  control_number: $CN1"
 sleep 1
+echo -n "  ADD (POST) 2nd new record: "
 RESULT=$(curl -sk -H 'Content-Type:application/json' -d '{"title": "Test Record 2"}' -XPOST "$REST_URL/"); echo "status: $?"
 VAL=$(echo "$RESULT" | jq -r '.id')
 [[ "$VAL" == "null" ]] && err "wrong id (\"$VAL\"/0)"
@@ -59,7 +60,7 @@ VAL=$(echo "$RESULT" | jq -r '.hits.hits[]|select(.id == "'"$ID1"'").metadata.ti
 echo "  OK found title: \"$VAL\""
 sleep 1
 
-echo -n "  DELETE existing record: "
+echo -n "  DELETE record: "
 RESULT=$(curl -sk -XDELETE "$REST_URL/$ID1"); echo "status: $?"
 [[ "$RESULT" == "" ]] || err "error (\"$RESULT\"/1)"
 echo "  OK deleted"
@@ -73,7 +74,7 @@ VAL=$(echo "$RESULT" | jq -r '.hits.hits[]|select(.id == "'"$ID2"'").metadata.ti
 [[ "$VAL" == "Test Record 2" ]] || err "wrong title (\"$VAL\"/\"Test Record 2\")"
 sleep 1
 
-echo -n "  DELETE 2nd existing record: "
+echo -n "  DELETE 2nd record: "
 RESULT=$(curl -sk -XDELETE "$REST_URL/$ID2"); echo "status: $?"
 [[ "$RESULT" == "" ]] || err "error (\"$RESULT\"/1)"
 echo "  OK deleted"
