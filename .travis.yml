@@ -36,6 +36,7 @@ addons:
 before_install:
   # Stop default travis services
   - "sudo service mysql stop"
+  - "sudo apt-get -y install jq"
   - ./scripts/init
 
 install:
