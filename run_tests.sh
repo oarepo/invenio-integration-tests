@@ -28,12 +28,11 @@ if [ "${REQUIREMENTS}" != "invenio3.2" ] ; then
   invenio users create -a noreply@cesnet.cz --password 112233
 fi
 
-#echo -e "\nelasticsearch GET:"
-#curl -sX GET "http://127.0.0.1:9200" || cat /tmp/local-es.log
-echo "invenio index init,check,list:"
+echo -e "\nelasticsearch GET:"
+curl -sX GET "http://127.0.0.1:9200" || cat /tmp/local-es.log
+echo "invenio index init,check:"
 invenio index init
 invenio index check
-#invenio index list
 
 echo -e "\ninvenio run (testing REST):"
 #export FLASK_ENV=development
@@ -55,9 +54,10 @@ sleep 8
 
 kill $INVEPID
 trap - EXIT
+echo "invenio_run.log:"
 cat invenio_run.log
 
-#echo -e "\npip freeze"
-#REQFILE="upload/requirements-${REQUIREMENTS}.txt"
-#pip freeze > $REQFILE
-#grep -F -e invenio= -e invenio-base -e invenio-search -e invenio-db $REQFILE
+echo -e "\npip freeze"
+REQFILE="upload/requirements-${REQUIREMENTS}.txt"
+pip freeze > $REQFILE
+grep -F -e invenio= -e invenio-base -e invenio-search -e invenio-db $REQFILE

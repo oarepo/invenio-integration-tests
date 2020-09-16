@@ -43,11 +43,7 @@ setup(
     zip_safe=False,
     include_package_data=True,
     platforms='any',
-    entry_points={
-        'invenio_config.module': [
-            'invenio-integration-tests = invenio-integration-tests.config',
-        ],
-    },
+    entry_points={},
     extras_require=extras_require,
     classifiers=[
         'Environment :: Web Environment',
