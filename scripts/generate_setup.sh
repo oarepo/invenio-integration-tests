@@ -24,7 +24,7 @@ pip install bump
 
 # version bump
 INVENIO_VERSION=$(sed -n '/^invenio==/ {s/^invenio==//; p;}' "$REQ_FILE")
-PREV_INVENIO_VERSION=$(sed -n '/^__version__ / {s/^[^"]\+"\([0-9.]\+\)\.[0-9]"$/\1/;p}' "$VERSION_PY")
+PREV_INVENIO_VERSION=$(sed -n '/^__version__ / {s/^[^"]\+"\([0-9.]\+\)\.[0-9]\+"$/\1/;p}' "$VERSION_PY")
 if [[ "$PREV_INVENIO_VERSION" == "$INVENIO_VERSION" ]]; then
   # bump utility probably can't use four-number format, temporarily switched to three-number format without major ver.num.:
   MAJOR=$(sed -n '/^__version__ / {s/^[^"]\+"\([0-9]\+\)\..*$/\1/;p}' "$VERSION_PY")
