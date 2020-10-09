@@ -17,7 +17,7 @@
       - name: Generate OARepo setup.py from tested requirements artifact
         run: |
           ./scripts/generate_setup.sh invenioX.Y
-          echo "::set-env name=NEWTAG::$(cat ./oarepo/oarepo/tag.txt)"
+          echo "NEWTAG=$(cat ./oarepo/oarepo/tag.txt)" >> $GITHUB_ENV
       - name: Commit and Push generated OARepo setup.py
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
