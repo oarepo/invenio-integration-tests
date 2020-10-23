@@ -41,6 +41,8 @@ echo "$NEWTAG" > "$TAG_TXT"
 # modify version.py
 sed -i "/^__version__ / {s/\"[0-9.]\+\"/\"$NEWTAG\"/}" "$VERSION_PY"
 
-sed -e "s/^\(.*\)$/  '\1',/" ${REQ_FILE} \
+sed -e "s/^\(.*\)$/    '\1',/" ${REQ_FILE} \
  | sed -i '/^install_requires/,/\]/!b;//!d;/^install_requires/r /dev/stdin' ${SETUP_PY}
+sed -e "s/^\(.*\)$/        '\1',/" ${REQ_FILE_TEST} \
+ | sed -i '/^extras_require/,/\]/!b;/^    \x27tests\x27: \[/,/^    \]/!b;r /dev/stdin' ${SETUP_PY}
 echo "Done."
