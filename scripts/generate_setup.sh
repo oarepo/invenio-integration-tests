@@ -13,6 +13,7 @@ echo "generate_setup.sh"
 INVENIO_VERSION_LBL=$1
 
 REQ_FILE="upload/requirements-${INVENIO_VERSION_LBL}.txt"
+REQ_FILE_TEST="upload/requirements-${INVENIO_VERSION_LBL}test.txt"
 SETUP_PY='oarepo/setup.py'
 VERSION_PY='oarepo/oarepo/version.py'
 TAG_TXT='oarepo/oarepo/tag.txt'
