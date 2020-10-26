@@ -23,7 +23,7 @@ click-default-group==1.2.2
 click-didyoumean==0.0.3
 click-repl==0.1.6
 coverage==4.5.4
-cryptography==3.1.1
+cryptography==3.2
 decorator==4.4.2
 defusedxml==0.6.0
 dnspython==2.0.0
@@ -35,7 +35,7 @@ email-validator==1.1.1
 entrypoints==0.3
 execnet==1.7.1
 Flask==1.1.2
-Flask-Admin==1.5.6
+Flask-Admin==1.5.7
 Flask-Alembic==2.0.1
 Flask-Assets==2.0
 Flask-BabelEx==0.9.4
@@ -142,7 +142,7 @@ ptyprocess==0.6.0
 py==1.9.0
 pycparser==2.20
 pydocstyle==5.1.1
-Pygments==2.7.1
+Pygments==2.7.2
 PyJWT==1.7.1
 pynpm==0.1.2
 pyparsing==2.4.7
