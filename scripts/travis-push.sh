@@ -14,8 +14,8 @@ git config --global user.email noreply@cesnet.cz
 URL="https://du-cesnet-travis:${GH_TOKEN}@github.com/oarepo/invenio-integration-tests.git"
 DIR="invenio-integration-tests"
 
-git clone -q -b master --depth 10 "$URL" "$DIR"  \
- && cp upload/requirements* $DIR/upload
+git clone -q -b master --depth 10 "$URL" "$DIR" \
+ && cp upload/requirements* $DIR/upload \
  && cd "$DIR" \
  && git add upload/requirements* \
  && git commit -m "travis commit $DATE (build:$TRAVIS_BUILD_NUMBER result:$TRAVIS_TEST_RESULT)" -m "[skip ci]" \
