@@ -11,9 +11,14 @@ DATE=$(date '+%y%m%d-%H%M%S')
 git config --global user.name du-cesnet-travis
 git config --global user.email noreply@cesnet.cz
 
-git checkout -q master \
- && git pull \
+URL="https://du-cesnet-travis:${GH_TOKEN}@github.com/oarepo/invenio-integration-tests.git"
+DIR="invenio-integration-tests"
+
+git clone -q -b master --depth 10 "$URL" "$DIR"  \
+ && cp upload/requirements* $DIR/upload
+ && cd "$DIR" \
  && git add upload/requirements* \
  && git commit -m "travis commit $DATE (build:$TRAVIS_BUILD_NUMBER result:$TRAVIS_TEST_RESULT)" -m "[skip ci]" \
- && git remote add authenticated https://du-cesnet-travis:${GH_TOKEN}@github.com/oarepo/invenio-integration-tests.git > /dev/null 2>&1 \
- && git push authenticated master 
+ && git push origin master 
+
+echo "Done: $?"

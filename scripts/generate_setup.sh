@@ -23,28 +23,24 @@ test -s "$REQ_FILE" || { echo "ERR: REQ_FILE not exists or empty"; exit 1; }
 python -m pip install --upgrade pip
 pip install bump
 
-# version bump
-INVENIO_VERSION=$(sed -n '/^invenio==/ {s/^invenio==//; p;}' "$REQ_FILE")
-PREV_INVENIO_VERSION=$(sed -n '/^__version__ / {s/^[^"]\+"\([0-9.]\+\)\.[0-9]\+"$/\1/;p}' "$VERSION_PY")
-if [[ "$PREV_INVENIO_VERSION" == "$INVENIO_VERSION" ]]; then
-  # bump utility probably can't use four-number format, temporarily switched to three-number format without major ver.num.:
-  MAJOR=$(sed -n '/^__version__ / {s/^[^"]\+"\([0-9]\+\)\..*$/\1/;p}' "$VERSION_PY")
-  BUMP_INPUT=$(sed -n '/^__version__ / {s/^[^"]\+"[0-9]\.\([0-9.]\+\)"[^"]*$/\1/;p}' "$VERSION_PY")
-  BUMPED=$(sed -n '/^__version__ / {s/"[0-9]\./"/;p}' "$VERSION_PY" | bump - /dev/null)
-  # and back with major ver.num.:
-  NEWTAG="$MAJOR.$BUMPED"
-else
-  NEWTAG="$INVENIO_VERSION.0"
+# 1st two digits of fixed invenio version from the requirements file:
+INVENIO_VERSION=$(sed -n '/^invenio==/ {s/^invenio==\([0-9]\+\.[0-9]\+\)\(\.[0-9]\+\)\?$/\1/; p;}' "$REQ_FILE")
+# 1st two digits of previous version from version.py:
+PREV_INVENIO_VERSION=$(sed -n '/^__version__ / {s/^[^"\x27]\+["\x27]\([0-9]\+\.[0-9]\)\(\.[0-9]\+\)\?["\x27]$/\1/;p}' "$VERSION_PY")
+
+# if there is new invenio version, update 1st two numbers accordingly:
+if [[ "$PREV_INVENIO_VERSION" != "$INVENIO_VERSION" ]]; then
+  sed -i "/^__version__ / {s/[\"'][0-9.]\+[\"']/\"$INVENIO_VERSION\"/}" "$VERSION_PY"
 fi
+# bump version.py + catch new value:
+NEWTAG=$(bump "$VERSION_PY" "$VERSION_PY")
+
 echo "PREV_INVENIO_VERSION:$PREV_INVENIO_VERSION INVENIO_VERSION:$INVENIO_VERSION NEWTAG:$NEWTAG"
 echo "$NEWTAG" > "$TAG_TXT"
 
-# modify version.py
-sed -i "/^__version__ / {s/\"[0-9.]\+\"/\"$NEWTAG\"/}" "$VERSION_PY"
-
 sed -e "s/^\(.*\)\$/    '\1',/" ${REQ_FILE} \
- | sed -i '/^install_requires/,/\]/!b;//!d;/^install_requires/r /dev/stdin' ${SETUP_PY}
+ | sed -i '/^install_requires/,/^\]/!b;//!d;/^install_requires/r /dev/stdin' ${SETUP_PY}
 sed -e '/pytest-invenio/ s/^pytest-invenio==\([0-9\.]\+\)$/pytest-invenio[docs]==\1/' -e "s/^\(.*\)\$/        '\1',/" ${REQ_FILE_TEST} \
- | sed -i '/^extras_require/,/\]/!b;/^    \x27tests\x27: \[/,/^    \]/!b;//!d;r /dev/stdin' ${SETUP_PY}
+ | sed -i '/^extras_require/,/^\]/!b;/^    \x27tests\x27: \[/,/^    \]/!b;//!d;r /dev/stdin' ${SETUP_PY}
 
 echo "Done."
