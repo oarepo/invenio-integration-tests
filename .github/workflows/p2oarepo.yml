@@ -3,7 +3,7 @@ name: p2oarepo
 on:
   push:
     branches: [ master ]
-    paths: [ 'upload/*' ]
+    paths: [ 'upload/p2oarepo_action.trigger' ]
 
 jobs:
   publish-setup-invenio-3-3:
