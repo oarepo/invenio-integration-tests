@@ -25,7 +25,7 @@ jobs:
           EXTRAS: 'invenio3.3'
           REQUIREMENTS: 'invenio3.3'
           ES7_DOWNLOAD_URL: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
-          ES_URL: ${{ env.$ES7_DOWNLOAD_URL }}
+          ES_URL: ${{ env.ES7_DOWNLOAD_URL }}
         run: |
           python -m pip install --upgrade pip setuptools
           echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS; ES_URL:$ES_URL;"
