@@ -32,6 +32,5 @@ jobs:
           python -m pip install --upgrade pip setuptools
           echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS; ES_URL:$ES_URL;"
           ./scripts/init
-#          ./scripts/bootstrap
           echo ".travis-requirements.txt:"
           cat .travis-requirements.txt
