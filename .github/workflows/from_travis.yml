@@ -1,4 +1,4 @@
-name: Invenio requirements biulder (from travis)
+name: Invenio requirements biulder (ported from travis)
 
 on:
   push:
@@ -6,12 +6,15 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
 #    strategy:
 #      matrix:
 #        python-version: [ 3.8 ]
     env:
       ES7_DOWNLOAD_URL: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
+      EXTRAS: 'invenio3.3'
+      REQUIREMENTS: 'invenio3.3'
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v2
@@ -20,17 +23,17 @@ jobs:
         with:
 #          python-version: ${{ matrix.python-version }}
           python-version: 3.8
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
-      - name: Install dependencies
+#      - name: Display Python version
+#        run: python -c "import sys; print(sys.version)"
+      - name: init
         env:
-          EXTRAS: 'invenio3.3'
-          REQUIREMENTS: 'invenio3.3'
           ES_URL: ${{ env.ES7_DOWNLOAD_URL }}
         run: |
-          python -m pip install --upgrade pip setuptools
           echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS; ES_URL:$ES_URL;"
           ./scripts/init
+      - name: install (bootstrap)
+        run: |
           ./scripts/bootstrap
+      - name: run_test
+        run: |
           ./run_tests.sh
-          cat "upload/requirements-${REQUIREMENTS}.txt"
