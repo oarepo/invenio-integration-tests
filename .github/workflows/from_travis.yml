@@ -37,3 +37,7 @@ jobs:
       - name: run_test
         run: |
           ./run_tests.sh
+          /bin/false
+      - name: push results
+        run: |
+          echo "TODO: Push results back here."
