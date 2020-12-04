@@ -17,7 +17,7 @@ jobs:
             requirements: 'invenio3.3test'
     env:
       ES7_DOWNLOAD_URL: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
-      EXTRAS: ${{ matix.extras }}
+      EXTRAS: ${{ matrix.extras }}
       REQUIREMENTS: ${{ matrix.requirements }}
       OAR_BOT: '${{ secrets.OAR_BOT }}'
     steps:
