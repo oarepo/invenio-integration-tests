@@ -8,13 +8,17 @@ jobs:
   build:
 #    runs-on: ubuntu-20.04
     runs-on: ubuntu-18.04
-#    strategy:
-#      matrix:
-#        python-version: [ 3.8 ]
+    strategy:
+      matrix:
+        include:
+          - extras: 'invenio3.3'
+            requirements: 'invenio3.3'
+          - extras: 'invenio3.3test'
+            requirements: 'invenio3.3test'
     env:
       ES7_DOWNLOAD_URL: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
-      EXTRAS: 'invenio3.3'
-      REQUIREMENTS: 'invenio3.3'
+      EXTRAS: ${{ matix.extras }}
+      REQUIREMENTS: ${{ matrix.requirements }}
       OAR_BOT: '${{ secrets.OAR_BOT }}'
     steps:
       - name: Checkout oarepo/invenio-integration-tests

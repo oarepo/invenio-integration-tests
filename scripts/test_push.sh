@@ -3,6 +3,7 @@
 set -e
 
 echo "test-push.sh"
+echo "GITHUB_RUN_NUMBER: $GITHUB_RUN_NUMBER"
 
 DATE=$(date '+%y%m%d-%H%M%S%z')
 
@@ -17,6 +18,9 @@ TRIG="upload/p2oarepo_action.trigger"
 git clone -q -b master --depth 10 "$URL" "$DIR"
 cp "$REQFILE" $DIR/upload
 cd "$DIR"
-pwd
-ls -l upload
-tail -n 20 $REQFILE
+echo $DATE > upload/test.txt
+git add upload/test.txt
+git commit -m "travis commit $DATE (build:$GITHUB_RUN_NUMBER)" -m "[skip ci]"
+git push origin master
+
+echo "Done: $?"
