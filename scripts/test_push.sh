@@ -3,7 +3,6 @@
 set -e
 
 echo "test-push.sh"
-echo "GITHUB_RUN_NUMBER: $GITHUB_RUN_NUMBER"
 
 DATE=$(date '+%y%m%d-%H%M%S%z')
 
@@ -14,13 +13,13 @@ URL="https://oarepo-bot:${OAR_BOT}@github.com/oarepo/invenio-integration-tests.g
 DIR="invenio-integration-tests"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
 TRIG="upload/p2oarepo_action.trigger"
+BRANCH="master"
 
-git clone -q -b master --depth 10 "$URL" "$DIR"
+git clone -q -b "$BRANCH" --depth 10 "$URL" "$DIR"
 cp "$REQFILE" $DIR/upload
 cd "$DIR"
-echo $DATE > upload/test.txt
-git add upload/test.txt
-git commit -m "travis commit $DATE (build:$GITHUB_RUN_NUMBER)" -m "[skip ci]"
-git push origin master
+git add "$REQFILE"
+git commit -m "test commit $DATE (build:$GITHUB_RUN_NUMBER)" -m "[skip ci]"
+git push origin "$BRANCH"
 
 echo "Done: $?"
