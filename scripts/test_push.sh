@@ -19,7 +19,9 @@ git clone -q -b "$BRANCH" --depth 10 "$URL" "$DIR"
 cp "$REQFILE" $DIR/upload
 cd "$DIR"
 git add "$REQFILE"
-git commit -m "test commit $DATE (build:$GITHUB_RUN_NUMBER)" -m "[skip ci]"
-git push origin "$BRANCH"
+git diff-index --quiet HEAD -- || {
+  git commit -m "test commit $DATE (build:$GITHUB_RUN_NUMBER)" -m "[skip ci]"
+  git push origin "$BRANCH"
+}
 
 echo "Done: $?"
