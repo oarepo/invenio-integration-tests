@@ -21,10 +21,12 @@ jobs:
           - extras: 'devel_test'
             requirements: 'devel_test'
     env:
+      E2E: 'no'
       ES7_DOWNLOAD_URL: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
       EXTRAS: ${{ matrix.extras }}
       REQUIREMENTS: ${{ matrix.requirements }}
       OAR_BOT: '${{ secrets.OAR_BOT }}'
+      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres@localhost:5432/invenio'
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v2
@@ -44,6 +46,8 @@ jobs:
         run: |
           ./scripts/bootstrap
       - name: run_test
+        env:
+          INVENIO_SQLALCHEMY_DATABASE_URI: '$SQLALCHEMY_DATABASE_URI'
         run: |
           ./run_tests.sh
       - name: push results
