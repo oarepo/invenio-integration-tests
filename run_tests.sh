@@ -50,6 +50,7 @@ INVEPID=$!
 trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
 sleep 8
 
+echo -n "jq version:"; jq --version
 ./scripts/test_rest.sh
 
 kill $INVEPID
@@ -61,3 +62,5 @@ echo -e "\npip freeze"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
 pip freeze > $REQFILE
 grep -F -e invenio= -e invenio-base -e invenio-search -e invenio-db $REQFILE
+
+echo "Done."

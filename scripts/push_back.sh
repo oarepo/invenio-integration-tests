@@ -2,7 +2,7 @@
 
 set -e
 
-echo "push back"
+echo "push results back"
 
 DATE=$(date '+%y%m%d-%H%M%S%z')
 
@@ -21,25 +21,10 @@ cd "$DIR"
 git add "$REQFILE"
 # only if not devel variant:
 if [[ ! "$REQUIREMENTS" =~ ^devel ]]; then
-  # if test variant - test the flag:
+  # if test variant => both variants finished => fire trigger:
   if [[ "$REQUIREMENTS" =~ test$ ]]; then
-    REQS_NOTEST=$(sed 's/test$//' <<<"$REQUIREMENTS")
-    FLG="upload/travis_push-$REQS_NOTEST-$TRAVIS_BUILD_NUMBER.flg"
-    # if regular variant finished (flag exists) - update trigger and remove the flag:
-    if [[ -f "$FLG" ]]; then
-      echo "TRIG $(date '+%y%m%d-%H%M%S%z')" > "$TRIG"
-      git add "$TRIG"
-      #git rm "$FLG"
-      git rm upload/travis_push-$REQS_NOTEST-*.flg
-    else
-      echo "ERR: notest requirements haven't been finished."
-      exit 1
-    fi
-  # regular variant - leave the flag:
-  else
-    FLG="upload/travis_push-$REQUIREMENTS-$TRAVIS_BUILD_NUMBER.flg"
-    date '+%y%m%d-%H%M%S%z' > "$FLG"
-    git add "$FLG"
+    echo "TRIG $(date '+%y%m%d-%H%M%S%z')" > "$TRIG"
+    git add "$TRIG"
   fi
 fi
 git diff-index --quiet HEAD -- || {

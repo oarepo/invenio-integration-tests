@@ -3,6 +3,9 @@ name: Invenio requirements biulder (ported from travis)
 on:
   push:
     branches: [ test ]
+  schedule:
+    # every sat. at 7:33
+    - cron: '33 7 * * 6'
 
 jobs:
   build:
@@ -46,8 +49,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-#      - name: Display Python version
-#        run: python -c "import sys; print(sys.version)"
       - name: init
         env:
           ES_URL: ${{ env.ES7_DOWNLOAD_URL }}
@@ -61,10 +62,7 @@ jobs:
         env:
           INVENIO_SQLALCHEMY_DATABASE_URI: ${{ env.SQLALCHEMY_DATABASE_URI }}
         run: |
-          echo "psql test (port ${{ env.POSTGRES_PORT }}): pgrep -a postg"
-          pgrep -a postg
-          echo $?
           ./run_tests.sh
-      - name: push results
+      - name: push results back
         run: |
-          ./scripts/test_push.sh
+          ./scripts/push_back.sh
