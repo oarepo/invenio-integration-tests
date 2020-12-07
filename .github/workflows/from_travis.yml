@@ -47,7 +47,7 @@ jobs:
           ./scripts/bootstrap
       - name: run_test
         env:
-          INVENIO_SQLALCHEMY_DATABASE_URI: '$SQLALCHEMY_DATABASE_URI'
+          INVENIO_SQLALCHEMY_DATABASE_URI: ${{ env.SQLALCHEMY_DATABASE_URI }}
         run: |
           ./run_tests.sh
       - name: push results
