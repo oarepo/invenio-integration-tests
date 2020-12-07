@@ -50,7 +50,7 @@ jobs:
           INVENIO_SQLALCHEMY_DATABASE_URI: ${{ env.SQLALCHEMY_DATABASE_URI }}
         run: |
           echo "psql test"
-          psql -c 'CREATE DATABASE invenio;' -U postgres
+          pgrep -a postg
           ./run_tests.sh
       - name: push results
         run: |
