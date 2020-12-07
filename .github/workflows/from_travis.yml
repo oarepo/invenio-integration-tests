@@ -38,7 +38,7 @@ jobs:
       OAR_BOT: '${{ secrets.OAR_BOT }}'
       SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres:postgres@localhost:5432/invenio'
       POSTGRES_HOST: localhost
-      POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
+      POSTGRES_PORT: ${{ jobs.services.postgres.ports[5432] }}
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v2
