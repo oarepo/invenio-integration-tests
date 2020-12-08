@@ -1,0 +1,68 @@
+name: Invenio requirements biulder (ported from travis)
+
+on:
+  push:
+    branches: [ test ]
+  schedule:
+    # every sat. at 7:33
+    - cron: '33 7 * * 6'
+
+jobs:
+  build:
+#    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
+    services:
+      postgres:
+        image: postgres:9.6
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    strategy:
+      max-parallel: 1
+      matrix:
+        include:
+          - extras: 'invenio3.3'
+            requirements: 'invenio3.3'
+          - extras: 'invenio3.3test'
+            requirements: 'invenio3.3test'
+          - extras: 'devel'
+            requirements: 'devel'
+          - extras: 'devel_test'
+            requirements: 'devel_test'
+    env:
+      E2E: 'no'
+      ES7_DOWNLOAD_URL: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
+      EXTRAS: ${{ matrix.extras }}
+      REQUIREMENTS: ${{ matrix.requirements }}
+      OAR_BOT: '${{ secrets.OAR_BOT }}'
+      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres:postgres@localhost:5432/invenio'
+      POSTGRES_USER: postgres
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: invenio
+    steps:
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: init
+        env:
+          ES_URL: ${{ env.ES7_DOWNLOAD_URL }}
+        run: |
+          echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS; ES_URL:$ES_URL;"
+          ./scripts/init
+      - name: install (bootstrap)
+        run: |
+          ./scripts/bootstrap
+      - name: run_test
+        env:
+          INVENIO_SQLALCHEMY_DATABASE_URI: ${{ env.SQLALCHEMY_DATABASE_URI }}
+        run: |
+          ./run_tests.sh
+      - name: push results back
+        run: |
+          ./scripts/push_back.sh
