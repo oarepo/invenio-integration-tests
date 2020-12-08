@@ -2,7 +2,7 @@ name: Invenio requirements biulder (ported from travis)
 
 on:
   push:
-    branches: [ test ]
+    branches: [ master ]
   schedule:
     # every sat. at 7:33
     - cron: '33 7 * * 6'
