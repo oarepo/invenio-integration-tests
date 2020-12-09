@@ -10,6 +10,7 @@ name: Invenio requirements builder (ported from travis)
 on:
   push:
     branches: [ master ]
+    paths-ignore: [ 'upload/*' ]
   schedule:
     # every sat. at 7:33
     - cron: '33 7 * * 6'
