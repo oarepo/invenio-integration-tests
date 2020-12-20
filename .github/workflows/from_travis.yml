@@ -13,7 +13,9 @@ on:
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
   schedule:
     # every sat. at 7:33
-    - cron: '33 7 * * 6'
+    #- cron: '33 7 * * 6'
+    # debug run every day at 7:33
+    - cron: '33 7 * * *'
 
 jobs:
   build:
@@ -51,6 +53,7 @@ jobs:
       POSTGRES_HOST: localhost
       POSTGRES_PORT: 5432
       POSTGRES_DB: invenio
+      GH_EVENT_NAME: ${{ github.event_name }}
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v2
