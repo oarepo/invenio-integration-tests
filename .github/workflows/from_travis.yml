@@ -38,10 +38,10 @@ jobs:
             requirements: 'invenio3.3'
           - extras: 'invenio3.3test'
             requirements: 'invenio3.3test'
-          - extras: 'devel'
-            requirements: 'devel'
-          - extras: 'devel_test'
-            requirements: 'devel_test'
+#          - extras: 'devel'
+#            requirements: 'devel'
+#          - extras: 'devel_test'
+#            requirements: 'devel_test'
     env:
       E2E: 'no'
       ES7_DOWNLOAD_URL: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.2.0-linux-x86_64.tar.gz"
