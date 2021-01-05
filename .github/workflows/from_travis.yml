@@ -13,9 +13,9 @@ on:
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
   schedule:
     # every sat. at 7:33
-    #- cron: '33 7 * * 6'
+    - cron: '33 7 * * 6'
     # debug run every day at 7:33
-    - cron: '33 7 * * *'
+    #- cron: '33 7 * * *'
 
 jobs:
   build:
