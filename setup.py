@@ -20,13 +20,13 @@ extras_require = {
     ],
     'invenio3.3': [
         'invenio[base,metadata,files,postgresql,elasticsearch7]>=3.3.0,<3.4.0',
-        'invenio-accounts>=1.4.2',
+        'invenio-accounts==1.4.2',
         'requests',
         's3-client-lib'
     ],
     'invenio3.3test': [
         'invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.3.0,<3.4.0',
-        'invenio-accounts>=1.4.2',
+        'invenio-accounts==1.4.2',
         'requests',
         's3-client-lib'
     ],

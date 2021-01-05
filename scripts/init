@@ -15,4 +15,4 @@ wget --no-verbose -O - ${ES_URL} | tar xz --directory=/tmp/elasticsearch --strip
 
 pip install --upgrade pip setuptools py pip-tools
 pip install requirements-builder
-requirements-builder -l $RB_LEVEL -e ${EXTRAS} setup.py | pip-compile -U -o .travis-requirements.txt -
+requirements-builder -e ${EXTRAS} setup.py | pip-compile -U -o .travis-requirements.txt -
