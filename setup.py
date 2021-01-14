@@ -32,7 +32,7 @@ extras_require = {
         'requests',
         's3-client-lib',
         'flask-oauthlib',
-        'invenio-oauthclient'
+        'invenio-oauthclient==1.4.0'
     ],
     'devel': [
         'invenio[base,metadata,files,postgresql,elasticsearch7]',
