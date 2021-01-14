@@ -24,7 +24,7 @@ extras_require = {
         'requests',
         's3-client-lib',
         'flask-oauthlib',
-        'invenio-oauthclient'
+        'invenio-oauthclient==1.4.0'
     ],
     'invenio3.3test': [
         'invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.3.0,<3.4.0',
