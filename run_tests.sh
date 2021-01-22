@@ -10,9 +10,6 @@ set -e
 
 echo -e "\ninvenio-integration-tests/run_tests.sh"
 
-echo ".travis-requirements.txt:"
-cat .travis-requirements.txt
-
 export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
 echo -e "\ninvenio shell, print(version.__version__):"
 invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)"
@@ -58,9 +55,9 @@ trap - EXIT
 echo -e "\ninvenio_run.log:"
 cat invenio_run.log
 
-echo -e "\npip freeze"
+echo -e "\nsave requirements"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
-pip freeze > $REQFILE
+./scripts/poetry2reqs.py | sed 's/\x0D$//' | grep -v '^win32==' > $REQFILE
 grep -F -e invenio= -e invenio-base -e invenio-search -e invenio-db $REQFILE
 
 echo "Done."

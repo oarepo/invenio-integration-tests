@@ -1,0 +1,45 @@
+[tool]
+
+[tool.poetry]
+name = "invenio-integration-tests"
+version = "0.0.1"
+description = "invenio integration tests"
+license = "MIT"
+keywords = ["Invenio", "oarepo"]
+classifiers = ["Environment :: Web Environment", "Intended Audience :: Developers", "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent", "Programming Language :: Python", "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+  "Programming Language :: Python :: 3", "Programming Language :: Python :: 3.8", "Development Status :: 3 - Alpha"
+]
+homepage = "https://github.com/oarepo/invenio-integration-tests"
+authors = ["Tomas HLava @ CESNET <hlava@cesnet.cz>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+#invenio = { optional = true, version = ">=3.3.0,<3.4.0", extras = [ "base","metadata","files","postgresql","elasticsearch7","tests" ] }
+invenio = { optional = true, version = ">=3.3.0,<3.4.0", extras = [ "base","metadata","files","postgresql","elasticsearch7" ] }
+requests = { optional = true, version = "*" }
+s3-client-lib = { optional = true, version = "*" }
+flask-oauthlib = { optional = true, version = "*" }
+invenio-oauthclient = { optional = true, version = "*" }
+invenio-oauth2server = { optional = true, version = "*" }
+
+[tool.poetry.extras]
+"invenio3.3" = [
+  "invenio",
+  "invenio-accounts",
+  "requests",
+  "s3-client-lib",
+  "flask-oauthlib",
+  "invenio-oauthclient",
+  "invenio-oauth2server"
+]
+"invenio3.3test" = [
+  "invenio",
+  "invenio-accounts",
+  "requests",
+  "s3-client-lib",
+  "flask-oauthlib",
+  "invenio-oauthclient",
+  "invenio-oauth2server"
+]

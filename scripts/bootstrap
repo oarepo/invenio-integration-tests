@@ -8,7 +8,7 @@
 
 set -e
 
-OPTS="--force-reinstall --no-cache-dir"
-if [ "${REQUIREMENTS}" = "devel" ] ; then OPTS="$OPTS --pre"; fi
-cat .travis-requirements.txt
-pip install $OPTS -r .travis-requirements.txt
+if [[ "$EXTRAS" =~ test$ ]]; then
+  poetry add --optional "invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.3.0,<3.4.0"
+fi
+poetry install --extras ${EXTRAS}
