@@ -38,8 +38,8 @@ if [[ ! "$REQUIREMENTS" =~ ^devel ]]; then
       # remove the flag
       [[ -f "$FLG" ]] && git rm "$FLG"
       # save the trigger
-#      echo "TRIG $(date '+%y%m%d-%H%M%S%z')" > "$TRIG"
-#      git add "$TRIG"
+      echo "TRIG $(date '+%y%m%d-%H%M%S%z')" > "$TRIG"
+      git add "$TRIG"
     fi
   fi
 fi

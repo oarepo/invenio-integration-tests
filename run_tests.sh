@@ -57,7 +57,7 @@ cat invenio_run.log
 
 echo -e "\nsave requirements"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
-./scripts/poetry2reqs.py | sed 's/\x0D$//' | grep -v '^win32==' > $REQFILE
+./scripts/poetry2reqs.py | sed 's/\x0D$//' | grep -v '^pywin32==' > $REQFILE
 grep -F -e invenio= -e invenio-base -e invenio-search -e invenio-db $REQFILE
 
 echo "Done."
