@@ -11,10 +11,10 @@ babel==2.9.0
 backcall==0.2.0
 base32-lib==1.0.2
 billiard==3.6.3.0
-bleach==3.2.2
+bleach==3.2.3
 blinker==1.4
-boto3==1.16.59
-botocore==1.19.59
+boto3==1.16.60
+botocore==1.19.60
 build==0.1.0
 cachelib==0.1.1
 cchardet==2.1.7
@@ -40,7 +40,7 @@ elasticsearch==7.10.1
 elasticsearch-dsl==7.3.0
 email-validator==1.1.2
 entrypoints==0.3
-execnet==1.7.1
+execnet==1.8.0
 flask==1.1.2
 flask-admin==1.5.7
 flask-alembic==2.0.1
@@ -145,7 +145,7 @@ pexpect==4.8.0
 pickleshare==0.7.5
 pillow==8.1.0
 pluggy==0.13.1
-prompt-toolkit==3.0.13
+prompt-toolkit==3.0.14
 psycopg2-binary==2.8.6
 ptyprocess==0.7.0
 py==1.10.0
@@ -166,7 +166,7 @@ python-dateutil==2.8.1
 python-editor==1.0.4
 pytz==2020.5
 pywebpack==1.2.0
-pyzmq==21.0.1
+pyzmq==21.0.2
 redis==3.5.3
 requests==2.24.0
 requests-oauthlib==1.1.0
