@@ -11,8 +11,8 @@ base32-lib==1.0.2
 billiard==3.6.3.0
 bleach==3.2.2
 blinker==1.4
-boto3==1.16.58
-botocore==1.19.58
+boto3==1.16.59
+botocore==1.19.59
 cachelib==0.1.1
 cchardet==2.1.7
 celery==5.0.5
@@ -147,8 +147,7 @@ pyrsistent==0.17.3
 python-dateutil==2.8.1
 python-editor==1.0.4
 pytz==2020.5
-pywebpack==1.1.0
-pywin32==300
+pywebpack==1.2.0
 pyzmq==21.0.1
 redis==3.5.3
 requests==2.24.0
