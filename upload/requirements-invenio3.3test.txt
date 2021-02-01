@@ -110,7 +110,7 @@ ipython-genutils==0.2.0
 isort==5.7.0
 itsdangerous==1.1.0
 jedi==0.18.0
-jinja2==2.11.2
+jinja2==2.11.3
 jmespath==0.10.0
 jsmin==2.2.2
 jsonpatch==1.28
@@ -119,7 +119,7 @@ jsonref==0.2
 jsonresolver==0.3.1
 jsonschema==3.2.0
 jupyter-client==6.1.11
-jupyter-core==4.7.0
+jupyter-core==4.7.1
 kombu==5.0.2
 limits==1.5.1
 lxml==4.6.2
@@ -164,7 +164,7 @@ pytest-invenio==1.3.4
 pytest-pep8==1.0.6
 python-dateutil==2.8.1
 python-editor==1.0.4
-pytz==2020.5
+pytz==2021.1
 pywebpack==1.2.0
 pyzmq==22.0.2
 redis==3.5.3
