@@ -45,7 +45,7 @@ if [[ ! "$REQUIREMENTS" =~ ^devel ]]; then
 fi
 # if something to commit:
 if ! git diff-index --quiet HEAD -- ; then
-  git commit -m "GH action commit $DATE (build:$GITHUB_RUN_NUMBER)" -m "[skip ci]"
+  git commit -m "GH action commit $DATE (build:$GITHUB_RUN_NUMBER)"
   git push origin "$BRANCH"
 fi
 
