@@ -1,7 +1,7 @@
 alembic==1.5.4
 amqp==5.0.5
 angular-gettext-babel==0.3
-aniso8601==8.1.1
+aniso8601==9.0.0
 appnope==0.1.2
 arrow==0.17.0
 attrs==20.3.0
@@ -11,8 +11,8 @@ base32-lib==1.0.2
 billiard==3.6.3.0
 bleach==3.3.0
 blinker==1.4
-boto3==1.17.7
-botocore==1.20.7
+boto3==1.17.12
+botocore==1.20.12
 cachelib==0.1.1
 cchardet==2.1.7
 celery==5.0.5
@@ -25,7 +25,7 @@ click-didyoumean==0.0.3
 click-plugins==1.1.1
 click-repl==0.1.6
 colorama==0.4.4
-cryptography==3.4.4
+cryptography==3.4.6
 decorator==4.4.2
 defusedxml==0.6.0
 dnspython==2.1.0
@@ -67,7 +67,7 @@ idna==2.10
 infinity==1.5
 intervals==0.9.1
 invenio==3.3.0
-invenio-access==1.4.1
+invenio-access==1.4.2
 invenio-accounts==1.4.2
 invenio-admin==1.2.1
 invenio-app==1.2.7
@@ -139,7 +139,7 @@ psycopg2-binary==2.8.6
 ptyprocess==0.7.0
 py==1.10.0
 pycparser==2.20
-pygments==2.7.4
+pygments==2.8.0
 pyjwt==2.0.1
 pynpm==0.1.2
 pyparsing==2.4.7
