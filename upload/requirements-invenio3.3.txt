@@ -1,7 +1,7 @@
-alembic==1.5.5
+alembic==1.5.6
 amqp==5.0.5
 angular-gettext-babel==0.3
-aniso8601==9.0.0
+aniso8601==9.0.1
 appnope==0.1.2
 arrow==1.0.2
 attrs==20.3.0
@@ -11,8 +11,8 @@ base32-lib==1.0.2
 billiard==3.6.3.0
 bleach==3.3.0
 blinker==1.4
-boto3==1.17.17
-botocore==1.20.17
+boto3==1.17.22
+botocore==1.20.22
 cachelib==0.1.1
 cchardet==2.1.7
 celery==5.0.5
@@ -27,7 +27,7 @@ click-repl==0.1.6
 colorama==0.4.4
 cryptography==3.4.6
 decorator==4.4.2
-defusedxml==0.6.0
+defusedxml==0.7.0
 dnspython==2.1.0
 dojson==1.4.0
 elasticsearch==7.11.0
@@ -40,7 +40,7 @@ flask-alembic==2.0.1
 flask-assets==2.0
 flask-babelex==0.9.4
 flask-breadcrumbs==0.5.1
-flask-caching==1.9.0
+flask-caching==1.10.0
 flask-celeryext==0.3.4
 flask-collect==1.2.2
 flask-cors==3.0.10
@@ -105,7 +105,7 @@ jedi==0.18.0
 jinja2==2.11.3
 jmespath==0.10.0
 jsmin==2.2.2
-jsonpatch==1.28
+jsonpatch==1.31
 jsonpointer==2.0
 jsonref==0.2
 jsonresolver==0.3.1
@@ -132,7 +132,7 @@ parso==0.8.1
 passlib==1.7.4
 pexpect==4.8.0
 pickleshare==0.7.5
-pillow==8.1.0
+pillow==8.1.2
 pluggy==0.13.1
 prompt-toolkit==3.0.16
 psycopg2-binary==2.8.6
