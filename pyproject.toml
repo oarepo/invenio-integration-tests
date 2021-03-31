@@ -23,6 +23,7 @@ s3-client-lib = { optional = true, version = "*" }
 flask-oauthlib = { optional = true, version = "*" }
 invenio-oauthclient = { optional = true, version = "*" }
 invenio-oauth2server = { optional = true, version = "*" }
+invenio-logging = { optional = true, version = "*", extras = [ "sentry-sdk" ] }
 
 [tool.poetry.extras]
 "invenio3.3" = [
