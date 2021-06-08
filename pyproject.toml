@@ -24,7 +24,7 @@ flask-oauthlib = { optional = true, version = "*" }
 invenio-oauthclient = { optional = true, version = "*" }
 invenio-oauth2server = { optional = true, version = "*" }
 invenio-logging = { optional = true, version = "*", extras = [ "sentry-sdk" ] }
-#sqlalchemy = { optional = true, version = "<1.4.0" }
+sqlalchemy = { optional = true, version = "<1.4.0" }
 urllib3 = { optional = true, version = ">=1.26.5" }
 
 [tool.poetry.extras]
