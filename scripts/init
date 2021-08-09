@@ -8,10 +8,5 @@
 
 set -e
 
-# elasticsearch install+run:
-mkdir /tmp/elasticsearch
-wget --no-verbose -O - ${ES_URL} | tar xz --directory=/tmp/elasticsearch --strip-components=1
-/tmp/elasticsearch/bin/elasticsearch > /tmp/local-es.log &
-
 pip install --upgrade pip setuptools py poetry
 poetry config virtualenvs.create false
