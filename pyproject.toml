@@ -28,6 +28,7 @@ sqlalchemy = { optional = true, version = "<1.4.0" }
 urllib3 = { optional = true, version = ">=1.26.5" }
 #flask-caching = { version = ">1.10.1" }
 marshmallow-utils = "^0.4"
+celery = "<=5.0.5"
 
 [tool.poetry.extras]
 "invenio3.3" = [
