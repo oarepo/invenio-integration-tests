@@ -27,7 +27,8 @@ extras_require = {
         'invenio-oauthclient==1.4.0',
         'invenio-oauth2server==1.3.1',
         'pytest-cov==2.10.1',
-        'coverage==4.5.4'
+        'coverage==4.5.4',
+        'pillow>=8.3.2'
     ],
     'invenio3.3test': [
         'invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.3.0,<3.4.0',
@@ -38,7 +39,8 @@ extras_require = {
         'invenio-oauthclient==1.4.0',
         'invenio-oauth2server==1.3.1',
         'pytest-cov==2.10.1',
-        'coverage==4.5.4'
+        'coverage==4.5.4',
+        'pillow>=8.3.2'
     ],
     'devel': [
         'invenio[base,metadata,files,postgresql,elasticsearch7]',
