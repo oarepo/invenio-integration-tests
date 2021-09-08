@@ -11,6 +11,7 @@ on:
   push:
     branches: [ master ]
     paths: [ 'upload/p2oarepo_action.trigger' ]
+  workflow_dispatch:
 
 jobs:
   publish-setup-invenio-3-3:
