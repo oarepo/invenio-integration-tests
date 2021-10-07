@@ -16,19 +16,18 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-#invenio = { optional = true, version = ">=3.3.0,<3.4.0", extras = [ "base","metadata","files","postgresql","elasticsearch7","tests" ] }
 invenio = { optional = true, version = ">=3.3.0,<3.4.0", extras = [ "base","metadata","files","postgresql","elasticsearch7" ] }
-#requests = { optional = true, version = ">=2.25.0" }
-#s3-client-lib = { optional = true, version = ">=0.1.4" }
 flask-oauthlib = { optional = true, version = "*" }
 invenio-oauthclient = { optional = true, version = "*" }
 invenio-oauth2server = { optional = true, version = "*" }
 invenio-logging = { optional = true, version = "*", extras = [ "sentry-sdk" ] }
-sqlalchemy = { optional = true, version = "<1.4.0" }
-#urllib3 = { optional = true, version = ">=1.26.5" }
-#flask-caching = { version = ">1.10.1" }
-#marshmallow-utils = "^0.4"
+
+sqlalchemy = "<1.4.0"
+#flask-caching = ">1.10.1"
+marshmallow-utils = "^0.4"
 celery = "<=5.0.5"
+pillow = ">=8.3.2"
+s3-client-lib = ">=0.1.9"
 
 [tool.poetry.extras]
 "invenio3.3" = [
