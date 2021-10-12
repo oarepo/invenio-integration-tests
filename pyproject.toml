@@ -28,6 +28,7 @@ marshmallow-utils = "^0.4"
 celery = "<=5.0.5"
 pillow = ">=8.3.2"
 s3-client-lib = ">=0.1.9"
+jsonschema = ">=3.0.0,<4.0.0"
 
 [tool.poetry.extras]
 "invenio3.3" = [
