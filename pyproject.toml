@@ -38,7 +38,8 @@ jsonschema = ">=3.0.0,<4.0.0"
   "s3-client-lib",
   "flask-oauthlib",
   "invenio-oauthclient",
-  "invenio-oauth2server"
+  "invenio-oauth2server",
+	"importlib_metadata"
 ]
 "invenio3.3test" = [
   "invenio",
@@ -47,5 +48,6 @@ jsonschema = ">=3.0.0,<4.0.0"
   "s3-client-lib",
   "flask-oauthlib",
   "invenio-oauthclient",
-  "invenio-oauth2server"
+  "invenio-oauth2server",
+	"importlib_metadata"
 ]
