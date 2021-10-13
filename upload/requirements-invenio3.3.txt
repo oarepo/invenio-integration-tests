@@ -13,13 +13,13 @@ base32-lib==1.0.2
 billiard==3.6.4.0
 bleach==4.1.0
 blinker==1.4
-boto3==1.18.59
-botocore==1.21.59
+boto3==1.18.60
+botocore==1.21.60
 cachelib==0.4.1
 cchardet==2.1.7
 celery==5.0.5
 certifi==2021.10.8
-cffi==1.14.6
+cffi==1.15.0
 charset-normalizer==2.0.7
 click==7.1.2
 click-default-group==1.2.2
@@ -68,7 +68,7 @@ ftfy==4.4.3
 future==0.18.2
 geojson==2.5.0
 html5lib==1.1
-idna==3.2
+idna==3.3
 idutils==1.1.9
 importlib-metadata==4.8.1
 importlib-resources==5.2.2
@@ -179,7 +179,7 @@ testpath==0.5.0
 tornado==5.1.1
 traitlets==5.1.0
 ua-parser==0.10.0
-uritemplate==4.0.0
+uritemplate==4.1.1
 uritools==3.0.2
 urllib3==1.26.7
 validators==0.18.2
