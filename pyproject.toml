@@ -30,6 +30,7 @@ pillow = ">=8.3.2"
 s3-client-lib = ">=0.1.9"
 jsonschema = ">=3.0.0,<4.0.0"
 flask = "<2.0.0"
+wtforms = "<3.0.0"
 
 [tool.poetry.extras]
 "invenio3.3" = [
@@ -40,7 +41,7 @@ flask = "<2.0.0"
   "flask-oauthlib",
   "invenio-oauthclient",
   "invenio-oauth2server",
-	"importlib_metadata"
+  "importlib_metadata"
 ]
 "invenio3.3test" = [
   "invenio",
@@ -50,5 +51,5 @@ flask = "<2.0.0"
   "flask-oauthlib",
   "invenio-oauthclient",
   "invenio-oauth2server",
-	"importlib_metadata"
+  "importlib_metadata"
 ]
