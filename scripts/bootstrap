@@ -12,3 +12,4 @@ if [[ "$EXTRAS" =~ test$ ]]; then
   poetry add --optional "invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.3.0,<3.4.0"
 fi
 poetry install --extras ${EXTRAS}
+pip freeze
