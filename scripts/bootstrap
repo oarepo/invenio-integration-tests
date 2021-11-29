@@ -9,7 +9,7 @@
 set -e
 
 if [[ "$EXTRAS" == "invenio3.5test" ]]; then
-  poetry add --optional "invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.5.0,<3.6.0"
+  poetry add --optional --allow-prereleases "invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.5.0,<3.6.0"
 fi
 poetry install --extras ${EXTRAS}
 pip freeze
