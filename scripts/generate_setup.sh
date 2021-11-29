@@ -33,7 +33,7 @@ if [[ "$PREV_INVENIO_VERSION" != "$INVENIO_VERSION" ]]; then
   sed -i "/^__version__ / {s/[\"'][0-9.]\+[\"']/\"$INVENIO_VERSION\"/}" "$VERSION_PY"
 fi
 # bump version.py (ignore 4th number) + catch new value:
-NEWTAG=$(sed -n '/^__version__ / {s/\.[0-9]"/"/;p}' "$VERSION_PY" | bump - /dev/null)
+NEWTAG=$(sed -n '/^__version__ / {s/"\([0-9\+\.]\){2}\.[0-9]"/"/;p}' "$VERSION_PY" | bump - /dev/null)
 
 echo "PREV_INVENIO_VERSION:$PREV_INVENIO_VERSION INVENIO_VERSION:$INVENIO_VERSION NEWTAG:$NEWTAG"
 echo "$NEWTAG" > "$TAG_TXT"
