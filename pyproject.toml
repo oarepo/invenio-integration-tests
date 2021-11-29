@@ -34,7 +34,7 @@ wtforms = "<3.0.0"
 flask-wtf = "<1.0.0"
 
 [tool.poetry.extras]
-"invenio3.3" = [
+"invenio3.5" = [
   "invenio",
   "invenio-accounts",
   "requests",
@@ -44,7 +44,7 @@ flask-wtf = "<1.0.0"
   "invenio-oauth2server",
   "importlib_metadata"
 ]
-"invenio3.3test" = [
+"invenio3.5test" = [
   "invenio",
   "invenio-accounts",
   "requests",
