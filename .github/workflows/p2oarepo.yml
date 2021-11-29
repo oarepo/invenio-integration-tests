@@ -15,7 +15,7 @@ on:
 
 jobs:
   publish-setup-invenio-3-5:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v2
