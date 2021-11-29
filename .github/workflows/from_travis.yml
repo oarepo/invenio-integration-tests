@@ -9,7 +9,7 @@ name: Invenio requirements builder (ported from travis)
 
 on:
   push:
-    branches: [ v.3.5 ]
+    branches: [ v3.5 ]
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
   schedule:
     # every sat. at 7:33
