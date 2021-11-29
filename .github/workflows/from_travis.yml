@@ -9,11 +9,11 @@ name: Invenio requirements builder (ported from travis)
 
 on:
   push:
-    branches: [ master ]
+    branches: [ v.3.5 ]
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
   schedule:
     # every sat. at 7:33
-    - cron: '33 7 * * 6'
+    - cron: '43 7 * * 6'
     # debug run every day at 7:33
     #- cron: '33 7 * * *'
   workflow_dispatch:
@@ -34,10 +34,10 @@ jobs:
       max-parallel: 1
       matrix:
         include:
-          - extras: 'invenio3.3'
-            requirements: 'invenio3.3'
-          - extras: 'invenio3.3test'
-            requirements: 'invenio3.3test'
+          - extras: 'invenio3.5'
+            requirements: 'invenio3.5'
+          - extras: 'invenio3.5test'
+            requirements: 'invenio3.5test'
 #          - extras: 'devel'
 #            requirements: 'devel'
 #          - extras: 'devel_test'
@@ -56,14 +56,14 @@ jobs:
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v2
-      - name: Set up Python 3.8
+      - name: Set up Python 3.10
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: 3.10
       - name: Runs Elasticsearch
         uses: elastic/elastic-github-actions/elasticsearch@master
         with:
-          stack-version: 7.6.0
+          stack-version: 7.15.2
       - name: init
         run: |
           echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS;"
