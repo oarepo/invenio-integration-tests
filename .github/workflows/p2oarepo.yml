@@ -38,6 +38,8 @@ jobs:
           cat ./oarepo/setup.py
           echo "oarepo/oarepo/version.py:"
           cat ./oarepo/oarepo/version.py
+          echo "oarepo/oarepo/tag.txt:"
+          cat ./oarepo/oarepo/tag.txt
 #      - name: Commit and Push generated OARepo setup.py
 #        uses: stefanzweifel/git-auto-commit-action@v4
 #        with:

@@ -24,7 +24,7 @@ python -m pip install --upgrade pip
 pip install bump
 
 # 1st two digits of fixed invenio version from the requirements file:
-INVENIO_VERSION=$(sed -n '/^invenio==/ {s/^invenio==\([0-9]\+\.[0-9]\+\)\(\.[0-9]\+\)\?$/\1/; p;}' "$REQ_FILE")
+INVENIO_VERSION=$(sed -n '/^invenio==/ {s/^invenio==\([0-9]\+\.[0-9]\+\)\(\.[0-9]\+\)\?\(a[0-9]\+\)\?$/\1/; p;}' "$REQ_FILE")
 # 1st two digits of previous version from version.py:
 PREV_INVENIO_VERSION=$(sed -n '/^__version__ / {s/^[^"\x27]\+["\x27]\([0-9]\+\.[0-9]\)\(\.[0-9]\+\)*["\x27]$/\1/;p}' "$VERSION_PY")
 
