@@ -9,7 +9,7 @@ name: push to oarepo
 
 on:
   push:
-    branches: [ v3.5 ]
+    branches: [ invenio-3.5 ]
     paths: [ 'upload/p2oarepo_action.trigger' ]
   workflow_dispatch:
 
@@ -26,10 +26,10 @@ jobs:
           ref: 'invenio-3.5'
           token: '${{ secrets.OAR_BOT }}'
           path: 'oarepo'
-      - name: Set up Python 3.10
+      - name: Set up Python 3.10.0
         uses: actions/setup-python@v2
         with:
-          python-version: 3.10
+          python-version: 3.10.0
       - name: Generate OARepo setup.py from tested requirements artifact
         run: |
           ./scripts/generate_setup.sh invenio3.5
