@@ -8,5 +8,5 @@
 
 set -e
 
-pip install --upgrade pip 'setuptools<58.0.0' py poetry
+pip install --upgrade pip setuptools py poetry
 poetry config virtualenvs.create false
