@@ -26,7 +26,7 @@ invenio-records-resources = { optional = true, version = ">=0.18.3" }
 sqlalchemy = "<1.4.0"
 #flask-caching = ">1.10.1"
 marshmallow-utils = ">=0.4"
-celery = "<=5.0.5"
+#celery = "<=5.0.5"
 pillow = ">=8.3.2"
 s3-client-lib = ">=0.1.9"
 jsonschema = ">=3.0.0,<4.0.0"
