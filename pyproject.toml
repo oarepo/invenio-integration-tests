@@ -21,7 +21,7 @@ flask-oauthlib = { optional = true, version = "*" }
 invenio-oauthclient = { optional = true, version = "*" }
 invenio-oauth2server = { optional = true, version = "*" }
 invenio-logging = { optional = true, version = "*", extras = [ "sentry-sdk" ] }
-invenio-records-resources = { optional = true, version = "*" }
+invenio-records-resources = { optional = true, version = ">=0.18.3" }
 
 sqlalchemy = "<1.4.0"
 #flask-caching = ">1.10.1"
