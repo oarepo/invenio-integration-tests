@@ -44,7 +44,8 @@ lxml = ">=4.6.5"
   "flask-oauthlib",
   "invenio-oauthclient",
   "invenio-oauth2server",
-  "importlib_metadata"
+  "importlib_metadata",
+  "invenio-records-resources"
 ]
 "invenio3.5test" = [
   "invenio",
@@ -54,5 +55,6 @@ lxml = ">=4.6.5"
   "flask-oauthlib",
   "invenio-oauthclient",
   "invenio-oauth2server",
-  "importlib_metadata"
+  "importlib_metadata",
+  "invenio-records-resources"
 ]
