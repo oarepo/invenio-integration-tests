@@ -11,12 +11,6 @@ on:
   push:
     branches: [ invenio-3.5 ]
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
-#  schedule:
-    # ! does not work in non-defautl branch
-    # every sat. at 7:33
-    #- cron: '43 7 * * 6'
-    # debug run every day at 7:33
-    #- cron: '14 13 * * *'
   workflow_dispatch:
 
 jobs:
