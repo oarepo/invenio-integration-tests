@@ -11,11 +11,6 @@ on:
   push:
     branches: [ master ]
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
-  schedule:
-    # every sat. at 7:33
-    - cron: '33 7 * * 6'
-    # debug run every day at 7:33
-    #- cron: '33 7 * * *'
   workflow_dispatch:
 
 jobs:
