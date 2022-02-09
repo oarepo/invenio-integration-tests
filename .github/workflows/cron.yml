@@ -12,7 +12,7 @@ on:
     # every sat. at 7:39 GMT
     - cron: '39 7 * * 6'
     # debug run
-    - cron: '10 12 * * *'
+    - cron: '23 12 * * *'
   workflow_dispatch:
 
 jobs:
