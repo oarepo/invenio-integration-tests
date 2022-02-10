@@ -24,7 +24,7 @@ jobs:
         with:
           repository: 'oarepo/oarepo'
           ref: 'invenio-3.3'
-          token: '${{ secrets.OAR_BOT }}'
+          token: '${{ secrets.INTEGRATION_TEST }}'
           path: 'oarepo'
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
