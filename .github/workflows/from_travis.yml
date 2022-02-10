@@ -41,7 +41,7 @@ jobs:
       E2E: 'no'
       EXTRAS: ${{ matrix.extras }}
       REQUIREMENTS: ${{ matrix.requirements }}
-      OAR_BOT: '${{ secrets.OAR_BOT }}'
+      TOK: '${{ secrets.INTEGRATION_TEST }}'
       SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres:postgres@localhost:5432/invenio'
       POSTGRES_USER: postgres
       POSTGRES_HOST: localhost

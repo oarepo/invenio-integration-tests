@@ -9,7 +9,7 @@ DATE=$(date '+%y%m%d-%H%M%S%z')
 git config --global user.name oarepo-bot
 git config --global user.email noreply@cesnet.cz
 
-URL="https://oarepo-bot:${OAR_BOT}@github.com/oarepo/invenio-integration-tests.git"
+URL="https://oarepo-bot:${TOK}@github.com/oarepo/invenio-integration-tests.git"
 DIR="invenio-integration-tests"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
 TRIG="upload/p2oarepo_action.trigger"
