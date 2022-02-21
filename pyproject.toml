@@ -34,6 +34,7 @@ flask = "<2.0.0"
 wtforms = "<3.0.0"
 flask-wtf = "<1.0.0"
 lxml = ">=4.6.5"
+markupsafe = "<=2.0.1"
 
 [tool.poetry.extras]
 "invenio3.5" = [
