@@ -46,7 +46,8 @@ jinja2 = "<3.1.0"
   "flask-oauthlib",
   "invenio-oauthclient",
   "invenio-oauth2server",
-  "importlib_metadata"
+  "importlib_metadata",
+  "invenio-records-resources",
 ]
 "invenio3.3test" = [
   "invenio",
@@ -56,5 +57,6 @@ jinja2 = "<3.1.0"
   "flask-oauthlib",
   "invenio-oauthclient",
   "invenio-oauth2server",
-  "importlib_metadata"
+  "importlib_metadata",
+  "invenio-records-resources",
 ]
