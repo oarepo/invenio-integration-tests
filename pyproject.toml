@@ -21,7 +21,6 @@ flask-oauthlib = { optional = true, version = "*" }
 invenio-oauthclient = { optional = true, version = "*" }
 invenio-oauth2server = { optional = true, version = "*" }
 invenio-logging = { optional = true, version = "*", extras = [ "sentry-sdk" ] }
-invenio-records-resources = { optional = true, version = "*" }
 
 sqlalchemy = "<1.4.0"
 #flask-caching = ">1.10.1"
@@ -48,7 +47,6 @@ jinja2 = "<3.1.0"
   "invenio-oauthclient",
   "invenio-oauth2server",
   "importlib_metadata",
-  "invenio-records-resources",
 ]
 "invenio3.3test" = [
   "invenio",
@@ -59,5 +57,4 @@ jinja2 = "<3.1.0"
   "invenio-oauthclient",
   "invenio-oauth2server",
   "importlib_metadata",
-  "invenio-records-resources",
 ]
