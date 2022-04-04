@@ -58,7 +58,7 @@ jobs:
       - name: Runs Elasticsearch
         uses: elastic/elastic-github-actions/elasticsearch@master
         with:
-          stack-version: 7.6.0
+          stack-version: 7.17.2
       - name: init
         run: |
           echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS;"
