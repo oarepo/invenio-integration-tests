@@ -14,12 +14,12 @@ base32-lib==1.0.2
 billiard==3.6.4.0
 bleach==5.0.0
 blinker==1.4
-boto3==1.23.0
-botocore==1.26.0
-cachelib==0.6.0
+boto3==1.23.5
+botocore==1.26.5
+cachelib==0.7.0
 cchardet==2.1.7
 celery==5.0.5
-certifi==2021.10.8
+certifi==2022.5.18.1
 cffi==1.15.0
 charset-normalizer==2.0.12
 click==7.1.2
@@ -147,7 +147,7 @@ parso==0.8.3
 passlib==1.7.4
 pexpect==4.8.0
 pickleshare==0.7.5
-pillow==9.1.0
+pillow==9.1.1
 pluggy==0.13.1
 prompt-toolkit==3.0.29
 psycopg2-binary==2.9.3
@@ -164,7 +164,7 @@ pyrsistent==0.18.1
 python-dateutil==2.8.2
 pytz==2022.1
 pywebpack==1.2.0
-pyzmq==22.3.0
+pyzmq==23.0.0
 redis==4.3.1
 requests==2.27.1
 requests-oauthlib==1.1.0
@@ -181,7 +181,7 @@ sqlalchemy-utils==0.35.0
 stack-data==0.2.0
 testpath==0.6.0
 tornado==5.1.1
-traitlets==5.2.0
+traitlets==5.2.1.post0
 typing-extensions==4.2.0
 ua-parser==0.10.0
 uritemplate==4.1.1
