@@ -8,8 +8,11 @@
 
 set -e
 
-if [[ "$EXTRAS" =~ test$ ]]; then
-  poetry add --optional "invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.3.0,<3.4.0"
-fi
-poetry install --extras ${EXTRAS}
+OPTS="--force-reinstall --no-cache-dir"
+pip install $OPTS -r .requirements.txt
 pip freeze
+
+#if [[ "$EXTRAS" =~ test$ ]]; then
+#  poetry add --optional "invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.3.0,<3.4.0"
+#fi
+#poetry install --extras ${EXTRAS}

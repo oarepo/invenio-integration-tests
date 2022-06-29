@@ -11,19 +11,14 @@ set -e
 echo -e "\ninvenio-integration-tests/run_tests.sh"
 
 export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
-echo -e "\ninvenio shell, print(version.__version__):"
-invenio shell --simple-prompt -c "from invenio import version; print (\"Invenio version:\", version.__version__)"
+echo -e "\ninvenio shell, invenio_config's version.__version__):"
+invenio shell --simple-prompt -c "from invenio_config import version; print (\"invenio_config version:\", version.__version__)"
 
 echo -e "\npsql version:"
 psql --version
 echo "invenio db init,create:"
 invenio db init
 invenio db create
-# invenio >=3.3 only:
-if [ "${REQUIREMENTS}" != "invenio3.2" ] ; then
-  echo "user create:"
-  invenio users create -a noreply@cesnet.cz --password 112233
-fi
 
 echo -e "\nelasticsearch GET:"
 curl -sX GET "http://127.0.0.1:9200" || cat /tmp/local-es.log
@@ -57,7 +52,8 @@ cat invenio_run.log
 
 echo -e "\nsave requirements"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
-./scripts/poetry2reqs.py | sed 's/\x0D$//' | grep -v '^pywin32==' > $REQFILE
+pip freeze > $REQFILE
+#./scripts/poetry2reqs.py | sed 's/\x0D$//' | grep -v '^pywin32==' > $REQFILE
 grep -F -e invenio= -e invenio-base -e invenio-search -e invenio-db $REQFILE
 
 echo "Done."

@@ -9,7 +9,7 @@ name: Tests and reqs builder
 
 on:
   push:
-    branches: [ master ]
+    branches: [ invenio-3.5-rdm ]
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
   workflow_dispatch:
 
@@ -29,10 +29,10 @@ jobs:
       max-parallel: 1
       matrix:
         include:
-          - extras: 'invenio3.3'
-            requirements: 'invenio3.3'
-          - extras: 'invenio3.3test'
-            requirements: 'invenio3.3test'
+          - extras: 'elasticsearch7'
+            requirements: 'rdm'
+#          - extras: 'invenio3.5-rdm-test'
+#            requirements: 'invenio3.5-rdm-test'
 #          - extras: 'devel'
 #            requirements: 'devel'
 #          - extras: 'devel_test'

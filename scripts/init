@@ -8,5 +8,9 @@
 
 set -e
 
-pip install --upgrade pip 'setuptools<58.0.0' py poetry
-poetry config virtualenvs.create false
+pip install --upgrade pip 'setuptools<58.0.0' py pip-tools
+pip install requirements-builder
+requirements-builder -e ${EXTRAS} setup.py | pip-compile -U -o .requirements.txt -
+
+#pip install --upgrade pip 'setuptools<58.0.0' py poetry
+#poetry config virtualenvs.create false

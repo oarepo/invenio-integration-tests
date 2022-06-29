@@ -9,7 +9,7 @@ name: push to oarepo
 
 on:
   push:
-    branches: [ master ]
+    branches: [ invenio-3.5-rdm ]
     paths: [ 'upload/p2oarepo_action.trigger' ]
   workflow_dispatch:
 
@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'oarepo/oarepo'
-          ref: 'invenio-3.3'
+          ref: 'invenio-rdm'
           token: '${{ secrets.INTEGRATION_TEST }}'
           path: 'oarepo'
       - name: Set up Python 3.8
@@ -38,7 +38,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[p2oarepo] update setup.py from oarepo/invenio-integration-tests (tag ${{ env.NEWTAG }})"
-          branch: invenio-3.3
+          branch: invenio-rdm
           file_pattern: setup.py oarepo/version.py
           repository: oarepo
           commit_user_name: p2oarepo-workflow

@@ -13,7 +13,7 @@ URL="https://oarepo-bot:${TOK}@github.com/oarepo/invenio-integration-tests.git"
 DIR="invenio-integration-tests"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
 TRIG="upload/p2oarepo_action.trigger"
-BRANCH="master"
+BRANCH="invenio-3.5-rdm"
 
 git clone -q -b "$BRANCH" --depth 10 "$URL" "$DIR"
 cp "$REQFILE" $DIR/upload
@@ -27,7 +27,7 @@ if [[ ! "$REQUIREMENTS" =~ ^devel ]]; then
     if ! git diff-index --quiet HEAD -- ; then
       FLG="upload/p2oarepo_action-${REQUIREMENTS}-$GITHUB_RUN_NUMBER.flg"
       echo "FLG $(date '+%y%m%d-%H%M%S%z')" > "$FLG"
-      git add "$FLG"
+#      git add "$FLG"
     fi
   # test variant:
   else
@@ -39,7 +39,7 @@ if [[ ! "$REQUIREMENTS" =~ ^devel ]]; then
       [[ -f "$FLG" ]] && git rm "$FLG"
       # save the trigger
       echo "TRIG $(date '+%y%m%d-%H%M%S%z')" > "$TRIG"
-      git add "$TRIG"
+#      git add "$TRIG"
     fi
   fi
 fi
