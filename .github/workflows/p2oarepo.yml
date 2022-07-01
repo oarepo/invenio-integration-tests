@@ -32,7 +32,7 @@ jobs:
           python-version: 3.8
       - name: Generate OARepo setup.py from tested requirements artifact
         run: |
-          ./scripts/generate_setup.sh invenio3.3
+          ./scripts/generate_oarepo_setup.sh invenio3.3
           echo "NEWTAG=$(cat ./oarepo/oarepo/tag.txt)" >> $GITHUB_ENV
       - name: Commit and Push generated OARepo setup.py
         uses: stefanzweifel/git-auto-commit-action@v4
