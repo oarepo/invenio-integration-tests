@@ -7,7 +7,7 @@ arrow==1.2.2
 asttokens==2.0.5
 async-generator==1.10
 async-timeout==4.0.2
-atomicwrites==1.4.0
+atomicwrites==1.4.1
 attrs==21.4.0
 babel==2.10.3
 babel-edtf==1.0.0
@@ -16,8 +16,8 @@ base32-lib==1.0.2
 billiard==3.6.4.0
 bleach==5.0.1
 blinker==1.4
-boto3==1.24.22
-botocore==1.27.22
+boto3==1.24.26
+botocore==1.27.26
 build==0.8.0
 cachelib==0.9.0
 cchardet==2.1.7
@@ -33,7 +33,7 @@ click-plugins==1.1.1
 click-repl==0.2.0
 colorama==0.4.5
 coverage==4.5.4
-cryptography==37.0.3
+cryptography==37.0.4
 decorator==5.1.1
 defusedxml==0.7.1
 deprecated==1.2.13
@@ -58,7 +58,7 @@ flask-caching==2.0.0
 flask-celeryext==0.3.4
 flask-collect==1.2.2
 flask-cors==3.0.10
-flask-iiif==0.6.2
+flask-iiif==0.6.3
 flask-kvsession-invenio==0.6.3
 flask-limiter==1.1.0
 flask-login==0.4.1
@@ -131,7 +131,7 @@ jsonref==0.2
 jsonresolver==0.3.1
 jsonschema==3.2.0
 jupyter-client==7.2.0
-jupyter-core==4.10.0
+jupyter-core==4.11.1
 kombu==5.2.4
 limits==2.6.3
 lxml==4.9.1
@@ -215,7 +215,7 @@ typing-extensions==4.3.0
 ua-parser==0.15.0
 uritemplate==4.1.1
 uritools==4.0.0
-urllib3==1.26.9
+urllib3==1.26.10
 validators==0.20.0
 vine==5.0.0
 wand==0.6.7
