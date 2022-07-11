@@ -31,12 +31,8 @@ jobs:
         include:
           - extras: 'elasticsearch7'
             requirements: 'rdm'
-#          - extras: 'invenio3.5-rdm-test'
-#            requirements: 'invenio3.5-rdm-test'
-#          - extras: 'devel'
-#            requirements: 'devel'
-#          - extras: 'devel_test'
-#            requirements: 'devel_test'
+          - extras: 'elasticsearch7,test'
+            requirements: 'rdm-test'
     env:
       E2E: 'no'
       EXTRAS: ${{ matrix.extras }}
