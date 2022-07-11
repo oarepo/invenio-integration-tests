@@ -24,16 +24,22 @@ python -m pip install --upgrade pip
 pip install bump
 
 # 1st two digits of fixed invenio version from the requirements file:
+echo -n "INVENIO_VERSION:"
 INVENIO_VERSION=$(sed -n '/^invenio==/ {s/^invenio==\([0-9]\+\.[0-9]\+\)\(\.[0-9]\+\)\?$/\1/; p;}' "$REQ_FILE")
+echo $INVENIO_VERSION
 # 1st two digits of previous version from version.py:
+echo -n "PREV_INVENIO_VERSION:"
 PREV_INVENIO_VERSION=$(sed -n '/^__version__ / {s/^[^"\x27]\+["\x27]\([0-9]\+\.[0-9]\)\(\.[0-9]\+\)*["\x27]$/\1/;p}' "$VERSION_PY")
+echo $PREV_INVENIO_VERSION
 
 # if there is new invenio version, update 1st two numbers accordingly:
 if [[ "$PREV_INVENIO_VERSION" != "$INVENIO_VERSION" ]]; then
   sed -i "/^__version__ / {s/[\"'][0-9.]\+[\"']/\"$INVENIO_VERSION\"/}" "$VERSION_PY"
 fi
 # bump version.py (ignore 4th number) + catch new value:
+echo -n "NEWTAG:"
 NEWTAG=$(sed -n '/^__version__ / {s/\.[0-9]"/"/;p}' "$VERSION_PY" | bump - /dev/null)
+echo $NEWTAG
 
 echo "PREV_INVENIO_VERSION:$PREV_INVENIO_VERSION INVENIO_VERSION:$INVENIO_VERSION NEWTAG:$NEWTAG"
 echo "$NEWTAG" > "$TAG_TXT"
