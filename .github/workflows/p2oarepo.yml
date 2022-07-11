@@ -43,7 +43,7 @@ jobs:
           repository: oarepo
           commit_user_name: p2oarepo-workflow
           commit_user_email: p2oarepo-workflow@oarepo.org
-          #tagging_message: ${{ env.NEWTAG }}
+          tagging_message: ${{ env.NEWTAG }}
           # Optional options appended to `git-push`
           push_options: '--force'
         if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
