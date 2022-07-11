@@ -31,7 +31,7 @@ if [[ ! "$REQUIREMENTS" =~ ^devel ]]; then
     fi
   # test variant:
   else
-    REQS_NOTEST=$(sed 's/test$//' <<<"$REQUIREMENTS")
+    REQS_NOTEST=$(sed 's/-test$//' <<<"$REQUIREMENTS")
     FLG="upload/p2oarepo_action-${REQS_NOTEST}-$GITHUB_RUN_NUMBER.flg"
     # if something to commit or flag from non-test variant exists:
     if ! git diff-index --quiet HEAD -- || [[ -f "$FLG" ]]; then
