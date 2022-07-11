@@ -5,6 +5,7 @@ from string import Template
 
 SRC_URL = "https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg"
 
+requests.packages.urllib3.util.connection.HAS_IPV6 = False
 rq = requests.get(SRC_URL)
 data = rq.text
 
