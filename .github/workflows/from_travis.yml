@@ -31,7 +31,7 @@ jobs:
         include:
           - extras: 'elasticsearch7'
             requirements: 'rdm'
-          - extras: 'elasticsearch7,test'
+          - extras: 'elasticsearch7,tests'
             requirements: 'rdm-test'
     env:
       E2E: 'no'

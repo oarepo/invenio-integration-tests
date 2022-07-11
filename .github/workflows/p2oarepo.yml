@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'oarepo/oarepo'
-          ref: 'invenio-rdm'
+          ref: 'rdm-9'
           token: '${{ secrets.INTEGRATION_TEST }}'
           path: 'oarepo'
       - name: Set up Python 3.8
