@@ -20,8 +20,8 @@ TAG_TXT='oarepo/oarepo/tag.txt'
 
 test -s "$REQ_FILE" || { echo "ERR: REQ_FILE not exists or empty"; exit 1; }
 
-#python -m pip install --upgrade pip
-#pip install bump
+python -m pip install --upgrade pip
+pip install bump
 
 # 1st two digits of fixed invenio version from the requirements file:
 #echo -n "INVENIO_VERSION:"
