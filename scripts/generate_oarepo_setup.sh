@@ -20,8 +20,8 @@ TAG_TXT='oarepo/oarepo/tag.txt'
 
 test -s "$REQ_FILE" || { echo "ERR: REQ_FILE not exists or empty"; exit 1; }
 
-python -m pip install --upgrade pip
-pip install bump
+#python -m pip install --upgrade pip
+#pip install bump
 
 # 1st two digits of fixed invenio version from the requirements file:
 #echo -n "INVENIO_VERSION:"
@@ -36,9 +36,10 @@ pip install bump
 #if [[ "$PREV_INVENIO_VERSION" != "$INVENIO_VERSION" ]]; then
 #  sed -i "/^__version__ / {s/[\"'][0-9.]\+[\"']/\"$INVENIO_VERSION\"/}" "$VERSION_PY"
 #fi
-# bump version.py (ignore 4th number) + catch new value:
 echo -n "NEWTAG:"
-NEWTAG=$(sed -n '/^__version__ / {s/\.[0-9]"/"/;p}' "$VERSION_PY" | bump - /dev/null)
+# bump version.py (ignore last number) + catch new value:
+#NEWTAG=$(sed -n '/^__version__ / {s/\.[0-9]"/"/;p}' "$VERSION_PY" | bump - /dev/null)
+NEWTAG=$(bump "$VERSION_PY")
 echo $NEWTAG
 
 #echo "PREV_INVENIO_VERSION:$PREV_INVENIO_VERSION INVENIO_VERSION:$INVENIO_VERSION NEWTAG:$NEWTAG"
