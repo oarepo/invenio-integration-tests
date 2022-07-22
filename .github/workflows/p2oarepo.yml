@@ -9,7 +9,7 @@ name: push to oarepo
 
 on:
   push:
-    branches: [ invenio-3.5-rdm ]
+    branches: [ rdm-9 ]
     paths: [ 'upload/p2oarepo_action.trigger' ]
   workflow_dispatch:
 
