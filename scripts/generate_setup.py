@@ -29,9 +29,8 @@ def process_install_requires(data):
                 resarr.append(rr.group(1)+"'"+rr.group(2)+"',")
             elif line != "": resarr.append(line)
         elif state == STATE_REMOVE:
-            if not re.match("^[ 	]+invenio-rdm-records[<>=!]", line):
+            if re.match("^[ 	]+invenio-rdm-records[<>=!]", line):
                 state = STATE_NONE
-                resarr.append(line)
         else: raise Exception(f"Wrong state \"{state}\"")
     result = '\n'.join(resarr)
     return(f"install_requires = [\n{result}\n]")
