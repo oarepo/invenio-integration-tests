@@ -3,10 +3,11 @@
 import os, requests, re
 from string import Template
 
-SRC_URL = "https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg"
+SETUP_SRC_URL = os.environ.get('SETUP_SRC_URL')
 
+if SETUP_SRC_URL == None: raise Exception('SETUP_SRC_URL undefined')
 requests.packages.urllib3.util.connection.HAS_IPV6 = False
-rq = requests.get(SRC_URL)
+rq = requests.get(SETUP_SRC_URL)
 data = rq.text
 
 STATE_NONE = 0
@@ -28,7 +29,7 @@ def process_install_requires(data):
                 resarr.append(rr.group(1)+"'"+rr.group(2)+"',")
             elif line != "": resarr.append(line)
         elif state == STATE_REMOVE:
-            if re.match("^[ 	]+# ", line):
+            if not re.match("^[ 	]+invenio-rdm-records[<>=!]", line):
                 state = STATE_NONE
                 resarr.append(line)
         else: raise Exception(f"Wrong state \"{state}\"")
