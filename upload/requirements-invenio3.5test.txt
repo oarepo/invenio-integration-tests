@@ -16,8 +16,8 @@ beautifulsoup4==4.11.1
 billiard==3.6.4.0
 bleach==5.0.1
 blinker==1.5
-boto3==1.24.34
-botocore==1.27.34
+boto3==1.24.35
+botocore==1.27.35
 build==0.8.0
 cachelib==0.9.0
 cchardet==2.1.7
@@ -79,7 +79,7 @@ geojson==2.5.0
 idna==3.3
 idutils==1.1.12
 importlib-metadata==4.12.0
-importlib-resources==5.8.0
+importlib-resources==5.8.1
 infinity==1.5
 iniconfig==1.1.1
 intervals==0.9.2
@@ -194,7 +194,7 @@ requests-oauthlib==1.1.0
 s3-client-lib==0.1.9.post1
 s3transfer==0.6.0
 selenium==3.141.0
-sentry-sdk==1.7.2
+sentry-sdk==1.8.0
 simplejson==3.17.6
 simplekv==0.14.1
 six==1.16.0
