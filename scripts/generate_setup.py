@@ -33,7 +33,7 @@ def process_install_requires(data):
                 state = STATE_NONE
         else: raise Exception(f"Wrong state \"{state}\"")
     result = '\n'.join(resarr)
-    return(f"install_requires = [\n{result}\n]")
+    return result
 
 def process_extras_requires(data):
     resdict = {}
@@ -55,7 +55,7 @@ def process_extras_requires(data):
     for ename in resdict.keys():
         resarr.append(f"{sp}'{ename}': [\n"+'\n'.join(resdict[ename])+f"\n{sp}],")
     result = '\n'.join(resarr)
-    return("extras_require = {\n"+result+"\n}")
+    return result
 
 state = STATE_NONE
 buff = []

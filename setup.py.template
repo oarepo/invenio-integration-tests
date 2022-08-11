@@ -14,9 +14,14 @@ from setuptools import find_packages, setup
 
 readme = open('README.md').read()
 
+install_requires = [
 $install_requires
+    'mistune>=2.0.3',
+]
 
+extras_require = {
 $extras_require
+}
 
 setup_requires = [
     'pytest-runner>=3.0.0,<5',
