@@ -16,7 +16,6 @@ readme = open('README.md').read()
 
 install_requires = [
 $install_requires
-    'mistune>=2.0.3',
 ]
 
 extras_require = {
