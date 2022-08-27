@@ -14,8 +14,8 @@ base32-lib==1.0.2
 billiard==3.6.4.0
 bleach==5.0.1
 blinker==1.5
-boto3==1.24.56
-botocore==1.27.56
+boto3==1.24.61
+botocore==1.27.61
 cachelib==0.9.0
 cchardet==2.1.7
 celery==5.0.5
@@ -35,7 +35,7 @@ deprecated==1.2.13
 dnspython==2.2.1
 dojson==1.4.0
 edtf==4.0.1
-elasticsearch==7.17.4
+elasticsearch==7.17.6
 elasticsearch-dsl==7.4.0
 email-validator==1.2.1
 entrypoints==0.4
@@ -128,7 +128,7 @@ limits==2.7.0
 lxml==4.9.1
 mako==1.2.1
 markupsafe==2.0.1
-marshmallow==3.17.0
+marshmallow==3.17.1
 marshmallow-oneofschema==3.0.1
 marshmallow-utils==0.4.0
 matplotlib-inline==0.1.6
@@ -183,10 +183,10 @@ testpath==0.6.0
 tornado==5.1.1
 traitlets==5.3.0
 typing-extensions==4.3.0
-ua-parser==0.15.0
+ua-parser==0.16.0
 uritemplate==4.1.1
 uritools==4.0.0
-urllib3==1.26.11
+urllib3==1.26.12
 validators==0.20.0
 vine==5.0.0
 wand==0.6.10
