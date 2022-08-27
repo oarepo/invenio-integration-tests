@@ -16,8 +16,8 @@ beautifulsoup4==4.11.1
 billiard==3.6.4.0
 bleach==5.0.1
 blinker==1.5
-boto3==1.24.56
-botocore==1.27.56
+boto3==1.24.61
+botocore==1.27.61
 build==0.8.0
 cachelib==0.9.0
 cchardet==2.1.7
@@ -130,7 +130,7 @@ jsonpointer==2.3
 jsonref==0.2
 jsonresolver==0.3.1
 jsonschema==3.2.0
-jupyter-client==7.3.4
+jupyter-client==7.3.5
 jupyter-core==4.11.1
 jupyterlab-pygments==0.2.2
 kombu==5.2.4
@@ -139,7 +139,7 @@ luqum==0.11.0
 lxml==4.9.1
 mako==1.2.1
 markupsafe==2.0.1
-marshmallow==3.17.0
+marshmallow==3.17.1
 marshmallow-oneofschema==3.0.1
 marshmallow-utils==0.5.5
 matplotlib-inline==0.1.6
@@ -210,10 +210,10 @@ toml==0.10.2
 tomli==2.0.1
 tornado==6.2
 traitlets==5.3.0
-ua-parser==0.15.0
+ua-parser==0.16.0
 uritemplate==4.1.1
 uritools==4.0.0
-urllib3==1.26.11
+urllib3==1.26.12
 validators==0.20.0
 vine==5.0.0
 wand==0.6.10
