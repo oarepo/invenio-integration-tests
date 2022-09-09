@@ -40,7 +40,6 @@ pyjwt = ">=2.4.0"
 #nbconvert = { version = ">=6.3.0", extras = [ "execute" ] }
 #mistune = ">=2.0.3"
 setuptools = "<58.0.0"
-fs = ">0.5.4"
 
 [tool.poetry.extras]
 "invenio3.3" = [
