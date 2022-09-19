@@ -16,7 +16,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-invenio = { optional = true, version = ">=3.5.0,<3.6.0", extras = [ "base","metadata","files","postgresql","elasticsearch7" ] }
+invenio = { optional = true, version = "==3.5.*,<3.6.0", allow-prereleases=true, extras = [ "base","metadata","files","postgresql","elasticsearch7" ] }
 flask-oauthlib = { optional = true, version = "*" }
 invenio-oauthclient = { optional = true, version = "*" }
 invenio-oauth2server = { optional = true, version = "*" }
