@@ -16,7 +16,7 @@ bleach==5.0.1
 blinker==1.5
 build==0.8.0
 cachelib==0.9.0
-cairocffi==1.3.0
+cairocffi==1.4.0
 CairoSVG==2.5.2
 cchardet==2.1.7
 celery==5.2.7
@@ -31,7 +31,7 @@ click-plugins==1.1.1
 click-repl==0.2.0
 coverage==5.5
 cryptography==38.0.1
-cssselect2==0.6.0
+cssselect2==0.7.0
 decorator==5.1.1
 defusedxml==0.7.1
 Deprecated==1.2.13
@@ -41,10 +41,10 @@ docutils==0.19
 dojson==1.4.0
 elasticsearch==7.13.4
 elasticsearch-dsl==7.4.0
-email-validator==1.2.1
+email-validator==1.3.0
 entrypoints==0.4
 executing==1.0.0
-fastjsonschema==2.16.1
+fastjsonschema==2.16.2
 Flask==2.2.2
 Flask-Admin==1.6.0
 Flask-Alembic==2.0.1
@@ -95,7 +95,7 @@ invenio-indexer==1.2.7
 invenio-jsonschemas==1.1.4
 invenio-logging==1.3.2
 invenio-mail==1.0.2
-invenio-oaiserver==1.4.2
+invenio-oaiserver==1.5.0
 invenio-oauth2server==1.3.7
 invenio-oauthclient==2.0.1
 invenio-pidstore==1.2.3
@@ -106,8 +106,8 @@ invenio-records-rest==1.9.0
 invenio-records-ui==1.2.0
 invenio-rest==1.2.8
 invenio-search==1.4.2
-invenio-search-ui==2.1.9
-invenio-theme==1.3.28
+invenio-search-ui==2.1.10
+invenio-theme==1.3.29
 invenio-userprofiles==2.0.3
 ipython==8.5.0
 isort==5.10.1
@@ -126,7 +126,7 @@ jupyterlab-pygments==0.2.2
 kombu==5.2.4
 limits==1.6
 lxml==4.9.1
-Mako==1.2.2
+Mako==1.2.3
 MarkupSafe==2.1.1
 marshmallow==3.18.0
 matplotlib-inline==0.1.6
@@ -138,7 +138,7 @@ msgpack==1.0.4
 mypy-extensions==0.4.3
 nbclient==0.6.8
 nbconvert==6.5.3
-nbformat==5.5.0
+nbformat==5.6.0
 nest-asyncio==1.5.5
 node-semver==0.1.1
 oauthlib==2.1.0
@@ -164,7 +164,7 @@ pycodestyle==2.9.1
 pycparser==2.21
 pydocstyle==6.1.1
 Pygments==2.13.0
-PyJWT==2.4.0
+PyJWT==2.5.0
 PyMySQL==1.0.2
 pynpm==0.1.2
 pyparsing==3.0.9
@@ -180,7 +180,7 @@ pytest-pydocstyle==2.2.1
 python-dateutil==2.8.2
 pytz==2022.2.1
 pywebpack==1.2.0
-pyzmq==24.0.0
+pyzmq==24.0.1
 redis==4.3.4
 requests==2.28.1
 requests-oauthlib==1.1.0
