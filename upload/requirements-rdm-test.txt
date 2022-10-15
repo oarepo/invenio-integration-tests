@@ -43,7 +43,7 @@ elasticsearch==7.13.4
 elasticsearch-dsl==7.4.0
 email-validator==1.3.0
 entrypoints==0.4
-executing==1.1.0
+executing==1.1.1
 fastjsonschema==2.16.2
 Flask==2.2.2
 Flask-Admin==1.6.0
@@ -70,7 +70,7 @@ Flask-WTF==1.0.1
 fs==2.4.16
 ftfy==6.1.1
 future==0.18.2
-greenlet==1.1.3
+greenlet==1.1.3.post0
 idna==3.4
 imagesize==1.4.1
 importlib-metadata==4.13.0
@@ -95,7 +95,7 @@ invenio-indexer==2.1.1
 invenio-jsonschemas==1.1.4
 invenio-logging==1.3.2
 invenio-mail==1.0.2
-invenio-oaiserver==2.0.1
+invenio-oaiserver==2.1.0
 invenio-oauth2server==1.3.7
 invenio-oauthclient==2.0.1
 invenio-pidstore==1.2.3
@@ -107,7 +107,7 @@ invenio-records-ui==1.2.0
 invenio-rest==1.2.8
 invenio-search==2.1.0
 invenio-search-ui==2.1.10
-invenio-theme==1.4.0
+invenio-theme==1.4.1
 invenio-userprofiles==2.0.3
 ipython==8.5.0
 isort==5.10.1
@@ -117,11 +117,11 @@ Jinja2==3.1.2
 jsmin==3.0.1
 jsonpatch==1.32
 jsonpointer==2.3
-jsonref==0.2
+jsonref==0.3.0
 jsonresolver==0.3.1
 jsonschema==4.16.0
 jupyter-core==4.11.1
-jupyter_client==7.3.5
+jupyter_client==7.4.2
 jupyterlab-pygments==0.2.2
 kombu==5.2.4
 limits==1.6
@@ -138,7 +138,7 @@ msgpack==1.0.4
 mypy-extensions==0.4.3
 nbclient==0.7.0
 nbconvert==6.5.4
-nbformat==5.6.1
+nbformat==5.7.0
 nest-asyncio==1.5.6
 node-semver==0.1.1
 oauthlib==2.1.0
@@ -223,4 +223,4 @@ wrapt==1.14.1
 WTForms==2.3.3
 WTForms-Alchemy==0.18.0
 WTForms-Components==0.10.5
-zipp==3.8.1
+zipp==3.9.0
