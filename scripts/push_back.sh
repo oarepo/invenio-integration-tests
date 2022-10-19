@@ -13,7 +13,7 @@ URL="https://oarepo-bot:${TOK}@github.com/oarepo/invenio-integration-tests.git"
 DIR="invenio-integration-tests"
 REQFILE="upload/requirements-${REQUIREMENTS}.txt"
 TRIG="upload/p2oarepo_action.trigger"
-BRANCH="rdm-9"
+BRANCH="rdm-10"
 
 git clone -q -b "$BRANCH" --depth 10 "$URL" "$DIR"
 cp "$REQFILE" $DIR/upload
