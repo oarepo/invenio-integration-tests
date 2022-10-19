@@ -37,7 +37,7 @@ jobs:
       E2E: 'no'
       EXTRAS: ${{ matrix.extras }}
       REQUIREMENTS: ${{ matrix.requirements }}
-      SETUP_SRC_URL: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
+      SETUP_SRC_URL: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-9.x/setup.cfg'
       TOK: '${{ secrets.INTEGRATION_TEST }}'
       SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres:postgres@localhost:5432/invenio'
       POSTGRES_USER: postgres
