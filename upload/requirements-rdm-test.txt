@@ -120,8 +120,8 @@ jsonpointer==2.3
 jsonref==0.3.0
 jsonresolver==0.3.1
 jsonschema==4.16.0
-jupyter-core==4.11.1
-jupyter_client==7.4.2
+jupyter_client==7.4.3
+jupyter_core==4.11.2
 jupyterlab-pygments==0.2.2
 kombu==5.2.4
 limits==1.6
@@ -164,7 +164,7 @@ pycodestyle==2.9.1
 pycparser==2.21
 pydocstyle==6.1.1
 Pygments==2.13.0
-PyJWT==2.5.0
+PyJWT==2.6.0
 PyMySQL==1.0.2
 pynpm==0.1.2
 pyparsing==3.0.9
@@ -186,7 +186,7 @@ requests==2.28.1
 requests-oauthlib==1.1.0
 requirements-builder==0.4.4
 selenium==3.141.0
-sentry-sdk==1.9.10
+sentry-sdk==1.10.1
 simplejson==3.17.6
 simplekv==0.14.1
 six==1.16.0
