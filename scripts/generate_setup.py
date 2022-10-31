@@ -53,6 +53,7 @@ def process_extras_requires(data):
                 raise Exception(f"Uncognized line \"{line}\"")
     resarr = []
     for ename in resdict.keys():
+        resdict[ename].append(f"{sp*2}'jsonref<1.0.0',")
         resarr.append(f"{sp}'{ename}': [\n"+'\n'.join(resdict[ename])+f"\n{sp}],")
     result = '\n'.join(resarr)
     return result

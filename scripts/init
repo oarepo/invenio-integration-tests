@@ -13,7 +13,8 @@ pip install requirements-builder requests
 
 # generate setup from setup.py.template and requirements obtained from
 # inveniosoftware/invenio-app-rdm/master/setup.cfg
-./scripts/generate_setup.py > setup.py
+echo "generate_setup:"
+./scripts/generate_setup.py | tee setup.py
 
 #requirements-builder -e ${EXTRAS} setup.py | pip-compile -U -o .requirements.txt -
 requirements-builder -e ${EXTRAS} --level=pypi setup.py > .requirements.txt
