@@ -13,10 +13,16 @@ pip install requirements-builder requests
 
 # generate setup from setup.py.template and requirements obtained from
 # inveniosoftware/invenio-app-rdm/master/setup.cfg
+echo "generate_setup"
 ./scripts/generate_setup.py > setup.py
+echo "setup.py:"
+cat setup.py
 
 #requirements-builder -e ${EXTRAS} setup.py | pip-compile -U -o .requirements.txt -
+echo "requirements-builder"
 requirements-builder -e ${EXTRAS} --level=pypi setup.py > .requirements.txt
+echo ".requirements.txt:"
+cat .requirements.txt
 
 #pip install --upgrade pip 'setuptools<58.0.0' py poetry
 #poetry config virtualenvs.create false

@@ -16,6 +16,8 @@ readme = open('README.md').read()
 
 install_requires = [
 $install_requires
+    'jsonref>=0.3.0,<1.0.0',
+    'jsonresolver==0.3.1',
 ]
 
 extras_require = {
