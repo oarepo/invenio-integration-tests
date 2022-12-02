@@ -9,7 +9,7 @@ name: Tests and reqs builder
 
 on:
   push:
-    branches: [ rdm-10 ]
+    branches: [ rdm-11 ]
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
   workflow_dispatch:
 
@@ -37,7 +37,8 @@ jobs:
       E2E: 'no'
       EXTRAS: ${{ matrix.extras }}
       REQUIREMENTS: ${{ matrix.requirements }}
-      SETUP_SRC_URL: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-10.x/setup.cfg'
+      SETUP_SRC_URL: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-11.x/setup.cfg'
+      SETUP_SRC_URL_MASTER: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
       TOK: '${{ secrets.INTEGRATION_TEST }}'
       SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres:postgres@localhost:5432/invenio'
       POSTGRES_USER: postgres
@@ -68,6 +69,6 @@ jobs:
           INVENIO_SQLALCHEMY_DATABASE_URI: ${{ env.SQLALCHEMY_DATABASE_URI }}
         run: |
           ./run_tests.sh
-      - name: push results back
-        run: |
-          ./scripts/push_back.sh
+#      - name: push results back
+#        run: |
+#          ./scripts/push_back.sh

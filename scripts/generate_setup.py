@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 
-import os, requests, re
+import os, requests, re, sys
 from string import Template
 
 SETUP_SRC_URL = os.environ.get('SETUP_SRC_URL')
+SETUP_SRC_URL_MASTER = os.environ.get('SETUP_SRC_URL_MASTER')
 
 if SETUP_SRC_URL == None: raise Exception('SETUP_SRC_URL undefined')
 requests.packages.urllib3.util.connection.HAS_IPV6 = False
 rq = requests.get(SETUP_SRC_URL)
+if rq.status_code == 404:
+    print(f"SETUP_SRC_URL not found ({rq.status_code} on {SETUP_SRC_URL})", file=sys.stderr)
+    rq = requests.get(SETUP_SRC_URL_MASTER)
+    rq.raise_for_status()
 data = rq.text
 
 STATE_NONE = 0
