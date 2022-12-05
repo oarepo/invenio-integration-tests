@@ -32,7 +32,7 @@ jobs:
         python-version: [ 3.8 ]
         db-service: [ postgresql13 ]
         search-service: [ elasticsearch7 ]
-        requirements: [ rdm, rmd-test]
+        requirements: [ rdm, rdm-test]
         include:
           - extras: 'elasticsearch7'
             requirements: 'rdm'
