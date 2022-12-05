@@ -20,15 +20,20 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
+        requirements: [ rdm-11, rdm-11-test]
         python-version: [ 3.8 ]
         db-service: [ postgresql13 ]
-        search-service: [ elasticsearch7 ]
-        requirements: [ rdm, rdm-test]
+#        search-service: [ elasticsearch7 ]
+        search-service: [ opensearch2 ]
         include:
-          - extras: 'elasticsearch7'
-            requirements: 'rdm'
-          - extras: 'elasticsearch7,tests'
-            requirements: 'rdm-test'
+#          - extras: 'elasticsearch7'
+#            requirements: 'rdm-11'
+#          - extras: 'elasticsearch7,tests'
+#            requirements: 'rdm-11-test'
+          - extras: 'opensearch2'
+            requirements: 'rdm-11'
+          - extras: 'opensearch2,tests'
+            requirements: 'rdm-11-test'
     env:
       E2E: 'no'
       EXTRAS: ${{ matrix.extras }}
