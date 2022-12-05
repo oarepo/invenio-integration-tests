@@ -48,7 +48,8 @@ jobs:
       SETUP_SRC_URL_IAR_MASTER: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
       SETUP_SRC_URL_IRR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-rdm-records/master/setup.cfg'
       TOK: '${{ secrets.INTEGRATION_TEST }}'
-      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres:postgres@localhost:5432/invenio'
+#      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres:postgres@localhost:5432/invenio'
+      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
       POSTGRES_USER: postgres
       POSTGRES_HOST: localhost
       POSTGRES_PORT: 5432

@@ -15,19 +15,24 @@ function cleanup(){
 }
 trap cleanup EXIT
 
-echo "env0:"
-printenv
+ENV0="$(printenv)"
+echo -e "ENV1:\n$ENV0\n"
 
-echo "docker-services-cli up"
+echo "docker-services-cli up (DB:$DB; SEARCH:$SEARCH)"
 eval "$(docker-services-cli up --db ${DB:-postgresql} --search ${SEARCH:-elasticsearch7} --mq ${MQ:-redis} --env)"
 
-echo "env1:"
-printenv
+ENV1="$(printenv)"
+echo -e "ENV1:\n$ENV1\n"
+
+echo "env diff:"
+diff <(echo "$ENV0") <(echo "$ENV1")
+echo ""
 
 export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
 echo -e "\ninvenio shell, invenio_config's version.__version__):"
 invenio shell --simple-prompt -c "from invenio_config import version; print (\"invenio_config version:\", version.__version__)"
 
+echo -e "SQLALCHEMY_DATABASE_URI:$SQLALCHEMY_DATABASE_URI\nINVENIO_SQLALCHEMY_DATABASE_URI:$INVENIO_SQLALCHEMY_DATABASE_URI"
 echo -e "\npsql version:"
 psql --version
 echo "invenio db init,create:"
