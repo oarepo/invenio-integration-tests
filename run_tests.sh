@@ -10,6 +10,20 @@ set -e
 
 echo -e "\ninvenio-integration-tests/run_tests.sh"
 
+function cleanup(){
+  eval "$(docker-services-cli down --env)"
+}
+trap cleanup EXIT
+
+echo "env0:"
+printenv
+
+echo "docker-services-cli up"
+eval "$(docker-services-cli up --db ${DB:-postgresql} --search ${SEARCH:-elasticsearch7} --mq ${MQ:-redis} --env)"
+
+echo "env1:"
+printenv
+
 export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
 echo -e "\ninvenio shell, invenio_config's version.__version__):"
 invenio shell --simple-prompt -c "from invenio_config import version; print (\"invenio_config version:\", version.__version__)"

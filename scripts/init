@@ -18,9 +18,9 @@ echo "generate_setup"
 echo "setup.py:"
 cat setup.py
 
-#requirements-builder -e ${EXTRAS} setup.py | pip-compile -U -o .requirements.txt -
-echo "requirements-builder"
-requirements-builder -e ${EXTRAS} --level=pypi setup.py > .requirements.txt
+#requirements-builder -e "${EXTRAS}" setup.py | pip-compile -U -o .requirements.txt -
+echo "requirements-builder, extras:${EXTRAS}"
+requirements-builder -e "${EXTRAS}" --level=pypi setup.py > .requirements.txt
 echo ".requirements.txt:"
 cat .requirements.txt
 

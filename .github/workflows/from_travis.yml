@@ -17,15 +17,15 @@ jobs:
   build:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        #image: postgres:9.6
-        image: postgres:13.6
-        env:
-          POSTGRES_PASSWORD: postgres
-        ports:
-          - 5432:5432
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+#    services:
+#      postgres:
+#        #image: postgres:9.6
+#        image: postgres:13.6
+#        env:
+#          POSTGRES_PASSWORD: postgres
+#        ports:
+#          - 5432:5432
+#        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
     strategy:
       max-parallel: 1
       matrix:
@@ -61,10 +61,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Runs Elasticsearch
-        uses: elastic/elastic-github-actions/elasticsearch@master
-        with:
-          stack-version: 7.17.2
+#      - name: Runs Elasticsearch
+#        uses: elastic/elastic-github-actions/elasticsearch@master
+#        with:
+#          stack-version: 7.17.2
       - name: init
         run: |
           echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS; SEARCH:$SEARCH; DB:$DB"
