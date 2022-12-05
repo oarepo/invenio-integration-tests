@@ -34,6 +34,9 @@ jobs:
         run: |
           ./scripts/generate_oarepo_setup.sh rdm
           echo "NEWTAG=$(cat ./oarepo/oarepo/tag.txt)" >> $GITHUB_ENV
+          echo -e "\noarepo setup.py:"
+          cat ./oarepo/setup.py
+          echo ""
 #      - name: Commit and Push generated OARepo setup.py
 #        uses: stefanzweifel/git-auto-commit-action@v4
 #        with:
