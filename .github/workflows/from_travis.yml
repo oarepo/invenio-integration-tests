@@ -20,6 +20,7 @@ jobs:
     services:
       postgres:
         image: postgres:9.6
+        #image: postgres:13.6
         env:
           POSTGRES_PASSWORD: postgres
         ports:
@@ -28,6 +29,9 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
+        python-version: [ 3.8 ]
+        db-service: [ postgresql13 ]
+        search-service: [ elasticsearch7 ]
         include:
           - extras: 'elasticsearch7'
             requirements: 'rdm'
@@ -37,8 +41,9 @@ jobs:
       E2E: 'no'
       EXTRAS: ${{ matrix.extras }}
       REQUIREMENTS: ${{ matrix.requirements }}
-      SETUP_SRC_URL: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-11.x/setup.cfg'
-      SETUP_SRC_URL_MASTER: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
+      SETUP_SRC_URL_IAR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-11.x/setup.cfg'
+      SETUP_SRC_URL_IAR_MASTER: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
+      SETUP_SRC_URL_IRR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-rdm-records/master/setup.cfg'
       TOK: '${{ secrets.INTEGRATION_TEST }}'
       SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://postgres:postgres@localhost:5432/invenio'
       POSTGRES_USER: postgres
@@ -49,10 +54,10 @@ jobs:
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v2
-      - name: Set up Python 3.8
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: ${{ matrix.python-version }}
       - name: Runs Elasticsearch
         uses: elastic/elastic-github-actions/elasticsearch@master
         with:

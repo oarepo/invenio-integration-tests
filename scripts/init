@@ -9,7 +9,7 @@
 set -e
 
 pip install --upgrade pip 'setuptools<58.0.0' py pip-tools
-pip install requirements-builder requests
+pip install requirements-builder requests docker-services-cli
 
 # generate setup from setup.py.template and requirements obtained from
 # inveniosoftware/invenio-app-rdm/master/setup.cfg

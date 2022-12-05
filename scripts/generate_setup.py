@@ -3,17 +3,25 @@
 import os, requests, re, sys
 from string import Template
 
-SETUP_SRC_URL = os.environ.get('SETUP_SRC_URL')
-SETUP_SRC_URL_MASTER = os.environ.get('SETUP_SRC_URL_MASTER')
+SETUP_SRC_URL_IAR = os.environ.get('SETUP_SRC_URL_IAR')
+SETUP_SRC_URL_IAR_MASTER = os.environ.get('SETUP_SRC_URL_IAR_MASTER')
+SETUP_SRC_URL_IRR = os.environ.get('SETUP_SRC_URL_IRR')
 
-if SETUP_SRC_URL == None: raise Exception('SETUP_SRC_URL undefined')
 requests.packages.urllib3.util.connection.HAS_IPV6 = False
-rq = requests.get(SETUP_SRC_URL)
+if SETUP_SRC_URL_IAR == None: raise Exception('SETUP_SRC_URL_IAR undefined')
+rq = requests.get(SETUP_SRC_URL_IAR)
 if rq.status_code == 404:
-    print(f"SETUP_SRC_URL not found ({rq.status_code} on {SETUP_SRC_URL})", file=sys.stderr)
-    rq = requests.get(SETUP_SRC_URL_MASTER)
+    print(f"SETUP_SRC_URL_IAR not found ({rq.status_code} on {SETUP_SRC_URL_IAR}) => using master branch ({SETUP_SRC_URL_IAR_MASTER})", file=sys.stderr)
+    rq = requests.get(SETUP_SRC_URL_IAR_MASTER)
     rq.raise_for_status()
 data = rq.text
+
+if SETUP_SRC_URL_IRR == None: raise Exception('SETUP_SRC_URL_IRR undefined')
+rq2 = requests.get(SETUP_SRC_URL_IRR)
+rq2.raise_for_status()
+data += rq2.text
+#print(data, end='')
+#sys.exit(0)
 
 STATE_NONE = 0
 STATE_INSTALL_REQUIRES = 1
@@ -37,8 +45,9 @@ def process_install_requires(data):
             if re.match("^[ 	]+invenio-rdm-records[<>=!]", line):
                 state = STATE_NONE
         else: raise Exception(f"Wrong state \"{state}\"")
-    result = '\n'.join(resarr)
-    return result
+#    result = '\n'.join(resarr)
+#    return result
+    return resarr
 
 def process_extras_requires(data):
     resdict = {}
@@ -53,23 +62,27 @@ def process_extras_requires(data):
             rr = re.match("^([ 	]+)([a-zA-Z0-9].*)$", line)
             if rr:
                 sp = rr.group(1)
-                resdict[ename].append(f"{sp*2}'{rr.group(2)}',")
+#                rule = rr.group(2).lower()
+                rule = rr.group(2)
+                if rule not in resdict[ename]:
+                    resdict[ename].append(f"{sp*2}'{rule}',")
             else:
                 raise Exception(f"Uncognized line \"{line}\"")
-    resarr = []
-    for ename in resdict.keys():
-        resarr.append(f"{sp}'{ename}': [\n"+'\n'.join(resdict[ename])+f"\n{sp}],")
-    result = '\n'.join(resarr)
-    return result
+#    resarr = []
+#    for ename in resdict.keys():
+#        resarr.append(f"{sp}'{ename}': [\n"+'\n'.join(resdict[ename])+f"\n{sp}],")
+#    result = '\n'.join(resarr)
+#    return result
+    return resdict
 
 state = STATE_NONE
 buff = []
-resdict = {}
+resdict = {'install_requires': [], 'extras_require': {}}
 for line in data.split('\n'):
     if state == STATE_NONE:
         if line == "install_requires =":
             state = STATE_INSTALL_REQUIRES
-            
+            buff = []
         elif line == "[options.extras_require]":
             state = STATE_EXTRAS_REQUIRES
             buff = []
@@ -78,17 +91,32 @@ for line in data.split('\n'):
             buff.append(line)
         else:
             state = STATE_NONE
-            resdict['install_requires'] = process_install_requires(buff)
+            resdict['install_requires'] += process_install_requires(buff)
     elif state == STATE_EXTRAS_REQUIRES:
         if line != "":
             buff.append(line)
         else:
             state = STATE_NONE
-            resdict['extras_require'] = process_extras_requires(buff)
+            for exname,exval in process_extras_requires(buff).items():
+                exname = exname.lower()
+                if exname in resdict['extras_require']:
+                    resdict['extras_require'][exname] += exval
+                else:
+                    resdict['extras_require'][exname] = exval
+
+resdict['install_requires']='\n'.join(resdict['install_requires'])
+sp = "    "
+resarr = []
+for exname, exval in resdict['extras_require'].items():
+    exval = list(set(exval))
+    resarr.append(f"{sp}'{exname}': [\n"+'\n'.join(exval)+f"\n{sp}],")
+resdict['extras_require'] = resarr
+resdict['extras_require'] = '\n'.join(resdict['extras_require'])
+#print(resdict['extras_require'], end='')
+#sys.exit(0)
 
 with open('./setup.py.template') as f:
     template_str = f.read()
-
 template = Template(template_str)
 result = template.substitute(resdict)
 
