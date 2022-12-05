@@ -32,6 +32,7 @@ jobs:
         python-version: [ 3.8 ]
         db-service: [ postgresql13 ]
         search-service: [ elasticsearch7 ]
+        requirements: [ rdm rmd-test]
         include:
           - extras: 'elasticsearch7'
             requirements: 'rdm'
@@ -41,6 +42,8 @@ jobs:
       E2E: 'no'
       EXTRAS: ${{ matrix.extras }}
       REQUIREMENTS: ${{ matrix.requirements }}
+      SEARCH: ${{ matrix.search-service }}
+      DB: ${{ matrix.db-service }}
       SETUP_SRC_URL_IAR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-11.x/setup.cfg'
       SETUP_SRC_URL_IAR_MASTER: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
       SETUP_SRC_URL_IRR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-rdm-records/master/setup.cfg'
@@ -64,7 +67,7 @@ jobs:
           stack-version: 7.17.2
       - name: init
         run: |
-          echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS;"
+          echo "EXTRAS:$EXTRAS; REQUIREMENTS:$REQUIREMENTS; SEARCH:$SEARCH; DB:$DB"
           ./scripts/init
       - name: install (bootstrap)
         run: |
