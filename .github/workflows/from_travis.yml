@@ -19,8 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:9.6
-        #image: postgres:13.6
+        #image: postgres:9.6
+        image: postgres:13.6
         env:
           POSTGRES_PASSWORD: postgres
         ports:
@@ -32,7 +32,7 @@ jobs:
         python-version: [ 3.8 ]
         db-service: [ postgresql13 ]
         search-service: [ elasticsearch7 ]
-        requirements: [ rdm rmd-test]
+        requirements: [ rdm, rmd-test]
         include:
           - extras: 'elasticsearch7'
             requirements: 'rdm'
