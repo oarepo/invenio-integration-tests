@@ -5,7 +5,7 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-name: Tests and reqs builder
+name: Tests and reqs builder rdm-11
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       max-parallel: 1
       matrix:
         requirements: [ rdm-11, rdm-11-test]
-        python-version: [ 3.8 ]
+        python-version: [ 3.9 ]
         db-service: [ postgresql13 ]
 #        search-service: [ elasticsearch7 ]
         search-service: [ opensearch2 ]

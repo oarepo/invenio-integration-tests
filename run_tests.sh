@@ -16,12 +16,9 @@ function cleanup(){
 trap cleanup EXIT
 
 ENV0="$(printenv)"
-
 echo "docker-services-cli up (DB:$DB; SEARCH:$SEARCH)"
 eval "$(docker-services-cli up --db ${DB:-postgresql} --search ${SEARCH:-elasticsearch7} --mq ${MQ:-redis} --env)"
-
 ENV1="$(printenv)"
-
 echo "env diff:"
 diff <(echo "$ENV0") <(echo "$ENV1") || true
 echo ""
@@ -37,7 +34,7 @@ echo "invenio db init,create:"
 invenio db init
 invenio db create
 
-echo -e "\nelasticsearch GET:"
+echo -e "\nsearch-service GET:"
 curl -sX GET "http://127.0.0.1:9200" || cat /tmp/local-es.log
 echo "invenio index init,check:"
 invenio index init

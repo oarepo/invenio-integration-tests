@@ -26,27 +26,23 @@ jobs:
           ref: 'rdm-11'
           token: '${{ secrets.INTEGRATION_TEST }}'
           path: 'oarepo'
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
       - name: Generate OARepo setup.py from tested requirements artifact
         run: |
-          ./scripts/generate_oarepo_setup.sh rdm
+          ./scripts/generate_oarepo_setup.sh rdm-11
           echo "NEWTAG=$(cat ./oarepo/oarepo/tag.txt)" >> $GITHUB_ENV
           echo -e "\noarepo setup.py:"
           cat ./oarepo/setup.py
           echo ""
-#      - name: Commit and Push generated OARepo setup.py
-#        uses: stefanzweifel/git-auto-commit-action@v4
-#        with:
-#          commit_message: "[p2oarepo] update setup.py from oarepo/invenio-integration-tests (tag ${{ env.NEWTAG }})"
-#          branch: rdm-11
-#          file_pattern: setup.py oarepo/version.py
-#          repository: oarepo
-#          commit_user_name: p2oarepo-workflow
-#          commit_user_email: p2oarepo-workflow@oarepo.org
-#          tagging_message: ${{ env.NEWTAG }}
-#          # Optional options appended to `git-push`
-#          push_options: '--force'
-#        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
+      - name: Commit and Push generated OARepo setup.py
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[p2oarepo] update setup.py from oarepo/invenio-integration-tests (tag ${{ env.NEWTAG }})"
+          branch: rdm-11
+          file_pattern: setup.py oarepo/version.py
+          repository: oarepo
+          commit_user_name: p2oarepo-workflow
+          commit_user_email: p2oarepo-workflow@oarepo.org
+          tagging_message: ${{ env.NEWTAG }}
+          # Optional options appended to `git-push`
+          push_options: '--force'
+        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
