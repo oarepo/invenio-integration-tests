@@ -20,8 +20,6 @@ if SETUP_SRC_URL_IRR == None: raise Exception('SETUP_SRC_URL_IRR undefined')
 rq2 = requests.get(SETUP_SRC_URL_IRR)
 rq2.raise_for_status()
 data += rq2.text
-#print(data, end='')
-#sys.exit(0)
 
 STATE_NONE = 0
 STATE_INSTALL_REQUIRES = 1
@@ -45,34 +43,26 @@ def process_install_requires(data):
             if re.match("^[ 	]+invenio-rdm-records[<>=!]", line):
                 state = STATE_NONE
         else: raise Exception(f"Wrong state \"{state}\"")
-#    result = '\n'.join(resarr)
-#    return result
     return resarr
 
 def process_extras_requires(data):
     resdict = {}
-    ename = None
+    exname = None
     sp = "    "
     for line in data:
         rr = re.match("^([a-zA-Z][a-zA-Z0-9]*) =", line)
         if rr:
-            ename = rr.group(1)
-            resdict[ename] = []
+            exname = rr.group(1)
+            resdict[exname] = []
         else:
             rr = re.match("^([ 	]+)([a-zA-Z0-9].*)$", line)
             if rr:
                 sp = rr.group(1)
-#                rule = rr.group(2).lower()
-                rule = rr.group(2)
-                if rule not in resdict[ename]:
-                    resdict[ename].append(f"{sp*2}'{rule}',")
+                exval = f"{sp*2}'{rr.group(2)}',".lower()
+                if exval not in resdict[exname]:
+                    resdict[exname].append(exval)
             else:
                 raise Exception(f"Uncognized line \"{line}\"")
-#    resarr = []
-#    for ename in resdict.keys():
-#        resarr.append(f"{sp}'{ename}': [\n"+'\n'.join(resdict[ename])+f"\n{sp}],")
-#    result = '\n'.join(resarr)
-#    return result
     return resdict
 
 state = STATE_NONE
@@ -112,8 +102,6 @@ for exname, exval in resdict['extras_require'].items():
     resarr.append(f"{sp}'{exname}': [\n"+'\n'.join(exval)+f"\n{sp}],")
 resdict['extras_require'] = resarr
 resdict['extras_require'] = '\n'.join(resdict['extras_require'])
-#print(resdict['extras_require'], end='')
-#sys.exit(0)
 
 with open('./setup.py.template') as f:
     template_str = f.read()
