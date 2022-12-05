@@ -25,7 +25,7 @@ ENV1="$(printenv)"
 echo -e "ENV1:\n$ENV1\n"
 
 echo "env diff:"
-diff <(echo "$ENV0") <(echo "$ENV1")
+diff <(echo "$ENV0") <(echo "$ENV1") || true
 echo ""
 
 export INVENIO_JSONSCHEMAS_HOST=repozitar.cesnet.cz
