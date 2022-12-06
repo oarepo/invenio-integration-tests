@@ -23,13 +23,8 @@ jobs:
         requirements: [ rdm-11, rdm-11-test]
         python-version: [ 3.9 ]
         db-service: [ postgresql13 ]
-#        search-service: [ elasticsearch7 ]
         search-service: [ opensearch2 ]
         include:
-#          - extras: 'elasticsearch7'
-#            requirements: 'rdm-11'
-#          - extras: 'elasticsearch7,tests'
-#            requirements: 'rdm-11-test'
           - extras: 'opensearch2'
             requirements: 'rdm-11'
           - extras: 'opensearch2,tests'

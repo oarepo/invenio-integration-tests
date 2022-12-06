@@ -7,6 +7,7 @@ SETUP_SRC_URL_IAR = os.environ.get('SETUP_SRC_URL_IAR')
 SETUP_SRC_URL_IAR_MASTER = os.environ.get('SETUP_SRC_URL_IAR_MASTER')
 SETUP_SRC_URL_IRR = os.environ.get('SETUP_SRC_URL_IRR')
 
+# try to fetch from version-branch URL with fallback to master-branch URL:
 requests.packages.urllib3.util.connection.HAS_IPV6 = False
 if SETUP_SRC_URL_IAR == None: raise Exception('SETUP_SRC_URL_IAR undefined')
 rq = requests.get(SETUP_SRC_URL_IAR)
@@ -98,6 +99,7 @@ resdict['install_requires']='\n'.join(resdict['install_requires'])
 sp = "    "
 resarr = []
 for exname, exval in resdict['extras_require'].items():
+    # omit repeated exvals:
     exval = list(set(exval))
     resarr.append(f"{sp}'{exname}': [\n"+'\n'.join(exval)+f"\n{sp}],")
 resdict['extras_require'] = resarr
