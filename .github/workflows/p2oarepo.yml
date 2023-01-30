@@ -5,11 +5,11 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-name: push to oarepo rdm-11
+name: push to oarepo rdm-12
 
 on:
   push:
-    branches: [ rdm-11 ]
+    branches: [ rdm-12 ]
     paths: [ 'upload/p2oarepo_action.trigger' ]
   workflow_dispatch:
 
@@ -23,12 +23,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'oarepo/oarepo'
-          ref: 'rdm-11'
+          ref: 'rdm-12'
           token: '${{ secrets.INTEGRATION_TEST }}'
           path: 'oarepo'
       - name: Generate OARepo setup.py from tested requirements artifact
         run: |
-          ./scripts/generate_oarepo_setup.sh rdm-11
+          ./scripts/generate_oarepo_setup.sh rdm-12
           echo "NEWTAG=$(cat ./oarepo/oarepo/tag.txt)" >> $GITHUB_ENV
           echo -e "\noarepo setup.py:"
           cat ./oarepo/setup.py
@@ -37,7 +37,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[p2oarepo] update setup.py from oarepo/invenio-integration-tests (tag ${{ env.NEWTAG }})"
-          branch: rdm-11
+          branch: rdm-12
           file_pattern: setup.py oarepo/version.py
           repository: oarepo
           commit_user_name: p2oarepo-workflow

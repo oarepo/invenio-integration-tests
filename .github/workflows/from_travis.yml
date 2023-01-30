@@ -9,7 +9,7 @@ name: Tests and reqs builder
 
 on:
   push:
-    branches: [ rdm-11 ]
+    branches: [ rdm-12 ]
     paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
   workflow_dispatch:
 
@@ -20,22 +20,22 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        requirements: [ rdm-11, rdm-11-test]
+        requirements: [ rdm-12, rdm-12-test]
         python-version: [ 3.9 ]
         db-service: [ postgresql13 ]
         search-service: [ opensearch2 ]
         include:
           - extras: 'opensearch2'
-            requirements: 'rdm-11'
+            requirements: 'rdm-12'
           - extras: 'opensearch2,tests'
-            requirements: 'rdm-11-test'
+            requirements: 'rdm-12-test'
     env:
       E2E: 'no'
       EXTRAS: ${{ matrix.extras }}
       REQUIREMENTS: ${{ matrix.requirements }}
       SEARCH: ${{ matrix.search-service }}
       DB: ${{ matrix.db-service }}
-      SETUP_SRC_URL_IAR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-11.x/setup.cfg'
+      SETUP_SRC_URL_IAR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-12.x/setup.cfg'
       SETUP_SRC_URL_IAR_MASTER: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
       SETUP_SRC_URL_IRR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-rdm-records/master/setup.cfg'
       TOK: '${{ secrets.INTEGRATION_TEST }}'
