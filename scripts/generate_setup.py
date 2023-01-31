@@ -4,7 +4,7 @@ import os, requests, re, sys
 from string import Template
 
 SETUP_SRC_URL_IAR = os.environ.get('SETUP_SRC_URL_IAR')
-SETUP_SRC_URL_IAR_MASTER = os.environ.get('SETUP_SRC_URL_IAR_MASTER')
+SETUP_SRC_URL_IAR_TAG = os.environ.get('SETUP_SRC_URL_IAR_TAG')
 SETUP_SRC_URL_IRR = os.environ.get('SETUP_SRC_URL_IRR')
 
 # try to fetch from version-branch URL with fallback to master-branch URL:
@@ -12,8 +12,8 @@ requests.packages.urllib3.util.connection.HAS_IPV6 = False
 if SETUP_SRC_URL_IAR == None: raise Exception('SETUP_SRC_URL_IAR undefined')
 rq = requests.get(SETUP_SRC_URL_IAR)
 if rq.status_code == 404:
-    print(f"SETUP_SRC_URL_IAR not found ({rq.status_code} on {SETUP_SRC_URL_IAR}) => using master branch ({SETUP_SRC_URL_IAR_MASTER})", file=sys.stderr)
-    rq = requests.get(SETUP_SRC_URL_IAR_MASTER)
+    print(f"SETUP_SRC_URL_IAR not found ({rq.status_code} on {SETUP_SRC_URL_IAR}) => using fallback ({SETUP_SRC_URL_IAR_TAG})", file=sys.stderr)
+    rq = requests.get(SETUP_SRC_URL_IAR_TAG)
     rq.raise_for_status()
 data = rq.text
 

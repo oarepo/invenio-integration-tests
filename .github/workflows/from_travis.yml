@@ -35,9 +35,9 @@ jobs:
       REQUIREMENTS: ${{ matrix.requirements }}
       SEARCH: ${{ matrix.search-service }}
       DB: ${{ matrix.db-service }}
-      #SETUP_SRC_URL_IAR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-11.x/setup.cfg'
-      SETUP_SRC_URL_IAR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/v11.0.0/setup.cfg'
-      SETUP_SRC_URL_IAR_MASTER: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
+      SETUP_SRC_URL_IAR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/maint-11.x/setup.cfg'
+      SETUP_SRC_URL_IAR_TAG: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/v11.0.0/setup.cfg'
+      #SETUP_SRC_URL_IAR_MASTER: 'https://raw.githubusercontent.com/inveniosoftware/invenio-app-rdm/master/setup.cfg'
       SETUP_SRC_URL_IRR: 'https://raw.githubusercontent.com/inveniosoftware/invenio-rdm-records/master/setup.cfg'
       TOK: '${{ secrets.INTEGRATION_TEST }}'
       SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
