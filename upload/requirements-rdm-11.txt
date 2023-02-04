@@ -10,7 +10,7 @@ Babel==2.11.0
 babel-edtf==1.0.0
 backcall==0.2.0
 base32-lib==1.0.2
-beautifulsoup4==4.11.1
+beautifulsoup4==4.11.2
 billiard==3.6.4.0
 bleach==6.0.0
 blinker==1.5
@@ -105,7 +105,7 @@ invenio-logging==1.3.2
 invenio-mail==1.0.2
 invenio-oaiserver==2.1.1
 invenio-oauth2server==1.3.8
-invenio-oauthclient==2.1.0
+invenio-oauthclient==2.1.1
 invenio-pages==2.0.0
 invenio-pidstore==1.2.4
 invenio-previewer==1.3.9
@@ -166,7 +166,7 @@ passlib==1.7.4
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.4.0
-pip-tools==6.12.1
+pip-tools==6.12.2
 platformdirs==2.6.2
 pluggy==0.13.1
 ply==3.11
