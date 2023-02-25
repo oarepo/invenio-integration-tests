@@ -16,8 +16,8 @@ base32-lib==1.0.2
 billiard==3.6.4.0
 bleach==6.0.0
 blinker==1.5
-boto3==1.26.74
-botocore==1.29.74
+boto3==1.26.79
+botocore==1.29.79
 build==0.10.0
 cachelib==0.9.0
 cchardet==2.1.7
@@ -50,7 +50,7 @@ execnet==1.9.0
 executing==1.2.0
 fastjsonschema==2.16.2
 flask==1.1.4
-flask-admin==1.6.0
+flask-admin==1.6.1
 flask-alembic==2.0.1
 flask-assets==2.0
 flask-babelex==0.9.4
@@ -163,7 +163,7 @@ pickleshare==0.7.5
 pillow==9.4.0
 platformdirs==3.0.0
 pluggy==0.13.1
-prompt-toolkit==3.0.36
+prompt-toolkit==3.0.37
 psycopg2-binary==2.9.5
 ptyprocess==0.7.0
 pure-eval==0.2.2
@@ -231,4 +231,4 @@ wsproto==1.2.0
 wtforms==2.3.3
 wtforms-alchemy==0.18.0
 wtforms-components==0.10.5
-zipp==3.14.0
+zipp==3.15.0
