@@ -8,9 +8,9 @@
 name: Tests and reqs builder
 
 on:
-  push:
-    branches: [ invenio-3.5 ]
-    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
+#  push:
+#    branches: [ invenio-3.5 ]
+#    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
   workflow_dispatch:
 
 jobs:
