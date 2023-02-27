@@ -25,9 +25,9 @@ jobs:
         db-service: [ postgresql13 ]
         search-service: [ opensearch2 ]
         include:
-          - extras: 'opensearch2'
+          - extras: 'opensearch2,s3'
             requirements: 'rdm-12'
-          - extras: 'opensearch2,tests'
+          - extras: 'opensearch2,s3,tests'
             requirements: 'rdm-12-test'
     env:
       E2E: 'no'
