@@ -101,6 +101,7 @@ resarr = []
 for exname, exval in resdict['extras_require'].items():
     # omit repeated exvals:
     exval = list(set(exval))
+    exval.append(f"{sp*2}'flask>=2.2.5',")
     resarr.append(f"{sp}'{exname}': [\n"+'\n'.join(exval)+f"\n{sp}],")
 resdict['extras_require'] = resarr
 resdict['extras_require'] = '\n'.join(resdict['extras_require'])
