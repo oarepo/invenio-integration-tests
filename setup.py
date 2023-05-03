@@ -21,6 +21,7 @@ extras_require = {
     'invenio3.3': [
         'invenio[base,metadata,files,postgresql,elasticsearch7]>=3.3.0,<3.4.0',
         'invenio-accounts==1.4.2',
+        'invenio-base==1.2.13',
         'requests',
         's3-client-lib',
         'flask-oauthlib',
@@ -28,12 +29,12 @@ extras_require = {
         'invenio-oauth2server==1.3.1',
         'pytest-cov==2.10.1',
         'coverage==4.5.4',
-        'pillow>=8.3.2',
-        'invenio-base<1.2.14'
+        'pillow>=8.3.2'
     ],
     'invenio3.3test': [
         'invenio[base,metadata,files,postgresql,elasticsearch7,tests]>=3.3.0,<3.4.0',
         'invenio-accounts==1.4.2',
+        'invenio-base==1.2.13',
         'requests',
         's3-client-lib',
         'flask-oauthlib',
@@ -41,8 +42,7 @@ extras_require = {
         'invenio-oauth2server==1.3.1',
         'pytest-cov==2.10.1',
         'coverage==4.5.4',
-        'pillow>=8.3.2',
-        'invenio-base<1.2.14'
+        'pillow>=8.3.2'
     ],
     'devel': [
         'invenio[base,metadata,files,postgresql,elasticsearch7]',
