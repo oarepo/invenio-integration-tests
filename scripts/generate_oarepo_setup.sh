@@ -55,6 +55,6 @@ sed -e '/pytest-invenio/ s/^pytest-invenio==\([0-9\.]\+\)$/pytest-invenio[docs]=
  | sed -i '/^extras_require/,/^\]/!b;/^    \x27tests\x27: \[/,/^    \]/!b;//!d;r /dev/stdin' ${SETUP_PY}
 
 # remove blacklisted pkgs:
-sed -i -f blacklisted_pkgs.sed ${SETUP_PY}
+sed -i -f ./scripts/blacklisted_pkgs.sed ${SETUP_PY}
 
 echo "Done."
