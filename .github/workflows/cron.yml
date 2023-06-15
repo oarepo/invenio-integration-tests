@@ -23,7 +23,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        branch: [ 'rdm-10', 'rdm-11' ]
+        branch: [ 'rdm-11' ]
     steps:
       - name: Trig workflow in ${{ matrix.branch }} br.
         uses: benc-uk/workflow-dispatch@v1
