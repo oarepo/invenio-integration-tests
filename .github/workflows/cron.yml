@@ -8,9 +8,9 @@
 name: cron wf wrapper
 
 on:
-  schedule:
+#  schedule:
     # every sat. at 7:39 GMT
-    - cron: '39 7 * * 6'
+#    - cron: '39 7 * * 6'
     # debug run
     #- cron: '10 17 * * *'
     #- cron: '45 11 * * 1'
