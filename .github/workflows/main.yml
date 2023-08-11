@@ -5,12 +5,13 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-name: oarepo integr.test builder
+name: Oarepo integr.test builder
 
 on:
-#  push:
-#    branches: [ rdm-11 ]
-#    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml' ]
+  push:
+    branches: [ rdm-11 ]
+#    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml', '.github/workflows/main.yml' ]
+    paths: [ 'upload/main_action.trigger' ]
   workflow_dispatch:
 
 jobs:
