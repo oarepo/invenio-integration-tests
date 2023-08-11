@@ -1,0 +1,143 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2023 CESNET.
+#
+# invenio-integration-tests is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
+name: Oarepo integr.test builder
+
+on:
+  push:
+    branches: [ rdm-11 ]
+#    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml', '.github/workflows/main.yml' ]
+    paths: [ 'upload/main_action.trigger' ]
+  workflow_dispatch:
+
+jobs:
+  start_and_test:
+    runs-on: ubuntu-latest
+#    strategy:
+#      max-parallel: 1
+#      matrix:
+#        opensearch-version: [ 2 ]
+#        redis-version: [ '6' ]
+#        postgres-version: [ 14 ]
+    env:
+      OPENSEARCH_PORT: 9200
+#      OPENSEARCH_VERSION: ${{ matrix.opensearch-version }}
+#      REDIS-VERSION: ${{ matrix.redis-version }}
+#      POSTGRES-VERSION: ${{ matrix.postgres-version }}
+#      PYTHON-VERSION: ${{ matrix.python-version }}
+      OPENSEARCH_VERSION: 2
+      REDIS-VERSION: 6
+      POSTGRES-VERSION: 14
+      PYTHON-VERSION: 3.9
+    steps:
+      - name: opensearch ${{ env.OPENSEARCH_VERSION }}
+        uses: ankane/setup-opensearch@v1
+        with:
+          opensearch-version: ${{ env.OPENSEARCH_VERSION }}
+      - name: redis ${{ env.REDIS-VERSION }}
+        uses: shogo82148/actions-setup-redis@v1
+        with:
+          redis-version: ${{ env.REDIS-VERSION }}
+      - name: postgres ${{ env.POSTGRES-VERSION }}
+        uses: ankane/setup-postgres@v1
+        with:
+          postgres-version: ${{ env.POSTGRES-VERSION }}
+          database: testdb
+      - name: test opensearch on port ${{ env.OPENSEARCH_PORT }}
+        run: |
+          netstat -ntlp
+          curl -s http://localhost:${{ env.OPENSEARCH_PORT }}
+      - name: "test redis: redis-cli ping"
+        run: |
+          redis-cli ping
+      - name: test postgres version ${{ env.POSTGRES-VERSION }}
+        run: |
+          psql -d testdb -c 'SHOW server_version'
+
+      - name: Set up Python ${{ env.PYTHON-VERSION }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ env.PYTHON-VERSION }}
+
+      - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
+        uses: actions/checkout@v3
+        with:
+          repository: 'inveniosoftware/invenio-app-rdm'
+          ref: 'maint-11.x'
+#          token: '${{ secrets.INTEGRATION_TEST }}'
+          path: 'app-rdm'
+      - name: app-rdm test
+        run: |
+          cd app-rdm
+          pwd
+          ls -la
+          python3 -m venv .venv
+          . .venv/bin/activate
+          pip install -U setuptools pip wheel
+          python setup.py bdist_wheel
+          ls -l
+          /bin/echo -e "\ninvenio-rdm-records:"
+          grep invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
+          /bin/echo -e "\nrequires:"
+          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
+      - name: Checkout oarepo/oarepo under ./oarepo
+        uses: actions/checkout@v3
+        with:
+          repository: 'oarepo/oarepo'
+          ref: 'rdm-11'
+#          token: '${{ secrets.INTEGRATION_TEST }}'
+          path: 'oarepo'
+      - name: oarepo test
+        run: |
+          cd oarepo
+          pwd
+          ls -l
+          python3 -m venv .venv
+          . .venv/bin/activate
+          pip install -U setuptools pip wheel bump
+          grep '__version__' oarepo/version.py
+          echo "=== BUMP: ==="
+          bump oarepo/version.py oarepo/version.py
+          grep '__version__' oarepo/version.py
+          echo "=== original setup.py: ==="
+          cat setup.py
+#          echo "=== diff ==="
+#          diff setup.py ../app-rdm/invenio_app_rdm.egg-info/requires.txt
+#          pip install .
+
+#  build:
+#    runs-on: ubuntu-latest
+#    strategy:
+#      max-parallel: 1
+#      matrix:
+#        requirements: [ rdm-11, rdm-11-test]
+#        python-version: [ 3.9 ]
+#        db-service: [ postgresql13 ]
+#        search-service: [ opensearch2 ]
+#        include:
+#          - extras: 'opensearch2,s3'
+#            requirements: 'rdm-11'
+#          - extras: 'opensearch2,s3,tests'
+#            requirements: 'rdm-11-test'
+#    env:
+#      EXTRAS: ${{ matrix.extras }}
+#      REQUIREMENTS: ${{ matrix.requirements }}
+#      SEARCH: ${{ matrix.search-service }}
+#      DB: ${{ matrix.db-service }}
+#      TOK: '${{ secrets.INTEGRATION_TEST }}'
+#      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
+#      POSTGRES_USER: postgres
+#      POSTGRES_HOST: localhost
+#      POSTGRES_PORT: 5432
+#      POSTGRES_DB: invenio
+#    steps:
+#      - name: Checkout oarepo/invenio-integration-tests
+#        uses: actions/checkout@v3
+#      - name: Set up Python ${{ matrix.python-version }}
+#        uses: actions/setup-python@v3
+#        with:
+#          python-version: ${{ matrix.python-version }}
