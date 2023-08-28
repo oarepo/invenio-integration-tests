@@ -34,7 +34,7 @@ jobs:
       POSTGRES_VERSION: 14
       PYTHON_VERSION: 3.9
       #SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
-      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://localhost:5432/invenio'
+      INVENIO_SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://localhost:5432/invenio'
       POSTGRES_DB: invenio
     steps:
       - name: Set up Python ${{ env.PYTHON_VERSION }}
@@ -147,7 +147,7 @@ jobs:
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
           ls -l $INVENIO_INSTANCE_PATH
-          export INVENIO_SQLALCHEMY_DATABASE_URI=$SQLALCHEMY_DATABASE_URI
+          #export INVENIO_SQLALCHEMY_DATABASE_URI=$SQLALCHEMY_DATABASE_URI
           /bin/echo -e "\nSQLALCHEMY_DATABASE_URI: $SQLALCHEMY_DATABASE_URI\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
           /bin/echo -e "\n=== invenio db init: ==="
           invenio db init
@@ -164,8 +164,8 @@ jobs:
         run: |
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          #export INVENIO_SQLALCHEMY_DATABASE_URI=$SQLALCHEMY_DATABASE_URI
           export INVENIO_SERVER_NAME=127.0.0.1:5000
-          #export REST_URL="https://${INVENIO_SERVER_NAME}"
           export REST_URL="https://${INVENIO_SERVER_NAME}/api/simple-records"
           /bin/echo -e "\n=== invenio tokens create: ==="
           TOKEN=$(invenio tokens create -n test -u test@test.com); echo "status: $?"
