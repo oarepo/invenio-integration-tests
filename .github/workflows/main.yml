@@ -33,6 +33,11 @@ jobs:
       REDIS-VERSION: 6
       POSTGRES-VERSION: 14
       PYTHON-VERSION: 3.9
+      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
+      POSTGRES_USER: postgres
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: invenio
     steps:
       - name: Set up Python ${{ env.PYTHON-VERSION }}
         uses: actions/setup-python@v3
@@ -144,6 +149,7 @@ jobs:
           pwd
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
+          ls -l $INVENIO_INSTANCE_PATH
           /bin/echo -e "\n=== invenio db create: ==="
           invenio db create
           /bin/echo -e "\n=== invenio index init: ==="
