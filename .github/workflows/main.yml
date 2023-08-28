@@ -87,14 +87,12 @@ jobs:
           path: 'app-rdm'
       - name: app-rdm test
         run: |
+          . .venv/bin/activate
           cd app-rdm
           pwd
           ls -la
           /bin/echo -e "\n=== ls -la .. ==="
           ls -la ..
-          #python3 -m venv .venv
-          #. .venv/bin/activate
-          . ../.venv/bin/activate
           #pip install -U setuptools pip wheel
           python setup.py bdist_wheel
           ls -la
@@ -112,14 +110,12 @@ jobs:
           path: 'oarepo'
       - name: oarepo test
         run: |
+          . .venv/bin/activate
           cd oarepo
           pwd
           ls -la
           /bin/echo -e "\n=== ls -la .. ==="
           ls -la ..
-          #python3 -m venv .venv
-          #. .venv/bin/activate
-          . ../.venv/bin/activate
           pip install -U setuptools pip wheel bump
           /bin/echo -e "\n=== original oarepo version: ==="
           grep '__version__' oarepo/version.py
@@ -144,6 +140,7 @@ jobs:
 
       - name: prepare invenio
         run: |
+          . .venv/bin/activate
           pwd
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
