@@ -26,35 +26,35 @@ jobs:
     env:
       OPENSEARCH_PORT: 9200
 #      OPENSEARCH_VERSION: ${{ matrix.opensearch-version }}
-#      REDIS-VERSION: ${{ matrix.redis-version }}
-#      POSTGRES-VERSION: ${{ matrix.postgres-version }}
-#      PYTHON-VERSION: ${{ matrix.python-version }}
+#      REDIS_VERSION: ${{ matrix.redis-version }}
+#      POSTGRES_VERSION: ${{ matrix.postgres-version }}
+#      PYTHON_VERSION: ${{ matrix.python-version }}
       OPENSEARCH_VERSION: 2
-      REDIS-VERSION: 6
-      POSTGRES-VERSION: 14
-      PYTHON-VERSION: 3.9
+      REDIS_VERSION: 6
+      POSTGRES_VERSION: 14
+      PYTHON_VERSION: 3.9
       #SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
       SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://localhost:5432/invenio'
       POSTGRES_DB: invenio
     steps:
-      - name: Set up Python ${{ env.PYTHON-VERSION }}
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v3
         with:
-          python-version: ${{ env.PYTHON-VERSION }}
+          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: opensearch ${{ env.OPENSEARCH_VERSION }}
         uses: ankane/setup-opensearch@v1
         with:
           opensearch-version: ${{ env.OPENSEARCH_VERSION }}
-      - name: redis ${{ env.REDIS-VERSION }}
+      - name: redis ${{ env.REDIS_VERSION }}
         uses: shogo82148/actions-setup-redis@v1
         with:
-          redis-version: ${{ env.REDIS-VERSION }}
-      - name: postgres ${{ env.POSTGRES-VERSION }}
+          redis-version: ${{ env.REDIS_VERSION }}
+      - name: postgres ${{ env.POSTGRES_VERSION }}
         uses: ankane/setup-postgres@v1
         with:
-          postgres-version: ${{ env.POSTGRES-VERSION }}
-          database: ${{ env.POSTGRES-DB }}
+          postgres-version: ${{ env.POSTGRES_VERSION }}
+          database: ${{ env.POSTGRES_DB }}
 
       - name: test opensearch on port ${{ env.OPENSEARCH_PORT }}
         run: |
@@ -63,9 +63,9 @@ jobs:
       - name: "test redis: redis-cli ping"
         run: |
           redis-cli ping
-      - name: test postgres version ${{ env.POSTGRES-VERSION }}
+      - name: test postgres version ${{ env.POSTGRES_VERSION }}
         run: |
-          psql -d ${{ env.POSTGRES-DB }} -c 'SHOW server_version'
+          psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
 
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v3
