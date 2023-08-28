@@ -156,7 +156,6 @@ jobs:
           /bin/echo -e "\n=== invenio index init: ==="
           invenio index init
           /bin/echo -e "\n=== invenio webpack buildall: ==="
-          cd simple_repo/simple_repo
           invenio webpack buildall
           /bin/echo -e "\n=== invenio users create: ==="
           invenio users create --password aaaaaa -a -c test@test.com
