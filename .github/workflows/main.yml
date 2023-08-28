@@ -159,22 +159,30 @@ jobs:
           #invenio webpack buildall
           /bin/echo -e "\n=== invenio users create: ==="
           invenio users create --password aaaaaa -a -c test@test.com
-          /bin/echo -e "\n=== invenio tokens create: ==="
-          invenio tokens create -n test -u test@test.com
 
       - name: test REST
         run: |
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           export INVENIO_SERVER_NAME=127.0.0.1:5000
-          export REST_URL="https://${INVENIO_SERVER_NAME}/api/records"
+          #export REST_URL="https://${INVENIO_SERVER_NAME}"
+          export REST_URL="https://${INVENIO_SERVER_NAME}/api/simple-records"
+          /bin/echo -e "\n=== invenio tokens create: ==="
+          TOKEN=$(invenio tokens create -n test -u test@test.com); echo "status: $?"
+          /bin/echo -e "status: $?\n$TOKEN"
           /bin/echo -e "\n=== invenio run: ==="
           invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > invenio_run.log 2>&1 &
           INVEPID=$!
           trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
+          /bin/echo "  PID: $INVEPID"
           sleep 8
           /bin/echo -e "\n=== list records: ==="
-          RESULT=$(curl -sk -XGET "$REST_URL/"); echo "status: $?"
+          RESULT=$(curl -k -p -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          RESULT=$(curl -k -p -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          RECORD=$(echo "$RESULT" | jq -r '.links.self')
+          /bin/echo -e "status: $?\n$RECORD"
 
 #  build:
 #    runs-on: ubuntu-latest
