@@ -122,7 +122,7 @@ jobs:
           . .venv/bin/activate
           mkdir simple_repo
           cd simple_repo
-          unzip simple_repo.zip
+          unzip ../simple_repo.zip
           ls -l
 
       - name: prepare invenio
