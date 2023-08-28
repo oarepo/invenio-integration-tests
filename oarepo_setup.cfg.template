@@ -9,7 +9,7 @@
 # CESNET, UCT Prague and NTK wrapper around Invenio
 
 [metadata]
-name = oarepo,
+name = oarepo
 version = attr: oarepo.__version__
 description = CESNET, UCT Prague and NTK wrapper around Invenio
 #long_description = file: README.rst, CHANGES.rst
@@ -47,7 +47,7 @@ classifiers =
 
 [options]
 include_package_data = True
-#packages = find:
+packages = find:
 python_requires = >=3.7
 #zip_safe = False
 install_requires =
