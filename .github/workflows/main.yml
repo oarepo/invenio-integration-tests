@@ -146,10 +146,11 @@ jobs:
       - name: prepare invenio
         run: |
           . .venv/bin/activate
-          pwd
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
           ls -l $INVENIO_INSTANCE_PATH
+          /bin/echo -e "\n=== invenio db init: ==="
+          invenio db init
           /bin/echo -e "\n=== invenio db create: ==="
           invenio db create
           /bin/echo -e "\n=== invenio index init: ==="
@@ -160,6 +161,20 @@ jobs:
           invenio users create --password aaaaaa -a -c test@test.com
           /bin/echo -e "\n=== invenio tokens create: ==="
           invenio tokens create -n test -u test@test.com
+
+      - name: test REST
+        run: |
+          . .venv/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          export INVENIO_SERVER_NAME=127.0.0.1:5000
+          export REST_URL="https://${INVENIO_SERVER_NAME}/api/records"
+          /bin/echo -e "\n=== invenio run: ==="
+          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > invenio_run.log 2>&1 &
+          INVEPID=$!
+          trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
+          sleep 8
+          /bin/echo -e "\n=== list records: ==="
+          RESULT=$(curl -sk -XGET "$REST_URL/"); echo "status: $?"
 
 #  build:
 #    runs-on: ubuntu-latest
