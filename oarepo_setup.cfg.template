@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+#
+# This file is part of OArepo.
+# Copyright (C) 2023 CESNET.
+#
+# OArepo is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
+# CESNET, UCT Prague and NTK wrapper around Invenio
+
+[metadata]
+name = oarepo,
+version = attr: oarepo.__version__
+description = CESNET, UCT Prague and NTK wrapper around Invenio
+long_description = file: README.rst, CHANGES.rst
+long_description_content_type = text/markdown
+keywords = oarepo invenio
+license = MIT
+author = UCT Prague, CESNET z.s.p.o., NTK
+author_email = miroslav.simek@vscht.cz
+url = https://github.com/oarepo/oarepo
+platforms = any
+classifiers =
+    Environment :: Web Environment
+    Intended Audience :: Developers
+    License :: OSI Approved :: MIT License
+    Operating System :: OS Independent
+    Programming Language :: Python
+    Topic :: Internet :: WWW/HTTP :: Dynamic Content
+    Topic :: Software Development :: Libraries :: Python Modules
+    Programming Language :: Python :: 3
+    Programming Language :: Python :: 3.7
+    Programming Language :: Python :: 3.8
+    Development Status :: 3 - Alpha
+    # Development Status :: 5 - Production/Stable
+### ???
+#entry_points = {}
+extras_require = extras_require
+install_requires = install_requires
+setup_requires = setup_requires
+tests_require = extras_require['tests']
+packages = packages
+zip_safe = False
+include_package_data = True
+### ???
+
+[options]
+include_package_data = True
+#packages = find:
+python_requires = >=3.7
+#zip_safe = False
+install_requires =
+    $install_requires
+
+[options.extras_require]
+tests =
+    pytest-black>=0.3.0
+    pytest-invenio>=2.1.0,<3.0.0
+    Sphinx>=4.5.0
+opensearch2 =
+    invenio-search[opensearch2]>=2.1.0,<3.0.0
+s3 =
+    invenio-s3~=1.0.5
+
+
+[aliases]
+test=pytest
+
+[bdist_wheel]
+universal = 1

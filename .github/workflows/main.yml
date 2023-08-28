@@ -86,6 +86,19 @@ jobs:
           /bin/echo -e "\n=== requires: ==="
           grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
 
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v3
+      - name: virtualenv and simple_repo
+        run: |
+          pwd
+          ls -l
+          python3 -m venv .venv
+          . .venv/bin/activate
+          mkdir simple_repo
+          cd simple_repo
+          unzip ../simple_repo.zip
+          ls -l
+
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
         with:
@@ -108,22 +121,20 @@ jobs:
           grep '__version__' oarepo/version.py
           /bin/echo -e "\n=== original setup.py: ==="
           cat setup.py
-#          echo "=== diff ==="
-#          diff setup.py ../app-rdm/invenio_app_rdm.egg-info/requires.txt
-#          pip install .
-
-      - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v3
-      - name: virtualenv and simple_repo
-        run: |
-          pwd
-          ls -l
-          python3 -m venv .venv
-          . .venv/bin/activate
-          mkdir simple_repo
-          cd simple_repo
-          unzip ../simple_repo.zip
-          ls -l
+          /bin/echo -e "\n=== grab reqs from invenio_app_rdm: ==="
+          ls -l ../invenio_app_rdm.egg-info/requires.txt
+          grep -v invenio-rdm-records ../invenio_app_rdm.egg-info/requires.txt > reqs.txt
+          sed -in '1,/^$/ { s/^/    /;p; }' reqs.txt
+          cat reqs.txt
+          /bin/echo -e "\n=== generate setup.cfg: ==="
+          ls -l ../oarepo_setup.cfg.template
+          cat reqs.txt | sed -e '/\$install_requires/ r /dev/stdin' -e '/\$install_requires/ d' ../oarepo_setup.cfg.template > setup.cfg
+          cat setup.cfg
+          /bin/echo -e "\n=== copy setup.py: ==="
+          ls -l ../oarepo_setup.py
+          cp ../oarepo_setup.py setup.py
+          cat setup.py
+          pip install .
 
       - name: prepare invenio
         run: |
