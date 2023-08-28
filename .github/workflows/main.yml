@@ -136,7 +136,7 @@ jobs:
           mv setup.py setup.py.orig
           cp ../oarepo_setup.py setup.py
           cat setup.py
-          pip install .
+          pip install .[elasticsearch7]
 
       - name: prepare invenio
         run: |
@@ -144,10 +144,15 @@ jobs:
           pwd
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
+          /bin/echo -e "\n=== invenio db create: ==="
           invenio db create
+          /bin/echo -e "\n=== invenio index init: ==="
           invenio index init
+          /bin/echo -e "\n=== invenio webpack buildall: ==="
           invenio webpack buildall
+          /bin/echo -e "\n=== invenio users create: ==="
           invenio users create --password aaaaaa -a -c test@test.com
+          /bin/echo -e "\n=== invenio tokens create: ==="
           invenio tokens create -n test -u test@test.com
 
 #  build:
