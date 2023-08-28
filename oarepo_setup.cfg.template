@@ -12,7 +12,8 @@
 name = oarepo,
 version = attr: oarepo.__version__
 description = CESNET, UCT Prague and NTK wrapper around Invenio
-long_description = file: README.rst, CHANGES.rst
+#long_description = file: README.rst, CHANGES.rst
+long_description = file: README.rst
 long_description_content_type = text/markdown
 keywords = oarepo invenio
 license = MIT

@@ -126,8 +126,6 @@ jobs:
           /bin/echo -e "\n=== BUMP: ==="
           bump oarepo/version.py oarepo/version.py
           grep '__version__' oarepo/version.py
-          /bin/echo -e "\n=== original setup.py: ==="
-          cat setup.py
           /bin/echo -e "\n=== grab reqs from invenio_app_rdm: ==="
           ls -l ../app-rdm/invenio_app_rdm.egg-info/requires.txt
           grep -v invenio-rdm-records ../app-rdm/invenio_app_rdm.egg-info/requires.txt > reqs.txt
