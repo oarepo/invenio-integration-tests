@@ -114,6 +114,7 @@ jobs:
       - name: oarepo test
         run: |
           . .venv/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           cd oarepo
           pwd
           ls -la
@@ -168,18 +169,19 @@ jobs:
           export INVENIO_SERVER_NAME=127.0.0.1:5000
           export REST_URL="https://${INVENIO_SERVER_NAME}/api/simple-records"
           /bin/echo -e "\n=== invenio tokens create: ==="
-          TOKEN=$(invenio tokens create -n test -u test@test.com); echo "status: $?"
+          TOKEN=$(invenio tokens create -n test -u test@test.com)
           /bin/echo -e "status: $?\n$TOKEN"
           /bin/echo -e "\n=== invenio run: ==="
           invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > invenio_run.log 2>&1 &
           INVEPID=$!
-          trap "kill $INVEPID &>/dev/null; cat invenio_run.log" EXIT
+          trap "kill $INVEPID &>/dev/null; /bin/echo 'invenio_run.log'; cat invenio_run.log" EXIT
           /bin/echo "  PID: $INVEPID"
           sleep 8
-          /bin/echo -e "\n=== list records: ==="
-          RESULT=$(curl -k -p -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+          /bin/echo -e "\n=== REST 1: ==="
+          RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          RESULT=$(curl -k -p -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+          /bin/echo -e "\n=== REST 2: ==="
+          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
           RECORD=$(echo "$RESULT" | jq -r '.links.self')
           /bin/echo -e "status: $?\n$RECORD"
