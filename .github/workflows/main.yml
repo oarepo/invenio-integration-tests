@@ -33,10 +33,8 @@ jobs:
       REDIS-VERSION: 6
       POSTGRES-VERSION: 14
       PYTHON-VERSION: 3.9
-      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
-      POSTGRES_USER: postgres
-      POSTGRES_HOST: localhost
-      POSTGRES_PORT: 5432
+      #SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
+      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://localhost:5432/invenio'
       POSTGRES_DB: invenio
     steps:
       - name: Set up Python ${{ env.PYTHON-VERSION }}
@@ -56,7 +54,7 @@ jobs:
         uses: ankane/setup-postgres@v1
         with:
           postgres-version: ${{ env.POSTGRES-VERSION }}
-          database: testdb
+          database: ${{ env.POSTGRES-DB }}
 
       - name: test opensearch on port ${{ env.OPENSEARCH_PORT }}
         run: |
@@ -67,7 +65,7 @@ jobs:
           redis-cli ping
       - name: test postgres version ${{ env.POSTGRES-VERSION }}
         run: |
-          psql -d testdb -c 'SHOW server_version'
+          psql -d ${{ env.POSTGRES-DB }} -c 'SHOW server_version'
 
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v3
@@ -151,8 +149,6 @@ jobs:
           ls -l $INVENIO_INSTANCE_PATH
           export INVENIO_SQLALCHEMY_DATABASE_URI=$SQLALCHEMY_DATABASE_URI
           /bin/echo -e "\nSQLALCHEMY_DATABASE_URI: $SQLALCHEMY_DATABASE_URI\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
-          /bin/echo -e "\n=== psql --version: ==="
-          psql --version
           /bin/echo -e "\n=== invenio db init: ==="
           invenio db init
           /bin/echo -e "\n=== invenio db create: ==="
