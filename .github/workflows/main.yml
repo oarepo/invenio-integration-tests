@@ -136,7 +136,7 @@ jobs:
           mv setup.py setup.py.orig
           cp ../oarepo_setup.py setup.py
           cat setup.py
-          pip install .[elasticsearch7]
+          pip install .[opensearch2]
 
       - name: prepare invenio
         run: |
