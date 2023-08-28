@@ -155,8 +155,8 @@ jobs:
           invenio db create
           /bin/echo -e "\n=== invenio index init: ==="
           invenio index init
-          /bin/echo -e "\n=== invenio webpack buildall: ==="
-          invenio webpack buildall
+#          /bin/echo -e "\n=== invenio webpack buildall: ==="
+#          invenio webpack buildall
           /bin/echo -e "\n=== invenio users create: ==="
           invenio users create --password aaaaaa -a -c test@test.com
           /bin/echo -e "\n=== invenio tokens create: ==="
