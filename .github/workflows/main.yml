@@ -64,6 +64,20 @@ jobs:
         run: |
           psql -d testdb -c 'SHOW server_version'
 
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v3
+      - name: virtualenv and simple_repo
+        run: |
+          pwd
+          ls -l
+          python3 -m venv .venv
+          . .venv/bin/activate
+          pip install -U setuptools pip wheel bump
+          mkdir simple_repo
+          cd simple_repo
+          unzip ../simple_repo.zip
+          ls -l
+
       - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
         uses: actions/checkout@v3
         with:
@@ -76,28 +90,18 @@ jobs:
           cd app-rdm
           pwd
           ls -la
-          python3 -m venv .venv
-          . .venv/bin/activate
-          pip install -U setuptools pip wheel
+          /bin/echo -e "\n=== ls -la .. ==="
+          ls -l ..
+          #python3 -m venv .venv
+          #. .venv/bin/activate
+          . ../.venv/bin/activate
+          #pip install -U setuptools pip wheel
           python setup.py bdist_wheel
           ls -l
           /bin/echo -e "\n=== invenio-rdm-records: ==="
           grep invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
           /bin/echo -e "\n=== requires: ==="
           grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
-
-      - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v3
-      - name: virtualenv and simple_repo
-        run: |
-          pwd
-          ls -l
-          python3 -m venv .venv
-          . .venv/bin/activate
-          mkdir simple_repo
-          cd simple_repo
-          unzip ../simple_repo.zip
-          ls -l
 
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
@@ -111,8 +115,11 @@ jobs:
           cd oarepo
           pwd
           ls -l
-          python3 -m venv .venv
-          . .venv/bin/activate
+          /bin/echo -e "\n=== ls -la .. ==="
+          ls -l ..
+          #python3 -m venv .venv
+          #. .venv/bin/activate
+          . ../.venv/bin/activate
           pip install -U setuptools pip wheel bump
           /bin/echo -e "\n=== original oarepo version: ==="
           grep '__version__' oarepo/version.py
