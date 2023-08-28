@@ -34,6 +34,11 @@ jobs:
       POSTGRES-VERSION: 14
       PYTHON-VERSION: 3.9
     steps:
+      - name: Set up Python ${{ env.PYTHON-VERSION }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ env.PYTHON-VERSION }}
+
       - name: opensearch ${{ env.OPENSEARCH_VERSION }}
         uses: ankane/setup-opensearch@v1
         with:
@@ -47,6 +52,7 @@ jobs:
         with:
           postgres-version: ${{ env.POSTGRES-VERSION }}
           database: testdb
+
       - name: test opensearch on port ${{ env.OPENSEARCH_PORT }}
         run: |
           netstat -ntlp
@@ -57,11 +63,6 @@ jobs:
       - name: test postgres version ${{ env.POSTGRES-VERSION }}
         run: |
           psql -d testdb -c 'SHOW server_version'
-
-      - name: Set up Python ${{ env.PYTHON-VERSION }}
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ env.PYTHON-VERSION }}
 
       - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
         uses: actions/checkout@v3
@@ -80,10 +81,11 @@ jobs:
           pip install -U setuptools pip wheel
           python setup.py bdist_wheel
           ls -l
-          /bin/echo -e "\ninvenio-rdm-records:"
+          /bin/echo -e "\n=== invenio-rdm-records: ==="
           grep invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
-          /bin/echo -e "\nrequires:"
+          /bin/echo -e "\n=== requires: ==="
           grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
+
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
         with:
@@ -99,15 +101,40 @@ jobs:
           python3 -m venv .venv
           . .venv/bin/activate
           pip install -U setuptools pip wheel bump
+          /bin/echo -e "\n=== original oarepo version: ==="
           grep '__version__' oarepo/version.py
-          echo "=== BUMP: ==="
+          /bin/echo -e "\n=== BUMP: ==="
           bump oarepo/version.py oarepo/version.py
           grep '__version__' oarepo/version.py
-          echo "=== original setup.py: ==="
+          /bin/echo -e "\n=== original setup.py: ==="
           cat setup.py
 #          echo "=== diff ==="
 #          diff setup.py ../app-rdm/invenio_app_rdm.egg-info/requires.txt
 #          pip install .
+
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v3
+      - name: virtualenv and simple_repo
+        run: |
+          pwd
+          ls -l
+          python3 -m venv .venv
+          . .venv/bin/activate
+          mkdir simple_repo
+          cd simple_repo
+          unzip simple_repo.zip
+          ls -l
+
+      - name: prepare invenio
+        run: |
+          pwd
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
+          invenio db create
+          invenio index init
+          invenio webpack buildall
+          invenio users create --password aaaaaa -a -c test@test.com
+          invenio tokens create -n test -u test@test.com
 
 #  build:
 #    runs-on: ubuntu-latest
