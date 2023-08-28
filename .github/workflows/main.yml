@@ -149,6 +149,10 @@ jobs:
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
           ls -l $INVENIO_INSTANCE_PATH
+          export INVENIO_SQLALCHEMY_DATABASE_URI=$SQLALCHEMY_DATABASE_URI
+          /bin/echo -e "\nSQLALCHEMY_DATABASE_URI: $SQLALCHEMY_DATABASE_URI\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
+          /bin/echo -e "\n=== psql --version: ==="
+          psql --version
           /bin/echo -e "\n=== invenio db init: ==="
           invenio db init
           /bin/echo -e "\n=== invenio db create: ==="
