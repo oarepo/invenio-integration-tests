@@ -67,6 +67,8 @@ jobs:
         run: |
           psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
 
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v3
       - name: virtualenv
         run: |
           pwd
@@ -98,8 +100,6 @@ jobs:
           /bin/echo -e "\n=== requires: ==="
           grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
 
-      - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v3
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
         with:
