@@ -115,7 +115,7 @@ jobs:
           python setup.py bdist_wheel
           ls -la
           /bin/echo -e "\n=== requires: ==="
-          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
+          cat invenio_rdm_records.egg-info/requires.txt
 
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
@@ -147,8 +147,8 @@ jobs:
           cat reqs-app-rdm.txt
 
           /bin/echo -e "\n=== grab reqs from invenio-rdm-records: ==="
-          ls -l ../app-rdm/invenio-rdm-records.egg-info/requires.txt
-          cat ../rdm-records/invenio-rdm-records.egg-info/requires.txt > reqs-rdm-records.txt
+          ls -l ../app-rdm/invenio_rdm_records.egg-info/requires.txt
+          cat ../rdm-records/invenio_rdm_records.egg-info/requires.txt > reqs-rdm-records.txt
           sed -in '1,/^$/ { s/^/    /;p; }' reqs-rdm-records.txt
           cat reqs-rdm-records.txt
 
