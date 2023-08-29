@@ -98,6 +98,8 @@ jobs:
           /bin/echo -e "\n=== requires: ==="
           grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
 
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v3
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
         with:
@@ -136,8 +138,6 @@ jobs:
           cat setup.py
           pip install .[opensearch2]
 
-      - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v3
       - name: simple_repo
         run: |
           pwd
