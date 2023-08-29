@@ -66,6 +66,11 @@ jobs:
         run: |
           psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
 
+      - name: Set up Node16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v3
       - name: virtualenv
