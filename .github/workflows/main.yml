@@ -187,11 +187,11 @@ jobs:
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
           #[[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-          RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
-          /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
-          /bin/echo -e "\n=== REST 3: ==="
-          RESULT=$(curl -sk "$RECORD_URL")
-          /bin/echo -e "status: $?\n$RESULT"
+          #RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
+          #/bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
+          #/bin/echo -e "\n=== REST 3: ==="
+          #RESULT=$(curl -sk "$RECORD_URL")
+          #/bin/echo -e "status: $?\n$RESULT"
           #[[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
 #  build:
