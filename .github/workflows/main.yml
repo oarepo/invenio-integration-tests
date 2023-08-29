@@ -159,8 +159,8 @@ jobs:
           invenio db create
           /bin/echo -e "\n=== invenio index init: ==="
           invenio index init
-#          /bin/echo -e "\n=== invenio webpack buildall: ==="
-#          invenio webpack buildall
+          #/bin/echo -e "\n=== invenio webpack buildall: ==="
+          #invenio webpack buildall
           /bin/echo -e "\n=== invenio users create: ==="
           invenio users create --password aaaaaa -a -c test@test.com
 
@@ -179,20 +179,23 @@ jobs:
           trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== invenio_run.log: ==='; cat invenio_run.log" EXIT
           /bin/echo "  PID: $INVEPID"
           sleep 8
+
           /bin/echo -e "\n=== REST 1: ==="
           RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          #[ $(jq '.status' <<<"$RESULT") -lt 500 ]
+          [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
+
           /bin/echo -e "\n=== REST 2: ==="
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          #[[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-          #RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
-          #/bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
-          #/bin/echo -e "\n=== REST 3: ==="
-          #RESULT=$(curl -sk "$RECORD_URL")
-          #/bin/echo -e "status: $?\n$RESULT"
-          #[[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+          RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
+          /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
+
+          /bin/echo -e "\n=== REST 3: ==="
+          RESULT=$(curl -sk "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
 #  build:
 #    runs-on: ubuntu-latest
