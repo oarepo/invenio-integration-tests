@@ -140,9 +140,7 @@ jobs:
       - name: simple_repo
         run: |
           pwd
-          mkdir simple_repo
           cd simple_repo
-          unzip ../simple_repo.zip
           ls -la
           pip install .
 
@@ -159,8 +157,8 @@ jobs:
           invenio db create
           /bin/echo -e "\n=== invenio index init: ==="
           invenio index init
-          #/bin/echo -e "\n=== invenio webpack buildall: ==="
-          #invenio webpack buildall
+          /bin/echo -e "\n=== invenio webpack buildall: ==="
+          invenio webpack buildall
           /bin/echo -e "\n=== invenio users create: ==="
           invenio users create --password aaaaaa -a -c test@test.com
 
@@ -183,7 +181,7 @@ jobs:
           /bin/echo -e "\n=== REST 1: ==="
           RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
           /bin/echo -e "\n=== REST 2: ==="
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
