@@ -142,12 +142,12 @@ jobs:
 
           /bin/echo -e "\n=== grab reqs from invenio_app_rdm: ==="
           ls -l ../app-rdm/invenio_app_rdm.egg-info/requires.txt
-          grep -v invenio-rdm-records ../app-rdm/invenio_app_rdm.egg-info/requires.txt | sed -in '1,/^$/ { s/^/    /;p; }' > reqs-app-rdm.txt
+          grep -v invenio-rdm-records ../app-rdm/invenio_app_rdm.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' > reqs-app-rdm.txt
           cat reqs-app-rdm.txt
 
           /bin/echo -e "\n=== grab reqs from invenio-rdm-records: ==="
           ls -l ../rdm-records/invenio_rdm_records.egg-info/requires.txt
-          cat ../rdm-records/invenio_rdm_records.egg-info/requires.txt | sed -in '1,/^$/ { s/^/    /;p; }' > reqs-rdm-records.txt
+          cat ../rdm-records/invenio_rdm_records.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' > reqs-rdm-records.txt
           cat reqs-rdm-records.txt
 
           /bin/echo -e "\n=== generate setup.cfg: ==="
