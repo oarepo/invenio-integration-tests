@@ -67,19 +67,13 @@ jobs:
         run: |
           psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
 
-      - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v3
-      - name: virtualenv and simple_repo
+      - name: virtualenv
         run: |
           pwd
           ls -la
           python3 -m venv .venv
           . .venv/bin/activate
           pip install -U setuptools pip wheel bump
-          mkdir simple_repo
-          cd simple_repo
-          unzip ../simple_repo.zip
-          ls -la
 
       - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
         uses: actions/checkout@v3
@@ -142,6 +136,17 @@ jobs:
           cat setup.py
           pip install .[opensearch2]
 
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v3
+      - name: simple_repo
+        run: |
+          pwd
+          mkdir simple_repo
+          cd simple_repo
+          unzip ../simple_repo.zip
+          ls -la
+          pip install .
+
       - name: prepare invenio
         run: |
           . .venv/bin/activate
@@ -183,8 +188,8 @@ jobs:
           /bin/echo -e "\n=== REST 2: ==="
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          RECORD=$(echo "$RESULT" | jq -r '.links.self')
-          /bin/echo -e "status: $?\n$RECORD"
+          RECORD_URL=$(echo "$RESULT" | jq -r '.links.self')
+          /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
 
 #  build:
 #    runs-on: ubuntu-latest
