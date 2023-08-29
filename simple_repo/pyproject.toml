@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+exclude = ["instance"]
+namespaces = false
+
+
+[project]
+name = "simple-repo"
+version = "1.0.0"
+authors = [
+    {name = "Mirek Simek", email = "miroslav.simek@cesnet.cz"},
+]
+description = "A simple repository"
+readme = "README.rst"
+requires-python = ">=3.9,<3.11"
+license = {text = "MIT"}
+
+dependencies = [
+    "oarepo>=11,<12"
+]
+
+[project.optional-dependencies]
+tests = [
+    "pytest-invenio"
+]
+
+[project.entry-points."invenio_base.api_apps"]
+simple_repo = "simple_repo.model:ModelExt"
+
+[project.entry-points."invenio_base.apps"]
+simple_repo = "simple_repo.model:ModelExt"
+
+[project.entry-points."invenio_base.api_blueprints"]
+simple_repo = "simple_repo.model:create_api_api_blueprint"
+
+[project.entry-points."invenio_base.blueprints"]
+simple_repo = "simple_repo.model:create_api_app_blueprint"
+
+[project.entry-points."invenio_search.mappings"]
+simple_repo = "simple_repo.mappings"
+
+[project.entry-points."invenio_assets.webpack"]
+simple_repo = "simple_repo.webpack:theme"
