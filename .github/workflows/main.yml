@@ -94,7 +94,7 @@ jobs:
           cd app-rdm
           pwd
           ls -la
-          #pip install -U setuptools pip wheel
+          /bin/echo -e "\n=== build invenio-app-rdm: ==="
           python setup.py bdist_wheel
           ls -la
           /bin/echo -e "\n=== requires: ==="
@@ -112,6 +112,7 @@ jobs:
           cd rdm-records
           pwd
           ls -la
+          /bin/echo -e "\n=== build invenio-rdm-records: ==="
           python setup.py bdist_wheel
           ls -la
           /bin/echo -e "\n=== requires: ==="
@@ -122,7 +123,6 @@ jobs:
         with:
           repository: 'oarepo/oarepo'
           ref: 'rdm-11'
-#          token: '${{ secrets.INTEGRATION_TEST }}'
           path: 'oarepo'
       - name: oarepo test
         run: |
@@ -142,14 +142,12 @@ jobs:
 
           /bin/echo -e "\n=== grab reqs from invenio_app_rdm: ==="
           ls -l ../app-rdm/invenio_app_rdm.egg-info/requires.txt
-          grep -v invenio-rdm-records ../app-rdm/invenio_app_rdm.egg-info/requires.txt > reqs-app-rdm.txt
-          sed -in '1,/^$/ { s/^/    /;p; }' reqs-app-rdm.txt
+          grep -v invenio-rdm-records ../app-rdm/invenio_app_rdm.egg-info/requires.txt | sed -in '1,/^$/ { s/^/    /;p; }' > reqs-app-rdm.txt
           cat reqs-app-rdm.txt
 
           /bin/echo -e "\n=== grab reqs from invenio-rdm-records: ==="
           ls -l ../rdm-records/invenio_rdm_records.egg-info/requires.txt
-          cat ../rdm-records/invenio_rdm_records.egg-info/requires.txt > reqs-rdm-records.txt
-          sed -in '1,/^$/ { s/^/    /;p; }' reqs-rdm-records.txt
+          cat ../rdm-records/invenio_rdm_records.egg-info/requires.txt | sed -in '1,/^$/ { s/^/    /;p; }' > reqs-rdm-records.txt
           cat reqs-rdm-records.txt
 
           /bin/echo -e "\n=== generate setup.cfg: ==="
@@ -161,6 +159,7 @@ jobs:
           mv setup.py setup.py.orig
           cp ../oarepo_setup.py setup.py
           cat setup.py
+          /bin/echo -e "\n=== pip install oarepo: ==="
           pip install .[opensearch2,s3]
 
       - name: simple_repo
