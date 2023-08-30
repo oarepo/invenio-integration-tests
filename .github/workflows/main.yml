@@ -133,7 +133,6 @@ jobs:
           ls -la
           /bin/echo -e "\n=== ls -la .. ==="
           ls -la ..
-          pip install -U setuptools pip wheel bump
           /bin/echo -e "\n=== original oarepo version: ==="
           grep '__version__' oarepo/version.py
           /bin/echo -e "\n=== BUMP: ==="
@@ -167,7 +166,7 @@ jobs:
           pwd
           cd simple_repo
           ls -la
-          pip install .
+          pip install -e .
 
       - name: prepare invenio
         run: |
