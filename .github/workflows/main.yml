@@ -187,6 +187,13 @@ jobs:
           invenio db create
           /bin/echo -e "\n=== invenio index init: ==="
           invenio index init
+          /bin/echo -e "\n=== invenio webpack create: ==="
+          invenio webpack create
+          ls -lR $INVENIO_INSTANCE_PATH
+          /bin/echo -e "\n=== invenio webpack install: ==="
+          invenio webpack install
+          ls -lR $INVENIO_INSTANCE_PATH
+          cat $INVENIO_INSTANCE_PATH/assets/package.json
           /bin/echo -e "\n=== invenio webpack buildall: ==="
           invenio webpack buildall
           /bin/echo -e "\n=== invenio users create: ==="
