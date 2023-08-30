@@ -48,7 +48,7 @@ classifiers =
 [options]
 include_package_data = True
 packages = find:
-python_requires = >=3.7
+python_requires = >=3.9
 #zip_safe = False
 install_requires =
     $install_requires
