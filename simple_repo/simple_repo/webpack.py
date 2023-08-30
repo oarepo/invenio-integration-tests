@@ -13,7 +13,7 @@ theme = WebpackThemeBundle(
             },
             dependencies={
                 # TODO: only for RDM11 !!!!!
-                # "react-searchkit": "2.0.2",
+                "react-searchkit": "2.0.2",
                 "@semantic-ui-react/css-patch": "^1.0.0",
             },
             aliases={
