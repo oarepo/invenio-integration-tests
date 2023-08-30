@@ -79,10 +79,10 @@ jobs:
           ls -la
           python3 -m venv .venv
           . .venv/bin/activate
+          pip install -U setuptools pip wheel bump
           node --version
           python --version
           pip --version
-          pip install -U setuptools pip wheel bump
 
       - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
         uses: actions/checkout@v3
@@ -179,6 +179,7 @@ jobs:
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
           ls -l $INVENIO_INSTANCE_PATH
           cat $INVENIO_INSTANCE_PATH/invenio.cfg
+          ls -l $INVENIO_INSTANCE_PATH/simple_repo/assets/semantic-ui/less
           /bin/echo -e "\nSQLALCHEMY_DATABASE_URI: $SQLALCHEMY_DATABASE_URI\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
           /bin/echo -e "\n=== invenio db init: ==="
           invenio db init
