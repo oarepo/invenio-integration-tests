@@ -262,8 +262,8 @@ jobs:
 
           /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
           invenio index destroy --yes-i-know
-          /bin/echo -e "\n=== invenio db destroy: ==="
-          invenio db destroy
+          /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
+          invenio db destroy --yes-i-know
           cd simple_repo
           /bin/echo -e "\n=== simple_repo: pip install -e '.[tests]': ==="
           pip install -e '.[tests]'
