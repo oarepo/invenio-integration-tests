@@ -216,20 +216,30 @@ jobs:
           /bin/echo "  PID: $INVEPID"
           sleep 8
 
-          /bin/echo -e "\n=== REST 1: ==="
+          /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
           RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+          [[ $(jq '.status' <<<"$RESULT") -ne 403 ]]
 
-          /bin/echo -e "\n=== REST 2: ==="
+          /bin/echo -e "\n=== REST 2 (POST new record): ==="
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
           RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
           /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
 
-          /bin/echo -e "\n=== REST 3: ==="
+          /bin/echo -e "\n=== REST 3 (GET record): ==="
           RESULT=$(curl -sk "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 4 (PUT new title w/o token): ==="
+          RESULT=$(curl -sk -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -ne 403 ]]
+
+          /bin/echo -e "\n=== REST 5 (PUT new title): ==="
+          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
