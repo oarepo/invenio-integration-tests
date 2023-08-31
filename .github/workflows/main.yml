@@ -265,17 +265,16 @@ jobs:
           invenio index destroy --yes-i-know
           /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
           invenio db destroy --yes-i-know
+
+      - name: pytest
+        run: |
+          . .venv/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           cd simple_repo
           /bin/echo -e "\n=== simple_repo: pip install -e '.[tests]': ==="
           pip install -e '.[tests]'
           /bin/echo -e "\n=== pytest tests: ==="
           pytest tests
-
-      - name: last test
-        run: |
-          . .venv/bin/activate
-          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-          echo "Last test"
 
 #  build:
 #    runs-on: ubuntu-latest
