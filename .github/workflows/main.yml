@@ -178,10 +178,7 @@ jobs:
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
-          ls -l $INVENIO_INSTANCE_PATH
-          cat $INVENIO_INSTANCE_PATH/invenio.cfg
-          ls -l $INVENIO_INSTANCE_PATH/../simple_repo/assets/semantic-ui/less
-          /bin/echo -e "\nSQLALCHEMY_DATABASE_URI: $SQLALCHEMY_DATABASE_URI\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
+          /bin/echo -e "\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
           /bin/echo -e "\n=== invenio db init: ==="
           invenio db init
           /bin/echo -e "\n=== invenio db create: ==="
@@ -200,7 +197,7 @@ jobs:
           /bin/echo -e "\n=== invenio users create: ==="
           invenio users create --password aaaaaa -a -c test@test.com
 
-      - name: test REST
+      - name: test REST and pytest
         env:
           REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
@@ -243,30 +240,41 @@ jobs:
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
-          /bin/echo -e "\n=== REST 6 (GET records on /api/records): ==="
-          RESULT=$(curl -sk -X GET "https://127.0.0.1:5000/api/records")
-          /bin/echo -e "status: $?\n$RESULT"
-          #[[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-
-          /bin/echo -e "\n=== REST 7 (GET records on /api/simple-records): ==="
+          /bin/echo -e "\n=== REST 6 (GET records on /api/simple-records): ==="
           RESULT=$(curl -sk -X GET "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          #[[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
-          /bin/echo -e "\n=== REST 8 (DELETE record w/o token): ==="
+          /bin/echo -e "\n=== REST 7 (DELETE record w/o token): ==="
           RESULT=$(curl -sk -X DELETE "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
 
-          /bin/echo -e "\n=== REST 9 (DELETE record): ==="
+          /bin/echo -e "\n=== REST 8 (DELETE record): ==="
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -X DELETE "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
-          /bin/echo -e "\n=== REST 10 (GET record): ==="
+          /bin/echo -e "\n=== REST 9 (GET record): ==="
           RESULT=$(curl -sk "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
+
+          /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
+          invenio index destroy --yes-i-know
+          /bin/echo -e "\n=== invenio db destroy: ==="
+          invenio db destroy
+          cd simple_repo
+          /bin/echo -e "\n=== simple_repo: pip install -e '.[tests]': ==="
+          pip install -e '.[tests]'
+          /bin/echo -e "\n=== pytest tests: ==="
+          pytest tests
+
+      - name: last test
+        run: |
+          . .venv/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          echo "Last test"
 
 #  build:
 #    runs-on: ubuntu-latest
