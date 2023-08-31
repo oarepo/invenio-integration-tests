@@ -219,55 +219,54 @@ jobs:
           /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
           RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          /bin/echo $(jq '.status' <<<"$RESULT")
-          #[[ $(jq '.status' <<<"$RESULT") -ne 403 ]]
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
 
           /bin/echo -e "\n=== REST 2 (POST new record): ==="
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -ge 400 ]]
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
           RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
           /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
 
           /bin/echo -e "\n=== REST 3 (GET record): ==="
           RESULT=$(curl -sk "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -ge 400 ]]
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
           /bin/echo -e "\n=== REST 4 (PUT new title w/o token): ==="
           RESULT=$(curl -sk -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -ne 403 ]]
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
 
           /bin/echo -e "\n=== REST 5 (PUT new title): ==="
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -ge 400 ]]
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
           /bin/echo -e "\n=== REST 6 (GET records on /api/records): ==="
           RESULT=$(curl -sk -X GET "https://127.0.0.1:5000/api/records")
           /bin/echo -e "status: $?\n$RESULT"
-          #[[ $(jq '.status' <<<"$RESULT") -ge 400 ]]
+          #[[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
           /bin/echo -e "\n=== REST 7 (GET records on /api/simple-records): ==="
           RESULT=$(curl -sk -X GET "$REST_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          #[[ $(jq '.status' <<<"$RESULT") -ge 400 ]]
+          #[[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
           /bin/echo -e "\n=== REST 8 (DELETE record w/o token): ==="
           RESULT=$(curl -sk -X DELETE "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -ne 403 ]]
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
 
           /bin/echo -e "\n=== REST 9 (DELETE record): ==="
           RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -X DELETE "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -ge 400 ]]
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
 
           /bin/echo -e "\n=== REST 10 (GET record): ==="
           RESULT=$(curl -sk "$RECORD_URL")
           /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -ge 500 ]]
+          [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
 
 #  build:
 #    runs-on: ubuntu-latest
