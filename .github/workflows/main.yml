@@ -163,6 +163,8 @@ jobs:
           /bin/echo -e "\n=== pip install oarepo: ==="
           pwd
           pip install .[opensearch2,s3]
+          /bin/echo -e "\n=== pip freeze: ==="
+          pip freeze
 
       - name: simple_repo
         run: |
@@ -172,6 +174,8 @@ jobs:
           /bin/echo -e "\n=== pip install simple_repo: ==="
           pwd
           pip install -e .
+          /bin/echo -e "\n=== pip freeze: ==="
+          pip freeze
 
       - name: prepare invenio
         run: |
@@ -275,6 +279,13 @@ jobs:
           pip install -e '.[tests]'
           /bin/echo -e "\n=== pytest tests: ==="
           pytest tests
+
+      - name: pip freeze
+        run: |
+          . .venv/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          /bin/echo -e "\n=== pip freeze: ==="
+          pip freeze
 
 #  build:
 #    runs-on: ubuntu-latest
