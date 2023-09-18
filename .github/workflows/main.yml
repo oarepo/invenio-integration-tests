@@ -270,6 +270,13 @@ jobs:
           /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
           invenio db destroy --yes-i-know
 
+      - name: pip freeze
+        run: |
+          . .venv/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          /bin/echo -e "\n=== pip freeze: ==="
+          pip freeze
+
       - name: pytest
         run: |
           . .venv/bin/activate
@@ -280,7 +287,7 @@ jobs:
           /bin/echo -e "\n=== pytest tests: ==="
           pytest tests
 
-      - name: pip freeze
+      - name: pip freeze (w. tests)
         run: |
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
