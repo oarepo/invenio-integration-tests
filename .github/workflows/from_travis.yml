@@ -8,9 +8,9 @@
 name: Tests and reqs builder
 
 on:
-  push:
-    branches: [ rdm-11 ]
-    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml', '.github/workflows/main.yml' ]
+#  push:
+#    branches: [ rdm-11 ]
+#    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml', '.github/workflows/main.yml' ]
   workflow_dispatch:
 
 jobs:
