@@ -153,7 +153,9 @@ jobs:
 
           /bin/echo -e "\n=== generate setup.cfg: ==="
           ls -l ../oarepo_setup.cfg.template
-          cat reqs-app-rdm.txt reqs-rdm-records.txt | sed -e '/\$install_requires/ r /dev/stdin' -e '/\$install_requires/ d' ../oarepo_setup.cfg.template > setup.cfg
+          #cat reqs-app-rdm.txt reqs-rdm-records.txt | sed -e '/\$install_requires/ r /dev/stdin' -e '/\$install_requires/ d' ../oarepo_setup.cfg.template > setup.cfg
+          cat reqs-app-rdm.txt reqs-rdm-records.txt | tee reqs.txt > reqs-tests.txt
+          cp ../oarepo_setup.cfg.template setup.cfg
           cat setup.cfg
           /bin/echo -e "\n=== new setup.py: ==="
           ls -l ../oarepo_setup.py
@@ -275,7 +277,7 @@ jobs:
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\n=== pip freeze: ==="
-          pip freeze
+          pip freeze | tee reqs.txt
 
       - name: pytest
         run: |
@@ -292,7 +294,7 @@ jobs:
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\n=== pip freeze: ==="
-          pip freeze
+          pip freeze | tee reqs-tests.txt
 
 #  build:
 #    runs-on: ubuntu-latest
