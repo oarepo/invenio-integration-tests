@@ -125,6 +125,7 @@ jobs:
         with:
           repository: 'oarepo/oarepo'
           ref: 'rdm-11'
+          token: '${{ secrets.INTEGRATION_TEST }}'
           path: 'oarepo'
       - name: oarepo test
         run: |
@@ -138,7 +139,9 @@ jobs:
           /bin/echo -e "\n=== original oarepo version: ==="
           grep '__version__' oarepo/version.py
           /bin/echo -e "\n=== BUMP: ==="
-          bump oarepo/version.py oarepo/version.py
+          NEWTAG=$(bump oarepo/version.py oarepo/version.py)
+          echo "new version: $NEWTAG"
+          echo "NEWTAG=$NEWTAG" >> $GITHUB_ENV
           grep '__version__' oarepo/version.py
 
           /bin/echo -e "\n=== grab reqs from invenio_app_rdm: ==="
@@ -295,6 +298,20 @@ jobs:
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\n=== pip freeze: ==="
           pip freeze | tee reqs-tests.txt
+
+      - name: Commit and Push generated OARepo setup.cfg and reqs
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
+          branch: rdm-11
+          file_pattern: setup.py setup.cfg reqs.txt reqs-tests.txt oarepo/version.py
+          repository: oarepo
+          commit_user_name: integration-tests
+          commit_user_email: integration-tests@oarepo.org
+          # tagging_message: ${{ env.NEWTAG }}
+          # Optional options appended to `git-push`
+          push_options: '--force'
+        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
 
 #  build:
 #    runs-on: ubuntu-latest
