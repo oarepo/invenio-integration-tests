@@ -157,7 +157,7 @@ jobs:
           /bin/echo -e "\n=== generate setup.cfg: ==="
           ls -l ../oarepo_setup.cfg.template
           #cat reqs-app-rdm.txt reqs-rdm-records.txt | sed -e '/\$install_requires/ r /dev/stdin' -e '/\$install_requires/ d' ../oarepo_setup.cfg.template > setup.cfg
-          cat reqs-app-rdm.txt reqs-rdm-records.txt | tee reqs.txt > reqs-tests.txt
+          cat reqs-app-rdm.txt reqs-rdm-records.txt ../extra_reqs.txt | tee reqs.txt > reqs-tests.txt
           cp ../oarepo_setup.cfg.template setup.cfg
           cat setup.cfg
           /bin/echo -e "\n=== new setup.py: ==="
@@ -280,7 +280,8 @@ jobs:
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\n=== pip freeze: ==="
-          pip freeze | tee reqs.txt
+          pip freeze | tee oarepo/reqs.txt
+          sed -i -f ./blacklisted_pkgs.sed oarepo/reqs.txt
 
       - name: pytest
         run: |
@@ -297,7 +298,8 @@ jobs:
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\n=== pip freeze: ==="
-          pip freeze | tee reqs-tests.txt
+          pip freeze | tee oarepo/reqs-tests.txt
+          sed -i -f ./blacklisted_pkgs.sed oarepo/reqs-tests.txt
 
       - name: Commit and Push generated OARepo setup.cfg and reqs
         uses: stefanzweifel/git-auto-commit-action@v4
