@@ -10,6 +10,10 @@ theme = WebpackThemeBundle(
         "semantic-ui": dict(
             entry={
                 # Add your webpack entrypoints
+                "integration_tests_search": "./js/search/index.js",
+                "integration_tests_form": "./js/form/index.js",
+
+
             },
             dependencies={
                 # TODO: only for RDM11 !!!!!
@@ -20,7 +24,7 @@ theme = WebpackThemeBundle(
                 "../../theme.config$": "less/theme.config",
                 "../../less/site": "less/site",
                 "../../less": "less",
-                "@translations/invenio_app_rdm/i18next": "translations/oarepo_ui/i18next.js",
+                "@translations/invenio_app_rdm/i18next": "translations/simple_repo/i18next.js",
                 "@templates/custom_fields": "js/custom_fields",
             }
         ),

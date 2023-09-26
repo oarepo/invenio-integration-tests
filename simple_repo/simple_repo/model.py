@@ -1,6 +1,6 @@
 from functools import cached_property
 
-from flask import Blueprint
+from flask import Blueprint, render_template
 from invenio_pidstore.providers.recordid_v2 import RecordIdProviderV2
 from invenio_records_resources.records.api import Record
 from invenio_records.models import RecordMetadata
@@ -16,6 +16,7 @@ from flask_resources.serializers import JSONSerializer
 from invenio_records_resources.services.records.components import DataComponent
 from flask import current_app
 from werkzeug.local import LocalProxy
+from invenio_search_ui.searchconfig import FacetsConfig, SearchAppConfig, SortConfig, search_app_config
 
 
 class ModelRecordIdProvider(RecordIdProviderV2):
@@ -137,9 +138,62 @@ def create_api_app_blueprint(app):
     blueprint.record_once(init_create_api_blueprint)
     return blueprint
 
+def search_app_config( overrides={}, **kwargs):
+    opts = dict(
+        endpoint="/api/simple-records",
+        headers={"Accept": "application/json"},
+        grid_view=False,
+        sort=SortConfig(
+            available_options={
+    'bestmatch': {
+        'title': 'Best match',
+        'fields': ['_score']
+    },
+    'newest': {
+        'title': 'Newest',
+        'fields': ['-created']
+    },
+    'oldest': {
+        'title': 'Oldest',
+        'fields': ['created']
+    }
+},
+            selected_options=['bestmatch', 'newest', 'oldest'],
+        ),
+  
+    )
+    opts.update(kwargs)
+    return SearchAppConfig.generate(opts, **overrides)
 
 def _ext_proxy(attr):
     return LocalProxy(lambda: getattr(current_app.extensions["model-ext"], attr))
+
+def search_page():
+    search_config = search_app_config
+    return render_template('simple_repo/search_page.html', search_app_config=search_config)
+    # return render_template('search.html')
+
+
+def create():
+    return render_template("simple_repo/create.html")
+
+def detail():
+    return render_template("detail.html")
+
+
+
+def create_web_blueprint(app):
+    """Create -ext blueprint."""
+    blueprint = Blueprint("web_blueprint", __name__, url_prefix="", template_folder="./templates")
+    blueprint.add_url_rule("/search-app", view_func=search_page)
+    blueprint.add_url_rule("/create", view_func=create )
+    blueprint.add_url_rule("/detail/<pid_value>", view_func=detail)
+
+    return blueprint
+
+
+
+
 
 
 current_service = _ext_proxy("service")

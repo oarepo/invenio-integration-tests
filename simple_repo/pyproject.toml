@@ -39,6 +39,8 @@ simple_repo = "simple_repo.model:create_api_api_blueprint"
 
 [project.entry-points."invenio_base.blueprints"]
 simple_repo = "simple_repo.model:create_api_app_blueprint"
+simple_repo_web = "simple_repo.model:create_web_blueprint"
+
 
 [project.entry-points."invenio_search.mappings"]
 simple_repo = "simple_repo.mappings"
