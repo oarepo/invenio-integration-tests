@@ -1,6 +1,6 @@
 from functools import cached_property
 
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, g
 from invenio_pidstore.providers.recordid_v2 import RecordIdProviderV2
 from invenio_records_resources.records.api import Record
 from invenio_records.models import RecordMetadata
@@ -17,6 +17,9 @@ from invenio_records_resources.services.records.components import DataComponent
 from flask import current_app
 from werkzeug.local import LocalProxy
 from invenio_search_ui.searchconfig import FacetsConfig, SearchAppConfig, SortConfig, search_app_config
+from invenio_records_resources.proxies import current_service_registry
+
+
 
 
 class ModelRecordIdProvider(RecordIdProviderV2):
@@ -51,7 +54,7 @@ class ModelServiceConfig(RecordServiceConfig):
     record_cls = ModelRecord
     permission_policy_cls = ModelPermissionPolicy
     schema = ModelSchema
-
+    
     url_prefix = "/simple-records"
 
     components = [DataComponent]
@@ -171,14 +174,15 @@ def _ext_proxy(attr):
 def search_page():
     search_config = search_app_config
     return render_template('simple_repo/search_page.html', search_app_config=search_config)
-    # return render_template('search.html')
 
 
 def create():
     return render_template("simple_repo/create.html")
 
-def detail():
-    return render_template("detail.html")
+def detail(pid_value):
+    record = current_service.read(identity=g.identity, id_=pid_value)
+    serialized_record = ModelUISerializer().dump_obj(record.to_dict())
+    return render_template("simple_repo/detail.html", record=serialized_record)
 
 
 
@@ -187,8 +191,7 @@ def create_web_blueprint(app):
     blueprint = Blueprint("web_blueprint", __name__, url_prefix="", template_folder="./templates")
     blueprint.add_url_rule("/search-app", view_func=search_page)
     blueprint.add_url_rule("/create", view_func=create )
-    blueprint.add_url_rule("/detail/<pid_value>", view_func=detail)
-
+    blueprint.add_url_rule("/simple-records/<pid_value>", view_func=detail)
     return blueprint
 
 
@@ -198,3 +201,5 @@ def create_web_blueprint(app):
 
 current_service = _ext_proxy("service")
 current_resource = _ext_proxy("resource")
+
+

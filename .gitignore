@@ -61,3 +61,12 @@ target/
 
 # Vim swapfiles
 .*.sw?
+
+#python virtual env
+.venv
+
+#invenio.db
+simple_repo/instance/invenio.db
+
+#assets
+simple_repo/instance/assets/

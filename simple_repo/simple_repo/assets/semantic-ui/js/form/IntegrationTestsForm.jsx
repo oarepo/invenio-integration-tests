@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Container, Grid, Card } from "semantic-ui-react";
 import { TextField, BaseForm } from "react-invenio-forms";
 import Overridable from "react-overridable";
@@ -28,7 +27,12 @@ export const IntegrationTestsForm = () => {
       >
         <Grid>
           <Grid.Column mobile={16} tablet={16} computer={11}>
-            <TextField fieldPath="title" label={"Title"} required />
+            <TextField
+              fieldPath="title"
+              label={"Title"}
+              required
+              id="title-input"
+            />
           </Grid.Column>
           <Grid.Column mobile={16} tablet={16} computer={5}>
             <Overridable id="FormApp.buttons">

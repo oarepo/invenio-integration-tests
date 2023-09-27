@@ -5,13 +5,21 @@ import { useFormikContext } from "formik";
 
 export const PublishButton = ({ apiClient }) => {
   const { values } = useFormikContext();
+  const handleCreate = () => {
+    apiClient.createDraft(values).then((response) => {
+      console.log(response);
+      window.location.href = response.links.ui;
+    });
+  };
   return (
     <Button
+      id="publish-button"
       fluid
       color="green"
-      onClick={() => {
-        apiClient.createDraft(values);
-      }}
+      // onClick={() => {
+      //   apiClient.createDraft(values);
+      // }}
+      onClick={handleCreate}
       icon="upload"
       labelPosition="left"
       content={i18next.t("publish")}
