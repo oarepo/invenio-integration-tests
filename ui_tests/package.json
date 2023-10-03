@@ -1,0 +1,21 @@
+{
+  "name": "ui_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.12.0"
+  }
+}
