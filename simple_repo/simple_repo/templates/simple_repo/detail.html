@@ -1,7 +1,35 @@
 {% extends config.BASE_TEMPLATE %}
 
+
+{%- block head_title %}
+<title>Detail page</title>
+{%- endblock head_title %}
+
+
 {%- block page_body %}
 <div class="ui main container">
  <h1 id="main-header">{{record["title"]}}</h1>
+ <button class="ui secondary button" id="delete-button">Delete</button>
 </div>
+<script>
+    var recordId = "{{ record["id"] }}"; // Assign the Jinja variable to a JavaScript variable
+    document.getElementById("delete-button").addEventListener("click", function() {
+      var apiUrl = "https://127.0.0.1:5000/api/simple-records/" + recordId;
+      console.log(apiUrl)
+      // Send a DELETE request using JavaScript Fetch API
+      fetch(apiUrl, {
+        method: "DELETE",
+      })
+        .then(response => {
+          if (response.ok) {
+                window.location.href="https://localhost:5000/search-app"
+          } else {
+            console.error("Error deleting record");
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+    });
+    </script>
 {% endblock page_body %}

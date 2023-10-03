@@ -1,5 +1,4 @@
 from functools import cached_property
-
 from flask import Blueprint, render_template, g
 from invenio_pidstore.providers.recordid_v2 import RecordIdProviderV2
 from invenio_records_resources.records.api import Record

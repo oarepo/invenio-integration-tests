@@ -1,6 +1,13 @@
 
 
 {% extends config.BASE_TEMPLATE %}
+
+
+{%- block head_title %}
+<title>Create page</title>
+{%- endblock head_title %}
+
+
 {%- block page_body %}
   <div class="ui container" id="integration-tests-form"></div>
   {{ webpack['integration_tests_form.js'] }}
