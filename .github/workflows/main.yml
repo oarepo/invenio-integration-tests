@@ -5,13 +5,9 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-name: Oarepo integr.test builder
+name: UIintegrationtests
 
 on:
-  # push:
-  #   branches: [ui-test]
-  #   #    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml', '.github/workflows/main.yml' ]
-  #   paths: ["upload/main_action.trigger"]
   workflow_dispatch:
 
 jobs:
@@ -276,13 +272,13 @@ jobs:
           # invenio db destroy --yes-i-know
 
       - name: setup browser
-      - uses: browser-actions/setup-chrome@latest
+        uses: browser-actions/setup-chrome@latest
 
       - name: Install test dependencies
-      - run: ui_tests/ npm ci
+        run: ui_tests/ npm ci
 
       - name: run ui
-      - run: ui_tests/test/ mocha invenioIntegrationTests.spec.js
+        run: ui_tests/test/ mocha invenioIntegrationTests.spec.js
 
       - name: pip freeze
         run: |
@@ -309,20 +305,6 @@ jobs:
           /bin/echo -e "\n=== pip freeze: ==="
           pip freeze | tee oarepo/reqs-tests.txt
           sed -i -f ./blacklisted_pkgs.sed oarepo/reqs-tests.txt
-
-      # - name: Commit and Push generated OARepo setup.cfg and reqs
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
-      #     branch: rdm-11
-      #     file_pattern: setup.py setup.cfg reqs.txt reqs-tests.txt oarepo/version.py
-      #     repository: oarepo
-      #     commit_user_name: integration-tests
-      #     commit_user_email: integration-tests@oarepo.org
-      #     # tagging_message: ${{ env.NEWTAG }}
-      #     # Optional options appended to `git-push`
-      #     push_options: "--force"
-      #   if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
 
 #  build:
 #    runs-on: ubuntu-latest
