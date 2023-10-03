@@ -5,7 +5,7 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-name: UIintegrationtests
+name: UItest
 
 on:
   workflow_dispatch:
@@ -275,14 +275,14 @@ jobs:
         uses: browser-actions/setup-chrome@latest
 
       - name: Install test dependencies
-        run: | 
+        run: |
           cd ui_tests/ 
           pwd
           npm ci
           npm install mocha -g
 
       - name: run ui
-        run: | 
+        run: |
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           export SRVLOG=$PWD/invenio_run.log
