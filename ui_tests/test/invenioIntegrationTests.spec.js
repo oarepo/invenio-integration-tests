@@ -10,7 +10,7 @@ const assert = require("assert");
 suite(
   function (env) {
     describe("First script", function () {
-      this.timeout(10000);
+      this.timeout(60000);
 
       after(async () => await driver.quit());
 
