@@ -266,13 +266,10 @@ jobs:
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
 
-          # /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
-          # invenio index destroy --yes-i-know
-          # /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
-          # invenio db destroy --yes-i-know
+ 
 
-      - name: setup browser
-        uses: browser-actions/setup-chrome@latest
+      # - name: setup browser
+      #   uses: browser-actions/setup-chrome@latest
 
       - name: Install test dependencies
         run: |
@@ -306,6 +303,11 @@ jobs:
           cd ui_tests/test/ 
           pwd
           mocha invenioIntegrationTests.spec.js
+
+          /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
+          invenio index destroy --yes-i-know
+          /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
+          invenio db destroy --yes-i-know
 
       - name: pip freeze
         run: |
