@@ -7,6 +7,10 @@ const DetailPage = require("../pageobjects/detailpage");
 
 const assert = require("assert");
 
+function sleep(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
 suite(
   function (env) {
     describe("First script", function () {
@@ -35,6 +39,7 @@ suite(
         await FormPage.createItem(testRecordTitle);
         const detailPageTitle = await DetailPage.getRecordTitle();
         assert.equal(detailPageTitle, testRecordTitle);
+        await sleep(5000);
         await SearchPage.goToUrl(searchUrl);
         let records = await SearchPage.getRecords();
         assert.equal(records.length, 1);

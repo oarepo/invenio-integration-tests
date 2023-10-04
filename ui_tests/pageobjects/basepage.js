@@ -7,13 +7,13 @@ let driver = new Builder()
     options.addArguments([
       "--ignore-ssl-errors=yes",
       "--ignore-certificate-errors",
-      "--headless",
+      // "--headless",
     ])
   )
   .forBrowser("chrome")
   .build();
 
-driver.manage().setTimeouts({ implicit: 10000 });
+driver.manage().setTimeouts({ implicit: 25000 });
 
 class BasePage {
   constructor() {
