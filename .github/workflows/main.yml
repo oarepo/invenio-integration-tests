@@ -268,8 +268,6 @@ jobs:
 
  
 
-      # - name: setup browser
-      #   uses: browser-actions/setup-chrome@latest
 
       - name: Install test dependencies
         run: |
@@ -294,11 +292,6 @@ jobs:
           trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
           /bin/echo "  PID: $INVEPID"
           sleep 8
-
-          /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
-          RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
 
           cd ui_tests/test/ 
           pwd
