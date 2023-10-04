@@ -7,7 +7,7 @@ let driver = new Builder()
     options.addArguments([
       "--ignore-ssl-errors=yes",
       "--ignore-certificate-errors",
-      // "--headless",
+      "--headless",
     ])
   )
   .forBrowser("chrome")
