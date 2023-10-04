@@ -282,6 +282,8 @@ jobs:
           npm install mocha -g
 
       - name: run ui
+        env:
+          REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
@@ -294,7 +296,7 @@ jobs:
           INVEPID=$!
           trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
           /bin/echo "  PID: $INVEPID"
-          sleep 50
+          sleep 8
 
           /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
           RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
