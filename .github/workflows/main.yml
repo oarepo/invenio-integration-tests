@@ -8,32 +8,28 @@
 name: Oarepo integr.test builder
 
 on:
-  push:
-    branches: [ rdm-11 ]
-#    paths-ignore: [ 'upload/*', '.github/workflows/p2oarepo.yml', '.github/workflows/main.yml' ]
-    paths: [ 'upload/main_action.trigger' ]
   workflow_dispatch:
 
 jobs:
   start_and_test:
     runs-on: ubuntu-latest
-#    strategy:
-#      max-parallel: 1
-#      matrix:
-#        opensearch-version: [ 2 ]
-#        redis-version: [ '6' ]
-#        postgres-version: [ 14 ]
+    #strategy:
+    #  max-parallel: 1
+    #  matrix:
+    #    opensearch-version: [ 2 ]
+    #    redis-version: [ '6' ]
+    #    postgres-version: [ 14 ]
     env:
       OPENSEARCH_PORT: 9200
-#      OPENSEARCH_VERSION: ${{ matrix.opensearch-version }}
-#      REDIS_VERSION: ${{ matrix.redis-version }}
-#      POSTGRES_VERSION: ${{ matrix.postgres-version }}
-#      PYTHON_VERSION: ${{ matrix.python-version }}
+      #OPENSEARCH_VERSION: ${{ matrix.opensearch-version }}
+      #REDIS_VERSION: ${{ matrix.redis-version }}
+      #POSTGRES_VERSION: ${{ matrix.postgres-version }}
+      #PYTHON_VERSION: ${{ matrix.python-version }}
       OPENSEARCH_VERSION: 2
       REDIS_VERSION: 6
       POSTGRES_VERSION: 14
       PYTHON_VERSION: 3.9
-      INVENIO_SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://localhost:5432/invenio'
+      INVENIO_SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://localhost:5432/invenio"
       POSTGRES_DB: invenio
     steps:
       - name: Set up Python ${{ env.PYTHON_VERSION }}
@@ -87,9 +83,9 @@ jobs:
       - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
         uses: actions/checkout@v3
         with:
-          repository: 'inveniosoftware/invenio-app-rdm'
-          ref: 'maint-11.x'
-          path: 'app-rdm'
+          repository: "inveniosoftware/invenio-app-rdm"
+          ref: "maint-11.x"
+          path: "app-rdm"
       - name: invenio-app-rdm test
         run: |
           . .venv/bin/activate
@@ -105,9 +101,9 @@ jobs:
       - name: Checkout inveniosoftware/invenio-rdm-records under ./rdm-records
         uses: actions/checkout@v3
         with:
-          repository: 'inveniosoftware/invenio-rdm-records'
-          ref: 'maint-1.3.x'
-          path: 'rdm-records'
+          repository: "inveniosoftware/invenio-rdm-records"
+          ref: "maint-1.3.x"
+          path: "rdm-records"
       - name: invenio-rdm-records test
         run: |
           . .venv/bin/activate
@@ -123,10 +119,10 @@ jobs:
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
         with:
-          repository: 'oarepo/oarepo'
-          ref: 'rdm-11'
-          token: '${{ secrets.INTEGRATION_TEST }}'
-          path: 'oarepo'
+          repository: "oarepo/oarepo"
+          ref: "rdm-11"
+          token: "${{ secrets.INTEGRATION_TEST }}"
+          path: "oarepo"
       - name: oarepo test
         run: |
           . .venv/bin/activate
