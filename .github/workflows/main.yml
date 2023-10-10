@@ -266,6 +266,34 @@ jobs:
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
 
+      - name: Install test dependencies
+        run: |
+          cd ui_tests/
+          pwd
+          npm ci
+          npm install mocha -g
+
+      - name: run ui
+        env:
+          REST_URL: https://127.0.0.1:5000/api/simple-records
+        run: |
+          . .venv/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          export SRVLOG=$PWD/invenio_run.log
+          /bin/echo -e "\n=== invenio tokens create: ==="
+          TOKEN=$(invenio tokens create -n test -u test@test.com)
+          /bin/echo -e "status: $?\n$TOKEN"
+          /bin/echo -e "\n=== invenio run: ==="
+          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
+          INVEPID=$!
+          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
+          /bin/echo "  PID: $INVEPID"
+          sleep 8
+
+          cd ui_tests/test/
+          pwd
+          mocha invenioIntegrationTests.spec.js
+
           /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
           invenio index destroy --yes-i-know
           /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
@@ -310,36 +338,3 @@ jobs:
           # Optional options appended to `git-push`
           push_options: '--force'
         if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
-
-#  build:
-#    runs-on: ubuntu-latest
-#    strategy:
-#      max-parallel: 1
-#      matrix:
-#        requirements: [ rdm-11, rdm-11-test]
-#        python-version: [ 3.9 ]
-#        db-service: [ postgresql13 ]
-#        search-service: [ opensearch2 ]
-#        include:
-#          - extras: 'opensearch2,s3'
-#            requirements: 'rdm-11'
-#          - extras: 'opensearch2,s3,tests'
-#            requirements: 'rdm-11-test'
-#    env:
-#      EXTRAS: ${{ matrix.extras }}
-#      REQUIREMENTS: ${{ matrix.requirements }}
-#      SEARCH: ${{ matrix.search-service }}
-#      DB: ${{ matrix.db-service }}
-#      TOK: '${{ secrets.INTEGRATION_TEST }}'
-#      SQLALCHEMY_DATABASE_URI: 'postgresql+psycopg2://invenio:invenio@localhost:5432/invenio'
-#      POSTGRES_USER: postgres
-#      POSTGRES_HOST: localhost
-#      POSTGRES_PORT: 5432
-#      POSTGRES_DB: invenio
-#    steps:
-#      - name: Checkout oarepo/invenio-integration-tests
-#        uses: actions/checkout@v3
-#      - name: Set up Python ${{ matrix.python-version }}
-#        uses: actions/setup-python@v3
-#        with:
-#          python-version: ${{ matrix.python-version }}
