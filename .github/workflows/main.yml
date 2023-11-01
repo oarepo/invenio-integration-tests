@@ -13,24 +13,22 @@ on:
 jobs:
   start_and_test:
     runs-on: ubuntu-latest
-    #strategy:
-    #  max-parallel: 1
-    #  matrix:
-    #    opensearch-version: [ 2 ]
-    #    redis-version: [ '6' ]
-    #    postgres-version: [ 14 ]
+    strategy:
+      fail-fast: false
+      matrix:
+        invenio-sqlalchemy-database-uri:
+          - "postgresql+psycopg2://localhost:5432/invenio"
+          - "sqlite:////absolute/path/to/foo.db"
     env:
       OPENSEARCH_PORT: 9200
-      #OPENSEARCH_VERSION: ${{ matrix.opensearch-version }}
-      #REDIS_VERSION: ${{ matrix.redis-version }}
-      #POSTGRES_VERSION: ${{ matrix.postgres-version }}
-      #PYTHON_VERSION: ${{ matrix.python-version }}
       OPENSEARCH_VERSION: 2
       REDIS_VERSION: 6
       POSTGRES_VERSION: 14
       PYTHON_VERSION: 3.9
-      INVENIO_SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://localhost:5432/invenio"
+      INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
       POSTGRES_DB: invenio
+    outputs:
+      newtag: ${{ steps.oarepo-test.outputs.newtag }}
     steps:
       - name: Set up Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v3
@@ -124,6 +122,7 @@ jobs:
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
       - name: oarepo test
+        id: oarepo-test
         run: |
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
@@ -137,7 +136,8 @@ jobs:
           /bin/echo -e "\n=== BUMP: ==="
           NEWTAG=$(bump oarepo/version.py oarepo/version.py)
           echo "new version: $NEWTAG"
-          echo "NEWTAG=$NEWTAG" >> $GITHUB_ENV
+          echo "NEWTAG=$NEWTAG" >> "$GITHUB_ENV"
+          echo "newtag=$NEWTAG" >> "$GITHUB_OUTPUT"
           grep '__version__' oarepo/version.py
 
           /bin/echo -e "\n=== grab reqs from invenio_app_rdm: ==="
@@ -325,16 +325,51 @@ jobs:
           pip freeze | tee oarepo/requirements-tests.txt
           sed -i -f ./blacklisted_pkgs.sed oarepo/requirements-tests.txt
 
-      - name: Commit and Push generated OARepo setup.cfg and reqs
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
         with:
-          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
-          branch: rdm-11
-          file_pattern: setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
-          repository: oarepo
-          commit_user_name: integration-tests
-          commit_user_email: integration-tests@oarepo.org
-          tagging_message: ${{ env.NEWTAG }}
-          # Optional options appended to `git-push`
-          push_options: '--force'
-        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
+          name: artifacts4oarepo
+          path: setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
+          retention-days: 4
+
+  push_to_oarepo:
+    runs-on: ubuntu-latest
+    needs: start_and_test
+    env:
+      NEWTAG: ${{ needs.start_and_test.outputs.newtag }}
+    steps:
+      - name: Checkout oarepo/oarepo under ./oarepo
+        uses: actions/checkout@v3
+        with:
+          repository: "oarepo/oarepo"
+          ref: "rdm-11"
+          token: "${{ secrets.INTEGRATION_TEST }}"
+          path: "oarepo"
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts4oarepo
+
+      - name: debug
+        run: |
+          ls -l oarepo
+          ls -l setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
+          echo -n "version:"
+          cat oarepo/version.py
+          echo "newtag: ${{ env.NEWTAG }}"
+          echo "event_name: ${{ github.event_name }}"
+
+#      - name: Commit and Push generated OARepo setup.cfg and reqs
+#        uses: stefanzweifel/git-auto-commit-action@v4
+#        with:
+#          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
+#          branch: rdm-11
+#          file_pattern: setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
+#          repository: oarepo
+#          commit_user_name: integration-tests
+#          commit_user_email: integration-tests@oarepo.org
+#          tagging_message: ${{ env.NEWTAG }}
+#          # Optional options appended to `git-push`
+#          push_options: '--force'
+#        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
