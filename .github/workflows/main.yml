@@ -17,17 +17,19 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - db: postgres
-            invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
-#          - db: sqlite
-#            invenio-sqlalchemy-database-uri: "sqlite:///:memory:"
+#          - db: postgres
+#            invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
+          - db: sqlite-path
+            invenio-sqlalchemy-database-uri: ""
+          - db: sqlite-memory
+            invenio-sqlalchemy-database-uri: "sqlite:///:memory:"
     env:
       OPENSEARCH_PORT: 9200
       OPENSEARCH_VERSION: 2
       REDIS_VERSION: 6
       POSTGRES_VERSION: 14
       PYTHON_VERSION: 3.9
-      INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
+      INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri || "sqlite:///"+github.workspace+"/test.db" }}
       POSTGRES_DB: invenio
     outputs:
       newtag: ${{ steps.oarepo-test.outputs.newtag }}
@@ -50,6 +52,7 @@ jobs:
         with:
           postgres-version: ${{ env.POSTGRES_VERSION }}
           database: ${{ env.POSTGRES_DB }}
+        if: matrix.db == 'postgres'
 
       - name: Test opensearch on port ${{ env.OPENSEARCH_PORT }}
         run: |
@@ -61,6 +64,7 @@ jobs:
       - name: Test postgres version ${{ env.POSTGRES_VERSION }}
         run: |
           psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
+        if: matrix.db == 'postgres'
 
       - name: Set up Node16
         uses: actions/setup-node@v3
@@ -364,11 +368,11 @@ jobs:
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
 
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: postgres-artifacts4oarepo
-          path: oarepo
+#      - name: Download artifacts
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: postgres-artifacts4oarepo
+#          path: oarepo
 
       - name: debug
         run: |
