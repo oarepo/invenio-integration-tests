@@ -16,9 +16,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        invenio-sqlalchemy-database-uri:
-          - "postgresql+psycopg2://localhost:5432/invenio"
-#          - "sqlite:///:memory:"
+        include:
+          - db: postgres
+            invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
+#          - db: sqlite
+#            invenio-sqlalchemy-database-uri: "sqlite:///:memory:"
     env:
       OPENSEARCH_PORT: 9200
       OPENSEARCH_VERSION: 2
@@ -336,17 +338,10 @@ jobs:
           echo -n "version:"
           cat oarepo/oarepo/version.py
 
-      - name: Test Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: test
-          path: oarepo/oarepo/version.py
-          retention-days: 1
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: artifacts4oarepo
+          name: ${{ matrix.db }}-artifacts4oarepo
           path: |
             oarepo/setup.py
             oarepo/setup.cfg
@@ -372,7 +367,8 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifacts4oarepo
+          name: postgres-artifacts4oarepo
+          path: oarepo
 
       - name: debug
         run: |
