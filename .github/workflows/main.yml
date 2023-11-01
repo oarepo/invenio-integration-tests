@@ -20,6 +20,8 @@ jobs:
 #          - db: postgres
 #            invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
           - db: sqlite-path
+            invenio-sqlalchemy-database-uri: "sqlite:////home/runner/work/invenio-integration-tests/invenio-integration-tests/test.db"
+          - db: sqlite-tmp
             invenio-sqlalchemy-database-uri: "sqlite:////tmp/test.db"
           - db: sqlite-memory
             invenio-sqlalchemy-database-uri: "sqlite:///:memory:"
