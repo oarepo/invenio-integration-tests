@@ -18,7 +18,7 @@ jobs:
       matrix:
         invenio-sqlalchemy-database-uri:
           - "postgresql+psycopg2://localhost:5432/invenio"
-          - "sqlite:////absolute/path/to/foo.db"
+          - "sqlite:///${{ github.workspace }}/test.db"
     env:
       OPENSEARCH_PORT: 9200
       OPENSEARCH_VERSION: 2
