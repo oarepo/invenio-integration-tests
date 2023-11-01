@@ -18,7 +18,7 @@ jobs:
       matrix:
         invenio-sqlalchemy-database-uri:
           - "postgresql+psycopg2://localhost:5432/invenio"
-          - "sqlite:///${{ github.workspace }}/test.db"
+          - "sqlite:///:memory:"
     env:
       OPENSEARCH_PORT: 9200
       OPENSEARCH_VERSION: 2
@@ -329,7 +329,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifacts4oarepo
-          path: setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
+          path: oarepo/setup.py oarepo/setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/oarepo/version.py
           retention-days: 4
 
   push_to_oarepo:
@@ -354,9 +354,10 @@ jobs:
       - name: debug
         run: |
           ls -l oarepo
-          ls -l setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
+          ls -l oarepo/oarepo
+          ls -l oarepo/setup.py oarepo/setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/oarepo/version.py
           echo -n "version:"
-          cat oarepo/version.py
+          cat oarepo/oarepo/version.py
           echo "newtag: ${{ env.NEWTAG }}"
           echo "event_name: ${{ github.event_name }}"
 
