@@ -347,7 +347,12 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifacts4oarepo
-          path: oarepo/setup.py oarepo/setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/oarepo/version.py
+          path: |
+            oarepo/setup.py
+            oarepo/setup.cfg
+            oarepo/requirements.txt
+            oarepo/requirements-tests.txt
+            oarepo/oarepo/version.py
           retention-days: 1
 
   push_to_oarepo:
