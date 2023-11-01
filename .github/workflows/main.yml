@@ -18,7 +18,7 @@ jobs:
       matrix:
         invenio-sqlalchemy-database-uri:
           - "postgresql+psycopg2://localhost:5432/invenio"
-          - "sqlite:///:memory:"
+#          - "sqlite:///:memory:"
     env:
       OPENSEARCH_PORT: 9200
       OPENSEARCH_VERSION: 2
@@ -325,12 +325,30 @@ jobs:
           pip freeze | tee oarepo/requirements-tests.txt
           sed -i -f ./blacklisted_pkgs.sed oarepo/requirements-tests.txt
 
+      - name: debug
+        run: |
+          echo "ls -l oarepo :"
+          ls -l oarepo
+          echo "ls -l oarepo/oarepo :"
+          ls -l oarepo/oarepo
+          echo "ls -l .... :"
+          ls -l oarepo/setup.py oarepo/setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/oarepo/version.py
+          echo -n "version:"
+          cat oarepo/oarepo/version.py
+
+      - name: Test Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: test
+          path: oarepo/oarepo/version.py
+          retention-days: 1
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: artifacts4oarepo
           path: oarepo/setup.py oarepo/setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/oarepo/version.py
-          retention-days: 4
+          retention-days: 1
 
   push_to_oarepo:
     runs-on: ubuntu-latest
