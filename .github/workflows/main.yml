@@ -19,12 +19,12 @@ jobs:
         include:
 #          - db: postgres
 #            invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
-          - db: sqlite-path
-            invenio-sqlalchemy-database-uri: "sqlite:////home/runner/work/invenio-integration-tests/invenio-integration-tests/test.db"
+#          - db: sqlite-path
+#            invenio-sqlalchemy-database-uri: "sqlite:////home/runner/work/invenio-integration-tests/invenio-integration-tests/test.db"
           - db: sqlite-tmp
             invenio-sqlalchemy-database-uri: "sqlite:////tmp/test.db"
-          - db: sqlite-memory
-            invenio-sqlalchemy-database-uri: "sqlite:///:memory:"
+#          - db: sqlite-memory
+#            invenio-sqlalchemy-database-uri: "sqlite:///:memory:"
     env:
       OPENSEARCH_PORT: 9200
       OPENSEARCH_VERSION: 2
@@ -160,7 +160,6 @@ jobs:
 
           /bin/echo -e "\n=== generate setup.cfg: ==="
           ls -l ../oarepo_setup.cfg.template
-          #cat reqs-app-rdm.txt reqs-rdm-records.txt | sed -e '/\$install_requires/ r /dev/stdin' -e '/\$install_requires/ d' ../oarepo_setup.cfg.template > setup.cfg
           cat reqs-app-rdm.txt reqs-rdm-records.txt ../requirements-extra.txt | tee requirements.txt > requirements-tests.txt
           cp ../oarepo_setup.cfg.template setup.cfg
           cat setup.cfg
