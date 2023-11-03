@@ -17,14 +17,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-#          - db: postgres
-#            invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
-#          - db: sqlite-path
-#            invenio-sqlalchemy-database-uri: "sqlite:////home/runner/work/invenio-integration-tests/invenio-integration-tests/test.db"
-          - db: sqlite-tmp
+          - db: postgres
+            invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
+          - db: sqlite
             invenio-sqlalchemy-database-uri: "sqlite:////tmp/test.db"
-#          - db: sqlite-memory
-#            invenio-sqlalchemy-database-uri: "sqlite:///:memory:"
     env:
       OPENSEARCH_PORT: 9200
       OPENSEARCH_VERSION: 2
@@ -369,11 +365,11 @@ jobs:
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
 
-#      - name: Download artifacts
-#        uses: actions/download-artifact@v3
-#        with:
-#          name: postgres-artifacts4oarepo
-#          path: oarepo
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: postgres-artifacts4oarepo
+          path: oarepo
 
       - name: debug
         run: |
@@ -385,16 +381,16 @@ jobs:
           echo "newtag: ${{ env.NEWTAG }}"
           echo "event_name: ${{ github.event_name }}"
 
-#      - name: Commit and Push generated OARepo setup.cfg and reqs
-#        uses: stefanzweifel/git-auto-commit-action@v4
-#        with:
-#          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
-#          branch: rdm-11
-#          file_pattern: setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
-#          repository: oarepo
-#          commit_user_name: integration-tests
-#          commit_user_email: integration-tests@oarepo.org
+      - name: Commit and Push generated OARepo setup.cfg and reqs
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
+          branch: rdm-11
+          file_pattern: setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
+          repository: oarepo
+          commit_user_name: integration-tests
+          commit_user_email: integration-tests@oarepo.org
 #          tagging_message: ${{ env.NEWTAG }}
-#          # Optional options appended to `git-push`
-#          push_options: '--force'
-#        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
+          # Optional options appended to `git-push`
+          push_options: '--force'
+        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
