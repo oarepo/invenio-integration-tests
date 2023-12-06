@@ -161,6 +161,8 @@ jobs:
           cat reqs-app-rdm.txt reqs-rdm-records.txt ../requirements-extra.txt | tee requirements.txt > requirements-tests.txt
           cp ../oarepo_setup.cfg.template setup.cfg
           cat setup.cfg
+          /bin/echo -e "\n=== requirements.txt: ==="
+          cat requirements.txt
           /bin/echo -e "\n=== new setup.py: ==="
           ls -l ../oarepo_setup.py
           mv setup.py setup.py.orig
@@ -168,7 +170,7 @@ jobs:
           cat setup.py
           /bin/echo -e "\n=== pip install oarepo: ==="
           pwd
-          pip install .[opensearch2,s3]
+          pip install -vvv .[opensearch2,s3]
           /bin/echo -e "\n=== pip freeze: ==="
           pip freeze
 
