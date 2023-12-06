@@ -181,7 +181,7 @@ jobs:
           cp ../oarepo_setup.py setup.py
           cat setup.py
           /bin/echo -e "\n=== pdm lock: ==="
-          cd pdm
+          cd ../pdm
           pwd
           $PDM --version
           $PDM lock
