@@ -82,6 +82,18 @@ jobs:
           python --version
           pip --version
 
+      - name: install pdm
+        run: |
+          pwd
+          ls -la
+          python3 -m venv .venv-pdm
+          . .venv-pdm/bin/activate
+          pip install pdm
+          PDM=$(which pdm)
+          deactivate
+          $PDM --version
+          echo "PDM=$PDM" >> "$GITHUB_ENV"
+
       - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
         uses: actions/checkout@v3
         with:
@@ -168,9 +180,13 @@ jobs:
           mv setup.py setup.py.orig
           cp ../oarepo_setup.py setup.py
           cat setup.py
-          /bin/echo -e "\n=== pip install oarepo: ==="
+          /bin/echo -e "\n=== pdm lock: ==="
           pwd
-          pip install -vvv .[opensearch2,s3]
+          $PDM --version
+          $PDM lock
+          $PDM install
+          /bin/echo -e "\n=== pdm freeze: ==="
+          $PDM list --freeze
           /bin/echo -e "\n=== pip freeze: ==="
           pip freeze
 
