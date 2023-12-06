@@ -8,5 +8,6 @@
 /^pyparsing=/ d
 /^xcffib=/ d
 /^cchardet=/ d
+/^ *commonmeta-py[><=]/ d
 /^oarepo @ file:/ d
 /^-e git.*=simple_repo$/ d

@@ -170,7 +170,7 @@ jobs:
 
           /bin/echo -e "\n=== generate setup.cfg: ==="
           ls -l ../oarepo_setup.cfg.template
-          cat reqs-app-rdm.txt reqs-rdm-records.txt ../requirements-extra.txt | tee requirements.txt > requirements-tests.txt
+          cat reqs-app-rdm.txt reqs-rdm-records.txt ../requirements-extra.txt | sed -f ../blocklisted_pkgs.sed | tee requirements.txt > requirements-tests.txt
           cp ../oarepo_setup.cfg.template setup.cfg
           cat setup.cfg
           /bin/echo -e "\n=== requirements.txt: ==="
