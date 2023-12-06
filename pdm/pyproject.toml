@@ -12,5 +12,5 @@ license = {text = "MIT"}
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "-e file:///${PROJECT_ROOT}/oarepo#egg=oarepo",
+    "-e file:///${PROJECT_ROOT}/../oarepo#egg=oarepo",
 ]
