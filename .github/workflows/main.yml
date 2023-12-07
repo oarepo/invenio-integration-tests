@@ -196,9 +196,12 @@ jobs:
           . .venv/bin/activate
           cd simple_repo
           ls -la
-          /bin/echo -e "\n=== pip install simple_repo: ==="
+          /bin/echo -e "\n=== simple_repo: pdm install: ==="
           pwd
-          pip install -e .
+          $PDM lock
+          $PDM install
+          /bin/echo -e "\n=== pdm freeze: ==="
+          $PDM list --freeze
           /bin/echo -e "\n=== pip freeze: ==="
           pip freeze
 
@@ -336,8 +339,11 @@ jobs:
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           cd simple_repo
-          /bin/echo -e "\n=== simple_repo: pip install -e '.[tests]': ==="
-          pip install -e '.[tests]'
+          /bin/echo -e "\n=== simple_repo: pdm install -G tests: ==="
+          $PDM lock -G tests
+          $PDM install -G tests
+          /bin/echo -e "\n=== pdm freeze: ==="
+          $PDM list --freeze
           /bin/echo -e "\n=== pytest tests: ==="
           pytest tests
 
