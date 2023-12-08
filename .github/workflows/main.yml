@@ -94,43 +94,76 @@ jobs:
           $PDM --version
           echo "PDM=$PDM" >> "$GITHUB_ENV"
 
-      - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
-        uses: actions/checkout@v3
-        with:
-          repository: "inveniosoftware/invenio-app-rdm"
-          #ref: "maint-11.x"
-          ref: "master"
-          path: "app-rdm"
-      - name: invenio-app-rdm test
+      # this takes the latest version from pypi and unzips it.
+      # using the pypi means that the installation has been done
+      # and we can just use the egg-info/requires.txt
+      - name: Download the latest invenio-app-rdm from pypi
         run: |
           . .venv/bin/activate
+          pip download --no-binary=:all: --no-deps --dest . --pre "invenio-app-rdm>=12.0.0b2.dev1,<13"
+          tar xf invenio-app-rdm*.tar.gz
+          rm invenio-app-rdm*.tar.gz
+          mv invenio-app-rdm* app-rdm
           cd app-rdm
-          pwd
-          ls -la
-          /bin/echo -e "\n=== build invenio-app-rdm: ==="
-          python setup.py bdist_wheel
           ls -la
           /bin/echo -e "\n=== requires: ==="
           grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
 
-      - name: Checkout inveniosoftware/invenio-rdm-records under ./rdm-records
-        uses: actions/checkout@v3
-        with:
-          repository: "inveniosoftware/invenio-rdm-records"
-          #ref: "maint-1.3.x"
-          ref: "master"
-          path: "rdm-records"
-      - name: invenio-rdm-records test
+          cat invenio_app_rdm.egg-info/requires.txt | grep invenio-rdm-records > ../invenio_rdm_records_version.txt
+          echo "Will install invenio rdm records with version $(cat ../invenio_rdm_records_version.txt)"
+
+      - name: Download the appropriate version of invenio-rdm-records from pypi
         run: |
           . .venv/bin/activate
+          pip download --no-binary=:all: --no-deps --dest . --pre "$(cat invenio_rdm_records_version.txt)"
+          tar xf invenio-rdm-records*.tar.gz
+          rm invenio-rdm-records*.tar.gz
+          mv invenio-rdm-records* rdm-records
           cd rdm-records
-          pwd
-          ls -la
-          /bin/echo -e "\n=== build invenio-rdm-records: ==="
-          python setup.py bdist_wheel
           ls -la
           /bin/echo -e "\n=== requires: ==="
           cat invenio_rdm_records.egg-info/requires.txt
+          
+          
+
+#      - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
+#        uses: actions/checkout@v3
+#        with:
+#          repository: "inveniosoftware/invenio-app-rdm"
+#          #ref: "maint-11.x"
+#          ref: "master"
+#          path: "app-rdm"
+#
+#      - name: invenio-app-rdm test
+#        run: |
+#          . .venv/bin/activate
+#          cd app-rdm
+#          pwd
+#          ls -la
+#          /bin/echo -e "\n=== build invenio-app-rdm: ==="
+#          python setup.py bdist_wheel
+#          ls -la
+#          /bin/echo -e "\n=== requires: ==="
+#          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
+#
+#      - name: Checkout inveniosoftware/invenio-rdm-records under ./rdm-records
+#        uses: actions/checkout@v3
+#        with:
+#          repository: "inveniosoftware/invenio-rdm-records"
+#          #ref: "maint-1.3.x"
+#          ref: "master"
+#          path: "rdm-records"
+#      - name: invenio-rdm-records test
+#        run: |
+#          . .venv/bin/activate
+#          cd rdm-records
+#          pwd
+#          ls -la
+#          /bin/echo -e "\n=== build invenio-rdm-records: ==="
+#          python setup.py bdist_wheel
+#          ls -la
+#          /bin/echo -e "\n=== requires: ==="
+#          cat invenio_rdm_records.egg-info/requires.txt
 
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
