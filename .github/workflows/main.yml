@@ -29,9 +29,17 @@ jobs:
       PYTHON_VERSION: 3.9
       INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
       POSTGRES_DB: invenio
+
+      # keep the following the same
+      OAREPO_VERSION: 12
+      APP_RDM_VERSION: "invenio-app-rdm>=12.0.0b2.dev1,<13"
+
     outputs:
       newtag: ${{ steps.oarepo-test.outputs.newtag }}
+
     steps:
+
+
       - name: Set up Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v3
         with:
@@ -71,6 +79,7 @@ jobs:
 
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v3
+
       - name: virtualenv
         run: |
           pwd
@@ -98,16 +107,19 @@ jobs:
       # using the pypi means that the installation has been done
       # and we can just use the egg-info/requires.txt
       - name: Download the latest invenio-app-rdm from pypi
+        env:
+          APP_RDM_VERSION: ${{ env.APP_RDM_VERSION }}
         run: |
           . .venv/bin/activate
-          pip download --no-binary=:all: --no-deps --dest . --pre "invenio-app-rdm>=12.0.0b2.dev1,<13"
+          pip download --no-binary=:all: --no-deps --dest . --pre "$APP_RDM_VERSION"
           tar xf invenio-app-rdm*.tar.gz
           rm invenio-app-rdm*.tar.gz
           mv invenio-app-rdm* app-rdm
           cd app-rdm
           ls -la
           /bin/echo -e "\n=== requires: ==="
-          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
+          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' > ../reqs-app-rdm.txt
+          cat ../reqs-app-rdm.txt          
 
           cat invenio_app_rdm.egg-info/requires.txt | grep invenio-rdm-records > ../invenio_rdm_records_version.txt
           echo "Will install invenio rdm records with version $(cat ../invenio_rdm_records_version.txt)"
@@ -122,123 +134,106 @@ jobs:
           cd rdm-records
           ls -la
           /bin/echo -e "\n=== requires: ==="
-          cat invenio_rdm_records.egg-info/requires.txt
-          
-          
-
-#      - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
-#        uses: actions/checkout@v3
-#        with:
-#          repository: "inveniosoftware/invenio-app-rdm"
-#          #ref: "maint-11.x"
-#          ref: "master"
-#          path: "app-rdm"
-#
-#      - name: invenio-app-rdm test
-#        run: |
-#          . .venv/bin/activate
-#          cd app-rdm
-#          pwd
-#          ls -la
-#          /bin/echo -e "\n=== build invenio-app-rdm: ==="
-#          python setup.py bdist_wheel
-#          ls -la
-#          /bin/echo -e "\n=== requires: ==="
-#          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
-#
-#      - name: Checkout inveniosoftware/invenio-rdm-records under ./rdm-records
-#        uses: actions/checkout@v3
-#        with:
-#          repository: "inveniosoftware/invenio-rdm-records"
-#          #ref: "maint-1.3.x"
-#          ref: "master"
-#          path: "rdm-records"
-#      - name: invenio-rdm-records test
-#        run: |
-#          . .venv/bin/activate
-#          cd rdm-records
-#          pwd
-#          ls -la
-#          /bin/echo -e "\n=== build invenio-rdm-records: ==="
-#          python setup.py bdist_wheel
-#          ls -la
-#          /bin/echo -e "\n=== requires: ==="
-#          cat invenio_rdm_records.egg-info/requires.txt
+          cat invenio_rdm_records.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' > ../reqs-rdm-records.txt
+          cat ../reqs-rdm-records.txt
 
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
         with:
           repository: "oarepo/oarepo"
-          ref: "rdm-12"
+          ref: "rdm-${{ env.OAREPO_VERSION }}"
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
-      - name: oarepo test
-        id: oarepo-test
+
+      - name: Copy oarepo to pdm
+        run: |
+          cp -r oarepo pdm/oarepo
+
+      - name: Create initial oarepo requirements
         run: |
           . .venv/bin/activate
-          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          cd pdm/oarepo
+
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pip install merge-requirements
+
+          if [  -f requirements-merged.txt ] ; then 
+            rm requirements-merged.txt
+          fi
+
+          cat ${GITHUB_WORKSPACE}/reqs-app-rdm.txt | sed 's/^[[:space:]]*//' > reqs-app-rdm.txt.stripped
+          mv reqs-app-rdm.txt.stripped reqs-app-rdm.txt
+
+          cat ${GITHUB_WORKSPACE}/reqs-rdm-records.txt | sed 's/^[[:space:]]*//' > reqs-rdm-records.txt.stripped
+          mv reqs-rdm-records.txt.stripped reqs-rdm-records.txt
+
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/merge_requirements reqs-app-rdm.txt reqs-rdm-records.txt
+          mv requirements-merged.txt requirements.txt
+
+          # for each of the blocklisted packages, remove it from requirements.txt
+          # the blocklist might include one line comments after # (at the start of the line)
+          # the extra echo is for the case that blocklisted_pkgs.sed does not end with a newline 
+          # (would be ignored by read command)
+          (cat ${GITHUB_WORKSPACE}/blocklisted_pkgs.sed; echo "") | while read SED_EXPR; do
+            # if the SED_EXPR is not a one-line comment, apply it
+            if [[ ! "$SED_EXPR" =~ ^[[:space:]]*#.*$ ]]; then
+              mv requirements.txt requirements.txt.orig
+              sed -e "$SED_EXPR" requirements.txt.orig > requirements.txt
+            fi
+          done
+
+          # merge in extra requirements
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/merge_requirements requirements.txt ${GITHUB_WORKSPACE}/requirements-extra.txt
+          mv requirements-merged.txt requirements.txt
+
+          echo "pytest-invenio" >requirements-tests.txt
+
+      - name: Generate final requirements.txt
+        run: |
+          . .venv/bin/activate
+          cd pdm
+          $PDM use -f ../.venv
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm lock
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm install
+          
+          # copy the generated requirements.txt to the oarepo directory
+          /bin/echo -e "\n=== requirements.txt: ==="
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm list --freeze | tee ../oarepo/requirements.txt
+
+      - name: Generate final test requirements
+        run: |
+          . .venv/bin/activate
+          cd pdm
+          $PDM use -f ../.venv
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm install -G tests
+
+          # copy the generated test requirements.txt to the oarepo directory
+          /bin/echo -e "\n=== requirements-tests.txt: ==="
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm list --freeze | tee ../oarepo/requirements-tests.txt
+
+      - name: Bump oarepo version
+        run: |
+          . .venv/bin/activate
           cd oarepo
-          pwd
-          ls -la
-          /bin/echo -e "\n=== ls -la .. ==="
-          ls -la ..
+
           /bin/echo -e "\n=== original oarepo version: ==="
           grep '__version__' oarepo/version.py
+
           /bin/echo -e "\n=== BUMP: ==="
           NEWTAG=$(bump oarepo/version.py oarepo/version.py)
+
           echo "new version: $NEWTAG"
           echo "NEWTAG=$NEWTAG" >> "$GITHUB_ENV"
           echo "newtag=$NEWTAG" >> "$GITHUB_OUTPUT"
-          grep '__version__' oarepo/version.py
 
-          /bin/echo -e "\n=== grab reqs from invenio_app_rdm: ==="
-          ls -l ../app-rdm/invenio_app_rdm.egg-info/requires.txt
-          grep -v invenio-rdm-records ../app-rdm/invenio_app_rdm.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' > reqs-app-rdm.txt
-          cat reqs-app-rdm.txt
 
-          /bin/echo -e "\n=== grab reqs from invenio-rdm-records: ==="
-          ls -l ../rdm-records/invenio_rdm_records.egg-info/requires.txt
-          cat ../rdm-records/invenio_rdm_records.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' > reqs-rdm-records.txt
-          cat reqs-rdm-records.txt
-
-          /bin/echo -e "\n=== generate setup.cfg: ==="
-          ls -l ../oarepo_setup.cfg.template
-          cat reqs-app-rdm.txt reqs-rdm-records.txt ../requirements-extra.txt | sed -f ../blocklisted_pkgs.sed | tee requirements.txt > requirements-tests.txt
-          cp ../oarepo_setup.cfg.template setup.cfg
-          cat setup.cfg
-          /bin/echo -e "\n=== requirements.txt: ==="
-          cat requirements.txt
-          /bin/echo -e "\n=== new setup.py: ==="
-          ls -l ../oarepo_setup.py
-          mv setup.py setup.py.orig
-          cp ../oarepo_setup.py setup.py
-          cat setup.py
-          /bin/echo -e "\n=== pdm lock: ==="
-          cd ../pdm
-          pwd
-          $PDM --version
-          $PDM lock
-          $PDM install
-          /bin/echo -e "\n=== pdm freeze: ==="
-          $PDM list --freeze
-          /bin/echo -e "\n=== pip freeze: ==="
-          pip freeze
-
-      - name: simple_repo
+      - name: Install simple repo
         run: |
           . .venv/bin/activate
+          pip install -e oarepo
           cd simple_repo
-          ls -la
-          /bin/echo -e "\n=== simple_repo: pdm install: ==="
-          pwd
-          $PDM lock
-          $PDM install
-          /bin/echo -e "\n=== pdm freeze: ==="
-          $PDM list --freeze
-          /bin/echo -e "\n=== pip freeze: ==="
-          pip freeze
+          pip install -e .
 
-      - name: prepare invenio
+      - name: Prepare invenio inside simple repo
         run: |
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
@@ -250,13 +245,6 @@ jobs:
           invenio db create
           /bin/echo -e "\n=== invenio index init: ==="
           invenio index init
-          #/bin/echo -e "\n=== invenio webpack create: ==="
-          #invenio webpack create
-          #ls -lR $INVENIO_INSTANCE_PATH
-          #/bin/echo -e "\n=== invenio webpack install: ==="
-          #invenio webpack install
-          #ls -lR $INVENIO_INSTANCE_PATH
-          #cat $INVENIO_INSTANCE_PATH/assets/package.json
           /bin/echo -e "\n=== invenio webpack buildall: ==="
           invenio webpack buildall
           /bin/echo -e "\n=== invenio users create: ==="
@@ -359,45 +347,22 @@ jobs:
           /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
           invenio db destroy --yes-i-know
 
-      - name: pip freeze
+
+      - name: Install simple repo with tests
         run: |
           . .venv/bin/activate
-          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-          /bin/echo -e "\n=== pip freeze: ==="
-          pip freeze | tee oarepo/requirements.txt
-          sed -i -f ./blocklisted_pkgs.sed oarepo/requirements.txt
+          pip install -e 'oarepo[tests]'
+          cd simple_repo
+          pip install -e '.[tests]'
 
-      - name: pytest
+
+      - name: Run pytest
         run: |
           . .venv/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           cd simple_repo
-          /bin/echo -e "\n=== simple_repo: pdm install -G tests: ==="
-          $PDM lock -G tests
-          $PDM install -G tests
-          /bin/echo -e "\n=== pdm freeze: ==="
-          $PDM list --freeze
           /bin/echo -e "\n=== pytest tests: ==="
           pytest tests
-
-      - name: pip freeze (w. tests)
-        run: |
-          . .venv/bin/activate
-          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-          /bin/echo -e "\n=== pip freeze: ==="
-          pip freeze | tee oarepo/requirements-tests.txt
-          sed -i -f ./blocklisted_pkgs.sed oarepo/requirements-tests.txt
-
-      - name: debug
-        run: |
-          echo "ls -l oarepo :"
-          ls -l oarepo
-          echo "ls -l oarepo/oarepo :"
-          ls -l oarepo/oarepo
-          echo "ls -l .... :"
-          ls -l oarepo/setup.py oarepo/setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/oarepo/version.py
-          echo -n "version:"
-          cat oarepo/oarepo/version.py
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
@@ -421,7 +386,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: "oarepo/oarepo"
-          ref: "rdm-12"
+          ref: "rdm-${{ env.OAREPO_VERSION }}"
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
 
@@ -445,7 +410,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
-          branch: rdm-12
+          branch: "rdm-${{ env.OAREPO_VERSION }}"
           file_pattern: setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
           repository: oarepo
           commit_user_name: integration-tests
