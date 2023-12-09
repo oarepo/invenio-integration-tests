@@ -10,6 +10,12 @@ name: Oarepo integr.test builder
 on:
   workflow_dispatch:
 
+env:
+  # keep the following consistent
+  OAREPO_VERSION: 12
+  APP_RDM_VERSION: "invenio-app-rdm>=12.0.0b2.dev1,<13"
+  APP_RDM_FLAGS: "--pre"
+
 jobs:
   start_and_test:
     runs-on: ubuntu-latest
@@ -29,10 +35,6 @@ jobs:
       PYTHON_VERSION: 3.9
       INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
       POSTGRES_DB: invenio
-
-      # keep the following the same
-      OAREPO_VERSION: 12
-      APP_RDM_VERSION: "invenio-app-rdm>=12.0.0b2.dev1,<13"
 
     outputs:
       newtag: ${{ steps.oarepo-test.outputs.newtag }}
@@ -109,9 +111,10 @@ jobs:
       - name: Download the latest invenio-app-rdm from pypi
         env:
           APP_RDM_VERSION: ${{ env.APP_RDM_VERSION }}
+          APP_RDM_FLAGS: ${{ env.APP_RDM_FLAGS }}
         run: |
           . .venv/bin/activate
-          pip download --no-binary=:all: --no-deps --dest . --pre "$APP_RDM_VERSION"
+          pip download --no-binary=:all: --no-deps --dest . "$APP_RDM_FLAGS" "$APP_RDM_VERSION"
           tar xf invenio-app-rdm*.tar.gz
           rm invenio-app-rdm*.tar.gz
           mv invenio-app-rdm* app-rdm
@@ -197,7 +200,7 @@ jobs:
           
           # copy the generated requirements.txt to the oarepo directory
           /bin/echo -e "\n=== requirements.txt: ==="
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm list --freeze | tee ../oarepo/requirements.txt
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm list --freeze | egrep -v '^-e ' | tee ../oarepo/requirements.txt
 
       - name: Generate final test requirements
         run: |
@@ -208,7 +211,7 @@ jobs:
 
           # copy the generated test requirements.txt to the oarepo directory
           /bin/echo -e "\n=== requirements-tests.txt: ==="
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm list --freeze | tee ../oarepo/requirements-tests.txt
+          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm list --freeze | egrep -v '^-e ' | tee ../oarepo/requirements-tests.txt
 
       - name: Bump oarepo version
         run: |
@@ -314,14 +317,14 @@ jobs:
           /bin/echo -e "status: $?\n$RESULT"
           [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
 
-      - name: Install test dependencies
+      - name: Install UI test dependencies
         run: |
           cd ui_tests/
           pwd
           npm ci
           npm install mocha -g
 
-      - name: run ui
+      - name: Run UI tests
         env:
           REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
@@ -348,7 +351,7 @@ jobs:
           invenio db destroy --yes-i-know
 
 
-      - name: Install simple repo with tests
+      - name: Install simple repo with python tests
         run: |
           . .venv/bin/activate
           pip install -e 'oarepo[tests]'

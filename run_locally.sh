@@ -6,6 +6,10 @@ export OAREPO_VERSION
 
 APP_RDM_VERSION="invenio-app-rdm>=12.0.0b2.dev1,<13"
 export APP_RDM_VERSION
+
+APP_RDM_FLAGS="--pre"
+export APP_RDM_FLAGS
+
 # END OF TODO
 
 set -e
