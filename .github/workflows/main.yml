@@ -232,7 +232,7 @@ jobs:
       - name: Generate final test requirements
         run: |
           cd pdm
-          . .venv/bin/activate
+          . .venv-oarepo-dependency/bin/activate
 
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --strategy cross_platform -G tests
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm install -G tests
