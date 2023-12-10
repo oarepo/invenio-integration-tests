@@ -87,19 +87,20 @@ jobs:
           node --version
           python3 --version
 
-      - name: Create global virtualenv (will be used for tests)
+      - name: Create test virtualenv
         run: |
-          python3 -m venv .venv
-          . .venv/bin/activate
+          python3 -m venv .venv-tests
+          . .venv-tests/bin/activate
           pip install -U setuptools pip wheel
           pip list
+          
 
       - name: Create dependency resolution virtualenv (will be used in pdm)
         run: |
           cd pdm
 
-          python3 -m venv .venv
-          . .venv/bin/activate
+          python3 -m venv .venv-oarepo-dependency
+          . .venv-oarepo-dependency/bin/activate
           pip install -U setuptools pip wheel
 
       - name: Install pdm to pdm/.venv-pdm
@@ -120,7 +121,7 @@ jobs:
           $PDM --version
           echo "PDM=$PDM" >> "$GITHUB_ENV"
 
-          $PDM use -f "$PWD/.venv"
+          $PDM use -f "$PWD/.venv-oarepo-dependency"
 
 
       # this takes the latest version from pypi and unzips it.
@@ -131,7 +132,8 @@ jobs:
           APP_RDM_VERSION: ${{ env.APP_RDM_VERSION }}
           APP_RDM_FLAGS: ${{ env.APP_RDM_FLAGS }}
         run: |
-          . .venv/bin/activate
+          # can use venv-tests here as only downloading the package
+          . .venv-tests/bin/activate
           pip download --no-binary=:all: --no-deps --dest . "$APP_RDM_FLAGS" "$APP_RDM_VERSION"
           tar xf invenio-app-rdm*.tar.gz
           rm invenio-app-rdm*.tar.gz
@@ -146,7 +148,8 @@ jobs:
 
       - name: Download the appropriate version of invenio-rdm-records from pypi
         run: |
-          . .venv/bin/activate
+          # can use venv-tests here as only downloading the package
+          . .venv-tests/bin/activate
           pip download --no-binary=:all: --no-deps --dest . --pre "$(cat invenio_rdm_records_version.txt)"
           tar xf invenio-rdm-records*.tar.gz
           rm invenio-rdm-records*.tar.gz
@@ -171,7 +174,7 @@ jobs:
       - name: Create initial oarepo requirements
         run: |
           cd pdm
-          . .venv/bin/activate
+          . .venv-oarepo-dependency/bin/activate
           cd oarepo
 
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pip install merge-requirements
@@ -214,7 +217,7 @@ jobs:
       - name: Generate final requirements.txt
         run: |
           cd pdm
-          . .venv/bin/activate
+          . .venv-oarepo-dependency/bin/activate
 
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --production --strategy cross_platform
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm install --production 
@@ -258,14 +261,18 @@ jobs:
 
       - name: Install simple repo
         run: |
-          . .venv/bin/activate
+          . .venv-tests/bin/activate
+
+          cat oarepo/setup.cfg
+          ls -la oarepo/oarepo
+
           pip install -e oarepo
           cd simple_repo
           pip install -e . --no-deps
 
       - name: Prepare invenio inside simple repo
         run: |
-          . .venv/bin/activate
+          . .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
           /bin/echo -e "\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
@@ -284,7 +291,7 @@ jobs:
         env:
           REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
-          . .venv/bin/activate
+          . .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           export SRVLOG=$PWD/invenio_run.log
           /bin/echo -e "\n=== invenio tokens create: ==="
@@ -355,7 +362,7 @@ jobs:
         env:
           REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
-          . .venv/bin/activate
+          . .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           export SRVLOG=$PWD/invenio_run.log
           /bin/echo -e "\n=== invenio tokens create: ==="
@@ -380,7 +387,7 @@ jobs:
 
       - name: Install simple repo with python tests
         run: |
-          . .venv/bin/activate
+          . .venv-tests/bin/activate
           pip install -e 'oarepo[tests]'
           cd simple_repo
           pip install -e '.[tests]'
@@ -388,7 +395,7 @@ jobs:
 
       - name: Run pytest
         run: |
-          . .venv/bin/activate
+          . .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           cd simple_repo
           /bin/echo -e "\n=== pytest tests: ==="
@@ -401,8 +408,8 @@ jobs:
           path: |
             oarepo/setup.py
             oarepo/setup.cfg
-            oarepo/requirements.txt
-            oarepo/requirements-tests.txt
+            oarepo/oarepo/requirements.txt
+            oarepo/oarepo/requirements-tests.txt
             oarepo/oarepo/version.py
           retention-days: 1
 
@@ -430,7 +437,7 @@ jobs:
         run: |
           ls -l oarepo
           ls -l oarepo/oarepo
-          ls -l oarepo/setup.py oarepo/setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/oarepo/version.py
+          ls -l oarepo/setup.py oarepo/setup.cfg oarepo/oarepo/requirements.txt oarepo/oarepo/requirements-tests.txt oarepo/oarepo/version.py
           echo -n "version:"
           cat oarepo/oarepo/version.py
           echo "newtag: ${{ env.NEWTAG }}"
@@ -441,7 +448,7 @@ jobs:
         with:
           commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
           branch: "rdm-${{ env.OAREPO_VERSION }}"
-          file_pattern: setup.py setup.cfg requirements.txt requirements-tests.txt oarepo/version.py
+          file_pattern: setup.py setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/version.py
           repository: oarepo
           commit_user_name: integration-tests
           commit_user_email: integration-tests@oarepo.org
