@@ -82,28 +82,46 @@ jobs:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v3
 
-      - name: virtualenv
+      - name: Show versions of programs
         run: |
-          pwd
-          ls -la
+          node --version
+          python3 --version
+
+      - name: Create global virtualenv (will be used for tests)
+        run: |
           python3 -m venv .venv
           . .venv/bin/activate
-          pip install -U setuptools pip wheel bump
-          node --version
-          python --version
-          pip --version
+          pip install -U setuptools pip wheel
+          pip list
 
-      - name: install pdm
+      - name: Create dependency resolution virtualenv (will be used in pdm)
         run: |
-          pwd
-          ls -la
+          cd pdm
+
+          python3 -m venv .venv
+          . .venv/bin/activate
+          pip install -U setuptools pip wheel
+
+      - name: Install pdm to pdm/.venv-pdm
+        run: |
+          cd pdm
           python3 -m venv .venv-pdm
           . .venv-pdm/bin/activate
+          pip install -U setuptools pip wheel
+          
+          # install version bump
+          pip install bump
+
+          # install pdm
           pip install pdm
+
           PDM=$(which pdm)
           deactivate
           $PDM --version
           echo "PDM=$PDM" >> "$GITHUB_ENV"
+
+          $PDM use -f "$PWD/.venv"
+
 
       # this takes the latest version from pypi and unzips it.
       # using the pypi means that the installation has been done
@@ -120,9 +138,8 @@ jobs:
           mv invenio-app-rdm* app-rdm
           cd app-rdm
           ls -la
-          /bin/echo -e "\n=== requires: ==="
-          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' > ../reqs-app-rdm.txt
-          cat ../reqs-app-rdm.txt          
+          /bin/echo -e "\n=== rdm app requires: ==="
+          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' | tee ../reqs-app-rdm.txt
 
           cat invenio_app_rdm.egg-info/requires.txt | grep invenio-rdm-records > ../invenio_rdm_records_version.txt
           echo "Will install invenio rdm records with version $(cat ../invenio_rdm_records_version.txt)"
@@ -136,9 +153,8 @@ jobs:
           mv invenio-rdm-records* rdm-records
           cd rdm-records
           ls -la
-          /bin/echo -e "\n=== requires: ==="
-          cat invenio_rdm_records.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' > ../reqs-rdm-records.txt
-          cat ../reqs-rdm-records.txt
+          /bin/echo -e "\n=== rdm records requires: ==="
+          cat invenio_rdm_records.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' | tee ../reqs-rdm-records.txt
 
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v3
@@ -148,16 +164,17 @@ jobs:
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
 
-      - name: Copy oarepo to pdm
+      - name: Copy oarepo to pdm (will use it there to make extract all dependencies)
         run: |
           cp -r oarepo pdm/oarepo
 
       - name: Create initial oarepo requirements
         run: |
+          cd pdm
           . .venv/bin/activate
-          cd pdm/oarepo
+          cd oarepo
 
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pip install merge-requirements
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pip install merge-requirements
 
           if [  -f requirements-merged.txt ] ; then 
             rm requirements-merged.txt
@@ -169,7 +186,7 @@ jobs:
           cat ${GITHUB_WORKSPACE}/reqs-rdm-records.txt | sed 's/^[[:space:]]*//' > reqs-rdm-records.txt.stripped
           mv reqs-rdm-records.txt.stripped reqs-rdm-records.txt
 
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/merge_requirements reqs-app-rdm.txt reqs-rdm-records.txt
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/merge_requirements reqs-app-rdm.txt reqs-rdm-records.txt
           mv requirements-merged.txt requirements.txt
 
           # for each of the blocklisted packages, remove it from requirements.txt
@@ -185,44 +202,54 @@ jobs:
           done
 
           # merge in extra requirements
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/merge_requirements requirements.txt ${GITHUB_WORKSPACE}/requirements-extra.txt
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/merge_requirements requirements.txt ${GITHUB_WORKSPACE}/requirements-extra.txt
           mv requirements-merged.txt requirements.txt
 
           echo "pytest-invenio" >requirements-tests.txt
+          
+          # move the generated requirements to oarepo package, so that they do not pollute the installed package
+          mv requirements.txt oarepo/requirements.txt
+          mv requirements-tests.txt oarepo/requirements-tests.txt
 
       - name: Generate final requirements.txt
         run: |
-          . .venv/bin/activate
           cd pdm
-          $PDM use -f ../.venv
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm lock
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm install
+          . .venv/bin/activate
+
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --production --strategy cross_platform
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm install --production 
           
           # copy the generated requirements.txt to the oarepo directory
           /bin/echo -e "\n=== requirements.txt: ==="
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm list --freeze | egrep -v '^-e ' | tee ../oarepo/requirements.txt
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm list --freeze | egrep -v '^-e ' | sort | tee ../oarepo/oarepo/requirements.txt
+
+          /bin/echo -e "\n=== pip requirements.txt: ==="
+          pip freeze | egrep -v '^-e ' | sort
 
       - name: Generate final test requirements
         run: |
-          . .venv/bin/activate
           cd pdm
-          $PDM use -f ../.venv
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm install -G tests
+          . .venv/bin/activate
+
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --strategy cross_platform -G tests
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm install -G tests
 
           # copy the generated test requirements.txt to the oarepo directory
           /bin/echo -e "\n=== requirements-tests.txt: ==="
-          ${GITHUB_WORKSPACE}/.venv-pdm/bin/pdm list --freeze | egrep -v '^-e ' | tee ../oarepo/requirements-tests.txt
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm list --freeze | egrep -v '^-e ' | sort | tee ../oarepo/oarepo/requirements-tests.txt
+
+          /bin/echo -e "\n=== pip requirements-tests.txt: ==="
+          pip freeze | egrep -v '^-e ' | sort
 
       - name: Bump oarepo version
         run: |
-          . .venv/bin/activate
           cd oarepo
 
           /bin/echo -e "\n=== original oarepo version: ==="
           grep '__version__' oarepo/version.py
 
           /bin/echo -e "\n=== BUMP: ==="
-          NEWTAG=$(bump oarepo/version.py oarepo/version.py)
+          NEWTAG=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py oarepo/version.py)
 
           echo "new version: $NEWTAG"
           echo "NEWTAG=$NEWTAG" >> "$GITHUB_ENV"
@@ -234,7 +261,7 @@ jobs:
           . .venv/bin/activate
           pip install -e oarepo
           cd simple_repo
-          pip install -e .
+          pip install -e . --no-deps
 
       - name: Prepare invenio inside simple repo
         run: |
