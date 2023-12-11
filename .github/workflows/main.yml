@@ -234,12 +234,12 @@ jobs:
           /bin/echo -e "\n=== exported requirements ==="
           cat oarepo/pyproject.toml
 
-      - name: Compare if the requirements have changed and abort successfully if not
+      - name: Compare if the requirements have changed and skip the rest of steps if not
         run: |
           if [[ $(diff oarepo/pyproject.toml oarepo/pyproject.toml.orig) ]]; then
             echo "Requirements have changed, will continue with tests"
             RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=yes
-          else:
+          else
             echo "Requirements have not changed, will skip the rest of the processing"
             RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=no
           fi
@@ -432,9 +432,11 @@ jobs:
 #    runs-on: ubuntu-latest
 #    needs: start_and_test
 #    env:
+#      # the newtag is set only if the requirements have changed
 #      NEWTAG: ${{ needs.start_and_test.outputs.newtag }}
 #    steps:
 #      - name: Checkout oarepo/oarepo under ./oarepo
+#        if: ${{ env.NEWTAG != '' }}
 #        uses: actions/checkout@v3
 #        with:
 #          repository: "oarepo/oarepo"
@@ -443,18 +445,21 @@ jobs:
 #          path: "oarepo"
 #
 #      - name: Download artifacts
+#        if: ${{ env.NEWTAG != '' }}
 #        uses: actions/download-artifact@v3
 #        with:
 #          name: postgres-artifacts4oarepo
 #          path: oarepo
 #
 #      - name: debug
+#        if: ${{ env.NEWTAG != '' }}
 #        run: |
 #          ls -l oarepo
 #          ls -l oarepo/oarepo
-#          ls -l oarepo/setup.py oarepo/setup.cfg oarepo/oarepo/requirements.txt oarepo/oarepo/requirements-tests.txt oarepo/oarepo/version.py
 #          echo -n "version:"
 #          cat oarepo/oarepo/version.py
+#          echo -n "pyproject.toml:"
+#          cat oarepo/pyproject.toml
 #          echo "newtag: ${{ env.NEWTAG }}"
 #          echo "event_name: ${{ github.event_name }}"
 #
@@ -470,4 +475,4 @@ jobs:
 #          tagging_message: ${{ env.NEWTAG }}
 #          # Optional options appended to `git-push`
 #          push_options: '--force'
-#        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
+#        if: success() && (env.NEWTAG != '') && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
