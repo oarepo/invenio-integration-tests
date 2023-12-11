@@ -175,13 +175,13 @@ jobs:
               ${GITHUB_WORKSPACE}/requirements-extra.txt \
               --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt
 
-#      - name: Checkout oarepo/oarepo under ./oarepo
-#        uses: actions/checkout@v3
-#        with:
-#          repository: "oarepo/oarepo"
-#          ref: "rdm-${{ env.OAREPO_VERSION }}"
-#          token: "${{ secrets.INTEGRATION_TEST }}"
-#          path: "oarepo"
+      - name: Checkout oarepo/oarepo under ./oarepo
+        uses: actions/checkout@v3
+        with:
+          repository: "oarepo/oarepo"
+          ref: "rdm-${{ env.OAREPO_VERSION }}"
+          token: "${{ secrets.INTEGRATION_TEST }}"
+          path: "oarepo"
 
       - name: Lock and export production oarepo requirements
         run: |
@@ -219,21 +219,21 @@ jobs:
           /bin/echo -e "\n=== exported requirements ==="
           cat oarepo/pyproject.toml
 
-#      - name: Bump oarepo version
-#        run: |
-#          cd oarepo
-#
-#          /bin/echo -e "\n=== original oarepo version: ==="
-#          grep '__version__' oarepo/version.py
-#
-#          /bin/echo -e "\n=== BUMP: ==="
-#          NEWTAG=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py oarepo/version.py)
-#
-#          echo "new version: $NEWTAG"
-#          echo "NEWTAG=$NEWTAG" >> "$GITHUB_ENV"
-#          echo "newtag=$NEWTAG" >> "$GITHUB_OUTPUT"
-#
-#
+      - name: Bump oarepo version
+        run: |
+          cd oarepo
+
+          /bin/echo -e "\n=== original oarepo version: ==="
+          grep '__version__' oarepo/version.py
+
+          /bin/echo -e "\n=== BUMP: ==="
+          NEWTAG=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py oarepo/version.py)
+
+          echo "new version: $NEWTAG"
+          echo "NEWTAG=$NEWTAG" >> "$GITHUB_ENV"
+          echo "newtag=$NEWTAG" >> "$GITHUB_OUTPUT"
+
+
 #      - name: Install simple repo
 #        run: |
 #          . .venv-tests/bin/activate
