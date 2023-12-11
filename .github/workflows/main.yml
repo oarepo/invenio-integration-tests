@@ -239,9 +239,11 @@ jobs:
           if [[ $(diff oarepo/pyproject.toml oarepo/pyproject.toml.orig) ]]; then
             echo "Requirements have changed, will continue with tests"
             RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=yes
+            # newtag will be set in the next step
           else
             echo "Requirements have not changed, will skip the rest of the processing"
             RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=no
+            echo "newtag=" >> "$GITHUB_OUTPUT"
           fi
           
           echo "RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=$RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION" >> "$GITHUB_ENV"
@@ -433,8 +435,12 @@ jobs:
       # the newtag is set only if the requirements have changed
       NEWTAG: ${{ needs.start_and_test.outputs.newtag }}
     steps:
+      - name: Intro debug
+        run: |
+          echo "About to push to oarepo, newtag: ${{ env.NEWTAG }}"
+
       - name: Checkout oarepo/oarepo under ./oarepo
-        if: ${{ env.NEWTAG != '' }}
+        if: env.NEWTAG != ''
         uses: actions/checkout@v3
         with:
           repository: "oarepo/oarepo"
@@ -443,14 +449,14 @@ jobs:
           path: "oarepo"
 
       - name: Download artifacts
-        if: ${{ env.NEWTAG != '' }}
+        if: env.NEWTAG != ''
         uses: actions/download-artifact@v3
         with:
           name: postgres-artifacts4oarepo
           path: oarepo
 
       - name: debug
-        if: ${{ env.NEWTAG != '' }}
+        if: env.NEWTAG != ''
         run: |
           ls -l oarepo
           ls -l oarepo/oarepo
