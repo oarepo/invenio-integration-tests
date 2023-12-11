@@ -37,11 +37,9 @@ jobs:
       POSTGRES_DB: invenio
 
     outputs:
-      newtag: ${{ steps.oarepo-test.outputs.newtag }}
+      newtag: ${{ steps.bump_version.outputs.newtag }}
 
     steps:
-
-
       - name: Set up Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v3
         with:
@@ -239,17 +237,16 @@ jobs:
           if [[ $(diff oarepo/pyproject.toml oarepo/pyproject.toml.orig) ]]; then
             echo "Requirements have changed, will continue with tests"
             RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=yes
-            # newtag will be set in the next step
           else
             echo "Requirements have not changed, will skip the rest of the processing"
             RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=no
-            echo "newtag=" >> "$GITHUB_OUTPUT"
           fi
           
           echo "RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=$RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION" >> "$GITHUB_ENV"
 
       - name: Bump oarepo version
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
+        id: bump_version
         run: |
           cd oarepo
 
@@ -432,12 +429,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: start_and_test
     env:
-      # the newtag is set only if the requirements have changed
+      # the newtag is empty if requirements have not changed, otherwise it is set to the new oarepo version
       NEWTAG: ${{ needs.start_and_test.outputs.newtag }}
     steps:
       - name: Intro debug
         run: |
           echo "About to push to oarepo, newtag: ${{ env.NEWTAG }}"
+          echo "output from start_and_test job: ${{ needs.start_and_test.outputs.newtag }}"
 
       - name: Checkout oarepo/oarepo under ./oarepo
         if: env.NEWTAG != ''
