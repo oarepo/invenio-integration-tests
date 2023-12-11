@@ -228,165 +228,168 @@ jobs:
 
           /bin/echo -e "\n=== BUMP: ==="
           NEWTAG=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py oarepo/version.py)
+          NEWTAG1=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py pyproject.toml)
 
-          echo "new version: $NEWTAG"
+          echo "new version: $NEWTAG, inside pyproject $NEWTAG1"
+          if [[ "$NEWTAG" != "$NEWTAG1" ]]; then
+            echo "ERROR: versions in oarepo/version.py and pyproject.toml differ"
+            exit 1
+          fi
           echo "NEWTAG=$NEWTAG" >> "$GITHUB_ENV"
           echo "newtag=$NEWTAG" >> "$GITHUB_OUTPUT"
 
 
-#      - name: Install simple repo
-#        run: |
-#          . .venv-tests/bin/activate
-#
-#          cat oarepo/setup.cfg
-#          ls -la oarepo/oarepo
-#
-#          pip install -e oarepo
-#          cd simple_repo
-#          pip install -e . --no-deps
-#
-#      - name: Prepare invenio inside simple repo
-#        run: |
-#          . .venv-tests/bin/activate
-#          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-#          /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
-#          /bin/echo -e "\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
-#          /bin/echo -e "\n=== invenio db init: ==="
-#          invenio db init
-#          /bin/echo -e "\n=== invenio db create: ==="
-#          invenio db create
-#          /bin/echo -e "\n=== invenio index init: ==="
-#          invenio index init
-#          /bin/echo -e "\n=== invenio webpack buildall: ==="
-#          invenio webpack buildall
-#          /bin/echo -e "\n=== invenio users create: ==="
-#          invenio users create --password aaaaaa -a -c test@test.com
-#
-#      - name: test REST and pytest
-#        env:
-#          REST_URL: https://127.0.0.1:5000/api/simple-records
-#        run: |
-#          . .venv-tests/bin/activate
-#          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-#          export SRVLOG=$PWD/invenio_run.log
-#          /bin/echo -e "\n=== invenio tokens create: ==="
-#          TOKEN=$(invenio tokens create -n test -u test@test.com)
-#          /bin/echo -e "status: $?\n$TOKEN"
-#          /bin/echo -e "\n=== invenio run: ==="
-#          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
-#          INVEPID=$!
-#          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
-#          /bin/echo "  PID: $INVEPID"
-#          sleep 8
-#
-#          /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
-#          RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
-#
-#          /bin/echo -e "\n=== REST 2 (POST new record): ==="
-#          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-#          RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
-#          /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
-#
-#          /bin/echo -e "\n=== REST 3 (GET record): ==="
-#          RESULT=$(curl -sk "$RECORD_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-#
-#          /bin/echo -e "\n=== REST 4 (PUT new title w/o token): ==="
-#          RESULT=$(curl -sk -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
-#
-#          /bin/echo -e "\n=== REST 5 (PUT new title): ==="
-#          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-#
-#          /bin/echo -e "\n=== REST 6 (GET records on /api/simple-records): ==="
-#          RESULT=$(curl -sk -X GET "$REST_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-#
-#          /bin/echo -e "\n=== REST 7 (DELETE record w/o token): ==="
-#          RESULT=$(curl -sk -X DELETE "$RECORD_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
-#
-#          /bin/echo -e "\n=== REST 8 (DELETE record): ==="
-#          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -X DELETE "$RECORD_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-#
-#          /bin/echo -e "\n=== REST 9 (GET record): ==="
-#          RESULT=$(curl -sk "$RECORD_URL")
-#          /bin/echo -e "status: $?\n$RESULT"
-#          [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
-#
-#      - name: Install UI test dependencies
-#        run: |
-#          cd ui_tests/
-#          pwd
-#          npm ci
-#          npm install mocha -g
-#
-#      - name: Run UI tests
-#        env:
-#          REST_URL: https://127.0.0.1:5000/api/simple-records
-#        run: |
-#          . .venv-tests/bin/activate
-#          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-#          export SRVLOG=$PWD/invenio_run.log
-#          /bin/echo -e "\n=== invenio tokens create: ==="
-#          TOKEN=$(invenio tokens create -n test -u test@test.com)
-#          /bin/echo -e "status: $?\n$TOKEN"
-#          /bin/echo -e "\n=== invenio run: ==="
-#          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
-#          INVEPID=$!
-#          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
-#          /bin/echo "  PID: $INVEPID"
-#          sleep 8
-#
-#          cd ui_tests/test/
-#          pwd
-#          mocha invenioIntegrationTests.spec.js
-#
-#          /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
-#          invenio index destroy --yes-i-know
-#          /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
-#          invenio db destroy --yes-i-know
-#
-#
-#      - name: Install simple repo with python tests
-#        run: |
-#          . .venv-tests/bin/activate
-#          pip install -e 'oarepo[tests]'
-#          cd simple_repo
-#          pip install -e '.[tests]'
-#
-#
-#      - name: Run pytest
-#        run: |
-#          . .venv-tests/bin/activate
-#          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-#          cd simple_repo
-#          /bin/echo -e "\n=== pytest tests: ==="
-#          pytest tests
-#
-#      - name: Upload artifacts
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: ${{ matrix.db }}-artifacts4oarepo
-#          path: |
-#            oarepo/setup.py
-#            oarepo/setup.cfg
-#            oarepo/oarepo/requirements.txt
-#            oarepo/oarepo/requirements-tests.txt
-#            oarepo/oarepo/version.py
-#          retention-days: 1
+      - name: Install simple repo
+        run: |
+          . .venv-tests/bin/activate
+
+          cat oarepo/setup.cfg
+          ls -la oarepo/oarepo
+
+          pip install -e oarepo
+          cd simple_repo
+          pip install -e . --no-deps
+
+      - name: Prepare invenio inside simple repo
+        run: |
+          . .venv-tests/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
+          /bin/echo -e "\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
+          /bin/echo -e "\n=== invenio db init: ==="
+          invenio db init
+          /bin/echo -e "\n=== invenio db create: ==="
+          invenio db create
+          /bin/echo -e "\n=== invenio index init: ==="
+          invenio index init
+          /bin/echo -e "\n=== invenio webpack buildall: ==="
+          invenio webpack buildall
+          /bin/echo -e "\n=== invenio users create: ==="
+          invenio users create --password aaaaaa -a -c test@test.com
+
+      - name: test REST and pytest
+        env:
+          REST_URL: https://127.0.0.1:5000/api/simple-records
+        run: |
+          . .venv-tests/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          export SRVLOG=$PWD/invenio_run.log
+          /bin/echo -e "\n=== invenio tokens create: ==="
+          TOKEN=$(invenio tokens create -n test -u test@test.com)
+          /bin/echo -e "status: $?\n$TOKEN"
+          /bin/echo -e "\n=== invenio run: ==="
+          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
+          INVEPID=$!
+          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
+          /bin/echo "  PID: $INVEPID"
+          sleep 8
+
+          /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
+          RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+
+          /bin/echo -e "\n=== REST 2 (POST new record): ==="
+          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+          RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
+          /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
+
+          /bin/echo -e "\n=== REST 3 (GET record): ==="
+          RESULT=$(curl -sk "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 4 (PUT new title w/o token): ==="
+          RESULT=$(curl -sk -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+
+          /bin/echo -e "\n=== REST 5 (PUT new title): ==="
+          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 6 (GET records on /api/simple-records): ==="
+          RESULT=$(curl -sk -X GET "$REST_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 7 (DELETE record w/o token): ==="
+          RESULT=$(curl -sk -X DELETE "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+
+          /bin/echo -e "\n=== REST 8 (DELETE record): ==="
+          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -X DELETE "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 9 (GET record): ==="
+          RESULT=$(curl -sk "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
+
+      - name: Install UI test dependencies
+        run: |
+          cd ui_tests/
+          pwd
+          npm ci
+          npm install mocha -g
+
+      - name: Run UI tests
+        env:
+          REST_URL: https://127.0.0.1:5000/api/simple-records
+        run: |
+          . .venv-tests/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          export SRVLOG=$PWD/invenio_run.log
+          /bin/echo -e "\n=== invenio tokens create: ==="
+          TOKEN=$(invenio tokens create -n test -u test@test.com)
+          /bin/echo -e "status: $?\n$TOKEN"
+          /bin/echo -e "\n=== invenio run: ==="
+          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
+          INVEPID=$!
+          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
+          /bin/echo "  PID: $INVEPID"
+          sleep 8
+
+          cd ui_tests/test/
+          pwd
+          mocha invenioIntegrationTests.spec.js
+
+          /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
+          invenio index destroy --yes-i-know
+          /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
+          invenio db destroy --yes-i-know
+
+
+      - name: Install simple repo with python tests
+        run: |
+          . .venv-tests/bin/activate
+          pip install -e 'oarepo[tests]'
+          cd simple_repo
+          pip install -e '.[tests]'
+
+
+      - name: Run pytest
+        run: |
+          . .venv-tests/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          cd simple_repo
+          /bin/echo -e "\n=== pytest tests: ==="
+          pytest tests
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.db }}-artifacts4oarepo
+          path: |
+            oarepo/setup.py
+            oarepo/pyproject.toml
+            oarepo/oarepo/version.py
+          retention-days: 1
 #
 #  push_to_oarepo:
 #    runs-on: ubuntu-latest
