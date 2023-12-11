@@ -183,7 +183,11 @@ jobs:
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
 
-      - name: Lock and export production oarepo requirements
+      - name: Show oarepo files
+        run: |
+          ls -lR oarepo
+
+      - name: Lock production requirements
         run: |
           cd pdm
           . .venv-oarepo-dependency/bin/activate
@@ -192,6 +196,11 @@ jobs:
           /bin/echo -e "\n=== built requirements (before blacklist) ==="
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm export --prod --format requirements --without-hashes
 
+      - name: Export production oarepo requirements
+        run: |
+          cd pdm
+          . .venv-oarepo-dependency/bin/activate
+
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
               {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
               pyproject.toml \
@@ -199,13 +208,18 @@ jobs:
               --skip tests \
               --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt
 
-      - name: Lock and export test oarepo requirements
+      - name: Lock test
         run: |
           cd pdm
           . .venv-oarepo-dependency/bin/activate
 
           # lock for tests
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --strategy cross_platform --group :all -v 2>&1 | grep -C 5 -i 'conflict'
+
+      - name: Export test oarepo requirements
+        run: |
+          cd pdm
+          . .venv-oarepo-dependency/bin/activate
 
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
               {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
