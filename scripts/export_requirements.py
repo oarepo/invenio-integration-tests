@@ -72,7 +72,7 @@ def export_requirements(
         ]
 
     with open(output_pyproject_toml_file, "w") as f:
-        toml.dump(f, output_pyproject_toml)
+        toml.dump(output_pyproject_toml, f)
 
 
 def pdm_export_requirements(pdm_binary, pdm_directory, *arguments):
