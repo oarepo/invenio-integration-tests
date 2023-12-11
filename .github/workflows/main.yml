@@ -144,7 +144,7 @@ jobs:
           cd app-rdm
           ls -la
           /bin/echo -e "\n=== rdm app requires: ==="
-          cat invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
+          cat invenio_app_rdm.egg-info/requires.txt
 
           cat invenio_app_rdm.egg-info/requires.txt | grep invenio-rdm-records > ../invenio_rdm_records_version.txt
           echo "Will install invenio rdm records with version $(cat ../invenio_rdm_records_version.txt)"
