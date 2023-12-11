@@ -169,7 +169,7 @@ jobs:
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/merge_requirements_to_pyproject_toml.py \
               pyproject.toml \
               ../app-rdm/invenio_app_rdm.egg-info/requires.txt ../rdm-records/invenio_rdm_records.egg-info/requires.txt \
-              ${GITHUB_WORKSPACE}/requirements-extra.txt
+              ${GITHUB_WORKSPACE}/requirements-extra.txt \
               --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt
 
 #      - name: Checkout oarepo/oarepo under ./oarepo
