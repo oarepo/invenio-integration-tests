@@ -166,6 +166,9 @@ jobs:
         run: |
           cd pdm
           . .venv-oarepo-dependency/bin/activate
+
+          /bin/echo -e "\n=== merging requirements: ==="
+
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/merge_requirements_to_pyproject_toml.py \
               pyproject.toml \
               ../app-rdm/invenio_app_rdm.egg-info/requires.txt ../rdm-records/invenio_rdm_records.egg-info/requires.txt \
@@ -184,13 +187,25 @@ jobs:
         run: |
           cd pdm
           . .venv-oarepo-dependency/bin/activate
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --prod --strategy cross_platform --groups :all
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --prod --strategy cross_platform --group :all
 
+          /bin/echo -e "\n=== built requirements (before blacklist) ==="
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm export --prod --format requirements.txt --without-hashes
+
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
               {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
               pyproject.toml \
               ../oarepo/pyproject.toml
+              --skip tests
+
+          # lock for tests
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --strategy cross_platform --group :all
+
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
+              {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
+              pyproject.toml \
+              ../oarepo/pyproject.toml
+              --only tests
 
 #      - name: Bump oarepo version
 #        run: |
