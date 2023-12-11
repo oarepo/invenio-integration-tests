@@ -202,7 +202,7 @@ jobs:
           . .venv-oarepo-dependency/bin/activate
 
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
-              {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
+              ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
               pyproject.toml \
               ../oarepo/pyproject.toml \
               --skip tests \
@@ -222,7 +222,7 @@ jobs:
           . .venv-oarepo-dependency/bin/activate
 
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
-              {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
+              ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
               pyproject.toml \
               ../oarepo/pyproject.toml \
               --only tests \
