@@ -183,9 +183,10 @@ jobs:
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
 
-      - name: Show oarepo files
+      - name: Show oarepo files and store its previous pyproject.toml
         run: |
           ls -lR oarepo
+          cp oarepo/pyproject.toml oarepo/pyproject.toml.orig
 
       - name: Lock production requirements
         run: |
@@ -233,7 +234,23 @@ jobs:
           /bin/echo -e "\n=== exported requirements ==="
           cat oarepo/pyproject.toml
 
+      - name: Compare if the requirements have changed and abort successfully if not
+        run: |
+          if [[ $(diff oarepo/pyproject.toml oarepo/pyproject.toml.orig) ]]; then
+            echo "Requirements have changed, will continue with tests"
+            RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=yes
+          else:
+            echo "Requirements have not changed, will skip the rest of the processing"
+            RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=no
+          fi
+          
+          # just for debugging purposes
+          RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=no
+
+          echo "RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=$RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION" >> "$GITHUB_ENV"
+
       - name: Bump oarepo version
+        if: ${{ env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes' }}
         run: |
           cd oarepo
 
@@ -254,6 +271,7 @@ jobs:
 
 
       - name: Install simple repo
+        if: ${{ env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes' }}
         run: |
           . .venv-tests/bin/activate
 
@@ -264,6 +282,7 @@ jobs:
           pip install -e . --no-deps
 
       - name: Prepare invenio inside simple repo
+        if: ${{ env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes' }}
         run: |
           . .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
@@ -281,6 +300,7 @@ jobs:
           invenio users create --password aaaaaa -a -c test@test.com
 
       - name: test REST and pytest
+        if: ${{ env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes' }}
         env:
           REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
@@ -345,6 +365,7 @@ jobs:
           [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
 
       - name: Install UI test dependencies
+        if: ${{ env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes' }}
         run: |
           cd ui_tests/
           pwd
@@ -352,6 +373,7 @@ jobs:
           npm install mocha -g
 
       - name: Run UI tests
+        if: ${{ env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes' }}
         env:
           REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
@@ -379,6 +401,7 @@ jobs:
 
 
       - name: Install simple repo with python tests
+        if: ${{ env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes' }}
         run: |
           . .venv-tests/bin/activate
           pip install -e 'oarepo[tests]'
@@ -387,6 +410,7 @@ jobs:
 
 
       - name: Run pytest
+        if: ${{ env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes' }}
         run: |
           . .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
@@ -399,10 +423,10 @@ jobs:
         with:
           name: ${{ matrix.db }}-artifacts4oarepo
           path: |
-            oarepo/setup.py
             oarepo/pyproject.toml
             oarepo/oarepo/version.py
           retention-days: 1
+
 #
 #  push_to_oarepo:
 #    runs-on: ubuntu-latest
@@ -439,7 +463,7 @@ jobs:
 #        with:
 #          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
 #          branch: "rdm-${{ env.OAREPO_VERSION }}"
-#          file_pattern: setup.py setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/version.py
+#          file_pattern: pyproject.toml oarepo/version.py
 #          repository: oarepo
 #          commit_user_name: integration-tests
 #          commit_user_email: integration-tests@oarepo.org
