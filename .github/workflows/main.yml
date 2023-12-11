@@ -242,7 +242,7 @@ jobs:
 
           /bin/echo -e "\n=== BUMP: ==="
           NEWTAG=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py oarepo/version.py)
-          NEWTAG1=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py pyproject.toml)
+          NEWTAG1=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump pyproject.toml pyproject.toml)
 
           echo "new version: $NEWTAG, inside pyproject $NEWTAG1"
           if [[ "$NEWTAG" != "$NEWTAG1" ]]; then
