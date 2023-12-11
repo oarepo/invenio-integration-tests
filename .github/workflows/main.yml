@@ -187,7 +187,7 @@ jobs:
         run: |
           cd pdm
           . .venv-oarepo-dependency/bin/activate
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --prod --strategy cross_platform --group :all -v | grep -C 5 -i 'conflict'
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --prod --strategy cross_platform --group :all -v 2>&1 | grep -C 5 -i 'conflict'
 
           /bin/echo -e "\n=== built requirements (before blacklist) ==="
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm export --prod --format requirements --without-hashes
@@ -204,7 +204,7 @@ jobs:
           . .venv-oarepo-dependency/bin/activate
 
           # lock for tests
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --strategy cross_platform --group :all -v | grep -C 5 -i 'conflict'
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --strategy cross_platform --group :all -v 2>&1 | grep -C 5 -i 'conflict'
 
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
               {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
