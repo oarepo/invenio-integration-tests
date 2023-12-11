@@ -184,9 +184,9 @@ jobs:
         run: |
           cd pdm
           . .venv-oarepo-dependency/bin/activate
-          pdm lock --prod --strategy cross_platform --groups :all
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --prod --strategy cross_platform --groups :all
 
-          pdm export --prod --format requirements.txt --without-hashes --output default-requirements.txt
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm export --prod --format requirements.txt --without-hashes
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
               {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
               pyproject.toml \
