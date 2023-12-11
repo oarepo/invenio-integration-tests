@@ -257,10 +257,9 @@ jobs:
         run: |
           . .venv-tests/bin/activate
 
-          cat oarepo/setup.cfg
-          ls -la oarepo/oarepo
+          # install in non-editable mode
+          pip install oarepo
 
-          pip install -e oarepo
           cd simple_repo
           pip install -e . --no-deps
 
