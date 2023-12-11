@@ -112,6 +112,9 @@ jobs:
           
           # install version bump
           pip install bump
+          
+          # install tools for merging requirements
+          pip install click toml requirements-parser semver
 
           # install pdm
           pip install pdm
@@ -141,7 +144,7 @@ jobs:
           cd app-rdm
           ls -la
           /bin/echo -e "\n=== rdm app requires: ==="
-          grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' | tee ../reqs-app-rdm.txt
+          cat invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
 
           cat invenio_app_rdm.egg-info/requires.txt | grep invenio-rdm-records > ../invenio_rdm_records_version.txt
           echo "Will install invenio rdm records with version $(cat ../invenio_rdm_records_version.txt)"
@@ -157,302 +160,247 @@ jobs:
           cd rdm-records
           ls -la
           /bin/echo -e "\n=== rdm records requires: ==="
-          cat invenio_rdm_records.egg-info/requires.txt | sed -n '1,/^$/ { s/^/    /;p; }' | tee ../reqs-rdm-records.txt
+          cat invenio_rdm_records.egg-info/requires.txt
 
-      - name: Checkout oarepo/oarepo under ./oarepo
-        uses: actions/checkout@v3
-        with:
-          repository: "oarepo/oarepo"
-          ref: "rdm-${{ env.OAREPO_VERSION }}"
-          token: "${{ secrets.INTEGRATION_TEST }}"
-          path: "oarepo"
-
-      - name: Copy oarepo to pdm (will use it there to make extract all dependencies)
-        run: |
-          cp -r oarepo pdm/oarepo
-
-      - name: Create initial oarepo requirements
+      - name: Create initial PDM requirements
         run: |
           cd pdm
           . .venv-oarepo-dependency/bin/activate
-          cd oarepo
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/merge_requirements_to_pyproject_toml.py \
+              pyproject.toml \
+              ../app-rdm/invenio_app_rdm.egg-info/requires.txt ../rdm-records/invenio_rdm_records.egg-info/requires.txt \
+              ${GITHUB_WORKSPACE}/requirements-extra.txt
+              --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt
 
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pip install merge-requirements
+#      - name: Checkout oarepo/oarepo under ./oarepo
+#        uses: actions/checkout@v3
+#        with:
+#          repository: "oarepo/oarepo"
+#          ref: "rdm-${{ env.OAREPO_VERSION }}"
+#          token: "${{ secrets.INTEGRATION_TEST }}"
+#          path: "oarepo"
 
-          if [  -f requirements-merged.txt ] ; then 
-            rm requirements-merged.txt
-          fi
-
-          cat ${GITHUB_WORKSPACE}/reqs-app-rdm.txt | sed 's/^[[:space:]]*//' > reqs-app-rdm.txt.stripped
-          mv reqs-app-rdm.txt.stripped reqs-app-rdm.txt
-
-          cat ${GITHUB_WORKSPACE}/reqs-rdm-records.txt | sed 's/^[[:space:]]*//' > reqs-rdm-records.txt.stripped
-          mv reqs-rdm-records.txt.stripped reqs-rdm-records.txt
-
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/merge_requirements reqs-app-rdm.txt reqs-rdm-records.txt
-          mv requirements-merged.txt requirements.txt
-
-          # for each of the blocklisted packages, remove it from requirements.txt
-          # the blocklist might include one line comments after # (at the start of the line)
-          # the extra echo is for the case that blocklisted_pkgs.sed does not end with a newline 
-          # (would be ignored by read command)
-          (cat ${GITHUB_WORKSPACE}/blocklisted_pkgs.sed; echo "") | while read SED_EXPR; do
-            # if the SED_EXPR is not a one-line comment, apply it
-            if [[ ! "$SED_EXPR" =~ ^[[:space:]]*#.*$ ]]; then
-              mv requirements.txt requirements.txt.orig
-              sed -e "$SED_EXPR" requirements.txt.orig > requirements.txt
-            fi
-          done
-
-          # merge in extra requirements
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/merge_requirements requirements.txt ${GITHUB_WORKSPACE}/requirements-extra.txt
-          mv requirements-merged.txt requirements.txt
-
-          echo "pytest-invenio" >requirements-tests.txt
-          
-          # move the generated requirements to oarepo package, so that they do not pollute the installed package
-          mv requirements.txt oarepo/requirements.txt
-          mv requirements-tests.txt oarepo/requirements-tests.txt
-
-      - name: Generate final requirements.txt
+      - name: Lock and export oarepo requirements
         run: |
           cd pdm
           . .venv-oarepo-dependency/bin/activate
+          pdm lock --prod --strategy cross_platform --groups :all
 
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --production --strategy cross_platform
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm install --production 
-          
-          # copy the generated requirements.txt to the oarepo directory
-          /bin/echo -e "\n=== requirements.txt: ==="
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm list --freeze | egrep -v '^-e ' | sort | tee ../oarepo/oarepo/requirements.txt
+          pdm export --prod --format requirements.txt --without-hashes --output default-requirements.txt
+          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
+              {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
+              pyproject.toml \
+              ../oarepo/pyproject.toml
 
-          /bin/echo -e "\n=== pip requirements.txt: ==="
-          pip freeze | egrep -v '^-e ' | sort
-
-      - name: Generate final test requirements
-        run: |
-          cd pdm
-          . .venv-oarepo-dependency/bin/activate
-
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --strategy cross_platform -G tests
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm install -G tests
-
-          # copy the generated test requirements.txt to the oarepo directory
-          /bin/echo -e "\n=== requirements-tests.txt: ==="
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm list --freeze | egrep -v '^-e ' | sort | tee ../oarepo/oarepo/requirements-tests.txt
-
-          /bin/echo -e "\n=== pip requirements-tests.txt: ==="
-          pip freeze | egrep -v '^-e ' | sort
-
-      - name: Bump oarepo version
-        run: |
-          cd oarepo
-
-          /bin/echo -e "\n=== original oarepo version: ==="
-          grep '__version__' oarepo/version.py
-
-          /bin/echo -e "\n=== BUMP: ==="
-          NEWTAG=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py oarepo/version.py)
-
-          echo "new version: $NEWTAG"
-          echo "NEWTAG=$NEWTAG" >> "$GITHUB_ENV"
-          echo "newtag=$NEWTAG" >> "$GITHUB_OUTPUT"
-
-
-      - name: Install simple repo
-        run: |
-          . .venv-tests/bin/activate
-
-          cat oarepo/setup.cfg
-          ls -la oarepo/oarepo
-
-          pip install -e oarepo
-          cd simple_repo
-          pip install -e . --no-deps
-
-      - name: Prepare invenio inside simple repo
-        run: |
-          . .venv-tests/bin/activate
-          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-          /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
-          /bin/echo -e "\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
-          /bin/echo -e "\n=== invenio db init: ==="
-          invenio db init
-          /bin/echo -e "\n=== invenio db create: ==="
-          invenio db create
-          /bin/echo -e "\n=== invenio index init: ==="
-          invenio index init
-          /bin/echo -e "\n=== invenio webpack buildall: ==="
-          invenio webpack buildall
-          /bin/echo -e "\n=== invenio users create: ==="
-          invenio users create --password aaaaaa -a -c test@test.com
-
-      - name: test REST and pytest
-        env:
-          REST_URL: https://127.0.0.1:5000/api/simple-records
-        run: |
-          . .venv-tests/bin/activate
-          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-          export SRVLOG=$PWD/invenio_run.log
-          /bin/echo -e "\n=== invenio tokens create: ==="
-          TOKEN=$(invenio tokens create -n test -u test@test.com)
-          /bin/echo -e "status: $?\n$TOKEN"
-          /bin/echo -e "\n=== invenio run: ==="
-          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
-          INVEPID=$!
-          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
-          /bin/echo "  PID: $INVEPID"
-          sleep 8
-
-          /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
-          RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
-
-          /bin/echo -e "\n=== REST 2 (POST new record): ==="
-          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-          RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
-          /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
-
-          /bin/echo -e "\n=== REST 3 (GET record): ==="
-          RESULT=$(curl -sk "$RECORD_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-
-          /bin/echo -e "\n=== REST 4 (PUT new title w/o token): ==="
-          RESULT=$(curl -sk -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
-
-          /bin/echo -e "\n=== REST 5 (PUT new title): ==="
-          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-
-          /bin/echo -e "\n=== REST 6 (GET records on /api/simple-records): ==="
-          RESULT=$(curl -sk -X GET "$REST_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-
-          /bin/echo -e "\n=== REST 7 (DELETE record w/o token): ==="
-          RESULT=$(curl -sk -X DELETE "$RECORD_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
-
-          /bin/echo -e "\n=== REST 8 (DELETE record): ==="
-          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -X DELETE "$RECORD_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
-
-          /bin/echo -e "\n=== REST 9 (GET record): ==="
-          RESULT=$(curl -sk "$RECORD_URL")
-          /bin/echo -e "status: $?\n$RESULT"
-          [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
-
-      - name: Install UI test dependencies
-        run: |
-          cd ui_tests/
-          pwd
-          npm ci
-          npm install mocha -g
-
-      - name: Run UI tests
-        env:
-          REST_URL: https://127.0.0.1:5000/api/simple-records
-        run: |
-          . .venv-tests/bin/activate
-          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-          export SRVLOG=$PWD/invenio_run.log
-          /bin/echo -e "\n=== invenio tokens create: ==="
-          TOKEN=$(invenio tokens create -n test -u test@test.com)
-          /bin/echo -e "status: $?\n$TOKEN"
-          /bin/echo -e "\n=== invenio run: ==="
-          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
-          INVEPID=$!
-          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
-          /bin/echo "  PID: $INVEPID"
-          sleep 8
-
-          cd ui_tests/test/
-          pwd
-          mocha invenioIntegrationTests.spec.js
-
-          /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
-          invenio index destroy --yes-i-know
-          /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
-          invenio db destroy --yes-i-know
-
-
-      - name: Install simple repo with python tests
-        run: |
-          . .venv-tests/bin/activate
-          pip install -e 'oarepo[tests]'
-          cd simple_repo
-          pip install -e '.[tests]'
-
-
-      - name: Run pytest
-        run: |
-          . .venv-tests/bin/activate
-          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
-          cd simple_repo
-          /bin/echo -e "\n=== pytest tests: ==="
-          pytest tests
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ matrix.db }}-artifacts4oarepo
-          path: |
-            oarepo/setup.py
-            oarepo/setup.cfg
-            oarepo/oarepo/requirements.txt
-            oarepo/oarepo/requirements-tests.txt
-            oarepo/oarepo/version.py
-          retention-days: 1
-
-  push_to_oarepo:
-    runs-on: ubuntu-latest
-    needs: start_and_test
-    env:
-      NEWTAG: ${{ needs.start_and_test.outputs.newtag }}
-    steps:
-      - name: Checkout oarepo/oarepo under ./oarepo
-        uses: actions/checkout@v3
-        with:
-          repository: "oarepo/oarepo"
-          ref: "rdm-${{ env.OAREPO_VERSION }}"
-          token: "${{ secrets.INTEGRATION_TEST }}"
-          path: "oarepo"
-
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: postgres-artifacts4oarepo
-          path: oarepo
-
-      - name: debug
-        run: |
-          ls -l oarepo
-          ls -l oarepo/oarepo
-          ls -l oarepo/setup.py oarepo/setup.cfg oarepo/oarepo/requirements.txt oarepo/oarepo/requirements-tests.txt oarepo/oarepo/version.py
-          echo -n "version:"
-          cat oarepo/oarepo/version.py
-          echo "newtag: ${{ env.NEWTAG }}"
-          echo "event_name: ${{ github.event_name }}"
-
-      - name: Commit and Push generated OARepo setup.cfg and reqs
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
-          branch: "rdm-${{ env.OAREPO_VERSION }}"
-          file_pattern: setup.py setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/version.py
-          repository: oarepo
-          commit_user_name: integration-tests
-          commit_user_email: integration-tests@oarepo.org
-          tagging_message: ${{ env.NEWTAG }}
-          # Optional options appended to `git-push`
-          push_options: '--force'
-        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
+#      - name: Bump oarepo version
+#        run: |
+#          cd oarepo
+#
+#          /bin/echo -e "\n=== original oarepo version: ==="
+#          grep '__version__' oarepo/version.py
+#
+#          /bin/echo -e "\n=== BUMP: ==="
+#          NEWTAG=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py oarepo/version.py)
+#
+#          echo "new version: $NEWTAG"
+#          echo "NEWTAG=$NEWTAG" >> "$GITHUB_ENV"
+#          echo "newtag=$NEWTAG" >> "$GITHUB_OUTPUT"
+#
+#
+#      - name: Install simple repo
+#        run: |
+#          . .venv-tests/bin/activate
+#
+#          cat oarepo/setup.cfg
+#          ls -la oarepo/oarepo
+#
+#          pip install -e oarepo
+#          cd simple_repo
+#          pip install -e . --no-deps
+#
+#      - name: Prepare invenio inside simple repo
+#        run: |
+#          . .venv-tests/bin/activate
+#          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+#          /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
+#          /bin/echo -e "\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
+#          /bin/echo -e "\n=== invenio db init: ==="
+#          invenio db init
+#          /bin/echo -e "\n=== invenio db create: ==="
+#          invenio db create
+#          /bin/echo -e "\n=== invenio index init: ==="
+#          invenio index init
+#          /bin/echo -e "\n=== invenio webpack buildall: ==="
+#          invenio webpack buildall
+#          /bin/echo -e "\n=== invenio users create: ==="
+#          invenio users create --password aaaaaa -a -c test@test.com
+#
+#      - name: test REST and pytest
+#        env:
+#          REST_URL: https://127.0.0.1:5000/api/simple-records
+#        run: |
+#          . .venv-tests/bin/activate
+#          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+#          export SRVLOG=$PWD/invenio_run.log
+#          /bin/echo -e "\n=== invenio tokens create: ==="
+#          TOKEN=$(invenio tokens create -n test -u test@test.com)
+#          /bin/echo -e "status: $?\n$TOKEN"
+#          /bin/echo -e "\n=== invenio run: ==="
+#          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
+#          INVEPID=$!
+#          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
+#          /bin/echo "  PID: $INVEPID"
+#          sleep 8
+#
+#          /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
+#          RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+#
+#          /bin/echo -e "\n=== REST 2 (POST new record): ==="
+#          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+#          RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
+#          /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
+#
+#          /bin/echo -e "\n=== REST 3 (GET record): ==="
+#          RESULT=$(curl -sk "$RECORD_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+#
+#          /bin/echo -e "\n=== REST 4 (PUT new title w/o token): ==="
+#          RESULT=$(curl -sk -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+#
+#          /bin/echo -e "\n=== REST 5 (PUT new title): ==="
+#          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+#
+#          /bin/echo -e "\n=== REST 6 (GET records on /api/simple-records): ==="
+#          RESULT=$(curl -sk -X GET "$REST_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+#
+#          /bin/echo -e "\n=== REST 7 (DELETE record w/o token): ==="
+#          RESULT=$(curl -sk -X DELETE "$RECORD_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+#
+#          /bin/echo -e "\n=== REST 8 (DELETE record): ==="
+#          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -X DELETE "$RECORD_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+#
+#          /bin/echo -e "\n=== REST 9 (GET record): ==="
+#          RESULT=$(curl -sk "$RECORD_URL")
+#          /bin/echo -e "status: $?\n$RESULT"
+#          [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
+#
+#      - name: Install UI test dependencies
+#        run: |
+#          cd ui_tests/
+#          pwd
+#          npm ci
+#          npm install mocha -g
+#
+#      - name: Run UI tests
+#        env:
+#          REST_URL: https://127.0.0.1:5000/api/simple-records
+#        run: |
+#          . .venv-tests/bin/activate
+#          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+#          export SRVLOG=$PWD/invenio_run.log
+#          /bin/echo -e "\n=== invenio tokens create: ==="
+#          TOKEN=$(invenio tokens create -n test -u test@test.com)
+#          /bin/echo -e "status: $?\n$TOKEN"
+#          /bin/echo -e "\n=== invenio run: ==="
+#          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
+#          INVEPID=$!
+#          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
+#          /bin/echo "  PID: $INVEPID"
+#          sleep 8
+#
+#          cd ui_tests/test/
+#          pwd
+#          mocha invenioIntegrationTests.spec.js
+#
+#          /bin/echo -e "\n=== invenio index destroy --yes-i-know: ==="
+#          invenio index destroy --yes-i-know
+#          /bin/echo -e "\n=== invenio db destroy --yes-i-know: ==="
+#          invenio db destroy --yes-i-know
+#
+#
+#      - name: Install simple repo with python tests
+#        run: |
+#          . .venv-tests/bin/activate
+#          pip install -e 'oarepo[tests]'
+#          cd simple_repo
+#          pip install -e '.[tests]'
+#
+#
+#      - name: Run pytest
+#        run: |
+#          . .venv-tests/bin/activate
+#          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+#          cd simple_repo
+#          /bin/echo -e "\n=== pytest tests: ==="
+#          pytest tests
+#
+#      - name: Upload artifacts
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: ${{ matrix.db }}-artifacts4oarepo
+#          path: |
+#            oarepo/setup.py
+#            oarepo/setup.cfg
+#            oarepo/oarepo/requirements.txt
+#            oarepo/oarepo/requirements-tests.txt
+#            oarepo/oarepo/version.py
+#          retention-days: 1
+#
+#  push_to_oarepo:
+#    runs-on: ubuntu-latest
+#    needs: start_and_test
+#    env:
+#      NEWTAG: ${{ needs.start_and_test.outputs.newtag }}
+#    steps:
+#      - name: Checkout oarepo/oarepo under ./oarepo
+#        uses: actions/checkout@v3
+#        with:
+#          repository: "oarepo/oarepo"
+#          ref: "rdm-${{ env.OAREPO_VERSION }}"
+#          token: "${{ secrets.INTEGRATION_TEST }}"
+#          path: "oarepo"
+#
+#      - name: Download artifacts
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: postgres-artifacts4oarepo
+#          path: oarepo
+#
+#      - name: debug
+#        run: |
+#          ls -l oarepo
+#          ls -l oarepo/oarepo
+#          ls -l oarepo/setup.py oarepo/setup.cfg oarepo/oarepo/requirements.txt oarepo/oarepo/requirements-tests.txt oarepo/oarepo/version.py
+#          echo -n "version:"
+#          cat oarepo/oarepo/version.py
+#          echo "newtag: ${{ env.NEWTAG }}"
+#          echo "event_name: ${{ github.event_name }}"
+#
+#      - name: Commit and Push generated OARepo setup.cfg and reqs
+#        uses: stefanzweifel/git-auto-commit-action@v4
+#        with:
+#          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
+#          branch: "rdm-${{ env.OAREPO_VERSION }}"
+#          file_pattern: setup.py setup.cfg oarepo/requirements.txt oarepo/requirements-tests.txt oarepo/version.py
+#          repository: oarepo
+#          commit_user_name: integration-tests
+#          commit_user_email: integration-tests@oarepo.org
+#          tagging_message: ${{ env.NEWTAG }}
+#          # Optional options appended to `git-push`
+#          push_options: '--force'
+#        if: success() && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )

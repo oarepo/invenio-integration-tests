@@ -10,10 +10,4 @@ requires-python = ">=3.9,<3.11"
 readme = "README.md"
 license = {text = "MIT"}
 
-[tool.pdm.dev-dependencies]
-dev = [
-    "-e file:///${PROJECT_ROOT}/oarepo#egg=oarepo",
-]
-tests = [
-    "-e file:///${PROJECT_ROOT}/oarepo#egg=oarepo[tests]",
-]
+[project.optional-dependencies]
