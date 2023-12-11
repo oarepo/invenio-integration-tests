@@ -465,10 +465,10 @@ jobs:
           echo "newtag: ${{ env.NEWTAG }}"
           echo "event_name: ${{ github.event_name }}"
 
-      - name: Commit and Push generated OARepo setup.cfg and reqs
+      - name: Commit and Push generated OARepo pyproject.toml with new requirements
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[invenio-integration-tests] update setup.cfg and reqs (tag ${{ env.NEWTAG }})"
+          commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml (tag ${{ env.NEWTAG }})"
           branch: "rdm-${{ env.OAREPO_VERSION }}"
           file_pattern: pyproject.toml oarepo/version.py
           repository: oarepo
