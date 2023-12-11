@@ -195,8 +195,9 @@ jobs:
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
               {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
               pyproject.toml \
-              ../oarepo/pyproject.toml
-              --skip tests
+              ../oarepo/pyproject.toml \
+              --skip tests \
+              --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt
 
       - name: Lock and export test oarepo requirements
         run: |
@@ -209,8 +210,14 @@ jobs:
           ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
               {GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
               pyproject.toml \
-              ../oarepo/pyproject.toml
-              --only tests
+              ../oarepo/pyproject.toml \
+              --only tests \
+              --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt
+
+      - name: Show exported requirements
+        run: |
+          /bin/echo -e "\n=== exported requirements ==="
+          cat oarepo/pyproject.toml
 
 #      - name: Bump oarepo version
 #        run: |

@@ -1,2 +1,17 @@
+# version conflict in setuptools, should try time to time if it starts working
 commonmeta-py
+
+# rdm records are excluded and replaced with our model
 invenio-rdm-records
+
+# platform-specific packages
+uritemplate.py
+cffi
+cairocffi
+uwsgi
+packaging
+pip
+setuptools
+pyparsing
+xcffib
+cchardet
