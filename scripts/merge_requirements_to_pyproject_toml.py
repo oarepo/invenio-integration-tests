@@ -10,14 +10,28 @@ from requirements.parser import parse as parse_requirements, Requirement
 @click.argument("pyproject_toml_path", type=click.Path(exists=True), required=True)
 @click.argument("requirement_files", nargs=-1, type=click.Path(exists=True))
 @click.option("--blacklisted-requirements-file")
+@click.option("--blacklisted-extras", multiple=True)
+@click.option("--merge-extras", multiple=True)
 def main(
     pyproject_toml_path,
     requirement_files,
     blacklisted_requirements_file,
+    blacklisted_extras,
+    merge_extras,
 ):
     """
     Merge requirements to pyproject.toml
     """
+    blacklisted_extras = set(
+        y.strip() for x in blacklisted_extras for y in x.split(",") if y.strip()
+    )
+    merge_extras = {
+        y.split(":")[0].strip(): y.split(":")[1].strip()
+        for x in merge_extras
+        for y in x.split(",")
+        if ":" in y
+    }
+
     with open(pyproject_toml_path, "r") as f:
         pyproject_toml = toml.load(f)
 
@@ -37,7 +51,9 @@ def main(
         )
         with open(requirement_file, "r") as f:
             for group, reqs in parse_grouped_requirements(f.readlines()).items():
-                print(group)
+                if group in blacklisted_extras:
+                    continue
+                group = merge_extras.get(group, group)
                 for r in reqs:
                     if r.name in blacklisted_requirements:
                         click.secho(
@@ -46,6 +62,9 @@ def main(
                         )
                         continue
                     requirements.add_requirement(group, r)
+
+    pyproject_toml["project"]["dependencies"] = []
+    pyproject_toml["project"]["optional-dependencies"] = {}
 
     for section in requirements.sections:
         if section.name == "default":
