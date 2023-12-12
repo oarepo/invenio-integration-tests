@@ -37,6 +37,7 @@ def main(
         )
         with open(requirement_file, "r") as f:
             for group, reqs in parse_grouped_requirements(f.readlines()).items():
+                print(group)
                 for r in reqs:
                     if r.name in blacklisted_requirements:
                         click.secho(
@@ -81,11 +82,10 @@ class RequirementSet:
                 f"Merging requirement {serialize_requirement(requirement)} with existing {serialize_requirement(existing_requirement)}",
                 fg="yellow",
             )
-            merged_version = serialize_version(
-                merge_versions(existing_version, incoming_version)
-            )
             self.requirements[requirement.name] = Requirement.parse_line(
-                f"{requirement.name}{merged_version}"
+                serialize_requirement(
+                    requirement, merge_versions(existing_version, incoming_version)
+                )
             )
             click.secho(
                 f"Merged: {serialize_requirement(self.requirements[requirement.name])} "
@@ -95,7 +95,7 @@ class RequirementSet:
 
     def as_list(self):
         return [
-            f"{requirement.name}{serialize_version(requirement.specs)}"
+            serialize_requirement(requirement)
             for requirement in self.requirements.values()
         ]
 
@@ -135,7 +135,7 @@ def parse_grouped_requirements(requirement_lines):
     return groups
 
 
-def serialize_requirement(requirement):
+def serialize_requirement(requirement, specs=None):
     """
     Serialize a requirement to a string.
 
@@ -146,7 +146,7 @@ def serialize_requirement(requirement):
     'Flask[extra]>=1.0.0'
     """
     extras = ("[" + ",".join(requirement.extras) + "]") if requirement.extras else ""
-    return f"{requirement.name}{extras}{serialize_version(requirement.specs)}"
+    return f"{requirement.name}{extras}{serialize_version(specs or requirement.specs)}"
 
 
 def serialize_version(specs):
