@@ -142,10 +142,11 @@ def serialize_requirement(requirement):
     doctests:
     >>> serialize_requirement(Requirement.parse_line('Flask>=1.0.0'))
     'Flask>=1.0.0'
-    >>> serialize_requirement(Requirement('Flask', specs=[('>=', '1.0.0')]))
-    'Flask>=1.0.0'
+    >>> serialize_requirement(Requirement.parse_line('Flask [extra] >=1.0.0'))
+    'Flask[extra]>=1.0.0'
     """
-    return f"{requirement.name}{serialize_version(requirement.specs)}"
+    extras = ("[" + ",".join(requirement.extras) + "]") if requirement.extras else ""
+    return f"{requirement.name}{extras}{serialize_version(requirement.specs)}"
 
 
 def serialize_version(specs):
