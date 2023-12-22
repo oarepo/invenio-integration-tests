@@ -293,7 +293,7 @@ jobs:
           . .venv-tests/bin/activate
 
           # install in non-editable mode
-          pip install oarepo
+          pip install ./oarepo
 
           cd simple_repo
           pip install -e . --no-deps
