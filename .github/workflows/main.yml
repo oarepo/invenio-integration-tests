@@ -33,7 +33,7 @@ jobs:
       OPENSEARCH_VERSION: 2
       REDIS_VERSION: 6
       POSTGRES_VERSION: 14
-      PYTHON_VERSION: 3.10
+      PYTHON_VERSION: "3.10"
       INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
       POSTGRES_DB: invenio
 
