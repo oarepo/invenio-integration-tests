@@ -14,6 +14,7 @@ env:
   # keep the following consistent
   OAREPO_VERSION: 12
   APP_RDM_VERSION: "invenio-app-rdm>=12.0.0b2.dev1,<13"
+  APP_RDM_VERSION_SEARCH: "invenio-app-rdm[opensearch2]>=12.0.0b2.dev1,<13"
   APP_RDM_FLAGS: "--pre"
 
 jobs:
@@ -91,7 +92,6 @@ jobs:
           . .venv-tests/bin/activate
           pip install -U setuptools pip wheel
           pip list
-          
 
       - name: Create dependency resolution virtualenv (will be used in pdm)
         run: |
@@ -245,6 +245,25 @@ jobs:
           fi
           
           echo "RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=$RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION" >> "$GITHUB_ENV"
+
+      - name: Create react dependencies extraction venv
+        if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
+        run: |
+          python3 -m venv .venv-react
+          . .venv-react/bin/activate
+          pip install -U setuptools pip wheel
+
+      - name: Install rdm to the extraction virtualenv
+        if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
+        run: |
+          .venv-react/bin/pip install "$APP_RDM_VERSION_SEARCH"
+
+      - name: Run the extraction script
+        if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
+        run: |
+          . .venv-react/bin/activate
+          python scripts/get_react_dependencies.py >oarepo/oarepo/dependencies-react.json
+
 
       - name: Bump oarepo version
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
@@ -424,6 +443,7 @@ jobs:
           path: |
             oarepo/pyproject.toml
             oarepo/oarepo/version.py
+            oarepo/oarepo/dependencies-react.json
           retention-days: 1
 
 
@@ -464,6 +484,8 @@ jobs:
           cat oarepo/oarepo/version.py
           echo -n "pyproject.toml:"
           cat oarepo/pyproject.toml
+          echo -n "react dependencies:"
+          cat oarepo/oarepo/dependencies-react.json
           echo "newtag: ${{ env.NEWTAG }}"
           echo "event_name: ${{ github.event_name }}"
 
@@ -472,7 +494,7 @@ jobs:
         with:
           commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml (tag ${{ env.NEWTAG }})"
           branch: "rdm-${{ env.OAREPO_VERSION }}"
-          file_pattern: pyproject.toml oarepo/version.py
+          file_pattern: pyproject.toml oarepo/version.py oarepo/dependencies-react.json
           repository: oarepo
           commit_user_name: integration-tests
           commit_user_email: integration-tests@oarepo.org
