@@ -262,7 +262,7 @@ jobs:
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
           . .venv-react/bin/activate
-          python scripts/get_react_dependencies.py >oarepo/oarepo/dependencies-react.json
+          python scripts/get_react_dependencies.py >oarepo/oarepo/react-dependencies.json
 
 
       - name: Bump oarepo version
@@ -443,7 +443,7 @@ jobs:
           path: |
             oarepo/pyproject.toml
             oarepo/oarepo/version.py
-            oarepo/oarepo/dependencies-react.json
+            oarepo/oarepo/react-dependencies.json
           retention-days: 1
 
 
@@ -485,7 +485,7 @@ jobs:
           echo -n "pyproject.toml:"
           cat oarepo/pyproject.toml
           echo -n "react dependencies:"
-          cat oarepo/oarepo/dependencies-react.json
+          cat oarepo/oarepo/react-dependencies.json
           echo "newtag: ${{ env.NEWTAG }}"
           echo "event_name: ${{ github.event_name }}"
 
@@ -494,7 +494,7 @@ jobs:
         with:
           commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml (tag ${{ env.NEWTAG }})"
           branch: "rdm-${{ env.OAREPO_VERSION }}"
-          file_pattern: pyproject.toml oarepo/version.py oarepo/dependencies-react.json
+          file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
           repository: oarepo
           commit_user_name: integration-tests
           commit_user_email: integration-tests@oarepo.org
