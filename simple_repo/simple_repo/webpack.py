@@ -16,15 +16,14 @@ theme = WebpackThemeBundle(
 
             },
             dependencies={
-                # TODO: only for RDM11 !!!!!
-                "react-searchkit": "2.0.2",
-                "@semantic-ui-react/css-patch": "^1.0.0",
+                "semantic-ui-less": "^2.5.0",
             },
             aliases={
                 "../../theme.config$": "less/theme.config",
                 "../../less/site": "less/site",
                 "../../less": "less",
                 "@translations/invenio_app_rdm/i18next": "translations/simple_repo/i18next.js",
+                "@translations/invenio_rdm_records/i18next": "translations/simple_repo/i18next.js",
                 "@templates/custom_fields": "js/custom_fields",
             }
         ),
