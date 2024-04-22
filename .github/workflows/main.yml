@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
@@ -74,12 +74,12 @@ jobs:
         if: matrix.db == 'postgres'
 
       - name: Set up Node16
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 16
 
       - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Show versions of programs
         run: |
@@ -176,7 +176,7 @@ jobs:
               --merge-extras opensearch2:default
 
       - name: Checkout oarepo/oarepo under ./oarepo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: "oarepo/oarepo"
           ref: "rdm-${{ env.OAREPO_VERSION }}"
@@ -437,7 +437,7 @@ jobs:
 
       - name: Upload artifacts
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.db }}-artifacts4oarepo
           path: |
@@ -461,7 +461,7 @@ jobs:
 
       - name: Checkout oarepo/oarepo under ./oarepo
         if: env.NEWTAG != ''
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: "oarepo/oarepo"
           ref: "rdm-${{ env.OAREPO_VERSION }}"
@@ -470,7 +470,7 @@ jobs:
 
       - name: Download artifacts
         if: env.NEWTAG != ''
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: postgres-artifacts4oarepo
           path: oarepo
