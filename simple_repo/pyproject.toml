@@ -16,16 +16,16 @@ authors = [
 ]
 description = "A simple repository"
 readme = "README.rst"
-requires-python = ">=3.9,<3.11"
+requires-python = ">=3.10,<3.11"
 license = {text = "MIT"}
 
 dependencies = [
-    "oarepo>=11,<12"
+#   "oarepo>=12,<13"
 ]
 
 [project.optional-dependencies]
 tests = [
-    "pytest-invenio"
+#    "pytest-invenio"
 ]
 
 [project.entry-points."invenio_base.api_apps"]
