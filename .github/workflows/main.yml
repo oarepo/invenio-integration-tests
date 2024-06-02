@@ -178,7 +178,7 @@ jobs:
               ${GITHUB_WORKSPACE}/requirements-extra.txt \
               --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt \
               --blacklisted-extras elasticsearch7,opensearch1 \
-              --merge-extras opensearch2:default
+              --merge-extras opensearch2:default \
               --invenio-app-rdm-version $(cat ../invenio_app_rdm_version.txt) \
               --invenio-rdm-records-version $(cat ../invenio_rdm_records_version.txt)
 
