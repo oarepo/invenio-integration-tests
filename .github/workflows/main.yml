@@ -59,7 +59,7 @@ jobs:
           psql -d testdb -c 'SHOW server_version'
 
       - name: Set up Python ${{ env.PYTHON-VERSION }}
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON-VERSION }}
 
@@ -138,6 +138,6 @@ jobs:
 #      - name: Checkout oarepo/invenio-integration-tests
 #        uses: actions/checkout@v3
 #      - name: Set up Python ${{ matrix.python-version }}
-#        uses: actions/setup-python@v3
+#        uses: actions/setup-python@v5
 #        with:
 #          python-version: ${{ matrix.python-version }}
