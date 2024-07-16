@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Checkout oarepo/oarepo under ./oarepo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: 'oarepo/oarepo'
           ref: 'invenio-3.3'

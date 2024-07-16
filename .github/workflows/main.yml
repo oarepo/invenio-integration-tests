@@ -64,7 +64,7 @@ jobs:
           python-version: ${{ env.PYTHON-VERSION }}
 
       - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'inveniosoftware/invenio-app-rdm'
           ref: 'maint-11.x'
@@ -85,7 +85,7 @@ jobs:
           /bin/echo -e "\nrequires:"
           grep -v invenio-rdm-records invenio_app_rdm.egg-info/requires.txt
       - name: Checkout oarepo/oarepo under ./oarepo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'oarepo/oarepo'
           ref: 'rdm-11'
@@ -136,7 +136,7 @@ jobs:
 #      POSTGRES_DB: invenio
 #    steps:
 #      - name: Checkout oarepo/invenio-integration-tests
-#        uses: actions/checkout@v3
+#        uses: actions/checkout@v4
 #      - name: Set up Python ${{ matrix.python-version }}
 #        uses: actions/setup-python@v3
 #        with:
