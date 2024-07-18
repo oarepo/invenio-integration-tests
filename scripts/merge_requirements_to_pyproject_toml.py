@@ -12,12 +12,16 @@ from requirements.parser import parse as parse_requirements, Requirement
 @click.option("--blacklisted-requirements-file")
 @click.option("--blacklisted-extras", multiple=True)
 @click.option("--merge-extras", multiple=True)
+@click.option("--invenio-app-rdm-version")
+@click.option("--invenio-rdm-records-version")
 def main(
     pyproject_toml_path,
     requirement_files,
     blacklisted_requirements_file,
     blacklisted_extras,
     merge_extras,
+    invenio_app_rdm_version,
+    invenio_rdm_records_version,
 ):
     """
     Merge requirements to pyproject.toml
@@ -73,6 +77,14 @@ def main(
             pyproject_toml["project"]["optional-dependencies"][
                 section.name
             ] = section.as_list()
+
+    # add app rdm and rdm records versions
+    pyproject_toml["project"]["optional-dependencies"][
+        "rdm"
+    ] = [
+        f"invenio-app-rdm=={invenio_app_rdm_version}",
+        f"invenio-rdm-records=={invenio_rdm_records_version}",
+    ]
 
     with open(pyproject_toml_path, "w") as f:
         toml.dump(pyproject_toml, f)
