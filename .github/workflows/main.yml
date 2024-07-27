@@ -221,7 +221,7 @@ jobs:
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
           source .venv-tools/bin/activate
-          $PYTHON scripts/merge_requirements_to_pyproject.toml requirements-production.txt requirements-test.txt oarepo/pyproject.toml
+          $PYTHON scripts/merge_requirements_to_pyproject_toml requirements-production.txt requirements-test.txt oarepo/pyproject.toml
 
 
       - name: Create react dependencies extraction venv
