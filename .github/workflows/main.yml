@@ -237,7 +237,7 @@ jobs:
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
           source .venv-react/bin/activate
-          .venv-tools/bin/uv pip install requirements-production.txt
+          .venv-tools/bin/uv pip install -r requirements-production.txt
 
       - name: Run the extraction script
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
