@@ -255,8 +255,8 @@ jobs:
           grep '__version__' oarepo/version.py
 
           /bin/echo -e "\n=== BUMP: ==="
-          NEWTAG=$(${GITHUB_WORKSPACE}/project/.venv-tools/bin/bump oarepo/version.py oarepo/version.py)
-          NEWTAG1=$(${GITHUB_WORKSPACE}/project/.venv-tools/bin/bump pyproject.toml pyproject.toml)
+          NEWTAG=$(${GITHUB_WORKSPACE}/.venv-tools/bin/bump oarepo/version.py oarepo/version.py)
+          NEWTAG1=$(${GITHUB_WORKSPACE}/.venv-tools/bin/bump pyproject.toml pyproject.toml)
 
           echo "new version: $NEWTAG, inside pyproject $NEWTAG1"
           if [[ "$NEWTAG" != "$NEWTAG1" ]]; then
