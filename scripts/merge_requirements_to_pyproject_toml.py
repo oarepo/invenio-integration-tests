@@ -7,13 +7,13 @@ from requirements.parser import parse as parse_requirements, Requirement
 
 
 @click.command()
-@click.argument("pyproject_toml_path", type=click.Path(exists=True), required=True)
 @click.argument("requirements_path", type=click.Path(exists=True), required=True)
 @click.argument("test_requirements_path", type=click.Path(exists=True), required=True)
+@click.argument("pyproject_toml_path", type=click.Path(exists=True), required=True)
 def main(
-    pyproject_toml_path,
     requirements_path,
     test_requirements_path,
+    pyproject_toml_path,
 ):
     """
     Merge requirements to pyproject.toml
