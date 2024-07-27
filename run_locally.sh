@@ -4,11 +4,14 @@
 OAREPO_VERSION=12
 export OAREPO_VERSION
 
-APP_RDM_VERSION="invenio-app-rdm>=12.0.0b2.dev1,<13"
-export APP_RDM_VERSION
+APP_RDM_PRODUCTION_VERSION="invenio-app-rdm[opensearch2,s3]>=12.0.0b2.dev1,<13"
+APP_RDM_TEST_VERSION="invenio-app-rdm[opensearch2,s3,tests]>=12.0.0b2.dev1,<13"
+export APP_RDM_PRODUCTION_VERSION
+export APP_RDM_TEST_VERSION
 
-APP_RDM_FLAGS="--pre"
-export APP_RDM_FLAGS
+
+PYTHON="python3.10"
+export PYTHON
 
 # END OF TODO
 
@@ -65,7 +68,7 @@ for step in "${STEPS[@]}"; do
   echo "Running step: '$step_name'"
   echo ""
   echo ""
-  if [ "$step_uses" == "actions/checkout@v3" ] ; then
+  if [ "$step_uses" == "actions/checkout@v4" ] ; then
     if [ "$step_with" != "null" ]; then
       repository=$(echo "$step_with" | jq -r '.repository')
       ref=$(echo "$step_with" | jq -r '.ref' | sed "s/\\\${{ env\\.OAREPO_VERSION }}/${OAREPO_VERSION}/")

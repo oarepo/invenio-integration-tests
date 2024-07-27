@@ -13,9 +13,18 @@ on:
 env:
   # keep the following consistent
   OAREPO_VERSION: 12
-  APP_RDM_VERSION: "invenio-app-rdm>=12.0.0b2.dev1,<13"
-  APP_RDM_VERSION_SEARCH: "invenio-app-rdm[opensearch2]>=12.0.0b2.dev1,<13"
-  APP_RDM_FLAGS: "--pre"
+  APP_RDM_PRODUCTION_VERSION: "invenio-app-rdm[opensearch2,s3]>=12.0.0b2.dev1,<13"
+  APP_RDM_TEST_VERSION: "invenio-app-rdm[opensearch2,s3,tests]>=12.0.0b2.dev1,<13"
+  PYTHON_VERSION: "3.10"
+  PYTHON: "python3.10"
+
+  OPENSEARCH_PORT: 9200
+  OPENSEARCH_VERSION: 2
+  REDIS_VERSION: 6
+  POSTGRES_VERSION: 14
+  INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
+  POSTGRES_DB: invenio
+
 
 jobs:
   start_and_test:
@@ -28,14 +37,6 @@ jobs:
             invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
           - db: sqlite
             invenio-sqlalchemy-database-uri: "sqlite:////tmp/test.db"
-    env:
-      OPENSEARCH_PORT: 9200
-      OPENSEARCH_VERSION: 2
-      REDIS_VERSION: 6
-      POSTGRES_VERSION: 14
-      PYTHON_VERSION: "3.10"
-      INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
-      POSTGRES_DB: invenio
 
     outputs:
       newtag: ${{ steps.bump_version.outputs.newtag }}
@@ -84,28 +85,27 @@ jobs:
       - name: Show versions of programs
         run: |
           node --version
-          python3 --version
+          $PYTHON --version
 
       - name: Create test virtualenv
         run: |
-          python3 -m venv .venv-tests
-          . .venv-tests/bin/activate
+          $PYTHON -m venv .venv-tests
+          source .venv-tests/bin/activate
           pip install -U setuptools pip wheel
           pip list
 
-      - name: Create dependency resolution virtualenv (will be used in pdm)
+      - name: Create main repository venv
         run: |
-          cd pdm
 
-          python3 -m venv .venv-oarepo-dependency
-          . .venv-oarepo-dependency/bin/activate
+          python3 -m venv .venv-repository
+          source .venv-repository/bin/activate
           pip install -U setuptools pip wheel
 
-      - name: Install pdm to pdm/.venv-pdm
+      - name: Install tools to project/.venv-tools
         run: |
-          cd pdm
-          python3 -m venv .venv-pdm
-          . .venv-pdm/bin/activate
+          
+          python3 -m venv .venv-tools
+          source .venv-tools/bin/activate
           pip install -U setuptools pip wheel
           
           # install version bump
@@ -114,88 +114,28 @@ jobs:
           # install tools for merging requirements
           pip install click toml requirements-parser semver
 
-          # install pdm
-          pip install pdm
+          # install uv
+          pip install uv
 
-          PDM=$(which pdm)
+          UV=$(which uv)
           deactivate
-          $PDM --version
-          echo "PDM=$PDM" >> "$GITHUB_ENV"
+          $UV --version
+          echo "UV=$UV" >> "$GITHUB_ENV"
 
-          $PDM use -f "$PWD/.venv-oarepo-dependency"
-
-
-      # this takes the latest version from pypi and unzips it.
-      # using the pypi means that the installation has been done
-      # and we can just use the egg-info/requires.txt
-      - name: Download the latest invenio-app-rdm from pypi
-        env:
-          APP_RDM_VERSION: ${{ env.APP_RDM_VERSION }}
-          APP_RDM_FLAGS: ${{ env.APP_RDM_FLAGS }}
+      - name: Resolve invenio-app-rdm dependencies
         run: |
-          # can use venv-tests here as only downloading the package
-          . .venv-tests/bin/activate
-          pip download --no-binary=:all: --no-deps --dest . "$APP_RDM_FLAGS" "$APP_RDM_VERSION"
-          tar xf invenio-app-rdm*.tar.gz
-          rm invenio-app-rdm*.tar.gz
-          mv invenio-app-rdm* app-rdm
-          cd app-rdm
-          ls -la
-          /bin/echo -e "\n=== rdm app requires: ==="
-          cat invenio_app_rdm.egg-info/requires.txt
-
-          cat invenio_app_rdm.egg-info/PKG-INFO | egrep '^Version: ' | sed 's/Version: //' > ../invenio_app_rdm_precise_version.txt
-
-          /bin/echo -e "\n=== rdm app version: ==="
-          cat ../invenio_app_rdm_precise_version.txt
+          echo "$APP_RDM_PRODUCTION_VERSION" >requirements.in
           
-          cat invenio_app_rdm.egg-info/requires.txt | grep invenio-rdm-records > ../invenio_rdm_records_version.txt
-          echo "Will install invenio rdm records with version $(cat ../invenio_rdm_records_version.txt)"
+          .venv-tools/bin/uv pip compile requirements.in >requirements-production.txt.comments
+          cat requirements-production.txt.comments | sort | egrep -v '^\s*#' >requirements-production.txt
 
-      - name: Download the appropriate version of invenio-rdm-records from pypi
+      - name: Resolve invenio-app-rdm test dependencies
         run: |
-          # can use venv-tests here as only downloading the package
-          . .venv-tests/bin/activate
-          pip download --no-binary=:all: --no-deps --dest . --pre "$(cat invenio_rdm_records_version.txt)"
-          tar xf invenio-rdm-records*.tar.gz
-          rm invenio-rdm-records*.tar.gz
-          mv invenio-rdm-records* rdm-records
-          cd rdm-records
-          ls -la
-          /bin/echo -e "\n=== rdm records requires: ==="
-          cat invenio_rdm_records.egg-info/requires.txt
+          echo "$APP_RDM_TEST_VERSION" >requirements.in
+          
+          .venv-tools/bin/uv pip compile requirements.in >requirements-test.txt.comments
+          cat requirements-test.txt.comments | sort | egrep -v '^\s*#' >requirements-test.txt
 
-          cat invenio_rdm_records.egg-info/PKG-INFO | egrep '^Version: ' | sed 's/Version: //' > ../invenio_rdm_records_precise_version.txt
-
-          /bin/echo -e "\n=== rdm records version: ==="
-          cat ../invenio_rdm_records_precise_version.txt
-
-      - name: Create initial PDM requirements
-        run: |
-          cd pdm
-          . .venv-oarepo-dependency/bin/activate
-
-          /bin/echo -e "\n=== merging requirements: ==="
-
-          echo ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/merge_requirements_to_pyproject_toml.py \
-              pyproject.toml \
-              ../app-rdm/invenio_app_rdm.egg-info/requires.txt ../rdm-records/invenio_rdm_records.egg-info/requires.txt \
-              ${GITHUB_WORKSPACE}/requirements-extra.txt \
-              --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt \
-              --blacklisted-extras elasticsearch7,opensearch1 \
-              --merge-extras opensearch2:default \
-              --invenio-app-rdm-version $(cat ../invenio_app_rdm_precise_version.txt) \
-              --invenio-rdm-records-version $(cat ../invenio_rdm_records_precise_version.txt)
-
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/merge_requirements_to_pyproject_toml.py \
-              pyproject.toml \
-              ../app-rdm/invenio_app_rdm.egg-info/requires.txt ../rdm-records/invenio_rdm_records.egg-info/requires.txt \
-              ${GITHUB_WORKSPACE}/requirements-extra.txt \
-              --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt \
-              --blacklisted-extras elasticsearch7,opensearch1 \
-              --merge-extras opensearch2:default \
-              --invenio-app-rdm-version $(cat ../invenio_app_rdm_precise_version.txt) \
-              --invenio-rdm-records-version $(cat ../invenio_rdm_records_precise_version.txt)
 
       - name: Checkout oarepo/oarepo under ./oarepo
         uses: actions/checkout@v4
@@ -205,68 +145,82 @@ jobs:
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: "oarepo"
 
-      - name: Show oarepo files and store its previous pyproject.toml
+      - name: Generate requirements.txt file from the oarepo
         run: |
-          ls -lR oarepo
-          cp oarepo/pyproject.toml oarepo/pyproject.toml.orig
+          set +e
+          echo "./oarepo[rdm]" >requirements.in
+          
+          .venv-tools/bin/uv pip compile requirements.in >requirements-oarepo.txt.comments 
 
-      - name: Lock production requirements
+          cat requirements-oarepo.txt.comments | sort | egrep -v '^\s*#' >requirements-oarepo.txt
+          set -e
+
+      - name: Generate test requirements.txt file from the oarepo
         run: |
-          cd pdm
-          . .venv-oarepo-dependency/bin/activate
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --prod --strategy cross_platform --group :all -v 2>&1 | grep -C 5 -i 'conflict'
+          set +e
+          
+          echo "./oarepo[rdm,tests]" >requirements.in
+          
+          .venv-tools/bin/uv pip compile requirements.in >requirements-oarepo-tests.txt.comments 
 
-          /bin/echo -e "\n=== built requirements (before blacklist) ==="
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm export --prod --format requirements --without-hashes
+          cat requirements-oarepo-tests.txt.comments | sort | egrep -v '^\s*#' >requirements-oarepo-tests.txt
+          set -e
 
-      - name: Export production oarepo requirements
+      - name: Show the generated requirements files
         run: |
-          cd pdm
-          . .venv-oarepo-dependency/bin/activate
+          echo "=============================="
+          echo "New production requirements:"
+          echo
+          cat requirements-production.txt
+          echo
+          echo "=============================="
+          echo "New test requirements:"
+          echo
+          cat requirements-test.txt
+          echo
+          echo "=============================="
+          echo "Previous oarepo production requirements:"
+          echo
+          cat requirements-oarepo.txt
+          echo
+          echo "=============================="
+          echo "Previous oarepo test requirements:"
+          echo
+          cat requirements-oarepo-tests.txt
 
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
-              ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
-              pyproject.toml \
-              ../oarepo/pyproject.toml \
-              --skip tests \
-              --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt
-
-      - name: Lock test
+      - name: Show a diff for production and test requirements
         run: |
-          cd pdm
-          . .venv-oarepo-dependency/bin/activate
-
-          # lock for tests
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm lock --strategy cross_platform --group :all -v 2>&1 | grep -C 5 -i 'conflict'
-
-      - name: Export test oarepo requirements
-        run: |
-          cd pdm
-          . .venv-oarepo-dependency/bin/activate
-
-          ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/python ${GITHUB_WORKSPACE}/scripts/export_requirements.py \
-              ${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/pdm \
-              pyproject.toml \
-              ../oarepo/pyproject.toml \
-              --only tests \
-              --blacklisted-requirements-file ${GITHUB_WORKSPACE}/requirements-blacklisted.txt
-
-      - name: Show exported requirements
-        run: |
-          /bin/echo -e "\n=== exported requirements ==="
-          cat oarepo/pyproject.toml
+          echo "=============================="
+          echo "Diff production requirements:"
+          echo
+          diff -buN requirements-oarepo.txt requirements-production.txt || true
+          echo
+          echo "=============================="
+          echo "Diff test requirements:"
+          echo
+          diff -buN requirements-oarepo-tests.txt requirements-test.txt || true
 
       - name: Compare if the requirements have changed and skip the rest of steps if not
         run: |
-          if [[ $(diff oarepo/pyproject.toml oarepo/pyproject.toml.orig) ]]; then
-            echo "Requirements have changed, will continue with tests"
+          if [[ $(diff requirements-production.txt requirements-oarepo.txt) ]]; then
+            echo "Production requirements have changed, will continue with tests"
+            RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=yes
+          elif [[ $(diff requirements-test.txt requirements-oarepo-tests.txt) ]]; then
+            echo "Test requirements have changed, will continue with tests"
             RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=yes
           else
             echo "Requirements have not changed, will skip the rest of the processing"
             RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=no
           fi
-          
+
           echo "RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION=$RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION" >> "$GITHUB_ENV"
+
+      - name: Generate a new oarepo/pyproject.toml file
+        if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
+        run: |
+          source .venv-tools/bin/activate
+          $PYTHON ../scripts/merge_requirements_to_pyproject.toml requirements-production.txt requirements-test.txt oarepo/pyproject.toml
+
 
       - name: Create react dependencies extraction venv
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
@@ -278,14 +232,14 @@ jobs:
       - name: Install rdm to the extraction virtualenv
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
-          .venv-react/bin/pip install "$APP_RDM_VERSION_SEARCH"
+          source .venv-react/bin/activate
+          .venv-tools/bin/uv pip install requirements-production.txt
 
       - name: Run the extraction script
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
-          . .venv-react/bin/activate
+          source .venv-react/bin/activate
           python scripts/get_react_dependencies.py >oarepo/oarepo/react-dependencies.json
-
 
       - name: Bump oarepo version
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
@@ -297,8 +251,8 @@ jobs:
           grep '__version__' oarepo/version.py
 
           /bin/echo -e "\n=== BUMP: ==="
-          NEWTAG=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump oarepo/version.py oarepo/version.py)
-          NEWTAG1=$(${GITHUB_WORKSPACE}/pdm/.venv-pdm/bin/bump pyproject.toml pyproject.toml)
+          NEWTAG=$(${GITHUB_WORKSPACE}/project/.venv-uv/bin/bump oarepo/version.py oarepo/version.py)
+          NEWTAG1=$(${GITHUB_WORKSPACE}/project/.venv-uv/bin/bump pyproject.toml pyproject.toml)
 
           echo "new version: $NEWTAG, inside pyproject $NEWTAG1"
           if [[ "$NEWTAG" != "$NEWTAG1" ]]; then
@@ -312,7 +266,7 @@ jobs:
       - name: Install simple repo
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
-          . .venv-tests/bin/activate
+          source .venv-tests/bin/activate
 
           # install in non-editable mode
           pip install ./oarepo
@@ -323,7 +277,7 @@ jobs:
       - name: Prepare invenio inside simple repo
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
-          . .venv-tests/bin/activate
+          source .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           /bin/echo -e "\nINVENIO_INSTANCE_PATH: $INVENIO_INSTANCE_PATH"
           /bin/echo -e "\nINVENIO_SQLALCHEMY_DATABASE_URI: $INVENIO_SQLALCHEMY_DATABASE_URI"
@@ -343,7 +297,7 @@ jobs:
         env:
           REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
-          . .venv-tests/bin/activate
+          source .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           export SRVLOG=$PWD/invenio_run.log
           /bin/echo -e "\n=== invenio tokens create: ==="
@@ -510,17 +464,17 @@ jobs:
           cat oarepo/oarepo/react-dependencies.json
           echo "newtag: ${{ env.NEWTAG }}"
           echo "event_name: ${{ github.event_name }}"
-
-      - name: Commit and Push generated OARepo pyproject.toml with new requirements
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml (tag ${{ env.NEWTAG }})"
-          branch: "rdm-${{ env.OAREPO_VERSION }}"
-          file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
-          repository: oarepo
-          commit_user_name: integration-tests
-          commit_user_email: integration-tests@oarepo.org
-          tagging_message: ${{ env.NEWTAG }}
-          # Optional options appended to `git-push`
-          push_options: '--force'
-        if: success() && (env.NEWTAG != '') && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
+#
+#      - name: Commit and Push generated OARepo pyproject.toml with new requirements
+#        uses: stefanzweifel/git-auto-commit-action@v4
+#        with:
+#          commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml (tag ${{ env.NEWTAG }})"
+#          branch: "rdm-${{ env.OAREPO_VERSION }}"
+#          file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
+#          repository: oarepo
+#          commit_user_name: integration-tests
+#          commit_user_email: integration-tests@oarepo.org
+#          tagging_message: ${{ env.NEWTAG }}
+#          # Optional options appended to `git-push`
+#          push_options: '--force'
+#        if: success() && (env.NEWTAG != '') && ( github.event_name == 'push' || github.event_name == 'workflow_dispatch' )
