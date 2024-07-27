@@ -22,7 +22,6 @@ env:
   OPENSEARCH_VERSION: 2
   REDIS_VERSION: 6
   POSTGRES_VERSION: 14
-  INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
   POSTGRES_DB: invenio
 
 
@@ -37,6 +36,9 @@ jobs:
             invenio-sqlalchemy-database-uri: "postgresql+psycopg2://localhost:5432/invenio"
           - db: sqlite
             invenio-sqlalchemy-database-uri: "sqlite:////tmp/test.db"
+
+    env:
+      INVENIO_SQLALCHEMY_DATABASE_URI: ${{ matrix.invenio-sqlalchemy-database-uri }}
 
     outputs:
       newtag: ${{ steps.bump_version.outputs.newtag }}
