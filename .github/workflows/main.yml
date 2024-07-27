@@ -152,7 +152,7 @@ jobs:
           set +e
           echo "./oarepo[rdm]" >requirements.in
           
-          .venv-tools/bin/uv pip compile requirements.in >requirements-oarepo.txt.comments 
+          .venv-tools/bin/uv pip compile requirements.in  | grep -v "oarepo=" >requirements-oarepo.txt.comments 
 
           cat requirements-oarepo.txt.comments | sort | egrep -v '^\s*#' >requirements-oarepo.txt
           set -e
@@ -163,7 +163,7 @@ jobs:
           
           echo "./oarepo[rdm,tests]" >requirements.in
           
-          .venv-tools/bin/uv pip compile requirements.in >requirements-oarepo-tests.txt.comments 
+          .venv-tools/bin/uv pip compile requirements.in | grep -v "oarepo=" >requirements-oarepo-tests.txt.comments 
 
           cat requirements-oarepo-tests.txt.comments | sort | egrep -v '^\s*#' >requirements-oarepo-tests.txt
           set -e
