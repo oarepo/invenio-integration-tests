@@ -230,7 +230,7 @@ jobs:
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
           python3 -m venv .venv-react
-          . .venv-react/bin/activate
+          source .venv-react/bin/activate
           pip install -U setuptools pip wheel
 
       - name: Install rdm to the extraction virtualenv
@@ -273,10 +273,10 @@ jobs:
           source .venv-tests/bin/activate
 
           # install in non-editable mode
-          pip install ./oarepo
+          .venv-tools/bin/uv pip install ./oarepo
 
           cd simple_repo
-          pip install -e . --no-deps
+          ../.venv-tools/bin/uv pip install -e . --no-deps
 
       - name: Prepare invenio inside simple repo
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
@@ -374,7 +374,7 @@ jobs:
         env:
           REST_URL: https://127.0.0.1:5000/api/simple-records
         run: |
-          . .venv-tests/bin/activate
+          source .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           export SRVLOG=$PWD/invenio_run.log
           /bin/echo -e "\n=== invenio tokens create: ==="
@@ -400,16 +400,16 @@ jobs:
       - name: Install simple repo with python tests
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
-          . .venv-tests/bin/activate
-          pip install -e 'oarepo[tests]'
+          source .venv-tests/bin/activate
+          .venv-tools/bin/uv pip install -e 'oarepo[tests]'
           cd simple_repo
-          pip install -e '.[tests]'
+          ../.venv-tools/bin/uv pip install -e '.[tests]'
 
 
       - name: Run pytest
         if: env.RUN_TESTS_AND_PUBLISH_NEW_OAREPO_VERSION == 'yes'
         run: |
-          . .venv-tests/bin/activate
+          source .venv-tests/bin/activate
           export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
           cd simple_repo
           /bin/echo -e "\n=== pytest tests: ==="
