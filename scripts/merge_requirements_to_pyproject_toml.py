@@ -63,6 +63,7 @@ def main(
         "tests": [req.line for req in test_requirements.values()],
         "dev": [req.line for req in test_requirements.values()],
         "devs": [req.line for req in test_requirements.values()],
+        "s3": []  # backward compatibility, s3 is baked in the base image
     }
 
     encoder = toml.TomlArraySeparatorEncoder(separator=",\n    ")
