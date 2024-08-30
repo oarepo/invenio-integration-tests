@@ -32,6 +32,10 @@ runs:
       ${PYTHON} -m venv .tools/uv
       .tools/uv/bin/pip install -U uv
       
-      ln -s ${{ github.workspace }}/.tools/uv/bin/uv ${{ github.workspace }}/.tools/bin/uv 
+      cat <<EOF > .tools/bin/uv
+      #!/bin/bash
+      ${{ github.workspace }}/.tools/uv/bin/uv "$@"
+      EOF
+      chmod +x .tools/bin/uv
 
       uv --version
