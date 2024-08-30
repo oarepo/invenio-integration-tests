@@ -52,3 +52,16 @@ runs:
 
       invenio-cli --version
       invenio-cli check-requirements
+      
+
+  - name: "Install pipenv"
+    shell: "bash"
+    run: |
+      uv venv .tools/pipenv
+      source .tools/pipenv/bin/activate
+      uv pip install -U pipenv
+
+      ln -s ${{ github.workspace }}/.tools/pipenv/bin/pipenv ${{ github.workspace }}/.tools/bin/pipenv 
+
+      invenio-cli --version
+      invenio-cli check-requirements

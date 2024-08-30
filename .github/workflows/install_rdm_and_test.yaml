@@ -38,7 +38,7 @@ jobs:
       - name: Install os prerequisites
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick pipenv
+          sudo apt-get install -y imagemagick
 
           pipenv --version
           which pipenv
