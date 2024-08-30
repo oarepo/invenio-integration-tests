@@ -31,9 +31,6 @@ on:
         description: OARepo version (12, 13, ...)
         required: true
         default: 12
-  push:
-    branches:
-      - invenio-forks
 
 permissions:
   id-token: write
