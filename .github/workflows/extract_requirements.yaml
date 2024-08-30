@@ -49,6 +49,9 @@ jobs:
           echo "POSTGRES_VERSION=14" | tee -a $GITHUB_ENV
           echo "POSTGRES_DB=invenio" | tee -a $GITHUB_ENV
 
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v4
+
       - name: Install python
         uses: ./.github/actions/install_python@invenio-forks      # TODO: change the branch when merging to main
         with:
