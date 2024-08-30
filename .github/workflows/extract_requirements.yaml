@@ -66,7 +66,7 @@ jobs:
           uv init rdm --python $PYTHON_VERSION
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
-          uv pip list  >../artifacts/rdm_requirements.txt
+          uv pip freeze  >../artifacts/rdm_requirements.txt
           uv pip list --format=json >../artifacts/rdm_requirements.json
 
       - name: Lock app-rdm + tests version
@@ -74,14 +74,14 @@ jobs:
           uv init rdm_tests --python $PYTHON_VERSION
           cd rdm_tests
           uv add "$APP_RDM_TEST_VERSION"
-          uv pip list  >../artifacts/rdm_test_requirements.txt
+          uv pip freeze  >../artifacts/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/rdm_test_requirements.json
 
       - name: Check that the two requirements are compatible
         # , that is, that the test requirements are a superset of the requirements
         run: |
           echo "Diff between the requirements and test requirements"
-          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt
+          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt || true
           if diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep -v "^---" | grep '^-'; then
             echo "Requirements and test requirements are not compatible !!!"
           fi
