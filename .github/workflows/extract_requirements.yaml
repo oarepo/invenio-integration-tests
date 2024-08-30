@@ -66,13 +66,20 @@ jobs:
           uv init rdm --python $PYTHON_VERSION
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
+          echo "====== RDM dependencies ======"
+          uv pip list
+          
           uv pip list --format=json >../artifacts/rdm_requirements.json
 
-      - name: Lock app-rdm test version
+      - name: Lock app-rdm + tests version
         run: |
           uv init rdm_tests --python $PYTHON_VERSION
           cd rdm_tests
           uv add "$APP_RDM_TEST_VERSION"
+
+          echo "====== RDM + tests dependencies ======"
+          uv pip list
+
           uv pip list --format=json >../artifacts/rdm_test_requirements.json
 
       - name: Upload artifacts
@@ -81,4 +88,3 @@ jobs:
           name: rdm_versions
           path: artifacts
           if-no-files-found: error
-          retention-days: 90
