@@ -45,10 +45,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Redis
-        uses: shogo82148/actions-setup-redis@v1
-        with:
-          redis-version: ${{env.REDIS_VERSION}}
 
       - name: Install python
         uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
@@ -71,34 +67,34 @@ jobs:
           invenio-cli check-requirements --development
           invenio-cli install
 
-      - name: Opensearch $OPENSEARCH_VERSION
-        uses: ankane/setup-opensearch@v1
-        with:
-          opensearch-version: $OPENSEARCH_VERSION
-
-      - name: Redis $REDIS_VERSION
+      - name: Redis
         uses: shogo82148/actions-setup-redis@v1
         with:
-          redis-version: $REDIS_VERSION
+          redis-version: ${{env.REDIS_VERSION}}
 
-      - name: Postgres $POSTGRES_VERSION
+      - name: Opensearch
+        uses: ankane/setup-opensearch@v1
+        with:
+          opensearch-version: ${{env.OPENSEARCH_VERSION}}
+
+      - name: Postgres
         uses: ankane/setup-postgres@v1
         with:
-          postgres-version: $POSTGRES_VERSION
-          database: $POSTGRES_DB
+          postgres-version: ${{env.POSTGRES_VERSION}}
+          database: ${{env.POSTGRES_DB}}
 
-      - name: Test opensearch on port $OPENSEARCH_PORT
+      - name: Test opensearch
         run: |
           netstat -ntlp
-          curl -s http://localhost:$OPENSEARCH_PORT
+          curl -s http://localhost:${{env.OPENSEARCH_PORT}}
 
       - name: "Test redis: redis-cli ping"
         run: |
           redis-cli ping
 
-      - name: Test postgres version $POSTGRES_VERSION
+      - name: Test postgres version
         run: |
-          psql -d $POSTGRES_DB -c 'SHOW server_version'
+          psql -d ${{env.POSTGRES_DB}} -c 'SHOW server_version'
 
       - name: Start RDM services
         run: |
