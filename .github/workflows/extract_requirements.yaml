@@ -41,7 +41,7 @@ jobs:
 
           # take at least beta development versions of invenio-app-rdm
           echo "APP_RDM_PRODUCTION_VERSION=invenio-app-rdm[opensearch2,s3]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"  | tee -a $GITHUB_ENV
-          echo "APP_RDM_TEST_VERSION: invenio-app-rdm[opensearch2,s3,tests]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"  | tee -a $GITHUB_ENV
+          echo "APP_RDM_TEST_VERSION=invenio-app-rdm[opensearch2,s3,tests]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"  | tee -a $GITHUB_ENV
 
           echo "OPENSEARCH_PORT=9200" | tee -a $GITHUB_ENV
           echo "OPENSEARCH_VERSION=2" | tee -a $GITHUB_ENV
@@ -66,7 +66,6 @@ jobs:
           uv init rdm --python $PYTHON_VERSION
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
-          ls -la ..
           uv pip list --format=json >../artifacts/rdm_requirements.json
 
       - name: Lock app-rdm test version
