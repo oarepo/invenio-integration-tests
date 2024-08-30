@@ -33,7 +33,10 @@ jobs:
     steps:
       - name: Set environment variables
         run: |
+          echo "OAREPO_VERSION=${OAREPO_VERSION}" | tee -a $GITHUB_ENV
           OAREPO_VERSION_INC=$((OAREPO_VERSION + 1))
+
+          echo "OAREPO_VERSION_INC=${OAREPO_VERSION_INC}" | tee -a $GITHUB_ENV
           echo "PYTHON=python${PYTHON_VERSION}" | tee -a $GITHUB_ENV
 
           # take at least beta development versions of invenio-app-rdm
@@ -47,6 +50,6 @@ jobs:
           echo "POSTGRES_DB=invenio" | tee -a $GITHUB_ENV
 
       - name: Install python
-        uses: ./.github/actions/install_python
+        uses: ./.github/actions/install_python@invenio-forks      # TODO: change the branch when merging to main
         with:
           python-version: ${{ inputs.python }}
