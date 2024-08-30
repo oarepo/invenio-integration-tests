@@ -63,5 +63,4 @@ runs:
 
       ln -s ${{ github.workspace }}/.tools/pipenv/bin/pipenv ${{ github.workspace }}/.tools/bin/pipenv 
 
-      invenio-cli --version
-      invenio-cli check-requirements
+      pipenv --version

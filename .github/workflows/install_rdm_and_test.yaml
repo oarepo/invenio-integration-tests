@@ -40,9 +40,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-          pipenv --version
-          which pipenv
-
       - name: Install python
         uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
         with:
@@ -54,7 +51,6 @@ jobs:
           cd .tests
           invenio-cli init -c v${OAREPO_VERSION}.0 --config ../rdm/invenio-cli.cfg </dev/null
           cd my-site
-          echo $PATH
           invenio-cli check-requirements --development
           invenio-cli install
 
