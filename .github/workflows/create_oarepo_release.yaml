@@ -40,6 +40,13 @@ permissions:
   id-token: write
   contents: read
 
+env:
+  OPENSEARCH_PORT: "9200"
+  OPENSEARCH_VERSION: "2"
+  REDIS_VERSION: "6"
+  POSTGRES_VERSION: "14"
+  POSTGRES_DB: invenio
+
 jobs:
   extract_requirements:
     uses: ./.github/workflows/extract_requirements.yaml
