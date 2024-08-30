@@ -31,10 +31,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create artifacts directory
-        run: |
-          mkdir -p artifacts
-
       - name: Set environment variables
         run: |
           echo "OAREPO_VERSION=${OAREPO_VERSION}" | tee -a $GITHUB_ENV
@@ -60,6 +56,10 @@ jobs:
         uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
         with:
           python-version: ${{ inputs.python }}
+
+      - name: Create artifacts directory
+        run: |
+          mkdir -p artifacts
 
       - name: Lock app-rdm version
         run: |
