@@ -85,7 +85,7 @@ jobs:
           echo "Diff between the requirements and test requirements"
           diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep "^\(-\|+\)"
           diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep -v "^---" | grep '^-' | while read ; do
-            pkg=$(echo $REPLY | sed 's/-([^=]*)==.*/\1/')
+            pkg=$(echo $REPLY | sed 's/-\([^=]*\)==.*/\1/')
             versions=$(diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep pkg)
             echo "::warning::RDM requirements and RDM test requirements are not compatible in package: $versions"
           done
