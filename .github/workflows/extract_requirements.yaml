@@ -53,6 +53,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install python
-        uses: ./.github/actions/install_python@invenio-forks      # TODO: change the branch when merging to main
+        uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
         with:
           python-version: ${{ inputs.python }}
