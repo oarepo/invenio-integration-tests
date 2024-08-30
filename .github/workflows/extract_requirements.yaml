@@ -66,6 +66,7 @@ jobs:
           uv init rdm --python $PYTHON_VERSION
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
+          cat pyproject.toml
           uv pip freeze | sort -u >../artifacts/rdm_requirements.txt
           uv pip list --format=json >../artifacts/rdm_requirements.json
           cp uv.lock ../artifacts/rdm.uv.lock
@@ -75,6 +76,7 @@ jobs:
           uv init rdm_tests --python $PYTHON_VERSION
           cd rdm_tests
           uv add "$APP_RDM_TEST_VERSION"
+          cat pyproject.toml
           uv pip freeze | sort -u >../artifacts/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/rdm_test_requirements.json
           cp uv.lock ../artifacts/rdm_test.uv.lock
@@ -83,10 +85,10 @@ jobs:
         # , that is, that the test requirements are a superset of the requirements
         run: |
           echo "Diff between the requirements and test requirements"
-          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep "^\(-\|+\)"
-          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep -v "^---" | grep '^-' | while read ; do
-            pkg=$(echo $REPLY | sed 's/-\([^=]*\)==.*/\1/')
-            versions=$(diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep pkg)
+          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | egrep -v '^(---|[+][+][+])' | egrep "^(-|[+])" | tee test_changes.diff || true
+          cat test_changes.diff | grep '^-' | while read ; do
+            pkg=$(echo $REPLY | sed 's/^-\([^=]*\)==.*$/\1/')
+            versions="$(cat test_changes.diff  | grep $pkg | tr '\n' ' ')"
             echo "::warning::RDM requirements and RDM test requirements are not compatible in package: $versions"
           done
 
