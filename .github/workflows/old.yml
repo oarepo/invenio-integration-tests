@@ -76,10 +76,10 @@ jobs:
           psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
         if: matrix.db == 'postgres'
 
-      - name: Set up Node16
+      - name: Set up Node20
         uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
 
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v4

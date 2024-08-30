@@ -1,0 +1,42 @@
+name: Create oarepo release
+
+# This is the main script to be run to create a new release of oarepo tooling.
+# It is triggered manually by the user or automatically during weekly builds.
+#
+# What it does
+#   1. gets the appropriate version of invenio-app-rdm
+#      extract dependencies and get the versions of the dependencies, serialize those to a json artefact
+#   2. install the rdm and test that it can be compiled and run some basal tests
+#   3. if there are any feature branches for invenio sources, apply those and run tests to make sure
+#      that the feature branches are compatible with the current version of invenio. If everything is
+#      ok, push the merged feature branches to the oarepo-<invenio-version> branch.
+#   3. Install RDM with the branched forks and run tests to make sure that the branched forks are compatible
+#      when used together.
+#   4. create the final requirements file for the oarepo version, using the branched forks
+#   5. create the pyproject.toml for the oarepo library
+#   6. create a simple repository with the oarepo library, run REST, UI and pytest tests
+#   7. create a new release of oarepo library and upload it to pypi
+
+on:
+  workflow_dispatch:
+    inputs:
+      oarepo:
+        description: OARepo version (12, 13, ...)
+        required: true
+        default: 12
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  extract_requirements:
+    uses: ./.github/workflows/extract_requirements.yaml
+    with:
+#      secrets: inherit
+      oarepo: ${{ github.event.inputs.oarepo }}
+#  install_rdm_with_requirements_and_test:
+#    uses: ./.github/workflows/install_rdm_and_test.yaml
+#    with:
+#      secrets: inherit
+#      oarepo: ${{ github.event.inputs.oarepo }}

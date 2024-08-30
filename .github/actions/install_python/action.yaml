@@ -1,0 +1,37 @@
+name: "Install python ecosystem"
+inputs:
+  python-version:
+    description: "The version of Python to install"
+    required: true
+    default: "3.12"
+runs:
+  using: "composite"
+  steps:
+
+  - name: "Set up environment variables"
+    shell: "bash"
+    run: |
+      echo "PYTHON=python${{ inputs.python-version }}" >> $GITHUB_ENV
+
+  - name: "Create tools directory and add it to PATH"
+    shell: "bash"
+    run: |
+      if [ ! -d .tools ] ; then mkdir .tools ; fi
+      if [ ! -d .tools/bin ] ; then mkdir .tools/bin ; fi
+      echo "PATH=${{ github.workspace }}/.tools/bin:${{ env.PATH }}" >> $GITHUB_ENV
+
+  - name: "Set up Python ${{ inputs.python-version }}"
+    uses: "actions/setup-python@v4"
+    with:
+      python-version: "${{ inputs.python-version }}"
+
+  - name: "Install UV resolver"
+    shell: "bash"
+    run: |
+      if [ ! -d .tools ] ; then mkdir .tools ; fi
+      ${PYTHON} -m venv .tools/uv
+      .tools/uv/bin/pip install -U uv
+      
+      ln -s ${{ github.workspace }}/.tools/uv/bin/uv ${{ github.workspace }}/.tools/bin/uv 
+
+      uv --version
