@@ -47,6 +47,13 @@ jobs:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
+  test_rdm:
+    uses: ./.github/workflows/install_rdm_and_test.yaml
+    with:
+      secrets: inherit
+      oarepo: ${{ github.event.inputs.oarepo }}
+
+
 #  install_rdm_with_requirements_and_test:
 #    uses: ./.github/workflows/install_rdm_and_test.yaml
 #    with:

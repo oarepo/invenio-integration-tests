@@ -35,3 +35,20 @@ runs:
       ln -s ${{ github.workspace }}/.tools/uv/bin/uv ${{ github.workspace }}/.tools/bin/uv 
 
       uv --version
+
+  - name: Set up Node20
+    uses: actions/setup-node@v4
+    with:
+      node-version: 20
+
+  - name: "Install invenio-cli"
+    shell: "bash"
+    run: |
+      uv venv .tools/invenio-cli
+      source .tools/invenio-cli/bin/activate
+      uv pip install -U invenio-cli
+
+      ln -s ${{ github.workspace }}/.tools/invenio-cli/bin/invenio-cli ${{ github.workspace }}/.tools/bin/invenio-cli 
+
+      invenio-cli --version
+      invenio-cli check-requirements

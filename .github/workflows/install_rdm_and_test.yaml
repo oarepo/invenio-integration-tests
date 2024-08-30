@@ -1,0 +1,88 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2024 CESNET.
+#
+# invenio-integration-tests is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
+name: Install and test current Invenio RDM
+
+on:
+  workflow_call:
+    inputs:
+      oarepo:
+        description: OARepo version (12, ...)
+        required: true
+        default: "12"
+        type: string
+      python:
+        description: Python version
+        required: true
+        default: "3.12"
+        type: string
+
+env:
+  # keep the following consistent
+  OAREPO_VERSION: ${{ inputs.oarepo }}
+  PYTHON_VERSION: ${{ inputs.python }}
+
+jobs:
+  test_rdm:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v4
+
+      - name: Install os prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Install python
+        uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
+        with:
+          python-version: ${{ inputs.python }}
+
+      - name: Install RDM with the branched forks
+        run: |
+          mkdir .tests
+          cd .tests
+          invenio-cli init -c v${OAREPO_VERSION}.0 --config rdm/invenio.config </dev/null
+          cd my-site
+          invenio-cli check-requirements --development
+          invenio-cli install
+
+      - name: Opensearch ${{ env.OPENSEARCH_VERSION }}
+        uses: ankane/setup-opensearch@v1
+        with:
+          opensearch-version: ${{ env.OPENSEARCH_VERSION }}
+
+      - name: Redis ${{ env.REDIS_VERSION }}
+        uses: shogo82148/actions-setup-redis@v1
+        with:
+          redis-version: ${{ env.REDIS_VERSION }}
+
+      - name: Postgres ${{ env.POSTGRES_VERSION }}
+        uses: ankane/setup-postgres@v1
+        with:
+          postgres-version: ${{ env.POSTGRES_VERSION }}
+          database: ${{ env.POSTGRES_DB }}
+
+      - name: Test opensearch on port ${{ env.OPENSEARCH_PORT }}
+        run: |
+          netstat -ntlp
+          curl -s http://localhost:${{ env.OPENSEARCH_PORT }}
+
+      - name: "Test redis: redis-cli ping"
+        run: |
+          redis-cli ping
+
+      - name: Test postgres version ${{ env.POSTGRES_VERSION }}
+        run: |
+          psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
+
+      - name: Start RDM services
+        run: |
+          invenio-cli services setup
