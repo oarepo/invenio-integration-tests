@@ -38,7 +38,7 @@ jobs:
       - name: Install os prerequisites
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick
+          sudo apt-get install -y imagemagick pipenv
 
       - name: Install python
         uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
