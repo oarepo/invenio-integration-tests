@@ -31,15 +31,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v4
+
       - name: Setup environment variables
         uses: ./.github/actions/setup_env      # TODO: change the branch when merging to main
         with:
           python-version: ${{ inputs.python }}
           oarepo-version: ${{ inputs.oarepo }}
-
-
-      - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v4
 
       - name: Install os prerequisites
         run: |
