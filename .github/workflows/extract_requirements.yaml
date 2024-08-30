@@ -34,17 +34,17 @@ jobs:
       - name: Set environment variables
         run: |
           OAREPO_VERSION_INC=$((OAREPO_VERSION + 1))
-          echo "PYTHON=python${PYTHON_VERSION}" >> $GITHUB_ENV
+          echo "PYTHON=python${PYTHON_VERSION}" | tee -a $GITHUB_ENV
 
           # take at least beta development versions of invenio-app-rdm
-          echo "APP_RDM_PRODUCTION_VERSION="invenio-app-rdm[opensearch2,s3]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"
-          echo "APP_RDM_TEST_VERSION: "invenio-app-rdm[opensearch2,s3,tests]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"
+          echo "APP_RDM_PRODUCTION_VERSION=invenio-app-rdm[opensearch2,s3]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"  | tee -a $GITHUB_ENV
+          echo "APP_RDM_TEST_VERSION: invenio-app-rdm[opensearch2,s3,tests]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"  | tee -a $GITHUB_ENV
 
-          echo "OPENSEARCH_PORT=9200" >> $GITHUB_ENV
-          echo "OPENSEARCH_VERSION=2" >> $GITHUB_ENV
-          echo "REDIS_VERSION=6" >> $GITHUB_ENV
-          echo "POSTGRES_VERSION=14" >> $GITHUB_ENV
-          echo "POSTGRES_DB=invenio" >> $GITHUB_ENV
+          echo "OPENSEARCH_PORT=9200" | tee -a $GITHUB_ENV
+          echo "OPENSEARCH_VERSION=2" | tee -a $GITHUB_ENV
+          echo "REDIS_VERSION=6" | tee -a $GITHUB_ENV
+          echo "POSTGRES_VERSION=14" | tee -a $GITHUB_ENV
+          echo "POSTGRES_DB=invenio" | tee -a $GITHUB_ENV
 
       - name: Install python
         uses: ./.github/actions/install_python
