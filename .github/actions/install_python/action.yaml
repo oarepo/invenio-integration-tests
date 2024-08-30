@@ -18,7 +18,7 @@ runs:
     run: |
       if [ ! -d .tools ] ; then mkdir .tools ; fi
       if [ ! -d .tools/bin ] ; then mkdir .tools/bin ; fi
-      echo "PATH=${{ github.workspace }}/.tools/bin:${{ env.PATH }}" >> $GITHUB_ENV
+      echo "PATH=${{ github.workspace }}/.tools/bin:$PATH" >> $GITHUB_ENV
 
   - name: "Set up Python ${{ inputs.python-version }}"
     uses: "actions/setup-python@v4"
@@ -32,10 +32,6 @@ runs:
       ${PYTHON} -m venv .tools/uv
       .tools/uv/bin/pip install -U uv
       
-      cat <<EOF > .tools/bin/uv
-      #!/bin/bash
-      ${{ github.workspace }}/.tools/uv/bin/uv "$@"
-      EOF
-      chmod +x .tools/bin/uv
+      ln -s ${{ github.workspace }}/.tools/uv/bin/uv ${{ github.workspace }}/.tools/bin/uv 
 
       uv --version
