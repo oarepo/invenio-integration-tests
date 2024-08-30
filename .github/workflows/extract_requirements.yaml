@@ -66,9 +66,7 @@ jobs:
           uv init rdm --python $PYTHON_VERSION
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
-          echo "====== RDM dependencies ======"
-          uv pip list
-          
+          uv pip list  >../artifacts/rdm_requirements.txt
           uv pip list --format=json >../artifacts/rdm_requirements.json
 
       - name: Lock app-rdm + tests version
@@ -76,10 +74,7 @@ jobs:
           uv init rdm_tests --python $PYTHON_VERSION
           cd rdm_tests
           uv add "$APP_RDM_TEST_VERSION"
-
-          echo "====== RDM + tests dependencies ======"
-          uv pip list
-
+          uv pip list  >../artifacts/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/rdm_test_requirements.json
 
       - name: Upload artifacts
@@ -88,3 +83,12 @@ jobs:
           name: rdm_versions
           path: artifacts
           if-no-files-found: error
+
+      - name: Display Requirements
+        run: |
+          echo "========= RDM Requirements ========="
+          cat artifacts/rdm_requirements.txt
+          echo
+          echo
+          echo "========= RDM Test Requirements ========="
+          cat artifacts/rdm_test_requirements.txt
