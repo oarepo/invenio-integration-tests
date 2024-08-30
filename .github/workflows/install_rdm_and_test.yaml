@@ -45,11 +45,6 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
-      - name: Install python
-        uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
-        with:
-          python-version: ${{ inputs.python }}
-
       - name: Create a RDM instance
         run: |
           mkdir .tests
