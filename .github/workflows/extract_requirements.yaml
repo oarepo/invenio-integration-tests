@@ -31,6 +31,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Create artifacts directory
+        run: |
+          mkdir -p artifacts
       - name: Set environment variables
         run: |
           echo "OAREPO_VERSION=${OAREPO_VERSION}" | tee -a $GITHUB_ENV
@@ -56,3 +59,25 @@ jobs:
         uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
         with:
           python-version: ${{ inputs.python }}
+
+      - name: Lock app-rdm version
+        run: |
+          uv init rdm --python $PYTHON_VERSION
+          cd rdm
+          uv add "$APP_RDM_PRODUCTION_VERSION"
+          uv pip list --format=json >../artifacts/rdm_requirements.json
+
+      - name: Lock app-rdm test version
+        run: |
+          uv init rdm_tests --python $PYTHON_VERSION
+          cd rdm_tests
+          uv add "$APP_RDM_TEST_VERSION"
+          uv pip list --format=json >../artifacts/rdm_test_requirements.json
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdm_versions
+          path: artifacts
+          if-no-files-found: error
+          retention-days: 90
