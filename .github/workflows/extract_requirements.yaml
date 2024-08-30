@@ -83,7 +83,7 @@ jobs:
         # , that is, that the test requirements are a superset of the requirements
         run: |
           echo "Diff between the requirements and test requirements"
-          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt || grep "^\(-\|+\)"
+          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep "^\(-\|+\)"
           if diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep -v "^---" | grep '^-'; then
             echo "Requirements and test requirements are not compatible !!!"
           fi
