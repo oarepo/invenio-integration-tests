@@ -31,6 +31,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup environment variables
+        uses: ./.github/actions/setup_env      # TODO: change the branch when merging to main
+        with:
+          python-version: ${{ inputs.python }}
+          oarepo-version: ${{ inputs.oarepo }}
+
 
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v4
@@ -40,10 +46,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Redis $REDIS_VERSION
+      - name: Redis
         uses: shogo82148/actions-setup-redis@v1
         with:
-          redis-version: $REDIS_VERSION
+          redis-version: ${{env.REDIS_VERSION}}
 
       - name: Install python
         uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
