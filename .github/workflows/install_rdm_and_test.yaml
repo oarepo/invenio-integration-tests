@@ -49,7 +49,7 @@ jobs:
         run: |
           mkdir .tests
           cd .tests
-          invenio-cli init -c v${OAREPO_VERSION}.0 --config rdm/invenio.config </dev/null
+          invenio-cli init -c v${OAREPO_VERSION}.0 --config ../rdm/invenio.config </dev/null
           cd my-site
           invenio-cli check-requirements --development
           invenio-cli install
