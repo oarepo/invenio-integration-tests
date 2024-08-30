@@ -66,7 +66,7 @@ jobs:
           uv init rdm --python $PYTHON_VERSION
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
-          uv pip freeze  >../artifacts/rdm_requirements.txt
+          uv pip freeze | sort -u >../artifacts/rdm_requirements.txt
           uv pip list --format=json >../artifacts/rdm_requirements.json
           cp uv.lock ../artifacts/rdm.uv.lock
 
@@ -75,7 +75,7 @@ jobs:
           uv init rdm_tests --python $PYTHON_VERSION
           cd rdm_tests
           uv add "$APP_RDM_TEST_VERSION"
-          uv pip freeze  >../artifacts/rdm_test_requirements.txt
+          uv pip freeze | sort -u >../artifacts/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/rdm_test_requirements.json
           cp uv.lock ../artifacts/rdm_test.uv.lock
 
@@ -84,9 +84,9 @@ jobs:
         run: |
           echo "Diff between the requirements and test requirements"
           diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep "^\(-\|+\)"
-          if diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep -v "^---" | grep '^-'; then
-            echo "Requirements and test requirements are not compatible !!!"
-          fi
+          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep -v "^---" | grep '^-' | while read ; do
+            echo "::warning::RDM requirements and test requirements are not compatible: $REPLY"
+          done
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
