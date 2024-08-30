@@ -34,6 +34,7 @@ jobs:
       - name: Create artifacts directory
         run: |
           mkdir -p artifacts
+
       - name: Set environment variables
         run: |
           echo "OAREPO_VERSION=${OAREPO_VERSION}" | tee -a $GITHUB_ENV
@@ -65,6 +66,7 @@ jobs:
           uv init rdm --python $PYTHON_VERSION
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
+          ls -la ..
           uv pip list --format=json >../artifacts/rdm_requirements.json
 
       - name: Lock app-rdm test version
