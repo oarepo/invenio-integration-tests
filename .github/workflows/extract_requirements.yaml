@@ -27,7 +27,7 @@ env:
   PYTHON_VERSION: ${{ inputs.python }}
 
 jobs:
-  set_environment_variables:
+  extract_requirements:
     runs-on: ubuntu-latest
 
     steps:
@@ -76,6 +76,15 @@ jobs:
           uv add "$APP_RDM_TEST_VERSION"
           uv pip list  >../artifacts/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/rdm_test_requirements.json
+
+      - name: Check that the two requirements are compatible
+        # , that is, that the test requirements are a superset of the requirements
+        run: |
+          echo "Diff between the requirements and test requirements"
+          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt
+          if diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | grep -v "^---" | grep '^-'; then
+            echo "Requirements and test requirements are not compatible !!!"
+          fi
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
