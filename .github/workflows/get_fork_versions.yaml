@@ -57,7 +57,7 @@ jobs:
         run: |
             mkdir -p artifacts/fork-versions
             bt_get_fork_versions \
-                ${OAREPO_VERSION}} \
+                ${OAREPO_VERSION} \
                 artifacts/requirements/rdm_requirements.json \
                 invenio-forks.yaml \
                 --output-file artifacts/fork-versions/forks_and_versions.json
