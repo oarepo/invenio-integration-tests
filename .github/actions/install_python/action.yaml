@@ -70,7 +70,7 @@ runs:
     run: |
       uv venv .tools/build-tools
       source .tools/build-tools/bin/activate
-      uv pip install -U ./build-tools
+      uv pip install -U -e ./build-tools
 
       ln -s ${{ github.workspace }}/.tools/build-tools/bin/bt* ${{ github.workspace }}/.tools/bin/ 
       ls -la ${{ github.workspace }}/.tools/bin
