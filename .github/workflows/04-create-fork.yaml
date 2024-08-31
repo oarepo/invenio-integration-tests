@@ -52,6 +52,12 @@ jobs:
 
       - name: Convert package and version to environment variables
         run: |
-          echo "PACKAGE=$(echo ${{ inputs.package_and_version }} | jq -r '.package')" | tee -a $GITHUB_ENV
-          echo "VERSION=$(echo ${{ inputs.package_and_version }} | jq -r '.version')" | tee -a $GITHUB_ENV
-          echo "FEATURES=$(echo ${{ inputs.package_and_version }} | jq -r '.features | join(\" \")')" | tee -a $GITHUB_ENV
+          cat <<EOF >> $GITHUB_ENV
+          
+          PACKAGE=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.package')
+          VERSION=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
+          FEATURES=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.features | join(" ")')
+
+          EOF
+          
+          cat $GITHUB_ENV
