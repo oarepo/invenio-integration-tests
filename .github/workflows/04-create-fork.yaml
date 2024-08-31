@@ -31,6 +31,8 @@ env:
   OAREPO_VERSION: ${{ inputs.oarepo }}
   PYTHON_VERSION: ${{ inputs.python }}
   PACKAGE_AND_VERSION: ${{ inputs.package_and_version }}
+  GH_TOKEN: ${{ github.token }}
+
 jobs:
   create_fork:
     runs-on: ubuntu-latest
