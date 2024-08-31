@@ -68,8 +68,8 @@ jobs:
       matrix:
         package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
     uses: ./.github/workflows/04-create-fork.yaml
+    secrets: inherit
     with:
-      secrets: inherit
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
       package_and_version: ${{ matrix.package_and_version }}
