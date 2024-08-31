@@ -27,7 +27,7 @@ env:
   PYTHON_VERSION: ${{ inputs.python }}
 
 jobs:
-  extract_requirements:
+  main:
     runs-on: ubuntu-latest
 
     steps:

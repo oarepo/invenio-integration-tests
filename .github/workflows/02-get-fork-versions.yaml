@@ -32,7 +32,7 @@ env:
   PYTHON_VERSION: ${{ inputs.python }}
 
 jobs:
-  get_fork_versions:
+  main:
     runs-on: ubuntu-latest
     outputs:
       forks_and_versions: ${{ steps.get_fork_versions.outputs.forks_and_versions }}
