@@ -35,19 +35,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup environment variables
-        uses: ./.github/actions/setup_env      # TODO: change the branch when merging to main
+        uses: ./.github/actions/setup_env
         with:
           python-version: ${{ inputs.python }}
           oarepo-version: ${{ inputs.oarepo }}
 
-      - name: Install python
-        uses: ./.github/actions/install_python      # TODO: change the branch when merging to main
+      - name: Install python and tools
+        uses: ./.github/actions/install_python
         with:
           python-version: ${{ inputs.python }}
 
       - name: Create artifacts directory
         run: |
-          mkdir -p artifacts
+          mkdir -p artifacts/requirements
 
       - name: Lock app-rdm version
         run: |
@@ -55,9 +55,9 @@ jobs:
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
           cat pyproject.toml
-          uv pip freeze | sort -u >../artifacts/rdm_requirements.txt
-          uv pip list --format=json >../artifacts/rdm_requirements.json
-          cp uv.lock ../artifacts/rdm.uv.lock
+          uv pip freeze | sort -u >../artifacts/requirements/rdm_requirements.txt
+          uv pip list --format=json >../artifacts/requirements/rdm_requirements.json
+          cp uv.lock ../artifacts/requirements/rdm.uv.lock
 
       - name: Lock app-rdm + tests version
         run: |
@@ -65,15 +65,15 @@ jobs:
           cd rdm_tests
           uv add "$APP_RDM_TEST_VERSION"
           cat pyproject.toml
-          uv pip freeze | sort -u >../artifacts/rdm_test_requirements.txt
-          uv pip list --format=json >../artifacts/rdm_test_requirements.json
-          cp uv.lock ../artifacts/rdm_test.uv.lock
+          uv pip freeze | sort -u >../artifacts/requirements/rdm_test_requirements.txt
+          uv pip list --format=json >../artifacts/requirements/rdm_test_requirements.json
+          cp uv.lock ../artifacts/requirements/rdm_test.uv.lock
 
       - name: Check that the two requirements are compatible
         # , that is, that the test requirements are a superset of the requirements
         run: |
           echo "Diff between the requirements and test requirements"
-          diff -u artifacts/rdm_requirements.txt artifacts/rdm_test_requirements.txt | egrep -v '^(---|[+][+][+])' | egrep "^(-|[+])" | tee test_changes.diff || true
+          diff -u artifacts/requirements/rdm_requirements.txt artifacts/requirements/rdm_test_requirements.txt | egrep -v '^(---|[+][+][+])' | egrep "^(-|[+])" | tee test_changes.diff || true
           cat test_changes.diff | grep '^-' | while read ; do
             pkg=$(echo $REPLY | sed 's/^-\([^=]*\)==.*$/\1/')
             versions="$(cat test_changes.diff  | grep $pkg | tr '\n' ' ')"
@@ -84,14 +84,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: rdm_versions
-          path: artifacts
+          path: artifacts/requirements
           if-no-files-found: error
 
       - name: Display Requirements
         run: |
           echo "========= RDM Requirements ========="
-          cat artifacts/rdm_requirements.txt
+          cat artifacts/requirements/rdm_requirements.txt
           echo
           echo
           echo "========= RDM Test Requirements ========="
-          cat artifacts/rdm_test_requirements.txt
+          cat artifacts/requirements/rdm_test_requirements.txt

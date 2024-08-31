@@ -1,0 +1,19 @@
+[project]
+name = "build-tools"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyyaml>=6.0.2",
+    "semver>=3.0.2",
+    "typer>=0.12.5",
+]
+
+[project.scripts]
+bt_get_fork_versions = "build_tools.get_fork_versions:app"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

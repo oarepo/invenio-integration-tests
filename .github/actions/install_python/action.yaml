@@ -64,3 +64,13 @@ runs:
       ln -s ${{ github.workspace }}/.tools/pipenv/bin/pipenv ${{ github.workspace }}/.tools/bin/pipenv 
 
       pipenv --version
+
+  - name: "Install build tools"
+    shell: "bash"
+    run: |
+      uv venv .tools/build-tools
+      source .tools/build-tools/bin/activate
+      uv pip install -U ./build-tools
+
+      ln -s ${{ github.workspace }}/.tools/build-tools/bin/bt* ${{ github.workspace }}/.tools/bin/ 
+      ls -la ${{ github.workspace }}/.tools/bin

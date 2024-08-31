@@ -81,3 +81,7 @@ ui_tests/node_modules
 .venv-react
 .venv-tests
 
+.venv*
+uv.lock
+/artifacts
+

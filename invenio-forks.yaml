@@ -1,0 +1,6 @@
+packages:
+  - name: invenio-communities
+    oarepo: 12
+    features:
+      - name: kwargs-extension
+        invenio-version: ">=13.0.0, <14"

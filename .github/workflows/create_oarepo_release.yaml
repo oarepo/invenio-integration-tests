@@ -48,11 +48,20 @@ jobs:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
-  test_rdm:
-    uses: ./.github/workflows/install_rdm_and_test.yaml
+#  test_rdm:
+#    uses: ./.github/workflows/install_rdm_and_test.yaml
+#    with:
+#      oarepo: ${{ github.event.inputs.oarepo }}
+#      python: ${{ github.event.inputs.python }}
+
+  get_fork_versions:
+    uses: ./.github/workflows/get_fork_versions.yaml
+    needs:
+      - extract_requirements
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
+
 
 
 #  install_rdm_with_requirements_and_test:
