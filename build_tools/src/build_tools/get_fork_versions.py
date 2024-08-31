@@ -37,9 +37,8 @@ def main(oarepo_version: str,
             print("Error in fork definition")
             pprint(pkg)
             raise
-    pprint(versions)
     if output_file:
-        output_file.write_text(json.dumps(versions))
+        output_file.write_text(json.dumps([json.dumps(x) for x in versions]))
 
 
 def get_package_version(forked_package, oarepo_version, reqs):
