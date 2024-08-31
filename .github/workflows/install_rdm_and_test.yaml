@@ -98,4 +98,5 @@ jobs:
 
       - name: Start RDM services
         run: |
+          cd .tests/my-site
           invenio-cli services setup
