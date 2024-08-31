@@ -24,7 +24,7 @@ on:
     outputs:
       forks_and_versions:
         description: "Invenio forks and their versions"
-        value: ${{ jobs.get_fork_versions.outputs.forks_and_versions }}
+        value: ${{ jobs.main.outputs.forks_and_versions }}
 
 env:
   # keep the following consistent
