@@ -44,7 +44,7 @@ jobs:
       - name: Download artifacts from extract_requirements
         uses: actions/download-artifact@v4
         with:
-          name: artifacts/requirements
+          name: rdm_versions
           path: artifacts/requirements
 
       - name: Install python and tools
@@ -55,4 +55,17 @@ jobs:
       - id: get_fork_versions
         name: Get forks and their versions
         run: |
-            exit 1
+            mkdir -p artifacts/fork-versions
+            bt_get_fork_versions \
+                ${OAREPO_VERSION}} \
+                artifacts/requirements/rdm_requirements.json \
+                invenio-forks.yaml \
+                --output-file artifacts/fork-versions/forks_and_versions.json
+            # cat the file to github output variable
+            echo "forks_and_versions=$(cat artifacts/fork-versions/forks_and_versions.json)" >> $GITHUB_OUTPUT
+
+      - name: Upload fork versions
+        uses: actions/upload-artifact@v4
+        with:
+          name: fork-versions
+          path: artifacts/fork-versions

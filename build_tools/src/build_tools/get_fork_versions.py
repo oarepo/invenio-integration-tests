@@ -2,7 +2,7 @@ import functools
 import json
 from pathlib import Path
 from pprint import pprint
-from typing import Annotated
+from typing import Annotated, Optional
 import yaml
 from semver import Version
 
@@ -13,7 +13,8 @@ app = typer.Typer()
 @app.command()
 def main(oarepo_version: str,
         requirements_json_file: Annotated[Path, typer.Argument(help="Path to the requirements.json file")],
-        fork_definition: Annotated[Path, typer.Argument(help="Path to the fork definition file")]):
+        fork_definition: Annotated[Path, typer.Argument(help="Path to the fork definition file")],
+        output_file: Annotated[Path, typer.Option(help="Path to the output file")]=None):
 
     reqs = json.loads(requirements_json_file.read_text())
     forks = yaml.safe_load(fork_definition.read_text())
@@ -22,14 +23,19 @@ def main(oarepo_version: str,
         x['name']: x['version'] for x in reqs
     }
 
+    versions = []
     for pkg in forks['packages']:
         try:
             version = get_package_version(pkg, oarepo_version, reqs)
-            print(version)
+            versions.append(version)
         except:
             print("Error in fork definition")
             pprint(pkg)
             raise
+    pprint(versions)
+    if output_file:
+        output_file.write_text(json.dumps(versions))
+
 
 def get_package_version(forked_package, oarepo_version, reqs):
     if oarepo_version != str(forked_package["oarepo"]):
