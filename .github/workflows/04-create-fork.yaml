@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2024 CESNET.
+#
+# invenio-integration-tests is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
+name: Create a fork of invenio rdm library
+
+on:
+  workflow_call:
+    inputs:
+      oarepo:
+        description: OARepo version (12, ...)
+        required: true
+        default: "12"
+        type: string
+      python:
+        description: Python version
+        required: true
+        default: "3.12"
+        type: string
+      package_and_version:
+        description: "Package and version to fork"
+        # input example: {"package": "invenio-communities", "version": "13.0.6", "features": ["kwargs-extension"]}
+        required: true
+        type: string
+
+env:
+  # keep the following consistent
+  OAREPO_VERSION: ${{ inputs.oarepo }}
+  PYTHON_VERSION: ${{ inputs.python }}
+  PACKAGE_AND_VERSION: ${{ inputs.package_and_version }}
+jobs:
+  create_fork:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v4
+
+      - name: Setup environment variables
+        uses: ./.github/actions/setup_env
+        with:
+          python-version: ${{ inputs.python }}
+          oarepo-version: ${{ inputs.oarepo }}
+
+      - name: Install python and tools
+        uses: ./.github/actions/install_python
+        with:
+          python-version: ${{ inputs.python }}
+
+      - name: Convert package and version to environment variables
+        run: |
+          echo "PACKAGE=$(echo ${{ inputs.package_and_version }} | jq -r '.package')" | tee -a $GITHUB_ENV
+          echo "VERSION=$(echo ${{ inputs.package_and_version }} | jq -r '.version')" | tee -a $GITHUB_ENV
+          echo "FEATURES=$(echo ${{ inputs.package_and_version }} | jq -r '.features | join(\" \")')" | tee -a $GITHUB_ENV
