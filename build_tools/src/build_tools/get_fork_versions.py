@@ -16,6 +16,10 @@ def main(oarepo_version: str,
         fork_definition: Annotated[Path, typer.Argument(help="Path to the fork definition file")],
         output_file: Annotated[Path, typer.Option(help="Path to the output file")]=None):
 
+    print(f"Getting versions for oarepo package version {oarepo_version}")
+    print(f"Using requirements file {requirements_json_file}")
+    print(f"Using fork definition file {fork_definition}")
+
     reqs = json.loads(requirements_json_file.read_text())
     forks = yaml.safe_load(fork_definition.read_text())
 
@@ -27,7 +31,8 @@ def main(oarepo_version: str,
     for pkg in forks['packages']:
         try:
             version = get_package_version(pkg, oarepo_version, reqs)
-            versions.append(version)
+            if version:
+                versions.append(version)
         except:
             print("Error in fork definition")
             pprint(pkg)
