@@ -159,9 +159,16 @@ jobs:
         run: |
           cd .forks/${PACKAGE}
           uv venv --python=${PYTHON_VERSION}
-          source .venv
-          uv pip install -e '.[tests]'
-          pytest tests
+          source .venv/bin/activate
+          uv pip install -e '.[tests,opensearch2,s3,devs]'
+          if [ -x ./run-tests.sh ] ; then
+            ./run-tests.sh
+          elif [ -x ./run_tests.sh ] ; then
+            ./run_tests.sh
+          else
+            pytest tests
+          fi
+
 #
 #      - name: Push the fork to the remote
 #        if: env.fork_already_exists != 'true'
