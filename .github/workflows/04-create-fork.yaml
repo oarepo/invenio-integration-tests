@@ -158,6 +158,11 @@ jobs:
         # always, just to make sure that nothing has broken in package deps
         run: |
           cd .forks/${PACKAGE}
+          if [ $(git rev-parse --abbrev-ref HEAD) != ${OAREPO_VERSION} ] ; then
+            echo "The current branch is not ${OAREPO_VERSION} - probably bug in previous steps"
+            exit 1
+          fi
+
           uv venv --python=${PYTHON_VERSION}
           source .venv/bin/activate
           uv pip install -e '.[tests,opensearch2,s3,devs]'
@@ -171,8 +176,13 @@ jobs:
 
 #
 #      - name: Push the fork to the remote
-#        if: env.fork_already_exists != 'true'
 #        run: |
 #          cd .forks/${PACKAGE}
 #          git push origin ${OAREPO_VERSION}
 #          git push origin --tags
+
+      - name: Push the fork to the remote
+        if: env.fork_already_exists != 'true'
+        run: |
+          cd .forks/${PACKAGE}
+          git push origin -u ${OAREPO_VERSION}

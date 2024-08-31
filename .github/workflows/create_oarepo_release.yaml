@@ -67,6 +67,7 @@ jobs:
     strategy:
       matrix:
         package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
+      fail-fast: false
     uses: ./.github/workflows/04-create-fork.yaml
     secrets: inherit
     with:
