@@ -68,9 +68,12 @@ runs:
   - name: "Install build tools"
     shell: "bash"
     run: |
-      uv venv .tools/build-tools
+      pwd
+      ls -la
+      uv venv --python=python3.12 .tools/build-tools
       source .tools/build-tools/bin/activate
-      uv pip install -U -e ./build-tools
+      uv pip install -U setuptools pip wheel
+      uv pip install -e ./build-tools
 
       ln -s ${{ github.workspace }}/.tools/build-tools/bin/bt* ${{ github.workspace }}/.tools/bin/ 
       ls -la ${{ github.workspace }}/.tools/bin
