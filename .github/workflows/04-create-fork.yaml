@@ -58,6 +58,112 @@ jobs:
           VERSION=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
           FEATURES=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.features | join(" ")')
 
+          INVENIO_VERSION=v$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
+          OAREPO_VERSION=oarepo-$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
+
           EOF
           
           cat $GITHUB_ENV
+
+      - name: Check if the package is already forked
+        id: check_fork
+        run: |
+          mkdir -p .forks
+          cd .forks
+          gh repo clone oarepo/${PACKAGE}
+          cd ${PACKAGE}
+          git switch ${OAREPO_VERSION} && {
+            echo "The fork already exists"
+            echo "fork_already_exists=true" >> $GITHUB_ENV
+            exit 0
+          } || {
+            echo "The fork does not exist, will try to create it"
+            echo "fork_already_exists=false" >> $GITHUB_ENV
+          }
+
+      - name: Create a fork of the package
+        if: env.fork_already_exists != 'true'
+        run: |
+          cd .forks/${PACKAGE}
+          git remote add upstream https://github.com/inveniosoftware/${PACKAGE}.git || true
+          
+          # fetch invenio version and checkout it
+          git fetch --tags upstream
+          git fetch --all
+          git checkout ${INVENIO_VERSION}
+          
+          # it is a tag, so create oarepo version from it
+          git switch -c ${OAREPO_VERSION}
+
+      - name: Apply feature branches
+        if: env.fork_already_exists != 'true'
+        run: |
+          cd .forks/${PACKAGE}
+
+          # Note to feature branches: feature branch must be forked from one of the vX.Y.Z tags,
+          # not from the maintrunk. 
+          
+          get_vtag() {
+            #
+            # Get the vX.Y.Z tag that the feature branch is based on. We try all tags from the newest
+            # to the oldest until we find the one that is in the feature branch ancestors
+            #
+            feature_branch="$1"
+            vtags=$(git tag -l | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+' | sort -Vr)
+            
+            (
+              # start from a well-known state
+              git switch master || true
+            
+              # try to switch to the feature branch to check if it exists
+              git switch $feature_branch || {
+                echo "Feature branch ${feature_branch} does not exist!"
+                exit 1
+              }
+            ) >&2
+
+            for vtag in ${vtags}; do
+              # check if the feature is based on vtag
+              echo "Checking if ${feature_branch} is based on ${vtag}" >&2
+              
+              # we are on the feature branch, so we can use HEAD
+              git merge-base --is-ancestor ${vtag} HEAD >/dev/null && {
+                echo "Found vtag: $vtag" >&2
+                echo "$vtag"      # return the vtag
+                return 0
+              } || true 
+            done
+          
+            echo "Feature branch ${feature_branch} must be based on vX.Y.Z tag" >&2
+            exit 1
+          }
+          
+          apply_feature() {
+            feature=$1
+            feature_branch="oarepo-feature-${feature}"
+            
+            vtag=$(get_vtag ${feature_branch})
+
+            git switch ${OAREPO_VERSION}
+            git cherry-pick --allow-empty --allow-empty-message ${feature_branch} ^${vtag} 
+          }
+          
+          for feature in ${FEATURES}; do
+            apply_feature $feature
+          done
+
+      - name: Run tests on the patched package
+        # always, just to make sure that nothing has broken in package deps
+        run: |
+          cd .forks/${PACKAGE}
+          uv venv --python=${PYTHON_VERSION}
+          source .venv
+          uv pip install -e '.[tests]'
+          pytest tests
+#
+#      - name: Push the fork to the remote
+#        if: env.fork_already_exists != 'true'
+#        run: |
+#          cd .forks/${PACKAGE}
+#          git push origin ${OAREPO_VERSION}
+#          git push origin --tags
