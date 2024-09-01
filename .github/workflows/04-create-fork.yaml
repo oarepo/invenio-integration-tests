@@ -52,6 +52,11 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
+      - name: Git globals
+        run: |
+          git config --global user.email "oarepo@cesnet.cz"
+          git config --global user.name "OARepo Bot"
+
       - name: Convert package and version to environment variables
         run: |
           cat <<EOF >> $GITHUB_ENV
