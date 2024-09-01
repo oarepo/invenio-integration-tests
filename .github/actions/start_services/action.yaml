@@ -18,13 +18,13 @@ runs:
     with:
       postgres-version: ${{ env.POSTGRES_VERSION }}
       database: ${{ env.POSTGRES_DB }}
-    if: matrix.db == 'postgres'
 
   - name: Test opensearch on port ${{ env.OPENSEARCH_PORT }}
     shell: bash
     run: |
       netstat -ntlp
       curl -s http://localhost:${{ env.OPENSEARCH_PORT }}
+
   - name: "Test redis: redis-cli ping"
     shell: bash
     run: |
@@ -34,4 +34,3 @@ runs:
     shell: bash
     run: |
       psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
-    if: matrix.db == 'postgres'
