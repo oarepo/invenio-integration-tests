@@ -190,5 +190,5 @@ jobs:
         run: |
           cd .forks/${PACKAGE}
           echo "Push is required as there are differences between the original and the temporary fork"
-          git remote set-url --push origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/oarepo/$PACKAGE
+          git remote set-url --push origin https://x-access-token:${{ secrets.INTEGRATION_TEST }}@github.com/oarepo/$PACKAGE
           git push --force --set-upstream origin ${OAREPO_VERSION}
