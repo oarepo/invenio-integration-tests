@@ -72,13 +72,17 @@ jobs:
           
           cat $GITHUB_ENV
 
+      - name: Clone the package
+        uses: actions/checkout@v4
+        with:
+          repository: "oarepo/${{ env.PACKAGE }}"
+          token: "${{ secrets.INTEGRATION_TEST }}"
+          path: ".forks/${{env.PACKAGE}}"
+
       - name: Check if the package is already forked
         id: check_fork
         run: |
-          mkdir -p .forks
-          cd .forks
-          gh repo clone oarepo/${PACKAGE}
-          cd ${PACKAGE}
+          cd .forks/${PACKAGE}
           git switch ${OAREPO_VERSION} && {
             echo "The fork already exists"
             echo "fork_already_exists=true" >> $GITHUB_ENV
@@ -190,5 +194,4 @@ jobs:
         run: |
           cd .forks/${PACKAGE}
           echo "Push is required as there are differences between the original and the temporary fork"
-          git remote set-url --push origin https://x-access-token:${{ secrets.INTEGRATION_TEST }}@github.com/oarepo/$PACKAGE
           git push --force --set-upstream origin ${OAREPO_VERSION}
