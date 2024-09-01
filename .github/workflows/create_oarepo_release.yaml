@@ -47,12 +47,12 @@ jobs:
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
-#
-#  test_rdm:
-#    uses: ./.github/workflows/03-install-rdm-and-test.yaml
-#    with:
-#      oarepo: ${{ github.event.inputs.oarepo }}
-#      python: ${{ github.event.inputs.python }}
+
+  test_rdm:
+    uses: ./.github/workflows/03-install-rdm-and-test.yaml
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
 
   get_fork_versions:
     uses: ./.github/workflows/02-get-fork-versions.yaml
@@ -61,24 +61,24 @@ jobs:
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
-#
-#  build_and_test_forks:
-#    needs: get_fork_versions
-#    strategy:
-#      matrix:
-#        package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
-#      fail-fast: false
-#    uses: ./.github/workflows/04-create-fork.yaml
-#    secrets: inherit
-#    with:
-#      oarepo: ${{ github.event.inputs.oarepo }}
-#      python: ${{ github.event.inputs.python }}
-#      package_and_version: ${{ matrix.package_and_version }}
+
+  build_and_test_forks:
+    needs: get_fork_versions
+    strategy:
+      matrix:
+        package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
+      fail-fast: false
+    uses: ./.github/workflows/04-create-fork.yaml
+    secrets: inherit
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
+      package_and_version: ${{ matrix.package_and_version }}
 
   create_oarepo_package:
     needs:
     - get_fork_versions
-    # - build_and_test_forks
+    - build_and_test_forks
     uses: ./.github/workflows/05-create-oarepo-package.yaml
     secrets: inherit
     with:
@@ -88,7 +88,6 @@ jobs:
   simple_repository_pytest:
     needs:
     - create_oarepo_package
-#    - build_and_test_forks
     uses: ./.github/workflows/06-simple-repository-pytest.yaml
     secrets: inherit
     with:
@@ -98,7 +97,6 @@ jobs:
   simple_repository_rest:
     needs:
     - create_oarepo_package
-#    - build_and_test_forks
     uses: ./.github/workflows/07-simple-repository-rest.yaml
     secrets: inherit
     with:
@@ -108,22 +106,24 @@ jobs:
   simple_repository_ui:
     needs:
     - create_oarepo_package
-#    - build_and_test_forks
     uses: ./.github/workflows/08-simple-repository-ui.yaml
     secrets: inherit
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
-#  run_oarepo_rest_tests:
-#    needs:
-#    - create_oarepo_package
-#    - build_and_test_forks
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout oarepo/oarepo under ./oarepo
-#        uses: actions/checkout@v4
-#        with:
-#          repository: "oarepo/oarepo"
-#          ref: "rdm-${{ github.event.inputs.oarepo }}"
-#          token: "${{ secrets.INTEGRATION_TEST }}"
+# maybe: more thorough tests with model builder
+
+# upload oarepo package
+
+  upload_oarepo_package:
+    needs:
+    - simple_repository_pytest
+    - simple_repository_rest
+    - simple_repository_ui
+    - test_rdm
+    uses: ./.github/workflows/09-upload-oarepo-package.yaml
+    secrets: inherit
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}

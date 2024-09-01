@@ -5,7 +5,7 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-name: Install and run REST tests in a simple repository
+name: Install and run UI tests in a simple repository
 
 on:
   workflow_call:
