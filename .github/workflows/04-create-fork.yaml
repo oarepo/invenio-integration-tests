@@ -185,9 +185,19 @@ jobs:
             echo "push_required=true" >> $GITHUB_ENV
           }
 
-      - name: Push the fork to the remote
+      - name: Summary
         if: env.push_required == 'true'
         run: |
           cd .forks/${PACKAGE}
           echo "Push is required as there are differences between the original and the temporary fork"
-          git push origin ${OAREPO_VERSION} --force
+
+      - name: Commit and Push the fork
+        if: env.push_required == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[invenio-integration-tests] created a new fork ${{ env.PACKAGE_AND_VERSION }} "
+          branch: "${{ env.OAREPO_VERSION }}"
+          repository: .forks/${{ env.PACKAGE }}
+          commit_user_name: integration-tests
+          commit_user_email: integration-tests@oarepo.org
+          push_options: '--force'
