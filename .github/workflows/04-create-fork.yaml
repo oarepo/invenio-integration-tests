@@ -177,15 +177,17 @@ jobs:
         if: env.fork_already_exists == 'true'
         run: |
           cd .forks/${PACKAGE}
+          git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary
           git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary || {
             git branch -D ${OAREPO_VERSION}
             git switch ${OAREPO_VERSION}-temporary
             git branch -m ${OAREPO_VERSION}
             echo "push_required=True" >> $GITHUB_ENV
           }
-#
-#      - name: Push the fork to the remote
-#        if: env.push_required == 'true'
-#        run: |
-#          cd .forks/${PACKAGE}
-#          git push origin ${OAREPO_VERSION} --force
+
+      - name: Push the fork to the remote
+        if: env.push_required == 'true'
+        run: |
+          cd .forks/${PACKAGE}
+          echo "Push is required as there are differences between the original and the temporary fork"
+          # git push origin ${OAREPO_VERSION} --force
