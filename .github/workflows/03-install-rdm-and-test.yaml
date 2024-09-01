@@ -61,6 +61,8 @@ jobs:
           cp my-site/Pipfile my-site/Pipfile.bak
           cat my-site/Pipfile.bak | sed "s/python_version.*/python_version=\"${PYTHON_VERSION}\"/" > my-site/Pipfile
 
+          # TODO: replace app rdm with those being used in workflow (just for sure)
+
       - name: Install RDM
         run: |
           cd .tests/my-site
