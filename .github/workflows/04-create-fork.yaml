@@ -171,7 +171,7 @@ jobs:
           cd .forks/${PACKAGE}
           git switch ${OAREPO_VERSION}-temporary
           git branch -m ${OAREPO_VERSION}
-          echo "push_required=True" >> $GITHUB_ENV
+          echo "push_required=true" >> $GITHUB_ENV
 
       - name: Check if the temporary fork is the same as if original, if not, remove the original and rename temp to original
         if: env.fork_already_exists == 'true'
@@ -182,7 +182,7 @@ jobs:
             git branch -D ${OAREPO_VERSION}
             git switch ${OAREPO_VERSION}-temporary
             git branch -m ${OAREPO_VERSION}
-            echo "push_required=True" >> $GITHUB_ENV
+            echo "push_required=true" >> $GITHUB_ENV
           }
 
       - name: Push the fork to the remote
@@ -190,4 +190,4 @@ jobs:
         run: |
           cd .forks/${PACKAGE}
           echo "Push is required as there are differences between the original and the temporary fork"
-          # git push origin ${OAREPO_VERSION} --force
+          git push origin ${OAREPO_VERSION} --force
