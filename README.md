@@ -50,6 +50,14 @@ The `features` are a list of changes that are applied to the forked package. It 
 - `base` - the branch on which `oarepo-feature-<name>` is based on. All commits between the `baase` and `oarepo-feature-<name>` are applied to the forked package.
 - `invenio-version` - the version of the package for which the feature is applied.
 
+## Adding a new fork
+
+Fork invenio (or another) repository into the oarepo organization. Inside its settings, add `oarepo-bot` user with write access to the repository.
+
+Then create a feature branch, implement and push it.
+
+Finally add the feature to the `invenio-forks.yaml` file.
+
 ## Problems when running the build
 
 ### CONFLICT (content): Merge conflict in ...
