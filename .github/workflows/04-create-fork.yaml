@@ -54,7 +54,7 @@ jobs:
 
       - name: Git globals
         run: |
-          git config --global user.email "oarepo@cesnet.cz"
+          git config --global user.email "integration-tests@oarepo.org"
           git config --global user.name "OARepo Bot"
 
       - name: Convert package and version to environment variables
@@ -83,6 +83,8 @@ jobs:
         id: check_fork
         run: |
           cd .forks/${PACKAGE}
+          git fetch --all
+
           git switch ${OAREPO_VERSION} && {
             echo "The fork already exists"
             echo "fork_already_exists=true" >> $GITHUB_ENV
