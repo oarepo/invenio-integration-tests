@@ -31,6 +31,8 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v4
 
       - name: Setup environment variables
         uses: ./.github/actions/setup_env
