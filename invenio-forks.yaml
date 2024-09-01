@@ -11,7 +11,7 @@ packages:
       - name: removed-rdm-entrypoints
         base: v12.0.0
         invenio-version: "<12.0.5"
-      - name: oarepo-feature-removed-rdm-entrypoints-from-v12.0.5
+      - name: removed-rdm-entrypoints-from-v12.0.5
         base: v12.0.5
         invenio-version: ">=12.0.5"
 

@@ -83,7 +83,7 @@ git checkout v12.0.5
 # create a new feature branch starting here
 git switch -c oarepo-feature-removed-rdm-entrypoints-from-v12.0.5
 
-# do the cherry pick manually
+# do the cherry pick manually and resolve conflicts
 git cherry-pick --allow-empty --allow-empty-message oarepo-feature-removed-rdm-entrypoints ^v12.0.0
 
 git push oarepo-feature-removed-rdm-entrypoints-from-v12.0.5
