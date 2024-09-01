@@ -98,6 +98,8 @@ jobs:
           
           # it is a tag, so create oarepo version from it
           git switch -c ${OAREPO_VERSION}-temporary
+          
+          git branch -a
 
       - name: Apply feature branches
         run: |
@@ -109,9 +111,12 @@ jobs:
             feature_branch="oarepo-feature-${feature}"
             
             echo "Applying feature branch $feature_branch based on $feature_base onto ${OAREPO_VERSION}-temporary"
+            echo git rev-list ${feature_branch} ^${feature_base}
             git rev-list ${feature_branch} ^${feature_base}
             
             git switch ${OAREPO_VERSION}-temporary
+
+            echo git cherry-pick --allow-empty --allow-empty-message ${feature_branch} ^${feature_base} 
             git cherry-pick --allow-empty --allow-empty-message ${feature_branch} ^${feature_base} 
           }
           
