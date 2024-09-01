@@ -99,7 +99,7 @@ jobs:
     needs:
     - create_oarepo_package
 #    - build_and_test_forks
-    uses: ./.github/workflows/06-simple-repository-rest.yaml
+    uses: ./.github/workflows/07-simple-repository-rest.yaml
     secrets: inherit
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
