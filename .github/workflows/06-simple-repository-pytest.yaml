@@ -5,7 +5,7 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-name: Create OARepo package and put it into temporary artifacts
+name: Create a simple repository with the oarepo library
 
 on:
   workflow_call:
@@ -44,38 +44,23 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
-      - name: Checkout oarepo/oarepo under ./oarepo
-        uses: actions/checkout@v4
-        with:
-          repository: "oarepo/oarepo"
-          ref: "rdm-${{ env.OAREPO_VERSION }}"
-          token: "${{ secrets.INTEGRATION_TEST }}"
-          path: "oarepo"
+      - name: Start services
+        uses: ./github/actions/start_services
 
       - name: Download artifacts from extract_requirements
         uses: actions/download-artifact@v4
-        with:
-          name: rdm_versions
-          path: artifacts/requirements
-
-      - name: Download artifacts from extract_requirements
-        uses: actions/download-artifact@v4
-        with:
-          name: fork_versions
-          path: artifacts/fork_versions
-
-      - name: Create the pyproject.toml with dependencies (+forks)
-        run: |
-          cd oarepo
-          bt_apply_versions_and_forks_to_pyproject \
-              ${OAREPO_VERSION} \
-              ../artifacts/requirements/rdm_requirements.json \
-              ../artifacts/requirements/rdm_test_requirements.json \
-              ../artifacts/fork_versions/forks_and_versions.json \
-              pyproject.toml
-
-      - name: Store the whole package into artifacts
-        uses: actions/upload-artifact@v4
         with:
           name: oarepo
-          path: oarepo
+          path: artifacts/oarepo
+
+      - name: Install simple repository
+        uses: ./.github/actions/install_simple_repo
+        with:
+          oarepo-version: ${{ inputs.oarepo }}
+          python-version: ${{ inputs.python }}
+          extras: "[tests]"
+
+      - name: Run pytest tests
+        run: |
+          cd simple-repository
+          pytest tests

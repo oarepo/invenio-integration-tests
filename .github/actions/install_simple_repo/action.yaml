@@ -1,0 +1,52 @@
+name: "Install simple repository"
+#
+# requires: artifacts/oarepo - oarepo package with dependencies
+#
+inputs:
+  python-version:
+    description: "The version of Python to install"
+    required: true
+    default: "3.12"
+  oarepo-version:
+    description: "The version of oarepo"
+    required: true
+    default: "12"
+  extras:
+    description: "Extra dependencies to install"
+    required: false
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+
+  - name: "Set up simple repository"
+    shell: "bash"
+    run: |
+      uv venv .venv-tests
+      source .venv-tests/bin/activate
+      uv pip install -U setuptools pip wheel
+
+
+      # install in non-editable mode
+      uv pip install artifacts/oarepo${{ inputs.extras }}
+
+      cd simple_repo
+      uv pip install -e .${{ inputs.extras }} --no-deps
+      
+      export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+      export INVENIO_SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://localhost:5432/invenio"
+      
+      echo "INVENIO_INSTANCE_PATH=$INVENIO_INSTANCE_PATH" | tee -a $GITHUB_ENV
+      echo "INVENIO_SQLALCHEMY_DATABASE_URI=$INVENIO_SQLALCHEMY_DATABASE_URI" | tee -a $GITHUB_ENV
+      
+      /bin/echo -e "\n=== invenio db init: ==="
+      invenio db init
+      /bin/echo -e "\n=== invenio db create: ==="
+      invenio db create
+      /bin/echo -e "\n=== invenio index init: ==="
+      invenio index init
+      /bin/echo -e "\n=== invenio webpack buildall: ==="
+      invenio webpack buildall
+      /bin/echo -e "\n=== invenio users create: ==="
+      invenio users create --password aaaaaa -a -c test@test.com

@@ -1,0 +1,37 @@
+name: "Start services"
+runs:
+  using: "composite"
+  steps:
+
+  - name: Opensearch ${{ env.OPENSEARCH_VERSION }}
+    uses: ankane/setup-opensearch@v1
+    with:
+      opensearch-version: ${{ env.OPENSEARCH_VERSION }}
+
+  - name: Redis ${{ env.REDIS_VERSION }}
+    uses: shogo82148/actions-setup-redis@v1
+    with:
+      redis-version: ${{ env.REDIS_VERSION }}
+
+  - name: Postgres ${{ env.POSTGRES_VERSION }}
+    uses: ankane/setup-postgres@v1
+    with:
+      postgres-version: ${{ env.POSTGRES_VERSION }}
+      database: ${{ env.POSTGRES_DB }}
+    if: matrix.db == 'postgres'
+
+  - name: Test opensearch on port ${{ env.OPENSEARCH_PORT }}
+    shell: bash
+    run: |
+      netstat -ntlp
+      curl -s http://localhost:${{ env.OPENSEARCH_PORT }}
+  - name: "Test redis: redis-cli ping"
+    shell: bash
+    run: |
+      redis-cli ping
+
+  - name: Test postgres version ${{ env.POSTGRES_VERSION }}
+    shell: bash
+    run: |
+      psql -d ${{ env.POSTGRES_DB }} -c 'SHOW server_version'
+    if: matrix.db == 'postgres'
