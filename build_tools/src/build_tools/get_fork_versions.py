@@ -1,4 +1,3 @@
-import functools
 import json
 from pathlib import Path
 from pprint import pprint

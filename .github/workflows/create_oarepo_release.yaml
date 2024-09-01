@@ -75,8 +75,25 @@ jobs:
 #      python: ${{ github.event.inputs.python }}
 #      package_and_version: ${{ matrix.package_and_version }}
 
-#  install_rdm_with_requirements_and_test:
-#    uses: ./.github/workflows/install_rdm_and_test.yaml
-#    with:
-#      secrets: inherit
-#      oarepo: ${{ github.event.inputs.oarepo }}
+  create_oarepo_package:
+    needs:
+    - get_fork_versions
+    # - build_and_test_forks
+    uses: ./.github/workflows/05-create-oarepo-package.yaml
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
+      package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
+
+#  run_oarepo_rest_tests:
+#    needs:
+#    - create_oarepo_package
+#    - build_and_test_forks
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout oarepo/oarepo under ./oarepo
+#        uses: actions/checkout@v4
+#        with:
+#          repository: "oarepo/oarepo"
+#          ref: "rdm-${{ github.event.inputs.oarepo }}"
+#          token: "${{ secrets.INTEGRATION_TEST }}"
