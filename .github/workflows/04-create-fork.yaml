@@ -83,11 +83,14 @@ jobs:
             echo "fork_already_exists=false" >> $GITHUB_ENV
           }
 
-      - name: Create a fork of the package
+      - name: Create a temporary fork of the package
         if: env.fork_already_exists != 'true'
         run: |
           cd .forks/${PACKAGE}
           git remote add upstream https://github.com/inveniosoftware/${PACKAGE}.git || true
+          
+          # remove a temporary fork
+          git branch -D ${OAREPO_VERSION}-temporary || true
           
           # fetch invenio version and checkout it
           git fetch --tags upstream
@@ -95,7 +98,7 @@ jobs:
           git checkout ${INVENIO_VERSION}
           
           # it is a tag, so create oarepo version from it
-          git switch -c ${OAREPO_VERSION}
+          git switch -c ${OAREPO_VERSION}-temporary
 
       - name: Apply feature branches
         if: env.fork_already_exists != 'true'
@@ -146,7 +149,7 @@ jobs:
             
             vtag=$(get_vtag ${feature_branch})
 
-            git switch ${OAREPO_VERSION}
+            git switch ${OAREPO_VERSION}-temporary
             git cherry-pick --allow-empty --allow-empty-message ${feature_branch} ^${vtag} 
           }
           
@@ -158,8 +161,8 @@ jobs:
         # always, just to make sure that nothing has broken in package deps
         run: |
           cd .forks/${PACKAGE}
-          if [ $(git rev-parse --abbrev-ref HEAD) != ${OAREPO_VERSION} ] ; then
-            echo "The current branch is not ${OAREPO_VERSION} - probably bug in previous steps"
+          if [ $(git rev-parse --abbrev-ref HEAD) != ${OAREPO_VERSION}-temporary ] ; then
+            echo "The current branch is not ${OAREPO_VERSION}-temporary - probably bug in previous steps"
             exit 1
           fi
 
@@ -174,15 +177,27 @@ jobs:
             pytest tests
           fi
 
-#
-#      - name: Push the fork to the remote
-#        run: |
-#          cd .forks/${PACKAGE}
-#          git push origin ${OAREPO_VERSION}
-#          git push origin --tags
-
-      - name: Push the fork to the remote
+      - name: Rename a temporary fork to the final fork
         if: env.fork_already_exists != 'true'
         run: |
           cd .forks/${PACKAGE}
-          git push origin -u ${OAREPO_VERSION}
+          git switch ${OAREPO_VERSION}-temporary
+          git branch -m ${OAREPO_VERSION}
+          echo "push_required=True" >> $GITHUB_ENV
+
+      - name: Check if the temporary fork is the same as if original, if not, remove the original and rename temp to original
+        if: env.fork_already_exists == 'true'
+        run: |
+          cd .forks/${PACKAGE}
+          git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary || {
+            git branch -D ${OAREPO_VERSION}
+            git switch ${OAREPO_VERSION}-temporary
+            git branch -m ${OAREPO_VERSION}
+            echo "push_required=True" >> $GITHUB_ENV
+          }
+#
+#      - name: Push the fork to the remote
+#        if: env.push_required == 'true'
+#        run: |
+#          cd .forks/${PACKAGE}
+#          git push origin ${OAREPO_VERSION} --force

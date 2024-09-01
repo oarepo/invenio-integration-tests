@@ -49,10 +49,11 @@ def get_package_version(forked_package, oarepo_version, reqs):
     for feature in forked_package['features']:
         if not "invenio-version" in feature:
             matching_features.append(feature['name'])
-        feature_invenio_version = feature['invenio-version']
-        feature_invenio_version = [complete_version(x.strip()) for x in feature_invenio_version.split(",")]
-        if all(invenio_version.match(x) for x in feature_invenio_version):
-            matching_features.append(feature['name'])
+        else:
+            feature_invenio_version = feature['invenio-version']
+            feature_invenio_version = [complete_version(x.strip()) for x in feature_invenio_version.split(",")]
+            if all(invenio_version.match(x) for x in feature_invenio_version):
+                matching_features.append(feature['name'])
     return {
         "package": forked_package['name'],
         "version": str(invenio_version),

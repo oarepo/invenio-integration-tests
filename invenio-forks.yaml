@@ -1,6 +1,45 @@
 packages:
+#  - name: invenio-administration
+#    oarepo: 12
+#    features: {}
+#      - name: kwargs
+#        invenio-version: ">=13.0.0, <14"
+
+  - name: invenio-app-rdm
+    oarepo: 12
+    features:
+      - name: removed-rdm-entrypoints
+
+  - name: invenio-rdm-records
+    oarepo: 12
+    features:
+      - name: removed-rdm-entrypoints
+
   - name: invenio-communities
     oarepo: 12
     features:
-      - name: kwargs-extension
-        invenio-version: ">=13.0.0, <14"
+      - name: disable-communities-ui
+
+  - name: invenio-drafts-resources
+    oarepo: 12
+    features:
+      - name: kwargs
+  - name: invenio-records-resources
+    oarepo: 12
+    features:
+      - name: kwargs
+  - name: oarepo-requests
+    oarepo: 12
+    features:
+      - name: kwargs
+
+  - name: invenio-oauthclient
+    oarepo: 12
+    features:
+      - name: refresh-token
+#
+#  - name: invenio-communities
+#    oarepo: 12
+#    features:
+#      - name: kwargs-extension
+#        invenio-version: ">=13.0.0, <14"
