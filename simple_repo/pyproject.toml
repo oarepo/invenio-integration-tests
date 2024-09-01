@@ -16,7 +16,7 @@ authors = [
 ]
 description = "A simple repository"
 readme = "README.rst"
-requires-python = ">=3.10,<3.11"
+requires-python = ">=3.12,<3.13"
 license = {text = "MIT"}
 
 dependencies = [
