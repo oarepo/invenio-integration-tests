@@ -147,6 +147,10 @@ jobs:
             exit 1
           fi
 
+          # do not check for black and isort - would make the patches too complicated          
+          cp setup.cfg .setup.cfg.orig
+          cat .setup.cfg.orig | sed "s/--black//" | sed 's/--isort//' > setup.cfg
+
           uv venv --python=${PYTHON_VERSION}
           source .venv/bin/activate
           uv pip install -e '.[tests,opensearch2,s3,devs]'
@@ -157,6 +161,8 @@ jobs:
           else
             pytest tests
           fi
+          
+          mv .setup.cfg.orig setup.cfg
 
       - name: Rename a temporary fork to the final fork
         if: env.fork_already_exists != 'true'
