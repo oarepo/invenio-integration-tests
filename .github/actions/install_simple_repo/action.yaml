@@ -15,6 +15,10 @@ inputs:
     description: "Extra dependencies to install"
     required: false
     default: ""
+  initialize:
+    description: "Initialize the database"
+    required: false
+    default: "true"
 
 runs:
   using: "composite"
@@ -42,6 +46,13 @@ runs:
       
       echo "INVENIO_INSTANCE_PATH=$INVENIO_INSTANCE_PATH" | tee -a $GITHUB_ENV
       echo "INVENIO_SQLALCHEMY_DATABASE_URI=$INVENIO_SQLALCHEMY_DATABASE_URI" | tee -a $GITHUB_ENV
+
+  - name: "Initialize the database, indices etc ..."
+    if: ${{ inputs.initialize == 'true' }}
+    shell: "bash"
+    run: |      
+      source .venv-tests/bin/activate
+      cd simple_repo
       
       /bin/echo -e "\n=== invenio db init: ==="
       invenio db init

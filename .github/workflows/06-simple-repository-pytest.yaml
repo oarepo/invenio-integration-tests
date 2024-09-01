@@ -59,6 +59,7 @@ jobs:
           oarepo-version: ${{ inputs.oarepo }}
           python-version: ${{ inputs.python }}
           extras: "[tests]"
+          initialize: false
 
       - name: Run pytest tests
         run: |
