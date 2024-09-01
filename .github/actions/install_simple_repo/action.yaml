@@ -34,7 +34,7 @@ runs:
       cd simple_repo
       uv pip install -e .${{ inputs.extras }} --no-deps
       
-      export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+      export INVENIO_INSTANCE_PATH=$PWD/instance
       export INVENIO_SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://localhost:5432/invenio"
       
       echo "INVENIO_INSTANCE_PATH=$INVENIO_INSTANCE_PATH" | tee -a $GITHUB_ENV
