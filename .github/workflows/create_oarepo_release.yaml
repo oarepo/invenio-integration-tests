@@ -48,11 +48,11 @@ jobs:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
-#  test_rdm:
-#    uses: ./.github/workflows/03-install-rdm-and-test.yaml
-#    with:
-#      oarepo: ${{ github.event.inputs.oarepo }}
-#      python: ${{ github.event.inputs.python }}
+  test_rdm:
+    uses: ./.github/workflows/03-install-rdm-and-test.yaml
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
 
   get_fork_versions:
     uses: ./.github/workflows/02-get-fork-versions.yaml
@@ -61,19 +61,19 @@ jobs:
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
-
-  build_and_test_forks:
-    needs: get_fork_versions
-    strategy:
-      matrix:
-        package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
-      fail-fast: false
-    uses: ./.github/workflows/04-create-fork.yaml
-    secrets: inherit
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
-      package_and_version: ${{ matrix.package_and_version }}
+#
+#  build_and_test_forks:
+#    needs: get_fork_versions
+#    strategy:
+#      matrix:
+#        package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
+#      fail-fast: false
+#    uses: ./.github/workflows/04-create-fork.yaml
+#    secrets: inherit
+#    with:
+#      oarepo: ${{ github.event.inputs.oarepo }}
+#      python: ${{ github.event.inputs.python }}
+#      package_and_version: ${{ matrix.package_and_version }}
 
 #  install_rdm_with_requirements_and_test:
 #    uses: ./.github/workflows/install_rdm_and_test.yaml
