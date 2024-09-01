@@ -122,7 +122,7 @@ jobs:
     - simple_repository_rest
     - simple_repository_ui
     - test_rdm
-    uses: ./.github/workflows/09-upload-oarepo-package.yaml
+    uses: ./.github/workflows/09-commit-push-oarepo.yaml
     secrets: inherit
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
