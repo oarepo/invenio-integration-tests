@@ -5,7 +5,7 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
-name: Create a simple repository with the oarepo library
+name: Install and run pytest tests in a simple repository
 
 on:
   workflow_call:

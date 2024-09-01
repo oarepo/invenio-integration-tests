@@ -1,0 +1,125 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2024 CESNET.
+#
+# invenio-integration-tests is free software; you can redistribute it and/or modify it
+# under the terms of the MIT License; see LICENSE file for more details.
+
+name: Install and run REST tests in a simple repository
+
+on:
+  workflow_call:
+    inputs:
+      oarepo:
+        description: OARepo version (12, ...)
+        required: true
+        default: "12"
+        type: string
+      python:
+        description: Python version
+        required: true
+        default: "3.12"
+        type: string
+
+env:
+  # keep the following consistent
+  OAREPO_VERSION: ${{ inputs.oarepo }}
+  PYTHON_VERSION: ${{ inputs.python }}
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout oarepo/invenio-integration-tests
+        uses: actions/checkout@v4
+
+      - name: Setup environment variables
+        uses: ./.github/actions/setup_env
+        with:
+          python-version: ${{ inputs.python }}
+          oarepo-version: ${{ inputs.oarepo }}
+
+      - name: Install python and tools
+        uses: ./.github/actions/install_python
+        with:
+          python-version: ${{ inputs.python }}
+
+      - name: Start services
+        uses: ./.github/actions/start_services
+
+      - name: Download artifacts from extract_requirements
+        uses: actions/download-artifact@v4
+        with:
+          name: oarepo
+          path: artifacts/oarepo
+
+      - name: Install simple repository
+        uses: ./.github/actions/install_simple_repo
+        with:
+          oarepo-version: ${{ inputs.oarepo }}
+          python-version: ${{ inputs.python }}
+
+      - name: Run REST tests
+        env:
+          REST_URL: https://127.0.0.1:5000/api/simple-records
+        run: |
+          source .venv-tests/bin/activate
+          export INVENIO_INSTANCE_PATH=$PWD/simple_repo/instance
+          export SRVLOG=$PWD/invenio_run.log
+
+          /bin/echo -e "\n=== invenio tokens create: ==="
+          TOKEN=$(invenio tokens create -n test -u test@test.com)
+          /bin/echo -e "status: $?\n$TOKEN"
+          /bin/echo -e "\n=== invenio run: ==="
+          invenio run --cert ./simple_repo/test.crt --key ./simple_repo/test.key > $SRVLOG 2>&1 &
+          INVEPID=$!
+          trap "kill $INVEPID &>/dev/null; /bin/echo -e '\n=== $SRVLOG: ==='; cat $SRVLOG" EXIT
+          /bin/echo "  PID: $INVEPID"
+          sleep 8
+
+          /bin/echo -e "\n=== REST 1 (POST new record w/o token): ==="
+          RESULT=$(curl -sk -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+
+          /bin/echo -e "\n=== REST 2 (POST new record): ==="
+          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah"}' -X POST -H "content-type: application/json" "$REST_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+          RECORD_URL=$(jq -r '.links.self' <<<"$RESULT")
+          /bin/echo -e "status: $?\nRECORD_URL: $RECORD_URL"
+
+          /bin/echo -e "\n=== REST 3 (GET record): ==="
+          RESULT=$(curl -sk "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 4 (PUT new title w/o token): ==="
+          RESULT=$(curl -sk -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+
+          /bin/echo -e "\n=== REST 5 (PUT new title): ==="
+          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -d '{"title":"blah 1"}' -X PUT -H "content-type: application/json" "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 6 (GET records on /api/simple-records): ==="
+          RESULT=$(curl -sk -X GET "$REST_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 7 (DELETE record w/o token): ==="
+          RESULT=$(curl -sk -X DELETE "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -eq 403 ]]
+
+          /bin/echo -e "\n=== REST 8 (DELETE record): ==="
+          RESULT=$(curl -sk -H "Authorization: Bearer $TOKEN" -X DELETE "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 400 ]]
+
+          /bin/echo -e "\n=== REST 9 (GET record): ==="
+          RESULT=$(curl -sk "$RECORD_URL")
+          /bin/echo -e "status: $?\n$RESULT"
+          [[ $(jq '.status' <<<"$RESULT") -lt 500 ]]
