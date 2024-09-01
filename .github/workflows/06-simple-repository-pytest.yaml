@@ -63,4 +63,5 @@ jobs:
       - name: Run pytest tests
         run: |
           cd simple_repo
+          source ../.venv-tests/bin/activate
           pytest tests
