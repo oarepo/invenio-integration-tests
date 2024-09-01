@@ -9,37 +9,40 @@ packages:
     oarepo: 12
     features:
       - name: removed-rdm-entrypoints
+        base: v12.0.0
 
   - name: invenio-rdm-records
     oarepo: 12
     features:
       - name: removed-rdm-entrypoints
+        base: v10.8.0
 
   - name: invenio-communities
     oarepo: 12
     features:
       - name: disable-communities-ui
+        base: v13.0.6
 
   - name: invenio-drafts-resources
     oarepo: 12
     features:
       - name: kwargs
+        base: v3.2.0
+
   - name: invenio-records-resources
     oarepo: 12
     features:
       - name: kwargs
+        base: v5.10.0
+
   - name: invenio-requests
     oarepo: 12
     features:
       - name: kwargs
+        base: v4.1.1
 
   - name: invenio-oauthclient
     oarepo: 12
     features:
       - name: refresh-token
-#
-#  - name: invenio-communities
-#    oarepo: 12
-#    features:
-#      - name: kwargs-extension
-#        invenio-version: ">=13.0.0, <14"
+        base: v4.0.0
