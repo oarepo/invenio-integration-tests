@@ -67,5 +67,5 @@ jobs:
       - name: Upload fork versions
         uses: actions/upload-artifact@v4
         with:
-          name: fork-versions
+          name: fork_versions
           path: artifacts/fork-versions

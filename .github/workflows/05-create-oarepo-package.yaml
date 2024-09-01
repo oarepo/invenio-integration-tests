@@ -20,17 +20,11 @@ on:
         required: true
         default: "3.12"
         type: string
-      package_and_version:
-        description: "Package and version to fork"
-        # input example: {"package": "invenio-communities", "version": "13.0.6", "features": ["kwargs-extension"]}
-        required: true
-        type: string
 
 env:
   # keep the following consistent
   OAREPO_VERSION: ${{ inputs.oarepo }}
   PYTHON_VERSION: ${{ inputs.python }}
-  PACKAGE_AND_VERSION: ${{ inputs.package_and_version }}
   GH_TOKEN: ${{ github.token }}
 
 jobs:
@@ -63,15 +57,20 @@ jobs:
           name: rdm_versions
           path: artifacts/requirements
 
+      - name: Download artifacts from extract_requirements
+        uses: actions/download-artifact@v4
+        with:
+          name: fork_versions
+          path: artifacts/fork_versions
+
       - name: Create the pyproject.toml with dependencies (+forks)
         run: |
-          echo "${PACKAGE_AND_VERSION}" > forked_packages.json
           cd oarepo
           bt_apply_versions_and_forks_to_pyproject \
               ${OAREPO_VERSION} \
-              artifacts/requirements/rdm_requirements.json \
-              artifacts/requirements/rdm_test_requirements.json \
-              ../forked_packages.json \
+              ../artifacts/requirements/rdm_requirements.json \
+              ../artifacts/requirements/rdm_test_requirements.json \
+              ../artifacts/fork_versions/forks_and_versions.json \
               pyproject.toml
 
       - name: Store the whole package into artifacts

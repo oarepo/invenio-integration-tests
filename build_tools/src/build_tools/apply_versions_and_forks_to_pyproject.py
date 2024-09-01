@@ -21,6 +21,7 @@ def main(oarepo_version: str,
     test_requirements = json.loads(test_requirements_json_file.read_text())
     forked_packages = json.loads(forked_packages_json_file.read_text())
 
+    # a list of serialized json objects in fact to enable usage in github matrix
     forked_packages = [json.loads(x) for x in forked_packages]
     forked_packages = {x['package']: x['version'] for x in forked_packages}
 

@@ -83,7 +83,6 @@ jobs:
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
-      package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
 
 #  run_oarepo_rest_tests:
 #    needs:
