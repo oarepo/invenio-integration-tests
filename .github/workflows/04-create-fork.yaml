@@ -121,7 +121,11 @@ jobs:
             
 
             echo git cherry-pick --allow-empty --allow-empty-message ${feature_branch} ^${feature_base} 
-            git cherry-pick --allow-empty --allow-empty-message ${feature_branch} ^${feature_base} 
+            git cherry-pick --allow-empty --allow-empty-message ${feature_branch} ^${feature_base} || {
+              echo "Cherry-pick failed"
+              git diff
+              exit 1
+            }
           }
           
           echo "$FEATURES" | jq -c ".[]" | while read feature_rec ; do
