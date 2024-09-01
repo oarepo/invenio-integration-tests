@@ -45,7 +45,7 @@ jobs:
           python-version: ${{ inputs.python }}
 
       - name: Start services
-        uses: ./github/actions/start_services
+        uses: ./.github/actions/start_services
 
       - name: Download artifacts from extract_requirements
         uses: actions/download-artifact@v4
