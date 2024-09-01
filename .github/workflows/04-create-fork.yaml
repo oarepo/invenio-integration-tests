@@ -84,7 +84,6 @@ jobs:
           }
 
       - name: Create a temporary fork of the package
-        if: env.fork_already_exists != 'true'
         run: |
           cd .forks/${PACKAGE}
           git remote add upstream https://github.com/inveniosoftware/${PACKAGE}.git || true
@@ -101,7 +100,6 @@ jobs:
           git switch -c ${OAREPO_VERSION}-temporary
 
       - name: Apply feature branches
-        if: env.fork_already_exists != 'true'
         run: |
           cd .forks/${PACKAGE}
 
@@ -158,7 +156,6 @@ jobs:
           done
 
       - name: Run tests on the patched package
-        # always, just to make sure that nothing has broken in package deps
         run: |
           cd .forks/${PACKAGE}
           if [ $(git rev-parse --abbrev-ref HEAD) != ${OAREPO_VERSION}-temporary ] ; then
