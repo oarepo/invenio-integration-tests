@@ -149,7 +149,7 @@ jobs:
 
           # do not check for black and isort - would make the patches too complicated          
           cp setup.cfg .setup.cfg.orig
-          cat .setup.cfg.orig | sed "s/--black//" | sed 's/--isort//' > setup.cfg
+          cat .setup.cfg.orig | sed "s/--black//" | sed 's/--isort//' | sed 's/# removed-by-oarepo //' > setup.cfg
 
           uv venv --python=${PYTHON_VERSION}
           source .venv/bin/activate
