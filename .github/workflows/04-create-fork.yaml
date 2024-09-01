@@ -118,7 +118,7 @@ jobs:
           echo "$FEATURES" | jq -c ".[]" | while read feature_rec ; do
             feature_name=$(echo $feature_rec | jq -r '.name')
             feature_base=$(echo $feature_rec | jq -r '.base')
-            apply_feature $feature $feature_base
+            apply_feature $feature_name $feature_base
           done
 
       - name: Run tests on the patched package
