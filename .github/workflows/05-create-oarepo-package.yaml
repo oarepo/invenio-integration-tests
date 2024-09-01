@@ -25,7 +25,6 @@ env:
   # keep the following consistent
   OAREPO_VERSION: ${{ inputs.oarepo }}
   PYTHON_VERSION: ${{ inputs.python }}
-  GH_TOKEN: ${{ github.token }}
 
 jobs:
   main:

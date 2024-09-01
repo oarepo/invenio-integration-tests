@@ -80,6 +80,7 @@ jobs:
     - get_fork_versions
     # - build_and_test_forks
     uses: ./.github/workflows/05-create-oarepo-package.yaml
+    secrets: inherit
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
