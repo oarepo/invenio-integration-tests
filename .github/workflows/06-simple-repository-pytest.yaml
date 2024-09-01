@@ -62,5 +62,5 @@ jobs:
 
       - name: Run pytest tests
         run: |
-          cd simple-repository
+          cd simple_repo
           pytest tests
