@@ -197,6 +197,7 @@ jobs:
         with:
           commit_message: "[invenio-integration-tests] created a new fork ${{ env.PACKAGE_AND_VERSION }} "
           branch: "${{ env.OAREPO_VERSION }}"
+          skip_dirty_check: true
           repository: .forks/${{ env.PACKAGE }}
           commit_user_name: integration-tests
           commit_user_email: integration-tests@oarepo.org
