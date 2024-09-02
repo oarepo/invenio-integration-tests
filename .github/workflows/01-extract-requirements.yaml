@@ -59,6 +59,12 @@ jobs:
           uv pip list --format=json >../artifacts/requirements/rdm_requirements.json
           cp uv.lock ../artifacts/requirements/rdm.uv.lock
 
+      - name: Extract react dependencies
+        run: |
+          cd rdm
+          source .venv/bin/activate
+          python ../build_tools/src/build_tools/get_react_dependencies.py >../artifacts/requirements/react-dependencies.json
+
       - name: Lock app-rdm + tests version
         run: |
           uv init rdm_tests --python $PYTHON_VERSION

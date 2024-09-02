@@ -125,8 +125,6 @@ jobs:
 
 # maybe: more thorough tests with model builder
 
-# upload oarepo package
-
   upload_oarepo_package:
     name: Upload oarepo
     needs:

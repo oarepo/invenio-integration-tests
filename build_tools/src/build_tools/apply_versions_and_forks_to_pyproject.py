@@ -15,7 +15,8 @@ def main(oarepo_version: str,
         requirements_json_file: Annotated[Path, typer.Argument(help="Path to the rdm_requirements.json file")],
         test_requirements_json_file: Annotated[Path, typer.Argument(help="Path to the rdm_test_requirements.json file")],
         forked_packages_json_file: Annotated[Path, typer.Argument(help="Path to the forked_packages.json file")],
-        pyproject_toml_path: Annotated[Path, typer.Argument(help="Path to the output file")]):
+        pyproject_toml_path: Annotated[Path, typer.Argument(help="Path to the output file")],
+        version_py_path: Annotated[Path, typer.Argument(help="Path to the version.py file")]):
 
     normal_requirements = json.loads(requirements_json_file.read_text())
     test_requirements = json.loads(test_requirements_json_file.read_text())
@@ -86,6 +87,13 @@ def main(oarepo_version: str,
     version = semver.Version.parse(pyproject_toml["project"]["version"])
     version = version.bump_patch()
     pyproject_toml["project"]["version"] = str(version)
+
+    with open(version_py_path, "w") as f:
+        f.write(f"""
+# the first 3 numbers of version here must be the same as invenio version in setup.py
+# if the version ends with a*, add this to the first 3 numbers
+__version__ = "{version}"
+""")
 
     encoder = toml.TomlArraySeparatorEncoder(separator=",\n    ")
     with open(pyproject_toml_path, "w") as f:

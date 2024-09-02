@@ -68,35 +68,6 @@ jobs:
           cd .tests/my-site
           invenio-cli check-requirements --development
           invenio-cli install
-#
-#      - name: Redis
-#        uses: shogo82148/actions-setup-redis@v1
-#        with:
-#          redis-version: ${{env.REDIS_VERSION}}
-#
-#      - name: Opensearch
-#        uses: ankane/setup-opensearch@v1
-#        with:
-#          opensearch-version: ${{env.OPENSEARCH_VERSION}}
-#
-#      - name: Postgres
-#        uses: ankane/setup-postgres@v1
-#        with:
-#          postgres-version: ${{env.POSTGRES_VERSION}}
-#          database: ${{env.POSTGRES_DB}}
-#
-#      - name: Test opensearch
-#        run: |
-#          netstat -ntlp
-#          curl -s http://localhost:${{env.OPENSEARCH_PORT}}
-#
-#      - name: "Test redis: redis-cli ping"
-#        run: |
-#          redis-cli ping
-#
-#      - name: Test postgres version
-#        run: |
-#          psql -d ${{env.POSTGRES_DB}} -c 'SHOW server_version'
 
       - name: Start RDM services
         run: |
