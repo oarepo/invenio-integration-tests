@@ -43,12 +43,14 @@ permissions:
 
 jobs:
   extract_requirements:
+    name: Extract requirements
     uses: ./.github/workflows/01-extract-requirements.yaml
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
   test_rdm:
+    name: Test RDM
     needs: extract_requirements
     uses: ./.github/workflows/03-install-rdm-and-test.yaml
     with:
@@ -56,6 +58,7 @@ jobs:
       python: ${{ github.event.inputs.python }}
 
   get_fork_versions:
+    name: Get fork versions
     uses: ./.github/workflows/02-get-fork-versions.yaml
     needs:
       - extract_requirements
@@ -64,6 +67,7 @@ jobs:
       python: ${{ github.event.inputs.python }}
 
   build_and_test_forks:
+    name: Build and test forks
     needs: get_fork_versions
     strategy:
       matrix:
@@ -77,6 +81,7 @@ jobs:
       package_and_version: ${{ matrix.package_and_version }}
 
   create_oarepo_package:
+    name: Create oarepo package
     needs:
     - get_fork_versions
     uses: ./.github/workflows/05-create-oarepo-package.yaml
@@ -86,6 +91,7 @@ jobs:
       python: ${{ github.event.inputs.python }}
 
   test_simple_repository_pytest:
+    name: PyTest simple repository
     needs:
     - create_oarepo_package
     - build_and_test_forks
@@ -96,6 +102,7 @@ jobs:
       python: ${{ github.event.inputs.python }}
 
   test_simple_repository_rest:
+    name: REST tests simple repository
     needs:
     - create_oarepo_package
     - build_and_test_forks
@@ -106,6 +113,7 @@ jobs:
       python: ${{ github.event.inputs.python }}
 
   test_simple_repository_ui:
+    name: UI tests simple repository
     needs:
     - create_oarepo_package
     - build_and_test_forks
@@ -120,6 +128,7 @@ jobs:
 # upload oarepo package
 
   upload_oarepo_package:
+    name: Upload oarepo
     needs:
     - test_simple_repository_pytest
     - test_simple_repository_rest
