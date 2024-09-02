@@ -65,6 +65,17 @@ runs:
 
       pipenv --version
 
+  - name: "Install black"
+    shell: "bash"
+    run: |
+      uv venv .tools/black
+      source .tools/black/bin/activate
+      uv pip install -U black
+
+      ln -s ${{ github.workspace }}/.tools/black/bin/black ${{ github.workspace }}/.tools/bin/black 
+
+      black --version
+
   - name: "Install build tools"
     shell: "bash"
     run: |
