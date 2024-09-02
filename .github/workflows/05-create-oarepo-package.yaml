@@ -87,6 +87,7 @@ jobs:
       - name: Get the version tag and store it for later use
         id: oarepo_tag
         run: |
+          cd oarepo
           OAREPO_TAG=$(cat oarepo/version.py | grep __version__ | cut -d '"' -f 2)
           echo "oarepo_tag=${OAREPO_TAG}" | tee -a $GITHUB_OUTPUT
 
