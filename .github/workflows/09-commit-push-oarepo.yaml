@@ -20,11 +20,16 @@ on:
         required: true
         default: "3.12"
         type: string
+      oarepo_tag:
+        description: "OARepo tag"
+        required: true
+        type: string
 
 env:
   # keep the following consistent
   OAREPO_VERSION: ${{ inputs.oarepo }}
   PYTHON_VERSION: ${{ inputs.python }}
+  OAREPO_TAG: ${{ inputs.oarepo_tag }}
 
 jobs:
   main:
@@ -49,16 +54,6 @@ jobs:
         with:
           name: oarepo
           path: oarepo
-
-      - name: Download artifacts from extract_requirements
-        uses: actions/download-artifact@v4
-        with:
-          name: oarepo-env
-          path: oarepo-env
-
-      - name: Get the oarepo tag
-        run: |
-          cat oarepo-env >> $GITHUB_ENV
 
       - name: Commit and Push generated OARepo pyproject.toml with new requirements
         uses: stefanzweifel/git-auto-commit-action@v4

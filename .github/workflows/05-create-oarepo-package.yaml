@@ -20,6 +20,10 @@ on:
         required: true
         default: "3.12"
         type: string
+    outputs:
+      oarepo_tag:
+        description: "OARepo tag"
+        value: ${{ jobs.main.outputs.oarepo_tag }}
 
 env:
   # keep the following consistent
@@ -80,20 +84,11 @@ jobs:
 
       - name: Get the version tag and store it for later use
         run: |
-          export OAREPO_TAG=$(cat oarepo/version.py | grep __version__ | cut -d '"' -f 2)
-          echo "OAREPO_TAG=${OAREPO_TAG}" | tee -a $GITHUB_ENV
-          
-          mkdir environment
-          echo "OAREPO_TAG=${OAREPO_TAG}" > oarepo-env
+          OAREPO_TAG=$(cat oarepo/version.py | grep __version__ | cut -d '"' -f 2)
+          echo "oarepo_tag=${OAREPO_TAG}" | tee -a $GITHUB_OUTPUT
 
       - name: Store the whole package into artifacts
         uses: actions/upload-artifact@v4
         with:
           name: oarepo
           path: oarepo
-
-      - name: Store the environment
-        uses: actions/upload-artifact@v4
-        with:
-          name: oarepo-env
-          path: oarepo-env

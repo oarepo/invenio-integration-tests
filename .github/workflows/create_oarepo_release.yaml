@@ -132,8 +132,10 @@ jobs:
     - test_simple_repository_rest
     - test_simple_repository_ui
     - test_rdm
+    - create_oarepo_package
     uses: ./.github/workflows/09-commit-push-oarepo.yaml
     secrets: inherit
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
+      oarepo_tag: ${{ needs.create_oarepo_package.outputs.oarepo_tag }}
