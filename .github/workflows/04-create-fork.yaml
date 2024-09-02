@@ -147,7 +147,7 @@ jobs:
           
           # add the features to a file that will be committed to the package so that later we know
           # that the package was patched with these features
-          main_package=$(echo $PACKAGE | sed 's/-/_/')
+          main_package=$(echo $PACKAGE | sed 's/-/_/g')
 
           cat <<EOF > ${main_package}/oarepo_changes.py
           # -*- coding: utf-8 -*-
@@ -169,6 +169,8 @@ jobs:
           EOF
           
           black ${main_package}/oarepo_changes.py
+          git add ${main_package}/oarepo_changes.py
+          git commit -m "Summarized changes applied to the package"
 
       - name: Run tests on the patched package
         run: |
