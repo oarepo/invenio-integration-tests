@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       oarepo_tag: ${{ steps.oarepo_tag.outputs.oarepo_tag }}
-      version_changed: ${{ steps.create_pyproject.outputs.version_changed }}
+      version_changed: ${{ steps.check_version_changed.outputs.version_changed }}
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v4
@@ -79,6 +79,7 @@ jobs:
         run: |
           cd oarepo
           cp pyproject.toml ../original_pyproject.toml
+
           bt_apply_versions_and_forks_to_pyproject \
               ${OAREPO_VERSION} \
               ../artifacts/requirements/rdm_requirements.json \
@@ -86,13 +87,22 @@ jobs:
               ../artifacts/fork_versions/forks_and_versions.json \
               pyproject.toml
 
+      - name: Check if the version has changed
+        id: check_version_changed
+        run: |
+          cd oarepo
+          echo "Diff between old and new pyproject.toml:"
+          diff -bu ../original_pyproject.toml pyproject.toml || true
+
           # Check if the version has changed
-            if ! diff -q ../original_pyproject.toml pyproject.toml; then
-                echo "version_changed=true" | tee -a $GITHUB_OUTPUT
-                echo "version_changed=true" | tee -a $GITHUB_ENV
-            else
+            if diff -q ../original_pyproject.toml pyproject.toml; then
+                echo "No difference has been found"
                 echo "version_changed=false" | tee -a $GITHUB_OUTPUT
                 echo "version_changed=false" | tee -a $GITHUB_ENV
+            else
+                echo "pyproject.toml has changed, see above"
+                echo "version_changed=true" | tee -a $GITHUB_OUTPUT
+                echo "version_changed=true" | tee -a $GITHUB_ENV
             fi
 
       - name: Bump version
