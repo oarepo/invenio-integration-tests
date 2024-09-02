@@ -29,6 +29,7 @@ on:
 env:
   # keep the following consistent
   OAREPO_VERSION: ${{ inputs.oarepo }}
+  OAREPO_MAJOR_VERSION: ${{ inputs.oarepo }}
   PYTHON_VERSION: ${{ inputs.python }}
   PACKAGE_AND_VERSION: ${{ inputs.package_and_version }}
   GH_TOKEN: ${{ github.token }}
@@ -170,12 +171,19 @@ jobs:
           
           features_incorporated = $FEATURES
                   
-          oarepo_version = "${OAREPO_VERSION}"
+          oarepo_major_version = "${OAREPO_MAJOR_VERSION}"
+
+          package_oarepo_version = "${OAREPO_VERSION}"
           EOF
           
           black ${main_package}/oarepo_changes.py
           git add ${main_package}/oarepo_changes.py
           git commit -m "Summarized changes applied to the package"
+
+          # TODO: consider marking the version of the package as .post999 
+          # as a security measure to prevent accidental use of the base package
+          # in the presence of the forked one
+
 
       - name: Run tests on the patched package
         run: |
