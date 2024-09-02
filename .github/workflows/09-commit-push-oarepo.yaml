@@ -49,11 +49,26 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
-      - name: Download artifacts from extract_requirements
+      - name: Download artifacts from create-oarepo-package
         uses: actions/download-artifact@v4
         with:
           name: oarepo
-          path: oarepo
+          path: oarepo-new
+
+      - name: Checkout oarepo/oarepo under ./oarepo
+        uses: actions/checkout@v4
+        with:
+          repository: "oarepo/oarepo"
+          ref: "rdm-${{ env.OAREPO_VERSION }}"
+          token: "${{ secrets.INTEGRATION_TEST }}"
+          path: "oarepo"
+
+      - name: Patch oarepo
+        run: |
+          cd oarepo
+          cp ../oarepo-new/pyproject.toml .
+          cp ../oarepo-new/oarepo/version.py .
+          cp ../oarepo-new/oarepo/react-dependencies.json .
 
       - name: Commit and Push generated OARepo pyproject.toml with new requirements
         uses: stefanzweifel/git-auto-commit-action@v4
