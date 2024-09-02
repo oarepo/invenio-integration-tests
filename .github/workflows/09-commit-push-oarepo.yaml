@@ -53,12 +53,12 @@ jobs:
       - name: Commit and Push generated OARepo pyproject.toml with new requirements
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml"
+          commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml to make release ${{ env.OAREPO_TAG }}"
           branch: "rdm-${{ env.OAREPO_VERSION }}"
           file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
           repository: oarepo
           commit_user_name: integration-tests
           commit_user_email: integration-tests@oarepo.org
-          tagging_message: ${{ env.NEWTAG }}
+          tagging_message: ${{ env.OAREPO_TAG }}
           # Optional options appended to `git-push`
           push_options: '--force'
