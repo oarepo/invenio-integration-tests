@@ -14,6 +14,7 @@ dependencies = [
 [project.scripts]
 bt_get_fork_versions = "build_tools.get_fork_versions:app"
 bt_apply_versions_and_forks_to_pyproject = "build_tools.apply_versions_and_forks_to_pyproject:app"
+bt_bump_version = "build_tools.bump_version:app"
 
 
 [build-system]

@@ -24,6 +24,9 @@ on:
       oarepo_tag:
         description: "OARepo tag"
         value: ${{ jobs.main.outputs.oarepo_tag }}
+      version_changed:
+        description: "Whether the version has changed"
+        value: ${{ jobs.main.outputs.version_changed }}
 
 env:
   # keep the following consistent
@@ -35,6 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       oarepo_tag: ${{ steps.oarepo_tag.outputs.oarepo_tag }}
+      version_changed: ${{ steps.create_pyproject.outputs.version_changed }}
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v4
@@ -71,16 +75,34 @@ jobs:
           path: artifacts/fork_versions
 
       - name: Create the pyproject.toml with dependencies (+forks)
+        id: create_pyproject
         run: |
           cd oarepo
+          cp pyproject.toml ../original_pyproject.toml
           bt_apply_versions_and_forks_to_pyproject \
               ${OAREPO_VERSION} \
               ../artifacts/requirements/rdm_requirements.json \
               ../artifacts/requirements/rdm_test_requirements.json \
               ../artifacts/fork_versions/forks_and_versions.json \
-              pyproject.toml oarepo/version.py
+              pyproject.toml
+
+          # Check if the version has changed
+            if ! diff -q ../original_pyproject.toml pyproject.toml; then
+                echo "version_changed=true" | tee -a $GITHUB_OUTPUT
+                echo "version_changed=true" | tee -a $GITHUB_ENV
+            else
+                echo "version_changed=false" | tee -a $GITHUB_OUTPUT
+                echo "version_changed=false" | tee -a $GITHUB_ENV
+            fi
+
+      - name: Bump version
+        if: env.version_changed == 'true'
+        run: |
+          cd oarepo
+          bt_bump_version pyproject.toml oarepo/version.py
 
       - name: Add react dependencies
+        if: env.version_changed == 'true'
         run: |
           cp artifacts/requirements/react-dependencies.json oarepo/oarepo/react-dependencies.json
 
