@@ -67,7 +67,7 @@ jobs:
       python: ${{ github.event.inputs.python }}
 
   build_and_test_forks:
-    name: Fork ${{ matrix.package_and_version }} and test
+    name: ${{ matrix.package_and_version }} and test
     needs: get_fork_versions
     strategy:
       matrix:
