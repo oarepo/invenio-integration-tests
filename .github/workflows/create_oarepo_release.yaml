@@ -38,8 +38,7 @@ on:
 
 permissions:
   id-token: write
-  contents: read
-
+  contents: write
 
 jobs:
   extract_requirements:
