@@ -125,7 +125,7 @@ jobs:
 # maybe: more thorough tests with model builder
 
   upload_oarepo_package:
-    -if: needs.create_oarepo_package.outputs.version_changed == 'true'
+    if: needs.create_oarepo_package.outputs.version_changed == 'true'
     name: Upload oarepo
     needs:
     - test_simple_repository_pytest
