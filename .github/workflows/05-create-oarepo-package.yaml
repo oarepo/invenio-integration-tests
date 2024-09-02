@@ -82,9 +82,18 @@ jobs:
         run: |
           export OAREPO_TAG=$(cat oarepo/version.py | grep __version__ | cut -d '"' -f 2)
           echo "OAREPO_TAG=${OAREPO_TAG}" | tee -a $GITHUB_ENV
+          
+          mkdir environment
+          echo "OAREPO_TAG=${OAREPO_TAG}" > oarepo-env
 
       - name: Store the whole package into artifacts
         uses: actions/upload-artifact@v4
         with:
           name: oarepo
           path: oarepo
+
+      - name: Store the environment
+        uses: actions/upload-artifact@v4
+        with:
+          name: oarepo-env
+          path: oarepo-env
