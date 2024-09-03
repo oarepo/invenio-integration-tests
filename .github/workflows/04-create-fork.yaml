@@ -190,8 +190,9 @@ jobs:
           cd .forks/${PACKAGE}
           
           # bump the version to a post version
-          cat ${package//[-_]/}/__init__.py | sed 's/^__version__ = .*/__version__ = "'${VERSION}'.post999"/' > ${package//[-_]/}/__init__.py.new
-          mv ${package//[-_]/}/__init__.py.new ${package//[-_]/}/__init__.py
+          init_py=${PACKAGE//[-_]/}/__init__.py
+          cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${VERSION}'.post999"/' > ${init_py}.new
+          mv ${init_py}.new ${init_py}
 
       - name: Run tests on the patched package
         run: |
