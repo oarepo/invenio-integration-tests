@@ -250,7 +250,7 @@ jobs:
           git push --force --set-upstream origin ${OAREPO_VERSION}
 
       - name: Build the package
-#        if: env.push_required == 'true'
+        if: env.push_required == 'true'
         run: |
           cd .forks/${PACKAGE}
           source .venv/bin/activate
@@ -258,7 +258,7 @@ jobs:
           python setup.py sdist bdist_wheel
 
       - name: Clone the pypi
-#        if: env.push_required == 'true'
+        if: env.push_required == 'true'
         uses: actions/checkout@v4
         with:
           repository: "oarepo/pypi"
@@ -266,14 +266,14 @@ jobs:
           path: "pypi"
 
       - name: Copy the package to the pypi
-#        if: env.push_required == 'true'
+        if: env.push_required == 'true'
         run: |
           cp .forks/${PACKAGE}/dist/* pypi/packages
           cd pypi
           ./build.sh
 
       - name: Commit the package to the pypi
-#        if: env.push_required == 'true'
+        if: env.push_required == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "[invenio-integration-tests] adding package ${{ env.PACKAGE }} version ${{ env.VERSION }} to the pypi"
