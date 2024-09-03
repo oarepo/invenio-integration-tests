@@ -190,7 +190,7 @@ jobs:
           cd .forks/${PACKAGE}
           
           # bump the version to a post version
-          init_py=${PACKAGE//[-_]/}/__init__.py
+          init_py=${PACKAGE//-/_}/__init__.py
           cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${VERSION}'.post999"/' > ${init_py}.new
           mv ${init_py}.new ${init_py}
 
