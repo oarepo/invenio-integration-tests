@@ -39,7 +39,7 @@ runs:
       uv pip install artifacts/oarepo${EXTRAS}
 
       cd simple_repo
-      uv pip install -e .${EXTRAS} --no-deps
+      uv pip install --extra-index-url https://oarepo.github.io/pypi/packages/simple -e .${EXTRAS} --no-deps
       
       export INVENIO_INSTANCE_PATH=$PWD/instance
       export INVENIO_SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://localhost:5432/invenio"
