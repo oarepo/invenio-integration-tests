@@ -277,7 +277,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "[invenio-integration-tests] adding package ${{ env.PACKAGE }} version ${{ env.VERSION }} to the pypi"
-          file_pattern: packages/*
+          file_pattern: packages/* simple/*
           repository: pypi
           commit_user_name: integration-tests
           commit_user_email: integration-tests@oarepo.org
