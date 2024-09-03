@@ -37,7 +37,8 @@ env:
 jobs:
   main:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v4
@@ -180,10 +181,17 @@ jobs:
           git add ${main_package}/oarepo_changes.py
           git commit -m "Summarized changes applied to the package"
 
-          # TODO: consider marking the version of the package as .post999 
+          # TODO: consider marking the version of the package as .post999
           # as a security measure to prevent accidental use of the base package
           # in the presence of the forked one
 
+      - name: Bump version to a post version
+        run: |
+          cd .forks/${PACKAGE}
+          
+          # bump the version to a post version
+          cat ${package//[-_]/}/__init__.py | sed 's/^__version__ = .*/__version__ = "'${VERSION}'.post999"/' > ${package//[-_]/}/__init__.py.new
+          mv ${package//[-_]/}/__init__.py.new ${package//[-_]/}/__init__.py
 
       - name: Run tests on the patched package
         run: |
@@ -233,9 +241,41 @@ jobs:
             echo "push_required=true" >> $GITHUB_ENV
           }
 
-      - name: Summary
+      - name: Push the fork to the repository
         if: env.push_required == 'true'
         run: |
           cd .forks/${PACKAGE}
           echo "Push is required as there are differences between the original and the temporary fork"
           git push --force --set-upstream origin ${OAREPO_VERSION}
+
+      - name: Build the package
+#        if: env.push_required == 'true'
+        run: |
+          cd .forks/${PACKAGE}
+          source .venv/bin/activate
+          pip install -U setuptools pip wheel
+          python setup.py sdist bdist_wheel
+
+      - name: Clone the pypi
+#        if: env.push_required == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: "oarepo/pypi"
+          token: "${{ secrets.INTEGRATION_TEST }}"
+          path: "pypi"
+
+      - name: Copy the package to the pypi
+#        if: env.push_required == 'true'
+        run: |
+          cp .forks/${PACKAGE}/dist/* pypi/packages
+
+      - name: Commit the package to the pypi
+#        if: env.push_required == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[invenio-integration-tests] adding package ${{ env.PACKAGE }} version ${{ env.VERSION }} to the pypi"
+          file_pattern: packages/*
+          repository: pypi
+          commit_user_name: integration-tests
+          commit_user_email: integration-tests@oarepo.org
+          push_options: '--force'

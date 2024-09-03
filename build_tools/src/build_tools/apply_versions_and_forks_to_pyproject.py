@@ -94,7 +94,7 @@ def format_dependency(forked_packages, name, versions):
     if name not in forked_packages:
         formatted = f"{name}=={version}"
     else:
-        formatted = f"{name}@https://github.com/oarepo/{name}/archive/oarepo-{version}.tar.gz"
+        formatted = f"{name}=={version}.post999"
     return formatted, name
 
 
