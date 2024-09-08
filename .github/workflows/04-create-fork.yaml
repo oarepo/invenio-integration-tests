@@ -234,9 +234,9 @@ jobs:
         if: env.fork_already_exists == 'true'
         run: |
           cd .forks/${PACKAGE}
-          echo git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>
+          echo "git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>"
           git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary
-          echo <<<
+          echo "<<<"
           git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary || {
             git branch -D ${OAREPO_VERSION}
             git switch ${OAREPO_VERSION}-temporary
