@@ -1,9 +1,9 @@
 packages:
-#  - name: invenio-administration
-#    oarepo: 12
-#    features: {}
-#      - name: kwargs
-#        invenio-version: ">=13.0.0, <14"
+  - name: invenio-administration
+    oarepo: 12
+    features:
+      - name: multiple-ui-changes
+        base: v2.2.4
 
   - name: invenio-app-rdm
     oarepo: 12
