@@ -26,6 +26,8 @@ packages:
     features:
       - name: disable-communities-ui
         base: v13.0.6
+      - name: enable-email-invitations
+        base: v13.0.6
 
   - name: invenio-drafts-resources
     oarepo: 12
