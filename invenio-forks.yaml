@@ -14,6 +14,12 @@ packages:
       - name: removed-rdm-entrypoints-from-v12.0.5
         base: v12.0.5
         invenio-version: ">=12.0.5"
+  
+  - name: invenio-banners
+    oarepo: 12
+    features:
+      - name: message-htmleditor
+        base: v3.1.1
 
   - name: invenio-rdm-records
     oarepo: 12
