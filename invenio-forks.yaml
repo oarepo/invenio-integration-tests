@@ -58,3 +58,7 @@ packages:
     features:
       - name: refresh-token
         base: v4.0.0
+        invenio-version: "<4.0.2"
+      - name: refresh-token-from-v4.0.2
+        base: v4.0.2
+        invenio-version: ">=4.0.2"
