@@ -13,7 +13,10 @@ packages:
         invenio-version: "<12.0.5"
       - name: removed-rdm-entrypoints-from-v12.0.5
         base: v12.0.5
-        invenio-version: ">=12.0.5"
+        invenio-version: ">=12.0.5,<12.0.10"
+      - name: removed-rdm-entrypoints-from-v12.0.10
+        base: v12.0.10
+        invenio-version: ">=12.0.10"
   
   - name: invenio-banners
     oarepo: 12
