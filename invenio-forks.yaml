@@ -26,6 +26,9 @@ packages:
     features:
       - name: removed-rdm-entrypoints
         base: v10.8.0
+        invenio-version: "<10.8.7"
+      - name: removed-rdm-entrypoints-from-v10.8.7
+        base: v10.8.7
 
   - name: invenio-communities
     oarepo: 12
