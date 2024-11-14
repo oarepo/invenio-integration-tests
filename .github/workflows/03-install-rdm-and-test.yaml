@@ -53,12 +53,6 @@ jobs:
 
       - uses: actions/setup-node@v4
 
-      - name: Install node dependencies
-        run: npm ci
-
-      - name: Install playwright browsers
-        run: npx playwright install --with-deps
-
       - name: Create a RDM instance
         run: |
           mkdir .tests
@@ -95,6 +89,9 @@ jobs:
           git clone https://github.com/oarepo/invenio-rdm-qa.git
           cd invenio-rdm-qa
           
+          npm ci
+          npx playwright install --with-deps
+
           export QASE_MODE=testops
           export INVENIO_BASE_URL=https://127.0.0.1:5000/
 
