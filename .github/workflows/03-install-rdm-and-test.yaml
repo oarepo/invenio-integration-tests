@@ -51,6 +51,14 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
+      - uses: actions/setup-node@v4
+
+      - name: Install node dependencies
+        run: npm ci
+
+      - name: Install playwright browsers
+        run: npx playwright install --with-deps
+
       - name: Create a RDM instance
         run: |
           mkdir .tests
@@ -73,3 +81,32 @@ jobs:
         run: |
           cd .tests/my-site
           invenio-cli services setup
+          
+      - name: Run RDM UI tests
+        run: |
+          cd .tests/my-site
+          
+          invenio-cli run &
+          INVENIO_PID=$!
+          sleep 120
+
+          cd ../..
+
+          git clone https://github.com/oarepo/invenio-rdm-qa.git
+          cd invenio-rdm-qa
+          
+          export QASE_MODE=testops
+          export INVENIO_BASE_URL=https://127.0.0.1:5000/
+
+          npx playwright test
+
+          kill $INVENIO_PID
+          sleep 5
+          kill -9 $INVENIO_PID
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
