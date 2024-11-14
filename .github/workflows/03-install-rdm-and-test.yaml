@@ -78,9 +78,10 @@ jobs:
           
       - name: Run RDM UI tests
         run: |
+          set +x
           cd .tests/my-site
           
-          invenio-cli run &
+          invenio-cli run >invenio.log 2>&1 &
           INVENIO_PID=$!
           sleep 120
 
@@ -100,6 +101,12 @@ jobs:
           kill $INVENIO_PID
           sleep 5
           kill -9 $INVENIO_PID
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: invenio.log
+          path: invenio.log
+          retention-days: 30
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
