@@ -52,6 +52,7 @@ jobs:
     name: Test RDM
     needs: extract_requirements
     uses: ./.github/workflows/03-install-rdm-and-test.yaml
+    secrets: inherit
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
