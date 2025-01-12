@@ -68,6 +68,7 @@ jobs:
           FEATURES=$(echo "${PACKAGE_AND_VERSION}" | jq -c '.features')
 
           INVENIO_VERSION=v$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
+          INVENIO_VERSION_WITHOUT_V=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
           OAREPO_VERSION=oarepo-$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
 
           EOF
@@ -90,11 +91,23 @@ jobs:
           git switch ${OAREPO_VERSION} && {
             echo "The fork already exists"
             echo "fork_already_exists=true" >> $GITHUB_ENV
+            fork_version="$(python setup.py --version)"
+            if ! echo $fork_version | grep -q 'post' ; then
+              # backward compatibility
+              fork_version="${fork_version}.post999"
+            fi
             exit 0
           } || {
             echo "The fork does not exist, will try to create it"
             echo "fork_already_exists=false" >> $GITHUB_ENV
+            fork_version="${INVENIO_VERSION_WITHOUT_V}.post999"
           }
+          # increase the dump version by one                                     # "2.3.4post286"
+          fork_version_prefix="${fork_version%%[0-9][0-9]*}"                     # => "2.3.4post"
+          fork_version_post_version="${fork_version##${fork_version_prefix}}"    # => "286"
+          ((fork_version_post_version++))                                        # => 287
+          fork_version="${fork_version_prefix}${fork_version_post_version}"
+          echo "fork_version=${fork_version}" >> $GITHUB_ENV
 
       - name: Create a temporary fork of the package
         run: |
@@ -104,7 +117,7 @@ jobs:
           # remove a temporary fork
           git branch -D ${OAREPO_VERSION}-temporary || true
           
-          # fetch invenio version and checkout it
+          # fetch invenio version and check it out
           git fetch --tags upstream
           git fetch --all
           git checkout ${INVENIO_VERSION}
@@ -181,17 +194,13 @@ jobs:
           git add ${main_package}/oarepo_changes.py
           git commit -m "Summarized changes applied to the package"
 
-          # TODO: consider marking the version of the package as .post999
-          # as a security measure to prevent accidental use of the base package
-          # in the presence of the forked one
-
       - name: Bump version to a post version
         run: |
           cd .forks/${PACKAGE}
           
           # bump the version to a post version
           init_py=${PACKAGE//-/_}/__init__.py
-          cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${VERSION}'.post999"/' > ${init_py}.new
+          cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${fork_version}'"/' > ${init_py}.new
           mv ${init_py}.new ${init_py}
 
       - name: Run tests on the patched package
@@ -235,9 +244,10 @@ jobs:
         run: |
           cd .forks/${PACKAGE}
           echo "git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>"
-          git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary
+          git diff :(exclude)${PACKAGE//-/_}/__init__.py ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary
           echo "<<<"
-          git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary || {
+          git diff :(exclude)${PACKAGE//-/_}/__init__.py --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary || {
+            echo "The temporary fork is different from the original, will do push"
             git branch -D ${OAREPO_VERSION}
             git switch ${OAREPO_VERSION}-temporary
             git branch -m ${OAREPO_VERSION}
