@@ -213,6 +213,15 @@ jobs:
           git add ${init_py}
           git commit -m "[skip ci] Bumped version to ${fork_version}"
 
+      - name: Remove all github actions on the package
+        run: |
+          cd .forks/${PACKAGE}
+          if [ -d .github ] ; then
+            echo "Removing github actions"
+            rm -rf .github
+            git commit -m "[skip ci] Removed github actions"
+          fi
+
       - name: Run tests on the patched package
         run: |
           cd .forks/${PACKAGE}
