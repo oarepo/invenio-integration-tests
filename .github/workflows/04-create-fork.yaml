@@ -91,6 +91,7 @@ jobs:
             echo "The fork already exists"
             echo "fork_already_exists=true" >> $GITHUB_ENV
             uv venv --python=${PYTHON_VERSION} --seed
+            uv pip install -U setuptools pip wheel
             echo "The version of the fork is:"
             .venv/bin/python setup.py --version
             fork_version="$(.venv/bin/python setup.py --version)"
