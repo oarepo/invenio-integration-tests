@@ -314,3 +314,14 @@ jobs:
           commit_user_name: integration-tests
           commit_user_email: integration-tests@oarepo.org
           push_options: '--force'
+
+      - name: Export the version of the fork to output file
+        run: |
+          mkdir -p artifacts/final_fork_versions
+          echo "${PACKAGE}==${fork_version}" > artifacts/final_fork_versions/${PACKAGE}.txt
+
+      - name: Upload fork versions
+        uses: actions/upload-artifact@v4
+        with:
+          name: final_fork_versions
+          path: artifacts/final_fork_versions/*.txt

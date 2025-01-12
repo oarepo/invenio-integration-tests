@@ -83,7 +83,7 @@ jobs:
   create_oarepo_package:
     name: Create oarepo package
     needs:
-    - get_fork_versions
+    - build_and_test_forks
     uses: ./.github/workflows/05-create-oarepo-package.yaml
     secrets: inherit
     with:

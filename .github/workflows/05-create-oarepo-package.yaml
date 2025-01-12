@@ -74,6 +74,12 @@ jobs:
           name: fork_versions
           path: artifacts/fork_versions
 
+      - name: Download artifacts from fork matrix
+        uses: actions/download-artifact@v4
+        with:
+          name: final_fork_versions
+          path: artifacts/final_fork_versions
+  
       - name: Create the pyproject.toml with dependencies (+forks)
         id: create_pyproject
         run: |
@@ -85,6 +91,7 @@ jobs:
               ../artifacts/requirements/rdm_requirements.json \
               ../artifacts/requirements/rdm_test_requirements.json \
               ../artifacts/fork_versions/forks_and_versions.json \
+              ../artifacts/final_fork_versions \
               pyproject.toml
 
       - name: Check if the version has changed
