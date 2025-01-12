@@ -91,17 +91,23 @@ jobs:
           git switch ${OAREPO_VERSION} && {
             echo "The fork already exists"
             echo "fork_already_exists=true" >> $GITHUB_ENV
-            fork_version="$(python setup.py --version)"
+            uv venv --python=${PYTHON_VERSION} --seed
+            echo "The version of the fork is:"
+            .venv/bin/python setup.py --version
+            fork_version="$(.venv/bin/python setup.py --version)"
+            rm -rf .venv
             if ! echo $fork_version | grep -q 'post' ; then
               # backward compatibility
-              fork_version="${fork_version}.post999"
+              fork_version="${fork_version}.post999" >> $GITHUB_ENV
             fi
             exit 0
           } || {
             echo "The fork does not exist, will try to create it"
             echo "fork_already_exists=false" >> $GITHUB_ENV
-            fork_version="${INVENIO_VERSION_WITHOUT_V}.post999"
+            fork_version="${INVENIO_VERSION_WITHOUT_V}.post999" >> $GITHUB_ENV
           }
+      - name: Bump the version of the fork
+        run: |
           # increase the dump version by one                                     # "2.3.4post286"
           fork_version_prefix="${fork_version%%[0-9][0-9]*}"                     # => "2.3.4post"
           fork_version_post_version="${fork_version##${fork_version_prefix}}"    # => "286"
