@@ -323,5 +323,5 @@ jobs:
       - name: Upload fork versions
         uses: actions/upload-artifact@v4
         with:
-          name: final_fork_versions
+          name: final_fork_versions-${{ strategy.job-index }}
           path: artifacts/final_fork_versions/*.txt
