@@ -199,7 +199,7 @@ jobs:
           
           black ${main_package}/oarepo_changes.py
           git add ${main_package}/oarepo_changes.py
-          git commit -m "Summarized changes applied to the package"
+          git commit -m "[skip ci] Summarized changes applied to the package"
 
       - name: Bump version to a post version
         run: |
