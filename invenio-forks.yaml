@@ -16,13 +16,17 @@ packages:
         invenio-version: ">=12.0.5,<12.0.10"
       - name: removed-rdm-entrypoints-from-v12.0.10
         base: v12.0.10
-        invenio-version: ">=12.0.10"
-  
+        invenio-version: ">=12.0.10,<12.0.12"
+      - name: removed-rdm-entrypoints-from-v12.0.12
+        base: v12.0.12
+        invenio-version: ">=12.0.12"
+
   - name: invenio-banners
     oarepo: 12
     features:
       - name: message-htmleditor
         base: v3.1.1
+        invenio-version: "<3.2.0"
 
   - name: invenio-rdm-records
     oarepo: 12
@@ -40,6 +44,8 @@ packages:
         base: v13.0.6
       - name: enable-email-invitations
         base: v13.0.6
+      - name: administration-in-tests
+        base: v13.0.9
 
   - name: invenio-drafts-resources
     oarepo: 12
