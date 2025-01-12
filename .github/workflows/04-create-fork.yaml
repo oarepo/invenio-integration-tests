@@ -252,9 +252,9 @@ jobs:
         run: |
           cd .forks/${PACKAGE}
           echo "git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>"
-          git diff ":(exclude)"${PACKAGE//-/_}/__init__.py ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary
+          git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py 
           echo "<<<"
-          git diff ":(exclude)"${PACKAGE//-/_}/__init__.py --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary || {
+          git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py || {
             echo "The temporary fork is different from the original, will do push"
             git branch -D ${OAREPO_VERSION}
             git switch ${OAREPO_VERSION}-temporary
