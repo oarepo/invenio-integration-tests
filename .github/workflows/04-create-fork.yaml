@@ -316,11 +316,13 @@ jobs:
           push_options: '--force'
 
       - name: Export the version of the fork to output file
+        if: env.push_required == 'true'
         run: |
           mkdir -p artifacts/final_fork_versions
           echo "${PACKAGE}==${fork_version}" > artifacts/final_fork_versions/${PACKAGE}.txt
 
       - name: Upload fork versions
+        if: env.push_required == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: final_fork_versions-${{ env.PACKAGE }}
