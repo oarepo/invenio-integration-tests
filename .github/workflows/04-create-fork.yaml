@@ -210,6 +210,8 @@ jobs:
           cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${fork_version}'"/' > ${init_py}.new
           mv ${init_py}.new ${init_py}
           cat ${init_py}
+          git add ${init_py}
+          git commit -m "[skip ci] Bumped version to ${fork_version}"
 
       - name: Run tests on the patched package
         run: |
@@ -247,7 +249,7 @@ jobs:
           git branch -m ${OAREPO_VERSION}
           echo "push_required=true" >> $GITHUB_ENV
 
-      - name: Check if the temporary fork is the same as if original, if not, remove the original and rename temp to original
+      - name: Check if the temporary fork is the same as original, if not, remove the original and rename temp to original
         if: env.fork_already_exists == 'true'
         run: |
           cd .forks/${PACKAGE}
