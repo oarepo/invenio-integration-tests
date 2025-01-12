@@ -219,7 +219,7 @@ jobs:
           if [ -d .github ] ; then
             echo "Removing github actions"
             rm -rf .github
-            git rm .github
+            git rm -rf .github
             git commit -m "[skip ci] Removed github actions"
           fi
 
