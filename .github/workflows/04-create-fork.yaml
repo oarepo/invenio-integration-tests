@@ -68,7 +68,6 @@ jobs:
           FEATURES=$(echo "${PACKAGE_AND_VERSION}" | jq -c '.features')
 
           INVENIO_VERSION=v$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
-          INVENIO_VERSION_WITHOUT_V=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
           OAREPO_VERSION=oarepo-$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
 
           EOF
@@ -98,13 +97,14 @@ jobs:
             rm -rf .venv
             if ! echo $fork_version | grep -q 'post' ; then
               # backward compatibility
-              fork_version="${fork_version}.post999" >> $GITHUB_ENV
+              fork_version="${fork_version}.post999"
             fi
+            echo fork_version="${fork_version}" >> $GITHUB_ENV
             exit 0
           } || {
             echo "The fork does not exist, will try to create it"
             echo "fork_already_exists=false" >> $GITHUB_ENV
-            fork_version="${INVENIO_VERSION_WITHOUT_V}.post999" >> $GITHUB_ENV
+            echo fork_version="${VERSION}.post999" >> $GITHUB_ENV
           }
       - name: Bump the version of the fork
         run: |
