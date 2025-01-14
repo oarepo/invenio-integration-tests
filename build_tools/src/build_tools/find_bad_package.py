@@ -107,7 +107,7 @@ def find_bad_package(
         for k in working_deps.keys()
         if k in failing_deps and working_deps[k] != failing_deps[k]
     ]
-    deps_to_try.sort()
+    # deps_to_try.sort()
     nonworking_common_deps: dict[str, str] = {}
 
     if Path(".venv").exists():
@@ -155,6 +155,8 @@ def find_bad_package(
             dump_freeze(
                 progress_dir / "nonworking_common_deps.txt", nonworking_common_deps
             )
+    final_dependencies = load_freeze_from_venv()
+    dump_freeze(progress_dir / "final_dependencies.txt", final_dependencies)
 
     return 0
 
