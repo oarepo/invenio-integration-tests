@@ -107,7 +107,15 @@ def find_bad_package(
         for k in working_deps.keys()
         if k in failing_deps and working_deps[k] != failing_deps[k]
     ]
+
+    # TODO: make this an option
+    # make deps_to_try random
+    import random
+
+    random.shuffle(deps_to_try)
+
     # deps_to_try.sort()
+
     nonworking_common_deps: dict[str, str] = {}
 
     if Path(".venv").exists():

@@ -43,6 +43,11 @@ packages:
       - invenio-version: "<11.0.0"
         packages:
           - pyjwt==2.9.0
+          - babel-edtf==1.1.4
+          - blinker==1.8.2
+          - edtf==4.0.1
+          - invenio-oaiserver==2.2.1
+          - marshmallow-utils==0.9.1
 
   - name: invenio-communities
     oarepo: 12
