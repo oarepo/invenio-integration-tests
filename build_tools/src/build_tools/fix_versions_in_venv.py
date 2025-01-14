@@ -30,7 +30,9 @@ def fix_versions(rdm_requirements_file: Path):
     for pkg_name, pkg_version in actual_packages.items():
         if pkg_name not in rdm_packages or rdm_packages[pkg_name] == pkg_version:
             continue
-
+        if pkg_name in ("importlib_metadata", "importlib-metadata"):
+            # invenio-administration's mocks depend on the newer version of importlib_metadata
+            continue
         packages_to_update.append(f"{pkg_name}=={rdm_packages[pkg_name]}")
 
     if packages_to_update:

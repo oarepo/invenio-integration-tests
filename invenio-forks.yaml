@@ -4,6 +4,9 @@ packages:
     features:
       - name: multiple-ui-changes
         base: v2.2.4
+    frozen:
+      - packages:
+          - pytest-invenio<3.0.0
 
   - name: invenio-app-rdm
     oarepo: 12
