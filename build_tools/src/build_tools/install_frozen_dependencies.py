@@ -56,6 +56,7 @@ def install_frozen_dependencies(invenio_forks: Path):
     forks = json.loads(invenio_forks.read_text())
     fork_packages: list[Any] = forks.get("packages", [])
     actual_packages = load_freeze_from_venv()
+    packages_to_install: list[str] = []
     for pkg in fork_packages:
         if "frozen" not in pkg:
             continue
@@ -74,12 +75,15 @@ def install_frozen_dependencies(invenio_forks: Path):
                 actual_pkg_version, invenio_version
             ):
                 print(
-                    f"Installing frozen dependencies for {pkg["name"]} @ {actual_pkg_version}"
+                    f"Collecting frozen dependencies for {pkg["name"]} @ {actual_pkg_version}"
                 )
                 print(frozen["packages"])
-                subprocess.check_call(["pip", "install", *frozen["packages"]])
-                print("After installation, the freeze is:")
-                subprocess.call(["pip", "freeze"])
+                packages_to_install.extend(frozen["packages"])
+
+    if packages_to_install:
+        subprocess.check_call(["uv", "pip", "install", *packages_to_install])
+        print("After installation, the freeze is:")
+        subprocess.call(["uv", "pip", "freeze"])
 
 
 if __name__ == "__main__":
