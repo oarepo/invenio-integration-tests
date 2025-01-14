@@ -78,6 +78,8 @@ def install_frozen_dependencies(invenio_forks: Path):
                 )
                 print(frozen["packages"])
                 subprocess.check_call(["pip", "install", *frozen["packages"]])
+                print("After installation, the freeze is:")
+                subprocess.call(["pip", "freeze"])
 
 
 if __name__ == "__main__":
