@@ -81,6 +81,12 @@ jobs:
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: ".forks/${{env.PACKAGE}}"
 
+      - name: Download artifacts from extract_requirements
+        uses: actions/download-artifact@v4
+        with:
+          name: rdm_versions
+          path: artifacts/requirements
+  
       - name: Check if the package is already forked
         id: check_fork
         run: |
@@ -225,6 +231,9 @@ jobs:
 
       - name: Run tests on the patched package
         run: |
+          fix_versions=$PWD/build_tools/src/build_tools/fix_versions_in_venv.py
+          rdm_requirements=$PWD/artifacts/requirements/rdm_test_requirements.txt
+
           cd .forks/${PACKAGE}
           if [ $(git rev-parse --abbrev-ref HEAD) != ${OAREPO_VERSION}-temporary ] ; then
             echo "The current branch is not ${OAREPO_VERSION}-temporary - probably bug in previous steps"
@@ -241,6 +250,9 @@ jobs:
           uv venv --python=${PYTHON_VERSION}
           source .venv/bin/activate
           uv pip install -e '.[tests,opensearch2,s3,devs]'
+
+          python $fix_versions $rdm_requirements
+
           if [ -x ./run-tests.sh ] ; then
             ./run-tests.sh
           elif [ -x ./run_tests.sh ] ; then

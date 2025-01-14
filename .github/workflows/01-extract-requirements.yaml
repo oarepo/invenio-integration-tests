@@ -49,12 +49,33 @@ jobs:
         run: |
           mkdir -p artifacts/requirements
 
+      - name: Create virtualenv and install build tools
+        run: |
+          cd build_tools
+          uv venv --seed
+          source .venv/bin/activate
+          uv pip install -e .
+
+      - name: Convert invenio-forks.yaml into json
+        run: |
+          build_tools/.venv/bin/python build_tools/src/build_tools/convert_forks_to_json.py invenio-forks.yaml >invenio-forks.json
+
       - name: Lock app-rdm version
         run: |
           uv init rdm --python $PYTHON_VERSION
           cd rdm
           uv add "$APP_RDM_PRODUCTION_VERSION"
           cat pyproject.toml
+
+      - name: Apply frozen packages
+        run: |
+          cd rdm
+          source .venv/bin/activate
+          python ../build_tools/src/build_tools/install_frozen_dependencies.py ../invenio-forks.json
+
+      - name: Save requirements
+        run: |
+          cd rdm
           uv pip freeze | sort -u >../artifacts/requirements/rdm_requirements.txt
           uv pip list --format=json >../artifacts/requirements/rdm_requirements.json
           cp uv.lock ../artifacts/requirements/rdm.uv.lock
@@ -71,6 +92,16 @@ jobs:
           cd rdm_tests
           uv add "$APP_RDM_TEST_VERSION"
           cat pyproject.toml
+
+      - name: Apply frozen packages to tests
+        run: |
+          cd rdm
+          source .venv/bin/activate
+          python ../build_tools/src/build_tools/install_frozen_dependencies.py ../invenio-forks.json
+  
+      - name: Save testrequirements
+        run: |
+          cd rdm
           uv pip freeze | sort -u >../artifacts/requirements/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/requirements/rdm_test_requirements.json
           cp uv.lock ../artifacts/requirements/rdm_test.uv.lock

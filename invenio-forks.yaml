@@ -36,6 +36,13 @@ packages:
         invenio-version: "<10.8.7"
       - name: removed-rdm-entrypoints-from-v10.8.7
         base: v10.8.7
+    frozen:
+      - invenio-version: "<11.0.0"
+        packages:
+          # - invenio-access==2.0.0
+          # - invenio-records-permissions==0.21.0
+          - invenio-logging==2.1.1
+          - pyjwt==2.9.0
 
   - name: invenio-communities
     oarepo: 12
