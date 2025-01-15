@@ -1,3 +1,7 @@
+rdm:
+  banned-versions:
+    - "12.0.13"
+
 packages:
   - name: invenio-administration
     oarepo: 12
@@ -19,10 +23,6 @@ packages:
     features:
       - name: removed-webpack-aliases
         base: v12.0.12
-    frozen:
-      - invenio-version: ==12.0.13
-        packages:
-          - invenio-app-rdm==12.0.12
 
   - name: invenio-banners
     oarepo: 12

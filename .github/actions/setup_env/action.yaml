@@ -11,25 +11,28 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: "Set up environment variables"
+      shell: "bash"
+      run: |
+        wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O yq && chmod +x yq
+        EXCLUDED_RDM_VERSIONS=$(
+          cat invenio-forks.yaml | yq '.rdm.banned-versions | map( "!=" + . ) | join(",")'
+        )
+        echo "OPENSEARCH_PORT=9200" | tee -a $GITHUB_ENV
+        echo "OPENSEARCH_VERSION=2" | tee -a $GITHUB_ENV
+        echo "REDIS_VERSION=6" | tee -a $GITHUB_ENV
+        echo "POSTGRES_VERSION=14" | tee -a $GITHUB_ENV
+        echo "POSTGRES_DB=invenio" | tee -a $GITHUB_ENV
 
-  - name: "Set up environment variables"
-    shell: "bash"
-    run: |
-      echo "OPENSEARCH_PORT=9200" | tee -a $GITHUB_ENV
-      echo "OPENSEARCH_VERSION=2" | tee -a $GITHUB_ENV
-      echo "REDIS_VERSION=6" | tee -a $GITHUB_ENV
-      echo "POSTGRES_VERSION=14" | tee -a $GITHUB_ENV
-      echo "POSTGRES_DB=invenio" | tee -a $GITHUB_ENV
+        OAREPO_VERSION=${{ inputs.oarepo-version }}
+        PYTHON_VERSION=${{ inputs.python-version }}
 
-      OAREPO_VERSION=${{ inputs.oarepo-version }}
-      PYTHON_VERSION=${{ inputs.python-version }}
+        echo "OAREPO_VERSION=${OAREPO_VERSION}" | tee -a $GITHUB_ENV
+        OAREPO_VERSION_INC=$((OAREPO_VERSION + 1))
 
-      echo "OAREPO_VERSION=${OAREPO_VERSION}" | tee -a $GITHUB_ENV
-      OAREPO_VERSION_INC=$((OAREPO_VERSION + 1))
+        echo "OAREPO_VERSION_INC=${OAREPO_VERSION_INC}" | tee -a $GITHUB_ENV
+        echo "PYTHON=python${PYTHON_VERSION}" | tee -a $GITHUB_ENV
 
-      echo "OAREPO_VERSION_INC=${OAREPO_VERSION_INC}" | tee -a $GITHUB_ENV
-      echo "PYTHON=python${PYTHON_VERSION}" | tee -a $GITHUB_ENV
-
-      # take at least beta development versions of invenio-app-rdm
-      echo "APP_RDM_PRODUCTION_VERSION=invenio-app-rdm[opensearch2,s3]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"  | tee -a $GITHUB_ENV
-      echo "APP_RDM_TEST_VERSION=invenio-app-rdm[opensearch2,s3,tests]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC}"  | tee -a $GITHUB_ENV
+        # take at least beta development versions of invenio-app-rdm
+        echo "APP_RDM_PRODUCTION_VERSION=invenio-app-rdm[opensearch2,s3]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC},${EXCLUDED_RDM_VERSIONS}"  | tee -a $GITHUB_ENV
+        echo "APP_RDM_TEST_VERSION=invenio-app-rdm[opensearch2,s3,tests]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC},${EXCLUDED_RDM_VERSIONS}"  | tee -a $GITHUB_ENV
