@@ -349,7 +349,15 @@ jobs:
           cd .forks/${PACKAGE}
           source .venv/bin/activate
           pip install twine
-          twine upload --repository-url ${CESNET_PYPI_URL} dist/*
+          if [ -z "${TWINE_USERNAME}" ] ; then
+            echo "TWINE_USERNAME is not set, will not upload to pypi"
+            exit 1
+          fi
+          if [ -z "${TWINE_PASSWORD}" ] ; then
+            echo "TWINE_PASSWORD is not set, will not upload to pypi"
+            exit 1
+          fi
+          twine upload --non-interactive --repository-url ${CESNET_PYPI_URL} dist/*
 
       # this is an old way of uploading to github pages, not used anymore
       # - name: Clone the pypi
