@@ -189,6 +189,8 @@ jobs:
           
       - name: Create a summary of the changes and commit it
         run: | 
+          cd .forks/${PACKAGE}
+
           # add the features to a file that will be committed to the package so that later we know
           # that the package was patched with these features
           main_package=$(echo $PACKAGE | sed 's/-/_/g')
@@ -251,7 +253,6 @@ jobs:
         run: | # shell
           cd .forks/${PACKAGE}
           ../../build_tools/.venv/bin/bt_apply_entrypoints ../../package_settings.json setup.cfg
-          exit 1
 
       - name: Run tests on the patched package
         run: |  # shell
