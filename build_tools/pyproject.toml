@@ -9,12 +9,14 @@ dependencies = [
     "semver>=3.0.2",
     "typer>=0.12.5",
     "toml>=0.10.2",
+    "configupdater",
 ]
 
 [project.scripts]
 bt_get_fork_versions = "build_tools.get_fork_versions:app"
 bt_apply_versions_and_forks_to_pyproject = "build_tools.apply_versions_and_forks_to_pyproject:app"
 bt_bump_version = "build_tools.bump_version:app"
+bt_apply_entrypoints = "build_tools.apply_entrypoints:app"
 
 
 [build-system]

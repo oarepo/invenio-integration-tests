@@ -14,7 +14,8 @@ packages:
       - invenio-version: "<13.0.0"
         remove: "*"
         keep:
-          - "invenio_assets.webpack:invenio_app_rdm_theme"
+          - group: invenio_assets.webpack
+            name: invenio_app_rdm_theme
     features:
       - name: removed-webpack-aliases
         base: v12.0.0
@@ -32,8 +33,10 @@ packages:
       - invenio-version: "<11.0.0"
         remove: "*"
         keep:
-          - "invenio_jsonschemas.schemas:invenio_rdm_records"
-          - "invenio_assets.webpack:invenio_rdm_records"
+          - group: invenio_jsonschemas.schemas
+            name: invenio_rdm_records
+          - group: invenio_assets.webpack
+            name: invenio_rdm_records
     frozen:
       - invenio-version: "<11.0.0"
         packages:

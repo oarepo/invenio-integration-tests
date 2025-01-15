@@ -1,0 +1,11 @@
+name: "Install build tools from this repository/build_tools"
+runs:
+  using: "composite"
+  steps:
+    - name: Create virtualenv for build tools
+      shell: "bash"
+      run: | # shell
+        cd build_tools
+        uv venv --seed
+        source .venv/bin/activate
+        uv pip install -e .

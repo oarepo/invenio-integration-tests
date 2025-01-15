@@ -57,28 +57,19 @@ jobs:
   #     oarepo: ${{ github.event.inputs.oarepo }}
   #     python: ${{ github.event.inputs.python }}
 
-  # get_fork_versions:
-  #   name: Get fork versions
-  #   uses: ./.github/workflows/02-get-fork-versions.yaml
-  #   needs:
-  #     - extract_requirements
-  #   with:
-  #     oarepo: ${{ github.event.inputs.oarepo }}
-  #     python: ${{ github.event.inputs.python }}
-
-  # build_and_test_forks:
-  #   name: ${{ matrix.package_and_version }} and test
-  #   needs: get_fork_versions
-  #   strategy:
-  #     matrix:
-  #       package_and_version: ${{ fromJSON(needs.get_fork_versions.outputs.forks_and_versions) }}
-  #     fail-fast: false
-  #   uses: ./.github/workflows/04-create-fork.yaml
-  #   secrets: inherit
-  #   with:
-  #     oarepo: ${{ github.event.inputs.oarepo }}
-  #     python: ${{ github.event.inputs.python }}
-  #     package_and_version: ${{ matrix.package_and_version }}
+  build_and_test_forks:
+    name: ${{ matrix.package_and_version }} and test
+    needs: extract_requirements
+    strategy:
+      matrix:
+        package_and_version: ${{ fromJSON(needs.extract_requirements.outputs.forks_and_versions) }}
+      fail-fast: false
+    uses: ./.github/workflows/04-create-fork.yaml
+    secrets: inherit
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
+      package_and_version: ${{ matrix.package_and_version }}
 
   # create_oarepo_package:
   #   name: Create oarepo package

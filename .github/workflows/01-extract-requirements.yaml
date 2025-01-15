@@ -5,6 +5,8 @@
 # invenio-integration-tests is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
+# note: in vscode, use YAML Embedded Languages for better support of embedded shell
+
 name: Extract requirements from Invenio RDM
 
 on:
@@ -56,21 +58,17 @@ jobs:
         run: |
           mkdir -p artifacts/requirements
 
-      - name: Create virtualenv for build tools
-        run: |
-          cd build_tools
-          uv venv --seed
-          source .venv/bin/activate
-          uv pip install -e .
+      - name: Install build tools
+        uses: ./.github/actions/install_build_tools
 
       - name: Convert invenio-forks.yaml into json as some tools are run in invenio venv and do not have yaml
-        run: |
+        run: |  # shell
           build_tools/.venv/bin/python \
               build_tools/src/build_tools/convert_forks_to_json.py \
               invenio-forks.yaml >invenio-forks-temp.json
 
       - name: Lock app-rdm version
-        run: |
+        run: |  # shell
           # initialize rdm project with the given python. This will create a rdm/.venv directory
           uv init rdm --python $PYTHON_VERSION
           cd rdm
@@ -83,46 +81,46 @@ jobs:
         # go through the virtualenv and the forks file and select the forks that are needed
         # this will create another json file with the same format but all the elements
         # that are not needed will be removed
-        run: |
+        run: |  # shell
           cd rdm
           source .venv/bin/activate
           python ../build_tools/src/build_tools/select_forks_by_venv.py ../invenio-forks-temp.json ../invenio-forks.json
 
       - name: Apply frozen packages
-        run: |
+        run: |  # shell
           cd rdm
           source .venv/bin/activate
           python ../build_tools/src/build_tools/install_frozen_dependencies.py ../invenio-forks.json
           cp ../invenio-forks.json ../artifacts/requirements/invenio-forks.json
 
       - name: Save requirements
-        run: |
+        run: |  # shell
           cd rdm
           uv pip freeze | sort -u >../artifacts/requirements/rdm_requirements.txt
           uv pip list --format=json >../artifacts/requirements/rdm_requirements.json
           cp uv.lock ../artifacts/requirements/rdm.uv.lock
 
       - name: Extract react dependencies
-        run: |
+        run: |  # shell
           cd rdm
           source .venv/bin/activate
           python ../build_tools/src/build_tools/get_react_dependencies.py >../artifacts/requirements/react-dependencies.json
 
       - name: Lock app-rdm + tests version
-        run: |
+        run: |  # shell
           uv init rdm_tests --python $PYTHON_VERSION
           cd rdm_tests
           uv add "$APP_RDM_TEST_VERSION"
           cat pyproject.toml
 
       - name: Apply frozen packages to tests
-        run: |
+        run: |  # shell
           cd rdm
           source .venv/bin/activate
           python ../build_tools/src/build_tools/install_frozen_dependencies.py ../invenio-forks.json
   
       - name: Save testrequirements
-        run: |
+        run: |  # shell
           cd rdm
           uv pip freeze | sort -u >../artifacts/requirements/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/requirements/rdm_test_requirements.json
@@ -130,7 +128,7 @@ jobs:
 
       - name: Check that the two requirements are compatible
         # , that is, that the test requirements are a superset of the requirements
-        run: |
+        run: |  # shell
           echo "Diff between the requirements and test requirements"
           diff -u artifacts/requirements/rdm_requirements.txt artifacts/requirements/rdm_test_requirements.txt | egrep -v '^(---|[+][+][+])' | egrep "^(-|[+])" | tee test_changes.diff || true
           cat test_changes.diff | grep '^-' | while read ; do
@@ -142,7 +140,7 @@ jobs:
 
       - id: get_fork_versions
         name: Get forks and their versions
-        run: |
+        run: |  # shell
               mkdir -p artifacts/fork-versions
               build_tools/.venv/bin/bt_get_fork_versions \
                   invenio-forks.json \
@@ -164,10 +162,18 @@ jobs:
           if-no-files-found: error
 
       - name: Display Requirements
-        run: |
+        run: |  # shell
           echo "========= RDM Requirements ========="
           cat artifacts/requirements/rdm_requirements.txt
           echo
           echo
           echo "========= RDM Test Requirements ========="
           cat artifacts/requirements/rdm_test_requirements.txt
+          echo
+          echo
+          echo "========= React Dependencies ========="
+          cat artifacts/requirements/react-dependencies.json
+          echo
+          echo
+          echo "========= Invenio Forks Settings ========="
+          cat invenio-forks.json

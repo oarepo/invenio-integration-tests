@@ -22,7 +22,12 @@ on:
         type: string
       package_and_version:
         description: "Package and version to fork"
-        # input example: {"package": "invenio-communities", "version": "13.0.6", "features": ["kwargs-extension"]}
+        # input example: {
+        #   "package": "invenio-communities", 
+        #   "version": "13.0.6", 
+        #   "features": ["kwargs-extension"], 
+        #   "entry-points": [...]
+        # }
         required: true
         type: string
 
@@ -54,13 +59,16 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
+      - name: Install build tools
+        uses: ./.github/actions/install_build_tools
+  
       - name: Git globals
-        run: |
+        run: |  # shell
           git config --global user.email "integration-tests@oarepo.org"
           git config --global user.name "OARepo Bot"
 
-      - name: Convert package and version to environment variables
-        run: |
+      - name: Convert package and version to environment variables. Create package-settings.json
+        run: | 
           cat <<EOF >> $GITHUB_ENV
           
           PACKAGE=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.package')
@@ -71,7 +79,12 @@ jobs:
           OAREPO_VERSION=oarepo-$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
 
           EOF
+
+          echo "${PACKAGE_AND_VERSION}" | jq > package_settings.json
+          echo "==== Package settings: ===="
+          cat package_settings.json
           
+          echo "==== Environment: ===="
           cat $GITHUB_ENV
 
       - name: Clone the package
@@ -89,7 +102,7 @@ jobs:
   
       - name: Check if the package is already forked
         id: check_fork
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           git fetch --all
 
@@ -114,7 +127,7 @@ jobs:
             echo fork_version="${VERSION}.post999" >> $GITHUB_ENV
           }
       - name: Bump the version of the fork
-        run: |
+        run: |  # shell
           # increase the dump version by one                                     # "2.3.4post286"
           fork_version_prefix=$(echo $fork_version | sed 's/[0-9]*$//')          # => "2.3.4post"
           fork_version_post_version=$(echo $fork_version | sed 's/.*post//')     # => "286"
@@ -123,11 +136,11 @@ jobs:
           echo "fork_version=${fork_version}" >> $GITHUB_ENV
 
       - name: Create a temporary fork of the package
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           git remote add upstream https://github.com/inveniosoftware/${PACKAGE}.git || true
           
-          # remove a temporary fork
+          # remove a temporary fork branch if it exists
           git branch -D ${OAREPO_VERSION}-temporary || true
           
           # fetch invenio version and check it out
@@ -138,10 +151,11 @@ jobs:
           # it is a tag, so create oarepo version from it
           git switch -c ${OAREPO_VERSION}-temporary
           
+          # list all branches
           git branch -a
 
       - name: Apply feature branches
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           
           apply_feature() {
@@ -173,6 +187,8 @@ jobs:
             apply_feature $feature_name $feature_base
           done
           
+      - name: Create a summary of the changes and commit it
+        run: | 
           # add the features to a file that will be committed to the package so that later we know
           # that the package was patched with these features
           main_package=$(echo $PACKAGE | sed 's/-/_/g')
@@ -196,11 +212,14 @@ jobs:
           false = False
           """JSON False."""
           
-          features_incorporated = $FEATURES
+          features_incorporated = '$FEATURES'
                   
-          oarepo_major_version = "${OAREPO_MAJOR_VERSION}"
+          oarepo_major_version = '${OAREPO_MAJOR_VERSION}'
 
-          package_oarepo_version = "${OAREPO_VERSION}"
+          package_oarepo_version = '${OAREPO_VERSION}'
+
+          configuration = '${PACKAGE_AND_VERSION}'
+          
           EOF
           
           black ${main_package}/oarepo_changes.py
@@ -208,7 +227,7 @@ jobs:
           git commit -m "[skip ci] Summarized changes applied to the package"
 
       - name: Bump version to a post version
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           
           # bump the version to a post version
@@ -220,7 +239,7 @@ jobs:
           git commit -m "[skip ci] Bumped version to ${fork_version}"
 
       - name: Remove all github actions on the package
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           if [ -d .github ] ; then
             echo "Removing github actions"
@@ -228,9 +247,14 @@ jobs:
             git rm -rf .github
             git commit -m "[skip ci] Removed github actions"
           fi
+      - name: Apply entrypoint changes
+        run: | # shell
+          cd .forks/${PACKAGE}
+          ../../build_tools/.venv/bin/bt_apply_entrypoints ../../package_settings.json setup.cfg
+          exit 1
 
       - name: Run tests on the patched package
-        run: |
+        run: |  # shell
           fix_versions=$PWD/build_tools/src/build_tools/fix_versions_in_venv.py
           rdm_requirements=$PWD/artifacts/requirements/rdm_test_requirements.txt
 
@@ -265,7 +289,7 @@ jobs:
 
       - name: Rename a temporary fork to the final fork
         if: env.fork_already_exists != 'true'
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           git switch ${OAREPO_VERSION}-temporary
           git branch -m ${OAREPO_VERSION}
@@ -273,7 +297,7 @@ jobs:
 
       - name: Check if the temporary fork is the same as original, if not, remove the original and rename temp to original
         if: env.fork_already_exists == 'true'
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           echo "git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>"
           git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py 
@@ -288,14 +312,14 @@ jobs:
 
       - name: Push the fork to the repository
         if: env.push_required == 'true'
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           echo "Push is required as there are differences between the original and the temporary fork"
           git push --force --set-upstream origin ${OAREPO_VERSION}
 
       - name: Build the package
         if: env.push_required == 'true'
-        run: |
+        run: |  # shell
           cd .forks/${PACKAGE}
           source .venv/bin/activate
           pip install -U setuptools pip wheel
@@ -311,7 +335,7 @@ jobs:
 
       - name: Copy the package to the pypi
         if: env.push_required == 'true'
-        run: |
+        run: |  # shell
           cp .forks/${PACKAGE}/dist/* pypi/packages
           cd pypi
           ./build.sh
@@ -329,7 +353,7 @@ jobs:
 
       - name: Export the version of the fork to output file
         if: env.push_required == 'true'
-        run: |
+        run: |  # shell
           mkdir -p artifacts/final_fork_versions
           echo "${PACKAGE}==${fork_version}" > artifacts/final_fork_versions/${PACKAGE}.txt
 
