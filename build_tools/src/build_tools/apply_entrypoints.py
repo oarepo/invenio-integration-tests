@@ -70,18 +70,91 @@ def main(
                     cfg,
                     EntryPoint(ep["group"], ep["name"], ep["value"]),
                 )
+    for dep in fork_config.get("dependencies", []):
+        kept_dependencies: set[str] = set()
+        extra = dep.get("extra", None)
+        for d in dep.get("keep", []):
+            kept_dependencies.add(d.strip())
+        if "remove" in dep:
+            to_remove = dep["remove"]
+            if not isinstance(to_remove, list):
+                to_remove = [to_remove]
+            for d in to_remove:
+                if d == "*":
+                    remove_all_dependencies(cfg, extra, kept_dependencies)
+                else:
+                    remove_dependency(cfg, extra, d, kept_dependencies)
+        if "add" in dep:
+            to_add = dep["add"]
+            if not isinstance(to_add, list):
+                to_add = [to_add]
+            for d in to_add:
+                add_dependency(cfg, extra, d)
+
     print(cfg)
     cfg.write(setup_cfg_file.open("w"))
 
 
-def write_values(opt: Option, values: list[str]):
-    values = [val.replace(" ", "") for val in values]
-    values = [val.replace("=", " = ") for val in values]
+def write_values(opt: Option, values: list[str], format=True):
+    if format:
+        values = [val.replace(" ", "") for val in values]
+        values = [val.replace("=", " = ") for val in values]
     opt.set_values(values)
 
 
 def load_ep_values(ep_string: Option):
     return [x.strip().replace(" ", "") for x in ep_string.as_list() if x.strip()]
+
+
+def remove_all_dependencies(
+    cfg: ConfigUpdater, extra: str | None, kept_dependencies: set[str]
+):
+    if extra:
+        deps = cfg["options.extras_require"][extra]
+    else:
+        deps = cfg["options.install_requires"]
+    values = load_ep_values(deps)
+    values = [val for val in values if val in kept_dependencies]
+    if values:
+        write_values(deps, values, format=False)
+    else:
+        if extra:
+            del cfg["options.extras_require"][extra]
+        else:
+            del cfg["options.install_requires"]
+
+
+def remove_dependency(
+    cfg: ConfigUpdater, extra: str | None, dep: str, kept_dependencies: set[str]
+):
+    dep = dep.strip().replace(" ", "")
+    if extra:
+        deps = cfg["options.extras_require"][extra]
+    else:
+        deps = cfg["options.install_requires"]
+    values = load_ep_values(deps)
+    values = [val for val in values if val != dep]
+    if values:
+        write_values(deps, values, format=False)
+    else:
+        if extra:
+            del cfg["options.extras_require"][extra]
+        else:
+            del cfg["options.install_requires"]
+
+
+def add_dependency(cfg: ConfigUpdater, extra: str | None, dep: str):
+    dep = dep.strip().replace(" ", "")
+    if extra:
+        if extra not in cfg["options.extras_require"]:
+            cfg["options.extras_require"][extra] = ""
+        deps = cfg["options.extras_require"][extra]
+    else:
+        deps = cfg["options.install_requires"]
+    values = load_ep_values(deps)
+    if dep not in values:
+        values.append(dep)
+    write_values(deps, values, format=False)
 
 
 def remove_all_entrypoints(cfg: ConfigUpdater, kept_entrypoints: set[EntryPoint]):

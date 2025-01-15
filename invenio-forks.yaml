@@ -37,6 +37,9 @@ packages:
             name: invenio_rdm_records
           - group: invenio_assets.webpack
             name: invenio_rdm_records
+    dependencies:
+      - extra: tests
+        remove: "*"
     frozen:
       - invenio-version: "<11.0.0"
         packages:
