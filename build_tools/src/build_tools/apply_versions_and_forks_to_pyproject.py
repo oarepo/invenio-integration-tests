@@ -37,8 +37,12 @@ def main(
     forked_packages = [json.loads(x) for x in forked_packages]
     forked_packages = {x["package"]: x["version"] for x in forked_packages}
 
+    print(
+        "Final forked packages and their versions:", final_forked_packages_and_versions
+    )
     for ff in final_forked_packages_and_versions.glob("*.txt"):
         data = ff.read_text().strip()
+        print("Adding package to forked_packages", data)
         _package, _version = data.split("==")
         forked_packages[_package] = _version
 
@@ -107,7 +111,7 @@ def format_dependency(forked_packages, name, versions):
     if name not in forked_packages:
         formatted = f"{name}=={version}"
     else:
-        formatted = f"{name}=={version}.post999"
+        formatted = f"{name}=={forked_packages[name]}"
     return formatted, name
 
 
