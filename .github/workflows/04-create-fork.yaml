@@ -128,12 +128,18 @@ jobs:
           }
       - name: Bump the version of the fork
         run: |  # shell
-          # increase the dump version by one                                     # "2.3.4post286"
+          # increase the dump version by one            
+          previous_fork_version=${fork_version}                         # "2.3.4post286"
           fork_version_prefix=$(echo $fork_version | sed 's/[0-9]*$//')          # => "2.3.4post"
           fork_version_post_version=$(echo $fork_version | sed 's/.*post//')     # => "286"
           ((fork_version_post_version++))                                        # => 287
           fork_version="${fork_version_prefix}${fork_version_post_version}"
+
+          # this will be the new version if the package has changed
           echo "fork_version=${fork_version}" >> $GITHUB_ENV
+
+          # remember the previous version as it will be needed later
+          echo "previous_fork_version=${previous_fork_version}" >> $GITHUB_ENV
 
       - name: Create a temporary fork of the package
         run: |  # shell
@@ -305,12 +311,14 @@ jobs:
           echo "git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>"
           git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py 
           echo "<<<"
+          echo "actual_fork_version=${previous_fork_version}" >> $GITHUB_ENV
           git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py || {
             echo "The temporary fork is different from the original, will do push"
             git branch -D ${OAREPO_VERSION}
             git switch ${OAREPO_VERSION}-temporary
             git branch -m ${OAREPO_VERSION}
             echo "push_required=true" >> $GITHUB_ENV
+            echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
           }
 
       - name: Push the fork to the repository
@@ -355,13 +363,11 @@ jobs:
           push_options: '--force'
 
       - name: Export the version of the fork to output file
-        if: env.push_required == 'true'
         run: |  # shell
           mkdir -p artifacts/final_fork_versions
-          echo "${PACKAGE}==${fork_version}" > artifacts/final_fork_versions/${PACKAGE}.txt
+          echo "${PACKAGE}==${actual_fork_version}" > artifacts/final_fork_versions/${PACKAGE}.txt
 
       - name: Upload fork versions
-        if: env.push_required == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: final_fork_versions-${{ env.PACKAGE }}
