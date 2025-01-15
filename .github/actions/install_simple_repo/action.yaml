@@ -23,44 +23,44 @@ inputs:
 runs:
   using: "composite"
   steps:
-  - name: "Set up simple repository"
-    shell: "bash"
-    env:
-      EXTRAS: ${{ inputs.extras }}
-    run: |
-      echo "Got extras $EXTRAS"
-      
-      uv venv .venv-tests
-      source .venv-tests/bin/activate
-      uv pip install -U setuptools pip wheel
+    - name: "Set up simple repository"
+      shell: "bash"
+      env:
+        EXTRAS: ${{ inputs.extras }}
+      run: |
+        echo "Got extras $EXTRAS"
+
+        uv venv .venv-tests
+        source .venv-tests/bin/activate
+        uv pip install -U setuptools pip wheel
 
 
-      # install in non-editable mode
-      uv pip install --extra-index-url https://oarepo.github.io/pypi/packages/simple artifacts/oarepo${EXTRAS}
+        # install in non-editable mode
+        uv pip install --extra-index-url $CESNET_PYPI_URL artifacts/oarepo${EXTRAS}
 
-      cd simple_repo
-      uv pip install --extra-index-url https://oarepo.github.io/pypi/packages/simple -e .${EXTRAS} --no-deps
-      
-      export INVENIO_INSTANCE_PATH=$PWD/instance
-      export INVENIO_SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://localhost:5432/invenio"
-      
-      echo "INVENIO_INSTANCE_PATH=$INVENIO_INSTANCE_PATH" | tee -a $GITHUB_ENV
-      echo "INVENIO_SQLALCHEMY_DATABASE_URI=$INVENIO_SQLALCHEMY_DATABASE_URI" | tee -a $GITHUB_ENV
+        cd simple_repo
+        uv pip install --extra-index-url $CESNET_PYPI_URL -e .${EXTRAS} --no-deps
 
-  - name: "Initialize the database, indices etc ..."
-    if: ${{ inputs.initialize == 'true' }}
-    shell: "bash"
-    run: |      
-      source .venv-tests/bin/activate
-      cd simple_repo
-      
-      /bin/echo -e "\n=== invenio db init: ==="
-      invenio db init
-      /bin/echo -e "\n=== invenio db create: ==="
-      invenio db create
-      /bin/echo -e "\n=== invenio index init: ==="
-      invenio index init
-      /bin/echo -e "\n=== invenio webpack buildall: ==="
-      invenio webpack buildall
-      /bin/echo -e "\n=== invenio users create: ==="
-      invenio users create --password aaaaaa -a -c test@test.com
+        export INVENIO_INSTANCE_PATH=$PWD/instance
+        export INVENIO_SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://localhost:5432/invenio"
+
+        echo "INVENIO_INSTANCE_PATH=$INVENIO_INSTANCE_PATH" | tee -a $GITHUB_ENV
+        echo "INVENIO_SQLALCHEMY_DATABASE_URI=$INVENIO_SQLALCHEMY_DATABASE_URI" | tee -a $GITHUB_ENV
+
+    - name: "Initialize the database, indices etc ..."
+      if: ${{ inputs.initialize == 'true' }}
+      shell: "bash"
+      run: |
+        source .venv-tests/bin/activate
+        cd simple_repo
+
+        /bin/echo -e "\n=== invenio db init: ==="
+        invenio db init
+        /bin/echo -e "\n=== invenio db create: ==="
+        invenio db create
+        /bin/echo -e "\n=== invenio index init: ==="
+        invenio index init
+        /bin/echo -e "\n=== invenio webpack buildall: ==="
+        invenio webpack buildall
+        /bin/echo -e "\n=== invenio users create: ==="
+        invenio users create --password aaaaaa -a -c test@test.com
