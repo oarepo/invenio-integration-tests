@@ -18,7 +18,7 @@ packages:
             name: invenio_app_rdm_theme
     features:
       - name: removed-webpack-aliases
-        base: v12.0.0
+        base: v12.0.12
 
   - name: invenio-banners
     oarepo: 12
