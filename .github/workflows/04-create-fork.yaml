@@ -328,7 +328,7 @@ jobs:
 
       - name: Check that the version of the package is on cesnet pypi
         run: | # shell
-          pip download -i ${CESNET_PYPI_URL}/simple ${PACKAGE}==${actual_fork_version} || {
+          pip download --no-deps -i ${CESNET_PYPI_URL}/simple ${PACKAGE}==${actual_fork_version} || {
             echo "The package ${PACKAGE}==${actual_fork_version} is not on the cesnet pypi, will publish it"
             echo "push_required=true" >> $GITHUB_ENV
           }
@@ -366,7 +366,7 @@ jobs:
             echo "TWINE_PASSWORD is not set, will not upload to pypi"
             exit 1
           fi
-          twine upload --verbose --non-interactive --repository-url ${CESNET_PYPI_URL} dist/*
+          twine upload --verbose --non-interactive --repository-url ${CESNET_PYPI_URL} dist/* || echo "Failed to upload to pypi"
 
       # this is an old way of uploading to github pages, not used anymore
       # - name: Clone the pypi
