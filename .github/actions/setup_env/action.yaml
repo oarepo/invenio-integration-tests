@@ -36,3 +36,5 @@ runs:
         # take at least beta development versions of invenio-app-rdm
         echo "APP_RDM_PRODUCTION_VERSION=invenio-app-rdm[opensearch2,s3]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC},${EXCLUDED_RDM_VERSIONS}"  | tee -a $GITHUB_ENV
         echo "APP_RDM_TEST_VERSION=invenio-app-rdm[opensearch2,s3,tests]>=${OAREPO_VERSION}.0.0b1.dev1,<${OAREPO_VERSION_INC},${EXCLUDED_RDM_VERSIONS}"  | tee -a $GITHUB_ENV
+
+        echo "CESNET_PYPI_URL=https://gitlab.cesnet.cz/api/v4/projects/1408/packages/pypi" | tee -a $GITHUB_ENV

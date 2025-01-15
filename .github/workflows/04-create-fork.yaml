@@ -321,6 +321,13 @@ jobs:
             echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
           }
 
+      - name: Check that the version of the package is on cesnet pypi
+        run: | # shell
+          pip download -i ${CESNET_PYPI_URL} ${PACKAGE}==${actual_fork_version} || {
+            echo "The package ${PACKAGE}==${actual_fork_version} is not on the cesnet pypi, will publish it"
+            echo "push_required=true" >> $GITHUB_ENV
+          }
+
       - name: Push the fork to the repository
         if: env.push_required == 'true'
         run: |  # shell
@@ -336,31 +343,40 @@ jobs:
           pip install -U setuptools pip wheel
           python setup.py sdist bdist_wheel
 
-      - name: Clone the pypi
-        if: env.push_required == 'true'
-        uses: actions/checkout@v4
-        with:
-          repository: "oarepo/pypi"
-          token: "${{ secrets.INTEGRATION_TEST }}"
-          path: "pypi"
-
-      - name: Copy the package to the pypi
+      - name: Upload to CESNET pypi
         if: env.push_required == 'true'
         run: |  # shell
-          cp .forks/${PACKAGE}/dist/* pypi/packages
-          cd pypi
-          ./build.sh
+          cd .forks/${PACKAGE}
+          source .venv/bin/activate
+          pip install twine
+          twine upload --repository-url ${CESNET_PYPI_URL} dist/*
 
-      - name: Commit the package to the pypi
-        if: env.push_required == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "[invenio-integration-tests] adding package ${{ env.PACKAGE }} version ${{ env.VERSION }} to the pypi"
-          file_pattern: packages/*
-          repository: pypi
-          commit_user_name: integration-tests
-          commit_user_email: integration-tests@oarepo.org
-          push_options: '--force'
+      # this is an old way of uploading to github pages, not used anymore
+      # - name: Clone the pypi
+      #   if: env.push_required == 'true'
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: "oarepo/pypi"
+      #     token: "${{ secrets.INTEGRATION_TEST }}"
+      #     path: "pypi"
+
+      # - name: Copy the package to the pypi
+      #   if: env.push_required == 'true'
+      #   run: |  # shell
+      #     cp .forks/${PACKAGE}/dist/* pypi/packages
+      #     cd pypi
+      #     ./build.sh
+
+      # - name: Commit the package to the pypi
+      #   if: env.push_required == 'true'
+      #   uses: stefanzweifel/git-auto-commit-action@v5
+      #   with:
+      #     commit_message: "[invenio-integration-tests] adding package ${{ env.PACKAGE }} version ${{ env.VERSION }} to the pypi"
+      #     file_pattern: packages/*
+      #     repository: pypi
+      #     commit_user_name: integration-tests
+      #     commit_user_email: integration-tests@oarepo.org
+      #     push_options: '--force'
 
       - name: Export the version of the fork to output file
         run: |  # shell
