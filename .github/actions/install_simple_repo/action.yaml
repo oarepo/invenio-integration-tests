@@ -36,10 +36,10 @@ runs:
 
 
         # install in non-editable mode
-        uv pip install --extra-index-url $CESNET_PYPI_URL artifacts/oarepo${EXTRAS}
+        uv pip install --extra-index-url ${CESNET_PYPI_URL}/simple artifacts/oarepo${EXTRAS}
 
         cd simple_repo
-        uv pip install --extra-index-url $CESNET_PYPI_URL -e .${EXTRAS} --no-deps
+        uv pip install --extra-index-url ${CESNET_PYPI_URL}/simple -e .${EXTRAS} --no-deps
 
         export INVENIO_INSTANCE_PATH=$PWD/instance
         export INVENIO_SQLALCHEMY_DATABASE_URI="postgresql+psycopg2://localhost:5432/invenio"
