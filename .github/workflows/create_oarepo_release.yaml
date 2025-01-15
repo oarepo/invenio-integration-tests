@@ -81,38 +81,38 @@ jobs:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
-  # test_simple_repository_pytest:
-  #   name: PyTest simple repository
-  #   needs:
-  #   - create_oarepo_package
-  #   - build_and_test_forks
-  #   uses: ./.github/workflows/06-simple-repository-pytest.yaml
-  #   secrets: inherit
-  #   with:
-  #     oarepo: ${{ github.event.inputs.oarepo }}
-  #     python: ${{ github.event.inputs.python }}
+  test_simple_repository_pytest:
+    name: PyTest simple repository
+    needs:
+    - create_oarepo_package
+    - build_and_test_forks
+    uses: ./.github/workflows/06-simple-repository-pytest.yaml
+    secrets: inherit
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
 
-  # test_simple_repository_rest:
-  #   name: REST tests simple repository
-  #   needs:
-  #   - create_oarepo_package
-  #   - build_and_test_forks
-  #   uses: ./.github/workflows/07-simple-repository-rest.yaml
-  #   secrets: inherit
-  #   with:
-  #     oarepo: ${{ github.event.inputs.oarepo }}
-  #     python: ${{ github.event.inputs.python }}
+  test_simple_repository_rest:
+    name: REST tests simple repository
+    needs:
+    - create_oarepo_package
+    - build_and_test_forks
+    uses: ./.github/workflows/07-simple-repository-rest.yaml
+    secrets: inherit
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
 
-  # test_simple_repository_ui:
-  #   name: UI tests simple repository
-  #   needs:
-  #   - create_oarepo_package
-  #   - build_and_test_forks
-  #   uses: ./.github/workflows/08-simple-repository-ui.yaml
-  #   secrets: inherit
-  #   with:
-  #     oarepo: ${{ github.event.inputs.oarepo }}
-  #     python: ${{ github.event.inputs.python }}
+  test_simple_repository_ui:
+    name: UI tests simple repository
+    needs:
+    - create_oarepo_package
+    - build_and_test_forks
+    uses: ./.github/workflows/08-simple-repository-ui.yaml
+    secrets: inherit
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
 
 # maybe: more thorough tests with model builder
 
