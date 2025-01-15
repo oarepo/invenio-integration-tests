@@ -38,6 +38,7 @@ Output if the inveio-administration is installed with version 2.2.6 or higher:
 
 packages:
     - name: invenio-administration
+
       oarepo: 12
       features: []
       frozen:
@@ -65,7 +66,9 @@ def select_forks_by_venv(input_json_path: Path, output_json_path: Path):
     ]
     json_data["packages"] = [pkg for pkg in json_data["packages"] if pkg is not None]
     for pkg in json_data["packages"]:
+        pkg["package"] = pkg["name"]
         pkg["invenio_version"] = actual_packages.get(pkg["name"].lower())
+        pkg["version"] = pkg["invenio_version"]
     # and dump
     output_json_path.write_text(json.dumps(json_data, indent=2))
 
