@@ -252,6 +252,7 @@ jobs:
       - name: Apply entrypoint changes
         run: | # shell
           cd .forks/${PACKAGE}
+          cp setup.cfg .setup.cfg.before-changes
           ../../build_tools/.venv/bin/bt_apply_entrypoints ../../package_settings.json setup.cfg
 
       - name: Run tests on the patched package
@@ -269,7 +270,7 @@ jobs:
           cp setup.cfg .setup.cfg.orig
 
           # add back lines removed by forks as they contain dependencies needed for the tests
-          cat .setup.cfg.orig | sed "s/--black//" | sed 's/--isort//' | sed 's/--pydocstyle//' | sed 's/# removed-by-oarepo //' > setup.cfg
+          cat .setup.cfg.before-changes | sed "s/--black//" | sed 's/--isort//' | sed 's/--pydocstyle//' > setup.cfg
           cat setup.cfg
 
           uv venv --python=${PYTHON_VERSION}
