@@ -21,6 +21,11 @@ on:
         default: "3.12"
         type: string
 
+    outputs:
+      forks_and_versions:
+        description: "Invenio forks and their versions"
+        value: ${{ jobs.main.outputs.forks_and_versions }}
+    
 env:
   # keep the following consistent
   OAREPO_VERSION: ${{ inputs.oarepo }}
@@ -29,6 +34,8 @@ env:
 jobs:
   main:
     runs-on: ubuntu-latest
+    outputs:
+      forks_and_versions: ${{ steps.get_fork_versions.outputs.forks_and_versions }}
 
     steps:
       - name: Checkout oarepo/invenio-integration-tests
@@ -49,29 +56,44 @@ jobs:
         run: |
           mkdir -p artifacts/requirements
 
-      - name: Create virtualenv and install build tools
+      - name: Create virtualenv for build tools
         run: |
           cd build_tools
           uv venv --seed
           source .venv/bin/activate
           uv pip install -e .
 
-      - name: Convert invenio-forks.yaml into json
+      - name: Convert invenio-forks.yaml into json as some tools are run in invenio venv and do not have yaml
         run: |
-          build_tools/.venv/bin/python build_tools/src/build_tools/convert_forks_to_json.py invenio-forks.yaml >invenio-forks.json
+          build_tools/.venv/bin/python \
+              build_tools/src/build_tools/convert_forks_to_json.py \
+              invenio-forks.yaml >invenio-forks-temp.json
 
       - name: Lock app-rdm version
         run: |
+          # initialize rdm project with the given python. This will create a rdm/.venv directory
           uv init rdm --python $PYTHON_VERSION
           cd rdm
+
+          # add the invenio-app-rdm with the given version and lock it
           uv add "$APP_RDM_PRODUCTION_VERSION"
           cat pyproject.toml
+
+      - name: Select forks and patches
+        # go through the virtualenv and the forks file and select the forks that are needed
+        # this will create another json file with the same format but all the elements
+        # that are not needed will be removed
+        run: |
+          cd rdm
+          source .venv/bin/activate
+          python ../build_tools/src/build_tools/select_forks_by_venv.py ../invenio-forks-temp.json ../invenio-forks.json
 
       - name: Apply frozen packages
         run: |
           cd rdm
           source .venv/bin/activate
           python ../build_tools/src/build_tools/install_frozen_dependencies.py ../invenio-forks.json
+          cp ../invenio-forks.json ../artifacts/requirements/invenio-forks.json
 
       - name: Save requirements
         run: |
@@ -116,6 +138,23 @@ jobs:
             versions="$(cat test_changes.diff  | grep $pkg | tr '\n' ' ')"
             echo "::warning::RDM requirements and RDM test requirements are not compatible in package: $versions"
           done
+
+
+      - id: get_fork_versions
+        name: Get forks and their versions
+        run: |
+              mkdir -p artifacts/fork-versions
+              build_tools/.venv/bin/bt_get_fork_versions \
+                  invenio-forks.json \
+                  --output-file artifacts/fork-versions/forks_and_versions.json
+              # cat the file to github output variable
+              echo "forks_and_versions=$(cat artifacts/fork-versions/forks_and_versions.json)" >> $GITHUB_OUTPUT
+  
+      - name: Upload fork versions
+        uses: actions/upload-artifact@v4
+        with:
+          name: fork_versions
+          path: artifacts/fork-versions
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

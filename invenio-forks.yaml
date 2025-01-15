@@ -10,19 +10,14 @@ packages:
 
   - name: invenio-app-rdm
     oarepo: 12
+    entrypoints:
+      - invenio-version: "<13.0.0"
+        remove: "*"
+        keep:
+          - "invenio_assets.webpack:invenio_app_rdm_theme"
     features:
-      - name: removed-rdm-entrypoints
+      - name: removed-webpack-aliases
         base: v12.0.0
-        invenio-version: "<12.0.5"
-      - name: removed-rdm-entrypoints-from-v12.0.5
-        base: v12.0.5
-        invenio-version: ">=12.0.5,<12.0.10"
-      - name: removed-rdm-entrypoints-from-v12.0.10
-        base: v12.0.10
-        invenio-version: ">=12.0.10,<12.0.12"
-      - name: removed-rdm-entrypoints-from-v12.0.12
-        base: v12.0.12
-        invenio-version: ">=12.0.12"
 
   - name: invenio-banners
     oarepo: 12
@@ -33,12 +28,12 @@ packages:
 
   - name: invenio-rdm-records
     oarepo: 12
-    features:
-      - name: removed-rdm-entrypoints
-        base: v10.8.0
-        invenio-version: "<10.8.7"
-      - name: removed-rdm-entrypoints-from-v10.8.7
-        base: v10.8.7
+    entrypoints:
+      - invenio-version: "<11.0.0"
+        remove: "*"
+        keep:
+          - "invenio_jsonschemas.schemas:invenio_rdm_records"
+          - "invenio_assets.webpack:invenio_rdm_records"
     frozen:
       - invenio-version: "<11.0.0"
         packages:
