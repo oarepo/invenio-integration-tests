@@ -9,6 +9,11 @@ name: Create a fork of invenio rdm library
 
 on:
   workflow_call:
+    secrets:
+      TWINE_USERNAME:
+        required: true
+      TWINE_PASSWORD:
+        required: true
     inputs:
       oarepo:
         description: OARepo version (12, ...)
@@ -349,6 +354,10 @@ jobs:
           cd .forks/${PACKAGE}
           source .venv/bin/activate
           pip install twine
+
+          export TWINE_USERNAME=${{ secrets.TWINE_USERNAME }}
+          export TWINE_PASSWORD=${{ secrets.TWINE_PASSWORD }}
+
           if [ -z "${TWINE_USERNAME}" ] ; then
             echo "TWINE_USERNAME is not set, will not upload to pypi"
             exit 1
