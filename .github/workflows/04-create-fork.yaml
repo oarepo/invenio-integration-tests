@@ -38,8 +38,8 @@ on:
       force_new_versions:
         description: "Force new versions of forks and oarepo package"
         required: false
-        default: false
-        type: boolean
+        default: 'false'
+        type: string
 
 env:
   # keep the following consistent
@@ -334,7 +334,7 @@ jobs:
           fi
 
       - name: Force build and publish package
-        if: inputs.force_new_versions == true
+        if: inputs.force_new_versions == 'true'
         run: |  # shell
           echo "Forcing new versions of the package"
           echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
