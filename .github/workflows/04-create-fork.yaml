@@ -295,14 +295,13 @@ jobs:
 
           python $fix_versions $rdm_requirements
 
-          # temporarily removed
-          # if [ -x ./run-tests.sh ] ; then
-          #   ./run-tests.sh
-          # elif [ -x ./run_tests.sh ] ; then
-          #   ./run_tests.sh
-          # else
-          #   pytest tests
-          # fi
+          if [ -x ./run-tests.sh ] ; then
+            ./run-tests.sh
+          elif [ -x ./run_tests.sh ] ; then
+            ./run_tests.sh
+          else
+            pytest tests
+          fi
           
           mv .setup.cfg.orig setup.cfg
 
