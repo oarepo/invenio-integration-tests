@@ -338,6 +338,9 @@ jobs:
           echo "Forcing new versions of the package"
           echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
           echo "push_required=true" >> $GITHUB_ENV
+          git branch -D ${OAREPO_VERSION}
+          git switch ${OAREPO_VERSION}-temporary
+          git branch -m ${OAREPO_VERSION}
 
       - name: Check that the version of the package is on cesnet pypi
         run: | # shell
