@@ -335,6 +335,7 @@ jobs:
       - name: Force build and publish package
         if: inputs.force_new_versions == 'true'
         run: |  # shell
+          cd .forks/${PACKAGE}
           echo "Forcing new versions of the package"
           echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
           echo "push_required=true" >> $GITHUB_ENV
