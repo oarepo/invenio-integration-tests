@@ -35,6 +35,11 @@ on:
         description: Python version
         required: true
         default: "3.12"
+      force_new_versions:
+        description: "Force new versions of forks and oarepo package"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   id-token: write
@@ -69,6 +74,7 @@ jobs:
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
+      force_new_versions: ${{ github.event.inputs.force_new_versions }}
       package_and_version: ${{ matrix.package_and_version }}
 
   create_oarepo_package:

@@ -35,6 +35,11 @@ on:
         # }
         required: true
         type: string
+      force_new_versions:
+        description: "Force new versions of forks and oarepo package"
+        required: false
+        default: false
+        type: boolean
 
 env:
   # keep the following consistent
@@ -316,18 +321,28 @@ jobs:
           echo "git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>"
           git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py 
           echo "<<<"
-          echo "actual_fork_version=${previous_fork_version}" >> $GITHUB_ENV
-          git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py || {
-            echo "The temporary fork is different from the original, will do push"
+          if git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py ; then
+            echo "The temporary fork is the same as the original, will not push"
+            echo "actual_fork_version=${previous_fork_version}" >> $GITHUB_ENV          
+          else
+            echo "The temporary fork is different from the original, will push"
             git branch -D ${OAREPO_VERSION}
             git switch ${OAREPO_VERSION}-temporary
             git branch -m ${OAREPO_VERSION}
             echo "push_required=true" >> $GITHUB_ENV
             echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
-          }
+          fi
+
+      - name: Force build and publish package
+        if: inputs.force_new_versions == true
+        run: |  # shell
+          echo "Forcing new versions of the package"
+          echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
+          echo "push_required=true" >> $GITHUB_ENV
 
       - name: Check that the version of the package is on cesnet pypi
         run: | # shell
+          echo "Checking if the package with version ${actual_fork_version} is on cesnet pypi"
           pip download --no-deps -i ${CESNET_PYPI_URL}/simple ${PACKAGE}==${actual_fork_version} || {
             echo "The package ${PACKAGE}==${actual_fork_version} is not on the cesnet pypi, will publish it"
             echo "push_required=true" >> $GITHUB_ENV
