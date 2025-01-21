@@ -73,10 +73,10 @@ packages:
   - name: invenio-records-resources
     oarepo: 12
     features:
-      - name: kwargs
-        base: v5.10.0
+      # - name: kwargs
+      #   base: v5.10.0
       - name: multipart-upload
-        base: v5.10.1
+        base: v5.10.0
 
   - name: invenio-requests
     oarepo: 12
