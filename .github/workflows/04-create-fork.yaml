@@ -312,6 +312,7 @@ jobs:
           git switch ${OAREPO_VERSION}-temporary
           git branch -m ${OAREPO_VERSION}
           echo "push_required=true" >> $GITHUB_ENV
+          echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
 
       - name: Check if the temporary fork is the same as original, if not, remove the original and rename temp to original
         if: env.fork_already_exists == 'true'
