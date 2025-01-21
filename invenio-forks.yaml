@@ -89,6 +89,10 @@ packages:
     features:
       - name: multipart-upload
         base: v2.0.0
+    frozen:
+      - invenio-version: "<3.0.0"
+        packages:
+          - s3fs==0.4.2
 
   - name: invenio-oauthclient
     oarepo: 12
