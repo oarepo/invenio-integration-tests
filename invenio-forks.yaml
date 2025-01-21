@@ -75,12 +75,20 @@ packages:
     features:
       - name: kwargs
         base: v5.10.0
+      - name: multipart-upload
+        base: v5.10.1
 
   - name: invenio-requests
     oarepo: 12
     features:
       - name: kwargs
         base: v4.1.1
+
+  - name: invenio-s3
+    oarepo: 12
+    features:
+      - name: multipart-upload
+        base: v2.0.0
 
   - name: invenio-oauthclient
     oarepo: 12
