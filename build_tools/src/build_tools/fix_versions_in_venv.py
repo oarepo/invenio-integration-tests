@@ -65,6 +65,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     "uv",
                     "pip",
                     "install",
+                    "-U",
                     "--extra-index-url",
                     pypi_url,
                     f"{depends_on}<={version}",
