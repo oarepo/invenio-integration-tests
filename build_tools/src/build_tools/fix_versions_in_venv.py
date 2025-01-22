@@ -58,7 +58,11 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
         if depends_on in versions:
             version = versions[depends_on]
             if ".post" not in version:
+                normal_version = version
                 version += ".post1000000"
+            else:
+                normal_version = version.split(".post", maxsplit=1)[0]
+
             print(f"Installing patched version of {depends_on} ({version})")
             print("Calling", ["uv", "pip", "uninstall", "--verbose", depends_on])
             subprocess.check_call(["uv", "pip", "uninstall", "--verbose", depends_on])
@@ -73,7 +77,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     "--verbose",
                     "--index-url",
                     pypi_url,
-                    f"{depends_on}<={version}",
+                    f"{depends_on}>={normal_version},<={version}",
                 ],
             )
             subprocess.check_call(
@@ -89,6 +93,8 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     f"{depends_on}<={version}",
                 ]
             )
+    print("After modifications, we have the following packages in venv:")
+    subprocess.call(["uv", "pip", "freeze"])
 
 
 if __name__ == "__main__":
