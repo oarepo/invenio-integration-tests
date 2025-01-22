@@ -76,7 +76,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     "--no-deps",
                     "--verbose",
                     "--index-url",
-                    pypi_url + "simple/",
+                    pypi_url + "/simple",
                     f"{depends_on}>{normal_version},<={version}",
                 ],
             )
@@ -89,7 +89,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     "--no-deps",
                     "--verbose",
                     "--index-url",
-                    pypi_url + "simple/",
+                    pypi_url + "/simple",
                     f"{depends_on}>{normal_version},<={version}",
                 ]
             )
