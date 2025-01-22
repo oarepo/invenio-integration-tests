@@ -77,7 +77,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     "--verbose",
                     "--index-url",
                     pypi_url,
-                    f"{depends_on}>={normal_version},<={version}",
+                    f"{depends_on}>{normal_version},<={version}",
                 ],
             )
             subprocess.check_call(
@@ -90,7 +90,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     "--verbose",
                     "--extra-index-url",
                     pypi_url,
-                    f"{depends_on}<={version}",
+                    f"{depends_on}>{normal_version},<={version}",
                 ]
             )
     print("After modifications, we have the following packages in venv:")
