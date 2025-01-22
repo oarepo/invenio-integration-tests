@@ -66,6 +66,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
             print(f"Installing patched version of {depends_on} ({version})")
             print("Calling", ["uv", "pip", "uninstall", "--verbose", depends_on])
             subprocess.check_call(["uv", "pip", "uninstall", "--verbose", depends_on])
+            subprocess.check_call(["uv", "cache", "clean"])
             print(
                 "Calling",
                 [
@@ -77,7 +78,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     "--verbose",
                     "--index-url",
                     pypi_url + "/simple",
-                    f"{depends_on}>{normal_version},<={version}",
+                    f"{depends_on}<={version}",
                 ],
             )
             subprocess.check_call(
@@ -90,7 +91,7 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
                     "--verbose",
                     "--index-url",
                     pypi_url + "/simple",
-                    f"{depends_on}>{normal_version},<={version}",
+                    f"{depends_on}<={version}",
                 ]
             )
     print("After modifications, we have the following packages in venv:")
