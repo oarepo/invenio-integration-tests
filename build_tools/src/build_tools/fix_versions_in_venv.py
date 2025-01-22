@@ -60,7 +60,24 @@ def fix_versions(rdm_requirements_file: Path, this_module_config_file: Path):
             if ".post" not in version:
                 version += ".post1000000"
             print(f"Installing patched version of {depends_on} ({version})")
-            subprocess.call(["uv", "pip", "uninstall", "-y", depends_on])
+            print("Calling", ["uv", "pip", "uninstall", "--verbose", "-y", depends_on])
+            subprocess.check_call(
+                ["uv", "pip", "uninstall", "--verbose", "-y", depends_on]
+            )
+            print(
+                "Calling",
+                [
+                    "uv",
+                    "pip",
+                    "install",
+                    "-U",
+                    "--no-deps",
+                    "--verbose",
+                    "--extra-index-url",
+                    pypi_url,
+                    f"{depends_on}<={version}",
+                ],
+            )
             subprocess.check_call(
                 [
                     "uv",
