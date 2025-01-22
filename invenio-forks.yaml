@@ -71,6 +71,8 @@ packages:
       #   base: v3.2.0
       - name: transfers # based on kwargs with merged contribution-transfer-registry
         base: v3.2.0
+    depends:
+      - on: invenio-records-resources
 
   - name: invenio-records-resources
     oarepo: 12
