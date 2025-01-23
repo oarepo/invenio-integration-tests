@@ -33,6 +33,13 @@ packages:
 
   - name: invenio-rdm-records
     oarepo: 12
+    features:
+      - name: transfers
+        base: v10.9.1
+        invenio-version: "<11.0.0"
+    depends:
+      - "on": invenio-records-resources
+      - "on": invenio-drafts-resources
     entrypoints:
       - invenio-version: "<11.0.0"
         remove: "*"
