@@ -294,6 +294,8 @@ jobs:
           uv pip install -e '.[tests,opensearch2,s3,devs]'
 
           python $fix_versions $rdm_requirements ../../package_settings.json
+          
+          export PYTHONWARNINGS=ignore
 
           if [ -x ./run-tests.sh ] ; then
             ./run-tests.sh
