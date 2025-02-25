@@ -18,16 +18,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout oarepo/invenio-integration-tests
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Checkout oarepo/oarepo under ./oarepo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: 'oarepo/oarepo'
           ref: 'invenio-3.3'
           token: '${{ secrets.INTEGRATION_TEST }}'
           path: 'oarepo'
       - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: 3.8
       - name: Generate OARepo setup.py from tested requirements artifact

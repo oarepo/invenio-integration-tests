@@ -59,12 +59,12 @@ jobs:
           psql -d testdb -c 'SHOW server_version'
 
       - name: Set up Python ${{ env.PYTHON-VERSION }}
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON-VERSION }}
 
       - name: Checkout inveniosoftware/invenio-app-rdm under ./app-rdm
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'inveniosoftware/invenio-app-rdm'
           ref: 'maint-11.x'
