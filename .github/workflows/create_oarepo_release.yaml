@@ -53,14 +53,14 @@ jobs:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
-  # test_rdm:
-  #   name: Test RDM
-  #   needs: extract_requirements
-  #   uses: ./.github/workflows/03-install-rdm-and-test.yaml
-  #   secrets: inherit
-  #   with:
-  #     oarepo: ${{ github.event.inputs.oarepo }}
-  #     python: ${{ github.event.inputs.python }}
+  test_rdm:
+    name: Test RDM
+    needs: extract_requirements
+    uses: ./.github/workflows/03-install-rdm-and-test.yaml
+    secrets: inherit
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
 
   build_and_test_forks:
     name: ${{ matrix.package_and_version }} and test
@@ -80,7 +80,7 @@ jobs:
   create_oarepo_package:
     name: Create oarepo package
     needs:
-    - build_and_test_forks
+      - build_and_test_forks
     uses: ./.github/workflows/05-create-oarepo-package.yaml
     secrets: inherit
     with:
@@ -90,8 +90,8 @@ jobs:
   test_simple_repository_pytest:
     name: PyTest simple repository
     needs:
-    - create_oarepo_package
-    - build_and_test_forks
+      - create_oarepo_package
+      - build_and_test_forks
     uses: ./.github/workflows/06-simple-repository-pytest.yaml
     secrets: inherit
     with:
@@ -101,8 +101,8 @@ jobs:
   test_simple_repository_rest:
     name: REST tests simple repository
     needs:
-    - create_oarepo_package
-    - build_and_test_forks
+      - create_oarepo_package
+      - build_and_test_forks
     uses: ./.github/workflows/07-simple-repository-rest.yaml
     secrets: inherit
     with:
@@ -112,25 +112,25 @@ jobs:
   test_simple_repository_ui:
     name: UI tests simple repository
     needs:
-    - create_oarepo_package
-    - build_and_test_forks
+      - create_oarepo_package
+      - build_and_test_forks
     uses: ./.github/workflows/08-simple-repository-ui.yaml
     secrets: inherit
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
-# maybe: more thorough tests with model builder
+  # maybe: more thorough tests with model builder
 
   upload_oarepo_package:
     if: needs.create_oarepo_package.outputs.version_changed == 'true'
     name: Upload oarepo
     needs:
-    - test_simple_repository_pytest
-    - test_simple_repository_rest
-    - test_simple_repository_ui
-    # - test_rdm
-    - create_oarepo_package
+      - test_simple_repository_pytest
+      - test_simple_repository_rest
+      - test_simple_repository_ui
+      - test_rdm
+      - create_oarepo_package
     uses: ./.github/workflows/09-commit-push-oarepo.yaml
     secrets: inherit
     with:
