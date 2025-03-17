@@ -90,6 +90,8 @@ jobs:
 
           export INVENIO_USER_EMAIL=test@test.com
           export INVENIO_USER_PASSWORD=password
+          export INVENIO_ACCOUNTS_DEFAULT_USER_VISIBILITY=public
+          export INVENIO_ACCOUNTS_DEFAULT_EMAIL_VISIBILITY=public
 
           set -x
           cd .tests/my-site
