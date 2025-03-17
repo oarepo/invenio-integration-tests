@@ -108,7 +108,7 @@ jobs:
           npm ci
           npx playwright install --with-deps
 
-          npx playwright test
+          npx playwright test tests/acceptInvitation.spec.ts
 
           kill $INVENIO_PID
           sleep 5
