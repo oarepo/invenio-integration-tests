@@ -110,11 +110,11 @@ jobs:
           npm ci
           npx playwright install --with-deps
 
-          npx playwright test tests/acceptInvitation.spec.ts
+          npx playwright test
 
-          kill $INVENIO_PID
+          kill $INVENIO_PID || true
           sleep 5
-          kill -9 $INVENIO_PID
+          kill -9 $INVENIO_PID || true
 
       - uses: actions/upload-artifact@v4
         with:
