@@ -29,6 +29,9 @@ env:
   QASE_TESTOPS_API_TOKEN: ${{ secrets.QASE_TESTOPS_API_TOKEN }}
   QASE_ENVIRONMENT: ${{ secrets.QASE_ENVIRONMENT }}
   QASE_MODE: ${{ secrets.QASE_MODE }}
+  INVENIO_DATACITE_USERNAME: ${{ secrets.INVENIO_DATACITE_USERNAME }}
+  INVENIO_DATACITE_PASSWORD: ${{ secrets.INVENIO_DATACITE_PASSWORD }}
+  INVENIO_DATACITE_PREFIX: ${{ secrets.INVENIO_DATACITE_PREFIX }}
   HEADLESS: true
 
 jobs:
@@ -91,6 +94,8 @@ jobs:
           set -x
           cd .tests/my-site
           pipenv run invenio users create -a -c $INVENIO_USER_EMAIL --password $INVENIO_USER_PASSWORD --profile '{"full_name": "Test User"}'
+          pipenv run invenio users create -a -c petr.brablc@gmail.com --password 123456 --profile '{"full_name": "Brablc gmail"}'
+          pipenv run invenio users create -a -c petr.brablc@cesnet.cz --password 123456 --profile '{"full_name": "Brablc cesnet"}'
           invenio-cli run >invenio.log 2>&1 &
           INVENIO_PID=$!
           sleep 120
