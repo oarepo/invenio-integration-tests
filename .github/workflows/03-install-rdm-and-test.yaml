@@ -110,7 +110,15 @@ jobs:
           npm ci
           npx playwright install --with-deps
 
-          npx playwright test
+          echo "INVENIO_DATACITE_USERNAME: ${INVENIO_DATACITE_USERNAME}"
+          echo "INVENIO_DATACITE_PASSWORD: ${INVENIO_DATACITE_PASSWORD}"
+          echo "INVENIO_DATACITE_PREFIX: ${INVENIO_DATACITE_PREFIX}"
+
+          export INVENIO_DATACITE_USERNAME
+          export INVENIO_DATACITE_PASSWORD
+          export INVENIO_DATACITE_PREFIX
+
+          npx playwright test tests/newUpload.spec.ts
 
           kill $INVENIO_PID || true
           sleep 5
