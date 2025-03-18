@@ -98,7 +98,27 @@ jobs:
           pipenv run invenio users create -a -c $INVENIO_USER_EMAIL --password $INVENIO_USER_PASSWORD --profile '{"full_name": "Test User"}'
           pipenv run invenio users create -a -c petr.brablc@gmail.com --password 123456 --profile '{"full_name": "Brablc gmail"}'
           pipenv run invenio users create -a -c petr.brablc@cesnet.cz --password 123456 --profile '{"full_name": "Brablc cesnet"}'
+
+
+          echo "INVENIO_DATACITE_USERNAME: ${INVENIO_DATACITE_USERNAME}"
+          echo "INVENIO_DATACITE_PASSWORD: ${INVENIO_DATACITE_PASSWORD}"
+          echo "INVENIO_DATACITE_PREFIX: ${INVENIO_DATACITE_PREFIX}"
+
+          export INVENIO_DATACITE_USERNAME
+          export INVENIO_DATACITE_PASSWORD
+          export INVENIO_DATACITE_PREFIX
+
+          echo "DATACITE_ENABLED = True" >>invenio.cfg
+
+          echo "print('Invenio CFG loaded')" >>invenio.cfg
+          echo "import os" >>invenio.cfg
+
+          echo "print('datacite username ', os.environ.get('INVENIO_DATACITE_USERNAME', '').lower())" >>invenio.cfg
+          echo "print('datacite password ', os.environ.get('INVENIO_DATACITE_PASSWORD', '').lower())" >>invenio.cfg
+          echo "print('datacite prefix   ', os.environ.get('INVENIO_DATACITE_PREFIX', '').lower())" >>invenio.cfg
+
           invenio-cli run >invenio.log 2>&1 &
+
           INVENIO_PID=$!
           sleep 120
 
@@ -110,14 +130,6 @@ jobs:
           npm ci
           npx playwright install --with-deps
 
-          echo "INVENIO_DATACITE_USERNAME: ${INVENIO_DATACITE_USERNAME}"
-          echo "INVENIO_DATACITE_PASSWORD: ${INVENIO_DATACITE_PASSWORD}"
-          echo "INVENIO_DATACITE_PREFIX: ${INVENIO_DATACITE_PREFIX}"
-
-          export INVENIO_DATACITE_USERNAME
-          export INVENIO_DATACITE_PASSWORD
-          export INVENIO_DATACITE_PREFIX
-
           npx playwright test tests/newUpload.spec.ts
 
           kill $INVENIO_PID || true
@@ -125,6 +137,7 @@ jobs:
           kill -9 $INVENIO_PID || true
 
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: invenio.log
           path: invenio.log
