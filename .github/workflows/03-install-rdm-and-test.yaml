@@ -130,7 +130,7 @@ jobs:
           npm ci
           npx playwright install --with-deps
 
-          npx playwright test tests/newUpload.spec.ts
+          npx playwright test
 
           kill $INVENIO_PID || true
           sleep 5
