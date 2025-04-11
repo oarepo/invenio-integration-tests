@@ -1,13 +1,9 @@
-rdm:
-  banned-versions:
-    - "12.0.13"
-
 packages:
   - name: invenio-administration
-    oarepo: 12
+    oarepo: 13
     features:
-      - name: multiple-ui-changes
-        base: v2.2.4
+      - name: multiple-ui-changes-from-3.1.2
+        base: v3.1.2
     frozen:
       - packages:
           - pytest-invenio<3.0.0
@@ -62,55 +58,51 @@ packages:
           - marshmallow-utils==0.9.1
 
   - name: invenio-communities
-    oarepo: 12
+    oarepo: 13
     features:
-      - name: disable-communities-ui
-        base: v13.0.6
-      - name: enable-email-invitations
-        base: v13.0.6
-      - name: administration-in-tests
-        base: v13.0.9
+      - name: disable-communities-ui-from-18.1.0
+        base: v18.1.0
+      - name: enable-email-invitations-from-18.1.0
+        base: v18.1.0
+      - name: administration-in-tests-from-18.1.0
+        base: v18.1.0
 
   - name: invenio-drafts-resources
-    oarepo: 12
+    oarepo: 13
     features:
-      # - name: kwargs
-      #   base: v3.2.0
+      # - name: kwargs-from-6.0.0
+      #   base: v6.0.0
       - name: transfers # based on kwargs with merged contribution-transfer-registry
         base: v3.2.0
     depends:
       - "on": invenio-records-resources
 
   - name: invenio-records-resources
-    oarepo: 12
+    oarepo: 13
     features:
-      # - name: kwargs
-      #   base: v5.10.0
+      # - name: kwargs-from-7.1.0
+      #   base: v7.1.0
       - name: multipart-upload
         base: v5.10.0
 
   - name: invenio-requests
-    oarepo: 12
+    oarepo: 13
     features:
-      - name: kwargs
-        base: v4.1.1
+      - name: kwargs-from-6.2.0
+        base: v6.2.0
 
   - name: invenio-s3
-    oarepo: 12
+    oarepo: 13
     features:
-      - name: multipart-upload
-        base: v2.0.0
+      - name: multipart-upload-from-2.0.1
+        base: v2.0.1
     frozen:
       - invenio-version: "<3.0.0"
         packages:
           - s3fs==0.4.2
 
   - name: invenio-oauthclient
-    oarepo: 12
+    oarepo: 13
     features:
-      - name: refresh-token
-        base: v4.0.0
-        invenio-version: "<4.0.2"
-      - name: refresh-token-from-v4.0.2
-        base: v4.0.2
-        invenio-version: ">=4.0.2"
+      - name: refresh-token-from-5.1.0
+        base: v5.1.0
