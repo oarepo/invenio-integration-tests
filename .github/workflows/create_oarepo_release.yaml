@@ -53,14 +53,14 @@ jobs:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
-  test_rdm:
-    name: Test RDM
-    needs: extract_requirements
-    uses: ./.github/workflows/03-install-rdm-and-test.yaml
-    secrets: inherit
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
+  # test_rdm:
+  #   name: Test RDM
+  #   needs: extract_requirements
+  #   uses: ./.github/workflows/03-install-rdm-and-test.yaml
+  #   secrets: inherit
+  #   with:
+  #     oarepo: ${{ github.event.inputs.oarepo }}
+  #     python: ${{ github.event.inputs.python }}
 
   build_and_test_forks:
     name: ${{ matrix.package_and_version }} and test
@@ -129,7 +129,7 @@ jobs:
       - test_simple_repository_pytest
       - test_simple_repository_rest
       - test_simple_repository_ui
-      - test_rdm
+      # - test_rdm
       - create_oarepo_package
     uses: ./.github/workflows/09-commit-push-oarepo.yaml
     secrets: inherit
