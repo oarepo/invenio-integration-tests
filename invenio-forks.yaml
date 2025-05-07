@@ -52,7 +52,7 @@ packages:
       - extra: tests
         remove: "*"
     frozen:
-      - invenio-version: "<11.0.0"
+      - invenio-version: "<10.9.2"
         packages:
           - pyjwt==2.9.0
           - babel-edtf==1.1.4
