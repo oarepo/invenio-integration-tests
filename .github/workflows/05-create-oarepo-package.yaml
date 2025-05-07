@@ -80,7 +80,7 @@ jobs:
           pattern: final_fork_versions-*
           merge-multiple: true
           path: artifacts/final_fork_versions
-  
+
       - name: Create the pyproject.toml with dependencies (+forks)
         id: create_pyproject
         run: |
@@ -103,15 +103,31 @@ jobs:
           diff -bu ../original_pyproject.toml pyproject.toml || true
 
           # Check if the version has changed
-            if diff -q ../original_pyproject.toml pyproject.toml; then
-                echo "No difference has been found"
-                echo "version_changed=false" | tee -a $GITHUB_OUTPUT
-                echo "version_changed=false" | tee -a $GITHUB_ENV
-            else
-                echo "pyproject.toml has changed, see above"
-                echo "version_changed=true" | tee -a $GITHUB_OUTPUT
-                echo "version_changed=true" | tee -a $GITHUB_ENV
-            fi
+          if diff -q ../original_pyproject.toml pyproject.toml; then
+              echo "No difference has been found in pyproject.toml"
+              changed=0
+          else
+              echo "pyproject.toml has changed, see above"
+              changed=1
+          fi
+
+          echo "Diff between old and new react dependencies:"
+          diff -bu ../artifacts/requirements/react-dependencies.json oarepo/react-dependencies.json || true
+
+          if diff -q ../artifacts/requirements/react-dependencies.json oarepo/react-dependencies.json ; then
+              echo "No difference has been found in react-dependencies.json"
+          else
+              echo "react-dependencies.json has changed, see above"
+              changed=1
+          fi
+
+          if [ $changed -eq 0 ]; then
+              echo "version_changed=false" | tee -a $GITHUB_OUTPUT
+              echo "version_changed=false" | tee -a $GITHUB_ENV
+          else
+              echo "version_changed=true" | tee -a $GITHUB_OUTPUT
+              echo "version_changed=true" | tee -a $GITHUB_ENV
+          fi
 
       - name: Bump version
         if: env.version_changed == 'true'
