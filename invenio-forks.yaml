@@ -92,6 +92,9 @@ packages:
       #   base: v5.10.0
       - name: multipart-upload
         base: v5.10.0
+        invenio-version: "<5.11.1"
+      - name: multipart-upload-from-5.11.1
+        base: v5.11.1
 
   - name: invenio-requests
     oarepo: 12
