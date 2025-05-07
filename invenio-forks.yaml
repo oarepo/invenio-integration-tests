@@ -68,10 +68,10 @@ packages:
         base: v13.0.6
       - name: enable-email-invitations
         base: v13.0.6
-        version: "<13.1.1"
+        invenio-version: "<13.1.1"
       - name: enable-email-invitations-13.1.1
         base: v13.1.1
-        version: ">=13.1.1"
+        invenio-version: ">=13.1.1"
       - name: enable-communities-ui
         version: "<13.1.1"
       - name: administration-in-tests
