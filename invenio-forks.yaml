@@ -121,3 +121,9 @@ packages:
       - name: refresh-token-from-v4.0.2
         base: v4.0.2
         invenio-version: ">=4.0.2"
+
+  - name: invenio-oaiserver
+    oarepo: 12
+    features:
+      - name: enable-multiple-record-types
+        base: v2.2.1
