@@ -130,3 +130,8 @@ packages:
     features:
       - name: enable-multiple-record-types
         base: v2.2.1
+  - name: invenio-vocabularies
+    oarepo: 12
+    features:
+      - name: search-on-identifiers-in-specialized-vocabs
+        base: v3.4.0
