@@ -37,6 +37,9 @@ packages:
       - name: transfers
         base: v10.9.1
         invenio-version: "<11.0.0"
+      - name: optional-pids
+        base: v10.9.2
+        invenio-version: "<11.0.0"
     depends:
       - "on": invenio-records-resources
       - "on": invenio-drafts-resources
@@ -127,6 +130,12 @@ packages:
     features:
       - name: enable-multiple-record-types
         base: v2.2.1
+
+  - name: invenio-vocabularies
+    oarepo: 12
+    features:
+      - name: search-on-identifiers-in-specialized-vocabs
+        base: v3.4.0
 
   - name: citeproc-py-styles
     oarepo: 12
