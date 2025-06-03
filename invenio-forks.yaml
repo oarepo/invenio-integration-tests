@@ -127,3 +127,9 @@ packages:
     features:
       - name: enable-multiple-record-types
         base: v2.2.1
+
+  - name: citeproc-py-styles
+    oarepo: 12
+    features:
+      - name: czech-iso-citation
+        base: v0.1.3

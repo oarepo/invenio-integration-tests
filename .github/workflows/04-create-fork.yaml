@@ -28,9 +28,9 @@ on:
       package_and_version:
         description: "Package and version to fork"
         # input example: {
-        #   "package": "invenio-communities", 
-        #   "version": "13.0.6", 
-        #   "features": ["kwargs-extension"], 
+        #   "package": "invenio-communities",
+        #   "version": "13.0.6",
+        #   "features": ["kwargs-extension"],
         #   "entry-points": [...]
         # }
         required: true
@@ -38,7 +38,7 @@ on:
       force_new_versions:
         description: "Force new versions of forks and oarepo package"
         required: false
-        default: 'false'
+        default: "false"
         type: string
 
 env:
@@ -71,16 +71,16 @@ jobs:
 
       - name: Install build tools
         uses: ./.github/actions/install_build_tools
-  
+
       - name: Git globals
-        run: |  # shell
+        run: | # shell
           git config --global user.email "integration-tests@oarepo.org"
           git config --global user.name "OARepo Bot"
 
       - name: Convert package and version to environment variables. Create package-settings.json
-        run: | 
+        run: |
           cat <<EOF >> $GITHUB_ENV
-          
+
           PACKAGE=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.package')
           VERSION=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
           FEATURES=$(echo "${PACKAGE_AND_VERSION}" | jq -c '.features')
@@ -93,7 +93,7 @@ jobs:
           echo "${PACKAGE_AND_VERSION}" | jq > package_settings.json
           echo "==== Package settings: ===="
           cat package_settings.json
-          
+
           echo "==== Environment: ===="
           cat $GITHUB_ENV
 
@@ -109,10 +109,10 @@ jobs:
         with:
           name: rdm_versions
           path: artifacts/requirements
-  
+
       - name: Check if the package is already forked
         id: check_fork
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           git fetch --all
 
@@ -137,7 +137,7 @@ jobs:
             echo fork_version="${VERSION}.post999" >> $GITHUB_ENV
           }
       - name: Bump the version of the fork
-        run: |  # shell
+        run: | # shell
           # increase the dump version by one            
           previous_fork_version=${fork_version}                         # "2.3.4post286"
           fork_version_prefix=$(echo $fork_version | sed 's/[0-9]*$//')          # => "2.3.4post"
@@ -152,28 +152,28 @@ jobs:
           echo "previous_fork_version=${previous_fork_version}" >> $GITHUB_ENV
 
       - name: Create a temporary fork of the package
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           git remote add upstream https://github.com/inveniosoftware/${PACKAGE}.git || true
-          
+
           # remove a temporary fork branch if it exists
           git branch -D ${OAREPO_VERSION}-temporary || true
-          
+
           # fetch invenio version and check it out
           git fetch --tags upstream
           git fetch --all
           git checkout ${INVENIO_VERSION}
-          
+
           # it is a tag, so create oarepo version from it
           git switch -c ${OAREPO_VERSION}-temporary
-          
+
           # list all branches
           git branch -a
 
       - name: Apply feature branches
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
-          
+
           apply_feature() {
             feature=$1
             feature_base=$2
@@ -196,15 +196,24 @@ jobs:
               exit 1
             }
           }
-          
+
           echo "$FEATURES" | jq -c ".[]" | while read feature_rec ; do
             feature_name=$(echo $feature_rec | jq -r '.name')
             feature_base=$(echo $feature_rec | jq -r '.base')
             apply_feature $feature_name $feature_base
           done
-          
+
+
+          if [ -f "oarepo-after-patch.sh" ]; then
+            echo "Running oarepo-after-patch.sh"
+            bash oarepo-after-patch.sh || {
+              echo "oarepo-after-patch.sh failed"
+              exit 1
+            }
+          fi
+
       - name: Create a summary of the changes and commit it
-        run: | 
+        run: |
           cd .forks/${PACKAGE}
 
           # add the features to a file that will be committed to the package so that later we know
@@ -226,10 +235,10 @@ jobs:
           # the code below is json, so need to define a couple of aliases just to be sure
           true = True
           """JSON True."""
-          
+
           false = False
           """JSON False."""
-          
+
           features_incorporated = '$FEATURES'
                   
           oarepo_major_version = '${OAREPO_MAJOR_VERSION}'
@@ -237,17 +246,17 @@ jobs:
           package_oarepo_version = '${OAREPO_VERSION}'
 
           configuration = '${PACKAGE_AND_VERSION}'
-          
+
           EOF
-          
+
           black ${main_package}/oarepo_changes.py
           git add ${main_package}/oarepo_changes.py
           git commit -m "[skip ci] Summarized changes applied to the package"
 
       - name: Bump version to a post version
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
-          
+
           # bump the version to a post version
           init_py=${PACKAGE//-/_}/__init__.py
           cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${fork_version}'"/' > ${init_py}.new
@@ -257,7 +266,7 @@ jobs:
           git commit -m "[skip ci] Bumped version to ${fork_version}"
 
       - name: Remove all github actions on the package
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           if [ -d .github ] ; then
             echo "Removing github actions"
@@ -272,7 +281,7 @@ jobs:
           ../../build_tools/.venv/bin/bt_apply_entrypoints ../../package_settings.json setup.cfg
 
       - name: Run tests on the patched package
-        run: |  # shell
+        run: | # shell
           fix_versions=$PWD/build_tools/src/build_tools/fix_versions_in_venv.py
           rdm_requirements=$PWD/artifacts/requirements/rdm_test_requirements.txt
 
@@ -294,7 +303,7 @@ jobs:
           uv pip install -e '.[tests,opensearch2,s3,devs]'
 
           python $fix_versions $rdm_requirements ../../package_settings.json
-          
+
           export PYTHONWARNINGS=ignore
 
           if [ -x ./run-tests.sh ] ; then
@@ -304,12 +313,12 @@ jobs:
           else
             pytest tests
           fi
-          
+
           mv .setup.cfg.orig setup.cfg
 
       - name: Rename a temporary fork to the final fork
         if: env.fork_already_exists != 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           git switch ${OAREPO_VERSION}-temporary
           git branch -m ${OAREPO_VERSION}
@@ -318,7 +327,7 @@ jobs:
 
       - name: Check if the temporary fork is the same as original, if not, remove the original and rename temp to original
         if: env.fork_already_exists == 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           echo "git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>"
           git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py 
@@ -337,7 +346,7 @@ jobs:
 
       - name: Force build and publish package
         if: inputs.force_new_versions == 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           echo "Forcing new versions of the package"
           echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
@@ -356,14 +365,14 @@ jobs:
 
       - name: Push the fork to the repository
         if: env.push_required == 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           echo "Push is required as there are differences between the original and the temporary fork"
           git push --force --set-upstream origin ${OAREPO_VERSION}
 
       - name: Build the package
         if: env.push_required == 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           source .venv/bin/activate
           pip install -U setuptools pip wheel
@@ -371,7 +380,7 @@ jobs:
 
       - name: Upload to CESNET pypi
         if: env.push_required == 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           source .venv/bin/activate
           pip install twine
@@ -417,7 +426,7 @@ jobs:
       #     push_options: '--force'
 
       - name: Export the version of the fork to output file
-        run: |  # shell
+        run: | # shell
           mkdir -p artifacts/final_fork_versions
           echo "${PACKAGE}==${actual_fork_version}" > artifacts/final_fork_versions/${PACKAGE}.txt
 
