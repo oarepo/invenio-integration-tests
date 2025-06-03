@@ -170,6 +170,25 @@ jobs:
           # list all branches
           git branch -a
 
+      - name: Get main package
+        run: | # shell
+          cd .forks/${PACKAGE}
+
+          # this is the main package, e.g. invenio-rdm-records
+          # it is used to create a summary of the changes and commit it
+          main_package=$(
+            echo $PACKAGE | 
+            sed 's/-/_/g' | 
+            sed 's/citeproc_py_styles/citeproc_styles/g'
+          )
+
+          if [ ! -d ${main_package} ] ; then
+            echo "Main package directory ${main_package} does not exist, aborting"
+            exit 1
+          fi
+
+          echo "main_package=${main_package}" >> $GITHUB_ENV
+
       - name: Apply feature branches
         run: | # shell
           cd .forks/${PACKAGE}
@@ -203,7 +222,6 @@ jobs:
             apply_feature $feature_name $feature_base
           done
 
-
           if [ -f "oarepo-after-patch.sh" ]; then
             echo "Running oarepo-after-patch.sh"
             bash oarepo-after-patch.sh || {
@@ -218,8 +236,6 @@ jobs:
 
           # add the features to a file that will be committed to the package so that later we know
           # that the package was patched with these features
-          main_package=$(echo $PACKAGE | sed 's/-/_/g')
-
           cat <<EOF > ${main_package}/oarepo_changes.py
           # -*- coding: utf-8 -*-
           #
@@ -257,12 +273,17 @@ jobs:
         run: | # shell
           cd .forks/${PACKAGE}
 
+          if [ -f  ${main_package}/version.py ] ; then
+            version_file=${main_package}/version.py
+          else
+            version_file=${main_package}/__init__.py
+          fi
+
           # bump the version to a post version
-          init_py=${PACKAGE//-/_}/__init__.py
-          cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${fork_version}'"/' > ${init_py}.new
-          mv ${init_py}.new ${init_py}
-          cat ${init_py}
-          git add ${init_py}
+          cat ${version_file} | sed 's/^__version__ = .*/__version__ = "'${fork_version}'"/' > ${version_file}.new
+          mv ${version_file}.new ${version_file}
+          cat ${version_file}
+          git add ${version_file}
           git commit -m "[skip ci] Bumped version to ${fork_version}"
 
       - name: Remove all github actions on the package
