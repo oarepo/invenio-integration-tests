@@ -60,6 +60,7 @@ jobs:
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
+      package_and_version: ${{ matrix.package_and_version }}
 
   test_rdm:
     name: Test RDM
