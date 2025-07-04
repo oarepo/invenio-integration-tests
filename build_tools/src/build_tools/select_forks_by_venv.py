@@ -52,7 +52,7 @@ import sys
 import typing
 from pathlib import Path
 from typing import Any
-
+import re
 
 def select_forks_by_venv(input_json_path: Path, output_json_path: Path):
     # load the forks json file and package versions from the virtualenv
@@ -113,12 +113,26 @@ def load_freeze_from_venv() -> dict[str, str]:
     }
 
 
+def extract_version(version_str: str) -> tuple[int, ...]:
+    ret = []
+
+    for part in version_str.split("."):
+        res = (re.split("[a-z]",part))[0]
+
+        if not res:
+            continue
+
+        ret.append(int(res))
+
+    return tuple(ret)
+
+
 def check_pkg_version(actual_pkg_version: str | None, fork_version: str) -> bool:
     if actual_pkg_version is None:
         return False
 
     fork_version_inequalities = fork_version.split(",")
-    actual_pkg_version_tuple = tuple(int(x) for x in actual_pkg_version.split(".") if x and all(d.isdigit() for d in x))
+    actual_pkg_version_tuple = extract_version(actual_pkg_version)
     for ineq in fork_version_inequalities:
         op = ""
         while ineq[0] in ["<", ">", "="]:
