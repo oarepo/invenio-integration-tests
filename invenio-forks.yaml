@@ -106,3 +106,15 @@ packages:
     features:
       - name: refresh-token-from-5.1.0
         base: v5.1.0
+
+  - name: invenio-jsonschemas
+    oarepo: 13
+    features:
+      - name: oarepo-feature-importlib-files
+        base: v2.0.0
+
+  - name: invenio-search
+    oarepo: 13
+    features:
+      - name: oarepo-feature-importlib
+        base: v3.1.0
