@@ -84,13 +84,6 @@ jobs:
           echo "==== Environment: ===="
           cat $GITHUB_ENV
 
-      - name: Clone the package
-        uses: actions/checkout@v4
-        with:
-          repository: "oarepo/${{ env.PACKAGE }}"
-          token: "${{ secrets.INTEGRATION_TEST }}"
-          path: ".forks/${{env.PACKAGE}}"
-
       - name: Install python and tools
         uses: ./.github/actions/install_python
         with:
