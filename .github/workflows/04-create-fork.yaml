@@ -203,6 +203,14 @@ jobs:
             apply_feature $feature_name $feature_base
           done
           
+          if [ -f "oarepo-after-patch.sh" ]; then
+            echo "Running oarepo-after-patch.sh"
+            bash oarepo-after-patch.sh || {
+              echo "oarepo-after-patch.sh failed"
+              exit 1
+            }
+          fi
+          
       - name: Create a summary of the changes and commit it
         run: | 
           cd .forks/${PACKAGE}

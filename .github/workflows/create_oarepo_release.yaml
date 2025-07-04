@@ -53,9 +53,17 @@ jobs:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
 
+  upload_original_packages:
+    name: Upload original invenio packages to CESNET GitLab
+    uses: ./.github/workflows/02-upload-original-packages-to-gitlab.yaml
+    secrets: inherit
+    with:
+      oarepo: ${{ github.event.inputs.oarepo }}
+      python: ${{ github.event.inputs.python }}
+
   test_rdm:
     name: Test RDM
-    needs: extract_requirements
+    needs: upload_original_packages
     uses: ./.github/workflows/03-install-rdm-and-test.yaml
     secrets: inherit
     with:
@@ -64,7 +72,7 @@ jobs:
 
   build_and_test_forks:
     name: ${{ matrix.package_and_version }} and test
-    needs: extract_requirements
+    needs: upload_original_packages
     strategy:
       matrix:
         package_and_version: ${{ fromJSON(needs.extract_requirements.outputs.forks_and_versions) }}
