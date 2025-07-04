@@ -118,7 +118,7 @@ def check_pkg_version(actual_pkg_version: str | None, fork_version: str) -> bool
         return False
 
     fork_version_inequalities = fork_version.split(",")
-    actual_pkg_version_tuple = tuple(int(x) for x in actual_pkg_version.split("."))
+    actual_pkg_version_tuple = tuple(int(x) for x in actual_pkg_version.split(".") if x and x[0].isdigit())
     for ineq in fork_version_inequalities:
         op = ""
         while ineq[0] in ["<", ">", "="]:
