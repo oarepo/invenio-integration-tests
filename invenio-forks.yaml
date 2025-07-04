@@ -103,13 +103,13 @@ packages:
   - name: invenio-jsonschemas
     oarepo: 13
     features:
-      - name: oarepo-feature-importlib-files
+      - name: importlib-files
         base: v2.0.0
 
   - name: invenio-search
     oarepo: 13
     features:
-      - name: oarepo-feature-importlib
+      - name: importlib
         base: v3.1.0
 
   - name: citeproc-py-styles
