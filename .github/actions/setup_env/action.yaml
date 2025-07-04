@@ -34,7 +34,7 @@ runs:
         echo "PYTHON=python${PYTHON_VERSION}" | tee -a $GITHUB_ENV
       
         # take at least beta development versions of invenio-app-rdm
-        echo "APP_RDM_PRODUCTION_VERSION=invenio-app-rdm[opensearch2,s3]>=13.0.0rc3,<14"  | tee -a $GITHUB_ENV
-        echo "APP_RDM_TEST_VERSION=invenio-app-rdm[opensearch2,s3]>=13.0.0rc3,<14"  | tee -a $GITHUB_ENV
+        echo "APP_RDM_PRODUCTION_VERSION=invenio-app-rdm[opensearch2,s3]>=13.0.0.rc3,<14"  | tee -a $GITHUB_ENV
+        echo "APP_RDM_TEST_VERSION=invenio-app-rdm[opensearch2,s3]>=13.0.0.rc3,<14"  | tee -a $GITHUB_ENV
 
         echo "CESNET_PYPI_URL=https://gitlab.cesnet.cz/api/v4/projects/1408/packages/pypi" | tee -a $GITHUB_ENV
