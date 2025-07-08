@@ -113,5 +113,5 @@ packages:
   - name: invenio-oaiserver
     oarepo: 13
     features:
-      - name: enable-multiple-record-types
-        base: v2.2.1
+      - name: enable-multiple-record-types-from-3.6.0
+        base: v3.6.0
