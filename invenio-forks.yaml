@@ -108,9 +108,7 @@ packages:
 
   - name: invenio-vocabularies
     oarepo: 13
-    features:
-      - name: search-on-identifiers-in-specialized-vocabs
-        base: v3.4.0
+    features: [] # invenio added searching by identifiers.identifier already
 
   - name: invenio-oaiserver
     oarepo: 13
