@@ -62,25 +62,13 @@ packages:
 
   - name: invenio-drafts-resources
     oarepo: 13
-    features:
-      # - name: kwargs-from-6.0.0
-      #   base: v6.0.0
-      - name: transfers # based on kwargs with merged contribution-transfer-registry
-        base: v3.2.0
+    features: []
     depends:
       - "on": invenio-records-resources
 
   - name: invenio-records-resources
     oarepo: 13
-    features:
-      # - name: kwargs-from-7.1.0
-      #   base: v7.1.0
-      - name: multipart-upload
-        base: v5.10.0
-        invenio-version: "<5.11.1"
-      - name: multipart-upload-from-5.11.1
-        base: v5.11.1
-
+    features: []
 
   - name: invenio-requests
     oarepo: 13
