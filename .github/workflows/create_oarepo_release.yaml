@@ -57,6 +57,11 @@ jobs:
     name: Upload original invenio packages to CESNET GitLab
     uses: ./.github/workflows/02-upload-original-packages-to-gitlab.yaml
     secrets: inherit
+    needs: extract_requirements
+    strategy:
+      matrix:
+        package_and_version: ${{ fromJSON(needs.extract_requirements.outputs.forks_and_versions) }}
+      fail-fast: false
     with:
       oarepo: ${{ github.event.inputs.oarepo }}
       python: ${{ github.event.inputs.python }}
@@ -73,7 +78,9 @@ jobs:
 
   build_and_test_forks:
     name: ${{ matrix.package_and_version }} and test
-    needs: upload_original_packages
+    needs: 
+    - upload_original_packages
+    - extract_requirements
     strategy:
       matrix:
         package_and_version: ${{ fromJSON(needs.extract_requirements.outputs.forks_and_versions) }}

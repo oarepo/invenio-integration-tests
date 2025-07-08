@@ -91,7 +91,7 @@ jobs:
 
       - name: Upload to CESNET pypi
         run: |  # shell
-          cd .forks/${PACKAGE}
+          uv venv .venv
           source .venv/bin/activate
           pip install twine
         
