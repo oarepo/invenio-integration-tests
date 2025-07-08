@@ -53,12 +53,12 @@ packages:
   - name: invenio-communities
     oarepo: 13
     features:
-      - name: disable-communities-ui-from-18.1.0
-        base: v18.1.0
-      - name: enable-email-invitations-from-18.1.0
-        base: v18.1.0
-      - name: administration-in-tests-from-18.1.0
-        base: v18.1.0
+      - name: disable-communities-ui-from-19.1.0
+        base: v19.1.0
+      - name: enable-email-invitations-from-19.1.0
+        base: v19.1.0
+      - name: administration-in-tests-from-19.1.0
+        base: v19.1.0
 
   - name: invenio-drafts-resources
     oarepo: 13
