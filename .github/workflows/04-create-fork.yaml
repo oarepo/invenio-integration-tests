@@ -217,7 +217,7 @@ jobs:
 
           # add the features to a file that will be committed to the package so that later we know
           # that the package was patched with these features
-          main_package=$(echo $PACKAGE | sed 's/-/_/g')
+          main_package=$(echo $PACKAGE | sed 's/-/_/g' | sed 's/citeproc_py_styles/citeproc_styles/')
 
           cat <<EOF > ${main_package}/oarepo_changes.py
           # -*- coding: utf-8 -*-
@@ -299,7 +299,7 @@ jobs:
 
           uv venv --python=${PYTHON_VERSION}
           source .venv/bin/activate
-          uv pip install -e '.[tests,opensearch2,s3,devs]'
+          uv pip install -e '.[tests,opensearch2,s3,devs, s3fs, oaipmh, rdf, sparql]'
 
           python $fix_versions $rdm_requirements ../../package_settings.json
           
