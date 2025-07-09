@@ -272,6 +272,7 @@ jobs:
             cat ${init_py}
             git add ${init_py}
             git commit -m "[skip ci] Bumped version to ${fork_version}"
+          fi
 
       - name: Remove all github actions on the package
         run: |  # shell
