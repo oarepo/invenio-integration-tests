@@ -256,8 +256,9 @@ jobs:
         run: |  # shell
           cd .forks/${PACKAGE}
           
+          main_package=$(echo $PACKAGE | sed 's/-/_/g' | sed 's/citeproc_py_styles/citeproc_styles/')
           # bump the version to a post version
-          init_py=${PACKAGE//-/_}/__init__.py
+          init_py=${main_package}/__init__.py
           cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${fork_version}'"/' > ${init_py}.new
           mv ${init_py}.new ${init_py}
           cat ${init_py}
