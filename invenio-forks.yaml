@@ -78,9 +78,7 @@ packages:
 
   - name: invenio-s3
     oarepo: 13
-    features:
-      - name: multipart-upload-from-2.1.0
-        base: v2.1.0
+    features: []
 
   - name: invenio-oauthclient
     oarepo: 13
