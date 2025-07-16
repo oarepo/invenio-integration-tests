@@ -111,4 +111,4 @@ jobs:
             echo "TWINE_PASSWORD is not set, will not upload to pypi"
             exit 1
           fi
-          twine upload --verbose --non-interactive --skip-existing --repository-url ${CESNET_PYPI_URL} . || echo "Failed to upload to pypi"
+          twine upload --verbose --non-interactive --skip-existing --repository-url ${CESNET_PYPI_URL} *.tar.gz *.whl  || echo "Failed to upload to pypi"
