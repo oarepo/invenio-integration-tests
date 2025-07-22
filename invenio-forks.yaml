@@ -20,6 +20,8 @@ packages:
         keep:
           - group: invenio_assets.webpack
             name: invenio_app_rdm_theme
+          - group: invenio_i18n.translations
+            name: messages
     features:
       - name: removed-webpack-aliases
         base: v12.0.12
