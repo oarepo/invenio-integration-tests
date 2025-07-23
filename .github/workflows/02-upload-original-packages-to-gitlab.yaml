@@ -16,9 +16,9 @@ on:
         required: true
     inputs:
       oarepo:
-        description: OARepo version (12, ...)
+        description: OARepo version (13, ...)
         required: true
-        default: "12"
+        default: "13"
         type: string
       python:
         description: Python version
