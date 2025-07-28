@@ -121,7 +121,7 @@ jobs:
   
       - name: Save testrequirements
         run: |  # shell
-          cd rdm
+          cd rdm_tests
           uv pip freeze | sort -u >../artifacts/requirements/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/requirements/rdm_test_requirements.json
           cp uv.lock ../artifacts/requirements/rdm_test.uv.lock
