@@ -126,7 +126,8 @@ def init_create_api_blueprint(state):
 
     # register service
     sregistry = app.extensions["invenio-records-resources"].registry
-    sregistry.register(ext.service, service_id="model_ext")
+    if "model_ext" not in sregistry._services:
+        sregistry.register(ext.service, service_id="model_ext")
 
     # Register indexer
     if hasattr(ext.service, "indexer"):
