@@ -66,6 +66,8 @@ def app_config(app_config):
     # disable redis cache
     app_config["CACHE_TYPE"] = "SimpleCache"  # Flask-Caching related configs
     app_config["CACHE_DEFAULT_TIMEOUT"] = 300
+    
+    app_config["THEME_FRONTPAGE"] = False
     return app_config
 
 
