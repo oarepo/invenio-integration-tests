@@ -132,7 +132,8 @@ def init_create_api_blueprint(state):
     # Register indexer
     if hasattr(ext.service, "indexer"):
         iregistry = app.extensions["invenio-indexer"].registry
-        iregistry.register(ext.service.indexer, indexer_id="model_ext")
+        if "model_ext" not in iregistry._indexers:
+            iregistry.register(ext.service.indexer, indexer_id="model_ext")
 
 
 def create_api_app_blueprint(app):
