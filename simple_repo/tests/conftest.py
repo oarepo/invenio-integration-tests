@@ -77,16 +77,6 @@ def app_config(app_config):
 def sample_record(app, db, input_data):
     # record = current_service.create(system_identity, sample_data[0])
     # return record
-    
-    list(current_search.delete(ignore=[404]))
-    
-    try:
-        list(current_search.create())
-    except Exception:
-        list(current_search.delete(ignore=[404]))
-        list(current_search.create())
-    current_search_client.indices.refresh()
-    
     with UnitOfWork(db.session) as uow:
         record = ModelRecord.create(input_data)
         uow.register(RecordCommitOp(record, current_service.indexer, True))
@@ -99,15 +89,6 @@ def sample_record(app, db, input_data):
 def sample_records(app, db, sample_metadata_list):
     # record = current_service.create(system_identity, sample_data[0])
     # return record
-    list(current_search.delete(ignore=[404]))
-    
-    try:
-        list(current_search.create())
-    except Exception:
-        list(current_search.delete(ignore=[404]))
-        list(current_search.create())
-    current_search_client.indices.refresh()
-    
     with UnitOfWork(db.session) as uow:
         records = []
         for sample_metadata in sample_metadata_list:
