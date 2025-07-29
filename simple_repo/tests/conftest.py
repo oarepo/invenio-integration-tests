@@ -68,6 +68,7 @@ def app_config(app_config):
     app_config["CACHE_DEFAULT_TIMEOUT"] = 300
     
     app_config["THEME_FRONTPAGE"] = False
+    app_config["REST_CSRF_ENABLED"] = False
     return app_config
 
 

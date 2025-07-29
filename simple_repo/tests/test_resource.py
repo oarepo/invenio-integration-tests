@@ -64,14 +64,16 @@ def test_create(
 ):
     created_responses = []
     for sample_metadata_point in sample_metadata_list:
+        response =  client_with_credentials.post(f"{BASE_URL}", json=sample_metadata_point)
         created_responses.append(
-            client_with_credentials.post(f"{BASE_URL}", json=sample_metadata_point)
+            response
         )
         with app.test_client() as unauth_client:
             unauth_response = unauth_client.post(
                 f"{BASE_URL}", json=sample_metadata_point
             )
             assert response_code_ok("create", False, unauth_response, 201)
+    print(created_responses)
     assert all(
         [
             response_code_ok("create", True, new_response, 201)
@@ -241,7 +243,9 @@ def test_search(
 
         res_created_fail = client_with_credentials.get(f"{BASE_URL}?q=2022-10-16")
         record_created = sample_records[0].created.isoformat() + "Z"
-
+        print(f'{res_fail}=')
+        print(f'{res_created=}')
+        print(f'{res_created_fail=}')
         assert len(res_fail.json["hits"]["hits"]) == 0
         assert len(res_created.json["hits"]["hits"]) == 10
         assert len(res_created_fail.json["hits"]["hits"]) == 0
