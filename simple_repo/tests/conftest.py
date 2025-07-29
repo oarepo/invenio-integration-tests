@@ -12,7 +12,7 @@ from invenio_accounts.proxies import current_datastore
 from invenio_accounts.testutils import login_user_via_session
 from invenio_app.factory import create_api
 from invenio_records_resources.services.uow import RecordCommitOp, UnitOfWork
-
+from invenio_access.permissions import system_identity
 
 @pytest.fixture
 def record_service():
@@ -98,6 +98,15 @@ def sample_records(app, db, sample_metadata_list):
     ModelRecord.index.refresh()
     return records
 
+@pytest.fixture(scope="function")
+def clear_all(app, record_service, db, search, search_clear):
+    try:
+        yield
+    finally: 
+        records = [x for x in record_service.scan(system_identity)]
+        for rec in records:
+            record_service.delete(system_identity, rec['id'])
+    
 
 @pytest.fixture()
 def user(app, db):

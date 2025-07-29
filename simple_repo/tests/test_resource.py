@@ -204,6 +204,7 @@ def test_delete_unauth(sample_record, search_clear, app):
 def test_search(
     client_with_credentials, sample_records, sample_metadata_list, search_clear
 ):
+    print(f'{sample_records}')
     if is_action_allowed("search", True):
         paths = get_paths("title", sample_metadata_list[0]["title"])
 
@@ -243,6 +244,7 @@ def test_search(
 
         res_created_fail = client_with_credentials.get(f"{BASE_URL}?q=2022-10-16")
         record_created = sample_records[0].created.isoformat() + "Z"
+        print(f'{res_created.json['hits']['hits']=}')
         assert len(res_fail.json["hits"]["hits"]) == 0
         assert len(res_created.json["hits"]["hits"]) == 10
         assert len(res_created_fail.json["hits"]["hits"]) == 0

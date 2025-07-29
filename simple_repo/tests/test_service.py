@@ -71,6 +71,7 @@ def test_delete(app, db, sample_record, record_service, search_clear):
 def test_search(
     app, db, record_service, sample_records, sample_metadata_list, search_clear
 ):
+    print(f'{sample_records}')
     paths = get_paths("title", sample_metadata_list[0]["title"])
 
     for record in sample_records:
@@ -109,6 +110,7 @@ def test_search(
     )
 
     res_listing = list(record_service.search(system_identity))
+    print(f'{res_listing=}')
     assert len(res_fail) == 0
     assert len(res_listing) == 10
     assert len(res_created) == 10
