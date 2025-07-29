@@ -105,8 +105,10 @@ def clear_all(app, record_service, db, search, search_clear):
     finally: 
         records = [x for x in record_service.scan(system_identity)]
         for rec in records:
-            record_service.delete(system_identity, rec['id'])
-    
+            try:
+                record_service.delete(system_identity, rec['id'])
+            except Exception:
+                pass 
 
 @pytest.fixture()
 def user(app, db):
