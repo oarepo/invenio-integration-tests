@@ -95,6 +95,7 @@ def sample_records(app, db, sample_metadata_list):
             uow.register(RecordCommitOp(record, current_service.indexer, True))
             records.append(record)
         uow.commit()
+        ModelRecord.index.refresh()
         return records
 
 

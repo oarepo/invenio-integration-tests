@@ -65,4 +65,5 @@ jobs:
         run: |
           cd simple_repo
           source ../.venv-tests/bin/activate
+          export PYTHONWARNINGS=ignore
           pytest -vv tests
