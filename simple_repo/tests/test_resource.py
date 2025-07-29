@@ -50,7 +50,7 @@ def response_code_ok(action_name, user_is_auth, response, authorized_response_co
     return False
 
 
-def test_read(client_with_credentials, sample_record, search_clear, app):
+def test_read(client_with_credentials, sample_record, search_clear, app, clear_all):
     non_existing = client_with_credentials.get(f"{BASE_URL}yjuykyukyuk")
     assert non_existing.status_code == 404
     get_response = client_with_credentials.get(f"{BASE_URL}/{sample_record['id']}")
@@ -60,7 +60,7 @@ def test_read(client_with_credentials, sample_record, search_clear, app):
 
 
 def test_create(
-    client_with_credentials, client, sample_metadata_list, app, search_clear
+    client_with_credentials, client, sample_metadata_list, app, search_clear, clear_all
 ):
     created_responses = []
     for sample_metadata_point in sample_metadata_list:
@@ -134,7 +134,7 @@ def test_listing( client_with_credentials, sample_records, search_clear):
 
 
 def test_update(
-    client_with_credentials, sample_record, sample_metadata_list, search_clear
+    client_with_credentials, sample_record, sample_metadata_list, search_clear, clear_all
 ):
     non_existing = client_with_credentials.put(
         f"{BASE_URL}yjuykyukyuk", json=sample_metadata_list[5]
@@ -175,7 +175,7 @@ def test_update(
     #                                                              "value": "UPDATED!"})
 
 
-def test_delete(client_with_credentials, sample_record, app, search_clear):
+def test_delete(client_with_credentials, sample_record, app, search_clear, clear_all):
     non_existing = client_with_credentials.delete(f"{BASE_URL}yjuykyukyuk")
     assert response_code_ok("delete", True, non_existing, 404)
 
@@ -202,7 +202,7 @@ def test_delete_unauth(sample_record, search_clear, app):
 
 
 def test_search(
-    client_with_credentials, sample_records, sample_metadata_list, search_clear
+    client_with_credentials, sample_records, sample_metadata_list, search_clear, clear_all
 ):
     print(f'{sample_records}')
     if is_action_allowed("search", True):

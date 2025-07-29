@@ -10,7 +10,7 @@ from .utils import get_paths
 
 
 def test_read(
-    app, db, sample_record, record_service, sample_metadata_list, search_clear
+    app, db, sample_record, record_service, sample_metadata_list, search_clear, clear_all
 ):
     with pytest.raises(PIDDoesNotExistError):
         record_service.read(system_identity, "fwegthi8op")
@@ -18,7 +18,7 @@ def test_read(
     assert read_record.data["title"] == sample_record['title']
 
 
-def test_create(app, db, record_service, sample_metadata_list, search_clear):
+def test_create(app, db, record_service, sample_metadata_list, search_clear, clear_all):
     created_records = []
     for sample_metadata_point in sample_metadata_list:
         created_records.append(
@@ -36,7 +36,7 @@ def test_create(app, db, record_service, sample_metadata_list, search_clear):
 
 
 def test_update(
-    app, db, sample_record, record_service, sample_metadata_list, search_clear
+    app, db, sample_record, record_service, sample_metadata_list, search_clear, clear_all
 ):
     with pytest.raises(PIDDoesNotExistError):
         record_service.update(
@@ -57,7 +57,7 @@ def test_update(
     assert updated_record_read.data["title"] == updated_record.data["title"]
 
 
-def test_delete(app, db, sample_record, record_service, search_clear):
+def test_delete(app, db, sample_record, record_service, search_clear, clear_all):
     with pytest.raises(PIDDoesNotExistError):
         record_service.delete(system_identity, "fwsegerhjtyuk754dh")
 
@@ -69,7 +69,7 @@ def test_delete(app, db, sample_record, record_service, search_clear):
 
 
 def test_search(
-    app, db, record_service, sample_records, sample_metadata_list, search_clear
+    app, db, record_service, sample_records, sample_metadata_list, search_clear, clear_all
 ):
     print(f'{sample_records}')
     paths = get_paths("title", sample_metadata_list[0]["title"])
