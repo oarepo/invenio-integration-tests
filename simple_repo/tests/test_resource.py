@@ -243,9 +243,6 @@ def test_search(
 
         res_created_fail = client_with_credentials.get(f"{BASE_URL}?q=2022-10-16")
         record_created = sample_records[0].created.isoformat() + "Z"
-        print(f'{res_fail}=')
-        print(f'{res_created=}')
-        print(f'{res_created_fail=}')
         assert len(res_fail.json["hits"]["hits"]) == 0
         assert len(res_created.json["hits"]["hits"]) == 10
         assert len(res_created_fail.json["hits"]["hits"]) == 0

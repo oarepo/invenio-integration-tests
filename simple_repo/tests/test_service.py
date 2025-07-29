@@ -109,10 +109,6 @@ def test_search(
     )
 
     res_listing = list(record_service.search(system_identity))
-
-    print(f'{res_fail=}')
-    print(f'{res_listing=}')
-    print(f'{res_created=}')
     assert len(res_fail) == 0
     assert len(res_listing) == 10
     assert len(res_created) == 10
