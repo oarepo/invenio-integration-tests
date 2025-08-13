@@ -18,20 +18,11 @@ packages:
 
   - name: invenio-banners
     oarepo: 13
-    features:
-      - name: message-htmleditor
-        base: v3.1.1
-        invenio-version: "<3.2.0"
+    features: []
 
   - name: invenio-rdm-records
     oarepo: 13
-    features:
-      - name: transfers
-        base: v10.9.1
-        invenio-version: "<11.0.0"
-      - name: optional-pids
-        base: v10.9.2
-        invenio-version: "<11.0.0"
+    features: []
     depends:
       - "on": invenio-records-resources
       - "on": invenio-drafts-resources
@@ -99,12 +90,8 @@ packages:
   - name: citeproc-py-styles
     oarepo: 13
     features:
-        - name: czech-iso-citation
-          base: v0.1.3
-          invenio-version: "<0.1.5"
         - name: czech-iso-citation-from-0.1.5
           base: v0.1.5
-          invenio-version: ">=0.1.5"
 
   - name: invenio-vocabularies
     oarepo: 13
