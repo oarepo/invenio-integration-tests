@@ -341,7 +341,13 @@ jobs:
             pytest tests
           fi
           
-          mv .setup.cfg.orig setup.cfg
+          if [ -f .setup.cfg.orig ] ; then
+            mv .setup.cfg.orig setup.cfg
+          fi
+
+          if [ -f .pyproject.toml.orig ] ; then
+            mv .pyproject.toml.orig pyproject.toml
+          fi
 
       - name: Rename a temporary fork to the final fork
         if: env.fork_already_exists != 'true'
