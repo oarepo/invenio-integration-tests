@@ -123,7 +123,13 @@ jobs:
             uv pip install -U setuptools pip wheel
 
             uv build
-            fork_version=$(ls dist/*.tar.gz | sed 's/^[^0-9]*//' | sed 's/.tar.gz//')
+            # get the version of the fork.
+            base=$(ls dist/*.tar.gz | head -n 1)
+
+            base=${base##*/}     # drop path
+            base=${base%.tar.gz} # drop suffix
+            fork_version=${base##*-}  # take text after the last '-'
+
             echo "The version of the fork is: ${fork_version}"
             rm -rf dist
             rm -rf .venv
