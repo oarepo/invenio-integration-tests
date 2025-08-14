@@ -121,9 +121,11 @@ jobs:
             echo "fork_already_exists=true" >> $GITHUB_ENV
             uv venv --python=${PYTHON_VERSION} --seed
             uv pip install -U setuptools pip wheel
-            echo "The version of the fork is:"
-            .venv/bin/python setup.py --version
-            fork_version="$(.venv/bin/python setup.py --version)"
+
+            uv build
+            fork_version=$(ls dist/*.tar.gz | sed 's/^[^0-9]*//' | sed 's/.tar.gz//')
+            echo "The version of the fork is: ${fork_version}"
+            rm -rf dist
             rm -rf .venv
             if ! echo $fork_version | grep -q 'post' ; then
               # backward compatibility
@@ -409,7 +411,7 @@ jobs:
           cd .forks/${PACKAGE}
           source .venv/bin/activate
           pip install -U setuptools pip wheel
-          python setup.py sdist bdist_wheel
+          python -m build
 
       - name: Upload to CESNET pypi
         if: env.push_required == 'true'
