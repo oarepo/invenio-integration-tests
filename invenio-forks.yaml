@@ -107,3 +107,9 @@ packages:
     features:
       - name: enable-multiple-record-types-from-3.6.0
         base: v3.6.0
+
+  - name: invenio-collections
+    oarepo: 13
+    features:
+      - name: alembic-dependency-communities
+        base: v1.0.0
