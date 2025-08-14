@@ -286,8 +286,19 @@ jobs:
       - name: Apply entrypoint changes
         run: | # shell
           cd .forks/${PACKAGE}
-          cp setup.cfg .setup.cfg.before-changes
-          ../../build_tools/.venv/bin/bt_apply_entrypoints ../../package_settings.json setup.cfg
+          if [ -f setup.cfg ] ; then
+            echo "Applying entrypoint changes to setup.cfg"
+            cp setup.cfg .setup.cfg.before-changes
+            ../../build_tools/.venv/bin/bt_apply_entrypoints ../../package_settings.json setup.cfg
+          else
+            cp pyproject.toml .pyproject.toml.before-changes
+            echo
+            echo "!!!!!!!!!!!!!!!!!!!!!!!"
+            echo
+            echo "No setup.cfg file found, will not apply entrypoint changes. TODO: pyproject.toml"
+            echo
+            echo
+          fi
 
       - name: Run tests on the patched package
         run: |  # shell
@@ -300,13 +311,20 @@ jobs:
             exit 1
           fi
 
-          # do not check for black and isort - would make the patches too complicated          
-          cp setup.cfg .setup.cfg.orig
+          if [ -f setup.cfg ] ; then
+            echo "Removing black and isort from setup.cfg"
+            # do not check for black and isort - would make the patches too complicated          
+            cp setup.cfg .setup.cfg.orig
 
-          # add back lines removed by forks as they contain dependencies needed for the tests
-          cat .setup.cfg.before-changes | sed "s/--black//" | sed 's/--isort//' | sed 's/--pydocstyle//' > setup.cfg
-          cat setup.cfg
-
+            # add back lines removed by forks as they contain dependencies needed for the tests
+            cat .setup.cfg.before-changes | sed "s/--black//" | sed 's/--isort//' | sed 's/--pydocstyle//' > setup.cfg
+            cat setup.cfg
+          elif [ -f pyproject.toml ] ; then
+            echo "Removing black and isort from pyproject.toml"
+            cp pyproject.toml .pyproject.toml.orig
+            cat .pyproject.toml.before-changes | sed "s/--black//" | sed 's/--isort//' | sed 's/--pydocstyle//' > pyproject.toml
+            cat pyproject.toml
+          fi
           uv venv --python=${PYTHON_VERSION}
           source .venv/bin/activate
           uv pip install -e '.[tests,opensearch2,s3,devs, s3fs, oaipmh, rdf, sparql]'
