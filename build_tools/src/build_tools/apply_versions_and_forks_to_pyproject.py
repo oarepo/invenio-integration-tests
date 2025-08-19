@@ -25,6 +25,9 @@ def main(
     final_forked_packages_and_versions: Annotated[
         Path, typer.Argument(help="Path to the directory with packages and versions")
     ],
+    extra_requirements_path: Annotated[
+        Path, typer.Argument(help="Path to the file with extra requirements")
+    ],
     pyproject_toml_path: Annotated[
         Path, typer.Argument(help="Path to the output file")
     ],
@@ -32,6 +35,7 @@ def main(
     normal_requirements = json.loads(requirements_json_file.read_text())
     test_requirements = json.loads(test_requirements_json_file.read_text())
     forked_packages = json.loads(forked_packages_json_file.read_text())
+    extra_requirements = json.loads(extra_requirements_path.read_text())
 
     # a list of serialized json objects in fact to enable usage in github matrix
     forked_packages = [json.loads(x) for x in forked_packages]
@@ -87,6 +91,11 @@ def main(
             continue
         formatted, name = format_dependency(forked_packages, r["name"], common_versions)
         test_dependencies.append(formatted)
+
+    for r in extra_requirements:
+        if r not in normal_requirements_dict:
+            formatted, name = format_dependency(forked_packages, r, extra_requirements)
+            dependencies.append(formatted)
 
     pyproject_toml["project"]["dependencies"] = dependencies
 

@@ -93,6 +93,7 @@ jobs:
               ../artifacts/requirements/rdm_test_requirements.json \
               ../artifacts/fork_versions/forks_and_versions.json \
               ../artifacts/final_fork_versions \
+              ../extra_dependencies.json \
               pyproject.toml
 
       - name: Check if the version has changed
