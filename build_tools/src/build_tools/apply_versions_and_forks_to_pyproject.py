@@ -92,10 +92,8 @@ def main(
         formatted, name = format_dependency(forked_packages, r["name"], common_versions)
         test_dependencies.append(formatted)
 
-    for r in extra_requirements:
-        if r not in normal_requirements_dict:
-            formatted, name = format_dependency(forked_packages, r, extra_requirements)
-            dependencies.append(formatted)
+    for pkg, version in extra_requirements.items():
+        dependencies.append(f"{pkg}{version}")
 
     pyproject_toml["project"]["dependencies"] = dependencies
 
