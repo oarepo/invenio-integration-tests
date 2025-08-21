@@ -30,6 +30,8 @@ packages:
     features:
       - name: configurable-service-resource
         base: v19.5.4
+      - name: kwargs
+        base: v19.5.4
     depends:
       - "on": invenio-records-resources
       - "on": invenio-drafts-resources
