@@ -27,7 +27,9 @@ packages:
 
   - name: invenio-rdm-records
     oarepo: 13
-    features: []
+    features:
+      - name: configurable-service-resource
+        base: v19.5.4
     depends:
       - "on": invenio-records-resources
       - "on": invenio-drafts-resources
