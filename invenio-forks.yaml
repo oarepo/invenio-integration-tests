@@ -62,7 +62,9 @@ packages:
 
   - name: invenio-records-resources
     oarepo: 13
-    features: []
+    features:
+      - name: oarepo-feature-kwargs-from-7.1.0
+        base: v7.1.0
 
   - name: invenio-requests
     oarepo: 13
