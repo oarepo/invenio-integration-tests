@@ -108,7 +108,9 @@ packages:
 
   - name: invenio-vocabularies
     oarepo: 13
-    features: [] # invenio added searching by identifiers.identifier already
+    features:
+      - name: configurable-service-resource
+        base: v8.1.0
 
   - name: invenio-oaiserver
     oarepo: 13
