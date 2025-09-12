@@ -1,12 +1,12 @@
 packages:
   - name: invenio-administration
-    oarepo: 13
+    oarepo: 14
     features:
       - name: multiple-ui-changes-from-3.1.2
         base: v3.1.2
 
   - name: invenio-app-rdm
-    oarepo: 13
+    oarepo: 14
     entrypoints:
       - remove: "*"
         keep:
@@ -22,11 +22,11 @@ packages:
         invenio-version: ">=13.0.1,<13.0.2"
 
   - name: invenio-banners
-    oarepo: 13
+    oarepo: 14
     features: []
 
   - name: invenio-rdm-records
-    oarepo: 13
+    oarepo: 14
     features:
       - name: configurable-service-resource
         base: v19.5.4
@@ -51,7 +51,7 @@ packages:
         remove: "*"
 
   - name: invenio-communities
-    oarepo: 13
+    oarepo: 14
     features:
       - name: disable-communities-ui-from-19.1.0
         base: v19.1.0
@@ -61,65 +61,65 @@ packages:
         base: v19.1.0
 
   - name: invenio-drafts-resources
-    oarepo: 13
+    oarepo: 14
     features: []
     depends:
       - "on": invenio-records-resources
 
   - name: invenio-records-resources
-    oarepo: 13
+    oarepo: 14
     features:
       - name: kwargs-from-8.6.0
         base: v8.6.0
 
   - name: invenio-requests
-    oarepo: 13
+    oarepo: 14
     features:
       - name: kwargs-from-6.2.0
         base: v6.2.0
 
   - name: invenio-s3
-    oarepo: 13
+    oarepo: 14
     features: []
 
   - name: invenio-oauthclient
-    oarepo: 13
+    oarepo: 14
     features:
       - name: refresh-token-from-5.1.0
         base: v5.1.0
 
   - name: invenio-jsonschemas
-    oarepo: 13
+    oarepo: 14
     features:
       - name: importlib-files
         base: v2.0.0
 
   - name: invenio-search
-    oarepo: 13
+    oarepo: 14
     features:
       - name: importlib
         base: v3.1.0
 
   - name: citeproc-py-styles
-    oarepo: 13
+    oarepo: 14
     features:
         - name: czech-iso-citation-from-0.1.5
           base: v0.1.5
 
   - name: invenio-vocabularies
-    oarepo: 13
+    oarepo: 14
     features:
       - name: configurable-service-resource
         base: v8.3.0
 
   - name: invenio-oaiserver
-    oarepo: 13
+    oarepo: 14
     features:
       - name: enable-multiple-record-types-from-3.6.0
         base: v3.6.0
 
   - name: invenio-collections
-    oarepo: 13
+    oarepo: 14
     features:
       - name: alembic-dependency-communities
         base: v1.0.0

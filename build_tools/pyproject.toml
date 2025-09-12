@@ -10,6 +10,8 @@ dependencies = [
     "typer>=0.12.5",
     "toml>=0.10.2",
     "configupdater",
+    "tomli",
+    "tomli-w",
 ]
 
 [project.scripts]
@@ -17,6 +19,8 @@ bt_get_fork_versions = "build_tools.get_fork_versions:app"
 bt_apply_versions_and_forks_to_pyproject = "build_tools.apply_versions_and_forks_to_pyproject:app"
 bt_bump_version = "build_tools.bump_version:app"
 bt_apply_entrypoints = "build_tools.apply_entrypoints:app"
+bt_remove_zenodo_specific_packages_from_pyproject = "build_tools.remove_zenodo_specific_packages_from_pyproject:app"
+bt_compare_pypi_versions = "build_tools.compare_pypi_versions:app"
 
 
 [build-system]

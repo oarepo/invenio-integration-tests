@@ -18,36 +18,13 @@ on:
       oarepo:
         description: OARepo version (13, ...)
         required: true
-        default: "13"
+        default: "14"
         type: string
       python:
         description: Python version
         required: true
         default: "3.13"
         type: string
-      package_and_version:
-        description: "Package and version to fork"
-        # input example: {
-        #   "package": "invenio-communities",
-        #   "version": "13.0.6",
-        #   "features": ["kwargs-extension"],
-        #   "entry-points": [...]
-        # }
-        required: true
-        type: string
-      force_new_versions:
-        description: "Force new versions of forks and oarepo package"
-        required: false
-        default: 'false'
-        type: string
-
-env:
-  # keep the following consistent
-  OAREPO_VERSION: ${{ inputs.oarepo }}
-  OAREPO_MAJOR_VERSION: ${{ inputs.oarepo }}
-  PYTHON_VERSION: ${{ inputs.python }}
-  PACKAGE_AND_VERSION: ${{ inputs.package_and_version }}
-  GH_TOKEN: ${{ github.token }}
 
 jobs:
   main:
@@ -63,46 +40,67 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
           oarepo-version: ${{ inputs.oarepo }}
+      
+      - name: Download artifacts from extract_requirements
+        uses: actions/download-artifact@v4
+        with:
+          name: rdm_versions
+          path: artifacts/requirements
 
       - name: Install python and tools
         uses: ./.github/actions/install_python
         with:
           python-version: ${{ inputs.python }}
 
-      - name: Convert package and version to environment variables. Create package-settings.json
+      - name: Install build tools
+        uses: ./.github/actions/install_build_tools
+
+      - name: Download versions of packages from pypi and cesnet pypi
         run: |
-          cat <<EOF >> $GITHUB_ENV
+          echo "[" > pypi_versions.json
+          echo "[" > cesnet_pypi_versions.json
 
-          PACKAGE=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.package')
-          VERSION=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
-          FEATURES=$(echo "${PACKAGE_AND_VERSION}" | jq -c '.features')
+          cat artifacts/requirements/rdm_requirements.txt | \
+            egrep '^invenio-' | \
+            sed 's/==.*//' | \
+            sed 's/@.*//' | while read PACKAGE ; do
 
-          INVENIO_VERSION=v$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
-          OAREPO_VERSION=oarepo-$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
+            echo "Package to check: ${PACKAGE}"
 
-          EOF
+            echo "," >> pypi_versions.json
+            pip index versions ${PACKAGE} --json >> pypi_versions.json
 
-          echo "${PACKAGE_AND_VERSION}" | jq > package_settings.json
-          echo "==== Package settings: ===="
-          cat package_settings.json
+            echo "," >> cesnet_pypi_versions.json
+            pip index versions --index-url ${CESNET_PYPI_URL}/simple ${PACKAGE} --json >> cesnet_pypi_versions.json
+          done
 
-          echo "==== Environment: ===="
-          cat $GITHUB_ENV
+          echo "]" >> pypi_versions.json
+          echo "]" >> cesnet_pypi_versions.json
+          # cleanup leading commas
+          cat pypi_versions.json | tr -d '\n' | sed 's/\[,/\[/' > tmp.json
+          mv tmp.json pypi_versions.json
+          cat cesnet_pypi_versions.json | tr -d '\n' | sed 's/\[,/\[/' > tmp.json
+          mv tmp.json cesnet_pypi_versions.json
+
+      - name: Get differences in versions
+        run: |
+          bt_compare_pypi_versions \
+              pypi_versions.json \
+              cesnet_pypi_versions.json \
+              not_uploaded_packages.txt \
+              non_existing.txt
+
+          echo "The following packages with versions do not exist in CESNET pypi:"
+          echo "================================================================="
+          cat non_existing.txt || echo "All packages exist"
 
       - name: Upload to CESNET pypi
         run: |  # shell
           uv venv .venv
           source .venv/bin/activate
           pip install twine
-        
-          mkdir tmp
-          cd tmp
-          pip download --no-deps --only-binary :all: ${PACKAGE}==${VERSION}
-          pip download --no-deps --no-binary :all: ${PACKAGE}==${VERSION}
-          
           export TWINE_USERNAME=${{ secrets.TWINE_USERNAME }}
           export TWINE_PASSWORD=${{ secrets.TWINE_PASSWORD }}
-
           if [ -z "${TWINE_USERNAME}" ] ; then
             echo "TWINE_USERNAME is not set, will not upload to pypi"
             exit 1
@@ -111,4 +109,24 @@ jobs:
             echo "TWINE_PASSWORD is not set, will not upload to pypi"
             exit 1
           fi
-          twine upload --verbose --non-interactive --skip-existing --repository-url ${CESNET_PYPI_URL} *.tar.gz *.whl  || echo "Failed to upload to pypi"
+
+          cat non_existing.txt | while read PACKAGE_WITH_VERSION; do
+            echo "Uploading ${PACKAGE_WITH_VERSION} to CESNET pypi"
+            (
+              if [ -d tmp ] ; then
+                rm -rf tmp
+              fi  
+              mkdir tmp
+              cd tmp           
+              pip download --no-deps --only-binary :all: ${PACKAGE_WITH_VERSION} || true
+              pip download --no-deps --no-binary :all: ${PACKAGE_WITH_VERSION} || true
+            
+              # if there is at least one file, upload it
+              if find . -type f -print -quit | grep -q . ; then
+                echo "Uploading $(ls .) to CESNET pypi"
+                twine upload --verbose --non-interactive --repository-url ${CESNET_PYPI_URL} *.tar.gz *.whl  || echo "Failed to upload to pypi"
+              else
+                echo "No files downloaded for ${PACKAGE_WITH_VERSION}, skipping upload"
+              fi
+            )
+          done

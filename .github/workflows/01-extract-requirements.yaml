@@ -15,7 +15,7 @@ on:
       oarepo:
         description: OARepo version (13, ...)
         required: true
-        default: "13"
+        default: "14"
         type: string
       python:
         description: Python version
@@ -49,6 +49,21 @@ jobs:
           python-version: ${{ inputs.python }}
           oarepo-version: ${{ inputs.oarepo }}
 
+      - name: Download latest Zenodo tag 
+        run: |
+          # get the latest tag from https://github.com/zenodo/zenodo-rdm and store it
+          git clone https://github.com/zenodo/zenodo-rdm.git rdm
+          cd rdm
+          ZENODO_VERSION=$(git describe --tags $(git rev-list --tags --max-count=1))
+          git checkout $ZENODO_VERSION
+          RDM_VERSION=$(cat pyproject.toml | grep '"invenio-app-rdm' | head -1 | sed 's/\[.*\]//' | sed 's/.*=//' | sed 's/\..*//')
+          if [ "$RDM_VERSION" != "${{ inputs.oarepo }}" ] ; then
+            echo "::error::Zenodo RDM version $RDM_VERSION does not match the requested OARepo version ${{ inputs.oarepo }}"
+            exit 1
+          fi
+          cd ..
+          echo "ZENODO_VERSION=${ZENODO_VERSION}" | tee -a $GITHUB_ENV
+
       - name: Install python and tools
         uses: ./.github/actions/install_python
         with:
@@ -70,12 +85,56 @@ jobs:
       - name: Lock app-rdm version
         run: |  # shell
           # initialize rdm project with the given python. This will create a rdm/.venv directory
-          uv init rdm --python $PYTHON_VERSION
+          
           cd rdm
+          echo "Removing invenio-swh from pyproject.toml as it is not used in oarepo and forces old python"
+          bt_remove_zenodo_specific_packages_from_pyproject pyproject.toml
+          cat pyproject.toml | \
+              sed 's%"invenio-swh"%# "invenio-swh"%g' | \
+              sed 's%"zenodo-legacy"%# "zenodo-legacy"%g' | \
+              sed 's/requires-python = ">=3.9"/requires-python = ">=3.13,<3.14"/g' \
+              > pyproject.toml.tmp
+          mv pyproject.toml.tmp pyproject.toml
 
-          # add the invenio-app-rdm with the given version and lock it
-          uv add "$APP_RDM_PRODUCTION_VERSION"
+          echo "Extracting original requirements from the uv lock file"
+          uv export --no-hashes --frozen --python $PYTHON_VERSION | egrep -v 'invenio-swh' > original_requirements.txt
+          cat original_requirements.txt | egrep '^invenio-' > original_invenio_requirements.txt
+
+          echo "Original invenio requirements from zenodo:"
+          echo "=========================================="
+          cat original_invenio_requirements.txt
+
+          echo "Original pyproject.toml with updated python:"
+          echo "============================================"
           cat pyproject.toml
+
+          # removing the uv.lock to avoid issues with python version mismatch
+          rm uv.lock
+
+          echo "Creating a new virtualenv with the correct python version"
+          uv venv .venv --python python$PYTHON_VERSION --seed
+          source .venv/bin/activate
+
+          echo "Adding invenio packages from the original requirements"
+          uv add -r original_invenio_requirements.txt --no-sync --python python$PYTHON_VERSION
+
+          # adding s3 which is not in zenodo
+          uv add invenio-s3 --python python$PYTHON_VERSION
+
+          echo "pyproject.toml with invenio dependencies:"
+          echo "========================================="
+          cat pyproject.toml
+
+          echo "Re-creating the lock file with the correct python version"
+          # re-syncing to get all dependencies
+          uv sync --python python$PYTHON_VERSION
+
+          echo "Exporting the requirements for the current python version"
+          uv export --no-hashes --frozen > requirements_for_current_python.txt
+
+          echo "Requirements for current python:"
+          echo "================================"
+          cat requirements_for_current_python.txt
 
       - name: Select forks and patches
         # go through the virtualenv and the forks file and select the forks that are needed
@@ -84,7 +143,7 @@ jobs:
         run: |  # shell
           cd rdm
           source .venv/bin/activate
-          python ../build_tools/src/build_tools/select_forks_by_venv.py ../invenio-forks-temp.json ../invenio-forks.json
+          python ../build_tools/src/build_tools/select_forks_from_zenodo_freeze.py ../invenio-forks-temp.json ../invenio-forks.json requirements_for_current_python.txt
 
       - name: Apply frozen packages
         run: |  # shell
@@ -96,7 +155,8 @@ jobs:
       - name: Save requirements
         run: |  # shell
           cd rdm
-          uv pip freeze | sort -u >../artifacts/requirements/rdm_requirements.txt
+          source .venv/bin/activate
+          uv pip freeze | grep -v '-e file://' | sort -u >../artifacts/requirements/rdm_requirements.txt
           uv pip list --format=json >../artifacts/requirements/rdm_requirements.json
           cp uv.lock ../artifacts/requirements/rdm.uv.lock
 
@@ -108,10 +168,8 @@ jobs:
 
       - name: Lock app-rdm + tests version
         run: |  # shell
-          uv init rdm_tests --python $PYTHON_VERSION
-          cd rdm_tests
-          uv add "$APP_RDM_TEST_VERSION"
-          cat pyproject.toml
+          cd rdm
+          uv sync --python python$PYTHON_VERSION --group tests
 
       - name: Apply frozen packages to tests
         run: |  # shell
@@ -121,7 +179,7 @@ jobs:
   
       - name: Save testrequirements
         run: |  # shell
-          cd rdm_tests
+          cd rdm
           uv pip freeze | sort -u >../artifacts/requirements/rdm_test_requirements.txt
           uv pip list --format=json >../artifacts/requirements/rdm_test_requirements.json
           cp uv.lock ../artifacts/requirements/rdm_test.uv.lock
