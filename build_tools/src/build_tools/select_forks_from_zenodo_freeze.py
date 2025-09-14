@@ -44,51 +44,119 @@ packages:
       frozen:
       - packages:
         - pytest-invenio<3.0.0
+
+We also fill in the actual version, repository, tag, commits_from_tag and checksum
+fields for each package. For features, we compute only the checksum.
+
+The version of the package inside CESNET github repo is in the form X.Y.Z.T.dev1,
+where XYZ are the version of the package from invenio and T is a number
+taken from the full checksum mod 10000. We do not need ordering of versions here
+as we always generate the 'oarepo' package and that contains direct references to the
+exact versions of the packages stored in CESNET pypi.
 """
 
 import json
 import re
-import subprocess
-import sys
-import tempfile
 import typing
-from collections import namedtuple
+from hashlib import md5
 from pathlib import Path
 from typing import Any
 
-ParsedVersion = namedtuple("package", ["version", "github_repo", "github_tag"])
+import typer
+
+from build_tools.utils.git import clone_repository, get_commit, get_nearest_version_tag
+from build_tools.utils.invenio import invenio2repo, is_invenio_package
+from build_tools.utils.pip import ParsedVersion, check_pkg_version, parse_pip_freeze
+
+app = typer.Typer()
 
 
-def select_forks_by_venv(
-    input_json_path: Path, output_json_path: Path, initial_requirements_path: Path
+@app.command()
+def select_forks_from_zenodo_freeze(
+    forks_json_path: Path, output_json_path: Path, initial_requirements_path: Path
 ):
     # load the forks json file and package versions from the virtualenv
-    json_data = json.loads(input_json_path.read_text())
+    json_data = json.loads(forks_json_path.read_text())
     original_requirements = parse_requirements_output(
         initial_requirements_path.read_text()
     )
 
-    # process each package
+    # for each package, keep only those patches that match the actual version
     json_data["packages"] = [
-        remove_invenio_version_from_file(pkg, pkg["name"], original_requirements)
+        prune_invenio_version_mismatches(pkg, pkg["name"], original_requirements)
         for pkg in json_data.get("packages", [])
     ]
     json_data["packages"] = [pkg for pkg in json_data["packages"] if pkg is not None]
+
     for pkg in json_data["packages"]:
         pkg["package"] = pkg["name"]
-        pkg["invenio_version"] = original_requirements[pkg["name"].lower()].version
-        pkg["invenio_repository"] = original_requirements[
-            pkg["name"].lower()
-        ].github_repo
-        pkg["invenio_tag"] = original_requirements[pkg["name"].lower()].github_tag
-        pkg["version"] = pkg["invenio_version"]
+        pkg["version"] = original_requirements[pkg["name"].lower()].version
+
+        # repository url looks like https://github.com/inveniosoftware/invenio-xyz[.git]
+        pkg["repository_url"] = original_requirements[pkg["name"].lower()].github_repo
+
+        # get the org/name from the url
+        pkg["repository"] = re.sub(
+            r"^https://github\.com/(.+?)(?:\.git)?$", r"\1", pkg["repository_url"]
+        )
+        pkg["oarepo_repository"] = pkg["repository"].replace(
+            "inveniosoftware", "oarepo"
+        )
+
+        pkg["tag"] = original_requirements[pkg["name"].lower()].github_tag
+        pkg["commit"] = original_requirements[pkg["name"].lower()].commit
+
+    # compute checksums of features
+    for pkg in json_data["packages"]:
+        for feature in pkg.get("features", []):
+            feature["commit"] = get_tag_version(
+                pkg["name"],
+                f"https://github.com/oarepo/{pkg['name']}",
+                f"oarepo-feature-{feature['name']}",
+                f"https://github.com/inveniosoftware/{pkg['name']}",
+            ).commit
+
+    # compute checksum of the whole package
+    for pkg in json_data["packages"]:
+        checksum_list = [pkg["commit"]]
+        for feature in pkg.get("features", []):
+            checksum_list.append(feature["commit"])
+
+        print(f"Computing full checksum of {pkg['name']} from {checksum_list}")
+        pkg["full_checksum"] = md5("".join(checksum_list).encode("utf-8")).hexdigest()
+        print(f"Full checksum of {pkg['name']} is {pkg['full_checksum']}")
+
+        # version of the package inside CESNET github repo is in the form X.Y.Z.T,
+        # where XYZ are the version of the package from invenio and T is a number
+        # taken from the full checksum mod 1000000. We take care of any pre/post/dev/a/b releases
+        # and also add '0' if the version looks like X.Y
+
+        # split on non-numeric characters, keeping those characters as well
+        version_part_and_suffix = re.split("([^0-9.])", pkg["version"])
+        main_version = version_part_and_suffix[0]
+        suffix = "".join(version_part_and_suffix[1:])  # including the separator
+
+        main_version_parts = main_version.split(".")
+        while len(main_version_parts) < 3:
+            main_version_parts.append("0")
+        main_version_parts.append(str(int(pkg["full_checksum"], 16) % 1000000))
+        if (
+            not pkg.get("features")
+            and not pkg.get("entrypoints")
+            and not pkg.get("dependencies")
+        ):
+            # if there are no features and no frozen packages, we can use the exact version
+            pkg["cesnet_version"] = pkg["version"]
+        else:
+            pkg["cesnet_version"] = ".".join(main_version_parts) + suffix
+
     print(json_data)
     # and dump
     output_json_path.write_text(json.dumps(json_data, indent=2))
 
 
 @typing.no_type_check
-def remove_invenio_version_from_file(
+def prune_invenio_version_mismatches(
     el: Any, package_name: str, actual_packages: dict[str, ParsedVersion]
 ) -> Any:
     """
@@ -100,7 +168,7 @@ def remove_invenio_version_from_file(
     )
     if isinstance(el, list):
         for idx, item in enumerate(list(el)):
-            processed_item = remove_invenio_version_from_file(
+            processed_item = prune_invenio_version_mismatches(
                 item, package_name, actual_packages
             )
             el[idx] = processed_item
@@ -114,111 +182,32 @@ def remove_invenio_version_from_file(
                 return None
             el.pop("invenio-version", None)
         for k, v in el.items():
-            el[k] = remove_invenio_version_from_file(v, package_name, actual_packages)
+            el[k] = prune_invenio_version_mismatches(v, package_name, actual_packages)
     return el
 
 
 def parse_requirements_output(output: str) -> dict[str, ParsedVersion]:
     ret = {}
-    for part in output.split("\n"):
-        part = part.strip()
-        if part.startswith("#") or not part:
-            continue
-        if ";" in part:
-            part = part.split(";", maxsplit=1)[0].strip()
-        if "==" in part:
-            ret[part.split("==", maxsplit=1)[0].lower()] = ParsedVersion(
-                part.split("==", maxsplit=1)[1], None, None
-            )
-        elif "@ git+" in part:
-            # github dependence in the form of invenio-app-rdm @ git+https://github.com/inveniosoftware/invenio-app-rdm@eee215c4bc9b7b89ec4a7eb633d145aaab008a3b
-            name, rest = part.split(" @ git+", maxsplit=1)
-            if "@" in rest:
-                url, tag = rest.split("@", maxsplit=1)
-            else:
-                url = rest
-                tag = None
-            if url.endswith(".git"):
-                url = url[: -len(".git")]
-            if url.startswith("git+"):
-                url = url[5:]
-
-            ret[name.lower()] = get_tag_version(url, tag)
+    for pv in parse_pip_freeze(output):
+        if is_invenio_package(pv.name):
+            github_repo = pv.github_repo or invenio2repo(pv.name)
+            github_tag = pv.github_tag or f"v{pv.version}"
+            ret[pv.name] = get_tag_version(pv.name, github_repo, github_tag)
+        else:
+            # we will never patch non-invenio packages, so just store the version
+            ret[pv.name] = pv
     return ret
 
 
-def get_tag_version(url: str, tag: str | None) -> ParsedVersion:
-    with tempfile.TemporaryDirectory() as tmpdir:
-        subprocess.check_call(["git", "clone", url, tmpdir])
-        if tag:
-            subprocess.check_call(["git", "checkout", tag], cwd=tmpdir)
-
-            # try to find out if there is a version tag that points to the current commit
-            tag_names = [
-                x.strip()
-                for x in subprocess.check_output(
-                    ["git", "tag", "--points-at", tag], cwd=tmpdir, text=True
-                ).split("\n")
-                if x.strip() and x.startswith("v")
-            ]
-            if tag_names:
-                # there is an explicit version tag for this commit, use it
-                return ParsedVersion(tag_names[0][1:], None, None)
-
-        nearest_version = subprocess.check_output(
-            ["git", "describe", "--tags", "--abbrev=0", "--match", "v[0-9]*"],
-            cwd=tmpdir,
-            text=True,
-        ).strip()
-
-        return ParsedVersion(nearest_version[1:], url, tag)
-
-
-def extract_version(version_str: str) -> tuple[int, ...]:
-    ret = []
-
-    for part in version_str.split("."):
-        res = (re.split("[a-z]", part))[0]
-
-        if not res:
-            continue
-
-        ret.append(int(res))
-
-    return tuple(ret)
-
-
-def check_pkg_version(actual_pkg_version: str | None, fork_version: str) -> bool:
-    if actual_pkg_version is None:
-        return False
-
-    fork_version_inequalities = fork_version.split(",")
-    actual_pkg_version_tuple = extract_version(actual_pkg_version)
-    for ineq in fork_version_inequalities:
-        op = ""
-        while ineq[0] in ["<", ">", "="]:
-            op += ineq[0]
-            ineq = ineq[1:]
-        tested_version_tuple = tuple(int(x) for x in ineq.split("."))
-        if op == "<":
-            if actual_pkg_version_tuple >= tested_version_tuple:
-                return False
-        elif op == ">":
-            if actual_pkg_version_tuple <= tested_version_tuple:
-                return False
-        elif op == "==":
-            if actual_pkg_version_tuple != tested_version_tuple:
-                return False
-        elif op == ">=":
-            if actual_pkg_version_tuple < tested_version_tuple:
-                return False
-        elif op == "<=":
-            if actual_pkg_version_tuple > tested_version_tuple:
-                return False
-        else:
-            raise ValueError(f"Unknown operator {op}")
-    return True
+def get_tag_version(
+    name: str, url: str, tag: str | None, upstream: str | None = None
+) -> ParsedVersion:
+    print(f"Getting version and commit for {url} {tag}")
+    with clone_repository(url, tag, upstream) as tmpdir:
+        nearest_version = get_nearest_version_tag(tmpdir)
+        commit = get_commit(tmpdir)
+        return ParsedVersion(name, nearest_version[1:], url, tag, commit)
 
 
 if __name__ == "__main__":
-    select_forks_by_venv(Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3]))
+    app()

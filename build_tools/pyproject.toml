@@ -19,8 +19,13 @@ bt_get_fork_versions = "build_tools.get_fork_versions:app"
 bt_apply_versions_and_forks_to_pyproject = "build_tools.apply_versions_and_forks_to_pyproject:app"
 bt_bump_version = "build_tools.bump_version:app"
 bt_apply_entrypoints = "build_tools.apply_entrypoints:app"
+bt_apply_test_entrypoints = "build_tools.apply_test_entrypoints:app"
 bt_remove_zenodo_specific_packages_from_pyproject = "build_tools.remove_zenodo_specific_packages_from_pyproject:app"
 bt_compare_pypi_versions = "build_tools.compare_pypi_versions:app"
+bt_select_forks_from_zenodo_freeze = "build_tools.select_forks_from_zenodo_freeze:app"
+bt_order_build = "build_tools.order_build:app"
+bt_find_built_packages = "build_tools.find_built_packages:app"
+bt_get_versions_to_fix_in_venv = "build_tools.get_versions_to_fix_in_venv:app"
 
 
 [build-system]

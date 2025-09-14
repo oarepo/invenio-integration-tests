@@ -3,7 +3,6 @@ from pathlib import Path
 from pprint import pprint
 from typing import Annotated
 
-import semver
 import toml
 import typer
 
@@ -16,14 +15,8 @@ def main(
     requirements_json_file: Annotated[
         Path, typer.Argument(help="Path to the rdm_requirements.json file")
     ],
-    test_requirements_json_file: Annotated[
-        Path, typer.Argument(help="Path to the rdm_test_requirements.json file")
-    ],
     forked_packages_json_file: Annotated[
         Path, typer.Argument(help="Path to the forked_packages.json file")
-    ],
-    final_forked_packages_and_versions: Annotated[
-        Path, typer.Argument(help="Path to the directory with packages and versions")
     ],
     extra_requirements_path: Annotated[
         Path, typer.Argument(help="Path to the file with extra requirements")
@@ -33,43 +26,24 @@ def main(
     ],
 ):
     normal_requirements = json.loads(requirements_json_file.read_text())
-    test_requirements = json.loads(test_requirements_json_file.read_text())
     forked_packages = json.loads(forked_packages_json_file.read_text())
     extra_requirements = json.loads(extra_requirements_path.read_text())
 
-    # a list of serialized json objects in fact to enable usage in github matrix
-    forked_packages = [json.loads(x) for x in forked_packages]
-    forked_packages = {x["package"]: x["version"] for x in forked_packages}
-
-    print(
-        "Final forked packages and their versions:", final_forked_packages_and_versions
-    )
-    for ff in final_forked_packages_and_versions.glob("*.txt"):
-        data = ff.read_text().strip()
-        print("Adding package to forked_packages", data)
-        _package, _version = data.split("==")
-        forked_packages[_package] = _version
+    forked_packages = {
+        x["package"]: x["cesnet_version"] for x in forked_packages["packages"]
+    }
 
     common_versions = {r["name"]: r["version"] for r in normal_requirements}
-    for r in test_requirements:
-        name = r["name"]
-        version = r["version"]
-        if name not in common_versions:
-            common_versions[name] = version
-        elif common_versions[name] != version:
-            print(f"Version conflict for {name}: {common_versions[name]} vs {version}")
-            common_versions[name] = semver.min_ver(common_versions[name], version)
 
     with open(pyproject_toml_path, "r") as f:
         pyproject_toml = toml.load(f)
 
     pprint(normal_requirements)
-    pprint(test_requirements)
     pprint(forked_packages)
 
     dependencies = []
     rdm_dependencies = []
-    test_dependencies = []
+    test_dependencies = ["pytest-invenio"]
 
     rdm_packages = {
         "invenio-app-rdm",
@@ -85,12 +59,6 @@ def main(
             rdm_dependencies.append(formatted)
         else:
             dependencies.append(formatted)
-
-    for r in test_requirements:
-        if r["name"] in normal_requirements_dict:
-            continue
-        formatted, name = format_dependency(forked_packages, r["name"], common_versions)
-        test_dependencies.append(formatted)
 
     for pkg, version in extra_requirements.items():
         dependencies.append(f"{pkg}{version}")

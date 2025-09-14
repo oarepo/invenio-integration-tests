@@ -25,14 +25,8 @@ on:
         required: true
         default: "3.13"
         type: string
-      package_and_version:
-        description: "Package and version to fork"
-        # input example: {
-        #   "package": "invenio-communities", 
-        #   "version": "13.0.6", 
-        #   "features": ["kwargs-extension"], 
-        #   "entry-points": [...]
-        # }
+      package:
+        description: "Package to fork"
         required: true
         type: string
       force_new_versions:
@@ -46,7 +40,7 @@ env:
   OAREPO_VERSION: ${{ inputs.oarepo }}
   OAREPO_MAJOR_VERSION: ${{ inputs.oarepo }}
   PYTHON_VERSION: ${{ inputs.python }}
-  PACKAGE_AND_VERSION: ${{ inputs.package_and_version }}
+  PACKAGE: ${{ inputs.package }}
   GH_TOKEN: ${{ github.token }}
 
 jobs:
@@ -58,127 +52,93 @@ jobs:
       - name: Checkout oarepo/invenio-integration-tests
         uses: actions/checkout@v4
 
+      - name: Download artifacts from extract_requirements
+        uses: actions/download-artifact@v4
+        with:
+          name: rdm_versions
+          path: artifacts/requirements
+
       - name: Setup environment variables
         uses: ./.github/actions/setup_env
         with:
           python-version: ${{ inputs.python }}
           oarepo-version: ${{ inputs.oarepo }}
 
-      - name: Install python and tools
-        uses: ./.github/actions/install_python
-        with:
-          python-version: ${{ inputs.python }}
-
-      - name: Install build tools
-        uses: ./.github/actions/install_build_tools
-  
-      - name: Git globals
-        run: |  # shell
-          git config --global user.email "integration-tests@oarepo.org"
-          git config --global user.name "OARepo Bot"
-
       - name: Convert package and version to environment variables. Create package-settings.json
+        id: convert_package_and_version
         run: | 
-          cat <<EOF >> $GITHUB_ENV
-          
-          PACKAGE=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.package')
-          VERSION=$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
-          FEATURES=$(echo "${PACKAGE_AND_VERSION}" | jq -c '.features')
+          cat artifacts/requirements/invenio-forks.json | jq -c ".pkg_index.\"${PACKAGE}\"" > package_settings.json
 
-          INVENIO_VERSION=v$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
-          OAREPO_VERSION=oarepo-$(echo "${PACKAGE_AND_VERSION}" | jq -r '.version')
+          cat <<EOF >> $GITHUB_ENV
+          VERSION=$(cat package_settings.json | jq -r '.version')
+          FEATURES=$(cat package_settings.json | jq -c '.features')
+
+          PACKAGE_REPOSITORY=$(cat package_settings.json | jq -r '.repository')
+          PACKAGE_REPOSITORY_URL=$(cat package_settings.json | jq -r '.repository_url')
+          OAREPO_REPOSITORY=$(cat package_settings.json | jq -r '.oarepo_repository')
+          PACKAGE_COMMIT=$(cat package_settings.json | jq -r '.commit')
+          PACKAGE_CESNET_VERSION=$(cat package_settings.json | jq -r '.cesnet_version')
+          PACKAGE_ALREADY_BUILT=$(cat package_settings.json | jq -r '.already_built')
 
           EOF
 
-          echo "${PACKAGE_AND_VERSION}" | jq > package_settings.json
           echo "==== Package settings: ===="
           cat package_settings.json
           
           echo "==== Environment: ===="
           cat $GITHUB_ENV
 
+      - name: Install python and tools
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
+        uses: ./.github/actions/install_python
+        with:
+          python-version: ${{ inputs.python }}
+
+      - name: Install build tools
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
+        uses: ./.github/actions/install_build_tools
+  
+      - name: Git globals
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
+        run: |  # shell
+          git config --global user.email "integration-tests@oarepo.org"
+          git config --global user.name "OARepo Bot"
+
       - name: Clone the package
         uses: actions/checkout@v4
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
         with:
-          repository: "oarepo/${{ env.PACKAGE }}"
+          repository: ${{env.OAREPO_REPOSITORY}}
           token: "${{ secrets.INTEGRATION_TEST }}"
           path: ".forks/${{env.PACKAGE}}"
-
-      - name: Download artifacts from extract_requirements
-        uses: actions/download-artifact@v4
-        with:
-          name: rdm_versions
-          path: artifacts/requirements
   
-      - name: Check if the package is already forked
-        id: check_fork
+      - name: Checkout the commit of the package
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
         run: |  # shell
-          cd .forks/${PACKAGE}
-          git fetch --all
+          echo "::group::Will run: Setting up the correct branch"
+          echo "gh repo clone ${OAREPO_REPOSITORY}"
+          echo "cd $PACKAGE"
+          echo "git fetch --tags upstream"
+          echo "git fetch --all"
+          echo "git checkout ${PACKAGE_COMMIT}"
+          echo "git branch -D cherry-pick-temporary || true"
+          echo "git switch -c cherry-pick-temporary"
+          echo "::endgroup::"
 
-          git switch ${OAREPO_VERSION} && {
-            echo "The fork already exists"
-            echo "fork_already_exists=true" >> $GITHUB_ENV
-            uv venv --python=${PYTHON_VERSION} --seed
-            uv pip install -U setuptools pip wheel
-
-            uv build
-            # get the version of the fork.
-            base=$(ls dist/*.tar.gz | head -n 1)
-
-            base=${base##*/}     # drop path
-            base=${base%.tar.gz} # drop suffix
-            fork_version=${base##*-}  # take text after the last '-'
-
-            echo "The version of the fork is: ${fork_version}"
-            rm -rf dist
-            rm -rf .venv
-            if ! echo $fork_version | grep -q 'post' ; then
-              # backward compatibility
-              fork_version="${fork_version}.post999"
-            fi
-            echo fork_version="${fork_version}" >> $GITHUB_ENV
-            exit 0
-          } || {
-            echo "The fork does not exist, will try to create it"
-            echo "fork_already_exists=false" >> $GITHUB_ENV
-            echo fork_version="${VERSION}.post999" >> $GITHUB_ENV
-          }
-      - name: Bump the version of the fork
-        run: |  # shell
-          # increase the dump version by one            
-          previous_fork_version=${fork_version}                         # "2.3.4post286"
-          fork_version_prefix=$(echo $fork_version | sed 's/[0-9]*$//')          # => "2.3.4post"
-          fork_version_post_version=$(echo $fork_version | sed 's/.*post//')     # => "286"
-          ((fork_version_post_version++))                                        # => 287
-          fork_version="${fork_version_prefix}${fork_version_post_version}"
-
-          # this will be the new version if the package has changed
-          echo "fork_version=${fork_version}" >> $GITHUB_ENV
-
-          # remember the previous version as it will be needed later
-          echo "previous_fork_version=${previous_fork_version}" >> $GITHUB_ENV
-
-      - name: Create a temporary fork of the package
-        run: |  # shell
+          echo "::group::Running: Setting up the correct branch"
           cd .forks/${PACKAGE}
           git remote add upstream https://github.com/inveniosoftware/${PACKAGE}.git || true
-          
-          # remove a temporary fork branch if it exists
-          git branch -D ${OAREPO_VERSION}-temporary || true
           
           # fetch invenio version and check it out
           git fetch --tags upstream
           git fetch --all
-          git checkout ${INVENIO_VERSION}
-          
-          # it is a tag, so create oarepo version from it
-          git switch -c ${OAREPO_VERSION}-temporary
-          
-          # list all branches
-          git branch -a
+          git checkout ${PACKAGE_COMMIT}
+          git branch -D cherry-pick-temporary || true
+          git switch -c cherry-pick-temporary
+          echo "::endgroup::"
 
       - name: Apply feature branches
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
         run: |  # shell
           cd .forks/${PACKAGE}
           
@@ -186,12 +146,20 @@ jobs:
             feature=$1
             feature_base=$2
             feature_branch="oarepo-feature-${feature}"
-            
-            echo "Applying feature branch $feature_branch based on $feature_base onto ${OAREPO_VERSION}-temporary"
 
+            echo "::group::Will run: apply feature $feature, base: $feature_base, branch: $feature_branch"
+
+            echo "git checkout $feature_branch"
+            echo "git checkout $feature_base"
+            echo "git checkout cherry-pick-temporary"
+            echo "git rev-list ${feature_branch} ^${feature_base}"
+            echo "git cherry-pick --allow-empty --allow-empty-message ${feature_branch} ^${feature_base}"
+            echo "::endgroup::"
+
+            echo "::group::Running: apply feature $feature, base: $feature_base, branch: $feature_branch"
             git checkout $feature_branch
             git checkout $feature_base
-            git checkout ${OAREPO_VERSION}-temporary
+            git checkout cherry-pick-temporary
 
             echo git rev-list ${feature_branch} ^${feature_base}
             git rev-list ${feature_branch} ^${feature_base}
@@ -203,23 +171,36 @@ jobs:
               git diff
               exit 1
             }
+            echo "::endgroup::"
           }
           
           echo "$FEATURES" | jq -c ".[]" | while read feature_rec ; do
             feature_name=$(echo $feature_rec | jq -r '.name')
             feature_base=$(echo $feature_rec | jq -r '.base')
+            feature_base_commit=$(echo $feature_rec | jq -r '.base_commit // ""')
+            if [ -n "$feature_base_commit" ] ; then
+              feature_base=$feature_base_commit
+            fi
             apply_feature $feature_name $feature_base
           done
           
           if [ -f "oarepo-after-patch.sh" ]; then
+            echo "::group::Will run: Post-patch script"
             echo "Running oarepo-after-patch.sh"
+            echo "::endgroup::"
+            echo "::group::Running: Post-patch script"
             bash oarepo-after-patch.sh || {
               echo "oarepo-after-patch.sh failed"
               exit 1
             }
+            echo "::endgroup::"
           fi
+
+          # show the diff
+          git diff ${COMMIT}..HEAD
           
-      - name: Create a summary of the changes and commit it
+      - name: Create a summary of the changes
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
         run: | 
           cd .forks/${PACKAGE}
 
@@ -246,21 +227,19 @@ jobs:
           false = False
           """JSON False."""
           
-          features_incorporated = '$FEATURES'
-                  
-          oarepo_major_version = '${OAREPO_MAJOR_VERSION}'
-
-          package_oarepo_version = '${OAREPO_VERSION}'
-
-          configuration = '${PACKAGE_AND_VERSION}'
-          
+          configuration = $(cat ../../package_settings.json)
+                            
           EOF
           
           black ${main_package}/oarepo_changes.py
+
+          echo "Created the following changes file:"
+          cat ${main_package}/oarepo_changes.py
           git add ${main_package}/oarepo_changes.py
-          git commit -m "[skip ci] Summarized changes applied to the package"
+          git commit -m "Add changes file"
 
       - name: Bump version to a post version
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
         run: |  # shell
           cd .forks/${PACKAGE}
           
@@ -268,87 +247,173 @@ jobs:
           # this is nasty fix for the citeproc-py-styles, because library have separate version.py file with __version__
           if [ "$PACKAGE" = "citeproc-py-styles" ]; then
             version_file="citeproc_styles/version.py"
-            sed 's/^__version__ = .*/__version__ = "'${fork_version}'"/' ${version_file} > ${version_file}.new
+            sed 's/^__version__ = .*/__version__ = "'${PACKAGE_CESNET_VERSION}'"/' ${version_file} > ${version_file}.new
             mv ${version_file}.new ${version_file}
+            echo "Version file ${version_file}:"
             cat ${version_file}
-            git add ${version_file}
-            git commit -m "[skip ci] Bumped version to ${fork_version}"
           else
             init_py=${PACKAGE//-/_}/__init__.py
-            cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${fork_version}'"/' > ${init_py}.new
+            cat ${init_py} | sed 's/^__version__ = .*/__version__ = "'${PACKAGE_CESNET_VERSION}'"/' > ${init_py}.new
             mv ${init_py}.new ${init_py}
+            echo "Version file ${init_py}:"
             cat ${init_py}
-            git add ${init_py}
-            git commit -m "[skip ci] Bumped version to ${fork_version}"
           fi
 
-      - name: Remove all github actions on the package
-        run: |  # shell
-          cd .forks/${PACKAGE}
-          if [ -d .github ] ; then
-            echo "Removing github actions"
-            rm -rf .github
-            git rm -rf .github
-            git commit -m "[skip ci] Removed github actions"
-          fi
-      - name: Apply entrypoint changes
+      - name: Apply entrypoint changes and add cesnet dependencies
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
         run: | # shell
           cd .forks/${PACKAGE}
           if [ -f setup.cfg ] ; then
             echo "Applying entrypoint changes to setup.cfg"
             cp setup.cfg .setup.cfg.before-changes
-            ../../build_tools/.venv/bin/bt_apply_entrypoints ../../package_settings.json setup.cfg
+            bt_apply_entrypoints ../../package_settings.json setup.cfg
+            echo "Setup.cfg after changes:"
+            cat setup.cfg
           else
             cp pyproject.toml .pyproject.toml.before-changes
-            echo
-            echo "!!!!!!!!!!!!!!!!!!!!!!!"
-            echo
-            echo "No setup.cfg file found, will not apply entrypoint changes. TODO: pyproject.toml"
-            echo
-            echo
+            entrypoints=$(cat ../../package_settings.json | jq -r '.entrypoints // ""')
+            if [ -n "$entrypoints" ] ; then
+              echo "ERROR: There are entrypoint changes needed but no setup.cfg file found, cannot apply the changes"
+              exit 1
+            fi
+
           fi
 
-      - name: Run tests on the patched package
+      - name: Build the package in a venv to check that it works
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
         run: |  # shell
-          fix_versions=$PWD/build_tools/src/build_tools/fix_versions_in_venv.py
-          rdm_requirements=$PWD/artifacts/requirements/rdm_test_requirements.txt
+          cd .forks/${PACKAGE}
+          uv venv --python=${PYTHON_VERSION} --seed
+          source .venv/bin/activate
+          uv pip install -U pip setuptools wheel
+          uv build
+
+      - name: Run tests on the patched package
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
+        run: |  # shell
 
           cd .forks/${PACKAGE}
-          if [ $(git rev-parse --abbrev-ref HEAD) != ${OAREPO_VERSION}-temporary ] ; then
-            echo "The current branch is not ${OAREPO_VERSION}-temporary - probably bug in previous steps"
+          if [ $(git rev-parse --abbrev-ref HEAD) != cherry-pick-temporary ] ; then
+            echo "The current branch is not cherry-pick-temporary - probably bug in previous steps"
             exit 1
           fi
 
+          # note: we need to use the version without entrypoints removed, that is why
+          # .before-changes files are used. At the same time, we need to remove black and isort
+          # asd the patches above might have created formatting inconsistencies.
           if [ -f setup.cfg ] ; then
-            echo "Removing black and isort from setup.cfg"
+            echo "::group::Will run: Removing black and isort from setup.cfg"
+            echo "cp setup.cfg .setup.cfg.before-changes"
+            echo "cat .setup.cfg.before-changes | sed 's/--black//' | sed 's/--isort//' | sed 's/--pydocstyle//' > setup.cfg"
+            echo "::endgroup::"
+            echo "::group::Running: Removing black and isort from setup.cfg"
             # do not check for black and isort - would make the patches too complicated          
             cp setup.cfg .setup.cfg.orig
 
             # add back lines removed by forks as they contain dependencies needed for the tests
             cat .setup.cfg.before-changes | sed "s/--black//" | sed 's/--isort//' | sed 's/--pydocstyle//' > setup.cfg
             cat setup.cfg
+            echo "::endgroup::"
+
+            bt_apply_test_entrypoints ../../package_settings.json setup.cfg
+
           elif [ -f pyproject.toml ] ; then
             echo "Removing black and isort from pyproject.toml"
             cp pyproject.toml .pyproject.toml.orig
             cat .pyproject.toml.before-changes | sed "s/--black//" | sed 's/--isort//' | sed 's/--pydocstyle//' > pyproject.toml
             cat pyproject.toml
+          else
+            echo "No setup.cfg or pyproject.toml found, cannot remove black and isort"
+            exit 1
           fi
+
+          bt_get_versions_to_fix_in_venv ../../artifacts/requirements/rdm_requirements.json ../../artifacts/requirements/invenio-forks.json versions_to_fix.txt
+
+          echo "::group::Will run: Installation"
+          echo "uv venv --python=${PYTHON_VERSION}"
+          echo "source .venv/bin/activate"
+          echo "uv pip install -e '.[tests,opensearch2,s3,devs, s3fs, oaipmh, rdf, sparql]'"
+          cat versions_to_fix.txt | while read line ; do
+            echo "uv pip install '$line'" --no-deps
+          done
+
+          for dep in $(cat ../../package_settings.json | jq -r '.cesnet_dependencies // [] | .[]') ; do
+            echo "uv pip install --index=${CESNET_PYPI_URL}/simple --no-deps $dep"
+          done
+          echo "::endgroup::"
+
+          echo "::group::Running: Installation"
+          rm -rf .venv || true
           uv venv --python=${PYTHON_VERSION}
           source .venv/bin/activate
           uv pip install -e '.[tests,opensearch2,s3,devs, s3fs, oaipmh, rdf, sparql]'
 
-          python $fix_versions $rdm_requirements ../../package_settings.json
-          
+          echo "Freeze before fixing versions:"
+          echo "=============================="
+          uv pip freeze
+          echo "=============================="
+
+          cat versions_to_fix.txt | while read line ; do
+            echo "uv pip install '$line'" --no-deps
+          done
+
+          # for each of the cesnet_dependencies, remove the dependency by name and add the cesnet version
+          for dep in $(cat ../../package_settings.json | jq -r '.cesnet_dependencies // [] | .[]') ; do
+            echo "Installing cesnet dependency 'uv pip install --index=${CESNET_PYPI_URL}/simple --no-deps $dep'"
+            dep_name=$(echo $dep | cut -d'=' -f1)
+            uv pip uninstall $dep_name || true
+            
+            # try to install the cesnet version. If it is not yet ready, wait a bit and try again
+            uv pip install --index=${CESNET_PYPI_URL}/simple --no-deps $dep || (
+              sleep 180 # sleep 3 minutes before trying to retry
+              while true ; do
+                uv pip install --index=${CESNET_PYPI_URL}/simple --no-deps $dep && break || sleep 30
+              done
+            )
+          done
+
+          echo "Freeze after fixing versions:"
+          echo "=============================="
+          uv pip freeze
+          echo "=============================="
+
+          echo "::endgroup::"
+
+          rm versions_to_fix.txt
+
+          echo "::group::Installing containers"
+          # if docker-services-cli is not installed, install it (invenio-collections do not have it)
+          docker-services-cli --version || uv pip install docker-services-cli
+          docker-services-cli up --db postgresql --search opensearch --mq rabbitmq --cache redis --env
+          echo "::endgroup::"
+
+          # package_settings.json contains optional tests.testopts array with testopts to be used when running tests
+          TESTOPTS=$(cat ../../package_settings.json | jq -r '.tests[]?.testopts' | tr '\n' ' ')
+
+          echo "::group::Will run: Tests"
+          echo "export PYTHONWARNINGS=ignore"
+
+          if [ -x ./run-tests.sh ] ; then
+            echo "./run-tests.sh $TESTOPTS" 
+          elif [ -x ./run_tests.sh ] ; then
+            echo "./run_tests.sh $TESTOPTS"
+          else
+            echo "pytest tests $TESTOPTS"
+          fi
+          echo "::endgroup::"
+
+          echo "::group::Running: Tests"
           export PYTHONWARNINGS=ignore
 
           if [ -x ./run-tests.sh ] ; then
-            ./run-tests.sh
+            ./run-tests.sh $TESTOPTS
           elif [ -x ./run_tests.sh ] ; then
-            ./run_tests.sh
+            ./run_tests.sh $TESTOPTS
           else
-            pytest tests
+            pytest tests $TESTOPTS
           fi
-          
+          echo "::endgroup::"
+
           if [ -f .setup.cfg.orig ] ; then
             mv .setup.cfg.orig setup.cfg
           fi
@@ -357,70 +422,8 @@ jobs:
             mv .pyproject.toml.orig pyproject.toml
           fi
 
-      - name: Rename a temporary fork to the final fork
-        if: env.fork_already_exists != 'true'
-        run: |  # shell
-          cd .forks/${PACKAGE}
-          git switch ${OAREPO_VERSION}-temporary
-          git branch -m ${OAREPO_VERSION}
-          echo "push_required=true" >> $GITHUB_ENV
-          echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
-
-      - name: Check if the temporary fork is the same as original, if not, remove the original and rename temp to original
-        if: env.fork_already_exists == 'true'
-        run: |  # shell
-          cd .forks/${PACKAGE}
-          echo "git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary >>>"
-          git diff ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py 
-          echo "<<<"
-          if git diff --exit-code ${OAREPO_VERSION} ${OAREPO_VERSION}-temporary -- ":(exclude)"${PACKAGE//-/_}/__init__.py ; then
-            echo "The temporary fork is the same as the original, will not push"
-            echo "actual_fork_version=${previous_fork_version}" >> $GITHUB_ENV          
-          else
-            echo "The temporary fork is different from the original, will push"
-            git branch -D ${OAREPO_VERSION}
-            git switch ${OAREPO_VERSION}-temporary
-            git branch -m ${OAREPO_VERSION}
-            echo "push_required=true" >> $GITHUB_ENV
-            echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
-          fi
-
-      - name: Force build and publish package
-        if: inputs.force_new_versions == 'true'
-        run: |  # shell
-          cd .forks/${PACKAGE}
-          echo "Forcing new versions of the package"
-          echo "actual_fork_version=${fork_version}" >> $GITHUB_ENV
-          echo "push_required=true" >> $GITHUB_ENV
-          git branch -D ${OAREPO_VERSION}
-          git switch ${OAREPO_VERSION}-temporary
-          git branch -m ${OAREPO_VERSION}
-
-      - name: Check that the version of the package is on cesnet pypi
-        run: | # shell
-          echo "Checking if the package with version ${actual_fork_version} is on cesnet pypi"
-          pip download --no-deps -i ${CESNET_PYPI_URL}/simple ${PACKAGE}==${actual_fork_version} || {
-            echo "The package ${PACKAGE}==${actual_fork_version} is not on the cesnet pypi, will publish it"
-            echo "push_required=true" >> $GITHUB_ENV
-          }
-
-      - name: Push the fork to the repository
-        if: env.push_required == 'true'
-        run: |  # shell
-          cd .forks/${PACKAGE}
-          echo "Push is required as there are differences between the original and the temporary fork"
-          git push --force --set-upstream origin ${OAREPO_VERSION}
-
-      - name: Build the package
-        if: env.push_required == 'true'
-        run: |  # shell
-          cd .forks/${PACKAGE}
-          source .venv/bin/activate
-          pip install -U setuptools pip wheel
-          python -m build
-
       - name: Upload to CESNET pypi
-        if: env.push_required == 'true'
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
         run: |  # shell
           cd .forks/${PACKAGE}
           source .venv/bin/activate
@@ -438,41 +441,3 @@ jobs:
             exit 1
           fi
           twine upload --verbose --non-interactive --repository-url ${CESNET_PYPI_URL} dist/* || echo "Failed to upload to pypi"
-
-      # this is an old way of uploading to github pages, not used anymore
-      # - name: Clone the pypi
-      #   if: env.push_required == 'true'
-      #   uses: actions/checkout@v4
-      #   with:
-      #     repository: "oarepo/pypi"
-      #     token: "${{ secrets.INTEGRATION_TEST }}"
-      #     path: "pypi"
-
-      # - name: Copy the package to the pypi
-      #   if: env.push_required == 'true'
-      #   run: |  # shell
-      #     cp .forks/${PACKAGE}/dist/* pypi/packages
-      #     cd pypi
-      #     ./build.sh
-
-      # - name: Commit the package to the pypi
-      #   if: env.push_required == 'true'
-      #   uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: "[invenio-integration-tests] adding package ${{ env.PACKAGE }} version ${{ env.VERSION }} to the pypi"
-      #     file_pattern: packages/*
-      #     repository: pypi
-      #     commit_user_name: integration-tests
-      #     commit_user_email: integration-tests@oarepo.org
-      #     push_options: '--force'
-
-      - name: Export the version of the fork to output file
-        run: |  # shell
-          mkdir -p artifacts/final_fork_versions
-          echo "${PACKAGE}==${actual_fork_version}" > artifacts/final_fork_versions/${PACKAGE}.txt
-
-      - name: Upload fork versions
-        uses: actions/upload-artifact@v4
-        with:
-          name: final_fork_versions-${{ env.PACKAGE }}
-          path: artifacts/final_fork_versions/*.txt

@@ -26,6 +26,9 @@ The fork_config_file looks like:
             }
         ]
     }, {...}]
+    cesnet_dependecies: [
+        "pkg==version", ...
+    ]
 }
 """
 
@@ -91,6 +94,12 @@ def main(
             for d in to_add:
                 add_dependency(cfg, extra, d)
 
+    # maybe needed for tests, but we should use oarepo package there as well
+    # and the version is frozen there.
+    # for dep in fork_config.get("cesnet_dependencies", []):
+    #     remove_dependency_by_name(cfg, None, dep.split("=")[0])
+    #     add_dependency(cfg, None, dep)
+
     print(cfg)
     cfg.write(setup_cfg_file.open("w"))
 
@@ -112,7 +121,7 @@ def remove_all_dependencies(
     if extra:
         deps = cfg["options.extras_require"][extra]
     else:
-        deps = cfg["options.install_requires"]
+        deps = cfg["options"]["install_requires"]
     values = load_ep_values(deps)
     values = [val for val in values if val in kept_dependencies]
     if values:
@@ -121,7 +130,7 @@ def remove_all_dependencies(
         if extra:
             del cfg["options.extras_require"][extra]
         else:
-            del cfg["options.install_requires"]
+            del cfg["options"]["install_requires"]
 
 
 def remove_dependency(
@@ -131,9 +140,26 @@ def remove_dependency(
     if extra:
         deps = cfg["options.extras_require"][extra]
     else:
-        deps = cfg["options.install_requires"]
+        deps = cfg["options"]["install_requires"]
     values = load_ep_values(deps)
     values = [val for val in values if val != dep]
+    if values:
+        write_values(deps, values, format=False)
+    else:
+        if extra:
+            del cfg["options.extras_require"][extra]
+        else:
+            del cfg["options.install_requires"]
+
+
+def remove_dependency_by_name(cfg: ConfigUpdater, extra: str | None, dep: str):
+    dep = dep.strip().replace(" ", "")
+    if extra:
+        deps = cfg["options.extras_require"][extra]
+    else:
+        deps = cfg["options"]["install_requires"]
+    values = load_ep_values(deps)
+    values = [val for val in values if val.split("=@")[0].strip() != dep]
     if values:
         write_values(deps, values, format=False)
     else:
@@ -150,7 +176,7 @@ def add_dependency(cfg: ConfigUpdater, extra: str | None, dep: str):
             cfg["options.extras_require"][extra] = ""
         deps = cfg["options.extras_require"][extra]
     else:
-        deps = cfg["options.install_requires"]
+        deps = cfg["options"]["install_requires"]
     values = load_ep_values(deps)
     if dep not in values:
         values.append(dep)
