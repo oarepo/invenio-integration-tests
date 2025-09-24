@@ -216,8 +216,9 @@ packages:
     features:
       - name: alembic-dependency-communities
         base: v1.0.0
+        invenio-version: ">=1.0.0,<2.0.0"
     tests:
         # TODO: we should run these tests with oarepo-rdm. Now we do not have a way
         # to do so without our own patches, so deselecting the test for now.
       - testopts: "--deselect tests/test_tasks.py::test_update_collections_size"
-        invenio-version: ">=1.0.0,<2.0.0"
+        invenio-version: ">=1.0.0,<3.0.0"
