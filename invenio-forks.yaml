@@ -145,6 +145,7 @@ packages:
         base: v19.1.0
       - name: patch-last-reply-from-requests
         base: v20.0.0
+        invenio-version: ">=20.0.0,<21.0.0"
 
   - name: invenio-drafts-resources
     oarepo: 14
