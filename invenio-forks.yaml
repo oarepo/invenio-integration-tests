@@ -144,9 +144,11 @@ packages:
 
   - name: invenio-drafts-resources
     oarepo: 14
-    features: []
     depends:
       - "on": invenio-records-resources
+    features:
+      - name: kwargs-from-7.2.0
+        base: v7.2.0
 
   - name: invenio-records-resources
     oarepo: 14
