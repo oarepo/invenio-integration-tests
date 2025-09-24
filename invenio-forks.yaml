@@ -133,8 +133,12 @@ packages:
   - name: invenio-communities
     oarepo: 14
     features:
+      - name: disable-communities-ui-from-21.0.0
+        base: v21.0.0
+        invenio-version: ">=21.0.0"
       - name: disable-communities-ui-from-19.1.0
         base: v19.1.0
+        invenio-version: ">=19.1.0,<21.0.0"
       - name: enable-email-invitations-from-19.1.0
         base: v19.1.0
       - name: administration-in-tests-from-19.1.0
