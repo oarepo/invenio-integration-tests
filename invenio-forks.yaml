@@ -146,9 +146,6 @@ packages:
       - name: patch-last-reply-from-requests
         base: v20.0.0
         invenio-version: ">=20.0.0,<21.0.0"
-      - name: refresh-and-configs
-        base: v21.0.0
-        invenio-version: ">=21.0.0"
 
   - name: invenio-drafts-resources
     oarepo: 14
@@ -174,6 +171,9 @@ packages:
         # and it is not tagged there. So simulating that the base is 8.1.0 so that
         # version matches but using the commit for the actual cherry-pick
         base_commit: 14cbb9b83897d97c11e1dcdbb88ed93f77157fb8
+      - name: refresh-and-configs
+        base: v10.0.1
+        invenio-version: ">=10.0.1"
 
   - name: invenio-s3
     oarepo: 14
