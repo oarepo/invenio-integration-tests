@@ -200,14 +200,16 @@ packages:
   - name: citeproc-py-styles
     oarepo: 14
     features:
-        - name: czech-iso-citation-from-0.1.5
-          base: v0.1.5
+      - name: czech-iso-citation-from-0.1.5
+        base: v0.1.5
 
   - name: invenio-vocabularies
     oarepo: 14
     features:
-      - name: configurable-service-resource
-        base: v8.3.0
+      - name: configurable-service-resource-from-9.0.0
+        base: v9.0.0
+      - name: pass-more-context-permissions
+        base: v9.0.0
 
   - name: invenio-oaiserver
     oarepo: 14
@@ -222,7 +224,7 @@ packages:
         base: v1.0.0
         invenio-version: ">=1.0.0,<2.0.0"
     tests:
-        # TODO: we should run these tests with oarepo-rdm. Now we do not have a way
-        # to do so without our own patches, so deselecting the test for now.
+      # TODO: we should run these tests with oarepo-rdm. Now we do not have a way
+      # to do so without our own patches, so deselecting the test for now.
       - testopts: "--deselect tests/test_tasks.py::test_update_collections_size"
         invenio-version: ">=1.0.0,<3.0.0"
