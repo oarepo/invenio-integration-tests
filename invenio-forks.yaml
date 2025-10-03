@@ -115,6 +115,8 @@ packages:
     entrypoints:
       - remove: "*"
         keep:
+          - group: flask.commands
+            name: rdm-records
           - group: invenio_jsonschemas.schemas
             name: invenio_rdm_records
           - group: invenio_assets.webpack
