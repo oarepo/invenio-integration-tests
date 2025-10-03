@@ -10,6 +10,8 @@ packages:
     entrypoints:
       - remove: "*"
         keep:
+          - group: flask.commands
+            name: rdm
           - group: invenio_assets.webpack
             name: invenio_app_rdm_theme
           - group: invenio_i18n.translations
