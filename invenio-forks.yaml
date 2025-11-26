@@ -232,3 +232,9 @@ packages:
       # to do so without our own patches, so deselecting the test for now.
       - testopts: "--deselect tests/test_tasks.py::test_update_collections_size"
         invenio-version: ">=1.0.0,<3.0.0"
+
+  - name: invenio-notifications
+    oarepo: 14
+    features:
+      - name: lazy-strings
+        base: v1.2.2
