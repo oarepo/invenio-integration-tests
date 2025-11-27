@@ -34,7 +34,7 @@ on:
       python:
         description: Python version
         required: true
-        default: "3.13"
+        default: "3.14"
       force_new_versions:
         description: "Force new versions of forks and oarepo package"
         required: false
