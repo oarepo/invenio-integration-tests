@@ -116,7 +116,7 @@ jobs:
         if: env.PACKAGE_ALREADY_BUILT != 'true'
         with:
           repository: ${{env.OAREPO_REPOSITORY}}
-          token: ${{ secrets.OAREPO_BUMP_VERSION_CLIENT_ID }}
+          token: ${{ steps.app-token.outputs.token }}
           path: ".forks/${{env.PACKAGE}}"
   
       - name: Checkout the commit of the package
