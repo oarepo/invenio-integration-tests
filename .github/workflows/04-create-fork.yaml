@@ -64,6 +64,13 @@ jobs:
           python-version: ${{ inputs.python }}
           oarepo-version: ${{ inputs.oarepo }}
 
+      - name: Create github app token
+        uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ secrets.OAREPO_BUMP_VERSION_CLIENT_ID }}
+          private-key: ${{ secrets.OAREPO_BUMP_VERSION_CLIENT_PASSWORD }}
+
       - name: Convert package and version to environment variables. Create package-settings.json
         id: convert_package_and_version
         run: | 
@@ -109,7 +116,7 @@ jobs:
         if: env.PACKAGE_ALREADY_BUILT != 'true'
         with:
           repository: ${{env.OAREPO_REPOSITORY}}
-          token: "${{ secrets.INTEGRATION_TEST }}"
+          token: ${{ secrets.OAREPO_BUMP_VERSION_CLIENT_ID }}
           path: ".forks/${{env.PACKAGE}}"
   
       - name: Checkout the commit of the package
