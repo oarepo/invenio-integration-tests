@@ -158,6 +158,8 @@ packages:
     features:
       - name: kwargs-from-7.2.0
         base: v7.2.0
+      - name: publish-edit-test-temp-skip
+        base: v7.3.0
 
   - name: invenio-records-resources
     oarepo: 14
