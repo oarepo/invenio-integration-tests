@@ -58,7 +58,7 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
 
       - name: Create a RDM instance
         run: |
