@@ -218,6 +218,8 @@ packages:
         base: v9.0.0
       - name: pass-more-context-permissions
         base: v9.0.0
+      - name: harvest-record
+        base: v9.1.2
 
   - name: invenio-oaiserver
     oarepo: 14
