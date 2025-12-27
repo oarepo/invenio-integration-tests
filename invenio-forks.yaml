@@ -244,3 +244,9 @@ packages:
     features:
       - name: lazy-strings
         base: v1.2.2
+
+  - name: invenio-jobs
+    oarepo: 14
+    features:
+      - name: cli
+        base: v6.1.0
