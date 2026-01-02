@@ -466,4 +466,4 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: dist-${{ env.PACKAGE }}
-          path: dist
+          path: .forks/${{env.PACKAGE}}/dist
