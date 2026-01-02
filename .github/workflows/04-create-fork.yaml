@@ -32,7 +32,7 @@ on:
       force_new_versions:
         description: "Force new versions of forks and oarepo package"
         required: false
-        default: 'false'
+        default: "false"
         type: string
 
 env:
@@ -73,7 +73,7 @@ jobs:
 
       - name: Convert package and version to environment variables. Create package-settings.json
         id: convert_package_and_version
-        run: | 
+        run: |
           cat artifacts/requirements/invenio-forks.json | jq -c ".pkg_index.\"${PACKAGE}\"" > package_settings.json
 
           cat <<EOF >> $GITHUB_ENV
@@ -91,7 +91,7 @@ jobs:
 
           echo "==== Package settings: ===="
           cat package_settings.json
-          
+
           echo "==== Environment: ===="
           cat $GITHUB_ENV
 
@@ -104,10 +104,10 @@ jobs:
       - name: Install build tools
         if: env.PACKAGE_ALREADY_BUILT != 'true'
         uses: ./.github/actions/install_build_tools
-  
+
       - name: Git globals
         if: env.PACKAGE_ALREADY_BUILT != 'true'
-        run: |  # shell
+        run: | # shell
           git config --global user.email "integration-tests@oarepo.org"
           git config --global user.name "OARepo Bot"
 
@@ -118,10 +118,10 @@ jobs:
           repository: ${{env.OAREPO_REPOSITORY}}
           token: ${{ steps.app-token.outputs.token }}
           path: ".forks/${{env.PACKAGE}}"
-  
+
       - name: Checkout the commit of the package
         if: env.PACKAGE_ALREADY_BUILT != 'true'
-        run: |  # shell
+        run: | # shell
           echo "::group::Will run: Setting up the correct branch"
           echo "gh repo clone ${OAREPO_REPOSITORY}"
           echo "cd $PACKAGE"
@@ -135,7 +135,7 @@ jobs:
           echo "::group::Running: Setting up the correct branch"
           cd .forks/${PACKAGE}
           git remote add upstream https://github.com/inveniosoftware/${PACKAGE}.git || true
-          
+
           # fetch invenio version and check it out
           git fetch --tags upstream
           git fetch --all
@@ -146,9 +146,9 @@ jobs:
 
       - name: Apply feature branches
         if: env.PACKAGE_ALREADY_BUILT != 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
-          
+
           apply_feature() {
             feature=$1
             feature_base=$2
@@ -180,7 +180,7 @@ jobs:
             }
             echo "::endgroup::"
           }
-          
+
           echo "$FEATURES" | jq -c ".[]" | while read feature_rec ; do
             feature_name=$(echo $feature_rec | jq -r '.name')
             feature_base=$(echo $feature_rec | jq -r '.base')
@@ -190,7 +190,7 @@ jobs:
             fi
             apply_feature $feature_name $feature_base
           done
-          
+
           if [ -f "oarepo-after-patch.sh" ]; then
             echo "::group::Will run: Post-patch script"
             echo "Running oarepo-after-patch.sh"
@@ -205,10 +205,10 @@ jobs:
 
           # show the diff
           git diff ${COMMIT}..HEAD
-          
+
       - name: Create a summary of the changes
         if: env.PACKAGE_ALREADY_BUILT != 'true'
-        run: | 
+        run: |
           cd .forks/${PACKAGE}
 
           # add the features to a file that will be committed to the package so that later we know
@@ -230,14 +230,14 @@ jobs:
           # the code below is json, so need to define a couple of aliases just to be sure
           true = True
           """JSON True."""
-          
+
           false = False
           """JSON False."""
-          
+
           configuration = $(cat ../../package_settings.json)
                             
           EOF
-          
+
           black ${main_package}/oarepo_changes.py
 
           echo "Created the following changes file:"
@@ -247,9 +247,9 @@ jobs:
 
       - name: Bump version to a post version
         if: env.PACKAGE_ALREADY_BUILT != 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
-          
+
           # bump the version to a post version
           # this is nasty fix for the citeproc-py-styles, because library have separate version.py file with __version__
           if [ "$PACKAGE" = "citeproc-py-styles" ]; then
@@ -286,19 +286,31 @@ jobs:
 
           fi
 
-      - name: Build the package in a venv to check that it works
+      - name: Create a venv for translations and build process
         if: env.PACKAGE_ALREADY_BUILT != 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           uv venv --python=${PYTHON_VERSION} --seed
           source .venv/bin/activate
-          uv pip install -U pip setuptools wheel
+          uv pip install -U pip setuptools wheel babel
+
+      - name: Compile translations if needed
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
+        run: | # shell
+          cd .forks/${PACKAGE}
+          source .venv/bin/activate
+          python setup.py compile_catalog || true
+
+      - name: Build the package in a venv to check that it works
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
+        run: | # shell
+          cd .forks/${PACKAGE}
+          source .venv/bin/activate
           uv build
 
       - name: Run tests on the patched package
         if: env.PACKAGE_ALREADY_BUILT != 'true'
-        run: |  # shell
-
+        run: | # shell
           cd .forks/${PACKAGE}
           if [ $(git rev-parse --abbrev-ref HEAD) != cherry-pick-temporary ] ; then
             echo "The current branch is not cherry-pick-temporary - probably bug in previous steps"
@@ -431,7 +443,7 @@ jobs:
 
       - name: Upload to CESNET pypi
         if: env.PACKAGE_ALREADY_BUILT != 'true'
-        run: |  # shell
+        run: | # shell
           cd .forks/${PACKAGE}
           source .venv/bin/activate
           pip install twine
