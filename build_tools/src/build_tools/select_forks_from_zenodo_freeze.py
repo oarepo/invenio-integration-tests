@@ -139,7 +139,7 @@ def select_forks_from_zenodo_freeze(
         main_version_parts = main_version.split(".")
         while len(main_version_parts) < 3:
             main_version_parts.append("0")
-        main_version_parts.append(str(int(pkg["full_checksum"], 16) % 1000000))
+        main_version_parts.append(str(int(pkg["full_checksum"], 16) % 100000000))
         if (
             not pkg.get("features")
             and not pkg.get("entrypoints")

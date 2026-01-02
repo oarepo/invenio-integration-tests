@@ -460,3 +460,10 @@ jobs:
             exit 1
           fi
           twine upload --verbose --non-interactive --repository-url ${CESNET_PYPI_URL} dist/* || echo "Failed to upload to pypi"
+
+      - name: Upload dist folder as artifact
+        if: env.PACKAGE_ALREADY_BUILT != 'true'
+        uses: actions/upload-artifact@v6
+        with:
+          name: dist-${{ env.PACKAGE }}
+          path: dist
