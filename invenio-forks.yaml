@@ -196,6 +196,7 @@ packages:
     features:
       - name: refresh-token-from-5.1.0
         base: v5.1.0
+        invenio-version: "<6.1.0"
 
   - name: invenio-jsonschemas
     oarepo: 14
