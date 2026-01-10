@@ -172,8 +172,12 @@ packages:
   - name: invenio-requests
     oarepo: 14
     features:
+      - name: kwargs-from-10.5.0
+        base: v10.5.0
+        invenio-version: ">=10.5.0"
       - name: kwargs-from-8.1.0
         base: v8.1.0
+        invenio-version: ">=8.1.0,<10.5.0"
         # this is the commit that the patch was made on top of
         # we can not use the base tag because there are incompatible changes later
         # and it is not tagged there. So simulating that the base is 8.1.0 so that
