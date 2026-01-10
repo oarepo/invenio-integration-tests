@@ -255,6 +255,4 @@ packages:
 
   - name: invenio-assets
     oarepo: 14
-    features:
-      - name: pin-rspack
-        base: v4.2.0
+    features: []
