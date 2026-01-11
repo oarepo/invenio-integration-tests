@@ -168,6 +168,8 @@ packages:
     features:
       - name: kwargs-from-8.6.0
         base: v8.6.0
+      - name: lenient-labelled-facets
+        base: v8.8.0
 
   - name: invenio-requests
     oarepo: 14
