@@ -12,6 +12,7 @@ dependencies = [
     "configupdater",
     "tomli",
     "tomli-w",
+    "setuptools<82.0.0",
 ]
 
 [project.scripts]
