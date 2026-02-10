@@ -7,5 +7,6 @@ runs:
       run: | # shell
         cd build_tools
         uv venv --seed
+        uv pip install -U "setuptools<82.0.0"
         source .venv/bin/activate
         uv pip install -e .

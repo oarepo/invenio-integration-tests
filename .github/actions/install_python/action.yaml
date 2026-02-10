@@ -46,6 +46,7 @@ runs:
     run: |
       uv venv .tools/invenio-cli
       source .tools/invenio-cli/bin/activate
+      uv pip install -U "setuptools<82.0.0"
       uv pip install -U invenio-cli
 
       ln -s ${{ github.workspace }}/.tools/invenio-cli/bin/invenio-cli ${{ github.workspace }}/.tools/bin/invenio-cli 
@@ -59,6 +60,7 @@ runs:
     run: |
       uv venv .tools/pipenv
       source .tools/pipenv/bin/activate
+      uv pip install -U "setuptools<82.0.0"
       uv pip install -U pipenv
 
       ln -s ${{ github.workspace }}/.tools/pipenv/bin/pipenv ${{ github.workspace }}/.tools/bin/pipenv 
@@ -70,6 +72,7 @@ runs:
     run: |
       uv venv .tools/black
       source .tools/black/bin/activate
+      uv pip install -U "setuptools<82.0.0"
       uv pip install -U black
 
       ln -s ${{ github.workspace }}/.tools/black/bin/black ${{ github.workspace }}/.tools/bin/black 
@@ -81,7 +84,7 @@ runs:
     run: |
       uv venv --python=python3.12 build_tools/.venv
       source build_tools/.venv/bin/activate
-      uv pip install -U setuptools pip wheel
+      uv pip install -U "setuptools<82.0.0" pip wheel
       uv pip install -e ./build_tools
 
       ln -s ${{ github.workspace }}/build_tools/.venv/bin/bt* ${{ github.workspace }}/.tools/bin/ 

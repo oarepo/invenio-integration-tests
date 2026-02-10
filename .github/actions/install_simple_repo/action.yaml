@@ -32,7 +32,7 @@ runs:
 
         uv venv .venv-tests
         source .venv-tests/bin/activate
-        uv pip install -U setuptools pip wheel
+        uv pip install -U "setuptools<82.0.0" pip wheel
 
 
         # install in non-editable mode
