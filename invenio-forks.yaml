@@ -113,6 +113,8 @@ packages:
         base: v19.5.4
       - name: fix-idutils-tests
         base: v23.0.0
+      - name: review-service-components
+        base: v24.0.0
     depends:
       - "on": invenio-records-resources
       - "on": invenio-drafts-resources
