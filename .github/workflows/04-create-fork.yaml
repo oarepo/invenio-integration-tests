@@ -101,9 +101,10 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
-      - name: Install build tools
-        if: env.PACKAGE_ALREADY_BUILT != 'true'
-        uses: ./.github/actions/install_build_tools
+      # already in install_python action
+      # - name: Install build tools
+      #   if: env.PACKAGE_ALREADY_BUILT != 'true'
+      #   uses: ./.github/actions/install_build_tools
 
       - name: Git globals
         if: env.PACKAGE_ALREADY_BUILT != 'true'

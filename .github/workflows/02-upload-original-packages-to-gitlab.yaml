@@ -40,7 +40,7 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
           oarepo-version: ${{ inputs.oarepo }}
-      
+
       - name: Download artifacts from extract_requirements
         uses: actions/download-artifact@v4
         with:
@@ -52,8 +52,9 @@ jobs:
         with:
           python-version: ${{ inputs.python }}
 
-      - name: Install build tools
-        uses: ./.github/actions/install_build_tools
+      # already in install_python
+      # - name: Install build tools
+      #   uses: ./.github/actions/install_build_tools
 
       - name: Download versions of packages from pypi and cesnet pypi
         run: |
@@ -95,7 +96,7 @@ jobs:
           cat non_existing.txt || echo "All packages exist"
 
       - name: Upload to CESNET pypi
-        run: |  # shell
+        run: | # shell
           uv venv .venv
           source .venv/bin/activate
           pip install twine

@@ -27,7 +27,7 @@ on:
       build_steps:
         description: "Invenio forks and their versions"
         value: ${{ jobs.main.outputs.build_steps }}
-    
+
 env:
   # keep the following consistent
   OAREPO_VERSION: ${{ inputs.oarepo }}
@@ -49,7 +49,7 @@ jobs:
           python-version: ${{ inputs.python }}
           oarepo-version: ${{ inputs.oarepo }}
 
-      - name: Download latest Zenodo tag 
+      - name: Download latest Zenodo tag
         run: |
           # get the latest tag from https://github.com/zenodo/zenodo-rdm and store it
           git clone https://github.com/zenodo/zenodo-rdm.git rdm
@@ -73,19 +73,20 @@ jobs:
         run: |
           mkdir -p artifacts/requirements
 
-      - name: Install build tools
-        uses: ./.github/actions/install_build_tools
+      # already in install_python action
+      # - name: Install build tools
+      #   uses: ./.github/actions/install_build_tools
 
       - name: Convert invenio-forks.yaml into json as some tools are run in invenio venv and do not have yaml
-        run: |  # shell
+        run: | # shell
           build_tools/.venv/bin/python \
               build_tools/src/build_tools/convert_forks_to_json.py \
               invenio-forks.yaml >invenio-forks-temp.json
 
       - name: Lock app-rdm version
-        run: |  # shell
+        run: | # shell
           # initialize rdm project with the given python. This will create a rdm/.venv directory
-          
+
           cd rdm
           echo "Removing invenio-swh from pyproject.toml as it is not used in oarepo and forces old python"
           bt_remove_zenodo_specific_packages_from_pyproject pyproject.toml
@@ -137,7 +138,7 @@ jobs:
           cat ../requirements_for_current_python.txt
 
       - name: Save requirements
-        run: |  # shell
+        run: | # shell
           cd rdm
           source .venv/bin/activate
           uv pip freeze | grep -v '-e file://' | sort -u >../artifacts/requirements/rdm_requirements.txt
@@ -148,30 +149,30 @@ jobs:
         # go through the virtualenv and the forks file and select the forks that are needed
         # this will create another json file with the same format but all the elements
         # that are not needed will be removed
-        run: |  # shell
+        run: | # shell
           bt_select_forks_from_zenodo_freeze invenio-forks-temp.json invenio-forks.json requirements_for_current_python.txt
 
       - name: Check if forks are already built
         # Have a look at the selected forked packages and try to find the cesnet
         # version on cesnet gitlab pypi sever.
-        run: |  # shell
+        run: | # shell
           bt_find_built_packages invenio-forks.json ${CESNET_PYPI_URL}
 
       - name: Extract react dependencies
-        run: |  # shell
+        run: | # shell
           cd rdm
           source .venv/bin/activate
           python ../build_tools/src/build_tools/get_react_dependencies.py >../artifacts/requirements/react-dependencies.json
 
       - name: Get build steps
         id: get_build_steps
-        run: |  # shell
+        run: | # shell
           bt_order_build invenio-forks.json build-steps.json
           echo "build_steps=$(cat build-steps.json | sed 's/ //g')" >> $GITHUB_OUTPUT
 
           cp build-steps.json artifacts/requirements/build-steps.json
           cp invenio-forks.json artifacts/requirements/invenio-forks.json
-  
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -180,7 +181,7 @@ jobs:
           if-no-files-found: error
 
       - name: Display Requirements
-        run: |  # shell
+        run: | # shell
           echo "========= RDM Requirements ========="
           cat artifacts/requirements/rdm_requirements.txt
           echo
