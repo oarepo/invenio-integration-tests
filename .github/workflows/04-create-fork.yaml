@@ -293,7 +293,7 @@ jobs:
           cd .forks/${PACKAGE}
           uv venv --python=${PYTHON_VERSION} --seed
           source .venv/bin/activate
-          uv pip install -U pip setuptools wheel babel
+          uv pip install -U pip "setuptools<82.0.0" wheel babel
 
       - name: Compile translations if needed
         if: env.PACKAGE_ALREADY_BUILT != 'true'
@@ -352,6 +352,7 @@ jobs:
           echo "::group::Will run: Installation"
           echo "uv venv --python=${PYTHON_VERSION}"
           echo "source .venv/bin/activate"
+          uv pip install -U "setuptools<82.0.0"
           echo "uv pip install -e '.[tests,opensearch2,s3,devs, s3fs, oaipmh, rdf, sparql]'"
           cat versions_to_fix.txt | while read line ; do
             echo "uv pip install '$line'" --no-deps
@@ -366,7 +367,9 @@ jobs:
           rm -rf .venv || true
           uv venv --python=${PYTHON_VERSION}
           source .venv/bin/activate
+          uv pip install -U "setuptools<82.0.0"
           uv pip install -e '.[tests,opensearch2,s3,devs, s3fs, oaipmh, rdf, sparql]'
+          uv pip install -U "setuptools<82.0.0"
 
           echo "Freeze before fixing versions:"
           echo "=============================="

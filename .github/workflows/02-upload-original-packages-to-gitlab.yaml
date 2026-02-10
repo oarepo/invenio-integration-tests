@@ -99,6 +99,7 @@ jobs:
         run: | # shell
           uv venv .venv
           source .venv/bin/activate
+          uv pip install -U "setuptools<82.0.0"
           pip install twine
           export TWINE_USERNAME=${{ secrets.TWINE_USERNAME }}
           export TWINE_PASSWORD=${{ secrets.TWINE_PASSWORD }}

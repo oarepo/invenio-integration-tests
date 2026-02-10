@@ -115,12 +115,14 @@ jobs:
           echo "Creating a new virtualenv with the correct python version"
           uv venv .venv --python python$PYTHON_VERSION --seed
           source .venv/bin/activate
+          uv pip install -U "setuptools<82.0.0"
 
           echo "Adding invenio packages from the original requirements"
           uv add -r original_invenio_requirements.txt --no-sync --python python$PYTHON_VERSION
 
           # adding s3 which is not in zenodo
           uv add invenio-s3 --python python$PYTHON_VERSION
+          uv pip install -U "setuptools<82.0.0"
 
           echo "pyproject.toml with invenio dependencies:"
           echo "========================================="
@@ -129,6 +131,7 @@ jobs:
           echo "Re-creating the lock file with the correct python version"
           # re-syncing to get all dependencies
           uv sync --python python$PYTHON_VERSION
+          uv pip install -U "setuptools<82.0.0"
 
           echo "Exporting the requirements for the current python version"
           uv export --no-hashes --frozen > ../requirements_for_current_python.txt
