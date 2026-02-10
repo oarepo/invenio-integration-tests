@@ -129,6 +129,18 @@ packages:
             name: invenio_rdm_records
           - group: invenio_i18n.translations
             name: invenio_rdm_records
+          - group: invenio_requests.types
+            name: community_inclusion
+          - group: invenio_requests.types
+            name: community_submission
+          - group: invenio_requests.types
+            name: user_access_request
+          - group: invenio_requests.types
+            name: guest_access_request
+          - group: invenio_requests.types
+            name: record_deletion
+          - group: invenio_requests.types
+            name: file_modification
     dependencies:
       - extra: tests
         remove: "*"
