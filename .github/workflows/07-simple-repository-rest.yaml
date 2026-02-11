@@ -58,6 +58,7 @@ jobs:
         with:
           oarepo-version: ${{ inputs.oarepo }}
           python-version: ${{ inputs.python }}
+          extras: "[rdm]"
 
       - name: Run REST tests
         env:
