@@ -271,8 +271,8 @@ packages:
     features:
       - name: cli
         base: v6.1.0
-      - name: jobs-ui-optimization
-        base: v6.1.0
+      # - name: jobs-ui-optimization
+      #   base: v6.1.0
 
   - name: invenio-assets
     oarepo: 14
