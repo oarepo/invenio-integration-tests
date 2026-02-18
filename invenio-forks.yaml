@@ -3,7 +3,7 @@ invenio-version: 14.0.0b5.dev3
 packages:
   - name: invenio-administration
     features:
-      - name: multiple-ui-changes-from-3.1.2
+      - name: oarepo-feature-multiple-ui-changes-from-3.1.2
         base: v3.1.2
 
   - name: invenio-app-rdm
@@ -92,20 +92,20 @@ packages:
               update_expired_embargos = invenio_rdm_records.jobs.jobs:update_expired_embargos_cls
 
     features:
-      - name: removed-webpack-aliases
+      - name: oarepo-feature-removed-webpack-aliases
         base: v12.0.12
 
   - name: invenio-rdm-records
     features:
-      - name: configurable-service-resource
+      - name: oarepo-feature-configurable-service-resource
         base: v19.5.4
-      - name: kwargs
+      - name: oarepo-feature-kwargs
         base: v19.5.4
-      - name: pids-component-permission-check-args
+      - name: oarepo-feature-pids-component-permission-check-args
         base: v19.5.4
-      - name: review-service-components
+      - name: oarepo-feature-review-service-components
         base: v22.7.3
-      - name: review-before-doi-assign
+      - name: oarepo-feature-review-before-doi-assign
         base: v22.7.3
     entrypoints:
       - remove: "*"
@@ -138,68 +138,88 @@ packages:
 
   - name: invenio-communities
     features:
-      - name: disable-communities-ui-from-21.0.0
+      - name: oarepo-feature-disable-communities-ui-from-21.0.0
         base: v21.0.0
         invenio-version: ">=21.0.0"
-      - name: enable-email-invitations-from-19.1.0
+      - name: oarepo-feature-enable-email-invitations-from-19.1.0
         base: v19.1.0
-      - name: administration-in-tests-from-19.1.0
+      - name: oarepo-feature-administration-in-tests-from-19.1.0
         base: v19.1.0
 
   - name: invenio-drafts-resources
     depends:
       - "on": invenio-records-resources
     features:
-      - name: kwargs-from-7.2.0
+      - name: oarepo-feature-kwargs-from-7.2.0
         base: v7.2.0
-      - name: publish-edit-test-temp-skip
+      - name: oarepo-feature-publish-edit-test-temp-skip
         base: v7.3.0
 
   - name: invenio-records-resources
     features:
-      - name: kwargs-from-8.6.0
+      - name: oarepo-feature-kwargs-from-8.6.0
         base: v8.6.0
-      - name: lenient-labelled-facets
+      - name: oarepo-feature-lenient-labelled-facets
         base: v8.8.0
 
   - name: invenio-requests
     features:
-      - name: kwargs-from-12.2.1
+      - name: oarepo-feature-kwargs-from-12.2.1
         base: v12.2.1
-      - name: refresh-and-configs
+      - name: oarepo-feature-refresh-and-configs
         base: v10.0.1
 
   - name: invenio-jsonschemas
     features:
-      - name: importlib-files
+      - name: oarepo-feature-importlib-files
         base: v2.0.0
 
   - name: invenio-search
     features:
-      - name: importlib
+      - name: oarepo-feature-importlib
         base: v3.1.0
 
   - name: citeproc-py-styles
     features:
-      - name: czech-iso-citation-from-0.1.5
+      - name: oarepo-feature-czech-iso-citation-from-0.1.5
         base: v0.1.5
 
   - name: invenio-vocabularies
     features:
-      - name: configurable-service-resource-from-9.0.0
+      - name: oarepo-feature-configurable-service-resource-from-9.0.0
         base: v9.0.0
-      - name: pass-more-context-permissions
+      - name: oarepo-feature-pass-more-context-permissions
         base: v9.0.0
-      - name: harvest-record
+      - name: oarepo-feature-harvest-record
         base: v9.1.2
 
   - name: invenio-oaiserver
     features:
-      - name: enable-multiple-record-types-from-3.6.0
+      - name: oarepo-feature-enable-multiple-record-types-from-3.6.0
         base: v3.6.0
 
   - name: invenio-notifications
     features:
-      - name: lazy-strings
+      - name: oarepo-feature-lazy-strings
         base: v1.2.2
 
+  # Patches that are not yet released
+  - name: invenio-config
+    features:
+      - name: 0f1fde1a9c4ebd6fd0876d81a594bf60d407ca9e
+        base: b7c969e0596ace9373d634250b15aa0394110cfa
+
+  - name: invenio-files-rest
+    features:
+      - name: 616dc34c38006433653211feb5a9e523b0d399e7
+        base: 131594c9324dc6cc353d868affd5788509bae45f
+
+  - name: invenio-mail
+    features:
+      - name: 44c157a4cadcb064c695f3e6bc11788e38fa50fb
+        base: ef1d2b7f41642653a2c5c7813083cbbbf134256b
+
+  - name: invenio-mail
+    features:
+      - name: 7ec1c68c2a3461c4aab71650252b47e86d2cc896
+        base: 77e5549a8c905b58908e6314508ea9e0336cb3c7
