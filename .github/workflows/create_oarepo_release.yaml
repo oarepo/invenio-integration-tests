@@ -24,11 +24,12 @@ on:
       dev-release:
         description: Whether to create a dev release (with .dev suffix)
         required: true
-        default: "false"
+        type: boolean
+        default: false
 
 env:
   PYTHON_VERSION: ${{ github.event.inputs.python || '3.14.2' }}
-  DEV_RELEASE: ${{ github.event.inputs.dev-release || 'false' }}
+  DEV_RELEASE: ${{ github.event.inputs.dev-release || false }}
 
 permissions:
   id-token: write
