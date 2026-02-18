@@ -65,10 +65,7 @@ jobs:
           fi
 
           invenio-integration-tests setup invenio-forks.yaml test.json
-          patches=()
-          while IFS= read -r patch; do
-            patches+=(--patch "$patch")
-          done < <(jq -r '.patches[]' test.json)
+          mapfile -t patches < <(jq -r '.patches[]' test.json)
 
           echo "patches=${patches[*]}" >> $GITHUB_OUTPUT
 
