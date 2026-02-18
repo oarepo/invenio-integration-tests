@@ -55,10 +55,12 @@ jobs:
         id: set-repository
         shell: bash
         run: |
-          # repository is zenodo/zenodo-rdm for production build, oarepo/invenio-testrig for testing
+          # repository is zenodo/zenodo-rdm for production build, 
+          # oarepo/inveniordm-reference-repo for testing
+
           if [ "${{ env.DEV_RELEASE }}" = "true" ]; then
-            echo "DEV_RELEASE is true, using repository oarepo/invenio-testrig for testing"
-            echo "base_repository=oarepo/invenio-testrig" >> $GITHUB_OUTPUT
+            echo "DEV_RELEASE is true, using repository oarepo/inveniordm-reference-repo for testing"
+            echo "base_repository=oarepo/inveniordm-reference-repo" >> $GITHUB_OUTPUT
           else
             echo "DEV_RELEASE is false, using repository zenodo/zenodo-rdm for production build" 
             echo "base_repository=zenodo/zenodo-rdm" >> $GITHUB_OUTPUT
