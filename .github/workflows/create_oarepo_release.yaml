@@ -46,21 +46,23 @@ permissions:
   contents: write
 
 jobs:
-  extract_requirements:
-    name: Extract requirements
-    uses: ./.github/workflows/01-extract-requirements.yaml
+  run_invenio_testrig:
+    uses: oarepo/invenio-testrig/.github/workflows/verify-patches.yml@main
     with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
+      name: Repository with ZIP support
+      repository: ${{ github.repository }}@${{ github.ref_name }}
+      disable-codestyle-checks: true
+      python-version: 3.14.2
+      skip-report: true
 
-  upload_original_packages:
-    name: Upload original invenio packages to CESNET GitLab
-    uses: ./.github/workflows/02-upload-original-packages-to-gitlab.yaml
-    secrets: inherit
-    needs: extract_requirements
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
+  # upload_original_packages:
+  #   name: Upload original invenio packages to CESNET GitLab
+  #   uses: ./.github/workflows/02-upload-original-packages-to-gitlab.yaml
+  #   secrets: inherit
+  #   needs: extract_requirements
+  #   with:
+  #     oarepo: ${{ github.event.inputs.oarepo }}
+  #     python: ${{ github.event.inputs.python }}
 
   # # test_rdm:
   # #   name: Test RDM
@@ -71,75 +73,58 @@ jobs:
   # #     oarepo: ${{ github.event.inputs.oarepo }}
   # #     python: ${{ github.event.inputs.python }}
 
-  build_and_test_forks:
-    name: ${{ matrix.package }}
-    needs:
-      - extract_requirements
-      - upload_original_packages
-    strategy:
-      matrix:
-        package: ${{ fromJSON(needs.extract_requirements.outputs.build_steps) }}
-      fail-fast: true
-    uses: ./.github/workflows/04-create-fork.yaml
-    secrets: inherit
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
-      force_new_versions: ${{ github.event.inputs.force_new_versions }}
-      package: ${{ matrix.package }}
+  # create_oarepo_package:
+  #   name: Create oarepo package
+  #   needs:
+  #     - build_and_test_forks
+  #   uses: ./.github/workflows/05-create-oarepo-package.yaml
+  #   secrets: inherit
+  #   with:
+  #     oarepo: ${{ github.event.inputs.oarepo }}
+  #     python: ${{ github.event.inputs.python }}
 
-  create_oarepo_package:
-    name: Create oarepo package
-    needs:
-      - build_and_test_forks
-    uses: ./.github/workflows/05-create-oarepo-package.yaml
-    secrets: inherit
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
+  # test_simple_repository_pytest:
+  #   name: PyTest simple repository
+  #   needs:
+  #     - create_oarepo_package
+  #   uses: ./.github/workflows/06-simple-repository-pytest.yaml
+  #   secrets: inherit
+  #   with:
+  #     oarepo: ${{ github.event.inputs.oarepo }}
+  #     python: ${{ github.event.inputs.python }}
 
-  test_simple_repository_pytest:
-    name: PyTest simple repository
-    needs:
-      - create_oarepo_package
-    uses: ./.github/workflows/06-simple-repository-pytest.yaml
-    secrets: inherit
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
+  # test_simple_repository_rest:
+  #   name: REST tests simple repository
+  #   needs:
+  #     - create_oarepo_package
+  #   uses: ./.github/workflows/07-simple-repository-rest.yaml
+  #   secrets: inherit
+  #   with:
+  #     oarepo: ${{ github.event.inputs.oarepo }}
+  #     python: ${{ github.event.inputs.python }}
 
-  test_simple_repository_rest:
-    name: REST tests simple repository
-    needs:
-      - create_oarepo_package
-    uses: ./.github/workflows/07-simple-repository-rest.yaml
-    secrets: inherit
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
+  # test_simple_repository_ui:
+  #   name: UI tests simple repository
+  #   needs:
+  #     - create_oarepo_package
+  #   uses: ./.github/workflows/08-simple-repository-ui.yaml
+  #   secrets: inherit
+  #   with:
+  #     oarepo: ${{ github.event.inputs.oarepo }}
+  #     python: ${{ github.event.inputs.python }}
 
-  test_simple_repository_ui:
-    name: UI tests simple repository
-    needs:
-      - create_oarepo_package
-    uses: ./.github/workflows/08-simple-repository-ui.yaml
-    secrets: inherit
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
-
-  upload_oarepo_package:
-    if: needs.create_oarepo_package.outputs.version_changed == 'true'
-    name: Upload oarepo
-    needs:
-      - test_simple_repository_pytest
-      - test_simple_repository_rest
-      - test_simple_repository_ui
-      # - test_rdm
-      - create_oarepo_package
-    uses: ./.github/workflows/09-commit-push-oarepo.yaml
-    secrets: inherit
-    with:
-      oarepo: ${{ github.event.inputs.oarepo }}
-      python: ${{ github.event.inputs.python }}
-      oarepo_tag: ${{ needs.create_oarepo_package.outputs.oarepo_tag }}
+  # upload_oarepo_package:
+  #   if: needs.create_oarepo_package.outputs.version_changed == 'true'
+  #   name: Upload oarepo
+  #   needs:
+  #     - test_simple_repository_pytest
+  #     - test_simple_repository_rest
+  #     - test_simple_repository_ui
+  #     # - test_rdm
+  #     - create_oarepo_package
+  #   uses: ./.github/workflows/09-commit-push-oarepo.yaml
+  #   secrets: inherit
+  #   with:
+  #     oarepo: ${{ github.event.inputs.oarepo }}
+  #     python: ${{ github.event.inputs.python }}
+  #     oarepo_tag: ${{ needs.create_oarepo_package.outputs.oarepo_tag }}
