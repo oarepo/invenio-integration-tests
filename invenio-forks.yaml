@@ -1,12 +1,12 @@
+invenio-version: 14.0.0b5.dev3
+
 packages:
   - name: invenio-administration
-    oarepo: 14
     features:
       - name: multiple-ui-changes-from-3.1.2
         base: v3.1.2
 
   - name: invenio-app-rdm
-    oarepo: 14
     entrypoints:
       - remove: "*"
         keep:
@@ -94,16 +94,8 @@ packages:
     features:
       - name: removed-webpack-aliases
         base: v12.0.12
-      - name: fix-checksum-tests
-        base: v13.0.1
-        invenio-version: ">=13.0.1,<13.0.2"
-
-  - name: invenio-banners
-    oarepo: 14
-    features: []
 
   - name: invenio-rdm-records
-    oarepo: 14
     features:
       - name: configurable-service-resource
         base: v19.5.4
@@ -111,15 +103,10 @@ packages:
         base: v19.5.4
       - name: pids-component-permission-check-args
         base: v19.5.4
-      - name: fix-idutils-tests
-        base: v23.0.0
       - name: review-service-components
         base: v22.7.3
       - name: review-before-doi-assign
         base: v22.7.3
-    depends:
-      - "on": invenio-records-resources
-      - "on": invenio-drafts-resources
     entrypoints:
       - remove: "*"
         keep:
@@ -143,9 +130,6 @@ packages:
             name: record_deletion
           - group: invenio_requests.types
             name: file_modification
-    dependencies:
-      - extra: tests
-        remove: "*"
     tests:
       - testopts: "--deselect tests/services/test_service_review.py::test_delete_draft_unsubmitted"
         invenio-version: ">=20.0.1,<=20.0.1"
@@ -153,24 +137,16 @@ packages:
         invenio-version: ">=20.0.1,<=20.0.1"
 
   - name: invenio-communities
-    oarepo: 14
     features:
       - name: disable-communities-ui-from-21.0.0
         base: v21.0.0
         invenio-version: ">=21.0.0"
-      - name: disable-communities-ui-from-19.1.0
-        base: v19.1.0
-        invenio-version: ">=19.1.0,<21.0.0"
       - name: enable-email-invitations-from-19.1.0
         base: v19.1.0
       - name: administration-in-tests-from-19.1.0
         base: v19.1.0
-      - name: patch-last-reply-from-requests
-        base: v20.0.0
-        invenio-version: ">=20.0.0,<21.0.0"
 
   - name: invenio-drafts-resources
-    oarepo: 14
     depends:
       - "on": invenio-records-resources
     features:
@@ -180,7 +156,6 @@ packages:
         base: v7.3.0
 
   - name: invenio-records-resources
-    oarepo: 14
     features:
       - name: kwargs-from-8.6.0
         base: v8.6.0
@@ -188,54 +163,28 @@ packages:
         base: v8.8.0
 
   - name: invenio-requests
-    oarepo: 14
     features:
-      - name: kwargs-from-10.5.0
-        base: v10.5.0
-        invenio-version: ">=10.5.0"
-      - name: kwargs-from-8.1.0
-        base: v8.1.0
-        invenio-version: ">=8.1.0,<10.5.0"
-        # this is the commit that the patch was made on top of
-        # we can not use the base tag because there are incompatible changes later
-        # and it is not tagged there. So simulating that the base is 8.1.0 so that
-        # version matches but using the commit for the actual cherry-pick
-        base_commit: 14cbb9b83897d97c11e1dcdbb88ed93f77157fb8
+      - name: kwargs-from-12.2.1
+        base: v12.2.1
       - name: refresh-and-configs
         base: v10.0.1
-        invenio-version: ">=10.0.1"
-
-  - name: invenio-s3
-    oarepo: 14
-    features: []
-
-  - name: invenio-oauthclient
-    oarepo: 14
-    features:
-      - name: refresh-token-from-5.1.0
-        base: v5.1.0
-        invenio-version: "<6.1.0"
 
   - name: invenio-jsonschemas
-    oarepo: 14
     features:
       - name: importlib-files
         base: v2.0.0
 
   - name: invenio-search
-    oarepo: 14
     features:
       - name: importlib
         base: v3.1.0
 
   - name: citeproc-py-styles
-    oarepo: 14
     features:
       - name: czech-iso-citation-from-0.1.5
         base: v0.1.5
 
   - name: invenio-vocabularies
-    oarepo: 14
     features:
       - name: configurable-service-resource-from-9.0.0
         base: v9.0.0
@@ -245,37 +194,12 @@ packages:
         base: v9.1.2
 
   - name: invenio-oaiserver
-    oarepo: 14
     features:
       - name: enable-multiple-record-types-from-3.6.0
         base: v3.6.0
 
-  - name: invenio-collections
-    oarepo: 14
-    features:
-      - name: alembic-dependency-communities
-        base: v1.0.0
-        invenio-version: ">=1.0.0,<2.0.0"
-    tests:
-      # TODO: we should run these tests with oarepo-rdm. Now we do not have a way
-      # to do so without our own patches, so deselecting the test for now.
-      - testopts: "--deselect tests/test_tasks.py::test_update_collections_size"
-        invenio-version: ">=1.0.0,<3.0.0"
-
   - name: invenio-notifications
-    oarepo: 14
     features:
       - name: lazy-strings
         base: v1.2.2
 
-  - name: invenio-jobs
-    oarepo: 14
-    features:
-      - name: cli
-        base: v6.1.0
-      # - name: jobs-ui-optimization
-      #   base: v6.1.0
-
-  - name: invenio-assets
-    oarepo: 14
-    features: []

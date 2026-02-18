@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "invenio-integration-tests"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14.1"
+dependencies = [
+    "click>=8.3.1",
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+invenio-integration-tests = "invenio_integration_tests.main:cli"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["invenio_integration_tests"]

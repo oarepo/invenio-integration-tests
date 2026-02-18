@@ -1,0 +1,53 @@
+name: 'Install Python and UV'
+description: 'Setup Python and install UV package manager'
+inputs:
+  python-version:
+    description: 'Python version to install'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+
+    # set up 3.14 if python-version is not 3.14.x
+    - name: Setup Python
+      uses: actions/setup-python@v6
+      if: ${{ !startsWith(inputs.python-version, '3.14') }}
+      with:
+        python-version: 3.14
+
+    - name: Setup Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Set up uv/uvx
+      uses: astral-sh/setup-uv@v7
+      with:
+        version: latest
+        python-version: ${{ inputs.python-version }}
+        enable-cache: false
+
+    - name: Create tools virtualenv
+      shell: bash
+      run: |
+        echo "::group::Creating tools virtualenv"
+        cd "${{ inputs.testrig-directory }}"
+
+        # create a virtualenv for the tools and install the tools
+        uv venv .tools-venv --python 3.14
+        source .tools-venv/bin/activate
+        uv pip install -e "."
+
+        # create an extra directory that will contain linked tools.
+        # we do not want the virtualenv bin directory to be in PATH because
+        # it might conflict with the other venvs we will be installing later.
+
+        mkdir -p .tools
+        ln -s $PWD/.tools-venv/bin/invenio-integration-tests .tools/invenio-integration-tests
+        ln -s $PWD/.tools-venv/bin/black .tools/black
+
+        echo "Adding .tools to PATH"
+        echo "PATH=$(pwd)/.tools:$PATH" >> $GITHUB_ENV
+
+        echo "::endgroup::"
+        echo "✓ Tools virtualenv created"
