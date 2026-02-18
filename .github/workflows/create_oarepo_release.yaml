@@ -79,3 +79,4 @@ jobs:
       python-version: 3.14.2
       skip-report: true
       patches: ${{ needs.prepare.outputs.patches }}
+      patch-mode: "pinned-rebase"
