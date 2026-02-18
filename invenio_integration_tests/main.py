@@ -43,7 +43,8 @@ def setup(input_config: Path, preprocessed_config: Path):
                 continue
             feature_name = feature.pop("name")
             feature_base = feature.pop("base")
-            feature_str = f"oarepo/{package_name}@{feature_name}[{feature_base}]"
+            feature_org = feature.pop("org", "oarepo")
+            feature_str = f"{feature_org}/{package_name}@{feature_name}[{feature_base}]"
 
             invenio_version = feature.pop("invenio-version", None)
             if invenio_version:
