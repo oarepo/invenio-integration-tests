@@ -82,3 +82,4 @@ jobs:
       skip-report: true
       patches: ${{ needs.prepare.outputs.patches }}
       patch-mode: "pinned-rebase"
+      test-mode: "stop-on-success" # do not run unpatched tests if the patches are ok
