@@ -11,6 +11,7 @@ requires-python = ">=3.14.1"
 dependencies = [
     "click>=8.3.1",
     "pyyaml>=6.0.3",
+    "twine>=6.2.0",
 ]
 
 [project.scripts]
@@ -18,3 +19,8 @@ invenio-integration-tests = "invenio_integration_tests.main:cli"
 
 [tool.hatch.build.targets.wheel]
 only-include = ["invenio_integration_tests"]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.10.0",
+]

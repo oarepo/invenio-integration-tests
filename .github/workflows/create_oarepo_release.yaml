@@ -83,3 +83,31 @@ jobs:
       patches: ${{ needs.prepare.outputs.patches }}
       patch-mode: "pinned-rebase"
       test-mode: "stop-on-success" # do not run unpatched tests if the patches are ok
+
+  upload_patches_to_pypi:
+    needs: run_invenio_testrig
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Prepare python and tools
+        uses: ./.github/actions/action-install-tools
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Download the workdir artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: workdir
+          path: workdir
+
+      - name: Upload original packages to the package registry
+        shell: bash
+        run: |
+          invenio-integration-tests upload-original workdir
+
+      - name: Create and upload patched packages to the package registry
+        shell: bash
+        run: |
+          invenio-integration-tests upload-patched workdir
