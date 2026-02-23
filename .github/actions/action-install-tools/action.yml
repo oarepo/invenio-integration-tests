@@ -36,7 +36,9 @@ runs:
         # create a virtualenv for the tools and install the tools
         uv venv .tools-venv --python 3.14
         source .tools-venv/bin/activate
+        uv pip install git+https://github.com/oarepo/invenio-testrig@master
         uv pip install -e "."
+
 
         # create an extra directory that will contain linked tools.
         # we do not want the virtualenv bin directory to be in PATH because
