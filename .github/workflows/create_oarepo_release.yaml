@@ -53,8 +53,8 @@ jobs:
           echo "Using repository oarepo/inveniordm-reference-repo"
           echo "base_repository=oarepo/inveniordm-reference-repo" >> $GITHUB_OUTPUT
 
-          invenio-integration-tests setup invenio-forks.yaml test.json
-          mapfile -t patches < <(jq -r '.patches[]' test.json)
+          invenio-integration-tests setup invenio-forks.yaml workdir
+          mapfile -t patches < <(jq -r '.patches[]' workdir/integration-tests-config.json)
 
           echo "patches=${patches[*]}" >> $GITHUB_OUTPUT
 
