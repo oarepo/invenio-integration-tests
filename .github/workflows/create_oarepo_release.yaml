@@ -84,7 +84,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Download the workdir artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v7
         with:
           name: workdir
           path: workdir
