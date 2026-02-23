@@ -115,6 +115,9 @@ jobs:
 
       - name: Upload original packages to the package registry
         shell: bash
+        env:
+          TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         run: |
           invenio-integration-tests upload-original workdir
 
@@ -135,6 +138,9 @@ jobs:
 
       - name: Upload distributions to CESNET registry
         shell: bash
+        env:
+          TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         run: |
           invenio-integration-tests upload-distributions workdir
 
