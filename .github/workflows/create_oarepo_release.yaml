@@ -76,7 +76,7 @@ jobs:
       patches: ${{ needs.prepare.outputs.patches }}
       patch-mode: "pinned-rebase"
       test-mode: "stop-on-success" # do not run unpatched tests if the patches are ok
-      skip-tests: true
+      skip-tests: false
 
   upload_patches_to_pypi:
     needs: run_invenio_testrig
@@ -172,15 +172,15 @@ jobs:
         run: |
           invenio-integration-tests update-oarepo workdir
 
-      # - name: Commit and Push generated OARepo pyproject.toml with new requirements
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml to make release ${{ env.OAREPO_TAG }}"
-      #     branch: "rdm-${{ env.OAREPO_VERSION }}"
-      #     file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
-      #     repository: oarepo
-      #     commit_user_name: integration-tests
-      #     commit_user_email: integration-tests@oarepo.org
-      #     tagging_message: ${{ env.OAREPO_TAG }}
-      #     # Optional options appended to `git-push`
-      #     push_options: "--force"
+      - name: Commit and Push generated OARepo pyproject.toml with new requirements
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml to make release ${{ env.OAREPO_TAG }}"
+          branch: "rdm-${{ env.OAREPO_VERSION }}"
+          file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
+          repository: oarepo
+          commit_user_name: integration-tests
+          commit_user_email: integration-tests@oarepo.org
+          tagging_message: ${{ env.OAREPO_TAG }}
+          # Optional options appended to `git-push`
+          push_options: "--force"
