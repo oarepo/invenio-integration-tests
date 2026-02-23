@@ -21,15 +21,9 @@ on:
         description: Python version
         required: true
         default: "3.14.2"
-      dev-release:
-        description: Whether to create a dev release (with .dev suffix)
-        required: true
-        type: boolean
-        default: false
 
 env:
   PYTHON_VERSION: ${{ github.event.inputs.python || '3.14.2' }}
-  DEV_RELEASE: ${{ github.event.inputs.dev-release || false }}
 
 permissions:
   id-token: write
@@ -55,16 +49,9 @@ jobs:
         id: set-repository
         shell: bash
         run: |
-          # repository is zenodo/zenodo-rdm for production build, 
-          # oarepo/inveniordm-reference-repo for testing
-
-          if [ "${{ env.DEV_RELEASE }}" = "true" ]; then
-            echo "DEV_RELEASE is true, using repository oarepo/inveniordm-reference-repo for testing"
-            echo "base_repository=oarepo/inveniordm-reference-repo" >> $GITHUB_OUTPUT
-          else
-            echo "DEV_RELEASE is false, using repository zenodo/zenodo-rdm for production build" 
-            echo "base_repository=zenodo/zenodo-rdm" >> $GITHUB_OUTPUT
-          fi
+          # Use oarepo/inveniordm-reference-repo for testing
+          echo "Using repository oarepo/inveniordm-reference-repo"
+          echo "base_repository=oarepo/inveniordm-reference-repo" >> $GITHUB_OUTPUT
 
           invenio-integration-tests setup invenio-forks.yaml test.json
           mapfile -t patches < <(jq -r '.patches[]' test.json)
@@ -107,7 +94,63 @@ jobs:
         run: |
           invenio-integration-tests upload-original workdir
 
-      - name: Create and upload patched packages to the package registry
+      - name: Update entrypoints in patched packages
         shell: bash
         run: |
-          invenio-integration-tests upload-patched workdir
+          invenio-integration-tests update-entrypoints workdir
+
+      - name: Find distributions for patched packages
+        shell: bash
+        run: |
+          invenio-integration-tests find-distributions workdir
+
+      - name: Build source and wheel distributions
+        shell: bash
+        run: |
+          invenio-integration-tests build-distributions workdir
+
+      - name: Upload distributions to CESNET registry
+        shell: bash
+        run: |
+          invenio-integration-tests upload-distributions workdir
+
+      - name: Create github app token
+        uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ secrets.OAREPO_BUMP_VERSION_CLIENT_ID }}
+          private-key: ${{ secrets.OAREPO_BUMP_VERSION_CLIENT_PASSWORD }}
+
+      - name: Get OARepo version from the testrig configuration
+        id: get-version
+        shell: bash
+        run: |
+          OAREPO_VERSION=$(invenio-integration-tests oarepo-version --major workdir)
+          echo "OAREPO_VERSION=$OAREPO_VERSION" >> $GITHUB_ENV
+          echo "Going to create release for OARepo version $OAREPO_VERSION"
+
+      - name: Checkout oarepo/oarepo under workdir/oarepo
+        uses: actions/checkout@v4
+        with:
+          repository: "oarepo/oarepo"
+          ref: "rdm-${{ env.OAREPO_VERSION }}"
+          token: ${{ steps.app-token.outputs.token }}
+          path: "workdir/oarepo"
+
+      - name: Update oarepo package version and dependencies
+        shell: bash
+        run: |
+          invenio-integration-tests update-oarepo workdir
+
+      # - name: Commit and Push generated OARepo pyproject.toml with new requirements
+      #   uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml to make release ${{ env.OAREPO_TAG }}"
+      #     branch: "rdm-${{ env.OAREPO_VERSION }}"
+      #     file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
+      #     repository: oarepo
+      #     commit_user_name: integration-tests
+      #     commit_user_email: integration-tests@oarepo.org
+      #     tagging_message: ${{ env.OAREPO_TAG }}
+      #     # Optional options appended to `git-push`
+      #     push_options: "--force"

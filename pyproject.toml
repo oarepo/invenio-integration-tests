@@ -10,7 +10,9 @@ readme = "README.md"
 requires-python = ">=3.14.1"
 dependencies = [
     "click>=8.3.1",
+    "configupdater>=3.2",
     "pyyaml>=6.0.3",
+    "tomli-w>=1.2.0",
     "twine>=6.2.0",
 ]
 
@@ -23,4 +25,5 @@ only-include = ["invenio_integration_tests"]
 [dependency-groups]
 dev = [
     "ipython>=9.10.0",
+    "pytest>=9.0.2",
 ]

@@ -60,6 +60,7 @@ class BasePyPIClient(abc.ABC):
                 "--no-deps",
                 "--isolated",
                 "--no-build-isolation",
+                "--ignore-requires-python",
             ]
         )
 
@@ -79,6 +80,7 @@ class BasePyPIClient(abc.ABC):
                 "--no-deps",
                 "--isolated",
                 "--no-build-isolation",
+                "--ignore-requires-python",
             ]
         )
 
@@ -142,6 +144,7 @@ class GitLabPyPIClient(PyPIClient):
                 "--pre",
                 "--disable-pip-version-check",
                 "--json",
+                "--ignore-requires-python",
                 "--index-url",
                 f"{self.base_url}/simple",
             ],

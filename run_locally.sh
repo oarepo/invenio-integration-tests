@@ -18,7 +18,11 @@
 #   2. initialization   Setup integration tests and clone repositories
 #   3. run-tests        Run tests for all packages
 #   4. upload-original  Upload original packages to CESNET registry
-#   5. create-distributions Create source and wheel distributions for all modified packages
+#   5. update-entrypoints Update entrypoints in patched packages
+#   6. find-distributions Find distributions for patched packages
+#   7. build-distributions Build source and wheel distributions for modified packages
+#   8. upload-distributions Upload distributions to CESNET registry
+#   9. update-oarepo    Update oarepo package version and dependencies
 #
 # Examples:
 #   ./run_locally.sh                    # Run all steps
@@ -42,7 +46,7 @@ cd "$(dirname "$0")"
 # Default options
 SKIP_STEPS=()
 START_WITH=""
-
+DEV_RELEASE=f
 # Parse command-line arguments
 while [[ $# -gt 0 ]]; do
   case $1 in
@@ -54,7 +58,7 @@ while [[ $# -gt 0 ]]; do
       START_WITH="$2"
       shift 2
       ;;
-    --help|-h)
+    --dev-release)
       usage
       ;;
     *)
@@ -129,12 +133,49 @@ step_4() {
 }
 
 step_5() {
-  echo "=== Step 5: Create source and wheel distributions for all modified packages ==="
+  echo "=== Step 5: Update entrypoints in patched packages ==="
   
-  # create source and wheel distributions for all modified packages 
-  invenio-integration-tests create-distributions workdir
+  # update entrypoints in patched packages based on configuration
+  invenio-integration-tests update-entrypoints workdir
   
   echo "✓ Step 5 complete"
+}
+
+step_6() {
+  echo "=== Step 6: Find distributions for patched packages ==="
+  
+  # find existing distributions for patched packages and check if they match
+  invenio-integration-tests find-distributions workdir
+  9
+  echo "✓ Step 6 complete"
+}
+
+step_7() {
+  echo "=== Step 7: Build source and wheel distributions for modified packages ==="
+  
+  # create source and wheel distributions for all modified packages 
+  invenio-integration-tests build-distributions workdir
+  
+  echo "✓ Step 7 complete"
+}
+
+step_8() {
+  echo "=== Step 8: Upload distributions to CESNET registry ==="
+  
+  # upload the built distributions to CESNET GitLab PyPI registry
+  invenio-integration-tests upload-distributions workdir
+  
+  echo "✓ Step 8 complete"
+}
+
+step_9() {
+  echo "=== Step 9: Update oarepo package ==="
+  
+  # update the oarepo package version and dependencies
+  # version propagation is now automatic based on app-rdm version
+  invenio-integration-tests update-oarepo workdir
+  
+  echo "✓ Step 9 complete"
 }
 
 # ===========================
@@ -142,7 +183,7 @@ step_5() {
 # ===========================
 
 STEPS=()
-LAST_STEP=5
+LAST_STEP=9
 # generate a sequence of 1 ... LAST_STEP or START_WITH ... LAST_STEP
 if [[ -n "$START_WITH" ]]; then
   for i in $(seq "$START_WITH" "$LAST_STEP"); do

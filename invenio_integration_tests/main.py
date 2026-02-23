@@ -6,15 +6,19 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import tomllib
 from pathlib import Path
 from typing import Any
 
 import click
+import tomli_w
 from invenio_testrig.config import load_config
 from invenio_testrig.utils import extra_data
 from packaging.version import Version
 
+from .entrypoints import apply_entrypoint_patches
 from .pypi import GitLabPyPIClient, PyPIClient
+from .versioning import propagate_version
 
 CESNET_GITLAB_PYPI_URL = os.environ.get(
     "CESNET_GITLAB_PYPI_URL",
@@ -33,10 +37,8 @@ def cli():
 @click.argument(
     "input_config", type=click.Path(path_type=Path, resolve_path=True, exists=True)
 )
-@click.argument(
-    "preprocessed_config", type=click.Path(path_type=Path, resolve_path=True)
-)
-def setup(input_config: Path, preprocessed_config: Path):
+@click.argument("workdir", type=click.Path(path_type=Path, resolve_path=True))
+def setup(input_config: Path, workdir: Path):
     """Preprocess the input configuration and save it to the preprocessed configuration path."""
     import yaml
 
@@ -80,6 +82,7 @@ def setup(input_config: Path, preprocessed_config: Path):
 
     assert not config, f"Unexpected keys in configuration: {config}"
 
+    preprocessed_config = workdir / "integration-tests-config.json"
     with preprocessed_config.open("w") as f:
         json.dump(
             {
@@ -108,21 +111,25 @@ def upload_original(workdir: Path, package: str | None):
     config_path = workdir / "config.json"
     config = load_config(config_path)
 
-    click.secho(f"🔍 Fetching packages from {CESNET_GITLAB_PYPI_URL}...", fg="cyan")
-    packages = set(cesnet_pypi_client.list_packages())
-    click.secho(f"✅ Found {len(packages)} packages:{", ".join(packages)}", fg="green")
+    # click.secho(f"🔍 Fetching packages from {CESNET_GITLAB_PYPI_URL}...", fg="cyan")
+    # packages = set(cesnet_pypi_client.list_packages())
+    # click.secho(f"✅ Found {len(packages)} packages:{", ".join(packages)}", fg="green")
 
-    # add all patched packages to the set of packages to upload, we will check their versions later
-    for pkg_name, pkg_info in config.tested_packages.items():
-        if pkg_info.patches:
-            packages.add(pkg_name)
+    # # add all patched packages to the set of packages to upload, we will check their versions later
+    # for pkg_name, pkg_info in config.tested_packages.items():
+    #     if pkg_info.patches:
+    #         packages.add(pkg_name)
+
+    packages = set()
+    packages.add("oarepo")
 
     packages_to_upload: set[tuple[str, str]] = set()
     for pkg in packages:
         if package and pkg.lower() != package.lower():
             continue
-        click.secho(f"📦 Fetching versions for package {pkg}...", fg="cyan")
+        click.secho(f"📦 Fetching uploaded versions for package {pkg}...", fg="cyan")
         uploaded_packages = cesnet_pypi_client.get_package_versions(pkg)
+        click.secho(f"📦 Fetching versions from PyPI for package {pkg}...", fg="cyan")
         pypi_packages = pypi_client.get_package_versions(pkg)
         packages_to_upload.update(
             (pkg, version) for version in set(pypi_packages) - set(uploaded_packages)
@@ -151,6 +158,38 @@ def upload_original(workdir: Path, package: str | None):
                 cesnet_pypi_client.upload_packages(downloaded_files)
 
 
+@click.command("update-entrypoints")
+@click.argument("workdir", type=click.Path(path_type=Path, resolve_path=True))
+def update_entrypoints(workdir: Path):
+    integration_tests_config_path = workdir / "integration-tests-config.json"
+    integration_tests_config = json.loads(integration_tests_config_path.read_text())
+
+    config_path = workdir / "config.json"
+    config = load_config(config_path)
+
+    entrypoints = integration_tests_config.get("entrypoints", {})
+    for pkg_name, pkg_entrypoints in entrypoints.items():
+        modifications = pkg_entrypoints[0]
+
+        patched_pkg_path = workdir / "cloned_repos" / "patched" / pkg_name
+        if not patched_pkg_path.is_dir():
+            # not implemented
+            raise NotImplementedError(
+                f"Package {pkg_name} not found in patched cloned repositories at {patched_pkg_path}"
+                " and can not apply entrypoints. The implementation needs to be fixed"
+                " to add an empty patch so that the package is patches and available "
+                "for entrypoint patching."
+            )
+
+        apply_entrypoint_patches(
+            patched_pkg_path,
+            modifications.get("remove"),
+            modifications.get("keep"),
+        )
+
+    config.save()
+
+
 @cli.command("find-distributions")
 @click.argument("workdir", type=click.Path(path_type=Path, resolve_path=True))
 def find_distributions(workdir: Path):
@@ -161,6 +200,7 @@ def find_distributions(workdir: Path):
     """
     config_path = workdir / "config.json"
     config = load_config(config_path)
+
     cesnet_pypi_client = GitLabPyPIClient(CESNET_GITLAB_PYPI_URL)
 
     found_distributions: dict[str, Any] = {}
@@ -168,10 +208,14 @@ def find_distributions(workdir: Path):
     for pkg_name, pkg_info in config.tested_packages.items():
         if not pkg_info.patches:
             continue
-        pkg_patch_info = load_patch_info(
-            find_patch_info_file(workdir / "cloned_repos" / "patched" / pkg_name)
-        )
-        patch_info_hash_value = hash_patch_info(pkg_patch_info)
+        patched_dir = workdir / "cloned_repos" / "patched" / pkg_name
+        pkg_patch_info = load_patch_info(find_patch_info_file(patched_dir))
+        extra_patch_data = ""
+        if (patched_dir / "setup.cfg").is_file():
+            extra_patch_data = (patched_dir / "setup.cfg").read_text()
+        elif (patched_dir / "pyproject.toml").is_file():
+            extra_patch_data = (patched_dir / "pyproject.toml").read_text()
+        patch_info_hash_value = hash_patch_info(pkg_patch_info, extra_patch_data)
 
         click.secho(
             f"📦 Looking for distributions for package {pkg_name}...", fg="cyan"
@@ -225,7 +269,12 @@ def find_distributions(workdir: Path):
                 )
                 continue
             pkg_rec["match"] = str(potential_match)
+            pkg_rec["full_version"] = str(potential_match)
             break
+        else:
+            pkg_rec["full_version"] = (
+                f"{version}+oarepo.{len(matching_uploaded_versions) + 1}.{patch_info_hash_value}",
+            )
         found_distributions[pkg_name] = pkg_rec
     extra_data(config)["found_distributions"] = found_distributions
     config.save()
@@ -256,17 +305,13 @@ def build_distributions(workdir: Path):
 
         click.secho(f"📦 Building distributions for {pkg_name}...", fg="cyan")
 
-        # Prepare version string with oarepo suffix
-        hash_value = build_info["hash"]
-        ordinal = build_info["uploaded_count"] + 1
-
         # Copy sources to temporary directory
         with tempfile.TemporaryDirectory() as tmpdir:
             tmp_package_dir = Path(tmpdir) / pkg_name
             shutil.copytree(package_dir, tmp_package_dir)
 
             if not update_version_in_init(
-                tmp_package_dir, pkg_name, ordinal, hash_value
+                tmp_package_dir, pkg_name, build_info["full_version"]
             ):
                 raise ValueError(
                     f"Could not update version in {tmp_package_dir / pkg_name / '__init__.py'}"
@@ -327,9 +372,118 @@ def upload_distributions(workdir: Path):
         cesnet_pypi_client.upload_packages(package_files)
 
 
-def update_version_in_init(
-    package_dir: Path, pkg_name: str, ordinal: int, hash_value: str
-) -> bool:
+@cli.command("oarepo-version")
+@click.option("--major", is_flag=True, help="Print only the major version")
+@click.argument("workdir", type=click.Path(path_type=Path, resolve_path=True))
+def oarepo_version(workdir: Path, major: bool):
+    """Print the major version of invenio-app-rdm that is being tested,
+    which is used to determine the branch of oarepo to use for the patches."""
+    config = load_config(workdir / "config.json")
+    # find version of invenio-app-rdm inside "packages" part and take the major
+    if "invenio-app-rdm" in config.tested_packages:
+        app_rdm_actual_version = config.tested_packages[
+            "invenio-app-rdm"
+        ].reference.actual_version
+        if app_rdm_actual_version is None:
+            raise ValueError("invenio-app-rdm does not have an actual version resolved")
+        app_rdm_version = Version(app_rdm_actual_version)
+    else:
+        app_rdm_version = Version(config.packages["invenio-app-rdm"])
+
+    if major:
+        print(app_rdm_version.major)
+    else:
+        print(str(app_rdm_version))
+
+
+@cli.command("update-oarepo")
+@click.argument("workdir", type=click.Path(path_type=Path, resolve_path=True))
+def update_oarepo(workdir: Path):
+    """Update the version in the __init__.py of the patched packages to include the oarepo suffix, so that they can be uploaded to the CESNET GitLab PyPI registry with the correct version."""
+    config = load_config(workdir / "config.json")
+    # find version of invenio-app-rdm inside "packages" part and take the major
+    if "invenio-app-rdm" in config.tested_packages:
+        app_rdm_actual_version = config.tested_packages[
+            "invenio-app-rdm"
+        ].reference.actual_version
+        if app_rdm_actual_version is None:
+            raise ValueError("invenio-app-rdm does not have an actual version resolved")
+        app_rdm_version = Version(app_rdm_actual_version)
+    else:
+        app_rdm_version = Version(config.packages["invenio-app-rdm"])
+
+    oarepo_branch = f"rdm-{app_rdm_version.major}"
+    # clone the oarepo repository and checkout the branch corresponding
+    # to the major version of invenio-app-rdm
+    oarepo_path = workdir / "oarepo"
+    if not oarepo_path.exists():
+        # clone the repository
+        subprocess.check_call(
+            [
+                "git",
+                "clone",
+                "--branch",
+                oarepo_branch,
+                "https://github.com/oarepo/oarepo.git",
+                str(oarepo_path),
+            ]
+        )
+
+    # parse the pyproject.toml of the cloned repository
+    pyproject_path = oarepo_path / "pyproject.toml"
+    if not pyproject_path.is_file():
+        raise ValueError(
+            f"pyproject.toml not found in cloned repository at {pyproject_path}"
+        )
+
+    with pyproject_path.open("rb") as f:
+        pyproject = tomllib.load(f)
+
+    current_oarepo_version = Version(pyproject["project"]["version"])
+    click.secho(
+        f"Current version in cloned repository is {current_oarepo_version}", fg="cyan"
+    )
+
+    oarepo_version = propagate_version(current_oarepo_version, app_rdm_version)
+
+    click.secho(f"Updating version to {oarepo_version}", fg="cyan")
+
+    pyproject["project"]["version"] = str(oarepo_version)
+
+    # generate the oarepo/version.py file with the new version
+    version_file = oarepo_path / "oarepo" / "version.py"
+    version_file.write_text(
+        f"""
+# This file is generated by invenio-integration-tests, do not edit it manually.
+
+__version__ = "{oarepo_version}"
+""".strip()
+    )
+
+    # add all the dependencies to the requirements section of pyproject.toml
+    dependencies = {**config.packages}
+    for pkg_name, pkg_info in extra_data(config)["found_distributions"].items():
+        dependencies[pkg_name] = pkg_info["full_version"]
+
+    pyproject["project"]["dependencies"] = [
+        f"{pkg_name}=={version}" for pkg_name, version in dependencies.items()
+    ]
+
+    # write the updated pyproject.toml back to the file
+    with pyproject_path.open("wb") as f:
+        tomli_w.dump(pyproject, f)
+
+    # add the two files to git, commit and push
+    subprocess.check_call(
+        ["git", "add", str(pyproject_path), str(version_file)], cwd=oarepo_path
+    )
+    subprocess.check_call(
+        ["git", "commit", "-m", f"Update version to {oarepo_version}"], cwd=oarepo_path
+    )
+    subprocess.check_call(["git", "push"], cwd=oarepo_path)
+
+
+def update_version_in_init(package_dir: Path, pkg_name: str, full_version: str) -> bool:
     """Update the __version__ variable in a package's __init__.py file."""
     pkg_file_part = pkg_name.replace("-", "_")
     init_file = package_dir / pkg_file_part / "__init__.py"
@@ -337,62 +491,10 @@ def update_version_in_init(
     for idx, l in enumerate(content):
         if l.startswith("__version__"):
             # parse the actual version from the line
-            version_str = l.split("=", 1)[1].strip().strip('"').strip("'")
-            # add the local part
-            version_str += f"+oarepo.{ordinal}.{hash_value}"
-            print(version_str)
-            content[idx] = f'__version__ = "{version_str}"'
+            content[idx] = f'__version__ = "{full_version}"'
             init_file.write_text("\n".join(content))
             return True
     return False
-
-
-def check_uploaded_version_matches(
-    pkg_name: str,
-    potential_match: Version,
-    version: str,
-    patch_info_hash_value: str,
-    cesnet_pypi_client: GitLabPyPIClient,
-) -> bool:
-    """Check if an uploaded version matches the expected patch info. To do it,
-    expects that the uploaded version has the following format:
-    +oarepo.<ordinal>.<hash_of_patch_info>
-    """
-    click.secho(
-        f"🔍 Checking uploaded version {potential_match} against expected version {version}...",
-        fg="yellow",
-    )
-    local_value = potential_match.local
-    if not local_value or not local_value.startswith("oarepo."):
-        return False
-
-    #
-
-    with tempfile.TemporaryDirectory() as tmpdir:
-        cesnet_pypi_client.download_package(
-            pkg_name, str(potential_match), Path(tmpdir)
-        )
-        downloaded_files = list(Path(tmpdir).glob("*"))
-        if not downloaded_files:
-            click.secho(
-                f"⚠️  No files downloaded for {pkg_name}=={potential_match}, skipping...",
-                fg="red",
-            )
-            return False
-        # we expect only one file, but we will take the first one just in case
-        distribution_file = downloaded_files[0]
-        unpack_distribution_file(distribution_file, Path(tmpdir))
-        potential_match_patch_info_path = find_patch_info_file(Path(tmpdir))
-        if not potential_match_patch_info_path:
-            click.secho(
-                f"⚠️  No patch_info.py found in the distribution for {pkg_name}=={potential_match}, skipping...",
-                fg="red",
-            )
-            return False
-        potential_match_patch_info = load_patch_info(potential_match_patch_info_path)
-        if patch_info_equal(pkg_patch_info, potential_match_patch_info):
-            return True
-        return False
 
 
 def find_patch_info_file(search_path: Path) -> Path:
@@ -416,7 +518,7 @@ def load_patch_info(patch_info_path: Path):
     return json.loads(result.stdout)
 
 
-def hash_patch_info(info) -> str:
+def hash_patch_info(info, extra_data="") -> str:
     """Returns an sha256 hash of a normalized patch info."""
 
     def normalize(info):
@@ -429,7 +531,7 @@ def hash_patch_info(info) -> str:
             return {k: normalize(v) for k, v in info.items()}
         return str(info) if info is not None else None
 
-    dump = EPOQUE_TAG + json.dumps(normalize(info), sort_keys=True)
+    dump = EPOQUE_TAG + json.dumps(normalize(info), sort_keys=True) + extra_data
     digest = hashlib.sha256(dump.encode()).digest()
     # convert the digest to [a-z0-9] alphabet and take the first 16 characters
     # to get a short but still reasonably unique identifier
