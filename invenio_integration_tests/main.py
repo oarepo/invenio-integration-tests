@@ -477,15 +477,6 @@ __version__ = "{oarepo_version}"
     with pyproject_path.open("wb") as f:
         tomli_w.dump(pyproject, f)
 
-    # add the two files to git, commit and push
-    subprocess.check_call(
-        ["git", "add", str(pyproject_path), str(version_file)], cwd=oarepo_path
-    )
-    subprocess.check_call(
-        ["git", "commit", "-m", f"Update version to {oarepo_version}"], cwd=oarepo_path
-    )
-    subprocess.check_call(["git", "push"], cwd=oarepo_path)
-
 
 def update_version_in_init(package_dir: Path, pkg_name: str, full_version: str) -> bool:
     """Update the __version__ variable in a package's __init__.py file."""
