@@ -42,6 +42,8 @@ def setup(input_config: Path, workdir: Path):
     """Preprocess the input configuration and save it to the preprocessed configuration path."""
     import yaml
 
+    workdir.mkdir(exist_ok=True)
+
     with input_config.open() as f:
         config = yaml.safe_load(f)
 
