@@ -275,7 +275,7 @@ def find_distributions(workdir: Path):
             break
         else:
             pkg_rec["full_version"] = (
-                f"{version}+oarepo.{len(matching_uploaded_versions) + 1}.{patch_info_hash_value}",
+                f"{version}+oarepo.{len(matching_uploaded_versions) + 1}.{patch_info_hash_value}"
             )
         found_distributions[pkg_name] = pkg_rec
     print("📊 Found distributions:", json.dumps(found_distributions, indent=2))
