@@ -106,7 +106,11 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           name: integration-tests-config
-          path: workdir/integration-tests-config.json
+
+      - name: Move the downloaded integration-tests-config artifact to the workdir
+        shell: bash
+        run: |
+          mv integration-tests-config/integration-tests-config.json workdir/integration-tests-config.json
 
       - name: Upload original packages to the package registry
         shell: bash
