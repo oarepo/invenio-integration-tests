@@ -319,6 +319,7 @@ def build_distributions(workdir: Path):
                 raise ValueError(
                     f"Could not update version in {tmp_package_dir / pkg_name / '__init__.py'}"
                 )
+            update_version_in_setup_cfg(tmp_package_dir, build_info["full_version"])
             (workdir / "dist" / pkg_name).mkdir(exist_ok=True)
             subprocess.check_call(
                 [
@@ -498,6 +499,18 @@ def update_version_in_init(package_dir: Path, pkg_name: str, full_version: str) 
             init_file.write_text("\n".join(content))
             return True
     return False
+
+
+def update_version_in_setup_cfg(tmp_package_dir, full_version):
+    setup_cfg = tmp_package_dir / "setup.cfg"
+    if not setup_cfg.is_file():
+        return
+    content = setup_cfg.read_text().splitlines()
+    for idx, l in enumerate(content):
+        if l.startswith("version ="):
+            content[idx] = f"version ={full_version}"
+            setup_cfg.write_text("\n".join(content))
+            return
 
 
 def find_patch_info_file(search_path: Path) -> Path:
