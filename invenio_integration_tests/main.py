@@ -160,7 +160,7 @@ def upload_original(workdir: Path, package: str | None):
                 cesnet_pypi_client.upload_packages(downloaded_files)
 
 
-@click.command("update-entrypoints")
+@cli.command("update-entrypoints")
 @click.argument("workdir", type=click.Path(path_type=Path, resolve_path=True))
 def update_entrypoints(workdir: Path):
     integration_tests_config_path = workdir / "integration-tests-config.json"
