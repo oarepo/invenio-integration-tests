@@ -110,6 +110,8 @@ jobs:
       - name: Move the downloaded integration-tests-config artifact to the workdir
         shell: bash
         run: |
+          ls -la
+          ls -la integration-tests-config
           mv integration-tests-config/integration-tests-config.json workdir/integration-tests-config.json
 
       - name: Upload original packages to the package registry
