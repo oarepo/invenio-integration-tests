@@ -510,7 +510,13 @@ def update_version_in_setup_cfg(tmp_package_dir, full_version):
         if l.startswith("version ="):
             content[idx] = f"version ={full_version}"
             setup_cfg.write_text("\n".join(content))
+            click.secho(f"Updated version in {setup_cfg} to {full_version}", fg="green")
+            click.secho("Updated file: \n" + str(setup_cfg.read_text()), fg="cyan")
             return
+    click.secho(
+        f"⚠️  Could not find version in setup.cfg at {setup_cfg}, skipping update of setup.cfg",
+        fg="yellow",
+    )
 
 
 def find_patch_info_file(search_path: Path) -> Path:
