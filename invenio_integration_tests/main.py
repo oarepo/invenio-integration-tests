@@ -319,7 +319,7 @@ def build_distributions(workdir: Path):
                 raise ValueError(
                     f"Could not update version in {tmp_package_dir / pkg_name / '__init__.py'}"
                 )
-            update_version_in_setup_cfg(tmp_package_dir, build_info["full_version"])
+            # update_version_in_setup_cfg(tmp_package_dir, build_info["full_version"])
             (workdir / "dist" / pkg_name).mkdir(exist_ok=True)
             subprocess.check_call(
                 [
