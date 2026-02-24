@@ -477,6 +477,10 @@ __version__ = "{oarepo_version}"
     with pyproject_path.open("wb") as f:
         tomli_w.dump(pyproject, f)
 
+    # save an oarepo_version.txt to workdir for easy parsing
+    oarepo_version_file = workdir / "oarepo_version.txt"
+    oarepo_version_file.write_text(str(oarepo_version))
+
 
 def update_version_in_init(package_dir: Path, pkg_name: str, full_version: str) -> bool:
     """Update the __version__ variable in a package's __init__.py file."""
