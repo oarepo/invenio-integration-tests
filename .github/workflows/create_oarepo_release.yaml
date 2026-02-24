@@ -173,15 +173,10 @@ jobs:
         run: |
           invenio-integration-tests update-oarepo workdir
 
-      - name: Commit and Push generated OARepo pyproject.toml with new requirements
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml to make release ${{ env.OAREPO_TAG }}"
-          branch: "rdm-${{ env.OAREPO_VERSION }}"
-          file_pattern: pyproject.toml oarepo/version.py
-          repository: workdir/oarepo
-          commit_user_name: integration-tests
-          commit_user_email: integration-tests@oarepo.org
-          tagging_message: ${{ env.OAREPO_TAG }}
-          # Optional options appended to `git-push`
-          push_options: "--force"
+      - name: Commit and push to oarepo/oarepo
+        shell: bash
+        run: |
+          cd workdir/oarepo
+          git add pyproject.toml oarepo/version.py
+          git commit -m "Update version to ${{ env.OAREPO_VERSION }}"
+          git push --force
