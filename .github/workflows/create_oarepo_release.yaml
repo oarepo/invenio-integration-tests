@@ -150,6 +150,8 @@ jobs:
         with:
           app-id: ${{ secrets.OAREPO_BUMP_VERSION_CLIENT_ID }}
           private-key: ${{ secrets.OAREPO_BUMP_VERSION_CLIENT_PASSWORD }}
+          owner: oarepo
+          repositories: oarepo
 
       - name: Get OARepo version from the testrig configuration
         id: get-version
