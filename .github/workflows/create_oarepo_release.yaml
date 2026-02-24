@@ -24,6 +24,8 @@ on:
 
 env:
   PYTHON_VERSION: ${{ github.event.inputs.python || '3.14.2' }}
+  REFERENCE_REPO: "oarepo/inveniordm-reference-repo"
+  IGNORED_DEPENDENCIES: latest-build,latest-build-instance
 
 permissions:
   id-token: write
@@ -50,8 +52,8 @@ jobs:
         shell: bash
         run: |
           # Use oarepo/inveniordm-reference-repo for testing
-          echo "Using repository oarepo/inveniordm-reference-repo"
-          echo "base_repository=oarepo/inveniordm-reference-repo" >> $GITHUB_OUTPUT
+          echo "Using repository ${REFERENCE_REPO} for the testrig"
+          echo "base_repository=${REFERENCE_REPO}" >> $GITHUB_OUTPUT
 
           invenio-integration-tests setup invenio-forks.yaml workdir
           mapfile -t patches < <(jq -r '.patches[]' workdir/integration-tests-config.json)
@@ -175,7 +177,7 @@ jobs:
       - name: Update oarepo package version and dependencies
         shell: bash
         run: |
-          invenio-integration-tests update-oarepo workdir
+          invenio-integration-tests update-oarepo workdir --ignored-dependencies "${IGNORED_DEPENDENCIES}"
           echo "OAREPO_TAG=$(cat workdir/oarepo_version.txt)" >> $GITHUB_ENV
 
       - name: Commit and Push generated OARepo pyproject.toml with new requirements

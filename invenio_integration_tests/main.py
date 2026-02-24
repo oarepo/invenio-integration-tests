@@ -402,7 +402,11 @@ def oarepo_version(workdir: Path, major: bool):
 
 @cli.command("update-oarepo")
 @click.argument("workdir", type=click.Path(path_type=Path, resolve_path=True))
-def update_oarepo(workdir: Path):
+@click.option(
+    "--ignored-dependencies",
+    help="Comma-separated list of dependencies to ignore when updating the version in pyproject.toml",
+)
+def update_oarepo(workdir: Path, ignored_dependencies: str | None):
     """Update the version in the __init__.py of the patched packages to include the oarepo suffix, so that they can be uploaded to the CESNET GitLab PyPI registry with the correct version."""
     config = load_config(workdir / "config.json")
     # find version of invenio-app-rdm inside "packages" part and take the major
@@ -468,6 +472,10 @@ __version__ = "{oarepo_version}"
     dependencies = {**config.packages}
     for pkg_name, pkg_info in extra_data(config)["found_distributions"].items():
         dependencies[pkg_name] = pkg_info["full_version"]
+
+    if ignored_dependencies:
+        for dep in ignored_dependencies.split(","):
+            dependencies.pop(dep, None)
 
     pyproject["project"]["dependencies"] = [
         f"{pkg_name}=={version}" for pkg_name, version in dependencies.items()
