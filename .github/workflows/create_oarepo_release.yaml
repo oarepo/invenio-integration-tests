@@ -177,8 +177,8 @@ jobs:
         with:
           commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml to make release ${{ env.OAREPO_TAG }}"
           branch: "rdm-${{ env.OAREPO_VERSION }}"
-          file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
-          repository: oarepo
+          file_pattern: pyproject.toml oarepo/version.py
+          repository: workdir/oarepo
           commit_user_name: integration-tests
           commit_user_email: integration-tests@oarepo.org
           tagging_message: ${{ env.OAREPO_TAG }}
