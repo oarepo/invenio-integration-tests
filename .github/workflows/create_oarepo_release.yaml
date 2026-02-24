@@ -158,8 +158,10 @@ jobs:
         shell: bash
         run: |
           OAREPO_VERSION=$(invenio-integration-tests oarepo-version --major workdir)
+          RDM_VERSION=$(invenio-integration-tests oarepo-version workdir)
           echo "OAREPO_VERSION=$OAREPO_VERSION" >> $GITHUB_ENV
-          echo "Going to create release for OARepo version $OAREPO_VERSION"
+          echo "RDM_VERSION=$RDM_VERSION" >> $GITHUB_ENV
+          echo "Going to create release for OARepo version $OAREPO_VERSION and $RDM_VERSION"
 
       - name: Checkout oarepo/oarepo under workdir/oarepo
         uses: actions/checkout@v6
@@ -175,10 +177,15 @@ jobs:
         run: |
           invenio-integration-tests update-oarepo workdir
 
-      - name: Commit and push to oarepo/oarepo
-        shell: bash
-        run: |
-          cd workdir/oarepo
-          git add pyproject.toml oarepo/version.py
-          git commit -m "Update version to ${{ env.OAREPO_VERSION }}"
-          git push --force
+      - name: Commit and Push generated OARepo pyproject.toml with new requirements
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[invenio-integration-tests] update requirements inside pyproject.toml to make release ${{ env.OAREPO_TAG }}"
+          branch: "rdm-${{ env.OAREPO_VERSION }}"
+          file_pattern: pyproject.toml oarepo/version.py oarepo/react-dependencies.json
+          repository: workdir/oarepo
+          commit_user_name: integration-tests
+          commit_user_email: integration-tests@oarepo.org
+          tagging_message: ${{ env.RDM_VERSION }}
+          # Optional options appended to `git-push`
+          push_options: "--force"
