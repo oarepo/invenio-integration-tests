@@ -60,7 +60,7 @@ jobs:
           echo "patches=${patches[*]}" >> $GITHUB_OUTPUT
 
       - name: Store the integration-tests-config.json as an artifact for the next jobs
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: integration-tests-config
           path: workdir/integration-tests-config.json
