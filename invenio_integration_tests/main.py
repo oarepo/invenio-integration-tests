@@ -12,7 +12,7 @@ from typing import Any
 
 import click
 import tomli_w
-from invenio_testrig.config import load_config
+from invenio_testrig.config import Config
 from invenio_testrig.utils import extra_data
 from packaging.version import Version
 
@@ -111,7 +111,7 @@ def upload_original(workdir: Path, package: str | None):
     pypi_client = PyPIClient("https://pypi.org/")
 
     config_path = workdir / "config.json"
-    config = load_config(config_path)
+    config = Config.load(config_path)
 
     # click.secho(f"🔍 Fetching packages from {CESNET_GITLAB_PYPI_URL}...", fg="cyan")
     # packages = set(cesnet_pypi_client.list_packages())
@@ -138,7 +138,7 @@ def upload_original(workdir: Path, package: str | None):
         )
 
     click.secho(
-        f"📤 {len(packages_to_upload)} packages to upload:\n{"\n".join(f"{pkg}=={version}" for pkg, version in packages_to_upload)}",
+        f"📤 {len(packages_to_upload)} packages to upload:\n{'\n'.join(f'{pkg}=={version}' for pkg, version in packages_to_upload)}",
         fg="yellow",
     )
 
