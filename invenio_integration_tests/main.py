@@ -26,7 +26,7 @@ CESNET_GITLAB_PYPI_URL = os.environ.get(
 )
 EPOQUE_TAG = "v1:"
 
-pkg_exemptions = {"citeproc-py-styles": "citeproc-py"}
+pkg_exemptions = {"citeproc-py-styles": "citeproc-styles"}
 
 
 @click.group()
