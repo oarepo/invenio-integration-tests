@@ -26,6 +26,8 @@ CESNET_GITLAB_PYPI_URL = os.environ.get(
 )
 EPOQUE_TAG = "v1:"
 
+pkg_exemptions = {"citeproc-py-styles": "citeproc-py"}
+
 
 @click.group()
 def cli():
@@ -277,6 +279,7 @@ def find_distributions(workdir: Path):
             pkg_rec["full_version"] = (
                 f"{version}+oarepo.{len(matching_uploaded_versions) + 1}.{patch_info_hash_value}"
             )
+
         found_distributions[pkg_name] = pkg_rec
     print("📊 Found distributions:", json.dumps(found_distributions, indent=2))
     extra_data(config)["found_distributions"] = found_distributions
@@ -308,13 +311,15 @@ def build_distributions(workdir: Path):
 
         click.secho(f"📦 Building distributions for {pkg_name}...", fg="cyan")
 
+        real_pkg_name = pkg_exemptions.get(pkg_name, pkg_name)
+
         # Copy sources to temporary directory
         with tempfile.TemporaryDirectory() as tmpdir:
             tmp_package_dir = Path(tmpdir) / pkg_name
             shutil.copytree(package_dir, tmp_package_dir)
 
             if not update_version_in_init(
-                tmp_package_dir, pkg_name, build_info["full_version"]
+                tmp_package_dir, real_pkg_name, build_info["full_version"]
             ):
                 raise ValueError(
                     f"Could not update version in {tmp_package_dir / pkg_name / '__init__.py'}"
@@ -493,13 +498,25 @@ __version__ = "{oarepo_version}"
 def update_version_in_init(package_dir: Path, pkg_name: str, full_version: str) -> bool:
     """Update the __version__ variable in a package's __init__.py file."""
     pkg_file_part = pkg_name.replace("-", "_")
+    version_file = package_dir / pkg_file_part / "version.py"
     init_file = package_dir / pkg_file_part / "__init__.py"
-    content = init_file.read_text().splitlines()
+    if version_file.exists():
+        return replace_version_in_file(version_file, full_version)
+    elif init_file.exists():
+        return replace_version_in_file(init_file, full_version)
+    else:
+        raise ValueError(
+            f"Can not replace version neither in {version_file} nor {init_file}"
+        )
+
+
+def replace_version_in_file(f: Path, full_version: str) -> bool:
+    content = f.read_text().splitlines()
     for idx, l in enumerate(content):
         if l.startswith("__version__"):
             # parse the actual version from the line
             content[idx] = f'__version__ = "{full_version}"'
-            init_file.write_text("\n".join(content))
+            f.write_text("\n".join(content))
             return True
     return False
 
