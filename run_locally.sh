@@ -72,22 +72,22 @@ done
 # Function: Step 1 - Setup virtual environment
 step_1() {
   echo "=== Step 1: Setup virtual environment ==="
-  
+
   if [ -d .venv ]; then
     rm -rf .venv
   fi
-  
+
   uv venv --python=3.14
   source .venv/bin/activate
   uv pip install -e .
-  
+
   echo "✓ Step 1 complete"
 }
 
 # Function: Step 2 - Initialization
 step_2() {
   echo "=== Step 2: Initialization ==="
-  
+
   if [ -d workdir ]; then
     rm -rf workdir
   fi
@@ -103,47 +103,47 @@ step_2() {
 
   # initialize the workdir and clone all repositories
   invenio-testrig setup --verbose  --repository oarepo/inveniordm-reference-repo \
-    --patch-mode pinned-rebase  --test-mode stop-on-success --debug \
+    --patch-mode pinned  --test-mode stop-on-success --debug \
     "${patches[@]}"
-  
+
   echo "✓ Step 2 complete"
 }
 
 # Function: Step 3 - Run tests
 step_3() {
   echo "=== Step 3: Run tests ==="
-  
+
   # run tests for all the packages. It will take significant time to run all the tests!
   invenio-testrig test --all
-  
+
   echo "✓ Step 3 complete"
 }
 
 # Function: Step 4 - Upload original packages
 step_4() {
   echo "=== Step 4: Upload original packages to CESNET registry ==="
-  
+
   # upload original packages to the CESNET package registry (pip needs a single source
   # of truth for the package registry, so if we patch/have patched a package, all the other
-  # versions of the package also need to be uploaded to the CESNET registry, 
+  # versions of the package also need to be uploaded to the CESNET registry,
   # otherwise pip will not be able to find them)
   invenio-integration-tests upload-original workdir
-  
+
   echo "✓ Step 4 complete"
 }
 
 step_5() {
   echo "=== Step 5: Update entrypoints in patched packages ==="
-  
+
   # update entrypoints in patched packages based on configuration
   invenio-integration-tests update-entrypoints workdir
-  
+
   echo "✓ Step 5 complete"
 }
 
 step_6() {
   echo "=== Step 6: Find distributions for patched packages ==="
-  
+
   # find existing distributions for patched packages and check if they match
   invenio-integration-tests find-distributions workdir
   9
@@ -152,29 +152,29 @@ step_6() {
 
 step_7() {
   echo "=== Step 7: Build source and wheel distributions for modified packages ==="
-  
-  # create source and wheel distributions for all modified packages 
+
+  # create source and wheel distributions for all modified packages
   invenio-integration-tests build-distributions workdir
-  
+
   echo "✓ Step 7 complete"
 }
 
 step_8() {
   echo "=== Step 8: Upload distributions to CESNET registry ==="
-  
+
   # upload the built distributions to CESNET GitLab PyPI registry
   invenio-integration-tests upload-distributions workdir
-  
+
   echo "✓ Step 8 complete"
 }
 
 step_9() {
   echo "=== Step 9: Update oarepo package ==="
-  
+
   # update the oarepo package version and dependencies
   # version propagation is now automatic based on app-rdm version
   invenio-integration-tests update-oarepo workdir
-  
+
   echo "✓ Step 9 complete"
 }
 
@@ -209,6 +209,3 @@ done
 
 echo ""
 echo "=== All steps completed successfully ==="
-
-
-
