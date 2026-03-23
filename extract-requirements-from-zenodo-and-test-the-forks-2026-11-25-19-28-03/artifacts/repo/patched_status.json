@@ -1,0 +1,36 @@
+{
+  "dependencies": [],
+  "package": {
+    "github_entry": {
+      "_extra": {},
+      "default_branch": null,
+      "exclude": [],
+      "extras": [],
+      "freeze": [],
+      "include": [],
+      "install": [],
+      "org": "oarepo",
+      "package_map": {},
+      "slow_packages": {},
+      "test": []
+    },
+    "patched_reference": null,
+    "patches": [],
+    "reference": {
+      "actual_version": null,
+      "base": null,
+      "branch": "master",
+      "commit": "23ef074bf1d614492c1b9cff2a345930c85a2cf3",
+      "commits_from_version": [
+        "23ef074bf1d614492c1b9cff2a345930c85a2cf3"
+      ],
+      "org": "oarepo",
+      "package": "inveniordm-reference-repo",
+      "pr": null,
+      "pr_info": null,
+      "repo": "inveniordm-reference-repo"
+    },
+    "unpatched_reference": null
+  },
+  "status": "skipped"
+}

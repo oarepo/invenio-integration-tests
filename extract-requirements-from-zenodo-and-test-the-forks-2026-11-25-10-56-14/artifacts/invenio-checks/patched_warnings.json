@@ -1,0 +1,5 @@
+{
+  "RemovedInMarshmallow4Warning: The 'missing' argument to fields is deprecated. Use 'load_default' instead.": 1,
+  "UserWarning: Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervm0hi8g:": 1,
+  "DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.": 1
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "1a5d3cc1",
+    "message": "release: v37.0.3"
+  },
+  {
+    "hash": "c74b71ab",
+    "message": "chore(deps): remove pytz"
+  },
+  {
+    "hash": "c291e44f",
+    "message": "chore: replace pytz.utc usage by datetime.timezone.utc"
+  },
+  {
+    "hash": "b3b37873",
+    "message": "release: v37.0.2"
+  },
+  {
+    "hash": "69010522",
+    "message": "fix: enforce per-user quota cap on increase"
+  },
+  {
+    "hash": "71b264bd",
+    "message": "feat(deposit-ui): pass icon to deserialized errors"
+  },
+  {
+    "hash": "80f98473",
+    "message": "release: v37.0.1"
+  },
+  {
+    "hash": "7b915859",
+    "message": "fix(languages): update title for lang `uig`"
+  },
+  {
+    "hash": "0db746b3",
+    "message": "fix: flatten transparent pdf page on white to prevent black JPEG output"
+  },
+  {
+    "hash": "ce9de244",
+    "message": "docs: remove docs directory and switch to md formatting"
+  },
+  {
+    "hash": "a99a37c1",
+    "message": "release: v37.0.0"
+  },
+  {
+    "hash": "871b985c",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "f4f327fa",
+    "message": "feat: upgrade to react 18"
+  },
+  {
+    "hash": "2c2fdaae",
+    "message": "feat(deposit-ui): allow overriding file items"
+  },
+  {
+    "hash": "cae7f3c7",
+    "message": "chore(deps): remove redundant unused nameparser"
+  },
+  {
+    "hash": "72b3541a",
+    "message": "fix(crossref): report invalid DOIs on pids.doi"
+  },
+  {
+    "hash": "3698d322",
+    "message": "fix: default Crossref deposits to the test system"
+  },
+  {
+    "hash": "e5745605",
+    "message": "fix: let CROSSREF_TEST_MODE choose the deposit endpoint"
+  },
+  {
+    "hash": "6582bf5e",
+    "message": "fix: deposit a record's files with its Crossref metadata"
+  },
+  {
+    "hash": "ca454c7c",
+    "message": "fix: call super.validate in CrossrefPIDProvider.validate method"
+  },
+  {
+    "hash": "f14226bc",
+    "message": "fix(serializers): get correctly translated rights"
+  },
+  {
+    "hash": "54f6d185",
+    "message": "release: v36.0.0"
+  },
+  {
+    "hash": "ebb46473",
+    "message": "fix(iiif): reduce memory consumption for PDFs"
+  },
+  {
+    "hash": "fc3cd3fc",
+    "message": "fix: strip html from thesis not only sanitize unicode"
+  },
+  {
+    "hash": "eb613fcb",
+    "message": "fix(alembic): SADeprecationWarning"
+  },
+  {
+    "hash": "78ac52c7",
+    "message": "fix: DeprecationWarning"
+  },
+  {
+    "hash": "ddade525",
+    "message": "fix: DeprecationWarning"
+  },
+  {
+    "hash": "bba00169",
+    "message": "fix(tests): missing os-v2 mapping"
+  },
+  {
+    "hash": "451c8ebf",
+    "message": "chore: remove deprecated code"
+  },
+  {
+    "hash": "dcea5ce2",
+    "message": "fix: PyparsingDeprecationWarning:"
+  },
+  {
+    "hash": "65560446",
+    "message": "fix: InsecureKeyLengthWarning"
+  },
+  {
+    "hash": "6e9f868c",
+    "message": "fix(translations): add missing German translations to fixtures"
+  },
+  {
+    "hash": "7b651c71",
+    "message": "fix(translations): add no results message to select fields explicitly"
+  },
+  {
+    "hash": "7556e772",
+    "message": "release: v35.2.0"
+  },
+  {
+    "hash": "bf323caa",
+    "message": "fix: switch to simple_deepcopy in search dumper"
+  },
+  {
+    "hash": "fdad7ddc",
+    "message": "fix(errors): fix incorrect constructor call"
+  },
+  {
+    "hash": "21c9ddee",
+    "message": "fix(iiif): handle DelegateError for unsupported file types"
+  },
+  {
+    "hash": "a5fe668c",
+    "message": "fix(changes): fix docutils bullet points indentation error"
+  },
+  {
+    "hash": "4f4bec97",
+    "message": "release: v35.1.0"
+  },
+  {
+    "hash": "0d63e48a",
+    "message": "fix(github): resolve badge DOI in 1 query"
+  },
+  {
+    "hash": "7cf78b30",
+    "message": "refactor(schemas): initialize schemas in the service constructors"
+  },
+  {
+    "hash": "31485446",
+    "message": "refactor(schema): optimize RDM record schemas for reusability"
+  },
+  {
+    "hash": "592cd502",
+    "message": "fix(performance): replace `deepcopy()` in UI serialization"
+  },
+  {
+    "hash": "9e44c50c",
+    "message": "fix(performance): replace deepcopy in search dumper with a simpler copy"
+  },
+  {
+    "hash": "c56cb8ad",
+    "message": "fix(tombstone): avoid side effects from shallow copies in removal reason"
+  },
+  {
+    "hash": "c73269cf",
+    "message": "fix(performance): use a less deep copy for record metadata {de,en}coding"
+  },
+  {
+    "hash": "72f33bea",
+    "message": "feat(utils): add simplified deepcopy implementations to utils"
+  },
+  {
+    "hash": "711b0926",
+    "message": "fix(version): text for disabled version depends on flag"
+  },
+  {
+    "hash": "d305eb67",
+    "message": "deposit: update the text of disabled new version btn"
+  },
+  {
+    "hash": "14e58177",
+    "message": "fix(signposting): fix custom licenses links percent-encoding (#2435)"
+  }
+]

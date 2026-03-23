@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "140ef50",
+    "message": "release: v6.1.0"
+  },
+  {
+    "hash": "26ae5a7",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "7e6fa23",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "99f2a74",
+    "message": "helpers: add no_cache cache-control for restricted files"
+  },
+  {
+    "hash": "7f6190b",
+    "message": "release: v6.0.1"
+  },
+  {
+    "hash": "4419b76",
+    "message": "fix(errors): handle FileNotFoundError to avoid leaking details"
+  },
+  {
+    "hash": "549a6a5",
+    "message": "fix(errors): fix construction of StorageError instances"
+  },
+  {
+    "hash": "1a78866",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "7ba20ed",
+    "message": "chore(cleanup): remove outdated and unnecessary files"
+  },
+  {
+    "hash": "8df3bbb",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "2adc17a",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "968959a",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "1866403",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "c0de9a9",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "5a077e6",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "c9d238c",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "80699fc",
+    "message": "release: v4.1.0"
+  },
+  {
+    "hash": "b4b04f6",
+    "message": "fix(webargs): Made sources compatible with upgraded webargs"
+  },
+  {
+    "hash": "f876ab6",
+    "message": "fix(sphinx): Ignoring ErrorHandler to prevent sphinx reference error"
+  },
+  {
+    "hash": "616dc34",
+    "message": "fix: connections to postgresql exhausted in python 3.14.2"
+  },
+  {
+    "hash": "131594c",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "d5b5975",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "8b11799",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "c2d7f31",
+    "message": "fix: LegacyAPIWarning SQLAlchemy"
+  },
+  {
+    "hash": "60a30e3",
+    "message": "refactor: move to context_schema"
+  },
+  {
+    "hash": "0bef417",
+    "message": "Removed dependency on PyFilesystem2"
+  },
+  {
+    "hash": "ca6aa70",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "5f2c554",
+    "message": "ci: fix python 3.13+ compatibility and docstrings"
+  },
+  {
+    "hash": "3a15df6",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "5ab8032",
+    "message": "\ud83d\udce6 release: v3.4.1"
+  },
+  {
+    "hash": "9aac52b",
+    "message": "i18n: pulled translations (#338)"
+  },
+  {
+    "hash": "7e8ddb5",
+    "message": "\ud83d\udce6 release: v3.4.0"
+  },
+  {
+    "hash": "32c6b0c",
+    "message": "models: adds index on version_id and bucket_id"
+  },
+  {
+    "hash": "151773e",
+    "message": "\ud83d\udce6 release: v3.3.1"
+  },
+  {
+    "hash": "f9a3394",
+    "message": "fix: ensure that checksums have only one :"
+  },
+  {
+    "hash": "c792502",
+    "message": "release: v3.3.0"
+  },
+  {
+    "hash": "c9c4ee0",
+    "message": "fix(tests): invenio-admin entry-points handling"
+  },
+  {
+    "hash": "fbb3664",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "084c4bb",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "d6c1588",
+    "message": "\ud83d\udce6 release: v3.2.0"
+  },
+  {
+    "hash": "b625b91",
+    "message": "tests: extra tests for malformed Range & range support advertisement"
+  },
+  {
+    "hash": "9f0c576",
+    "message": "fix: always send Accept-Ranges header if ranges are enabled"
+  },
+  {
+    "hash": "fe1c23a",
+    "message": "fix: pass werkzeug exceptions, such as RequestedRangeNotSatisfiable"
+  },
+  {
+    "hash": "35a7fcd",
+    "message": "\ud83d\udce6 release: v3.1.0"
+  },
+  {
+    "hash": "95e36ed",
+    "message": "Adds range request support for accessing files (#321)"
+  },
+  {
+    "hash": "d51ce97",
+    "message": "fix(deps): Use sqlalchemy 2.0 compatible query syntax"
+  },
+  {
+    "hash": "12dfd7f",
+    "message": "fix: skip non-readable files on checksum verification"
+  },
+  {
+    "hash": "4f02971",
+    "message": "fix: setuptools require underscores instead of dashes"
+  },
+  {
+    "hash": "49ce30d",
+    "message": "i18n: removed deprecated messages"
+  },
+  {
+    "hash": "6ae7566",
+    "message": "i18n: use legacy string format for compatibility"
+  }
+]

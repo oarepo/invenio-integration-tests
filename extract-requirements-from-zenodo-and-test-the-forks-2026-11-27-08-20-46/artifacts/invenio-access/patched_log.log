@@ -1,0 +1,395 @@
+extracting messages from invenio_access/__init__.py (encoding="utf-8")
+extracting messages from invenio_access/admin.py (encoding="utf-8")
+extracting messages from invenio_access/cli.py (encoding="utf-8")
+extracting messages from invenio_access/config.py (encoding="utf-8")
+extracting messages from invenio_access/ext.py (encoding="utf-8")
+extracting messages from invenio_access/factory.py (encoding="utf-8")
+extracting messages from invenio_access/loaders.py (encoding="utf-8")
+extracting messages from invenio_access/models.py (encoding="utf-8")
+extracting messages from invenio_access/permissions.py (encoding="utf-8")
+extracting messages from invenio_access/proxies.py (encoding="utf-8")
+extracting messages from invenio_access/utils.py (encoding="utf-8")
+extracting messages from invenio_access/alembic/04480be1593e_add_actionsystemroles.py (encoding="utf-8")
+extracting messages from invenio_access/alembic/2069a982633b_add_on_delete_cascade_constraint.py (encoding="utf-8")
+extracting messages from invenio_access/alembic/2f63be7b7572_create_access_tables.py (encoding="utf-8")
+extracting messages from invenio_access/alembic/67ba0de65fbb_create_access_branch.py (encoding="utf-8")
+extracting messages from invenio_access/alembic/842a62b56e60_change_fk_accountsrole_to_string_downgrade.py (encoding="utf-8")
+extracting messages from invenio_access/alembic/dbe499bfda43_prevent_null_in_actionusers_for_.py (encoding="utf-8")
+extracting messages from invenio_access/alembic/f9843093f686_change_fk_accountsrole_to_string_upgrade.py (encoding="utf-8")
+writing PO template file to /dev/null
+ Image postgres:18 Pulling 
+ Image redis:7 Pulling 
+ 817018563f08 Pulling fs layer 0B
+ b1dd3d113aab Pulling fs layer 0B
+ dcadfd589ed7 Pulling fs layer 0B
+ a13218a43344 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ fb36845717af Pulling fs layer 0B
+ 3ed90300cc1a Pulling fs layer 0B
+ 8e4857f35fce Pulling fs layer 0B
+ 0f12a37b90bb Pulling fs layer 0B
+ 40748add9f4f Pulling fs layer 0B
+ 0afa8bd0fe3a Pulling fs layer 0B
+ 7fe3468bf416 Pulling fs layer 0B
+ edf2405c6afe Pulling fs layer 0B
+ 1c59edd7eb40 Pulling fs layer 0B
+ 7cb67b3b537a Pulling fs layer 0B
+ 61061a425fb0 Pulling fs layer 0B
+ c1436cf65049 Pulling fs layer 0B
+ a1361b767ece Pulling fs layer 0B
+ 84a852dae169 Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ edf2405c6afe Downloading 6.291MB
+ 3ed90300cc1a Download complete 0B
+ dcadfd589ed7 Download complete 0B
+ 0afa8bd0fe3a Download complete 0B
+ edf2405c6afe Downloading 23.07MB
+ 817018563f08 Download complete 0B
+ fb36845717af Download complete 0B
+ b1dd3d113aab Downloading 1.049MB
+ a13218a43344 Downloading 9.437MB
+ 1c59edd7eb40 Download complete 0B
+ 8e4857f35fce Download complete 0B
+ 0f12a37b90bb Downloading 5.243MB
+ 61061a425fb0 Download complete 0B
+ 7fe3468bf416 Download complete 0B
+ 7cb67b3b537a Download complete 0B
+ b1dd3d113aab Downloading 9.437MB
+ a13218a43344 Downloading 15.36MB
+ c1436cf65049 Download complete 0B
+ a1361b767ece Downloading 2.097MB
+ 0f12a37b90bb Download complete 0B
+ 84a852dae169 Download complete 0B
+ 40748add9f4f Downloading 10.49MB
+ edf2405c6afe Downloading 33.55MB
+ b1dd3d113aab Downloading 24.12MB
+ a13218a43344 Download complete 0B
+ 40748add9f4f Downloading 25.17MB
+ edf2405c6afe Downloading 47.19MB
+ a1361b767ece Downloading 8.204MB
+ b1dd3d113aab Downloading 28.25MB
+ 971ecd1c75ec Downloading 25.15kB
+ edf2405c6afe Downloading 68.16MB
+ 3c65b9afb00e Downloading 5.243MB
+ 40748add9f4f Downloading 29.84MB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 971ecd1c75ec Downloading 25.15kB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 89.13MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 103.8MB
+ a1361b767ece Download complete 0B
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 105.9MB
+ b1dd3d113aab Downloading 28.25MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ edf2405c6afe Downloading 121.4MB
+ 971ecd1c75ec Download complete 0B
+ 59e8b6ceb028 Download complete 0B
+ 592e13125349 Download complete 0B
+ 3c65b9afb00e Download complete 0B
+ 40748add9f4f Download complete 0B
+ b1dd3d113aab Download complete 0B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ b1dd3d113aab Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Download complete 0B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ b1dd3d113aab Extracting 2B
+ b1dd3d113aab Extracting 2B
+ 40748add9f4f Pull complete 0B
+ dcadfd589ed7 Extracting 1B
+ 8e4857f35fce Pull complete 0B
+ b1dd3d113aab Pull complete 0B
+ 0f12a37b90bb Extracting 1B
+ dcadfd589ed7 Pull complete 0B
+ fb36845717af Pull complete 0B
+ a13218a43344 Extracting 1B
+ 0f12a37b90bb Extracting 1B
+ a13218a43344 Extracting 1B
+ c1436cf65049 Pull complete 0B
+ 0f12a37b90bb Pull complete 0B
+ a1361b767ece Extracting 1B
+ 4f4fb700ef54 Extracting 1B
+ 3ed90300cc1a Pull complete 0B
+ a13218a43344 Pull complete 0B
+ a1361b767ece Extracting 1B
+ 4f4fb700ef54 Pull complete 0B
+ 817018563f08 Pull complete 0B
+ Image redis:7 Pulled 
+ 84a852dae169 Extracting 1B
+ a1361b767ece Pull complete 0B
+ 0afa8bd0fe3a Pull complete 0B
+ 7fe3468bf416 Pull complete 0B
+ 84a852dae169 Pull complete 0B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 1B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ 1c59edd7eb40 Pull complete 0B
+ 61061a425fb0 Pull complete 0B
+ 7cb67b3b537a Pull complete 0B
+ edf2405c6afe Pull complete 0B
+ Image postgres:18 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-postgresql-1 Started 
+ Container docker_services_cli-redis-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_access
+plugins: github-actions-annotate-failures-0.4.2, black-0.6.0, isort-4.0.0, invenio-4.1.0, pydocstyle-2.4.0, cov-7.1.0, flask-1.3.0, platformdirs-4.14.8, pycodestyle-2.5.0
+collected 46 items
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py,line=2::pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py,line=2::Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py,line=2560::Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+
+tests/test_admin.py .                                                    [  2%]
+tests/test_cli.py ..::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-user instead.
+.::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-role instead.
+.::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-user instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-user instead.
+.::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command remove-action-global instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command remove-action-global instead.
+.::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-role instead.
+.::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command deny-action-for-role instead.
+..::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-role instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-role instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-role instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-role instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command deny-action-for-user instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command allow-action-for-user instead.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command remove-action-from-role instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command remove-action-from-role instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command remove-action-from-role instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command remove-action-from-role instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command remove-action-from-user instead.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py,line=911::Please use the new command remove-action-from-user instead.
+                                              [ 21%]
+tests/test_invenio_access.py .......::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py,line=193::autoincrement and existing_autoincrement only make sense for MySQL
+::warning file=workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py,line=100::The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+                                     [ 36%]
+tests/test_loaders.py ...                                                [ 43%]
+tests/test_permissions.py .................::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+.                             [ 82%]
+tests/test_permissions_cache.py ..::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+.::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+.::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+.::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+.::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+.::warning file=workdir/tests/invenio-access/patched/tests/conftest.py,line=151::DynamicPermission is scheduled for removal.
+                                  [ 97%]
+invenio_access/__init__.py .                                             [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    __import__('pkg_resources').declare_namespace(__name__)
+
+.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    __import__('pkg_resources').declare_namespace(__name__)
+
+.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:2560
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:2560: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(parent)
+
+tests/test_cli.py::test_access_cli_allow_action_unknown_email
+tests/test_cli.py::test_access_cli_allow_action_user
+tests/test_cli.py::test_access_cli_allow_action_user
+tests/test_cli.py::test_access_matrix
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py:911: DeprecationWarning: Please use the new command allow-action-for-user instead.
+    return callback(*args, **kwargs)
+
+tests/test_cli.py::test_access_cli_allow_action_unknown_role
+tests/test_cli.py::test_access_cli_allow_action_role
+tests/test_cli.py::test_access_matrix
+tests/test_cli.py::test_access_matrix
+tests/test_cli.py::test_access_matrix
+tests/test_cli.py::test_access_matrix
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py:911: DeprecationWarning: Please use the new command allow-action-for-role instead.
+    return callback(*args, **kwargs)
+
+tests/test_cli.py::test_any_all_global
+tests/test_cli.py::test_any_all_global
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py:911: DeprecationWarning: Please use the new command remove-action-global instead.
+    return callback(*args, **kwargs)
+
+tests/test_cli.py::test_access_cli_deny_action_role
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py:911: DeprecationWarning: Please use the new command deny-action-for-role instead.
+    return callback(*args, **kwargs)
+
+tests/test_cli.py::test_access_matrix
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py:911: DeprecationWarning: Please use the new command deny-action-for-user instead.
+    return callback(*args, **kwargs)
+
+tests/test_cli.py: 4 warnings
+tests/test_permissions.py: 1 warning
+tests/test_permissions_cache.py: 49 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/tests/conftest.py:151: DeprecationWarning: DynamicPermission is scheduled for removal.
+    warnings.warn("DynamicPermission is scheduled for removal.", DeprecationWarning)
+
+tests/test_cli.py::test_access_matrix
+tests/test_cli.py::test_access_matrix
+tests/test_cli.py::test_access_matrix
+tests/test_cli.py::test_access_matrix
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py:911: DeprecationWarning: Please use the new command remove-action-from-role instead.
+    return callback(*args, **kwargs)
+
+tests/test_cli.py::test_access_matrix
+tests/test_cli.py::test_access_matrix
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/click/core.py:911: DeprecationWarning: Please use the new command remove-action-from-user instead.
+    return callback(*args, **kwargs)
+
+tests/test_invenio_access.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/alembic/config.py:572: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_invenio_access.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py:193: UserWarning: autoincrement and existing_autoincrement only make sense for MySQL
+    super().alter_column(
+
+tests/test_invenio_access.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-access/patched/.venv/lib/python3.14/site-packages/invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py:100: SADeprecationWarning: The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+    insp = Inspector.from_engine(ctx.connection.engine)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-access/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------------------------------------------
+invenio_access/__init__.py                                                              8      0   100%
+invenio_access/admin.py                                                                43      0   100%
+invenio_access/alembic/2f63be7b7572_create_access_tables.py                            20      0   100%
+invenio_access/alembic/67ba0de65fbb_create_access_branch.py                             6      0   100%
+invenio_access/alembic/842a62b56e60_change_fk_accountsrole_to_string_downgrade.py      10      0   100%
+invenio_access/alembic/2069a982633b_add_on_delete_cascade_constraint.py                19      0   100%
+invenio_access/alembic/04480be1593e_add_actionsystemroles.py                           16      0   100%
+invenio_access/alembic/dbe499bfda43_prevent_null_in_actionusers_for_.py                18      0   100%
+invenio_access/alembic/f9843093f686_change_fk_accountsrole_to_string_upgrade.py        10      0   100%
+invenio_access/cli.py                                                                 205     11    95%   39, 48-50, 106, 116, 126, 136, 145, 157, 169
+invenio_access/config.py                                                                6      0   100%
+invenio_access/ext.py                                                                  79      0   100%
+invenio_access/factory.py                                                               7      0   100%
+invenio_access/loaders.py                                                               6      0   100%
+invenio_access/models.py                                                               95      0   100%
+invenio_access/permissions.py                                                          90      0   100%
+invenio_access/proxies.py                                                               4      0   100%
+invenio_access/utils.py                                                                 9      0   100%
+-----------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                 651     11    98%
+======================= 46 passed, 80 warnings in 8.35s ========================
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-redis-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

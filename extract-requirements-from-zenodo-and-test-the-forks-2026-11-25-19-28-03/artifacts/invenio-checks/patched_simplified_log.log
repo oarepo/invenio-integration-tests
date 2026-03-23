@@ -1,0 +1,108 @@
+ Image postgres:18 Pulling 
+ Image opensearchproject/opensearch:2.19.7 Pulling 
+ Image rabbitmq:3-management Pulling 
+ Image redis:7 Pulling 
+ 4f4fb700ef54 Already exists 0B
+ 4f4fb700ef54 Already exists 0B
+ Image redis:7 Pulled 
+ Image rabbitmq:3-management Pulled 
+ Image postgres:18 Pulled 
+ Image opensearchproject/opensearch:2.19.7 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-rabbitmq-1 Started 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-postgresql-1 Started 
+ Container docker_services_cli-redis-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-checks/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_checks
+plugins: github-actions-annotate-failures-0.4.2, black-0.6.0, isort-4.0.0, invenio-4.1.0, pydocstyle-2.4.0, cov-7.1.0, flask-1.3.0, platformdirs-4.14.8, pycodestyle-2.5.0
+collected 129 items
+tests/contrib/file_formats/test_check.py .                               [  0%]
+tests/contrib/metadata/test_expressions.py ............................. [ 23%]
+          [ 72%]
+tests/contrib/metadata/test_rules.py 
+   [ 97%]
+tests/test_alembic.py 
+                                                  [ 98%]
+tests/test_invenio_checks.py ..                                          [100%]
+=============================== warnings summary ===============================
+venv/lib/python3.14/site-packages/marshmallow/fields.py:1218
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-checks/patched/.venv/lib/python3.14/site-packages/marshmallow/fields.py:1218: RemovedInMarshmallow4Warning: The 'missing' argument to fields is deprecated. Use 'load_default' instead
+    super().__init__(**kwargs)
+tests/contrib/metadata/test_rules.py::TestTranslation::test_translate_field_app_context_locale_fallback[sv_SE-catalog0-Swedish text]
+tests/contrib/metadata/test_rules.py::TestTranslation::test_translate_field_app_context_locale_fallback[sv_SE-catalog0-Swedish text]
+tests/test_alembic.py::test_alembic
+tests/test_alembic.py::test_alembic
+    warnings.warn(
+tests/test_alembic.py::test_alembic
+    util.warn_deprecated(
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-checks/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+Name                                                                   Stmts   Miss  Cover   Missing
+invenio_checks/__init__.py                                                 3      0   100%
+invenio_checks/alembic/1742548610_create_checks_branch.py                  8      1    88%   20
+invenio_checks/alembic/1742549302_create_base_tables.py                   20      4    80%   117-120
+invenio_checks/alembic/1773672705_allow_empty_community_id.py             10      1    90%   28
+invenio_checks/alembic/1777225247_severity_migration.py                   14      2    86%   47-56
+invenio_checks/alembic/1784902219_add_nullable_fields_target_type.py      19      6    68%   43-50
+invenio_checks/alembic/c39b06b59667_change_datetime_types.py              17      5    71%   30-34
+invenio_checks/api.py                                                    143    117    18%   28-43, 51-63, 79-124, 129-144, 159-284, 289-302, 307-370
+invenio_checks/base.py                                                    90     22    76%   24, 28, 57, 61, 65, 74, 78, 91, 95, 98, 107, 112, 131, 144, 148, 151, 160-163, 167, 183
+invenio_checks/components.py                                             135     95    30%   26-28, 48-50, 54-81, 86-100, 111-127, 137-165, 172-174, 178-184, 188-193, 202-208, 223-237, 247, 251, 255
+invenio_checks/config.py                                                   6      0   100%
+invenio_checks/contrib/__init__.py                                         0      0   100%
+invenio_checks/contrib/file_formats.py                                    83     10    88%   49, 53-54, 75, 118, 123, 126, 130, 134, 167
+invenio_checks/contrib/metadata/__init__.py                                4      0   100%
+invenio_checks/contrib/metadata/check.py                                  89     60    33%   30-32, 36-38, 52-66, 77-107, 111-124, 132-135, 140-150, 155-167
+invenio_checks/contrib/metadata/expressions.py                           246     21    91%   33, 72, 79, 204-205, 219-220, 289-290, 320, 351, 408, 482, 521-529
+invenio_checks/contrib/metadata/rules.py                                  69      0   100%
+invenio_checks/ext.py                                                     21      0   100%
+invenio_checks/models.py                                                  71     18    75%   38-41, 64, 70, 114-126
+invenio_checks/proxies.py                                                  4      0   100%
+invenio_checks/services/__init__.py                                        4      0   100%
+invenio_checks/services/config.py                                         24      0   100%
+invenio_checks/services/permissions.py                                    16      0   100%
+invenio_checks/services/results.py                                        42     27    36%   18, 27-31, 36-43, 49-52, 57-71
+invenio_checks/services/schema.py                                         24      0   100%
+invenio_checks/services/services.py                                       15      6    60%   19, 27, 31, 35, 39, 43
+invenio_checks/tasks.py                                                   53     41    23%   25-122, 128-157
+invenio_checks/utils.py                                                   54     25    54%   49-50, 65-82, 87-102
+invenio_checks/views/__init__.py                                           2      0   100%
+invenio_checks/views/ui.py                                                 4      0   100%
+TOTAL                                                                   1290    461    64%
+======================= 129 passed, 6 warnings in 17.58s =======================
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "abc3be9",
+    "message": "release: v9.3.0"
+  },
+  {
+    "hash": "24cd25a",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "3d673b2",
+    "message": "release: v9.2.0"
+  },
+  {
+    "hash": "366633c",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "6357ab1",
+    "message": "cleanup(tests): remove unused cache config"
+  },
+  {
+    "hash": "2746a1c",
+    "message": "fix(alembic): SADeprecationWarning"
+  },
+  {
+    "hash": "50930dd",
+    "message": "fix(alembic): DeprecationWarning"
+  },
+  {
+    "hash": "0ebd50b",
+    "message": "release: v9.1.2"
+  },
+  {
+    "hash": "fb7fe47",
+    "message": "fix(refresh): raise error if `access_token` is None"
+  },
+  {
+    "hash": "6e59128",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "1b61bfd",
+    "message": "release: v9.1.1"
+  },
+  {
+    "hash": "e57a66a",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "66279b6",
+    "message": "chore(cleanup): remove outdated and unnecessary file"
+  },
+  {
+    "hash": "adb6a3a",
+    "message": "chore(format): settle disagreement between isort and black"
+  },
+  {
+    "hash": "d63215e",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "ebc5e5f",
+    "message": "\ud83d\udce6 release: v9.1.0"
+  },
+  {
+    "hash": "352e8e5",
+    "message": "feat(login): support provider logo images on sign-in buttons"
+  },
+  {
+    "hash": "e3d6bba",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "112aa99",
+    "message": "chore(licenses): fix some SPDX license headers"
+  },
+  {
+    "hash": "17f8ffe",
+    "message": "release: v9.0.0"
+  },
+  {
+    "hash": "657855d",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "34272c8",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "068107a",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "ddce555",
+    "message": "release: v8.0.0"
+  },
+  {
+    "hash": "cadd53a",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "289531a",
+    "message": "fix: bad downstream dependency in alembic"
+  },
+  {
+    "hash": "e6b5074",
+    "message": "fix(ui): reorder menu in user settings"
+  },
+  {
+    "hash": "c8162e6",
+    "message": "release: v7.0.1"
+  },
+  {
+    "hash": "e372210",
+    "message": "fix(logout): remove unmanage_roles from session"
+  },
+  {
+    "hash": "976a07b",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "6e29fe2",
+    "message": "chore(tests): add admin"
+  },
+  {
+    "hash": "a1ae9b7",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "af10d1e",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "177c056",
+    "message": "release: v6.1.2"
+  },
+  {
+    "hash": "f026b97",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "0fa2efb",
+    "message": "chore(setup): pin dependencies"
+  },
+  {
+    "hash": "51c81c6",
+    "message": "\ud83d\udce6 release: v6.1.1"
+  },
+  {
+    "hash": "f71eb78",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "7e3600f",
+    "message": "fix(refresh): allow non-compliant access token response type"
+  },
+  {
+    "hash": "df76a5c",
+    "message": "release: v6.1.0"
+  },
+  {
+    "hash": "c87b26a",
+    "message": "feat(oauth2): support for refresh tokens"
+  },
+  {
+    "hash": "22577ff",
+    "message": "feat: link-only remotes"
+  },
+  {
+    "hash": "21363a0",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "e7d6457",
+    "message": "perf(models): change `extra_data` to `JSONB`"
+  },
+  {
+    "hash": "cdcabc2",
+    "message": "\ud83d\udce6 release: v5.3.1"
+  },
+  {
+    "hash": "f2dd710",
+    "message": "i18n: pulled translations (#363)"
+  },
+  {
+    "hash": "bce320a",
+    "message": "\ud83d\udce6 release: v5.3.0"
+  },
+  {
+    "hash": "46b02c2",
+    "message": "feat(contrib): add EOSC EU Node AAI OIDC provider"
+  },
+  {
+    "hash": "2debc7b",
+    "message": "release: v5.2.0"
+  },
+  {
+    "hash": "f58703e",
+    "message": "i18n: pulled translations"
+  }
+]

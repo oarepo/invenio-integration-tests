@@ -1,0 +1,980 @@
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ Image redis:7 Pulling 
+ Image rabbitmq:3-management Pulling 
+ 9d1f594c66dc Pulling fs layer 0B
+ e5604524ac8c Pulling fs layer 0B
+ b14c48cb507d Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ fe7bbed45059 Pulling fs layer 0B
+ 0189f02e683f Pulling fs layer 0B
+ 46f4de2e4236 Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ d686b50ce172 Pulling fs layer 0B
+ d63c4408fdb7 Pulling fs layer 0B
+ efa05c660812 Pulling fs layer 0B
+ 20043066d3d5 Pulling fs layer 0B
+ f4e7f62f4b80 Pulling fs layer 0B
+ 3fadc669ef11 Pulling fs layer 0B
+ 5e1c03b67a78 Pulling fs layer 0B
+ 14e6209d5fa8 Pulling fs layer 0B
+ 7084ac8f4ab6 Pulling fs layer 0B
+ beb0d870d438 Pulling fs layer 0B
+ 817018563f08 Pulling fs layer 0B
+ fb36845717af Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 3ed90300cc1a Pulling fs layer 0B
+ b1dd3d113aab Pulling fs layer 0B
+ dcadfd589ed7 Pulling fs layer 0B
+ a13218a43344 Pulling fs layer 0B
+ 9d1f594c66dc Download complete 0B
+ 4f4fb700ef54 Already exists 0B
+ d686b50ce172 Downloading 2.097MB
+ 0189f02e683f Downloading 1.049MB
+ e5604524ac8c Downloading 228B
+ 46f4de2e4236 Downloading 20.97MB
+ b14c48cb507d Downloading 1.049MB
+ efa05c660812 Download complete 0B
+ a13218a43344 Downloading 11.53MB
+ fe7bbed45059 Download complete 0B
+ 0189f02e683f Downloading 4.385MB
+ e5604524ac8c Downloading 228B
+ 46f4de2e4236 Downloading 29.36MB
+ b14c48cb507d Downloading 9.437MB
+ f4e7f62f4b80 Downloading 109B
+ 14e6209d5fa8 Downloading 833B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 9.437MB
+ d63c4408fdb7 Downloading 9.437MB
+ 20043066d3d5 Downloading 6.291MB
+ 3fadc669ef11 Downloading 6.291MB
+ 5e1c03b67a78 Downloading 620B
+ 7084ac8f4ab6 Downloading 7.34MB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ 3ed90300cc1a Downloading 96B
+ b1dd3d113aab Downloading 5.243MB
+ dcadfd589ed7 Downloading 1.1kB
+ 20043066d3d5 Downloading 7.34MB
+ 3fadc669ef11 Downloading 7.34MB
+ 5e1c03b67a78 Downloading 620B
+ 7084ac8f4ab6 Downloading 7.468MB
+ f4e7f62f4b80 Downloading 109B
+ 14e6209d5fa8 Downloading 833B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 10.49MB
+ d63c4408fdb7 Downloading 10.49MB
+ 0189f02e683f Downloading 4.385MB
+ e5604524ac8c Downloading 228B
+ 46f4de2e4236 Downloading 30.41MB
+ b14c48cb507d Downloading 10.49MB
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ 3ed90300cc1a Downloading 96B
+ b1dd3d113aab Downloading 7.34MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ f4e7f62f4b80 Downloading 109B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 16.78MB
+ 20043066d3d5 Downloading 14.68MB
+ 3fadc669ef11 Downloading 13.63MB
+ 5e1c03b67a78 Downloading 620B
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ 3ed90300cc1a Downloading 96B
+ b1dd3d113aab Downloading 15.73MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 46f4de2e4236 Downloading 39.85MB
+ b14c48cb507d Downloading 16.78MB
+ 0189f02e683f Downloading 4.385MB
+ e5604524ac8c Downloading 228B
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ 3ed90300cc1a Downloading 96B
+ b1dd3d113aab Downloading 25.17MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ f4e7f62f4b80 Downloading 109B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 25.17MB
+ 3fadc669ef11 Downloading 22.02MB
+ 5e1c03b67a78 Downloading 620B
+ 7084ac8f4ab6 Downloading 7.468MB
+ 0189f02e683f Downloading 4.385MB
+ e5604524ac8c Downloading 228B
+ 46f4de2e4236 Downloading 50.33MB
+ b14c48cb507d Downloading 26.21MB
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ 3ed90300cc1a Downloading 96B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 14e6209d5fa8 Download complete 0B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ 7084ac8f4ab6 Downloading 7.468MB
+ f4e7f62f4b80 Downloading 109B
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 72.35MB
+ b14c48cb507d Downloading 49.28MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ f4e7f62f4b80 Downloading 109B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ e5604524ac8c Download complete 0B
+ 46f4de2e4236 Downloading 113.2MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ b1dd3d113aab Downloading 28.25MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ 7084ac8f4ab6 Downloading 7.468MB
+ f4e7f62f4b80 Downloading 109B
+ beb0d870d438 Downloading 9.462kB
+ fb36845717af Downloading 873B
+ 46f4de2e4236 Downloading 159.4MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ f4e7f62f4b80 Downloading 109B
+ beb0d870d438 Downloading 9.462kB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 201.3MB
+ b14c48cb507d Downloading 54.57MB
+ fb36845717af Downloading 873B
+ 3ed90300cc1a Download complete 0B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ 7084ac8f4ab6 Download complete 0B
+ f4e7f62f4b80 Downloading 109B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 239.1MB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 286.3MB
+ b14c48cb507d Downloading 54.57MB
+ fb36845717af Downloading 873B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ f4e7f62f4b80 Downloading 109B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 330.3MB
+ b14c48cb507d Downloading 54.57MB
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ f4e7f62f4b80 Downloading 109B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ fb36845717af Downloading 873B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 362.8MB
+ b14c48cb507d Downloading 54.57MB
+ beb0d870d438 Downloading 9.462kB
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 46f4de2e4236 Downloading 404.8MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ d63c4408fdb7 Downloading 21.31MB
+ 0189f02e683f Downloading 4.385MB
+ b1dd3d113aab Downloading 28.25MB
+ 46f4de2e4236 Downloading 405.8MB
+ b14c48cb507d Downloading 54.57MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ f4e7f62f4b80 Download complete 0B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 420.5MB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 464.5MB
+ b14c48cb507d Downloading 54.57MB
+ fb36845717af Downloading 873B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ fb36845717af Downloading 873B
+ d63c4408fdb7 Downloading 21.31MB
+ b1dd3d113aab Downloading 28.25MB
+ 20043066d3d5 Download complete 0B
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 507.5MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 817018563f08 Downloading 600B
+ 20043066d3d5 Extracting 1B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ 817018563f08 Downloading 600B
+ fb36845717af Downloading 873B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 550.5MB
+ b14c48cb507d Downloading 54.57MB
+ 20043066d3d5 Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ fb36845717af Downloading 873B
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Downloading 1.1kB
+ a13218a43344 Downloading 15.36MB
+ 5e1c03b67a78 Downloading 620B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 817018563f08 Download complete 0B
+ 46f4de2e4236 Downloading 592.4MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Downloading 28.25MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 634.4MB
+ b14c48cb507d Downloading 54.57MB
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ a13218a43344 Downloading 15.36MB
+ fb36845717af Downloading 873B
+ 20043066d3d5 Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ b1dd3d113aab Downloading 28.25MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 676.3MB
+ b14c48cb507d Downloading 54.57MB
+ a13218a43344 Downloading 15.36MB
+ fb36845717af Downloading 873B
+ 20043066d3d5 Extracting 1B
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 707.8MB
+ b14c48cb507d Downloading 54.57MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ beb0d870d438 Downloading 9.462kB
+ b1dd3d113aab Downloading 28.25MB
+ dcadfd589ed7 Download complete 0B
+ a13218a43344 Downloading 15.36MB
+ 20043066d3d5 Extracting 1B
+ 46f4de2e4236 Downloading 741.3MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ a13218a43344 Downloading 15.36MB
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 5e1c03b67a78 Downloading 620B
+ fb36845717af Download complete 0B
+ b1dd3d113aab Downloading 28.25MB
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 772.8MB
+ b14c48cb507d Downloading 54.57MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ beb0d870d438 Downloading 9.462kB
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 816.8MB
+ b14c48cb507d Downloading 54.57MB
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 1B
+ 46f4de2e4236 Downloading 857.7MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 5e1c03b67a78 Download complete 0B
+ beb0d870d438 Downloading 9.462kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ a13218a43344 Downloading 15.36MB
+ b1dd3d113aab Downloading 28.25MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 1B
+ 46f4de2e4236 Downloading 898.6MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ d686b50ce172 Downloading 12.47MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 46f4de2e4236 Downloading 942.7MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 2B
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 988.8MB
+ b14c48cb507d Downloading 54.57MB
+ a13218a43344 Downloading 15.36MB
+ b1dd3d113aab Downloading 28.25MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 2B
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 1.036GB
+ b14c48cb507d Downloading 54.57MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ beb0d870d438 Download complete 0B
+ 20043066d3d5 Extracting 2B
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 1.051GB
+ b1dd3d113aab Downloading 28.25MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 2B
+ d686b50ce172 Downloading 12.47MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Download complete 0B
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 1.093GB
+ b14c48cb507d Downloading 54.57MB
+ 20043066d3d5 Extracting 2B
+ 3fadc669ef11 Downloading 43.48MB
+ d686b50ce172 Downloading 12.47MB
+ 0189f02e683f Downloading 4.385MB
+ d63c4408fdb7 Downloading 21.31MB
+ 46f4de2e4236 Downloading 1.1GB
+ b1dd3d113aab Downloading 28.25MB
+ b14c48cb507d Downloading 54.57MB
+ 20043066d3d5 Extracting 2B
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Downloading 28.25MB
+ 20043066d3d5 Extracting 2B
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Downloading 28.25MB
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Extracting 2B
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 46f4de2e4236 Downloading 1.1GB
+ b1dd3d113aab Downloading 28.25MB
+ b14c48cb507d Downloading 54.57MB
+ 20043066d3d5 Extracting 2B
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Downloading 28.25MB
+ 0189f02e683f Download complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ d686b50ce172 Downloading 12.47MB
+ 20043066d3d5 Extracting 2B
+ b1dd3d113aab Downloading 28.25MB
+ 3fadc669ef11 Downloading 43.48MB
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Extracting 3B
+ b1dd3d113aab Downloading 28.25MB
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 3B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Downloading 28.25MB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Extracting 3B
+ b1dd3d113aab Downloading 28.25MB
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ d686b50ce172 Download complete 0B
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 3B
+ 46f4de2e4236 Downloading 1.1GB
+ d63c4408fdb7 Downloading 21.31MB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Downloading 28.25MB
+ 20043066d3d5 Extracting 3B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Downloading 28.25MB
+ 20043066d3d5 Extracting 3B
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 1.1GB
+ b1dd3d113aab Downloading 28.25MB
+ 20043066d3d5 Extracting 3B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Downloading 28.25MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 3B
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Downloading 28.25MB
+ 20043066d3d5 Extracting 3B
+ b1dd3d113aab Downloading 28.25MB
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 3B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Downloading 28.25MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 4B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Downloading 28.25MB
+ 20043066d3d5 Extracting 4B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Downloading 28.25MB
+ d63c4408fdb7 Download complete 0B
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 4B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 4B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 4B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Extracting 4B
+ 3fadc669ef11 Downloading 43.48MB
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Download complete 0B
+ 20043066d3d5 Extracting 4B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 20043066d3d5 Extracting 4B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 3fadc669ef11 Download complete 0B
+ 20043066d3d5 Extracting 4B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 20043066d3d5 Extracting 4B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Downloading 54.57MB
+ 20043066d3d5 Extracting 5B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 20043066d3d5 Extracting 5B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 20043066d3d5 Extracting 5B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Download complete 0B
+ 20043066d3d5 Extracting 5B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 5B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 5B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 5B
+ b1dd3d113aab Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 20043066d3d5 Extracting 5B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 20043066d3d5 Extracting 5B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 20043066d3d5 Extracting 5B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 20043066d3d5 Extracting 6B
+ b1dd3d113aab Extracting 2B
+ b14c48cb507d Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 20043066d3d5 Extracting 6B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 971ecd1c75ec Downloading 25.15kB
+ 7ec4c696b8bb Download complete 0B
+ 20043066d3d5 Extracting 6B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ 46f4de2e4236 Download complete 0B
+ 16ef6b12768c Downloading 3.088MB
+ 20043066d3d5 Pull complete 0B
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 2B
+ 971ecd1c75ec Download complete 0B
+ 592e13125349 Download complete 0B
+ b1dd3d113aab Extracting 2B
+ b14c48cb507d Extracting 2B
+ 16ef6b12768c Download complete 0B
+ b1dd3d113aab Extracting 2B
+ b14c48cb507d Extracting 2B
+ b14c48cb507d Extracting 2B
+ 3fadc669ef11 Extracting 1B
+ b1dd3d113aab Extracting 3B
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ b1dd3d113aab Extracting 3B
+ b14c48cb507d Extracting 2B
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 3fadc669ef11 Extracting 1B
+ b1dd3d113aab Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 3B
+ 3fadc669ef11 Pull complete 0B
+ 7084ac8f4ab6 Extracting 1B
+ dcadfd589ed7 Pull complete 0B
+ b14c48cb507d Extracting 3B
+ 7084ac8f4ab6 Pull complete 0B
+ fb36845717af Pull complete 0B
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 3B
+ beb0d870d438 Extracting 1B
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 3B
+ beb0d870d438 Pull complete 0B
+ d63c4408fdb7 Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ b14c48cb507d Pull complete 0B
+ a13218a43344 Pull complete 0B
+ 0189f02e683f Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 4f4fb700ef54 Extracting 1B
+ 3ed90300cc1a Pull complete 0B
+ 0189f02e683f Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 4f4fb700ef54 Pull complete 0B
+ d63c4408fdb7 Extracting 1B
+ 0189f02e683f Pull complete 0B
+ d63c4408fdb7 Pull complete 0B
+ 817018563f08 Pull complete 0B
+ Image redis:7 Pulled 
+ efa05c660812 Pull complete 0B
+ f4e7f62f4b80 Extracting 1B
+ fe7bbed45059 Pull complete 0B
+ f4e7f62f4b80 Pull complete 0B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 5e1c03b67a78 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 5e1c03b67a78 Pull complete 0B
+ 46f4de2e4236 Extracting 1B
+ 14e6209d5fa8 Pull complete 0B
+ d686b50ce172 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ d686b50ce172 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ d686b50ce172 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ d686b50ce172 Pull complete 0B
+ 46f4de2e4236 Extracting 1B
+ Image rabbitmq:3-management Pulled 
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 4f4fb700ef54 Pull complete 0B
+ e5604524ac8c Pull complete 0B
+ 46f4de2e4236 Pull complete 0B
+ 9d1f594c66dc Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-rabbitmq-1 Started 
+ Container docker_services_cli-redis-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_indexer
+plugins: github-actions-annotate-failures-0.4.2, black-0.6.0, isort-4.0.0, invenio-4.1.0, pydocstyle-2.4.0, cov-7.1.0, flask-1.3.0, platformdirs-4.14.8, pycodestyle-2.5.0
+collected 34 items
+
+tests/test_api.py ..::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+....::warning file=../../../../../../../../../opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/unittest/mock.py,line=2259::unclosed database in <sqlite3.Connection object at 0x7d24171f6020>
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+...::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.                                       [ 47%]
+tests/test_cli.py ..::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-indexer/patched/invenio_indexer/cli.py,line=113::Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
+::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-indexer/patched/invenio_indexer/cli.py,line=113::Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
+.                                                    [ 55%]
+tests/test_invenio_indexer.py ...::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+                                       [ 67%]
+tests/test_registry.py .::warning file=../../../../../../../../../opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py,line=455::unclosed database in <sqlite3.Connection object at 0x7d24172ee4d0>
+                                                 [ 70%]
+tests/test_tasks.py ...                                                  [ 79%]
+tests/test_utils.py ......                                               [ 97%]
+invenio_indexer/__init__.py .::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2416fb56c0>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2416fb5030>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2416fb5a80>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24171048b0>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24170abc40>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+                                            [100%]
+
+=============================== warnings summary ===============================
+tests/test_api.py: 8 warnings
+tests/test_cli.py: 1 warning
+tests/test_invenio_indexer.py: 2 warnings
+invenio_indexer/__init__.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:302: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_api.py::test_delete_action
+tests/test_cli.py::test_reindex
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:463: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_api.py::test_refresh_with_index_obj
+  /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/unittest/mock.py:2259: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24171f6020>
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_cli.py::test_reindex
+tests/test_cli.py::test_reindex
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/invenio_indexer/cli.py:113: SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
+    .values(PersistentIdentifier.object_uuid)
+
+tests/test_registry.py::test_indexer_registry
+  /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24172ee4d0>
+    result = tuple_new(cls, iterable)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-indexer/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+invenio_indexer/__init__.py       4      0   100%
+invenio_indexer/api.py          178     22    88%   101, 111, 113-122, 154, 190-195, 233-242, 256-257, 393-394, 454
+invenio_indexer/cli.py           82      3    96%   21, 30, 77
+invenio_indexer/config.py        21      0   100%
+invenio_indexer/ext.py           26      0   100%
+invenio_indexer/proxies.py        7      0   100%
+invenio_indexer/registry.py      16      0   100%
+invenio_indexer/signals.py       16      0   100%
+invenio_indexer/tasks.py         21      3    86%   24, 39, 54
+invenio_indexer/utils.py         26      0   100%
+-----------------------------------------------------------
+TOTAL                           397     28    93%
+======================= 34 passed, 18 warnings in 2.26s ========================
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24172ae200>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24172ee110>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24172eff10>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2417186200>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2417187d30>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24171f55d0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24171f56c0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24172ac5e0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24171865c0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24170aa3e0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24170a8b80>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2417019120>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24172efb50>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2417106a70>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24170ab970>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2417184f40>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24171f7a60>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d24170abd30>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2416fb4130>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2416fb5120>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d2416fb7d30>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

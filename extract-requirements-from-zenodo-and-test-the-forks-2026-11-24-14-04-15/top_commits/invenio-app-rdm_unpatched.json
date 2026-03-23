@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "9fdc5d9f",
+    "message": "release: v15.0.0b7.dev0"
+  },
+  {
+    "hash": "5e3ab1cd",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "45b3afc3",
+    "message": "feat: upgrade react to version 18"
+  },
+  {
+    "hash": "8690765a",
+    "message": "fix(ui): align community records search controls on mobile"
+  },
+  {
+    "hash": "72f19feb",
+    "message": "fix(records): truncate meta description and link-preview title"
+  },
+  {
+    "hash": "dd166563",
+    "message": "feat(deposit): optionally collapse empty sections"
+  },
+  {
+    "hash": "3ed34fbe",
+    "message": "docs: remove docs directory and switch to md formatting"
+  },
+  {
+    "hash": "90c7be99",
+    "message": "fix: set meta line-height relative to them default line-height"
+  },
+  {
+    "hash": "7af0d5d2",
+    "message": "fix(search): increase .meta class line-height to 1.43em"
+  },
+  {
+    "hash": "9244d556",
+    "message": "chore(tests): address deprecation es_clear -> search_clear"
+  },
+  {
+    "hash": "e5e74c18",
+    "message": "feat+fix: add admin moderation requests API to correctly aggregate/filter"
+  },
+  {
+    "hash": "2a6a872f",
+    "message": "fix(ui): reset login button loading state on bfcache restore"
+  },
+  {
+    "hash": "49cfac06",
+    "message": "fix(deposit): pass the record_quota max_file_size to the UI"
+  },
+  {
+    "hash": "4afd99c6",
+    "message": "fix(previewer): handle zip preview errors"
+  },
+  {
+    "hash": "08f82349",
+    "message": "release: v15.0.0b6.dev0"
+  },
+  {
+    "hash": "0fe9710c",
+    "message": "chore(deps): bump rdm-records to 36"
+  },
+  {
+    "hash": "1fc26925",
+    "message": "fix: provide missing config to load deletion request in admin"
+  },
+  {
+    "hash": "82fe15ed",
+    "message": "fix: remove unsafe safe filter from record macros"
+  },
+  {
+    "hash": "14cc6882",
+    "message": "fix(tombstone): make URLs in removal notes clickable"
+  },
+  {
+    "hash": "66dd5ed7",
+    "message": "release: v15.0.0b5.dev0"
+  },
+  {
+    "hash": "1b09eade",
+    "message": "fix(ui): fix spacing on custom field labels"
+  },
+  {
+    "hash": "da819bf5",
+    "message": "fix(ui): align accordion content padding"
+  },
+  {
+    "hash": "e200ac00",
+    "message": "feat(versions): add access_status to deserializer"
+  },
+  {
+    "hash": "2f061818",
+    "message": "feat(versions): add resource_type to deserializer"
+  },
+  {
+    "hash": "f0de7cdb",
+    "message": "fix: load only the specialised search bundle"
+  },
+  {
+    "hash": "408aaed2",
+    "message": "packaging: add saml as an extra"
+  },
+  {
+    "hash": "a4001d9b",
+    "message": "fix(versions): text for disabled version depends on flag"
+  },
+  {
+    "hash": "dc38b1e1",
+    "message": "fix: add spacing to default creatibutors icon (as is done for scheme icons)"
+  },
+  {
+    "hash": "9817f16f",
+    "message": "cleanup: Remove deprecated COMMUNITIES_GROUPS_ENABLED"
+  },
+  {
+    "hash": "f16a8682",
+    "message": "release: v15.0.0b4.dev0"
+  },
+  {
+    "hash": "d36e2d31",
+    "message": "fix(tests): DeprecationWarning"
+  },
+  {
+    "hash": "d9d11789",
+    "message": "fix(tests): DeprecationWarning"
+  },
+  {
+    "hash": "4c32295d",
+    "message": "fix(tests): LegacyAPIWarning"
+  },
+  {
+    "hash": "1023e302",
+    "message": "feat(search): add overridable title"
+  },
+  {
+    "hash": "b9fe1b5d",
+    "message": "fix(ui): show link validation error msgs"
+  },
+  {
+    "hash": "cd569aa7",
+    "message": "config: remove unused APP_RDM_RECORDS_EXPORT_URL config"
+  },
+  {
+    "hash": "98b22eb2",
+    "message": "fix: optionally chain user in RecordManagement.recordOwnerID to account for system records"
+  },
+  {
+    "hash": "ad950730",
+    "message": "\ud83d\udce6 release: v15.0.0b3.dev1"
+  },
+  {
+    "hash": "cf5d08dc",
+    "message": "chore(deps-dev): bump brace-expansion"
+  },
+  {
+    "hash": "12806ed0",
+    "message": "fix: migrate role ids to names across relevant tables w/ new constraints"
+  },
+  {
+    "hash": "337be050",
+    "message": "feat(upgrade): migrate role ids to names patch"
+  },
+  {
+    "hash": "53d76b0a",
+    "message": "fix(config): update deprecated CACHE_TYPE value (#3558)"
+  },
+  {
+    "hash": "773633e8",
+    "message": "\ud83d\udce6 release: v15.0.0b3.dev0"
+  },
+  {
+    "hash": "3098bf66",
+    "message": "chore(deps): bump invenio-rdm-records to v35.x"
+  },
+  {
+    "hash": "311b0e4b",
+    "message": "fix(request_ui): properly fetch subcommunity checks"
+  },
+  {
+    "hash": "557fc660",
+    "message": "fix(requests): pass community_id to get_runs"
+  },
+  {
+    "hash": "9c335a99",
+    "message": "feat(requests): added endpoint to trigger rerunning a check"
+  },
+  {
+    "hash": "e95f276c",
+    "message": "feat(ui): add anchor for active tab across page reloads"
+  },
+  {
+    "hash": "547f814f",
+    "message": "views: added comunity slug in request render template"
+  },
+  {
+    "hash": "3c214b84",
+    "message": "feat(checks): add subcommunity checks tab"
+  }
+]

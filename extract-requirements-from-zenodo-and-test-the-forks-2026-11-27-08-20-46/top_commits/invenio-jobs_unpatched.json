@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "bffd17c",
+    "message": "release: v12.0.2"
+  },
+  {
+    "hash": "09af366",
+    "message": "fix(tests): Check if last successful run is picked up"
+  },
+  {
+    "hash": "a301c87",
+    "message": "refactor(results): Don't fetch last_runs for list results"
+  },
+  {
+    "hash": "9e460ea",
+    "message": "release: v12.0.1"
+  },
+  {
+    "hash": "3344f5c",
+    "message": "fix(template): overwrite correct js bundles"
+  },
+  {
+    "hash": "e589673",
+    "message": "release: v12.0.0"
+  },
+  {
+    "hash": "c51c4dc",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "011127e",
+    "message": "feat: upgrade to react 18"
+  },
+  {
+    "hash": "eb16b75",
+    "message": "release: v11.1.0"
+  },
+  {
+    "hash": "371ccc7",
+    "message": "feat(performance): add index on jobs_run for job_id"
+  },
+  {
+    "hash": "254335a",
+    "message": "release: v11.0.4"
+  },
+  {
+    "hash": "4088e16",
+    "message": "fix(jobs): handle null args on job creation"
+  },
+  {
+    "hash": "a201917",
+    "message": "release: v11.0.3"
+  },
+  {
+    "hash": "45a8c8a",
+    "message": "fix: subtasks_closed db-side default"
+  },
+  {
+    "hash": "f2f0bf7",
+    "message": "release: v11.0.2"
+  },
+  {
+    "hash": "3b74023",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "69ac6b5",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "c544e23",
+    "message": "release: v11.0.1"
+  },
+  {
+    "hash": "559965a",
+    "message": "fix: preserve saved job arguments for edit and run"
+  },
+  {
+    "hash": "d5e4ac5",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "27f0295",
+    "message": "release: v11.0.0"
+  },
+  {
+    "hash": "f08440f",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "cf00a20",
+    "message": "chore(packaging): exclude .git-blame-ignore-revs from distribution"
+  },
+  {
+    "hash": "7c4ba51",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "1a175e0",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "6beffd4",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "435375c",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "b6befca",
+    "message": "ui: add delete button"
+  },
+  {
+    "hash": "c62d505",
+    "message": "i18n: update format strings for error messages"
+  },
+  {
+    "hash": "8de980b",
+    "message": "release: v9.0.0"
+  },
+  {
+    "hash": "609c863",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "7774e20",
+    "message": "chore: switch to opensearch2 in tests"
+  },
+  {
+    "hash": "b9292e1",
+    "message": "fix(tests): alembic bug workaround"
+  },
+  {
+    "hash": "48e9f12",
+    "message": "fix: Using server defaults in model"
+  },
+  {
+    "hash": "c007827",
+    "message": "fix: added missing alembic dependency on invenio-accounts"
+  },
+  {
+    "hash": "3777cd2",
+    "message": "release: v8.0.1"
+  },
+  {
+    "hash": "92153e6",
+    "message": "fix(alembic): recipes down versions and branch merge"
+  },
+  {
+    "hash": "ad0563a",
+    "message": "release: v8.0.0"
+  },
+  {
+    "hash": "8f23a9b",
+    "message": "utils: enable translations in status messages"
+  },
+  {
+    "hash": "3a1b43c",
+    "message": "logs: fix logs ordering, group by subtask"
+  },
+  {
+    "hash": "a402542",
+    "message": "release: v7.1.0"
+  },
+  {
+    "hash": "07c7fb6",
+    "message": "notifications: Enabled email notifications on jobs"
+  },
+  {
+    "hash": "0d27164",
+    "message": "\ud83d\udce6 release: v7.0.1"
+  },
+  {
+    "hash": "96c36d9",
+    "message": "jobs: updated last_success condition and update_run"
+  },
+  {
+    "hash": "74388a6",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "5b2fc13",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "faf6c58",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "daba421",
+    "message": "fix: ChangedInMarshmallow4Warning"
+  },
+  {
+    "hash": "88cd571",
+    "message": "fix: RemovedInMarshmallow4Warning"
+  },
+  {
+    "hash": "25f2b66",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  }
+]

@@ -1,0 +1,600 @@
+ Image postgres:18 Pulling 
+ Image redis:7 Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ 9d1f594c66dc Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ e5604524ac8c Pulling fs layer 0B
+ 46f4de2e4236 Pulling fs layer 0B
+ fe7bbed45059 Pulling fs layer 0B
+ b14c48cb507d Pulling fs layer 0B
+ 0189f02e683f Pulling fs layer 0B
+ 817018563f08 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ fb36845717af Pulling fs layer 0B
+ b1dd3d113aab Pulling fs layer 0B
+ 3ed90300cc1a Pulling fs layer 0B
+ dcadfd589ed7 Pulling fs layer 0B
+ a13218a43344 Pulling fs layer 0B
+ 7cb67b3b537a Pulling fs layer 0B
+ 84a852dae169 Pulling fs layer 0B
+ 0f12a37b90bb Pulling fs layer 0B
+ c1436cf65049 Pulling fs layer 0B
+ 0afa8bd0fe3a Pulling fs layer 0B
+ a1361b767ece Pulling fs layer 0B
+ 1c59edd7eb40 Pulling fs layer 0B
+ 8e4857f35fce Pulling fs layer 0B
+ 7fe3468bf416 Pulling fs layer 0B
+ edf2405c6afe Pulling fs layer 0B
+ 61061a425fb0 Pulling fs layer 0B
+ 40748add9f4f Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ 4f4fb700ef54 Already exists 0B
+ 9d1f594c66dc Download complete 0B
+ 817018563f08 Download complete 0B
+ e5604524ac8c Download complete 0B
+ 0189f02e683f Downloading 4.194MB
+ 3ed90300cc1a Download complete 0B
+ a13218a43344 Downloading 7.34MB
+ fe7bbed45059 Download complete 0B
+ 46f4de2e4236 Downloading 11.53MB
+ b14c48cb507d Downloading 4.194MB
+ 7fe3468bf416 Download complete 0B
+ 1c59edd7eb40 Download complete 0B
+ fb36845717af Download complete 0B
+ b1dd3d113aab Downloading 11.53MB
+ 8e4857f35fce Download complete 0B
+ dcadfd589ed7 Download complete 0B
+ 7cb67b3b537a Download complete 0B
+ 0afa8bd0fe3a Download complete 0B
+ b1dd3d113aab Downloading 20.97MB
+ a13218a43344 Downloading 15.36MB
+ 46f4de2e4236 Downloading 20.97MB
+ edf2405c6afe Downloading 7.34MB
+ b14c48cb507d Downloading 13.63MB
+ c1436cf65049 Download complete 0B
+ 40748add9f4f Downloading 7.34MB
+ 0189f02e683f Download complete 0B
+ 84a852dae169 Download complete 0B
+ 0f12a37b90bb Download complete 0B
+ b14c48cb507d Downloading 24.12MB
+ 46f4de2e4236 Downloading 31.46MB
+ 40748add9f4f Downloading 19.92MB
+ 971ecd1c75ec Download complete 0B
+ a1361b767ece Download complete 0B
+ edf2405c6afe Downloading 17.83MB
+ 592e13125349 Download complete 0B
+ a13218a43344 Download complete 0B
+ b1dd3d113aab Download complete 0B
+ b1dd3d113aab Extracting 1B
+ edf2405c6afe Downloading 26.21MB
+ 3c65b9afb00e Download complete 0B
+ 40748add9f4f Downloading 26.21MB
+ 46f4de2e4236 Downloading 38.8MB
+ b14c48cb507d Downloading 32.51MB
+ 59e8b6ceb028 Download complete 0B
+ b1dd3d113aab Extracting 1B
+ edf2405c6afe Downloading 40.89MB
+ b14c48cb507d Downloading 46.14MB
+ 46f4de2e4236 Downloading 54.53MB
+ 40748add9f4f Download complete 0B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 58.72MB
+ 61061a425fb0 Downloading 6.101kB
+ 46f4de2e4236 Downloading 70.25MB
+ b14c48cb507d Download complete 0B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 88.08MB
+ 61061a425fb0 Download complete 0B
+ edf2405c6afe Downloading 74.45MB
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 107MB
+ edf2405c6afe Downloading 90.18MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 108MB
+ 46f4de2e4236 Downloading 124.8MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 143.7MB
+ edf2405c6afe Downloading 121.4MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 166.7MB
+ edf2405c6afe Download complete 0B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 189.8MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 216MB
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 237MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 259MB
+ fb36845717af Pull complete 0B
+ dcadfd589ed7 Pull complete 0B
+ a13218a43344 Extracting 1B
+ b1dd3d113aab Pull complete 0B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Pull complete 0B
+ 46f4de2e4236 Downloading 282.1MB
+ 8e4857f35fce Pull complete 0B
+ a13218a43344 Extracting 1B
+ 0f12a37b90bb Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 306.2MB
+ c1436cf65049 Extracting 1B
+ b14c48cb507d Extracting 2B
+ a13218a43344 Extracting 1B
+ 0f12a37b90bb Pull complete 0B
+ 46f4de2e4236 Downloading 331.4MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 2B
+ c1436cf65049 Pull complete 0B
+ a1361b767ece Extracting 1B
+ 46f4de2e4236 Downloading 353.4MB
+ 4f4fb700ef54 Pull complete 0B
+ 817018563f08 Pull complete 0B
+ 3ed90300cc1a Pull complete 0B
+ b14c48cb507d Extracting 2B
+ a13218a43344 Pull complete 0B
+ Image redis:7 Pulled 
+ a1361b767ece Extracting 1B
+ 46f4de2e4236 Downloading 380.6MB
+ a1361b767ece Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 412.1MB
+ 7fe3468bf416 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 84a852dae169 Pull complete 0B
+ a1361b767ece Pull complete 0B
+ 7fe3468bf416 Pull complete 0B
+ 46f4de2e4236 Downloading 441.5MB
+ 0afa8bd0fe3a Pull complete 0B
+ edf2405c6afe Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 466.6MB
+ edf2405c6afe Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 496MB
+ edf2405c6afe Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 519MB
+ edf2405c6afe Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 546.3MB
+ edf2405c6afe Extracting 1B
+ 0189f02e683f Extracting 1B
+ b14c48cb507d Pull complete 0B
+ 46f4de2e4236 Downloading 572.5MB
+ fe7bbed45059 Pull complete 0B
+ 0189f02e683f Pull complete 0B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 602.9MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 635.4MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 663.7MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 696.3MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 727.7MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 756MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 785.4MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 818.9MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 851.4MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 881.9MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 913.3MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 944.8MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 978.3MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.009GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.041GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.073GB
+ edf2405c6afe Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Pull complete 0B
+ 7cb67b3b537a Pull complete 0B
+ 61061a425fb0 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ Image postgres:18 Pulled 
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Download complete 0B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Pull complete 0B
+ 4f4fb700ef54 Pull complete 0B
+ e5604524ac8c Pull complete 0B
+ 9d1f594c66dc Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-redis-1 Started 
+ Container docker_services_cli-postgresql-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_communities
+plugins: pydocstyle-2.4.0, platformdirs-4.14.8, isort-4.0.0, black-0.6.0, cov-7.1.0, flask-1.3.0, Faker-40.63.0, pycodestyle-2.5.0, github-actions-annotate-failures-0.4.2, invenio-4.1.0
+collected 322 items
+::warning file=../../../../../../../../../opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py,line=88::CommunityRelationMixin has been moved to invenio_rdm_records.records.models. Importing from invenio_communities.records.records.models is deprecated and will be removed in a future release.
+
+tests/cache/test_identity_redis_cache.py .......                         [  2%]
+tests/communities/test_alembic.py s                                      [  2%]
+tests/communities/test_cli.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.                                         [  3%]
+tests/communities/test_collections_permissions.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+...                   [  4%]
+tests/communities/test_community_ui_serializer.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+                      [  4%]
+tests/communities/test_components.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.....                              [  6%]
+tests/communities/test_parent_community.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.....                        [  8%]
+tests/communities/test_relations_organizations.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.....                 [ 10%]
+tests/communities/test_relations_types.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.....                         [ 12%]
+tests/communities/test_resources.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+..................                  [ 18%]
+tests/communities/test_schema.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+                                       [ 18%]
+tests/communities/test_services.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.....................                [ 25%]
+tests/communities/test_subcommunities.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.....                          [ 27%]
+tests/communities/test_tombstone.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+......                              [ 29%]
+tests/communities/test_ui.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+                                           [ 29%]
+tests/members/test_members_components.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+....                           [ 31%]
+tests/members/test_members_group_notifications.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.................     [ 36%]
+tests/members/test_members_group_notifications_resource.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+............ [ 40%]
+                                                                         [ 40%]
+tests/members/test_members_no_groups.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.......                         [ 43%]
+tests/members/test_members_notifications.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.........                   [ 46%]
+tests/members/test_members_resource.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.................                [ 51%]
+tests/members/test_members_services.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+................................ [ 62%]
+........................................................................ [ 84%]
+..........................                                               [ 92%]
+tests/test_alembic.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oauthclient/alembic/bff1f190b9bd_add_timestamp_oauthclient.py,line=22::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+                                                  [ 92%]
+tests/test_notifications.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+                                            [ 93%]
+tests/test_permissions.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+.....................                         [100%]
+
+=============================== warnings summary ===============================
+../../../../../../../../../opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88
+  /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: DeprecationWarning: CommunityRelationMixin has been moved to invenio_rdm_records.records.models. Importing from invenio_communities.records.records.models is deprecated and will be removed in a future release.
+    return _bootstrap._gcd_import(name[level:], package, level)
+
+tests/communities/test_cli.py: 1 warning
+tests/communities/test_collections_permissions.py: 1 warning
+tests/communities/test_community_ui_serializer.py: 1 warning
+tests/communities/test_components.py: 1 warning
+tests/communities/test_parent_community.py: 1 warning
+tests/communities/test_relations_organizations.py: 1 warning
+tests/communities/test_relations_types.py: 1 warning
+tests/communities/test_resources.py: 1 warning
+tests/communities/test_schema.py: 1 warning
+tests/communities/test_services.py: 1 warning
+tests/communities/test_subcommunities.py: 1 warning
+tests/communities/test_tombstone.py: 1 warning
+tests/communities/test_ui.py: 1 warning
+tests/members/test_members_components.py: 1 warning
+tests/members/test_members_group_notifications.py: 1 warning
+tests/members/test_members_group_notifications_resource.py: 1 warning
+tests/members/test_members_no_groups.py: 1 warning
+tests/members/test_members_notifications.py: 1 warning
+tests/members/test_members_resource.py: 1 warning
+tests/members/test_members_services.py: 1 warning
+tests/test_alembic.py: 1 warning
+tests/test_notifications.py: 1 warning
+tests/test_permissions.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py:183: UserWarning: Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:ip-10-0-138-201:
+    warnings.warn(
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/alembic/config.py:572: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oauthclient/alembic/bff1f190b9bd_add_timestamp_oauthclient.py:22: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    current_date = datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-communities/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------------------------------------------
+invenio_communities/__init__.py                                                         4      0   100%
+invenio_communities/administration/__init__.py                                          0      0   100%
+invenio_communities/administration/communities.py                                      42      1    98%   73
+invenio_communities/alembic/02cd82910727_update_role_id_type_upgrade.py                13      1    92%   66
+invenio_communities/alembic/5b478fe7ef7f_create_featured_communities_table.py          12      1    92%   50
+invenio_communities/alembic/5c68d45c80f0_add_deletion_status_to_communities.py         27      8    70%   25-37, 63
+invenio_communities/alembic/37b21951084c_update_role_id_type_downgrade.py              13      4    69%   23-47
+invenio_communities/alembic/72b37bb4119c_create_indeces_for_bucket_id.py               11      2    82%   33-36
+invenio_communities/alembic/90642d415317_create_communities_branch.py                   8      1    88%   20
+invenio_communities/alembic/1777209602_removed_index_by_file_id_added_indices_.py      13      3    77%   45-55
+invenio_communities/alembic/__init__.py                                                 0      0   100%
+invenio_communities/alembic/a3f5a8635cbb_remove_version_table.py                       22      6    73%   44-107
+invenio_communities/alembic/c3feb26c7041_change_datetime_types.py                      15      4    73%   37-46
+invenio_communities/alembic/de9c14cbb0b2_create_communities_tables.py                  24      7    71%   173-188
+invenio_communities/alembic/dfbc96c5211f_add_group_notification_preference.py          16      2    88%   58-59
+invenio_communities/alembic/f701a32e6fbe_create_communities_members_table.py           14      2    86%   71-72
+invenio_communities/alembic/fbe746957cfc_create_member_tables.py                       36     13    64%   153-192
+invenio_communities/cache/__init__.py                                                   0      0   100%
+invenio_communities/cache/cache.py                                                     18      0   100%
+invenio_communities/cache/redis.py                                                     37      1    97%   67
+invenio_communities/cli.py                                                             76     21    72%   42-44, 51-57, 64-69, 94-95, 103-107, 119-121
+invenio_communities/communities/__init__.py                                             3      0   100%
+invenio_communities/communities/dumpers/__init__.py                                     0      0   100%
+invenio_communities/communities/dumpers/featured.py                                    16      0   100%
+invenio_communities/communities/entity_resolvers.py                                    32      9    72%   30-43, 64, 75
+invenio_communities/communities/records/__init__.py                                     0      0   100%
+invenio_communities/communities/records/api.py                                         45      0   100%
+invenio_communities/communities/records/jsonschemas/__init__.py                         0      0   100%
+invenio_communities/communities/records/mappings/__init__.py                            0      0   100%
+invenio_communities/communities/records/mappings/os-v1/__init__.py                      0      0   100%
+invenio_communities/communities/records/mappings/os-v2/__init__.py                      0      0   100%
+invenio_communities/communities/records/mappings/v7/__init__.py                         0      0   100%
+invenio_communities/communities/records/models.py                                      22      0   100%
+invenio_communities/communities/records/systemfields/__init__.py                        0      0   100%
+invenio_communities/communities/records/systemfields/access.py                        151     14    91%   131, 143, 149, 154, 165, 182, 194, 240, 264, 284-291, 304
+invenio_communities/communities/records/systemfields/children.py                       50      3    94%   26, 69, 72
+invenio_communities/communities/records/systemfields/deletion_status.py                59      6    90%   53, 57, 66, 71-74
+invenio_communities/communities/records/systemfields/is_verified.py                    11      0   100%
+invenio_communities/communities/records/systemfields/parent_community.py               53      2    96%   58-59
+invenio_communities/communities/records/systemfields/pidslug.py                        44      3    93%   36, 46, 62
+invenio_communities/communities/records/systemfields/tombstone.py                      96      4    96%   40, 136, 142, 174
+invenio_communities/communities/resources/__init__.py                                   3      0   100%
+invenio_communities/communities/resources/args.py                                       5      0   100%
+invenio_communities/communities/resources/config.py                                    21      0   100%
+invenio_communities/communities/resources/resource.py                                  96      8    92%   70-75, 86-93, 125-126, 162-168
+invenio_communities/communities/resources/serializer.py                                 5      0   100%
+invenio_communities/communities/resources/ui_schema.py                                 75     17    77%   28-29, 44-55, 117-121, 128
+invenio_communities/communities/schema.py                                             133      0   100%
+invenio_communities/communities/services/__init__.py                                    4      0   100%
+invenio_communities/communities/services/components.py                                189     10    95%   41, 52, 60, 75, 255, 281-282, 325, 329, 346
+invenio_communities/communities/services/config.py                                     52      2    96%   76-80
+invenio_communities/communities/services/facets.py                                      6      0   100%
+invenio_communities/communities/services/links.py                                      30      0   100%
+invenio_communities/communities/services/results.py                                    37      3    92%   72, 76, 96
+invenio_communities/communities/services/search_params.py                              14      1    93%   22
+invenio_communities/communities/services/service.py                                   259     21    92%   122, 325-326, 493, 500, 540-567, 654-658, 694-700, 736
+invenio_communities/communities/services/sort.py                                       10      2    80%   27-28
+invenio_communities/communities/services/uow.py                                        14      0   100%
+invenio_communities/config.py                                                          64      0   100%
+invenio_communities/errors.py                                                          32      3    91%   43, 70, 102
+invenio_communities/ext.py                                                             76     12    84%   137-138, 143-191
+invenio_communities/fixtures/__init__.py                                                0      0   100%
+invenio_communities/fixtures/demo.py                                                    5      0   100%
+invenio_communities/fixtures/tasks.py                                                  42     13    69%   33-34, 37-38, 40-45, 71-74
+invenio_communities/generators.py                                                     181     24    87%   70, 103-108, 148-149, 197-202, 206-207, 211-212, 232, 236, 280, 290, 294, 360, 374, 392
+invenio_communities/members/__init__.py                                                 4      0   100%
+invenio_communities/members/errors.py                                                   3      0   100%
+invenio_communities/members/records/__init__.py                                         3      0   100%
+invenio_communities/members/records/api.py                                            105      2    98%   101-104
+invenio_communities/members/records/dumpers.py                                         13      0   100%
+invenio_communities/members/records/mappings/__init__.py                                0      0   100%
+invenio_communities/members/records/mappings/os-v1/__init__.py                          0      0   100%
+invenio_communities/members/records/mappings/os-v2/__init__.py                          0      0   100%
+invenio_communities/members/records/mappings/v7/__init__.py                             0      0   100%
+invenio_communities/members/records/models.py                                          59      2    97%   103-104
+invenio_communities/members/resources/__init__.py                                       3      0   100%
+invenio_communities/members/resources/config.py                                        13      0   100%
+invenio_communities/members/resources/resource.py                                      68      0   100%
+invenio_communities/members/services/__init__.py                                        3      0   100%
+invenio_communities/members/services/components.py                                     45      9    80%   29, 32, 36-43, 64
+invenio_communities/members/services/config.py                                         50      0   100%
+invenio_communities/members/services/facets.py                                          7      0   100%
+invenio_communities/members/services/fields.py                                         22      8    64%   34-41
+invenio_communities/members/services/links.py                                          65      3    95%   17, 110, 200
+invenio_communities/members/services/request.py                                        85      0   100%
+invenio_communities/members/services/schemas.py                                        93      1    99%   76
+invenio_communities/members/services/service.py                                       238      6    97%   363, 492, 626, 630, 634, 638
+invenio_communities/notifications/__init__.py                                           0      0   100%
+invenio_communities/notifications/builders.py                                         108      1    99%   398
+invenio_communities/notifications/generators.py                                        35      1    97%   63
+invenio_communities/patch_info.py                                                       6      2    67%   92-94
+invenio_communities/permissions.py                                                     52      0   100%
+invenio_communities/proxies.py                                                          8      0   100%
+invenio_communities/records/__init__.py                                                 0      0   100%
+invenio_communities/records/records/__init__.py                                         0      0   100%
+invenio_communities/records/records/models.py                                          19      3    84%   33, 42, 51
+invenio_communities/records/records/systemfields/__init__.py                            2      0   100%
+invenio_communities/records/records/systemfields/communities/__init__.py                0      0   100%
+invenio_communities/records/records/systemfields/communities/context.py                 4      1    75%   23
+invenio_communities/records/records/systemfields/communities/field.py                  40     29    28%   20-23, 30-31, 39-47, 53-55, 59-106, 110-113
+invenio_communities/records/records/systemfields/communities/manager.py               101     72    29%   24-29, 36-40, 47-50, 61-80, 84-98, 103-106, 111-122, 127, 134, 138-139, 144-153, 158, 163-165, 170, 179-182, 186, 194-200, 204-212
+invenio_communities/requests/user_moderation/__init__.py                                2      0   100%
+invenio_communities/requests/user_moderation/actions.py                                43     31    28%   29-57, 67-89, 99-103, 112-121
+invenio_communities/requests/user_moderation/tasks.py                                  16      8    50%   16-22, 28-32
+invenio_communities/roles.py                                                           61      1    98%   76
+invenio_communities/searchapp.py                                                        5      1    80%   14
+invenio_communities/subcommunities/__init__.py                                          3      0   100%
+invenio_communities/subcommunities/resources/__init__.py                                3      0   100%
+invenio_communities/subcommunities/resources/config.py                                 20      0   100%
+invenio_communities/subcommunities/resources/resource.py                               18      0   100%
+invenio_communities/subcommunities/services/__init__.py                                 4      0   100%
+invenio_communities/subcommunities/services/config.py                                  22      0   100%
+invenio_communities/subcommunities/services/errors.py                                   2      0   100%
+invenio_communities/subcommunities/services/request.py                                 67     16    76%   47-54, 93-105, 113-125, 134-141, 184, 197
+invenio_communities/subcommunities/services/schema.py                                  16      1    94%   46
+invenio_communities/subcommunities/services/service.py                                 62     11    82%   42, 52, 81, 116, 133, 163-172
+invenio_communities/tasks.py                                                            5      1    80%   17
+invenio_communities/utils.py                                                           55      5    91%   102, 105-108
+invenio_communities/views/__init__.py                                                   3      0   100%
+invenio_communities/views/api.py                                                       11      0   100%
+invenio_communities/views/communities.py                                              184    115    38%   169, 179-191, 196, 201, 209-210, 218-219, 231-260, 269-277, 296-309, 329-334, 346-371, 388-398, 417-421, 439-443, 455-459, 472-476, 488-492, 506-509, 522-525, 539-543, 556-559, 571-580
+invenio_communities/views/decorators.py                                                27     10    63%   23-33, 46-52
+invenio_communities/views/template_loader.py                                           24      2    92%   41-42
+invenio_communities/views/ui.py                                                       104     45    57%   51, 56-67, 78-81, 86, 97-100, 105-108, 113-120, 149-151, 156-166, 170, 279-281, 286-296, 305
+invenio_communities/webpack.py                                                          2      0   100%
+-----------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                4349    621    86%
+=========== 321 passed, 1 skipped, 26 warnings in 123.01s (0:02:03) ============
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

@@ -1,0 +1,1085 @@
+ Image postgres:18 Pulling 
+ Image rabbitmq:3-management Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ Image redis:7 Pulling 
+ fb36845717af Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 817018563f08 Pulling fs layer 0B
+ a13218a43344 Pulling fs layer 0B
+ b1dd3d113aab Pulling fs layer 0B
+ dcadfd589ed7 Pulling fs layer 0B
+ 3ed90300cc1a Pulling fs layer 0B
+ 40748add9f4f Pulling fs layer 0B
+ 7fe3468bf416 Pulling fs layer 0B
+ 61061a425fb0 Pulling fs layer 0B
+ 8e4857f35fce Pulling fs layer 0B
+ 7cb67b3b537a Pulling fs layer 0B
+ 0f12a37b90bb Pulling fs layer 0B
+ 1c59edd7eb40 Pulling fs layer 0B
+ edf2405c6afe Pulling fs layer 0B
+ 84a852dae169 Pulling fs layer 0B
+ c1436cf65049 Pulling fs layer 0B
+ a1361b767ece Pulling fs layer 0B
+ 0afa8bd0fe3a Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ b14c48cb507d Pulling fs layer 0B
+ 46f4de2e4236 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ fe7bbed45059 Pulling fs layer 0B
+ e5604524ac8c Pulling fs layer 0B
+ 9d1f594c66dc Pulling fs layer 0B
+ 0189f02e683f Pulling fs layer 0B
+ d686b50ce172 Pulling fs layer 0B
+ d63c4408fdb7 Pulling fs layer 0B
+ 3fadc669ef11 Pulling fs layer 0B
+ efa05c660812 Pulling fs layer 0B
+ 7084ac8f4ab6 Pulling fs layer 0B
+ f4e7f62f4b80 Pulling fs layer 0B
+ 20043066d3d5 Pulling fs layer 0B
+ 5e1c03b67a78 Pulling fs layer 0B
+ beb0d870d438 Pulling fs layer 0B
+ 14e6209d5fa8 Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ b1dd3d113aab Downloading 4.194MB
+ fb36845717af Downloading 873B
+ dcadfd589ed7 Downloading 1.1kB
+ 817018563f08 Download complete 0B
+ 0afa8bd0fe3a Download complete 0B
+ edf2405c6afe Downloading 7.34MB
+ b1dd3d113aab Downloading 18.87MB
+ a13218a43344 Downloading 2.097MB
+ fe7bbed45059 Download complete 0B
+ b14c48cb507d Downloading 4.194MB
+ 8e4857f35fce Download complete 0B
+ 9d1f594c66dc Download complete 0B
+ fb36845717af Download complete 0B
+ f4e7f62f4b80 Download complete 0B
+ d63c4408fdb7 Downloading 8.389MB
+ 7fe3468bf416 Download complete 0B
+ e5604524ac8c Download complete 0B
+ efa05c660812 Download complete 0B
+ 5e1c03b67a78 Downloading 620B
+ beb0d870d438 Downloading 9.462kB
+ dcadfd589ed7 Download complete 0B
+ 7cb67b3b537a Download complete 0B
+ 3ed90300cc1a Download complete 0B
+ 14e6209d5fa8 Download complete 0B
+ 1c59edd7eb40 Download complete 0B
+ 61061a425fb0 Download complete 0B
+ 0f12a37b90bb Downloading 1.049MB
+ c1436cf65049 Download complete 0B
+ a1361b767ece Downloading 1.049MB
+ d686b50ce172 Downloading 3.146MB
+ 3fadc669ef11 Downloading 3.146MB
+ 7084ac8f4ab6 Downloading 5.243MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 5.243MB
+ d63c4408fdb7 Downloading 13.63MB
+ 0f12a37b90bb Downloading 6.291MB
+ a1361b767ece Downloading 5.243MB
+ 40748add9f4f Downloading 4.194MB
+ edf2405c6afe Downloading 13.63MB
+ 84a852dae169 Download complete 0B
+ 5e1c03b67a78 Download complete 0B
+ 592e13125349 Downloading 2.373MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 4.194MB
+ b14c48cb507d Downloading 9.437MB
+ 971ecd1c75ec Download complete 0B
+ b1dd3d113aab Downloading 24.12MB
+ a13218a43344 Downloading 7.34MB
+ beb0d870d438 Download complete 0B
+ 0f12a37b90bb Downloading 6.443MB
+ a1361b767ece Downloading 8.204MB
+ 40748add9f4f Downloading 9.437MB
+ edf2405c6afe Downloading 18.87MB
+ 59e8b6ceb028 Download complete 0B
+ 0189f02e683f Download complete 0B
+ 46f4de2e4236 Downloading 7.34MB
+ b14c48cb507d Downloading 15.73MB
+ 592e13125349 Download complete 0B
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 12.58MB
+ d686b50ce172 Downloading 7.34MB
+ 3fadc669ef11 Downloading 9.437MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ 7ec4c696b8bb Download complete 0B
+ 20043066d3d5 Downloading 10.49MB
+ d63c4408fdb7 Downloading 18.87MB
+ 16ef6b12768c Downloading 3.088MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 12.58MB
+ b14c48cb507d Downloading 15.73MB
+ 46f4de2e4236 Downloading 8.389MB
+ d63c4408fdb7 Downloading 18.87MB
+ 16ef6b12768c Downloading 3.088MB
+ d686b50ce172 Downloading 7.34MB
+ 3fadc669ef11 Downloading 9.437MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ 20043066d3d5 Downloading 10.49MB
+ 40748add9f4f Downloading 9.437MB
+ edf2405c6afe Downloading 18.87MB
+ 3c65b9afb00e Downloading 1.049MB
+ 0f12a37b90bb Downloading 6.443MB
+ a1361b767ece Downloading 8.204MB
+ d686b50ce172 Downloading 12.47MB
+ 3fadc669ef11 Downloading 14.68MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ 20043066d3d5 Downloading 18.87MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 0f12a37b90bb Downloading 6.443MB
+ a1361b767ece Downloading 8.204MB
+ 40748add9f4f Downloading 14.68MB
+ edf2405c6afe Downloading 24.12MB
+ 3c65b9afb00e Downloading 5.243MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ b14c48cb507d Downloading 20.97MB
+ 46f4de2e4236 Downloading 12.58MB
+ 0f12a37b90bb Downloading 6.443MB
+ d686b50ce172 Downloading 12.47MB
+ a1361b767ece Downloading 8.204MB
+ 3fadc669ef11 Downloading 14.68MB
+ 40748add9f4f Downloading 14.68MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ edf2405c6afe Downloading 24.12MB
+ 20043066d3d5 Downloading 18.87MB
+ 3c65b9afb00e Downloading 5.243MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ b14c48cb507d Downloading 20.97MB
+ 46f4de2e4236 Downloading 12.58MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 16ef6b12768c Downloading 3.088MB
+ d686b50ce172 Downloading 12.47MB
+ 3fadc669ef11 Downloading 15.73MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ 20043066d3d5 Downloading 19.92MB
+ d63c4408fdb7 Downloading 21.31MB
+ 40748add9f4f Downloading 15.73MB
+ edf2405c6afe Downloading 25.17MB
+ 3c65b9afb00e Downloading 6.291MB
+ 0f12a37b90bb Downloading 6.443MB
+ a1361b767ece Downloading 8.204MB
+ 46f4de2e4236 Downloading 13.63MB
+ b14c48cb507d Downloading 22.02MB
+ a13218a43344 Downloading 15.36MB
+ b1dd3d113aab Downloading 28.25MB
+ edf2405c6afe Downloading 33.55MB
+ 3c65b9afb00e Downloading 6.319MB
+ d63c4408fdb7 Downloading 21.31MB
+ 0f12a37b90bb Download complete 0B
+ b14c48cb507d Downloading 30.41MB
+ 46f4de2e4236 Downloading 22.02MB
+ 16ef6b12768c Download complete 0B
+ a1361b767ece Download complete 0B
+ 40748add9f4f Downloading 24.12MB
+ a13218a43344 Download complete 0B
+ b1dd3d113aab Download complete 0B
+ d686b50ce172 Download complete 0B
+ 3fadc669ef11 Downloading 24.12MB
+ 7084ac8f4ab6 Download complete 0B
+ 20043066d3d5 Downloading 28.31MB
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 34.6MB
+ b14c48cb507d Downloading 42.99MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 45.09MB
+ d63c4408fdb7 Download complete 0B
+ 3fadc669ef11 Downloading 38.8MB
+ 20043066d3d5 Downloading 29.72MB
+ 3c65b9afb00e Download complete 0B
+ b1dd3d113aab Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Downloading 29.72MB
+ edf2405c6afe Downloading 60.82MB
+ 40748add9f4f Downloading 29.84MB
+ 46f4de2e4236 Downloading 57.67MB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Downloading 29.72MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 61.87MB
+ 46f4de2e4236 Downloading 58.72MB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 59.77MB
+ b14c48cb507d Downloading 54.57MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 62.91MB
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 63.96MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 60.82MB
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 63.96MB
+ 3fadc669ef11 Downloading 43.48MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 60.82MB
+ b1dd3d113aab Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 81.79MB
+ 46f4de2e4236 Downloading 75.5MB
+ b14c48cb507d Downloading 54.57MB
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 98.57MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 103.8MB
+ 3fadc669ef11 Downloading 43.48MB
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Download complete 0B
+ 46f4de2e4236 Downloading 116.4MB
+ 40748add9f4f Download complete 0B
+ edf2405c6afe Downloading 118.5MB
+ 3fadc669ef11 Download complete 0B
+ 20043066d3d5 Download complete 0B
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 137.4MB
+ edf2405c6afe Downloading 121.4MB
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ 46f4de2e4236 Downloading 158.3MB
+ b1dd3d113aab Extracting 2B
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 183.5MB
+ edf2405c6afe Downloading 121.4MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ 46f4de2e4236 Downloading 203.4MB
+ b1dd3d113aab Extracting 2B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 46f4de2e4236 Downloading 222.3MB
+ edf2405c6afe Downloading 121.4MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 40748add9f4f Extracting 1B
+ 20043066d3d5 Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ 46f4de2e4236 Downloading 242.2MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 261.1MB
+ edf2405c6afe Download complete 0B
+ b1dd3d113aab Extracting 2B
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 283.1MB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 303MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 2B
+ 40748add9f4f Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 46f4de2e4236 Downloading 325.1MB
+ fb36845717af Pull complete 0B
+ b14c48cb507d Extracting 1B
+ dcadfd589ed7 Pull complete 0B
+ 20043066d3d5 Extracting 1B
+ a13218a43344 Extracting 1B
+ b1dd3d113aab Pull complete 0B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 346MB
+ b14c48cb507d Extracting 2B
+ a13218a43344 Extracting 1B
+ 20043066d3d5 Extracting 2B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 368.1MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 389MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 40748add9f4f Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 46f4de2e4236 Downloading 407.9MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 424.7MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 20043066d3d5 Pull complete 0B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 450.9MB
+ a13218a43344 Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 3fadc669ef11 Extracting 1B
+ 40748add9f4f Pull complete 0B
+ 46f4de2e4236 Downloading 474MB
+ 8e4857f35fce Extracting 1B
+ 3ed90300cc1a Extracting 1B
+ b14c48cb507d Extracting 2B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 502.3MB
+ 8e4857f35fce Pull complete 0B
+ 3ed90300cc1a Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 522.2MB
+ b14c48cb507d Extracting 2B
+ 0f12a37b90bb Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 541.1MB
+ 4f4fb700ef54 Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 0f12a37b90bb Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 561MB
+ 817018563f08 Pull complete 0B
+ b14c48cb507d Extracting 3B
+ 0f12a37b90bb Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 584.1MB
+ b14c48cb507d Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 0f12a37b90bb Pull complete 0B
+ Image redis:7 Pulled 
+ 46f4de2e4236 Downloading 599.8MB
+ b14c48cb507d Extracting 3B
+ c1436cf65049 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 622.9MB
+ c1436cf65049 Pull complete 0B
+ b14c48cb507d Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ a1361b767ece Extracting 1B
+ 46f4de2e4236 Downloading 644.9MB
+ a1361b767ece Extracting 1B
+ b14c48cb507d Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 667.9MB
+ b14c48cb507d Extracting 3B
+ a1361b767ece Extracting 1B
+ 46f4de2e4236 Downloading 696.3MB
+ b14c48cb507d Extracting 3B
+ a1361b767ece Extracting 1B
+ 3fadc669ef11 Pull complete 0B
+ 46f4de2e4236 Downloading 723.5MB
+ 84a852dae169 Extracting 1B
+ a1361b767ece Pull complete 0B
+ 0189f02e683f Extracting 1B
+ b14c48cb507d Pull complete 0B
+ 7084ac8f4ab6 Extracting 1B
+ 46f4de2e4236 Downloading 746.6MB
+ 0189f02e683f Extracting 1B
+ 7084ac8f4ab6 Extracting 1B
+ 46f4de2e4236 Downloading 750.8MB
+ 0189f02e683f Extracting 1B
+ 84a852dae169 Pull complete 0B
+ 7084ac8f4ab6 Extracting 1B
+ 46f4de2e4236 Downloading 778MB
+ 7fe3468bf416 Pull complete 0B
+ 7084ac8f4ab6 Extracting 1B
+ 0189f02e683f Pull complete 0B
+ 46f4de2e4236 Downloading 808.5MB
+ 0afa8bd0fe3a Extracting 1B
+ beb0d870d438 Extracting 1B
+ 7084ac8f4ab6 Pull complete 0B
+ 46f4de2e4236 Downloading 838.9MB
+ 0afa8bd0fe3a Pull complete 0B
+ fe7bbed45059 Pull complete 0B
+ beb0d870d438 Pull complete 0B
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 867.2MB
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 893.4MB
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 917.5MB
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 942.7MB
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 968.9MB
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 995.1MB
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 1.028GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.06GB
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Pull complete 0B
+ 46f4de2e4236 Downloading 1.096GB
+ efa05c660812 Pull complete 0B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ f4e7f62f4b80 Pull complete 0B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 5e1c03b67a78 Extracting 1B
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 5e1c03b67a78 Pull complete 0B
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 14e6209d5fa8 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 14e6209d5fa8 Extracting 1B
+ edf2405c6afe Extracting 3B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 14e6209d5fa8 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ Image rabbitmq:3-management Pulled 
+ 46f4de2e4236 Downloading 1.1GB
+ 7cb67b3b537a Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 7cb67b3b537a Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ Image postgres:18 Pulled 
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Download complete 0B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Pull complete 0B
+ 4f4fb700ef54 Pull complete 0B
+ 9d1f594c66dc Pull complete 0B
+ e5604524ac8c Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-postgresql-1 Started 
+ Container docker_services_cli-redis-1 Started 
+ Container docker_services_cli-rabbitmq-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_records_rest
+plugins: github-actions-annotate-failures-0.4.2, black-0.6.0, isort-4.0.0, invenio-4.1.0, pydocstyle-2.4.0, cov-7.1.0, flask-1.3.0, platformdirs-4.14.8, pycodestyle-2.5.0
+collected 134 items
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/pyld/jsonld.py,line=4413::"\?" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\?"? A raw string is also an option.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/pyld/jsonld.py,line=577::"is" with 'int' literal. Did you mean "=="?
+
+tests/test_custom_endpoints.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+                                        [  1%]
+tests/test_custom_fields.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.                                           [  2%]
+tests/test_error_handlers.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                           [  3%]
+tests/test_ext.py ..                                                     [  5%]
+tests/test_facets.py ....::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                         [ 13%]
+tests/test_index_prefixing.py ::error file=workdir/tests/invenio-records-rest/patched/tests/test_index_prefixing.py,line=18::test_index_creation%0A%0AAssertionError: assert {'.plugins-ml...d-1795635382'} == {'test-inveni...d-1795635382'}%0A  %0A  Extra items in the left set:%0A  '.plugins-ml-config'%0A  %0A  Full diff:%0A    {%0A  +     '.plugins-ml-config',%0A        'test-invenio-records-rest-testrecord-1795635382',%0A    }
+F::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+                                         [ 14%]
+tests/test_links.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+                                                   [ 16%]
+tests/test_marshmallow_contrib.py ...                                    [ 18%]
+tests/test_marshmallow_loader.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+..::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+                                  [ 23%]
+tests/test_permissions.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+                                              [ 23%]
+tests/test_pid_resolver.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+                                             [ 24%]
+tests/test_serializer_base.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.                                         [ 26%]
+tests/test_serializer_citeproc.py ....::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                   [ 29%]
+tests/test_serializer_csv.py ...                                         [ 31%]
+tests/test_serializer_datacite.py ....                                   [ 34%]
+tests/test_serializer_dc.py ..                                           [ 35%]
+tests/test_serializer_json.py ...::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                        [ 38%]
+tests/test_serializer_jsonld.py ..                                       [ 39%]
+tests/test_serializer_marshmallow.py ...                                 [ 41%]
+tests/test_serializer_response.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                     [ 43%]
+tests/test_sorter.py ......::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                             [ 48%]
+tests/test_utils.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                               [ 52%]
+tests/test_views_item_delete.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+                                     [ 55%]
+tests/test_views_item_get.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+                                        [ 58%]
+tests/test_views_item_patch.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=375::The patch() method is deprecated and will be removed.
+                                  [ 64%]
+tests/test_views_item_put.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=410::nested transaction already deassociated from connection
+                               [ 74%]
+tests/test_views_list_post.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                   [ 80%]
+tests/test_views_options.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                           [ 82%]
+tests/test_views_search.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+                          [ 97%]
+tests/test_views_serializers.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+                                       [ 98%]
+tests/test_views_suggesters.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=25::nested transaction already deassociated from connection
+                                         [ 99%]
+invenio_records_rest/__init__.py .                                       [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_index_creation ______________________________
+
+app = <Flask 'testapp'>, prefixed_search = <OpenSearch([{}])>
+
+    def test_index_creation(app, prefixed_search):
+        """Sanity check for index creation."""
+        suffix = current_search.current_suffix
+        es_aliases = prefixed_search.indices.get_alias()
+        # Keys are the indices
+>       assert set(es_aliases.keys()) == {
+            "test-invenio-records-rest-testrecord{}".format(suffix),
+        }
+E       AssertionError: assert {'.plugins-ml...d-1795635382'} == {'test-inveni...d-1795635382'}
+E         
+E         Extra items in the left set:
+E         '.plugins-ml-config'
+E         
+E         Full diff:
+E           {
+E         +     '.plugins-ml-config',
+E               'test-invenio-records-rest-testrecord-1795635382',
+E           }
+
+tests/test_index_prefixing.py:18: AssertionError
+------------------------------ Captured log setup ------------------------------
+WARNING  opensearch:base.py:280 DELETE http://localhost:9200/.opensearch-observability [status:404 request:0.001s]
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/pyld/jsonld.py:4413
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/pyld/jsonld.py:4413: SyntaxWarning: "\?" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\?"? A raw string is also an option.
+    and re.match('.*[:/\?#\[\]@]$', id_)
+
+.venv/lib/python3.14/site-packages/pyld/jsonld.py:577
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/pyld/jsonld.py:577: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+    if len(output) is 1 and output[0] == '':
+
+tests/test_custom_endpoints.py: 2 warnings
+tests/test_custom_fields.py: 1 warning
+tests/test_error_handlers.py: 1 warning
+tests/test_facets.py: 8 warnings
+tests/test_index_prefixing.py: 2 warnings
+tests/test_links.py: 2 warnings
+tests/test_marshmallow_loader.py: 5 warnings
+tests/test_permissions.py: 1 warning
+tests/test_pid_resolver.py: 1 warning
+tests/test_serializer_base.py: 1 warning
+tests/test_serializer_citeproc.py: 1 warning
+tests/test_serializer_json.py: 1 warning
+tests/test_serializer_response.py: 2 warnings
+tests/test_sorter.py: 2 warnings
+tests/test_utils.py: 6 warnings
+tests/test_views_item_delete.py: 4 warnings
+tests/test_views_item_get.py: 4 warnings
+tests/test_views_item_patch.py: 8 warnings
+tests/test_views_item_put.py: 13 warnings
+tests/test_views_list_post.py: 8 warnings
+tests/test_views_options.py: 2 warnings
+tests/test_views_search.py: 20 warnings
+tests/test_views_serializers.py: 2 warnings
+tests/test_views_suggesters.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py:71: UserWarning: Set configuration variable SECRET_KEY with random string
+    warnings.warn(
+
+tests/test_custom_endpoints.py: 2 warnings
+tests/test_index_prefixing.py: 1 warning
+tests/test_links.py: 2 warnings
+tests/test_marshmallow_loader.py: 2 warnings
+tests/test_permissions.py: 1 warning
+tests/test_pid_resolver.py: 1 warning
+tests/test_serializer_base.py: 1 warning
+tests/test_views_item_delete.py: 4 warnings
+tests/test_views_item_get.py: 4 warnings
+tests/test_views_item_patch.py: 8 warnings
+tests/test_views_item_put.py: 13 warnings
+tests/test_views_list_post.py: 4 warnings
+tests/test_views_search.py: 20 warnings
+tests/test_views_serializers.py: 2 warnings
+tests/test_views_suggesters.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:302: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_custom_endpoints.py: 2 warnings
+tests/test_links.py: 2 warnings
+tests/test_permissions.py: 1 warning
+tests/test_pid_resolver.py: 1 warning
+tests/test_serializer_base.py: 1 warning
+tests/test_views_item_delete.py: 4 warnings
+tests/test_views_item_get.py: 4 warnings
+tests/test_views_item_patch.py: 6 warnings
+tests/test_views_item_put.py: 11 warnings
+tests/test_views_search.py: 20 warnings
+tests/test_views_serializers.py: 2 warnings
+tests/test_views_suggesters.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/tests/helpers.py:25: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_index_prefixing.py::test_api_views
+tests/test_views_item_delete.py::test_valid_delete
+tests/test_views_item_delete.py::test_delete_deleted
+tests/test_views_item_delete.py::test_delete_with_sqldatabase_error
+tests/test_views_item_patch.py::test_patch_deleted[application/json-patch+json]
+tests/test_views_item_patch.py::test_patch_deleted[application/json-patch+json;charset=utf-8]
+tests/test_views_item_put.py::test_put_on_deleted[application/json]
+tests/test_views_item_put.py::test_put_on_deleted[application/json;charset=utf-8]
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:463: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_marshmallow_loader.py: 1 warning
+tests/test_views_item_patch.py: 4 warnings
+tests/test_views_item_put.py: 9 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:410: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_views_item_patch.py: 12 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:375: DeprecationWarning: The patch() method is deprecated and will be removed.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-records-rest/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                          Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------------------
+invenio_records_rest/__init__.py                                  4      0   100%
+invenio_records_rest/_compat.py                                  11      5    55%   17-23
+invenio_records_rest/config.py                                   29      0   100%
+invenio_records_rest/errors.py                                  116     13    89%   34-37, 54, 107-109, 190-192, 272-276
+invenio_records_rest/ext.py                                      52      1    98%   107
+invenio_records_rest/facets.py                                  103     22    79%   26-50, 116, 162-165, 184-187, 235
+invenio_records_rest/links.py                                    13      0   100%
+invenio_records_rest/loaders/__init__.py                          8      0   100%
+invenio_records_rest/loaders/marshmallow.py                      45      5    89%   52, 82-84, 101
+invenio_records_rest/proxies.py                                   4      0   100%
+invenio_records_rest/query.py                                    25      3    88%   34-39
+invenio_records_rest/schemas/__init__.py                          2      0   100%
+invenio_records_rest/schemas/fields/__init__.py                   8      0   100%
+invenio_records_rest/schemas/fields/datetime.py                  11      4    64%   16-19
+invenio_records_rest/schemas/fields/generated.py                 23      7    70%   26-49
+invenio_records_rest/schemas/fields/marshmallow_contrib.py       38      7    82%   14-15, 21, 71, 130-132
+invenio_records_rest/schemas/fields/persistentidentifier.py       9      0   100%
+invenio_records_rest/schemas/fields/sanitizedhtml.py             11      0   100%
+invenio_records_rest/schemas/fields/sanitizedunicode.py          14      0   100%
+invenio_records_rest/schemas/fields/trimmedstring.py              5      0   100%
+invenio_records_rest/schemas/json.py                             61     27    56%   22-30, 63-70, 75-92, 109, 117-118
+invenio_records_rest/serializers/__init__.py                      9      0   100%
+invenio_records_rest/serializers/base.py                         36      7    81%   32, 47, 57, 79, 92, 111, 121
+invenio_records_rest/serializers/citeproc.py                     65      7    89%   28-31, 91-93, 110-111
+invenio_records_rest/serializers/csv.py                          66      3    95%   49, 130, 134
+invenio_records_rest/serializers/datacite.py                     43      0   100%
+invenio_records_rest/serializers/dc.py                           15      0   100%
+invenio_records_rest/serializers/json.py                         15      0   100%
+invenio_records_rest/serializers/jsonld.py                       32      4    88%   40-43
+invenio_records_rest/serializers/marshmallow.py                  20      0   100%
+invenio_records_rest/serializers/response.py                     27      0   100%
+invenio_records_rest/sorter.py                                   49      0   100%
+invenio_records_rest/utils.py                                   100      1    99%   163
+invenio_records_rest/views.py                                   347     15    96%   112-114, 125, 289, 294, 297, 389, 442, 482, 743, 748, 906, 949, 990
+-------------------------------------------------------------------------------------------
+TOTAL                                                          1416    131    91%
+=========================== short test summary info ============================
+FAILED tests/test_index_prefixing.py::test_index_creation - AssertionError: assert {'.plugins-ml...d-1795635382'} == {'test-inveni...d-1795635382'}
+  
+  Extra items in the left set:
+  '.plugins-ml-config'
+  
+  Full diff:
+    {
+  +     '.plugins-ml-config',
+        'test-invenio-records-rest-testrecord-1795635382',
+    }
+================= 1 failed, 133 passed, 255 warnings in 20.21s =================
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

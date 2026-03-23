@@ -1,0 +1,5 @@
+{
+  "DeprecationWarning: CommunityRelationMixin has been moved to invenio_rdm_records.records.models. Importing from invenio_communities.records.records.models is deprecated and will be removed in a future release.": 1,
+  "UserWarning: Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervm0hi8g:": 1,
+  "DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.": 1
+}

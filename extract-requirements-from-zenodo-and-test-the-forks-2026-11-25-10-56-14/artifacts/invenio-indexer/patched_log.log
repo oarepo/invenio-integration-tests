@@ -1,0 +1,495 @@
+ Image redis:7 Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ Image rabbitmq:3-management Pulling 
+ dcadfd589ed7 Pulling fs layer 0B
+ a13218a43344 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 3ed90300cc1a Pulling fs layer 0B
+ b1dd3d113aab Pulling fs layer 0B
+ fb36845717af Pulling fs layer 0B
+ 817018563f08 Pulling fs layer 0B
+ d686b50ce172 Pulling fs layer 0B
+ d63c4408fdb7 Pulling fs layer 0B
+ 3fadc669ef11 Pulling fs layer 0B
+ efa05c660812 Pulling fs layer 0B
+ 20043066d3d5 Pulling fs layer 0B
+ 5e1c03b67a78 Pulling fs layer 0B
+ beb0d870d438 Pulling fs layer 0B
+ f4e7f62f4b80 Pulling fs layer 0B
+ 14e6209d5fa8 Pulling fs layer 0B
+ 7084ac8f4ab6 Pulling fs layer 0B
+ 46f4de2e4236 Pulling fs layer 0B
+ 9d1f594c66dc Pulling fs layer 0B
+ 0189f02e683f Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ fe7bbed45059 Pulling fs layer 0B
+ e5604524ac8c Pulling fs layer 0B
+ b14c48cb507d Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ 4f4fb700ef54 Already exists 0B
+ dcadfd589ed7 Download complete 0B
+ d686b50ce172 Downloading 6.291MB
+ 0189f02e683f Download complete 0B
+ a13218a43344 Downloading 6.291MB
+ 817018563f08 Download complete 0B
+ 3ed90300cc1a Download complete 0B
+ fb36845717af Download complete 0B
+ 14e6209d5fa8 Download complete 0B
+ 3fadc669ef11 Downloading 1.049MB
+ beb0d870d438 Download complete 0B
+ d686b50ce172 Download complete 0B
+ d63c4408fdb7 Downloading 10.49MB
+ f4e7f62f4b80 Download complete 0B
+ efa05c660812 Download complete 0B
+ b14c48cb507d Downloading 5.243MB
+ 9d1f594c66dc Download complete 0B
+ 5e1c03b67a78 Download complete 0B
+ e5604524ac8c Download complete 0B
+ fe7bbed45059 Download complete 0B
+ b1dd3d113aab Downloading 9.437MB
+ a13218a43344 Download complete 0B
+ 7084ac8f4ab6 Download complete 0B
+ 3fadc669ef11 Downloading 8.389MB
+ 20043066d3d5 Downloading 9.437MB
+ d63c4408fdb7 Downloading 18.87MB
+ b14c48cb507d Downloading 16.78MB
+ 46f4de2e4236 Downloading 9.437MB
+ b1dd3d113aab Downloading 23.07MB
+ 3fadc669ef11 Downloading 18.87MB
+ 20043066d3d5 Downloading 24.12MB
+ 7ec4c696b8bb Download complete 0B
+ d63c4408fdb7 Download complete 0B
+ b14c48cb507d Downloading 30.41MB
+ 46f4de2e4236 Downloading 23.07MB
+ b1dd3d113aab Download complete 0B
+ 971ecd1c75ec Download complete 0B
+ 16ef6b12768c Downloading 2.097MB
+ 3fadc669ef11 Downloading 26.21MB
+ 20043066d3d5 Downloading 29.72MB
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Downloading 37.75MB
+ 46f4de2e4236 Downloading 30.41MB
+ 592e13125349 Download complete 0B
+ b1dd3d113aab Extracting 1B
+ 3fadc669ef11 Downloading 39.85MB
+ 20043066d3d5 Download complete 0B
+ 16ef6b12768c Download complete 0B
+ b14c48cb507d Downloading 54.53MB
+ 46f4de2e4236 Downloading 46.14MB
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 71.3MB
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 99.61MB
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 3fadc669ef11 Download complete 0B
+ 46f4de2e4236 Downloading 123.7MB
+ b14c48cb507d Download complete 0B
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 153.1MB
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 178.3MB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 204.5MB
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 230.7MB
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 261.1MB
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Pull complete 0B
+ 46f4de2e4236 Downloading 276.8MB
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ dcadfd589ed7 Pull complete 0B
+ fb36845717af Pull complete 0B
+ a13218a43344 Extracting 1B
+ 46f4de2e4236 Downloading 294.6MB
+ 20043066d3d5 Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 1B
+ a13218a43344 Extracting 1B
+ 46f4de2e4236 Downloading 320.9MB
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 1B
+ a13218a43344 Extracting 1B
+ 46f4de2e4236 Downloading 347.1MB
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 1B
+ 4f4fb700ef54 Pull complete 0B
+ 817018563f08 Pull complete 0B
+ 3ed90300cc1a Pull complete 0B
+ a13218a43344 Pull complete 0B
+ Image redis:7 Pulled 
+ 46f4de2e4236 Downloading 373.3MB
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 400.6MB
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 434.1MB
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 465.6MB
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 7084ac8f4ab6 Extracting 1B
+ 46f4de2e4236 Downloading 494.9MB
+ 3fadc669ef11 Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 524.3MB
+ 7084ac8f4ab6 Extracting 1B
+ b14c48cb507d Extracting 2B
+ beb0d870d438 Pull complete 0B
+ 7084ac8f4ab6 Pull complete 0B
+ 46f4de2e4236 Downloading 559.9MB
+ d63c4408fdb7 Extracting 1B
+ b14c48cb507d Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 590.3MB
+ b14c48cb507d Pull complete 0B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 614.5MB
+ 0189f02e683f Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 645.9MB
+ 0189f02e683f Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 676.3MB
+ 0189f02e683f Pull complete 0B
+ fe7bbed45059 Pull complete 0B
+ 14e6209d5fa8 Pull complete 0B
+ d686b50ce172 Extracting 1B
+ f4e7f62f4b80 Pull complete 0B
+ efa05c660812 Pull complete 0B
+ 5e1c03b67a78 Pull complete 0B
+ d63c4408fdb7 Pull complete 0B
+ 46f4de2e4236 Downloading 686.8MB
+ d686b50ce172 Pull complete 0B
+ Image rabbitmq:3-management Pulled 
+ 46f4de2e4236 Downloading 695.2MB
+ 46f4de2e4236 Downloading 701.5MB
+ 46f4de2e4236 Downloading 706.7MB
+ 46f4de2e4236 Downloading 719.3MB
+ 46f4de2e4236 Downloading 721.4MB
+ 46f4de2e4236 Downloading 731.9MB
+ 46f4de2e4236 Downloading 770.7MB
+ 46f4de2e4236 Downloading 788.5MB
+ 46f4de2e4236 Downloading 807.4MB
+ 46f4de2e4236 Downloading 821MB
+ 46f4de2e4236 Downloading 836.8MB
+ 46f4de2e4236 Downloading 848.3MB
+ 46f4de2e4236 Downloading 873.5MB
+ 46f4de2e4236 Downloading 895.5MB
+ 46f4de2e4236 Downloading 926.9MB
+ 46f4de2e4236 Downloading 959.4MB
+ 46f4de2e4236 Downloading 984.6MB
+ 46f4de2e4236 Downloading 1.003GB
+ 46f4de2e4236 Downloading 1.021GB
+ 46f4de2e4236 Downloading 1.041GB
+ 46f4de2e4236 Downloading 1.057GB
+ 46f4de2e4236 Downloading 1.084GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Download complete 0B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 4f4fb700ef54 Pull complete 0B
+ 9d1f594c66dc Pull complete 0B
+ e5604524ac8c Pull complete 0B
+ 46f4de2e4236 Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-redis-1 Started 
+ Container docker_services_cli-rabbitmq-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_indexer
+plugins: pydocstyle-2.4.0, platformdirs-4.14.8, isort-4.0.0, black-0.6.0, cov-7.1.0, flask-1.3.0, pycodestyle-2.5.0, github-actions-annotate-failures-0.4.2, invenio-4.1.0
+collected 34 items
+
+tests/test_api.py ..::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+....::warning file=../../../../../../../../../opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/unittest/mock.py,line=2259::unclosed database in <sqlite3.Connection object at 0x79a0f559e020>
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+...::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.                                       [ 47%]
+tests/test_cli.py ..::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-indexer/patched/invenio_indexer/cli.py,line=113::Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
+::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=463::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-indexer/patched/invenio_indexer/cli.py,line=113::Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
+.                                                    [ 55%]
+tests/test_invenio_indexer.py ...::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+                                       [ 67%]
+tests/test_registry.py .::warning file=../../../../../../../../../opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py,line=464::unclosed database in <sqlite3.Connection object at 0x79a0f56964d0>
+                                                 [ 70%]
+tests/test_tasks.py ...                                                  [ 79%]
+tests/test_utils.py ......                                               [ 97%]
+invenio_indexer/__init__.py .::warning file=workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=302::nested transaction already deassociated from connection
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f551d6c0>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f551d030>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f551da80>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f54a48b0>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:455: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f564fc40>
+  result = tuple_new(cls, iterable)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+                                            [100%]
+
+=============================== warnings summary ===============================
+tests/test_api.py: 8 warnings
+tests/test_cli.py: 1 warning
+tests/test_invenio_indexer.py: 2 warnings
+invenio_indexer/__init__.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:302: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_api.py::test_delete_action
+tests/test_cli.py::test_reindex
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:463: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_api.py::test_refresh_with_index_obj
+  /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/unittest/mock.py:2259: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f559e020>
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_cli.py::test_reindex
+tests/test_cli.py::test_reindex
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/invenio_indexer/cli.py:113: SADeprecationWarning: Query.values() is deprecated and will be removed in a future release.  Please use Query.with_entities() (deprecated since: 1.4)
+    .values(PersistentIdentifier.object_uuid)
+
+tests/test_registry.py::test_indexer_registry
+  /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/collections/__init__.py:464: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f56964d0>
+    result = self._make(_map(kwds.pop, field_names, self))
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-indexer/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+invenio_indexer/__init__.py       4      0   100%
+invenio_indexer/api.py          178     22    88%   101, 111, 113-122, 154, 190-195, 233-242, 256-257, 393-394, 454
+invenio_indexer/cli.py           82      3    96%   21, 30, 77
+invenio_indexer/config.py        21      0   100%
+invenio_indexer/ext.py           26      0   100%
+invenio_indexer/proxies.py        7      0   100%
+invenio_indexer/registry.py      16      0   100%
+invenio_indexer/signals.py       16      0   100%
+invenio_indexer/tasks.py         21      3    86%   24, 39, 54
+invenio_indexer/utils.py         26      0   100%
+-----------------------------------------------------------
+TOTAL                           397     28    93%
+======================= 34 passed, 18 warnings in 1.70s ========================
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f584e200>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f5696110>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f5697f10>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f5726200>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f5727d30>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f559d5d0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f559cf40>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f584c5e0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f57265c0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f564e3e0>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f564cb80>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f53b9120>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f5697b50>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f54a6a70>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f564f970>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f5724d60>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f559fa60>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f564fd30>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f551c130>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f551d120>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-indexer/patched/.venv/lib/python3.14/site-packages/_pytest/unraisableexception.py:33: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x79a0f551fd30>
+  gc.collect()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

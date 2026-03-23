@@ -1,0 +1,552 @@
+ Image rabbitmq:3-management Pulling 
+ Image postgres:18 Pulling 
+ 7cb67b3b537a Pulling fs layer 0B
+ 7fe3468bf416 Pulling fs layer 0B
+ 1c59edd7eb40 Pulling fs layer 0B
+ 0f12a37b90bb Pulling fs layer 0B
+ 61061a425fb0 Pulling fs layer 0B
+ 8e4857f35fce Pulling fs layer 0B
+ 40748add9f4f Pulling fs layer 0B
+ a1361b767ece Pulling fs layer 0B
+ 84a852dae169 Pulling fs layer 0B
+ edf2405c6afe Pulling fs layer 0B
+ c1436cf65049 Pulling fs layer 0B
+ 0afa8bd0fe3a Pulling fs layer 0B
+ 40748add9f4f Downloading 4.194MB
+ 7cb67b3b537a Downloading 183B
+ 40748add9f4f Downloading 13.63MB
+ 7cb67b3b537a Downloading 183B
+ 40748add9f4f Downloading 29.84MB
+ 7cb67b3b537a Downloading 183B
+ 7fe3468bf416 Downloading 116B
+ 61061a425fb0 Downloading 6.101kB
+ 0f12a37b90bb Downloading 6.443MB
+ 40748add9f4f Downloading 29.84MB
+ 7cb67b3b537a Downloading 183B
+ 8e4857f35fce Downloading 1.323kB
+ 7fe3468bf416 Downloading 116B
+ 61061a425fb0 Downloading 6.101kB
+ 0f12a37b90bb Downloading 6.443MB
+ 40748add9f4f Downloading 29.84MB
+ 7cb67b3b537a Downloading 183B
+ 7cb67b3b537a Download complete 0B
+ 1c59edd7eb40 Downloading 19.42kB
+ 8e4857f35fce Downloading 1.323kB
+ 7fe3468bf416 Downloading 116B
+ 0f12a37b90bb Downloading 6.443MB
+ 40748add9f4f Downloading 29.84MB
+ 0afa8bd0fe3a Downloading 3.142kB
+ 1c59edd7eb40 Download complete 0B
+ 8e4857f35fce Download complete 0B
+ 7fe3468bf416 Download complete 0B
+ a1361b767ece Downloading 8.204MB
+ 84a852dae169 Downloading 1.312MB
+ 61061a425fb0 Download complete 0B
+ 0f12a37b90bb Download complete 0B
+ 40748add9f4f Download complete 0B
+ 0afa8bd0fe3a Download complete 0B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 25.17MB
+ c1436cf65049 Downloading 1.258MB
+ a1361b767ece Download complete 0B
+ 84a852dae169 Download complete 0B
+ 40748add9f4f Extracting 1B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 45.09MB
+ c1436cf65049 Download complete 0B
+ 59e8b6ceb028 Downloading 50.29kB
+ d63c4408fdb7 Pulling fs layer 0B
+ f4e7f62f4b80 Pulling fs layer 0B
+ efa05c660812 Pulling fs layer 0B
+ 5e1c03b67a78 Pulling fs layer 0B
+ 14e6209d5fa8 Pulling fs layer 0B
+ 3fadc669ef11 Pulling fs layer 0B
+ 20043066d3d5 Pulling fs layer 0B
+ 7084ac8f4ab6 Pulling fs layer 0B
+ beb0d870d438 Pulling fs layer 0B
+ d686b50ce172 Pulling fs layer 0B
+ 40748add9f4f Extracting 1B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 56.62MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 40748add9f4f Extracting 1B
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 81.79MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 40748add9f4f Extracting 1B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 82.84MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 7ec4c696b8bb Downloading 11.09kB
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 90.18MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 7.34MB
+ 16ef6b12768c Downloading 3.088MB
+ 40748add9f4f Extracting 1B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 108MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 16ef6b12768c Downloading 3.088MB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 40748add9f4f Extracting 1B
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 16ef6b12768c Downloading 3.088MB
+ beb0d870d438 Downloading 9.462kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 40748add9f4f Extracting 1B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 5e1c03b67a78 Downloading 620B
+ 16ef6b12768c Downloading 3.088MB
+ beb0d870d438 Downloading 9.462kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 40748add9f4f Extracting 1B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 16ef6b12768c Downloading 3.088MB
+ beb0d870d438 Downloading 9.462kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 40748add9f4f Extracting 1B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ beb0d870d438 Downloading 9.462kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 40748add9f4f Extracting 2B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ beb0d870d438 Downloading 9.462kB
+ 40748add9f4f Extracting 2B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 20043066d3d5 Downloading 1.049MB
+ beb0d870d438 Downloading 9.462kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 3fadc669ef11 Downloading 11.53MB
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ 40748add9f4f Extracting 2B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 3fadc669ef11 Downloading 31.46MB
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 25.17MB
+ beb0d870d438 Downloading 9.462kB
+ 40748add9f4f Extracting 2B
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 14e6209d5fa8 Downloading 833B
+ 3fadc669ef11 Downloading 43.48MB
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Downloading 9.462kB
+ 40748add9f4f Extracting 2B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3fadc669ef11 Downloading 43.48MB
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Downloading 9.462kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 14e6209d5fa8 Downloading 833B
+ 40748add9f4f Extracting 2B
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 14e6209d5fa8 Downloading 833B
+ 3fadc669ef11 Downloading 43.48MB
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Downloading 9.462kB
+ 40748add9f4f Extracting 2B
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 14e6209d5fa8 Downloading 833B
+ 3fadc669ef11 Downloading 43.48MB
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Downloading 9.462kB
+ 40748add9f4f Extracting 2B
+ 7ec4c696b8bb Downloading 11.09kB
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Downloading 109B
+ 5e1c03b67a78 Downloading 620B
+ 14e6209d5fa8 Downloading 833B
+ 3fadc669ef11 Downloading 43.48MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ 16ef6b12768c Downloading 3.088MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Downloading 9.462kB
+ 40748add9f4f Extracting 2B
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Download complete 0B
+ 3c65b9afb00e Download complete 0B
+ 7ec4c696b8bb Download complete 0B
+ d63c4408fdb7 Downloading 21.31MB
+ f4e7f62f4b80 Download complete 0B
+ 5e1c03b67a78 Downloading 620B
+ 14e6209d5fa8 Downloading 833B
+ 3fadc669ef11 Downloading 43.48MB
+ 7084ac8f4ab6 Downloading 5.243MB
+ d686b50ce172 Downloading 3.146MB
+ 16ef6b12768c Download complete 0B
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Downloading 9.462kB
+ 40748add9f4f Extracting 2B
+ edf2405c6afe Downloading 121.4MB
+ 5e1c03b67a78 Download complete 0B
+ 14e6209d5fa8 Downloading 833B
+ 3fadc669ef11 Downloading 43.48MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Downloading 9.462kB
+ 40748add9f4f Extracting 3B
+ edf2405c6afe Downloading 121.4MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Downloading 9.462kB
+ d63c4408fdb7 Download complete 0B
+ 14e6209d5fa8 Downloading 833B
+ 3fadc669ef11 Downloading 43.48MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ 40748add9f4f Extracting 3B
+ edf2405c6afe Downloading 121.4MB
+ 14e6209d5fa8 Downloading 833B
+ 3fadc669ef11 Downloading 43.48MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ efa05c660812 Downloading 189B
+ 20043066d3d5 Downloading 29.72MB
+ 40748add9f4f Extracting 3B
+ edf2405c6afe Downloading 121.4MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ efa05c660812 Download complete 0B
+ 20043066d3d5 Downloading 29.72MB
+ beb0d870d438 Download complete 0B
+ 40748add9f4f Pull complete 0B
+ edf2405c6afe Download complete 0B
+ 14e6209d5fa8 Download complete 0B
+ 3fadc669ef11 Download complete 0B
+ 7084ac8f4ab6 Download complete 0B
+ d686b50ce172 Download complete 0B
+ 20043066d3d5 Download complete 0B
+ 20043066d3d5 Extracting 1B
+ 8e4857f35fce Pull complete 0B
+ 0f12a37b90bb Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0f12a37b90bb Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0f12a37b90bb Pull complete 0B
+ c1436cf65049 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ a1361b767ece Extracting 1B
+ c1436cf65049 Pull complete 0B
+ 20043066d3d5 Extracting 1B
+ a1361b767ece Extracting 1B
+ 20043066d3d5 Extracting 1B
+ a1361b767ece Extracting 1B
+ 20043066d3d5 Extracting 1B
+ a1361b767ece Pull complete 0B
+ 20043066d3d5 Extracting 1B
+ 7fe3468bf416 Pull complete 0B
+ 84a852dae169 Pull complete 0B
+ 20043066d3d5 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0afa8bd0fe3a Extracting 1B
+ 20043066d3d5 Pull complete 0B
+ 0afa8bd0fe3a Extracting 1B
+ 0afa8bd0fe3a Extracting 1B
+ 0afa8bd0fe3a Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ edf2405c6afe Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ edf2405c6afe Extracting 1B
+ 3fadc669ef11 Pull complete 0B
+ 7084ac8f4ab6 Extracting 1B
+ edf2405c6afe Extracting 1B
+ 7084ac8f4ab6 Extracting 1B
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ beb0d870d438 Pull complete 0B
+ 7084ac8f4ab6 Pull complete 0B
+ d63c4408fdb7 Extracting 1B
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ edf2405c6afe Extracting 1B
+ d63c4408fdb7 Pull complete 0B
+ edf2405c6afe Extracting 1B
+ efa05c660812 Pull complete 0B
+ f4e7f62f4b80 Pull complete 0B
+ edf2405c6afe Extracting 1B
+ 5e1c03b67a78 Pull complete 0B
+ 14e6209d5fa8 Pull complete 0B
+ d686b50ce172 Extracting 1B
+ d686b50ce172 Extracting 1B
+ edf2405c6afe Extracting 1B
+ d686b50ce172 Extracting 1B
+ edf2405c6afe Extracting 2B
+ d686b50ce172 Pull complete 0B
+ Image rabbitmq:3-management Pulled 
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 2B
+ edf2405c6afe Extracting 3B
+ 7cb67b3b537a Pull complete 0B
+ 1c59edd7eb40 Pull complete 0B
+ 61061a425fb0 Pull complete 0B
+ edf2405c6afe Pull complete 0B
+ Image postgres:18 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-rabbitmq-1 Started 
+ Container docker_services_cli-postgresql-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_oauthclient
+plugins: github-actions-annotate-failures-0.4.2, black-0.6.0, isort-4.0.0, invenio-4.1.0, pydocstyle-2.4.0, cov-7.1.0, flask-1.3.0, platformdirs-4.14.8, pycodestyle-2.5.0
+collected 168 items
+::warning file=workdir/tests/invenio-oauthclient/patched/invenio_oauthclient/contrib/cern.py,line=157::The cern contrib is deprecated. Please use the generic keycloak instead.
+
+tests/test_admin.py .::warning file=workdir/tests/invenio-oauthclient/patched/tests/test_admin.py,line=37::Passing a session object directly is deprecated and will be removed in version 3.0. Please pass the SQLAlchemy db object instead. Note: the parameter will be renamed from 'session' to 'db' in version 3.0. Example: ModelView(User, db) instead of ModelView(User, db.session)
+                                                    [  0%]
+tests/test_alembic.py .::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+                                                  [  1%]
+tests/test_app.py ......s....                                            [  7%]
+tests/test_base_handlers.py ..                                           [  8%]
+tests/test_contrib_cern_openid.py .::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+...::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+                                 [ 12%]
+tests/test_contrib_cern_openid_rest.py .::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+...::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+                           [ 16%]
+tests/test_contrib_eosc_aai.py .::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.......                                  [ 21%]
+tests/test_contrib_github.py .......                                     [ 25%]
+tests/test_contrib_github_rest.py .......                                [ 29%]
+tests/test_contrib_globus.py .......                                     [ 33%]
+tests/test_contrib_keycloak.py ..::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+.::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+..::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+.....::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+.::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py,line=1077::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+.                              [ 41%]
+tests/test_contrib_orcid.py ......                                       [ 44%]
+tests/test_contrib_orcid_rest.py ......                                  [ 48%]
+tests/test_contrib_settings.py .........                                 [ 53%]
+tests/test_examples_app.py ssssss                                        [ 57%]
+tests/test_handlers_rest.py ...........................                  [ 73%]
+tests/test_handlers_ui.py .........                                      [ 78%]
+tests/test_models.py ....                                                [ 80%]
+tests/test_refresh.py .                                                  [ 81%]
+tests/test_utils.py ..............                                       [ 89%]
+tests/test_views.py .........                                            [ 95%]
+tests/test_views_rest.py ........                                        [100%]
+
+=============================== warnings summary ===============================
+invenio_oauthclient/contrib/cern.py:157
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/patched/invenio_oauthclient/contrib/cern.py:157: DeprecationWarning: The cern contrib is deprecated. Please use the generic keycloak instead.
+    warn(
+
+tests/test_admin.py::test_admin
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/patched/tests/test_admin.py:37: DeprecationWarning: Passing a session object directly is deprecated and will be removed in version 3.0. Please pass the SQLAlchemy db object instead. Note: the parameter will be renamed from 'session' to 'db' in version 3.0. Example: ModelView(User, db) instead of ModelView(User, db.session)
+    admin.add_view(user_view(user_model, db.session, **remote_account_adminview))
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/alembic/config.py:572: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_contrib_cern_openid.py::test_fetch_extra_data
+tests/test_contrib_cern_openid.py::test_account_info
+tests/test_contrib_cern_openid.py::test_account_setup
+tests/test_contrib_cern_openid.py::test_account_info_not_allowed_account
+tests/test_contrib_cern_openid_rest.py::test_fetch_extra_data
+tests/test_contrib_cern_openid_rest.py::test_account_info_rest
+tests/test_contrib_cern_openid_rest.py::test_account_setup
+tests/test_contrib_cern_openid_rest.py::test_account_info_not_allowed_account
+tests/test_contrib_cern_openid_rest.py::test_identity_changed
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    return self._jws.encode(
+
+tests/test_contrib_eosc_aai.py::test_account_info
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    return self._jws.encode(
+
+tests/test_contrib_keycloak.py: 18 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/patched/.venv/lib/python3.14/site-packages/httpretty/core.py:1077: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-oauthclient/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                                               Stmts   Miss  Cover   Missing
+----------------------------------------------------------------------------------------------------------------
+invenio_oauthclient/__init__.py                                                        5      0   100%
+invenio_oauthclient/_compat.py                                                        21      2    90%   13-14
+invenio_oauthclient/admin.py                                                          28      1    96%   79
+invenio_oauthclient/alembic/7def990b852e_add_expires_at_and_refresh_token_to_.py      14      0   100%
+invenio_oauthclient/alembic/44ab9963e8cf_create_oauthclient_branch.py                 10      1    90%   23
+invenio_oauthclient/alembic/97bbc733896c_create_oauthclient_tables.py                 23      0   100%
+invenio_oauthclient/alembic/1758275763_extra_data_jsonb.py                            12      0   100%
+invenio_oauthclient/alembic/__init__.py                                                0      0   100%
+invenio_oauthclient/alembic/aaa265b0afa6_move_useridentity_to_acconuts.py             14      0   100%
+invenio_oauthclient/alembic/bff1f190b9bd_add_timestamp_oauthclient.py                 27      0   100%
+invenio_oauthclient/alembic/edf0c0907f40_change_datetime_types.py                     15      0   100%
+invenio_oauthclient/config.py                                                         23      0   100%
+invenio_oauthclient/contrib/__init__.py                                                0      0   100%
+invenio_oauthclient/contrib/cern.py                                                  182    110    40%   278-285, 290-292, 301-315, 320-324, 331-347, 352-357, 369-378, 383-390, 395-420, 433-438, 443-450, 460-474, 479-480, 485-489, 494-511, 529-545
+invenio_oauthclient/contrib/cern_openid.py                                           159      6    96%   173-175, 194, 231, 325
+invenio_oauthclient/contrib/eosc_aai.py                                              104     11    89%   138-145, 329-331, 372-376
+invenio_oauthclient/contrib/github.py                                                 79      0   100%
+invenio_oauthclient/contrib/globus.py                                                 85      3    96%   319-323
+invenio_oauthclient/contrib/keycloak/__init__.py                                       3      0   100%
+invenio_oauthclient/contrib/keycloak/handlers.py                                      47      4    91%   143-146
+invenio_oauthclient/contrib/keycloak/helpers.py                                       44      0   100%
+invenio_oauthclient/contrib/keycloak/settings.py                                      25      0   100%
+invenio_oauthclient/contrib/openaire_aai.py                                           71     26    63%   144, 212, 246-251, 260-274, 282-283, 291-295, 305-320
+invenio_oauthclient/contrib/orcid.py                                                  70      0   100%
+invenio_oauthclient/contrib/settings.py                                               31      2    94%   96, 129
+invenio_oauthclient/errors.py                                                         34      0   100%
+invenio_oauthclient/ext.py                                                            95     19    80%   151, 213-215, 220-227, 236-253, 261-273
+invenio_oauthclient/handlers/__init__.py                                               9      0   100%
+invenio_oauthclient/handlers/authorized.py                                            96      9    91%   131, 187, 200, 205, 229, 235-236, 246, 252
+invenio_oauthclient/handlers/base.py                                                  14      0   100%
+invenio_oauthclient/handlers/decorators.py                                            19      0   100%
+invenio_oauthclient/handlers/refresh.py                                               20      2    90%   51, 59
+invenio_oauthclient/handlers/rest.py                                                 104      5    95%   129, 131, 282-283, 287
+invenio_oauthclient/handlers/token.py                                                 73      1    99%   130
+invenio_oauthclient/handlers/ui.py                                                    99      9    91%   68, 70, 214-222, 225
+invenio_oauthclient/handlers/utils.py                                                 81     10    88%   105, 119-125, 129-135, 156, 162-168
+invenio_oauthclient/models.py                                                         99      2    98%   152, 203
+invenio_oauthclient/oauth.py                                                          65      0   100%
+invenio_oauthclient/proxies.py                                                         3      0   100%
+invenio_oauthclient/signals.py                                                         8      0   100%
+invenio_oauthclient/tasks.py                                                           5      0   100%
+invenio_oauthclient/utils.py                                                         101      3    97%   49, 88, 206
+invenio_oauthclient/views/__init__.py                                                  3      0   100%
+invenio_oauthclient/views/client.py                                                  137     31    77%   52-82, 138, 174, 181-187, 196, 208-216, 297-305
+invenio_oauthclient/views/settings.py                                                 27      0   100%
+----------------------------------------------------------------------------------------------------------------
+TOTAL                                                                               2184    257    88%
+================= 161 passed, 7 skipped, 31 warnings in 36.73s =================
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

@@ -1,0 +1,484 @@
+extracting messages from invenio_drafts_resources/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/patch_info.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/auditlog/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/auditlog/actions.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/auditlog/context.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/records/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/records/api.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/records/models.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/records/systemfields/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/records/systemfields/parent.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/records/systemfields/versions.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/resources/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/resources/records/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/resources/records/args.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/resources/records/config.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/resources/records/errors.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/resources/records/resource.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/config.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/permissions.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/schema.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/search_params.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/service.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/tasks.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/uow.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/components/__init__.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/components/base.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/components/files.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/components/media_files.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/components/metadata.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/components/pid.py (encoding="utf-8")
+extracting messages from invenio_drafts_resources/services/records/components/relations.py (encoding="utf-8")
+writing PO template file to /dev/null
+ Image postgres:18 Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ 7cb67b3b537a Pulling fs layer 0B
+ a1361b767ece Pulling fs layer 0B
+ 0f12a37b90bb Pulling fs layer 0B
+ 84a852dae169 Pulling fs layer 0B
+ 7fe3468bf416 Pulling fs layer 0B
+ 1c59edd7eb40 Pulling fs layer 0B
+ 0afa8bd0fe3a Pulling fs layer 0B
+ 61061a425fb0 Pulling fs layer 0B
+ edf2405c6afe Pulling fs layer 0B
+ 40748add9f4f Pulling fs layer 0B
+ 8e4857f35fce Pulling fs layer 0B
+ c1436cf65049 Pulling fs layer 0B
+ 84a852dae169 Downloading 1.312MB
+ 7cb67b3b537a Downloading 183B
+ c1436cf65049 Downloading 1.258MB
+ a1361b767ece Downloading 8.204MB
+ 0f12a37b90bb Downloading 4.194MB
+ 7fe3468bf416 Downloading 116B
+ 84a852dae169 Downloading 1.312MB
+ 46f4de2e4236 Pulling fs layer 0B
+ 9d1f594c66dc Pulling fs layer 0B
+ b14c48cb507d Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ fe7bbed45059 Pulling fs layer 0B
+ 0189f02e683f Pulling fs layer 0B
+ e5604524ac8c Pulling fs layer 0B
+ 7cb67b3b537a Download complete 0B
+ c1436cf65049 Download complete 0B
+ a1361b767ece Downloading 8.204MB
+ 0f12a37b90bb Downloading 6.443MB
+ 7fe3468bf416 Downloading 116B
+ 84a852dae169 Download complete 0B
+ 1c59edd7eb40 Downloading 19.42kB
+ 4f4fb700ef54 Already exists 0B
+ a1361b767ece Download complete 0B
+ 0f12a37b90bb Download complete 0B
+ 7fe3468bf416 Download complete 0B
+ edf2405c6afe Downloading 7.34MB
+ 40748add9f4f Downloading 2.097MB
+ 1c59edd7eb40 Download complete 0B
+ 0afa8bd0fe3a Download complete 0B
+ 61061a425fb0 Download complete 0B
+ edf2405c6afe Downloading 30.41MB
+ 40748add9f4f Downloading 25.17MB
+ 46f4de2e4236 Downloading 8.389MB
+ 8e4857f35fce Download complete 0B
+ 9d1f594c66dc Download complete 0B
+ b14c48cb507d Downloading 16.78MB
+ 46f4de2e4236 Downloading 31.46MB
+ e5604524ac8c Downloading 228B
+ fe7bbed45059 Downloading 1.56kB
+ edf2405c6afe Downloading 52.43MB
+ 40748add9f4f Downloading 29.84MB
+ b14c48cb507d Downloading 36.7MB
+ 46f4de2e4236 Downloading 52.43MB
+ edf2405c6afe Downloading 73.4MB
+ 40748add9f4f Downloading 29.84MB
+ e5604524ac8c Download complete 0B
+ fe7bbed45059 Downloading 1.56kB
+ 0189f02e683f Downloading 4.194MB
+ edf2405c6afe Downloading 97.52MB
+ 40748add9f4f Downloading 29.84MB
+ 0189f02e683f Downloading 4.385MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 76.55MB
+ fe7bbed45059 Download complete 0B
+ 40748add9f4f Downloading 29.84MB
+ 0189f02e683f Downloading 4.385MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 96.47MB
+ edf2405c6afe Downloading 117.4MB
+ 46f4de2e4236 Downloading 97.52MB
+ 40748add9f4f Downloading 29.84MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 0189f02e683f Downloading 4.385MB
+ b14c48cb507d Downloading 54.57MB
+ edf2405c6afe Downloading 118.5MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 101.7MB
+ 0189f02e683f Downloading 4.385MB
+ edf2405c6afe Downloading 121.4MB
+ 46f4de2e4236 Downloading 133.2MB
+ 0189f02e683f Downloading 4.385MB
+ b14c48cb507d Downloading 54.57MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 0189f02e683f Downloading 4.385MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 177.2MB
+ 40748add9f4f Download complete 0B
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ 40748add9f4f Extracting 1B
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 212.9MB
+ 0189f02e683f Downloading 4.385MB
+ edf2405c6afe Downloading 121.4MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ 40748add9f4f Extracting 1B
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 248.5MB
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ 40748add9f4f Extracting 1B
+ 59e8b6ceb028 Downloading 50.29kB
+ 3c65b9afb00e Downloading 6.319MB
+ edf2405c6afe Downloading 121.4MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 261.1MB
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ 0189f02e683f Download complete 0B
+ 59e8b6ceb028 Download complete 0B
+ 3c65b9afb00e Downloading 6.319MB
+ 46f4de2e4236 Downloading 286.3MB
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 310.4MB
+ b14c48cb507d Download complete 0B
+ 3c65b9afb00e Download complete 0B
+ edf2405c6afe Download complete 0B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 337.6MB
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 369.1MB
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 400.6MB
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 431MB
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 463.5MB
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 488.6MB
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 516.9MB
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 543.2MB
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 570.4MB
+ b14c48cb507d Extracting 1B
+ 46f4de2e4236 Downloading 601.9MB
+ b14c48cb507d Extracting 1B
+ 8e4857f35fce Pull complete 0B
+ 40748add9f4f Pull complete 0B
+ 46f4de2e4236 Downloading 639.6MB
+ 0f12a37b90bb Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 674.2MB
+ b14c48cb507d Extracting 2B
+ 0f12a37b90bb Extracting 1B
+ 46f4de2e4236 Downloading 705.7MB
+ 0f12a37b90bb Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 734MB
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 750.8MB
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 778MB
+ 0f12a37b90bb Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 816.8MB
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 848.3MB
+ c1436cf65049 Pull complete 0B
+ a1361b767ece Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 880.8MB
+ a1361b767ece Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 909.1MB
+ 84a852dae169 Extracting 1B
+ a1361b767ece Pull complete 0B
+ 0189f02e683f Extracting 1B
+ b14c48cb507d Pull complete 0B
+ 46f4de2e4236 Downloading 942.7MB
+ 84a852dae169 Pull complete 0B
+ 7fe3468bf416 Pull complete 0B
+ fe7bbed45059 Pull complete 0B
+ 0afa8bd0fe3a Pull complete 0B
+ 0189f02e683f Pull complete 0B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 978.3MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.014GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.053GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.089GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 61061a425fb0 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 7cb67b3b537a Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 7cb67b3b537a Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 7cb67b3b537a Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 7cb67b3b537a Pull complete 0B
+ Image postgres:18 Pulled 
+ 46f4de2e4236 Download complete 0B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 4f4fb700ef54 Extracting 1B
+ 46f4de2e4236 Pull complete 0B
+ 4f4fb700ef54 Pull complete 0B
+ 9d1f594c66dc Pull complete 0B
+ e5604524ac8c Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-postgresql-1 Started 
+ Container docker_services_cli-opensearch-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-drafts-resources/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_drafts_resources
+plugins: github-actions-annotate-failures-0.4.2, black-0.6.0, isort-4.0.0, invenio-4.1.0, pydocstyle-2.4.0, cov-7.1.0, flask-1.3.0, platformdirs-4.14.8, pycodestyle-2.5.0
+collected 86 items
+
+tests/records/test_api.py ......................                         [ 25%]
+tests/resources/test_files_resource.py .::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+..::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+..                             [ 31%]
+tests/resources/test_record_resource.py .......s.                        [ 41%]
+tests/resources/test_resource_links.py ....                              [ 46%]
+tests/services/test_record_service.py .............                      [ 61%]
+tests/services/test_record_service_files.py ...::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+......::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+..::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.........::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+     [ 89%]
+tests/services/test_record_service_search.py ..                          [ 91%]
+tests/services/test_record_service_tasks.py .                            [ 93%]
+tests/services/test_records_uow.py ..                                    [ 95%]
+tests/services/test_services.py ...                                      [ 98%]
+tests/test_alembic.py .::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+::warning file=workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py,line=193::autoincrement and existing_autoincrement only make sense for MySQL
+                                                  [100%]
+
+=============================== warnings summary ===============================
+tests/resources/test_files_resource.py: 2 warnings
+tests/services/test_record_service_files.py: 8 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py:714: SAWarning: Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+    return db.session.query(cls).filter_by(id=file_id).one_or_none()
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/alembic/config.py:572: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-drafts-resources/patched/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py:193: UserWarning: autoincrement and existing_autoincrement only make sense for MySQL
+    super().alter_column(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-drafts-resources/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                                  Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------------------------------
+invenio_drafts_resources/__init__.py                                      2      0   100%
+invenio_drafts_resources/auditlog/__init__.py                             0      0   100%
+invenio_drafts_resources/auditlog/actions.py                             28      0   100%
+invenio_drafts_resources/auditlog/context.py                             37     22    41%   22-25, 33-41, 49-52, 60-74
+invenio_drafts_resources/patch_info.py                                    6      2    67%   56-58
+invenio_drafts_resources/records/__init__.py                              3      0   100%
+invenio_drafts_resources/records/api.py                                  97      1    99%   121
+invenio_drafts_resources/records/models.py                               36      0   100%
+invenio_drafts_resources/records/systemfields/__init__.py                 3      0   100%
+invenio_drafts_resources/records/systemfields/parent.py                  50      1    98%   75
+invenio_drafts_resources/records/systemfields/versions.py               134      1    99%   178
+invenio_drafts_resources/resources/__init__.py                            2      0   100%
+invenio_drafts_resources/resources/records/__init__.py                    3      0   100%
+invenio_drafts_resources/resources/records/args.py                        5      0   100%
+invenio_drafts_resources/resources/records/config.py                      6      0   100%
+invenio_drafts_resources/resources/records/errors.py                     16      0   100%
+invenio_drafts_resources/resources/records/resource.py                   85      2    98%   96-102
+invenio_drafts_resources/services/__init__.py                             2      0   100%
+invenio_drafts_resources/services/records/__init__.py                     3      0   100%
+invenio_drafts_resources/services/records/components/__init__.py          7      0   100%
+invenio_drafts_resources/services/records/components/base.py            126     12    90%   28, 32, 36, 40, 44, 48, 52, 111-119, 135, 291, 297
+invenio_drafts_resources/services/records/components/files.py             4      0   100%
+invenio_drafts_resources/services/records/components/media_files.py      60      5    92%   48-52, 72-73
+invenio_drafts_resources/services/records/components/metadata.py         10      0   100%
+invenio_drafts_resources/services/records/components/pid.py              12      0   100%
+invenio_drafts_resources/services/records/components/relations.py         4      1    75%   16
+invenio_drafts_resources/services/records/config.py                      49      0   100%
+invenio_drafts_resources/services/records/permissions.py                 11      0   100%
+invenio_drafts_resources/services/records/schema.py                      15      0   100%
+invenio_drafts_resources/services/records/search_params.py               13      0   100%
+invenio_drafts_resources/services/records/service.py                    230     47    80%   59, 72, 107, 119-149, 175-176, 183, 269, 471-472, 481, 570, 602-613, 617-618, 642-646, 694-697, 701-704, 745-773
+invenio_drafts_resources/services/records/tasks.py                        8      0   100%
+invenio_drafts_resources/services/records/uow.py                         36      4    89%   69-70, 75-76
+---------------------------------------------------------------------------------------------------
+TOTAL                                                                  1103     98    91%
+================= 85 passed, 1 skipped, 12 warnings in 33.18s ==================
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-postgresql-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

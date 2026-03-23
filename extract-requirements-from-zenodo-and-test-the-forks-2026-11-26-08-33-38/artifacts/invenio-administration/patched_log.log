@@ -1,0 +1,1042 @@
+ Image postgres:18 Pulling 
+ Image rabbitmq:3-management Pulling 
+ Image redis:7 Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ d686b50ce172 Pulling fs layer 0B
+ d63c4408fdb7 Pulling fs layer 0B
+ efa05c660812 Pulling fs layer 0B
+ 20043066d3d5 Pulling fs layer 0B
+ f4e7f62f4b80 Pulling fs layer 0B
+ 7084ac8f4ab6 Pulling fs layer 0B
+ 14e6209d5fa8 Pulling fs layer 0B
+ beb0d870d438 Pulling fs layer 0B
+ 5e1c03b67a78 Pulling fs layer 0B
+ 3fadc669ef11 Pulling fs layer 0B
+ 817018563f08 Pulling fs layer 0B
+ fb36845717af Pulling fs layer 0B
+ b1dd3d113aab Pulling fs layer 0B
+ 3ed90300cc1a Pulling fs layer 0B
+ dcadfd589ed7 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ a13218a43344 Pulling fs layer 0B
+ 9d1f594c66dc Pulling fs layer 0B
+ fe7bbed45059 Pulling fs layer 0B
+ 46f4de2e4236 Pulling fs layer 0B
+ b14c48cb507d Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ e5604524ac8c Pulling fs layer 0B
+ 0189f02e683f Pulling fs layer 0B
+ beb0d870d438 Download complete 0B
+ d686b50ce172 Downloading 6.291MB
+ 14e6209d5fa8 Download complete 0B
+ e5604524ac8c Downloading 228B
+ fe7bbed45059 Download complete 0B
+ 4f4fb700ef54 Already exists 0B
+ f4e7f62f4b80 Download complete 0B
+ 5e1c03b67a78 Download complete 0B
+ 817018563f08 Download complete 0B
+ 4f4fb700ef54 Already exists 0B
+ fb36845717af Download complete 0B
+ 3ed90300cc1a Downloading 96B
+ dcadfd589ed7 Downloading 1.1kB
+ efa05c660812 Download complete 0B
+ 7cb67b3b537a Pulling fs layer 0B
+ 84a852dae169 Pulling fs layer 0B
+ 40748add9f4f Pulling fs layer 0B
+ 8e4857f35fce Pulling fs layer 0B
+ 0f12a37b90bb Pulling fs layer 0B
+ c1436cf65049 Pulling fs layer 0B
+ a1361b767ece Pulling fs layer 0B
+ edf2405c6afe Pulling fs layer 0B
+ 7fe3468bf416 Pulling fs layer 0B
+ 0afa8bd0fe3a Pulling fs layer 0B
+ 1c59edd7eb40 Pulling fs layer 0B
+ 61061a425fb0 Pulling fs layer 0B
+ 46f4de2e4236 Downloading 2.097MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 4.194MB
+ 7084ac8f4ab6 Downloading 4.194MB
+ d686b50ce172 Downloading 11.53MB
+ d63c4408fdb7 Downloading 6.291MB
+ 3fadc669ef11 Downloading 4.194MB
+ b14c48cb507d Downloading 3.146MB
+ 0189f02e683f Downloading 2.097MB
+ b1dd3d113aab Downloading 5.243MB
+ e5604524ac8c Download complete 0B
+ 7cb67b3b537a Download complete 0B
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 8e4857f35fce Downloading 1.323kB
+ 3ed90300cc1a Download complete 0B
+ dcadfd589ed7 Download complete 0B
+ a13218a43344 Downloading 3.146MB
+ 9d1f594c66dc Download complete 0B
+ 0f12a37b90bb Downloading 4.194MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 5.243MB
+ 8e4857f35fce Downloading 1.323kB
+ a1361b767ece Downloading 4.194MB
+ edf2405c6afe Downloading 4.194MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 8.389MB
+ b14c48cb507d Downloading 9.437MB
+ 3fadc669ef11 Downloading 10.49MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 9.437MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 11.53MB
+ 16ef6b12768c Downloading 3.088MB
+ b1dd3d113aab Downloading 10.49MB
+ a13218a43344 Downloading 9.437MB
+ d63c4408fdb7 Downloading 13.63MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 13.63MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 11.53MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 11.53MB
+ b14c48cb507d Downloading 11.53MB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 8.389MB
+ 8e4857f35fce Downloading 1.323kB
+ a1361b767ece Downloading 7.34MB
+ edf2405c6afe Downloading 7.34MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ a13218a43344 Downloading 12.58MB
+ b1dd3d113aab Downloading 12.58MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 19.92MB
+ 8e4857f35fce Downloading 1.323kB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 17.83MB
+ 46f4de2e4236 Downloading 23.07MB
+ b14c48cb507d Downloading 20.97MB
+ 0189f02e683f Downloading 4.385MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 23.07MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 22.02MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 971ecd1c75ec Downloading 25.15kB
+ b1dd3d113aab Downloading 22.02MB
+ a13218a43344 Downloading 15.36MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 34.6MB
+ 46f4de2e4236 Downloading 34.6MB
+ b14c48cb507d Downloading 31.46MB
+ 0189f02e683f Downloading 4.385MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ 8e4857f35fce Downloading 1.323kB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 29.36MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 33.55MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ 46f4de2e4236 Downloading 37.75MB
+ b14c48cb507d Downloading 34.6MB
+ 0189f02e683f Downloading 4.385MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 38.8MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 46f4de2e4236 Downloading 47.19MB
+ d686b50ce172 Downloading 12.47MB
+ b14c48cb507d Downloading 49.28MB
+ 0189f02e683f Downloading 4.385MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 46.14MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ 46f4de2e4236 Downloading 71.3MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 76.55MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 46f4de2e4236 Downloading 100.7MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 107MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 8e4857f35fce Download complete 0B
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 46f4de2e4236 Downloading 134.2MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 138.4MB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 141.6MB
+ b14c48cb507d Downloading 54.57MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 46f4de2e4236 Downloading 176.2MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 46f4de2e4236 Downloading 202.4MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 239.1MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 0189f02e683f Downloading 4.385MB
+ 46f4de2e4236 Downloading 271.6MB
+ b14c48cb507d Downloading 54.57MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ 7fe3468bf416 Downloading 116B
+ 46f4de2e4236 Downloading 295.7MB
+ b14c48cb507d Downloading 54.57MB
+ 0afa8bd0fe3a Downloading 3.142kB
+ 0189f02e683f Downloading 4.385MB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 0afa8bd0fe3a Downloading 3.142kB
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 46f4de2e4236 Downloading 323MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ d686b50ce172 Downloading 12.47MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ a13218a43344 Downloading 15.36MB
+ 46f4de2e4236 Downloading 348.1MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ d63c4408fdb7 Downloading 21.31MB
+ 16ef6b12768c Downloading 3.088MB
+ 3fadc669ef11 Downloading 43.48MB
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ d686b50ce172 Downloading 12.47MB
+ 46f4de2e4236 Downloading 352.3MB
+ b14c48cb507d Downloading 54.57MB
+ 0189f02e683f Downloading 4.385MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Downloading 25.15kB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ c1436cf65049 Downloading 1.258MB
+ 7fe3468bf416 Downloading 116B
+ 61061a425fb0 Downloading 6.101kB
+ 84a852dae169 Downloading 1.312MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Downloading 19.42kB
+ 0f12a37b90bb Downloading 6.443MB
+ 46f4de2e4236 Downloading 389MB
+ b14c48cb507d Downloading 54.57MB
+ 7ec4c696b8bb Download complete 0B
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Download complete 0B
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ a13218a43344 Downloading 15.36MB
+ 971ecd1c75ec Download complete 0B
+ 0189f02e683f Download complete 0B
+ d686b50ce172 Download complete 0B
+ d63c4408fdb7 Downloading 21.31MB
+ c1436cf65049 Download complete 0B
+ 16ef6b12768c Download complete 0B
+ 3fadc669ef11 Downloading 43.48MB
+ 7fe3468bf416 Download complete 0B
+ 0afa8bd0fe3a Download complete 0B
+ 61061a425fb0 Download complete 0B
+ 84a852dae169 Download complete 0B
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Downloading 8.204MB
+ edf2405c6afe Downloading 121.4MB
+ 1c59edd7eb40 Download complete 0B
+ 0f12a37b90bb Download complete 0B
+ 20043066d3d5 Downloading 29.72MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 40748add9f4f Downloading 29.84MB
+ a1361b767ece Download complete 0B
+ edf2405c6afe Downloading 121.4MB
+ 46f4de2e4236 Downloading 390.1MB
+ b14c48cb507d Downloading 54.57MB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 121.4MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Downloading 29.72MB
+ b14c48cb507d Downloading 54.57MB
+ 46f4de2e4236 Downloading 390.1MB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 40748add9f4f Downloading 29.84MB
+ edf2405c6afe Downloading 121.4MB
+ 46f4de2e4236 Downloading 392.2MB
+ b14c48cb507d Downloading 54.57MB
+ d63c4408fdb7 Downloading 21.31MB
+ 3fadc669ef11 Downloading 43.48MB
+ 20043066d3d5 Downloading 29.72MB
+ 592e13125349 Downloading 2.373MB
+ b1dd3d113aab Downloading 28.25MB
+ 46f4de2e4236 Downloading 412.1MB
+ 20043066d3d5 Download complete 0B
+ d63c4408fdb7 Download complete 0B
+ b14c48cb507d Download complete 0B
+ edf2405c6afe Download complete 0B
+ a13218a43344 Download complete 0B
+ 59e8b6ceb028 Download complete 0B
+ 592e13125349 Download complete 0B
+ 3fadc669ef11 Download complete 0B
+ 40748add9f4f Download complete 0B
+ b1dd3d113aab Download complete 0B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 426.8MB
+ 3c65b9afb00e Downloading 6.319MB
+ b1dd3d113aab Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 448.8MB
+ 3c65b9afb00e Download complete 0B
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 467.7MB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 486.5MB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 504.4MB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 521.1MB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 540MB
+ b1dd3d113aab Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 558.9MB
+ b14c48cb507d Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 577.8MB
+ b1dd3d113aab Extracting 1B
+ 20043066d3d5 Extracting 1B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 598.7MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 621.8MB
+ b14c48cb507d Extracting 2B
+ 20043066d3d5 Extracting 2B
+ b1dd3d113aab Extracting 2B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 640.7MB
+ b14c48cb507d Extracting 2B
+ 20043066d3d5 Extracting 2B
+ b1dd3d113aab Extracting 2B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 658.5MB
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 677.4MB
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 696.3MB
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 712MB
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 2B
+ 20043066d3d5 Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 40748add9f4f Extracting 2B
+ 46f4de2e4236 Downloading 730.9MB
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 747.6MB
+ dcadfd589ed7 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 750.8MB
+ 3fadc669ef11 Extracting 1B
+ 40748add9f4f Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 755MB
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 777MB
+ 8e4857f35fce Extracting 1B
+ dcadfd589ed7 Pull complete 0B
+ b14c48cb507d Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 803.2MB
+ b14c48cb507d Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 824.2MB
+ 8e4857f35fce Pull complete 0B
+ b14c48cb507d Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 846.2MB
+ fb36845717af Pull complete 0B
+ b14c48cb507d Extracting 3B
+ 0f12a37b90bb Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 865.1MB
+ a13218a43344 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ b14c48cb507d Extracting 3B
+ 0f12a37b90bb Extracting 1B
+ 46f4de2e4236 Downloading 886MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 3B
+ 0f12a37b90bb Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 46f4de2e4236 Downloading 906MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 3B
+ 0f12a37b90bb Pull complete 0B
+ 3fadc669ef11 Extracting 2B
+ 46f4de2e4236 Downloading 926.9MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 3B
+ 3fadc669ef11 Pull complete 0B
+ 46f4de2e4236 Downloading 953.2MB
+ c1436cf65049 Extracting 1B
+ b14c48cb507d Extracting 3B
+ 46f4de2e4236 Downloading 980.4MB
+ c1436cf65049 Pull complete 0B
+ a13218a43344 Pull complete 0B
+ b14c48cb507d Extracting 3B
+ 46f4de2e4236 Downloading 1.009GB
+ 7084ac8f4ab6 Extracting 1B
+ b14c48cb507d Extracting 4B
+ 46f4de2e4236 Downloading 1.037GB
+ 3ed90300cc1a Extracting 1B
+ b14c48cb507d Pull complete 0B
+ 7084ac8f4ab6 Extracting 1B
+ a1361b767ece Extracting 1B
+ 46f4de2e4236 Downloading 1.06GB
+ 3ed90300cc1a Pull complete 0B
+ 0189f02e683f Extracting 1B
+ 7084ac8f4ab6 Pull complete 0B
+ a1361b767ece Extracting 1B
+ beb0d870d438 Pull complete 0B
+ 46f4de2e4236 Downloading 1.081GB
+ 4f4fb700ef54 Pull complete 0B
+ a1361b767ece Extracting 1B
+ 0189f02e683f Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 0189f02e683f Extracting 1B
+ a1361b767ece Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 817018563f08 Extracting 1B
+ 0189f02e683f Pull complete 0B
+ a1361b767ece Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 817018563f08 Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 817018563f08 Pull complete 0B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 84a852dae169 Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ fe7bbed45059 Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 84a852dae169 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ fe7bbed45059 Extracting 1B
+ 84a852dae169 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ fe7bbed45059 Extracting 1B
+ 84a852dae169 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ fe7bbed45059 Extracting 1B
+ d63c4408fdb7 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ fe7bbed45059 Extracting 1B
+ 84a852dae169 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ fe7bbed45059 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ fe7bbed45059 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ Image redis:7 Pulled 
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ efa05c660812 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 7fe3468bf416 Extracting 1B
+ efa05c660812 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 7fe3468bf416 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 7fe3468bf416 Extracting 1B
+ efa05c660812 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 7fe3468bf416 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ f4e7f62f4b80 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ f4e7f62f4b80 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ f4e7f62f4b80 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ f4e7f62f4b80 Pull complete 0B
+ 0afa8bd0fe3a Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 0afa8bd0fe3a Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 0afa8bd0fe3a Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 5e1c03b67a78 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 5e1c03b67a78 Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 5e1c03b67a78 Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 14e6209d5fa8 Extracting 1B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 14e6209d5fa8 Extracting 1B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 14e6209d5fa8 Extracting 1B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ 14e6209d5fa8 Pull complete 0B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ d686b50ce172 Pull complete 0B
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ Image rabbitmq:3-management Pulled 
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Download complete 0B
+ 46f4de2e4236 Extracting 1B
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Extracting 1B
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ edf2405c6afe Pull complete 0B
+ 46f4de2e4236 Extracting 1B
+ 61061a425fb0 Pull complete 0B
+ 1c59edd7eb40 Pull complete 0B
+ 46f4de2e4236 Extracting 1B
+ 7cb67b3b537a Pull complete 0B
+ 46f4de2e4236 Extracting 1B
+ Image postgres:18 Pulled 
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Pull complete 0B
+ 4f4fb700ef54 Extracting 1B
+ 4f4fb700ef54 Pull complete 0B
+ e5604524ac8c Extracting 1B
+ e5604524ac8c Extracting 1B
+ e5604524ac8c Pull complete 0B
+ 9d1f594c66dc Extracting 1B
+ 9d1f594c66dc Extracting 1B
+ 9d1f594c66dc Extracting 1B
+ 9d1f594c66dc Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-redis-1 Started 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-postgresql-1 Started 
+ Container docker_services_cli-rabbitmq-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-administration/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_administration
+plugins: github-actions-annotate-failures-0.4.2, black-0.6.0, isort-4.0.0, invenio-4.1.0, pydocstyle-2.4.0, cov-7.1.0, flask-1.3.0, platformdirs-4.14.8, pycodestyle-2.5.0
+collected 11 items
+::warning file=workdir/tests/invenio-administration/patched/tests/test_base.py,line=10::cannot collect test class 'TestCustomView' because it has a __init__ constructor (from: tests/test_base.py)
+::warning file=workdir/tests/invenio-administration/patched/tests/test_marshmallow_utils.py,line=29::cannot collect test class 'TestSchema' because it has a __init__ constructor (from: tests/test_marshmallow_utils.py)
+
+tests/test_admin_menu.py .                                               [  9%]
+tests/test_base.py ....                                                  [ 45%]
+tests/test_invenio_administration.py ..                                  [ 63%]
+tests/test_marshmallow_utils.py ....                                     [100%]
+
+=============================== warnings summary ===============================
+tests/test_base.py:10
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-administration/patched/tests/test_base.py:10: PytestCollectionWarning: cannot collect test class 'TestCustomView' because it has a __init__ constructor (from: tests/test_base.py)
+    class TestCustomView(AdminView):
+
+tests/test_marshmallow_utils.py:29
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-administration/patched/tests/test_marshmallow_utils.py:29: PytestCollectionWarning: cannot collect test class 'TestSchema' because it has a __init__ constructor (from: tests/test_marshmallow_utils.py)
+    class TestSchema(Schema):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-administration/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                          Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------
+invenio_administration/__init__.py                3      0   100%
+invenio_administration/admin.py                  51      2    96%   52, 100
+invenio_administration/config.py                 10      0   100%
+invenio_administration/decorators.py              1      0   100%
+invenio_administration/error_handlers.py         38     18    53%   45-55, 60-69, 83-86
+invenio_administration/errors.py                 19      6    68%   15, 29, 43, 51, 65, 78
+invenio_administration/ext.py                    59      2    97%   57, 114
+invenio_administration/generators.py              7      2    71%   16, 20
+invenio_administration/marshmallow_utils.py      49      9    82%   75, 93, 95, 111, 114-117, 125-128, 139
+invenio_administration/menu/__init__.py           2      0   100%
+invenio_administration/menu/menu.py              88     15    83%   29, 62, 74-79, 124, 127-128, 153, 161-164
+invenio_administration/patch_info.py              6      2    67%   38-40
+invenio_administration/permissions.py             9      0   100%
+invenio_administration/views/__init__.py          2      0   100%
+invenio_administration/views/base.py            243     72    70%   65, 85, 96, 105-107, 114, 125, 129-130, 134, 170, 172, 177, 189-190, 196, 203, 207-226, 230, 242-254, 258-261, 265-266, 283-287, 310, 321-324, 377, 381-383, 387, 400-402, 406-408, 412-416, 439, 482, 486, 490, 494
+invenio_administration/views/blueprint.py         3      0   100%
+invenio_administration/views/dashboard.py        13      0   100%
+invenio_administration/webpack.py                 7      0   100%
+---------------------------------------------------------------------------
+TOTAL                                           610    128    79%
+======================== 11 passed, 2 warnings in 3.65s ========================
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

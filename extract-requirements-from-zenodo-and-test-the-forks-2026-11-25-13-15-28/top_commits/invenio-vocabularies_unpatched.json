@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "d84e0f9",
+    "message": "release: v15.0.1"
+  },
+  {
+    "hash": "c2e0833",
+    "message": "fix(orcid): update lambda file S3 bucket name"
+  },
+  {
+    "hash": "f357965",
+    "message": "release: v15.0.0"
+  },
+  {
+    "hash": "dde8ed7",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "9403fac",
+    "message": "feat: upgrade to react 18"
+  },
+  {
+    "hash": "cb19139",
+    "message": "release: v14.6.0"
+  },
+  {
+    "hash": "5b17595",
+    "message": "feat(awards): configurable CORDIS insert/update"
+  },
+  {
+    "hash": "06f86d5",
+    "message": "feat(datastreams): support configurable filter functions"
+  },
+  {
+    "hash": "5df99ed",
+    "message": "Update ORCID summaries bucket name"
+  },
+  {
+    "hash": "c48b1bc",
+    "message": "release: v14.5.0"
+  },
+  {
+    "hash": "62c3a14",
+    "message": "fix(datastreams): raise IncompleteReadError for partial reads"
+  },
+  {
+    "hash": "1ce9314",
+    "message": "fix(translations): add no results message to select fields explicitly"
+  },
+  {
+    "hash": "25815ee",
+    "message": "\ud83d\udce6 release: v14.4.0"
+  },
+  {
+    "hash": "2a2a40a",
+    "message": "refactor(schema): Use reusable IdentifierSchema instances instead of partial calls"
+  },
+  {
+    "hash": "aefca12",
+    "message": "\ud83d\udce6 release: v14.3.2"
+  },
+  {
+    "hash": "5d6f78d",
+    "message": "fix(awards): make `funder` required"
+  },
+  {
+    "hash": "3e38824",
+    "message": "\ud83d\udce6 release: v14.3.1"
+  },
+  {
+    "hash": "f49bb44",
+    "message": "\ud83d\udce6 release: v14.3.0"
+  },
+  {
+    "hash": "ccf3190",
+    "message": "feat(awards): add website field populated from CORDIS"
+  },
+  {
+    "hash": "f500c10",
+    "message": "fix(contrib): display all funders api search results"
+  },
+  {
+    "hash": "ac00a08",
+    "message": "\ud83d\udce6 release: v14.2.1"
+  },
+  {
+    "hash": "3b83b56",
+    "message": "fix(datastreams): log write_entry failures with a stack trace"
+  },
+  {
+    "hash": "6c798c6",
+    "message": "fix(ror): drop invalid string default for domains"
+  },
+  {
+    "hash": "1bd3244",
+    "message": "fix(datastreams): allow overriding writer defaults"
+  },
+  {
+    "hash": "7078e4a",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "98023ea",
+    "message": "cli: document import and update command difference"
+  },
+  {
+    "hash": "026d02c",
+    "message": "\ud83d\udce6 release: v14.2.0"
+  },
+  {
+    "hash": "b42e8a1",
+    "message": "feat(ror): updated datastream & mappings to include website & domains"
+  },
+  {
+    "hash": "a255ffd",
+    "message": "feat(awards): add grant DOI identifier in cordis datastream"
+  },
+  {
+    "hash": "0447592",
+    "message": "feat(awards): add all awards fields in cordis datastream"
+  },
+  {
+    "hash": "acf2197",
+    "message": "feat(awards): default PIC mapping source to published Zenodo DOI"
+  },
+  {
+    "hash": "85c9c5f",
+    "message": "feat(awards): accept name as organizations free-text label"
+  },
+  {
+    "hash": "e32cc4b",
+    "message": "feat(awards): resolve CORDIS PICs to ROR ids on import"
+  },
+  {
+    "hash": "a9a6a1f",
+    "message": "refactor(common): extract DOI signposting helper"
+  },
+  {
+    "hash": "a5f087a",
+    "message": "feat(awards): dereference organizations against affiliations vocabulary"
+  },
+  {
+    "hash": "bdb8ba9",
+    "message": "feat(awards): add short description in cordis datastream"
+  },
+  {
+    "hash": "fdae2f5",
+    "message": "fix(datastreams): OpenAIREHTTPReader allowing to match several tar filenames"
+  },
+  {
+    "hash": "7bb26b5",
+    "message": "release: v14.1.0"
+  },
+  {
+    "hash": "bdd2ac5",
+    "message": "fix(datastreams): omit entry payload from skipped-entry logs"
+  },
+  {
+    "hash": "0ec7ccb",
+    "message": "fix(contrib): adding custom funders"
+  },
+  {
+    "hash": "94d4409",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "90eb911",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "0b0c143",
+    "message": "jobs: configured job for inserting EDMO affiliations"
+  },
+  {
+    "hash": "59f051a",
+    "message": "release: v14.0.0"
+  },
+  {
+    "hash": "c1ac9e2",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "7b9f4f6",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "d3ccbd6",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "484266c",
+    "message": "funding: make funding item button order match"
+  },
+  {
+    "hash": "783e47d",
+    "message": "fix(datastreams): fix OAIPMHReader default parameters"
+  },
+  {
+    "hash": "f45fad6",
+    "message": "release: v13.0.0"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "ac70bc8",
+    "message": "feat: Lenient labelled facets mixin"
+  },
+  {
+    "hash": "20abf4d",
+    "message": "Reverting change"
+  },
+  {
+    "hash": "9713542",
+    "message": "feat: Passing more context to permissions and components"
+  },
+  {
+    "hash": "a628c6d",
+    "message": "\ud83d\udce6 release: v11.1.3"
+  },
+  {
+    "hash": "8fb523c",
+    "message": "chore: replace pytz.utc usage by datetime.timezone.utc"
+  },
+  {
+    "hash": "0dce916",
+    "message": "fix(files): persist malformed zip errors"
+  },
+  {
+    "hash": "340d6f0",
+    "message": "\ud83d\udce6 release: v11.1.2"
+  },
+  {
+    "hash": "6cbf4ad",
+    "message": "fix(files): use the files manager's bucket for staged uploads"
+  },
+  {
+    "hash": "6963060",
+    "message": "test(files): cover staged uploads to a separate files bucket"
+  },
+  {
+    "hash": "3afc258",
+    "message": "\ud83d\udce6 release: v11.1.1"
+  },
+  {
+    "hash": "7acf196",
+    "message": "fix(files): retry metadata extraction on StaleDataError"
+  },
+  {
+    "hash": "962fca8",
+    "message": "\ud83d\udce6 release: v11.1.0"
+  },
+  {
+    "hash": "f32cc26",
+    "message": "fix: instantiate fileupload object in service & clanker fixed test + errors"
+  },
+  {
+    "hash": "c477c3d",
+    "message": "fix: import files in new version"
+  },
+  {
+    "hash": "80c8bc7",
+    "message": "fix: file cleanup"
+  },
+  {
+    "hash": "9935cee",
+    "message": "fix(files): correct staged upload cleanup and connection handling"
+  },
+  {
+    "hash": "d612eac",
+    "message": "feat(files): release DB connections during uploads"
+  },
+  {
+    "hash": "d718c24",
+    "message": "refactor(schemas): instantiate schemas in the service constructors"
+  },
+  {
+    "hash": "f99a086",
+    "message": "refactor(schemas): initialize schema immediately in the service wrapper"
+  },
+  {
+    "hash": "931f39d",
+    "message": "fix(schemas): get service via a context var instead of from the object"
+  },
+  {
+    "hash": "f41711e",
+    "message": "fix(files): set default_preview/order after copying files"
+  },
+  {
+    "hash": "63dfec9",
+    "message": "\ud83d\udce6 release: v11.0.4"
+  },
+  {
+    "hash": "06c8948",
+    "message": "fix(tests): changed minio to rustfs"
+  },
+  {
+    "hash": "e18696d",
+    "message": "i18n: update string formatting"
+  },
+  {
+    "hash": "9cc7539",
+    "message": "\ud83d\udce6 release: v11.0.3"
+  },
+  {
+    "hash": "249f876",
+    "message": "fix(files): retry metadata extraction after publication"
+  },
+  {
+    "hash": "5e9f4d5",
+    "message": "release: v11.0.2"
+  },
+  {
+    "hash": "0eed640",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "d276182",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "3b5b028",
+    "message": "release: v11.0.1"
+  },
+  {
+    "hash": "69334f7",
+    "message": "fix: retry multipart checksum computation"
+  },
+  {
+    "hash": "f0afdb1",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "6ce2981",
+    "message": "chore(cleanup): remove outdated and unnecessary files"
+  },
+  {
+    "hash": "24d7320",
+    "message": "fix(performance): replace deepcopy with shallow copy for link expansion"
+  },
+  {
+    "hash": "c40a74a",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "9b8c666",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "dd198c9",
+    "message": "release: v11.0.0"
+  },
+  {
+    "hash": "e171c35",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "8603150",
+    "message": "chore(git-blame): fix commit hash for SPDX header change"
+  },
+  {
+    "hash": "8d03a7c",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "51232fd",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "840da76",
+    "message": "\ud83d\udce6 release: v10.1.0"
+  },
+  {
+    "hash": "63e8a34",
+    "message": "files: limit archive download by total file size"
+  },
+  {
+    "hash": "a34216f",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "376ea68",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "d2396a9",
+    "message": "feat: add suport for listing and extracing items from containers"
+  },
+  {
+    "hash": "88930b5",
+    "message": "fix(tests): Added alembic test"
+  },
+  {
+    "hash": "07d211e",
+    "message": "feat: Passing more context to permissions and components"
+  },
+  {
+    "hash": "a285b12",
+    "message": "\ud83d\udce6 release: v9.3.0"
+  },
+  {
+    "hash": "279dd56",
+    "message": "feat(facets): add hard_bounds and dynamic bounds to DateFacet"
+  }
+]

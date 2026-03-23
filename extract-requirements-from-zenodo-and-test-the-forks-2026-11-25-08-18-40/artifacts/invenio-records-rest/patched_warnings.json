@@ -1,0 +1,7 @@
+{
+  "SyntaxWarning: \"\\?\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\?\"? A raw string is also an option.": 1,
+  "SyntaxWarning: \"is\" with 'int' literal. Did you mean \"==\"?": 1,
+  "UserWarning: Set configuration variable SECRET_KEY with random string": 1,
+  "SAWarning: nested transaction already deassociated from connection": 4,
+  "DeprecationWarning: The patch() method is deprecated and will be removed.": 1
+}

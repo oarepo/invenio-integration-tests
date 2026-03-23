@@ -1,0 +1,517 @@
+ Image postgres:18 Pulling 
+ Image redis:7 Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ b14c48cb507d Pulling fs layer 0B
+ e5604524ac8c Pulling fs layer 0B
+ 9d1f594c66dc Pulling fs layer 0B
+ fe7bbed45059 Pulling fs layer 0B
+ 46f4de2e4236 Pulling fs layer 0B
+ 0189f02e683f Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 817018563f08 Pulling fs layer 0B
+ a13218a43344 Pulling fs layer 0B
+ 3ed90300cc1a Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ b1dd3d113aab Pulling fs layer 0B
+ fb36845717af Pulling fs layer 0B
+ dcadfd589ed7 Pulling fs layer 0B
+ 84a852dae169 Pulling fs layer 0B
+ 1c59edd7eb40 Pulling fs layer 0B
+ edf2405c6afe Pulling fs layer 0B
+ 7cb67b3b537a Pulling fs layer 0B
+ 61061a425fb0 Pulling fs layer 0B
+ 40748add9f4f Pulling fs layer 0B
+ 0afa8bd0fe3a Pulling fs layer 0B
+ 8e4857f35fce Pulling fs layer 0B
+ c1436cf65049 Pulling fs layer 0B
+ a1361b767ece Pulling fs layer 0B
+ 7fe3468bf416 Pulling fs layer 0B
+ 0f12a37b90bb Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ 4f4fb700ef54 Already exists 0B
+ dcadfd589ed7 Download complete 0B
+ e5604524ac8c Download complete 0B
+ b14c48cb507d Downloading 23.07MB
+ 84a852dae169 Download complete 0B
+ 817018563f08 Download complete 0B
+ 9d1f594c66dc Download complete 0B
+ 7fe3468bf416 Download complete 0B
+ fe7bbed45059 Download complete 0B
+ 3ed90300cc1a Download complete 0B
+ a13218a43344 Downloading 1.049MB
+ 1c59edd7eb40 Download complete 0B
+ edf2405c6afe Downloading 8.389MB
+ b14c48cb507d Downloading 45.09MB
+ 46f4de2e4236 Downloading 5.243MB
+ 61061a425fb0 Download complete 0B
+ 0189f02e683f Download complete 0B
+ fb36845717af Download complete 0B
+ b1dd3d113aab Downloading 3.146MB
+ 0afa8bd0fe3a Download complete 0B
+ 8e4857f35fce Download complete 0B
+ 7cb67b3b537a Download complete 0B
+ 0f12a37b90bb Downloading 1.049MB
+ b14c48cb507d Downloading 54.53MB
+ 46f4de2e4236 Downloading 14.68MB
+ a13218a43344 Downloading 10.49MB
+ b1dd3d113aab Downloading 13.63MB
+ c1436cf65049 Download complete 0B
+ 40748add9f4f Downloading 8.389MB
+ a1361b767ece Downloading 8.204MB
+ 0f12a37b90bb Download complete 0B
+ edf2405c6afe Downloading 17.83MB
+ edf2405c6afe Downloading 26.21MB
+ b14c48cb507d Download complete 0B
+ 46f4de2e4236 Downloading 22.02MB
+ 971ecd1c75ec Download complete 0B
+ 59e8b6ceb028 Download complete 0B
+ 40748add9f4f Downloading 16.78MB
+ a13218a43344 Download complete 0B
+ b1dd3d113aab Downloading 22.02MB
+ a1361b767ece Download complete 0B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Downloading 28.31MB
+ 46f4de2e4236 Downloading 34.6MB
+ b1dd3d113aab Download complete 0B
+ 3c65b9afb00e Download complete 0B
+ edf2405c6afe Downloading 37.75MB
+ 592e13125349 Download complete 0B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 46f4de2e4236 Downloading 51.38MB
+ 40748add9f4f Download complete 0B
+ edf2405c6afe Downloading 53.48MB
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 72.35MB
+ 46f4de2e4236 Downloading 66.06MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 92.27MB
+ 46f4de2e4236 Downloading 82.84MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 108MB
+ 46f4de2e4236 Downloading 99.61MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ edf2405c6afe Downloading 121.4MB
+ 46f4de2e4236 Downloading 117.4MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 141.6MB
+ edf2405c6afe Download complete 0B
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 167.8MB
+ b1dd3d113aab Extracting 1B
+ b14c48cb507d Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 190.8MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 217.1MB
+ b14c48cb507d Extracting 1B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 242.2MB
+ b14c48cb507d Extracting 2B
+ b1dd3d113aab Extracting 1B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 271.6MB
+ b1dd3d113aab Extracting 2B
+ b14c48cb507d Extracting 2B
+ 40748add9f4f Extracting 1B
+ 46f4de2e4236 Downloading 291.5MB
+ dcadfd589ed7 Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 8e4857f35fce Pull complete 0B
+ fb36845717af Pull complete 0B
+ 0f12a37b90bb Extracting 1B
+ a13218a43344 Extracting 1B
+ 40748add9f4f Pull complete 0B
+ b1dd3d113aab Pull complete 0B
+ 46f4de2e4236 Downloading 313.5MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 2B
+ 0f12a37b90bb Extracting 1B
+ 46f4de2e4236 Downloading 338.7MB
+ a13218a43344 Extracting 1B
+ c1436cf65049 Extracting 1B
+ 0f12a37b90bb Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 361.8MB
+ a13218a43344 Extracting 1B
+ b14c48cb507d Extracting 2B
+ c1436cf65049 Pull complete 0B
+ a1361b767ece Extracting 1B
+ 4f4fb700ef54 Pull complete 0B
+ 817018563f08 Pull complete 0B
+ 3ed90300cc1a Pull complete 0B
+ a13218a43344 Pull complete 0B
+ Image redis:7 Pulled 
+ 46f4de2e4236 Downloading 389MB
+ b14c48cb507d Extracting 2B
+ a1361b767ece Extracting 1B
+ 46f4de2e4236 Downloading 411MB
+ 84a852dae169 Extracting 1B
+ a1361b767ece Pull complete 0B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 437.3MB
+ 84a852dae169 Pull complete 0B
+ 7fe3468bf416 Pull complete 0B
+ 0afa8bd0fe3a Pull complete 0B
+ b14c48cb507d Extracting 2B
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 468.7MB
+ edf2405c6afe Extracting 1B
+ b14c48cb507d Extracting 2B
+ 46f4de2e4236 Downloading 497MB
+ edf2405c6afe Extracting 1B
+ b14c48cb507d Pull complete 0B
+ 46f4de2e4236 Downloading 520.1MB
+ edf2405c6afe Extracting 1B
+ 0189f02e683f Extracting 1B
+ 46f4de2e4236 Downloading 548.4MB
+ edf2405c6afe Extracting 1B
+ fe7bbed45059 Pull complete 0B
+ 0189f02e683f Pull complete 0B
+ 46f4de2e4236 Downloading 580.9MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 613.4MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 647MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 679.5MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 709.9MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 742.4MB
+ edf2405c6afe Extracting 1B
+ 46f4de2e4236 Downloading 775.9MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 808.5MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 838.9MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 872.4MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 903.9MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 936.4MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 969.9MB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.033GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.066GB
+ edf2405c6afe Extracting 2B
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 1c59edd7eb40 Pull complete 0B
+ 61061a425fb0 Pull complete 0B
+ edf2405c6afe Pull complete 0B
+ 46f4de2e4236 Downloading 1.1GB
+ 7cb67b3b537a Pull complete 0B
+ Image postgres:18 Pulled 
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Downloading 1.1GB
+ 46f4de2e4236 Download complete 0B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 1B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 2B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 3B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 4B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 5B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 46f4de2e4236 Extracting 6B
+ 4f4fb700ef54 Pull complete 0B
+ e5604524ac8c Pull complete 0B
+ 9d1f594c66dc Pull complete 0B
+ 46f4de2e4236 Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-redis-1 Started 
+ Container docker_services_cli-postgresql-1 Started 
+::warning file=workdir/tests/invenio-requests/patched/.venv/lib/python3.14/site-packages/marshmallow/fields.py,line=1218::The 'missing' argument to fields is deprecated. Use 'load_default' instead.
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-requests/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_requests
+plugins: pydocstyle-2.4.0, platformdirs-4.14.8, isort-4.0.0, black-0.6.0, cov-7.1.0, time-machine-2.19.0, flask-1.3.0, pycodestyle-2.5.0, github-actions-annotate-failures-0.4.2, invenio-4.1.0
+collected 139 items
+
+tests/customizations/test_event_types.py ...                             [  2%]
+tests/customizations/test_request_types.py ...                           [  4%]
+tests/records/events/test_api.py .                                       [  5%]
+tests/records/systemfields/test_calculated_systemfield.py ..             [  6%]
+tests/records/systemfields/test_last_activity_field.py ...               [  8%]
+tests/records/systemfields/test_last_reply_field.py ....                 [ 11%]
+tests/records/test_request_api.py .                                      [ 12%]
+tests/records/test_request_numberseq.py .                                [ 12%]
+tests/records/test_systemfield_relatedrecord.py .....                    [ 16%]
+tests/registry/test_registries.py ...                                    [ 18%]
+tests/resources/events/test_request_events_resources.py ............     [ 27%]
+tests/resources/files/test_request_files_resources.py ......             [ 31%]
+tests/resources/requests/test_requests_resources.py ......               [ 35%]
+tests/resources/user_moderation/test_user_moderation_resources.py ...... [ 40%]
+.....                                                                    [ 43%]
+tests/services/components/test_request_reviewers_component.py .......... [ 51%]
+.......                                                                  [ 56%]
+tests/services/events/test_event_permissions.py ......                   [ 60%]
+tests/services/events/test_request_events_service.py ...........         [ 68%]
+tests/services/events/test_request_events_service_config.py ..           [ 69%]
+tests/services/requests/test_request_permissions.py .............        [ 79%]
+tests/services/requests/test_request_search_permissions.py .             [ 79%]
+tests/services/requests/test_requests_schemas.py ..                      [ 81%]
+tests/services/requests/test_requests_service.py ........                [ 87%]
+tests/services/requests/test_requests_service_config.py ..               [ 88%]
+tests/services/requests/test_requests_tasks.py .                         [ 89%]
+tests/services/user_moderation/test_user_moderation_service.py .......   [ 94%]
+tests/test_alembic.py s                                                  [ 94%]
+tests/test_invenio_requests.py ...                                       [ 97%]
+tests/test_type_registry.py ...                                          [ 99%]
+tests/ui/test_request_ui_files_resources.py .                            [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/marshmallow/fields.py:1218
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-requests/patched/.venv/lib/python3.14/site-packages/marshmallow/fields.py:1218: RemovedInMarshmallow4Warning: The 'missing' argument to fields is deprecated. Use 'load_default' instead.
+    super().__init__(**kwargs)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/artifacts/invenio-requests/patched_junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                                             Stmts   Miss  Cover   Missing
+--------------------------------------------------------------------------------------------------------------
+invenio_requests/__init__.py                                                         5      0   100%
+invenio_requests/alembic/3ca07f2ee12b_change_datetime_types_addition.py             13      6    54%   21-23, 28-30
+invenio_requests/alembic/5cd30a3503c9_create_requests_branch.py                      8      2    75%   15, 20
+invenio_requests/alembic/74b23178bfbe_change_datetime_types.py                      15      8    47%   21-24, 29-32
+invenio_requests/alembic/1759321170_add_index_to_request_events_request_id_.py       9      2    78%   17, 27
+invenio_requests/alembic/1763728177_create_request_files_table.py                   24     14    42%   20-92, 104-116
+invenio_requests/alembic/a14fa442680f_create_tables.py                              18      8    56%   20-92, 106-109
+invenio_requests/config.py                                                          49      0   100%
+invenio_requests/customizations/__init__.py                                          5      0   100%
+invenio_requests/customizations/actions.py                                          64      1    98%   85
+invenio_requests/customizations/event_types.py                                      86      7    92%   23-24, 98-100, 105, 109
+invenio_requests/customizations/request_types.py                                    96      8    92%   127, 195-200, 252-253, 287
+invenio_requests/customizations/states.py                                            5      0   100%
+invenio_requests/customizations/user_moderation/__init__.py                          2      0   100%
+invenio_requests/customizations/user_moderation/user_moderation.py                  29      0   100%
+invenio_requests/errors.py                                                          41      4    90%   68, 100-104
+invenio_requests/ext.py                                                             84      1    99%   198
+invenio_requests/notifications/__init__.py                                           0      0   100%
+invenio_requests/notifications/builders.py                                          21      0   100%
+invenio_requests/notifications/filters.py                                           14      1    93%   23
+invenio_requests/notifications/generators.py                                        60      3    95%   29, 127-129
+invenio_requests/patch_info.py                                                       6      2    67%   56-58
+invenio_requests/proxies.py                                                         18      0   100%
+invenio_requests/records/__init__.py                                                 3      0   100%
+invenio_requests/records/api.py                                                     97      3    97%   102-105
+invenio_requests/records/dumpers/__init__.py                                         4      0   100%
+invenio_requests/records/dumpers/calculated.py                                      10      0   100%
+invenio_requests/records/dumpers/granttokens.py                                     20      2    90%   31-32
+invenio_requests/records/dumpers/parentchild.py                                      8      0   100%
+invenio_requests/records/jsonschemas/__init__.py                                     0      0   100%
+invenio_requests/records/mappings/__init__.py                                        0      0   100%
+invenio_requests/records/mappings/os-v1/__init__.py                                  0      0   100%
+invenio_requests/records/mappings/os-v2/__init__.py                                  0      0   100%
+invenio_requests/records/mappings/v7/__init__.py                                     0      0   100%
+invenio_requests/records/models.py                                                  53      0   100%
+invenio_requests/records/systemfields/__init__.py                                    9      0   100%
+invenio_requests/records/systemfields/computed.py                                   65      1    98%   119
+invenio_requests/records/systemfields/entity_reference.py                           15      0   100%
+invenio_requests/records/systemfields/event_type.py                                 48      2    96%   28, 58
+invenio_requests/records/systemfields/expired_state.py                              13      0   100%
+invenio_requests/records/systemfields/files.py                                       7      2    71%   21-23
+invenio_requests/records/systemfields/identity.py                                   11      2    82%   16-17
+invenio_requests/records/systemfields/relatedrecord.py                              96     20    79%   29, 33-35, 43-45, 53-54, 61-63, 132-133, 152-155, 166-167, 179
+invenio_requests/records/systemfields/request_state.py                              10      0   100%
+invenio_requests/records/systemfields/request_type.py                               30      1    97%   37
+invenio_requests/records/systemfields/status.py                                     11      0   100%
+invenio_requests/records/validators.py                                               6      4    33%   16-20
+invenio_requests/registry.py                                                        17      0   100%
+invenio_requests/resolvers/__init__.py                                               1      0   100%
+invenio_requests/resolvers/registry.py                                               6      0   100%
+invenio_requests/resolvers/requests.py                                              15      4    73%   23, 32, 42, 51
+invenio_requests/resources/__init__.py                                               4      0   100%
+invenio_requests/resources/events/__init__.py                                        3      0   100%
+invenio_requests/resources/events/config.py                                         15      0   100%
+invenio_requests/resources/events/resource.py                                       79      4    95%   167-174, 197-205
+invenio_requests/resources/files/__init__.py                                         3      0   100%
+invenio_requests/resources/files/config.py                                          11      0   100%
+invenio_requests/resources/files/resource.py                                        25      0   100%
+invenio_requests/resources/requests/__init__.py                                      3      0   100%
+invenio_requests/resources/requests/config.py                                       23      0   100%
+invenio_requests/resources/requests/fields.py                                       16      6    62%   25, 27, 36-41
+invenio_requests/resources/requests/resource.py                                     70      6    91%   91-97, 120-127, 134-139
+invenio_requests/services/__init__.py                                                5      0   100%
+invenio_requests/services/events/__init__.py                                         3      0   100%
+invenio_requests/services/events/config.py                                         142     11    92%   42, 76, 82, 107, 143-144, 147-152, 308
+invenio_requests/services/events/service.py                                        207     54    74%   119, 249, 348, 446-499, 632-689, 718, 731
+invenio_requests/services/files/__init__.py                                          3      0   100%
+invenio_requests/services/files/config.py                                           27      1    96%   25
+invenio_requests/services/files/errors.py                                           10      1    90%   30
+invenio_requests/services/files/service.py                                          61      2    97%   66, 94
+invenio_requests/services/generators.py                                             89      9    90%   44, 69, 107, 136, 167, 173, 180, 190, 194
+invenio_requests/services/links.py                                                  73      1    99%   86
+invenio_requests/services/permissions.py                                            25      0   100%
+invenio_requests/services/requests/__init__.py                                       5      0   100%
+invenio_requests/services/requests/components.py                                   125      5    96%   182-191
+invenio_requests/services/requests/config.py                                        37      0   100%
+invenio_requests/services/requests/facets.py                                         5      0   100%
+invenio_requests/services/requests/params.py                                        58     12    79%   29, 55, 76, 78, 105-124, 139-140
+invenio_requests/services/requests/results.py                                       84      8    90%   48, 58, 83-85, 92, 98, 113
+invenio_requests/services/requests/service.py                                      106      2    98%   44, 370
+invenio_requests/services/results.py                                                50     20    60%   28, 58-59, 63, 76-79, 84-86, 91-97, 101-103
+invenio_requests/services/schemas.py                                                59      0   100%
+invenio_requests/services/user_moderation/__init__.py                                2      0   100%
+invenio_requests/services/user_moderation/errors.py                                  5      0   100%
+invenio_requests/services/user_moderation/service.py                                36      1    97%   96
+invenio_requests/tasks.py                                                           25      7    72%   42-44, 56-61
+invenio_requests/views/__init__.py                                                   5      0   100%
+invenio_requests/views/api.py                                                        9      0   100%
+invenio_requests/views/decorators.py                                                13      9    31%   16-29
+invenio_requests/views/files/__init__.py                                             2      0   100%
+invenio_requests/views/files/requests.py                                             5      0   100%
+invenio_requests/views/files/ui.py                                                  11      1    91%   15
+invenio_requests/views/ui.py                                                        18      5    72%   18, 23, 28-31
+invenio_requests/webpack.py                                                          2      0   100%
+--------------------------------------------------------------------------------------------------------------
+TOTAL                                                                             2786    273    90%
+================== 138 passed, 1 skipped, 1 warning in 53.67s ==================
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

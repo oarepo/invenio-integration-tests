@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "65e7bb7",
+    "message": "release: v13.0.0"
+  },
+  {
+    "hash": "783f564",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "09ca8c5",
+    "message": "\ud83d\udce6 release: v12.0.1"
+  },
+  {
+    "hash": "3a9dae2",
+    "message": "fix(components): use past check runs to rerun"
+  },
+  {
+    "hash": "c924aa3",
+    "message": "\ud83d\udce6 release: v12.0.0"
+  },
+  {
+    "hash": "8a67470",
+    "message": "refactor(checks): filter visible checks in template"
+  },
+  {
+    "hash": "8bf86b9",
+    "message": "refactor(checks): extract severity icon logic"
+  },
+  {
+    "hash": "5c54c2e",
+    "message": "feat(checks): add hide_parent_checks to Check"
+  },
+  {
+    "hash": "ab963f0",
+    "message": "feat(rules): allow skipping rules"
+  },
+  {
+    "hash": "731e346",
+    "message": "fix(checks): handle concurrent check runs across publish and edit"
+  },
+  {
+    "hash": "f4be961",
+    "message": "chore: add missing docstring"
+  },
+  {
+    "hash": "72a95ac",
+    "message": "fix(checks): implement CheckTargets registry"
+  },
+  {
+    "hash": "99f54df",
+    "message": "refactor(checks): move skip-rerun logic into checks"
+  },
+  {
+    "hash": "4c190ab",
+    "message": "fix(models): make `is_draft` NOT NULL and remove default for `target_type`"
+  },
+  {
+    "hash": "632debc",
+    "message": "fix(entrypoint): register invenio checks task"
+  },
+  {
+    "hash": "97e4bec",
+    "message": "fix(checks): refactored can rerun permission check to class"
+  },
+  {
+    "hash": "61d7e6d",
+    "message": "fix(ui): handle async error status on checks ui"
+  },
+  {
+    "hash": "aab7147",
+    "message": "fix(checks): improve async check execution reliability"
+  },
+  {
+    "hash": "8e7bf76",
+    "message": "fix(requests): pass community_id to get_runs"
+  },
+  {
+    "hash": "862e49d",
+    "message": "feat(checks): allowing reruning of checks based on flag"
+  },
+  {
+    "hash": "a762b42",
+    "message": "refactor(checks): refactor async checks"
+  },
+  {
+    "hash": "bbe8d22",
+    "message": "feat(checks): refactored and integrated async checks workflow"
+  },
+  {
+    "hash": "e79c7c8",
+    "message": "refactor(ui): display one icon per check type"
+  },
+  {
+    "hash": "b843e09",
+    "message": "refactor(checks): pass kwargs to run checks"
+  },
+  {
+    "hash": "0deb91f",
+    "message": "refactor(checks): add sync and target_type"
+  },
+  {
+    "hash": "e9bd78a",
+    "message": "feat(checks): add member check component"
+  },
+  {
+    "hash": "9ad24f9",
+    "message": "feat(checks): add support for subcommunity checks"
+  },
+  {
+    "hash": "a2bbc0e",
+    "message": "release: v11.0.2"
+  },
+  {
+    "hash": "5682363",
+    "message": "ci: enable CI for feature branches"
+  },
+  {
+    "hash": "2d03cb3",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "509eeac",
+    "message": "release: v11.0.1"
+  },
+  {
+    "hash": "eb5b149",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "faa2d04",
+    "message": "I18n add translation support for invenio-checks (#49)"
+  },
+  {
+    "hash": "77576ad",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "2021242",
+    "message": "chore(licenses): fix some SPDX license headers"
+  },
+  {
+    "hash": "6b78f18",
+    "message": "release: v11.0.0"
+  },
+  {
+    "hash": "4d34952",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "958dfb3",
+    "message": "fix: don't add None community_id from global check runs to community_ids set"
+  },
+  {
+    "hash": "b204e2c",
+    "message": "chore(packaging): exclude .git-blame-ignore-revs from distribution"
+  },
+  {
+    "hash": "e60965a",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "cec453a",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "2b4c47a",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "840907d",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "e6da225",
+    "message": "release: v9.0.0"
+  },
+  {
+    "hash": "1001c9c",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "0493950",
+    "message": "fix: migrations for choices"
+  },
+  {
+    "hash": "b441cdb",
+    "message": "feat: allow empty community_id for check config"
+  },
+  {
+    "hash": "d2d8252",
+    "message": "release: v8.2.0"
+  },
+  {
+    "hash": "1c76864",
+    "message": "feat(rules): add min/max operators"
+  },
+  {
+    "hash": "e99b905",
+    "message": "\ud83d\udce6 release: v8.1.0"
+  }
+]

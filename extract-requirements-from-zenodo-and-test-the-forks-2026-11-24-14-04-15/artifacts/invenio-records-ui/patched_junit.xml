@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="2" failures="0" skipped="0" tests="2" time="0.272" timestamp="2026-11-24T14:10:08.669878+00:00" hostname="runnervm0hi8g"><testcase classname="" name="tests.test_invenio_records_ui" time="0.000"><error message="collection failure">ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/patched/tests/test_invenio_records_ui.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_invenio_records_ui.py:13: in &lt;module&gt;
+    from invenio_access import InvenioAccess
+.venv/lib/python3.14/site-packages/invenio_access/__init__.py:426: in &lt;module&gt;
+    from .ext import InvenioAccess
+.venv/lib/python3.14/site-packages/invenio_access/ext.py:7: in &lt;module&gt;
+    import six
+E   ModuleNotFoundError: No module named 'six'</error><error message="collection failure">ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/patched/tests/test_invenio_records_ui.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_invenio_records_ui.py:13: in &lt;module&gt;
+    from invenio_access import InvenioAccess
+.venv/lib/python3.14/site-packages/invenio_access/__init__.py:426: in &lt;module&gt;
+    from .ext import InvenioAccess
+.venv/lib/python3.14/site-packages/invenio_access/ext.py:7: in &lt;module&gt;
+    import six
+E   ModuleNotFoundError: No module named 'six'</error></testcase></testsuite></testsuites>

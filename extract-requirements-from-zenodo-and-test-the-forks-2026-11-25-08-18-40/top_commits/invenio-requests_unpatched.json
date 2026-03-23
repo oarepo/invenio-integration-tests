@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "4bd486f",
+    "message": "release: v16.1.0"
+  },
+  {
+    "hash": "35e3279",
+    "message": "feat(reviewers): add help text for clarification"
+  },
+  {
+    "hash": "f494f10",
+    "message": "release: v16.0.0"
+  },
+  {
+    "hash": "519582a",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "a84c9f2",
+    "message": "feat: upgrade to react 18"
+  },
+  {
+    "hash": "0216f2d",
+    "message": "release: v15.2.3"
+  },
+  {
+    "hash": "dd5cdab",
+    "message": "fix(mathjax): ignore bare LaTeX environments in comments"
+  },
+  {
+    "hash": "c635a25",
+    "message": "fix(types): ensure that the result of `str()` is actually a string"
+  },
+  {
+    "hash": "361bfe5",
+    "message": "chore: add test if `str(exception)` returns a string"
+  },
+  {
+    "hash": "5481df1",
+    "message": "fix: remove trailing '/' from requests.search route [+]"
+  },
+  {
+    "hash": "c854f22",
+    "message": "\ud83d\udce6 release: v15.2.2"
+  },
+  {
+    "hash": "6ac5db4",
+    "message": "fix(notifications): refresh replies before resolving participants"
+  },
+  {
+    "hash": "60be60d",
+    "message": "fix(tests): DeprecationWarning"
+  },
+  {
+    "hash": "32670ba",
+    "message": "fix(tests): SyntaxWarning"
+  },
+  {
+    "hash": "f9920c1",
+    "message": "release: v15.2.1"
+  },
+  {
+    "hash": "f348b0f",
+    "message": "fix(permissions): allow receivers to update finalized requests"
+  },
+  {
+    "hash": "72dda7e",
+    "message": "release: v15.2.0"
+  },
+  {
+    "hash": "6863295",
+    "message": "fix(timeline): avoid throwing error on request abort during auto refresh"
+  },
+  {
+    "hash": "a14e9aa",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "b354d1d",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "5a0e015",
+    "message": "config: add config flag for timeline refresh interval"
+  },
+  {
+    "hash": "f78492d",
+    "message": "fix(comments): resolve collisions in allowed tags configuration"
+  },
+  {
+    "hash": "50fd35d",
+    "message": "release: v15.1.1"
+  },
+  {
+    "hash": "3fb0e34",
+    "message": "fix(i18n): update variable naming in  translations (#621)"
+  },
+  {
+    "hash": "7fd808a",
+    "message": "i18n: Static request actions (#598)"
+  },
+  {
+    "hash": "84c35ba",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "b64bd5f",
+    "message": "release: v15.1.0"
+  },
+  {
+    "hash": "29080b7",
+    "message": "feat(requests): add role grant to shared with me param"
+  },
+  {
+    "hash": "4fcc140",
+    "message": "chore(licenses): fix some SPDX license headers"
+  },
+  {
+    "hash": "8d2e7da",
+    "message": "fix(requests-ui): show record version in submission Record link"
+  },
+  {
+    "hash": "8099550",
+    "message": "release: v15.0.0"
+  },
+  {
+    "hash": "041145b",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "d6e2bca",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "29079ee",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "f089e48",
+    "message": "release: v14.0.0"
+  },
+  {
+    "hash": "18046d1",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "5b2dd9f",
+    "message": "fix(tests): passing expires_at as datetime, not as string"
+  },
+  {
+    "hash": "d5c2b8e",
+    "message": "fix: preserve redirect responses for S3 downloads"
+  },
+  {
+    "hash": "7bc3ff7",
+    "message": "i18n: update string formatting"
+  },
+  {
+    "hash": "f6b0c89",
+    "message": "release: v13.0.0"
+  },
+  {
+    "hash": "115e4d3",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "a945cf6",
+    "message": "feat: introduced SameAs to make the policy extendable"
+  },
+  {
+    "hash": "f02baf1",
+    "message": "feat: Extra context for permission checks"
+  },
+  {
+    "hash": "3ceaf41",
+    "message": "release: v12.6.2"
+  },
+  {
+    "hash": "2813f66",
+    "message": "fix(comments): null ref for deleted comments"
+  },
+  {
+    "hash": "47064e1",
+    "message": "release: v12.6.1"
+  },
+  {
+    "hash": "98f9012",
+    "message": "fix(comments): ensure \"show less\" button is hidden for comments <200px height"
+  },
+  {
+    "hash": "adc4bac",
+    "message": "\ud83d\udce6 release: v12.6.0"
+  },
+  {
+    "hash": "8f8a436",
+    "message": "labels: add quota increase label"
+  },
+  {
+    "hash": "345fb59",
+    "message": "\ud83d\udce6 release: v12.5.2"
+  }
+]

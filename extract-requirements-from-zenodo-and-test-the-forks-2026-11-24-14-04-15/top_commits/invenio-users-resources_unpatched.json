@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "a63dcfa",
+    "message": "release: v14.0.1"
+  },
+  {
+    "hash": "7bce817",
+    "message": "fix(users): restrict search to public fields and match partial emails"
+  },
+  {
+    "hash": "e734bcb",
+    "message": "release: v14.0.0"
+  },
+  {
+    "hash": "5ca914f",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "fc311f7",
+    "message": "fix(resources): add type converters to the resource endpoints"
+  },
+  {
+    "hash": "89ee6e1",
+    "message": "\ud83d\udce6 release: v13.2.1"
+  },
+  {
+    "hash": "1727fbd",
+    "message": "fix: avatar etag hash to avoid header errors"
+  },
+  {
+    "hash": "59ea8b9",
+    "message": "release: v13.2.0"
+  },
+  {
+    "hash": "034bebe",
+    "message": "feat(users): allow UsersService.read to resolve by email"
+  },
+  {
+    "hash": "d0d5651",
+    "message": "release: v13.1.1"
+  },
+  {
+    "hash": "b1053fe",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "28a8054",
+    "message": "\ud83d\udce6 release: v13.1.0"
+  },
+  {
+    "hash": "7cf001c",
+    "message": "fix(users): rank exact username matches first in user search"
+  },
+  {
+    "hash": "a248ffc",
+    "message": "release: v13.0.1"
+  },
+  {
+    "hash": "cd52f61",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "70efde2",
+    "message": "fix(groups): include group check in create permissions"
+  },
+  {
+    "hash": "96544e6",
+    "message": "release: v13.0.0"
+  },
+  {
+    "hash": "87a368d",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "5abf11c",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "4361e78",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "19ac2b4",
+    "message": "release: v12.0.0"
+  },
+  {
+    "hash": "f457681",
+    "message": "fix: increase groups search max result window"
+  },
+  {
+    "hash": "08eb90d",
+    "message": "fix(groups): keep group ids aligned"
+  },
+  {
+    "hash": "327cf0c",
+    "message": "feat(users): expose login metadata"
+  },
+  {
+    "hash": "aabd895",
+    "message": "release: v11.0.0"
+  },
+  {
+    "hash": "651d87d",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "0a0574a",
+    "message": "feat(users)!: add admin role management backend"
+  },
+  {
+    "hash": "81f2894",
+    "message": "\ud83d\udce6 release: v10.5.0"
+  },
+  {
+    "hash": "6225d44",
+    "message": "feat(moderation): allow passing `data` and `actor_id` to block action"
+  },
+  {
+    "hash": "e6f4ac3",
+    "message": "release: v10.4.1"
+  },
+  {
+    "hash": "cc81a86",
+    "message": "fix(resolve): handle None given as user_id"
+  },
+  {
+    "hash": "6152b49",
+    "message": "\ud83d\udce6 release: v10.4.0"
+  },
+  {
+    "hash": "ff70ea2",
+    "message": "search: fix finding of usernames with dash"
+  },
+  {
+    "hash": "e85556f",
+    "message": "tests: username with a dash"
+  },
+  {
+    "hash": "df4297d",
+    "message": "search: improve with CompositeSuggestQueryParser"
+  },
+  {
+    "hash": "671463f",
+    "message": "tests: precise assertions on user search results"
+  },
+  {
+    "hash": "e6af6f5",
+    "message": "release: v10.3.0"
+  },
+  {
+    "hash": "e6fb2c8",
+    "message": "fix(groups): resolve role by id instead of name"
+  },
+  {
+    "hash": "7f982dc",
+    "message": "\ud83d\udce6 release: v10.2.0"
+  },
+  {
+    "hash": "85c6766",
+    "message": "fix(roles): block escalation to protected roles"
+  },
+  {
+    "hash": "8ceb965",
+    "message": "Add proper superadmin permissions checks and protection"
+  },
+  {
+    "hash": "e4c19b3",
+    "message": "feat(groups): enforce validation and protect group updates"
+  },
+  {
+    "hash": "1f5a0f8",
+    "message": "fix(groups): clarify usage of group id and name"
+  },
+  {
+    "hash": "54d0c4c",
+    "message": "fix(users): improve role handling and group validation"
+  },
+  {
+    "hash": "441d496",
+    "message": "fix(schemas): move description validation to schema"
+  },
+  {
+    "hash": "7faff42",
+    "message": "feat(admin): add groups CRUD and role-aware views"
+  },
+  {
+    "hash": "f91f767",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "92e98bd",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "ef4d329",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "0c1cabc",
+    "message": "fix: DeprecationWarning"
+  }
+]
