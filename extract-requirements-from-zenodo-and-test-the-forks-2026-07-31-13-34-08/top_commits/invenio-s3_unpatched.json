@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "53547e8",
+    "message": "release: v5.0.1"
+  },
+  {
+    "hash": "ac0a798",
+    "message": "fix(cache): mark restricted files as no-cache for cache-control"
+  },
+  {
+    "hash": "b7387e7",
+    "message": "fix: add cache-control for s3 presigned urls"
+  },
+  {
+    "hash": "addcafb",
+    "message": "tests: added duplicated multipart abort test"
+  },
+  {
+    "hash": "cd26609",
+    "message": "revert: removed multipart_upload_exists"
+  },
+  {
+    "hash": "139d71a",
+    "message": "fix: handle NoSuchUpload gracefully when aborting multipart upload"
+  },
+  {
+    "hash": "db229e1",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "e4ab2ea",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "5541e23",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "0f9166a",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "115aac1",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "e768e64",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "9e7210c",
+    "message": "release: v3.0.2"
+  },
+  {
+    "hash": "e3946cc",
+    "message": "fix: handle multipart uploads with >1000 parts for AWS/RadosGW"
+  },
+  {
+    "hash": "aaa4e82",
+    "message": "release: v3.0.1"
+  },
+  {
+    "hash": "b8ebf09",
+    "message": "multipart: fix upload complete etag on ceph"
+  },
+  {
+    "hash": "86381ad",
+    "message": "\ud83d\udce6 release: v3.0.0"
+  },
+  {
+    "hash": "4bed286",
+    "message": "storage: fix copy return value"
+  },
+  {
+    "hash": "cf43419",
+    "message": "multipart: adapt to async switch"
+  },
+  {
+    "hash": "1cb8672",
+    "message": "installation: reduce backtracking"
+  },
+  {
+    "hash": "7c49681",
+    "message": "config: remove deprecated variables"
+  },
+  {
+    "hash": "e91dad4",
+    "message": "installation: bump S3FS version"
+  },
+  {
+    "hash": "4f30caa",
+    "message": "tests: add THEME_FRONTPAGE"
+  },
+  {
+    "hash": "eb26a6b",
+    "message": "release: v2.1.0"
+  },
+  {
+    "hash": "0458911",
+    "message": "fix: removed type hints for now"
+  },
+  {
+    "hash": "c4580ba",
+    "message": "fix(tests): add configuration"
+  },
+  {
+    "hash": "52bdc5b",
+    "message": "fix: replaced utcnow with timezone-aware date"
+  },
+  {
+    "hash": "88b6666",
+    "message": "fix: pin the version of s3fs."
+  },
+  {
+    "hash": "112fa9a",
+    "message": "Multipart upload support"
+  },
+  {
+    "hash": "847d70d",
+    "message": "chore: ignoring .venv"
+  },
+  {
+    "hash": "78da79c",
+    "message": "release: v2.0.1"
+  },
+  {
+    "hash": "21f2a07",
+    "message": "config: allow extra configuration for S3FS"
+  },
+  {
+    "hash": "60f0f4d",
+    "message": "release: v2.0.0"
+  },
+  {
+    "hash": "52fb116",
+    "message": "filename: replace encoding/decoding"
+  },
+  {
+    "hash": "42d4c50",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "a18ae9e",
+    "message": "release: v1.0.7"
+  },
+  {
+    "hash": "52b9870",
+    "message": "setup: change to reusable workflows"
+  },
+  {
+    "hash": "8e9120b",
+    "message": "setup: pin dependencies"
+  },
+  {
+    "hash": "9b1335b",
+    "message": "Update GitHub Actions versions"
+  },
+  {
+    "hash": "22c9c7f",
+    "message": "Update Python versions in workflows"
+  },
+  {
+    "hash": "8ab9736",
+    "message": "remove future imports"
+  },
+  {
+    "hash": "68f5624",
+    "message": "Update dependencies and fix import in conftest.py"
+  },
+  {
+    "hash": "4d34f51",
+    "message": "global: fix revision id due to rebase"
+  },
+  {
+    "hash": "2585ede",
+    "message": "fix docs compatibilty problem with Sphinx>=5.0.0"
+  },
+  {
+    "hash": "9930e86",
+    "message": "global: clean test infrastructure"
+  },
+  {
+    "hash": "53f0317",
+    "message": "add .git-blame-ignore-revs"
+  },
+  {
+    "hash": "03a5a0c",
+    "message": "migrate to use black as opinionated auto formater"
+  },
+  {
+    "hash": "c230cd4",
+    "message": "migrate setup.py to setup.cfg"
+  },
+  {
+    "hash": "c4b8612",
+    "message": "global: fix ci"
+  },
+  {
+    "hash": "c6aee61",
+    "message": "release: v1.0.6"
+  }
+]

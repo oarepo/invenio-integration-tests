@@ -1,0 +1,530 @@
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-rabbitmq-1  Creating
+ Container docker_services_cli-redis-1  Creating
+ Container docker_services_cli-opensearch-1  Creating
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-opensearch-1  Created
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-redis-1  Created
+ Container docker_services_cli-rabbitmq-1  Created
+ Container docker_services_cli-opensearch-1  Starting
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-redis-1  Starting
+ Container docker_services_cli-rabbitmq-1  Starting
+ Container docker_services_cli-redis-1  Started
+ Container docker_services_cli-postgresql-1  Started
+ Container docker_services_cli-rabbitmq-1  Started
+ Container docker_services_cli-opensearch-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original
+configfile: pyproject.toml
+plugins: Faker-40.36.0, isort-4.0.0, black-0.6.0, invenio-4.0.2, mock-3.15.1, pydocstyle-2.4.0, cov-7.1.0, pycodestyle-2.5.0, flask-1.3.0, github-actions-annotate-failures-0.4.2
+collected 283 items
+tests/contrib/codemeta/test_codemeta_custom_fields.py 
+             [  2%]
+tests/fixtures/load_error/test_vocabularies_load_error.py 
+              [  2%]
+tests/fixtures/test_cli.py 
+                                         [  4%]
+tests/fixtures/test_fixtures.py 
+                                [  7%]
+tests/oaiserver/test_oaipmh.py 
+                                       [  8%]
+tests/records/dumpers/test_access_dumpers.py 
+s                          [  9%]
+tests/records/dumpers/test_combined_subjects_dumper.py 
+                 [  9%]
+tests/records/dumpers/test_edtf_dumpers.py 
+                     [ 12%]
+tests/records/dumpers/test_files_dumpers.py 
+                            [ 13%]
+tests/records/dumpers/test_location_dumpers.py 
+s                     [ 14%]
+tests/records/dumpers/test_pids_dumper.py 
+                              [ 15%]
+tests/records/systemfields/test_access_systemfield.py 
+ [ 21%]
+                                                                  [ 24%]
+tests/records/systemfields/test_permission_flags.py 
+                  [ 25%]
+tests/records/systemfields/test_tombstone.py 
+                     [ 27%]
+tests/records/test_api.py 
+                                              [ 27%]
+tests/records/test_jsonschema.py 
+   [ 40%]
+tests/records/test_mockrecords_api.py 
+                        [ 44%]
+tests/records/test_quotas.py 
+                                          [ 45%]
+tests/records/test_records_communities.py 
+                              [ 45%]
+tests/records/test_relations_affiliations.py 
+                   [ 49%]
+tests/records/test_relations_languages.py 
+                           [ 50%]
+tests/records/test_relations_resource_types.py 
+                       [ 51%]
+tests/records/test_relations_subjects.py 
+                             [ 52%]
+tests/requests/test_quota_increase.py 
+                                  [ 53%]
+tests/requests/test_record_deletion.py 
+                              [ 54%]
+tests/requests/test_user_moderation_actions.py 
+                       [ 55%]
+tests/resources/serializers/test_bibtex_serializer.py 
+ [ 61%]
+                                            [ 72%]
+tests/resources/serializers/test_cff_serializer.py 
+                     [ 72%]
+tests/resources/serializers/test_crossref_serializer.py 
+             [ 73%]
+tests/resources/serializers/test_csl_serializer.py ::error file=workdir/tests/invenio-rdm-records/original/tests/resources/serializers/test_csl_serializer.py,line=31::test_string_citation_serializer%0A%0AAssertionError: assert 'Nielsen, L. ...eniordm.1234.' == 'Nielsen, L. ...eniordm.1234.'%0A  %0A  - Nielsen, L. H., and B. Tom. InvenioRDM. Version v1.0, InvenioRDM, 2018–Sept. 2020, https://handle.test.datacite.org/10.1234/inveniordm.1234.%0A  ?               --%0A  + Nielsen, L. H.and B. Tom. InvenioRDM. Version v1.0, InvenioRDM, 2018–Sept. 2020, https://handle.test.datacite.org/10.1234/inveniordm.1234
+F
+                 [ 75%]
+tests/resources/serializers/test_datacite43_serializer.py 
+     [ 79%]
+tests/resources/serializers/test_datacite45_serializer.py 
+     [ 82%]
+tests/resources/serializers/test_datapackage_serializer.py ...           [ 83%]
+tests/resources/serializers/test_dcat_serializer.py 
+                    [ 84%]
+tests/resources/serializers/test_dublincore_serializer.py 
+        [ 86%]
+tests/resources/serializers/test_geojson_serializer.py ...               [ 87%]
+tests/resources/serializers/test_marcxml_serializer.py 
+                [ 88%]
+tests/resources/serializers/test_schemaorg_serializer.py 
+             [ 89%]
+tests/resources/serializers/test_signposting_serializer.py 
+         [ 91%]
+tests/resources/serializers/test_ui_serializer.py 
+                      [ 91%]
+tests/resources/test_access_requests.py 
+                            [ 93%]
+tests/resources/test_draft_file_permissions.py 
+            [ 98%]
+tests/resources/test_files.py 
+                                      [100%]
+=================================== FAILURES ===================================
+_______________________ test_string_citation_serializer ________________________
+running_app = RunningApp(app=<Flask 'invenio'>, superuser_identity=<Identity id="1" auth_type="None" provides={Need(method='role', v...ources.services.records.results.RecordItem object at 0x7f3a18424d70>}, moderator_role=<Role administration-moderation>)
+full_record_to_dict = {'access': {'embargo': {'active': True, 'reason': 'Only for medical doctors.', 'until': '2131-01-01'}, 'files': 'restr... '2023-11-14T18:30:55.738898+00:00', 'custom_fields': {}, 'deletion_status': {'is_deleted': False, 'status': 'P'}, ...}
+    def test_string_citation_serializer(running_app, full_record_to_dict):
+        serializer = StringCitationSerializer(
+            url_args_retriever=("modern-language-association", "en-US")
+        )
+        result = serializer.serialize_object(full_record_to_dict)
+        expected = (
+            "Nielsen, L. H.and B. Tom. InvenioRDM. Version v1.0, InvenioRDM, 2018–Sept. 2020, "
+            "https://handle.test.datacite.org/10.1234/inveniordm.1234."
+        )
+>       assert expected == result
+E       AssertionError: assert 'Nielsen, L. ...eniordm.1234.' == 'Nielsen, L. ...eniordm.1234.'
+E         
+E         - Nielsen, L. H., and B. Tom. InvenioRDM. Version v1.0, InvenioRDM, 2018–Sept. 2020, https://handle.test.datacite.org/10.1234/inveniordm.1234
+E         ?               --
+E         + Nielsen, L. H.and B. Tom. InvenioRDM. Version v1.0, InvenioRDM, 2018–Sept. 2020, https://handle.test.datacite.org/10.1234/inveniordm.1234
+tests/resources/serializers/test_csl_serializer.py:31: AssertionError
+---------------------------- Captured stderr setup -----------------------------
+[2026-08-13 12:18:37,595] DEBUG in ext: Flask-DebugToolbar extension not installed
+------------------------------ Captured log setup ------------------------------
+DEBUG    invenio:ext.py:171 Flask-DebugToolbar extension not installed
+=============================== warnings summary ===============================
+invenio_rdm_records/services/facets.py:72
+    warn(
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/.venv/lib/python3.14/site-packages/invenio_records/api.py:330: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/.venv/lib/python3.14/site-packages/invenio_db/uow.py:189: SAWarning: nested transaction already deassociated from connection
+    self.session.commit()
+    self.init_app(app)
+tests/fixtures/test_cli.py::test_create_fake_demo_draft_record
+tests/fixtures/test_cli.py::test_create_fake_demo_inclusion_requests
+tests/fixtures/test_cli.py::test_create_fake_demo_invitation_requests
+    parsed_date = parser.parseString(f_date)[0]
+    clear_context = _init_context(kwargs)
+    warnings.warn(
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/.venv/lib/python3.14/site-packages/pytest_invenio/fixtures.py:617: SAWarning: nested transaction already deassociated from connection
+    session.rollback()
+tests/records/dumpers/test_edtf_dumpers.py::test_esdumper_with_edtfext[2021-01-01-2021-01-01-2021-01-01]
+tests/records/dumpers/test_edtf_dumpers.py::test_esdumper_with_edtfext[2021-01-2021-01-01-2021-01-31]
+tests/records/dumpers/test_edtf_dumpers.py::test_esdumper_with_edtfext[2021-2021-01-01-2021-12-31]
+tests/records/dumpers/test_edtf_dumpers.py::test_esdumper_with_edtfext[1776-1776-01-01-1776-12-31]
+tests/records/dumpers/test_edtf_dumpers.py::test_esdumper_with_edtfext[2021-01/2021-03-2021-01-01-2021-03-31]
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/dumpers/test_edtf_dumpers.py:43: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/dumpers/test_edtf_dumpers.py::test_esdumper_with_edtfext_not_defined
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/dumpers/test_edtf_dumpers.py:74: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/dumpers/test_edtf_dumpers.py::test_eslistdumper_with_edtfext_not_defined
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/dumpers/test_edtf_dumpers.py:99: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/dumpers/test_edtf_dumpers.py::test_esdumper_with_edtfext_parse_error
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/dumpers/test_edtf_dumpers.py:124: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/dumpers/test_edtf_dumpers.py::test_eslistdumper_with_edtfext_parse_error
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/dumpers/test_edtf_dumpers.py:147: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/dumpers/test_files_dumpers.py::test_files_dumper
+tests/records/test_records_communities.py::test_community_integration
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/.venv/lib/python3.14/site-packages/invenio_records/api.py:438: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+tests/records/dumpers/test_pids_dumper.py::test_esdumper_with_externalpidsext
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/dumpers/test_pids_dumper.py:33: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/systemfields/test_permission_flags.py::test_get_set_permission_flags_from_db
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/systemfields/test_permission_flags.py:51: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/test_records_communities.py::test_community_integration
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/test_records_communities.py:31: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/test_records_communities.py::test_community_integration
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/tests/records/test_records_communities.py:35: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/resources/test_files.py::test_published_record_files_allow_edit
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/original/.venv/lib/python3.14/site-packages/invenio_files_rest/models.py:714: SAWarning: Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+    return db.session.query(cls).filter_by(id=file_id).one_or_none()
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+Name                                                                                            Stmts   Miss  Cover   Missing
+invenio_rdm_records/__init__.py                                                                     3      0   100%
+invenio_rdm_records/access_requests_ui/__init__.py                                                  0      0   100%
+invenio_rdm_records/access_requests_ui/views.py                                                    31     31     0%   6-60
+invenio_rdm_records/administration/__init__.py                                                      0      0   100%
+invenio_rdm_records/administration/views/__init__.py                                                0      0   100%
+invenio_rdm_records/administration/views/oai.py                                                    52      0   100%
+invenio_rdm_records/alembic/0cf260eb8e97_create_table_for_secret_links.py                          13     13     0%   6-42
+invenio_rdm_records/alembic/4a15e8671f4d_create_rdm_records_tables.py                              30     30     0%   6-292
+invenio_rdm_records/alembic/8ed1a438601c_migrate_secret_links.py                                    8      8     0%   6-25
+invenio_rdm_records/alembic/9e0ac518b9df_create_records_communities_m2m_table.py                   11     11     0%   6-50
+invenio_rdm_records/alembic/88d1463de5c0_create_parent_record_table.py                             30     30     0%   6-141
+invenio_rdm_records/alembic/912251a56a49_change_datetime_types.py                                  23     23     0%   7-82
+invenio_rdm_records/alembic/2186256e8d9b_add_deletion_status_to_rdmrecords.py                      31     31     0%   6-76
+invenio_rdm_records/alembic/1746626978_drop_rdmrecordquota_user_id_unique_.py                       9      9     0%   6-27
+invenio_rdm_records/alembic/1777274324_merge_pidrelations_tables_removal.py                         6      6     0%   8-18
+invenio_rdm_records/alembic/1777278349_column_defaults_and_files_indices.py                        65     65     0%   8-366
+invenio_rdm_records/alembic/1780576627_create_record_id_index_in_rdm_parents_community.py          10     10     0%   6-31
+invenio_rdm_records/alembic/__init__.py                                                             0      0   100%
+invenio_rdm_records/alembic/a2a6819f14f1_create_files_and_media_files_versioning_.py               26     26     0%   6-171
+invenio_rdm_records/alembic/a6bfa06b1a6d_add_origin_and_description_to_secret_links.py             12     12     0%   6-31
+invenio_rdm_records/alembic/a3957490361d_remove_pidrelations_tables.py                             14     14     0%   6-28
+invenio_rdm_records/alembic/b822ba22c688_create_rdm_records_branch.py                               8      8     0%   7-20
+invenio_rdm_records/alembic/cfcb8cb78708_create_access_request_tokens_table.py                     13     13     0%   6-47
+invenio_rdm_records/alembic/faf0cefa79a0_create_record_quota_tables.py                             13     13     0%   6-62
+invenio_rdm_records/alembic/ff9bec971d30_add_indexes.py                                            31     31     0%   6-132
+invenio_rdm_records/alembic/ff860d48fb4b_create_media_files_table.py                               28     28     0%   6-180
+invenio_rdm_records/alembic/ffd725001655_add_field_to_record_consent_to_share_.py                  10     10     0%   6-31
+invenio_rdm_records/auditlog/__init__.py                                                            0      0   100%
+invenio_rdm_records/auditlog/actions.py                                                            36      0   100%
+invenio_rdm_records/auditlog/context.py                                                            15      9    40%   16-20, 28-35
+invenio_rdm_records/checks/__init__.py                                                              0      0   100%
+invenio_rdm_records/checks/requests.py                                                             72     72     0%   6-155
+invenio_rdm_records/cli.py                                                                        187     90    52%   61-62, 85-98, 121-128, 151-158, 181-188, 211-235, 258-271, 278-282, 297-301, 308-340, 368-369, 378-382, 405-407
+invenio_rdm_records/collections/__init__.py                                                         0      0   100%
+invenio_rdm_records/collections/tasks.py                                                           16     16     0%   6-27
+invenio_rdm_records/config.py                                                                     210      1    99%   76
+invenio_rdm_records/contrib/__init__.py                                                             0      0   100%
+invenio_rdm_records/contrib/codemeta/__init__.py                                                    2      0   100%
+invenio_rdm_records/contrib/codemeta/custom_fields.py                                              10      0   100%
+invenio_rdm_records/contrib/codemeta/processors.py                                                 15     12    20%   13-30
+invenio_rdm_records/contrib/imprint/__init__.py                                                     2      0   100%
+invenio_rdm_records/contrib/imprint/custom_fields.py                                               15      2    87%   27, 45
+invenio_rdm_records/contrib/imprint/processors.py                                                  56     41    27%   22-39, 54-91
+invenio_rdm_records/contrib/journal/__init__.py                                                     3      0   100%
+invenio_rdm_records/contrib/journal/custom_fields.py                                               15      2    87%   27, 45
+invenio_rdm_records/contrib/journal/processors.py                                                 107     60    44%   21-44, 59-84, 112, 117, 135-152, 167-184
+invenio_rdm_records/contrib/journal/sort.py                                                         2      0   100%
+invenio_rdm_records/contrib/meeting/__init__.py                                                     3      0   100%
+invenio_rdm_records/contrib/meeting/custom_fields.py                                               17      2    88%   35, 60
+invenio_rdm_records/contrib/meeting/processors.py                                                  31     16    48%   21-34, 49-60
+invenio_rdm_records/contrib/meeting/sort.py                                                         2      0   100%
+invenio_rdm_records/contrib/thesis/__init__.py                                                      2      2     0%   6-12
+invenio_rdm_records/contrib/thesis/custom_fields.py                                                14     14     0%   13-59
+invenio_rdm_records/ext.py                                                                        121      1    99%   138
+invenio_rdm_records/fixtures/__init__.py                                                           25     12    52%   28, 32-55, 63-67
+invenio_rdm_records/fixtures/communities.py                                                        12      0   100%
+invenio_rdm_records/fixtures/demo.py                                                              112     18    84%   42-45, 71-82, 96, 113, 342-351
+invenio_rdm_records/fixtures/fixture.py                                                            28      8    71%   30, 45-53, 58
+invenio_rdm_records/fixtures/records.py                                                             5      0   100%
+invenio_rdm_records/fixtures/tasks.py                                                             118     13    89%   54-55, 74, 81-86, 92-95, 161, 213-214
+invenio_rdm_records/fixtures/users.py                                                              44      3    93%   77-79
+invenio_rdm_records/fixtures/vocabularies.py                                                      212     30    86%   56-67, 71-77, 85-87, 95-99, 188, 395-396
+invenio_rdm_records/jobs/__init__.py                                                                0      0   100%
+invenio_rdm_records/jobs/jobs.py                                                                    4      0   100%
+invenio_rdm_records/notifications/__init__.py                                                       0      0   100%
+invenio_rdm_records/notifications/builders.py                                                     151      5    97%   108, 140, 285, 320, 438
+invenio_rdm_records/notifications/vcs.py                                                           54     54     0%   10-164
+invenio_rdm_records/oai.py                                                                         59      6    90%   110-114, 129-131
+invenio_rdm_records/oaiserver/__init__.py                                                           0      0   100%
+invenio_rdm_records/oaiserver/resources/__init__.py                                                 0      0   100%
+invenio_rdm_records/oaiserver/resources/config.py                                                  19      0   100%
+invenio_rdm_records/oaiserver/resources/resources.py                                               46     14    70%   50-55, 61-65, 72-76, 84-89, 95-99, 105-109
+invenio_rdm_records/oaiserver/services/__init__.py                                                  0      0   100%
+invenio_rdm_records/oaiserver/services/config.py                                                   28      0   100%
+invenio_rdm_records/oaiserver/services/errors.py                                                   17      6    65%   15-16, 24, 37, 45, 55
+invenio_rdm_records/oaiserver/services/permissions.py                                               9      0   100%
+invenio_rdm_records/oaiserver/services/results.py                                                  59     35    41%   18-22, 27, 32-44, 48-49, 72-78, 82, 86, 91, 96-107, 112, 123-134
+invenio_rdm_records/oaiserver/services/schema.py                                                   18      0   100%
+invenio_rdm_records/oaiserver/services/services.py                                                115     72    37%   37-41, 45-49, 63, 68, 75-76, 80-89, 94-107, 119-134, 143-146, 155-181, 193-208, 218-224, 228-246, 257-261
+invenio_rdm_records/oaiserver/services/uow.py                                                      14      6    57%   15-16, 20, 28-29, 33
+invenio_rdm_records/proxies.py                                                                     18      0   100%
+invenio_rdm_records/records/__init__.py                                                             2      0   100%
+invenio_rdm_records/records/api.py                                                                147     16    89%   311, 386-390, 580-587, 606-613
+invenio_rdm_records/records/dumpers/__init__.py                                                     8      0   100%
+invenio_rdm_records/records/dumpers/access.py                                                      22      2    91%   46-47
+invenio_rdm_records/records/dumpers/combined_subjects.py                                           21      0   100%
+invenio_rdm_records/records/dumpers/edtf.py                                                        50      0   100%
+invenio_rdm_records/records/dumpers/locations.py                                                   24      0   100%
+invenio_rdm_records/records/dumpers/pids.py                                                        17      0   100%
+invenio_rdm_records/records/dumpers/statistics.py                                                  21      2    90%   44-45
+invenio_rdm_records/records/dumpers/subject_hierarchy.py                                           31     16    48%   67-84, 89-93
+invenio_rdm_records/records/jsonschemas/__init__.py                                                 0      0   100%
+invenio_rdm_records/records/mappings/__init__.py                                                    0      0   100%
+invenio_rdm_records/records/mappings/os-v1/__init__.py                                              0      0   100%
+invenio_rdm_records/records/mappings/os-v2/__init__.py                                              0      0   100%
+invenio_rdm_records/records/mappings/v7/__init__.py                                                 0      0   100%
+invenio_rdm_records/records/models.py                                                              96      1    99%   185
+invenio_rdm_records/records/processors/base.py                                                      8      3    62%   12, 16, 21
+invenio_rdm_records/records/processors/tiles.py                                                    74     53    28%   23, 43, 48, 53-55, 59-78, 88-138, 148-179
+invenio_rdm_records/records/stats/__init__.py                                                       2      0   100%
+invenio_rdm_records/records/stats/api.py                                                           25      3    88%   21, 28, 44
+invenio_rdm_records/records/stats/templates/__init__.py                                             0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/__init__.py                                0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_file_download/__init__.py             0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_file_download/os-v1/__init__.py       0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_file_download/os-v2/__init__.py       0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_file_download/v7/__init__.py          0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_record_view/__init__.py               0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_record_view/os-v1/__init__.py         0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_record_view/os-v2/__init__.py         0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_record_view/v7/__init__.py            0      0   100%
+invenio_rdm_records/records/stats/templates/events/__init__.py                                      0      0   100%
+invenio_rdm_records/records/stats/templates/events/file_download/__init__.py                        0      0   100%
+invenio_rdm_records/records/stats/templates/events/file_download/os-v1/__init__.py                  0      0   100%
+invenio_rdm_records/records/stats/templates/events/file_download/os-v2/__init__.py                  0      0   100%
+invenio_rdm_records/records/stats/templates/events/file_download/v7/__init__.py                     0      0   100%
+invenio_rdm_records/records/stats/templates/events/record_view/__init__.py                          0      0   100%
+invenio_rdm_records/records/stats/templates/events/record_view/os-v1/__init__.py                    0      0   100%
+invenio_rdm_records/records/stats/templates/events/record_view/os-v2/__init__.py                    0      0   100%
+invenio_rdm_records/records/stats/templates/events/record_view/v7/__init__.py                       0      0   100%
+invenio_rdm_records/records/systemfields/__init__.py                                                8      0   100%
+invenio_rdm_records/records/systemfields/access/__init__.py                                         8      0   100%
+invenio_rdm_records/records/systemfields/access/access_settings.py                                 10      1    90%   28
+invenio_rdm_records/records/systemfields/access/embargo.py                                         62     11    82%   19, 74-79, 85-88, 96, 106, 117
+invenio_rdm_records/records/systemfields/access/field/__init__.py                                   3      0   100%
+invenio_rdm_records/records/systemfields/access/field/parent.py                                   112     20    82%   66, 86, 101-106, 146-147, 152-153, 157-158, 171, 206-213, 226
+invenio_rdm_records/records/systemfields/access/field/record.py                                   103      9    91%   63, 122-123, 140-143, 147-149, 185
+invenio_rdm_records/records/systemfields/access/grants.py                                         122     14    89%   43-45, 53, 90, 115, 186, 198, 223, 228, 238, 242, 271-272
+invenio_rdm_records/records/systemfields/access/links.py                                           62     15    76%   28, 40, 46, 50-53, 57, 61, 65, 76, 92-93, 97-100
+invenio_rdm_records/records/systemfields/access/owners.py                                          50     10    80%   28, 36, 60, 73, 77-80, 84, 88, 92
+invenio_rdm_records/records/systemfields/access/protection.py                                      44      7    84%   58-59, 69, 76-79, 83
+invenio_rdm_records/records/systemfields/deletion_status.py                                        61      9    85%   54, 58, 66-75
+invenio_rdm_records/records/systemfields/draft_status.py                                           25      2    92%   92-93
+invenio_rdm_records/records/systemfields/has_draftcheck.py                                         21      0   100%
+invenio_rdm_records/records/systemfields/is_verified.py                                            12      0   100%
+invenio_rdm_records/records/systemfields/statistics.py                                             27      2    93%   32-33
+invenio_rdm_records/records/systemfields/tombstone.py                                             126     17    87%   41, 131, 156, 162, 170-172, 177, 198, 212-213, 216-219, 225-226, 235
+invenio_rdm_records/requests/__init__.py                                                            8      0   100%
+invenio_rdm_records/requests/access/__init__.py                                                     4      0   100%
+invenio_rdm_records/requests/access/models.py                                                      49      3    94%   82, 87, 122
+invenio_rdm_records/requests/access/permissions.py                                                  4      0   100%
+invenio_rdm_records/requests/access/requests.py                                                   123     21    83%   62-70, 78-84, 92-101, 109-114, 165, 248, 252, 257, 351-358
+invenio_rdm_records/requests/access/tasks.py                                                        8      8     0%   7-21
+invenio_rdm_records/requests/base.py                                                                7      0   100%
+invenio_rdm_records/requests/community_inclusion.py                                                53     23    57%   25-28, 39-42, 52-88, 130
+invenio_rdm_records/requests/community_submission.py                                               92     46    50%   47-105, 117-134, 150-164, 195-197, 250
+invenio_rdm_records/requests/decorators.py                                                         18      0   100%
+invenio_rdm_records/requests/entity_resolvers.py                                                   91      8    91%   61, 116, 147, 161, 165-166, 174, 206
+invenio_rdm_records/requests/file_modification.py                                                  46     15    67%   23-34, 38, 56-62, 102-103, 114
+invenio_rdm_records/requests/quota_increase.py                                                     42      4    90%   31, 83-84, 95
+invenio_rdm_records/requests/record_deletion.py                                                    72      9    88%   69-71, 92-93, 119-125, 173
+invenio_rdm_records/requests/subcommunities.py                                                      7      0   100%
+invenio_rdm_records/requests/user_moderation/__init__.py                                            2      0   100%
+invenio_rdm_records/requests/user_moderation/actions.py                                            31      6    81%   39-40, 70-77
+invenio_rdm_records/requests/user_moderation/tasks.py                                              33     13    61%   25, 33, 39-50, 60-62, 68-72
+invenio_rdm_records/requests/user_moderation/utils.py                                              20      4    80%   40-43
+invenio_rdm_records/resources/__init__.py                                                           4      0   100%
+invenio_rdm_records/resources/args.py                                                               8      0   100%
+invenio_rdm_records/resources/config.py                                                           137      0   100%
+invenio_rdm_records/resources/deserializers/__init__.py                                             2      0   100%
+invenio_rdm_records/resources/deserializers/errors.py                                               1      0   100%
+invenio_rdm_records/resources/deserializers/rocrate/__init__.py                                    38     28    26%   23-32, 36-60
+invenio_rdm_records/resources/deserializers/rocrate/schema.py                                      73     50    32%   16-18, 42-45, 58-59, 70-112, 118-127, 133-136
+invenio_rdm_records/resources/errors.py                                                            23      3    87%   22, 45, 50
+invenio_rdm_records/resources/iiif.py                                                             165     69    58%   163-164, 172-176, 193-194, 210, 219, 228-231, 240-244, 253-257, 280-329, 346, 360-362, 371, 375-390, 405-419
+invenio_rdm_records/resources/resources.py                                                        347    105    70%   47, 107-111, 122-129, 148-153, 168, 177-183, 190-196, 220-237, 244-252, 259-267, 274-280, 289-294, 301-308, 314-319, 326-336, 346-353, 360-367, 389-394, 422-429, 436-449, 455-465, 473-483, 489-495, 523-531, 562-568, 574-579, 583, 590-596, 601-606, 613-617, 644-650, 658-667, 675-683, 691-699, 704-709, 717-722, 747-755, 760-766, 774-780, 788-796, 825-831, 841-849
+invenio_rdm_records/resources/serializers/__init__.py                                              17      0   100%
+invenio_rdm_records/resources/serializers/bibtex/__init__.py                                        9      0   100%
+invenio_rdm_records/resources/serializers/bibtex/schema.py                                        166     11    93%   96, 100-101, 107, 300-304, 322, 337
+invenio_rdm_records/resources/serializers/bibtex/schema_formats.py                                 27      0   100%
+invenio_rdm_records/resources/serializers/cff/__init__.py                                           8      0   100%
+invenio_rdm_records/resources/serializers/cff/schema.py                                           148     18    88%   28, 50-57, 105, 119-125, 219, 241
+invenio_rdm_records/resources/serializers/codemeta/__init__.py                                      7      1    86%   19
+invenio_rdm_records/resources/serializers/codemeta/schema.py                                       34     22    35%   29-50, 54-64
+invenio_rdm_records/resources/serializers/crossref/__init__.py                                     60      5    92%   107-111, 182-183
+invenio_rdm_records/resources/serializers/csl/__init__.py                                          63      1    98%   69
+invenio_rdm_records/resources/serializers/csl/schema.py                                            75      5    93%   83-84, 99, 113, 122
+invenio_rdm_records/resources/serializers/csv/__init__.py                                           4      0   100%
+invenio_rdm_records/resources/serializers/datacite/__init__.py                                     19      0   100%
+invenio_rdm_records/resources/serializers/datacite/schema.py                                      600     42    93%   107-135, 162, 276-281, 293, 414-429, 438, 461-465, 549-550, 582, 632-633, 768-773, 785, 1031-1032, 1064, 1114-1115
+invenio_rdm_records/resources/serializers/datapackage/__init__.py                                   6      0   100%
+invenio_rdm_records/resources/serializers/datapackage/schema.py                                    65      0   100%
+invenio_rdm_records/resources/serializers/dcat/__init__.py                                        105     13    88%   102-113, 130, 141, 151, 187-195
+invenio_rdm_records/resources/serializers/dcat/schema.py                                           45      4    91%   24, 72-73, 89
+invenio_rdm_records/resources/serializers/dublincore/__init__.py                                   12      0   100%
+invenio_rdm_records/resources/serializers/dublincore/schema.py                                    115      3    97%   67, 92, 124
+invenio_rdm_records/resources/serializers/errors.py                                                 2      0   100%
+invenio_rdm_records/resources/serializers/geojson/__init__.py                                       6      0   100%
+invenio_rdm_records/resources/serializers/geojson/schema.py                                        12      0   100%
+invenio_rdm_records/resources/serializers/iiif/__init__.py                                         15      0   100%
+invenio_rdm_records/resources/serializers/iiif/schema.py                                           76     17    78%   23, 35, 132-150, 200-203, 208, 218-219
+invenio_rdm_records/resources/serializers/marcxml/__init__.py                                      13      0   100%
+invenio_rdm_records/resources/serializers/marcxml/schema.py                                       298     13    96%   157-164, 180-184, 271, 286, 352, 374
+invenio_rdm_records/resources/serializers/schemaorg/__init__.py                                     7      0   100%
+invenio_rdm_records/resources/serializers/schemaorg/schema.py                                     270     42    84%   36-52, 74, 77, 118, 141, 247-248, 277, 294, 333, 364, 379, 443-444, 465-475, 482-494, 524
+invenio_rdm_records/resources/serializers/schemas.py                                               51      6    88%   24-25, 65-69
+invenio_rdm_records/resources/serializers/signposting/__init__.py                                  21      0   100%
+invenio_rdm_records/resources/serializers/signposting/schema.py                                   107      1    99%   44
+invenio_rdm_records/resources/serializers/ui/__init__.py                                            6      0   100%
+invenio_rdm_records/resources/serializers/ui/fields.py                                             55      5    91%   72-87, 106, 127
+invenio_rdm_records/resources/serializers/ui/schema.py                                            254     82    68%   42, 60, 100, 114, 217-250, 254-274, 278-293, 308-310, 313-314, 317-318, 323, 348-349, 354-361, 446-458, 468
+invenio_rdm_records/resources/serializers/utils.py                                                 29      2    93%   54, 63
+invenio_rdm_records/resources/stats/__init__.py                                                     2      2     0%   6-14
+invenio_rdm_records/resources/stats/event_builders.py                                              50     50     0%   14-155
+invenio_rdm_records/secret_links/__init__.py                                                        3      0   100%
+invenio_rdm_records/secret_links/errors.py                                                          6      1    83%   20
+invenio_rdm_records/secret_links/models.py                                                         84     20    76%   59-60, 83-86, 92, 99-104, 117, 121, 126, 149-156
+invenio_rdm_records/secret_links/permissions.py                                                     4      0   100%
+invenio_rdm_records/secret_links/serializers.py                                                    41      5    88%   70-71, 89-92
+invenio_rdm_records/secret_links/signals.py                                                         6      0   100%
+invenio_rdm_records/services/__init__.py                                                            8      0   100%
+invenio_rdm_records/services/access/__init__.py                                                     2      0   100%
+invenio_rdm_records/services/access/service.py                                                    379    186    51%   61, 65-66, 77-78, 89, 104, 121, 142, 149-151, 163-186, 207, 221-222, 260-267, 282-295, 313-364, 374-410, 432, 436-439, 465, 473, 484, 489, 529-547, 566-631, 640-657, 667-706, 726, 732, 764, 775, 864, 868, 881, 938-971, 985-998, 1008-1019, 1039-1103, 1116-1150
+invenio_rdm_records/services/communities/__init__.py                                                2      0   100%
+invenio_rdm_records/services/communities/components.py                                             24     10    58%   40-47, 53-60
+invenio_rdm_records/services/communities/moderation.py                                             40      6    85%   19, 23, 27, 44, 50, 58
+invenio_rdm_records/services/communities/service.py                                               192    148    23%   54, 59, 64, 69, 73-90, 95-131, 136-207, 211-247, 252-292, 305-316, 328-355, 369-389, 401-431, 442-492, 503-547
+invenio_rdm_records/services/community_inclusion/__init__.py                                        2      0   100%
+invenio_rdm_records/services/community_inclusion/service.py                                        28      5    82%   41, 55, 62-79
+invenio_rdm_records/services/community_records/__init__.py                                          2      0   100%
+invenio_rdm_records/services/community_records/service.py                                          51     34    33%   30, 35, 49-84, 101-106, 111-145
+invenio_rdm_records/services/components/__init__.py                                                14      0   100%
+invenio_rdm_records/services/components/access.py                                                  36      5    86%   32-34, 46-47
+invenio_rdm_records/services/components/custom_fields.py                                            5      0   100%
+invenio_rdm_records/services/components/files.py                                                   23      3    87%   53-55
+invenio_rdm_records/services/components/internal_notes.py                                          34     10    71%   22, 49-58, 62-63
+invenio_rdm_records/services/components/metadata.py                                                22      0   100%
+invenio_rdm_records/services/components/pids.py                                                   148     44    70%   63-85, 93, 107, 135-138, 154-170, 191-194, 267-268, 310, 325-331, 372-377
+invenio_rdm_records/services/components/record_deletion.py                                         34      9    74%   60, 64-71, 75-76, 80-81
+invenio_rdm_records/services/components/record_files.py                                             8      2    75%   20-21
+invenio_rdm_records/services/components/review.py                                                  34     13    62%   25, 29-45, 52-53, 72-76
+invenio_rdm_records/services/components/signal.py                                                   6      6     0%   6-17
+invenio_rdm_records/services/components/vcs.py                                                     15     15     0%   6-34
+invenio_rdm_records/services/components/verified.py                                                48      3    94%   26, 38, 44
+invenio_rdm_records/services/config.py                                                            263      3    99%   297, 317-318
+invenio_rdm_records/services/customizations.py                                                     31      0   100%
+invenio_rdm_records/services/decorators.py                                                         13      4    69%   18-25
+invenio_rdm_records/services/dummy.py                                                              10      3    70%   12, 28, 32
+invenio_rdm_records/services/errors.py                                                             75     20    73%   35-36, 44, 49, 98, 103, 143-144, 152-153, 158, 170, 175, 187, 192-198, 226-227, 232
+invenio_rdm_records/services/facets.py                                                             22      1    95%   95
+invenio_rdm_records/services/files/__init__.py                                                      2      0   100%
+invenio_rdm_records/services/files/service.py                                                      14      0   100%
+invenio_rdm_records/services/generators.py                                                        215     24    89%   58, 71-76, 92, 108, 136, 169, 173, 228, 244, 257, 266, 285, 298, 308, 324, 344, 402, 413, 421, 429
+invenio_rdm_records/services/github/__init__.py                                                     0      0   100%
+invenio_rdm_records/services/github/metadata.py                                                    83     83     0%   6-180
+invenio_rdm_records/services/github/release.py                                                    116    116     0%   7-247
+invenio_rdm_records/services/github/utils.py                                                        4      4     0%   6-19
+invenio_rdm_records/services/iiif/__init__.py                                                       2      0   100%
+invenio_rdm_records/services/iiif/converter.py                                                     63     45    29%   11, 15-17, 27, 32, 40, 57-69, 75-99, 103-115
+invenio_rdm_records/services/iiif/service.py                                                       81     57    30%   21-23, 28, 32-34, 53-58, 65-70, 76, 84-90, 93-124, 135-142, 159-184
+invenio_rdm_records/services/iiif/storage.py                                                       69     40    42%   29-34, 38, 42, 46, 65-71, 75-88, 95, 100-114, 118, 131, 135-148
+invenio_rdm_records/services/iiif/tasks.py                                                         31     23    26%   17-30, 40-56
+invenio_rdm_records/services/permissions.py                                                        99      0   100%
+invenio_rdm_records/services/pids/__init__.py                                                       3      0   100%
+invenio_rdm_records/services/pids/errors.py                                                         8      2    75%   17, 27
+invenio_rdm_records/services/pids/manager.py                                                      162     36    78%   32-33, 62, 79, 115, 126, 150-151, 154, 164, 171, 178, 196-199, 217, 220-221, 236, 262, 283, 295-297, 301-310, 323-324, 338-341
+invenio_rdm_records/services/pids/providers/__init__.py                                             6      0   100%
+invenio_rdm_records/services/pids/providers/base.py                                                82     27    67%   37, 42, 67, 81, 99-106, 119, 128, 136, 144, 155-160, 166-169, 203-213, 221
+invenio_rdm_records/services/pids/providers/crossref.py                                           140    100    29%   39, 45, 49-50, 57-78, 86-111, 120-186, 220, 225, 229, 239-252, 262-271, 280-300, 310-344, 350-356
+invenio_rdm_records/services/pids/providers/datacite.py                                           152     60    61%   57, 65, 70, 77, 87, 97-105, 138-155, 184, 186, 190, 197-203, 216, 218, 222, 229-235, 238, 244-248, 259, 262-268, 291-293, 297, 311-314, 318-324
+invenio_rdm_records/services/pids/providers/external.py                                            48     29    40%   30-39, 43-53, 73, 83-106, 113-115
+invenio_rdm_records/services/pids/providers/oai.py                                                 15      1    93%   44
+invenio_rdm_records/services/pids/service.py                                                      103     41    60%   69-92, 104-110, 122-128, 140-147, 175, 247-255, 269
+invenio_rdm_records/services/pids/tasks.py                                                          6      0   100%
+invenio_rdm_records/services/queryparser.py                                                         5      3    40%   11-13
+invenio_rdm_records/services/request_policies.py                                                  155     60    61%   27, 31, 56-59, 63-67, 86-89, 93, 103-104, 110-113, 117-121, 132-134, 138, 152, 192-193, 197, 215-225, 232, 244, 249, 254, 263-270, 288-295, 304-310, 326, 337
+invenio_rdm_records/services/requests/__init__.py                                                   2      0   100%
+invenio_rdm_records/services/requests/service.py                                                   14      7    50%   21, 34-45
+invenio_rdm_records/services/result_items.py                                                      100     58    42%   19-21, 39, 44-58, 62-66, 74-77, 81, 85, 90-102, 108-114, 130-136, 141-154, 158-162, 185, 189, 194-203, 207-221
+invenio_rdm_records/services/results.py                                                            57     20    65%   29, 33, 37, 41, 54, 58, 62-71, 75, 119-120, 124-133, 137
+invenio_rdm_records/services/review/__init__.py                                                     3      0   100%
+invenio_rdm_records/services/review/links.py                                                       10      2    80%   16, 25
+invenio_rdm_records/services/review/policy.py                                                       8      2    75%   27, 40
+invenio_rdm_records/services/review/service.py                                                    112     36    68%   58, 76, 79, 85, 116-117, 131-134, 157-158, 171-211, 218, 227, 246, 261-262
+invenio_rdm_records/services/schemas/__init__.py                                                    4      0   100%
+invenio_rdm_records/services/schemas/access.py                                                     41      6    85%   30, 36-37, 46, 63, 77
+invenio_rdm_records/services/schemas/community_records.py                                          21     12    43%   29-48
+invenio_rdm_records/services/schemas/fields.py                                                     21      4    81%   25-26, 41-42
+invenio_rdm_records/services/schemas/files.py                                                      52      0   100%
+invenio_rdm_records/services/schemas/metadata.py                                                  179     34    81%   72-78, 117-118, 122-123, 138, 140, 152-161, 207-211, 234, 239, 244-252, 286, 289, 338-344
+invenio_rdm_records/services/schemas/parent/__init__.py                                            28      2    93%   24-25
+invenio_rdm_records/services/schemas/parent/access.py                                              44      0   100%
+invenio_rdm_records/services/schemas/parent/communities.py                                          9      0   100%
+invenio_rdm_records/services/schemas/pids.py                                                        6      0   100%
+invenio_rdm_records/services/schemas/quota.py                                                       6      0   100%
+invenio_rdm_records/services/schemas/record.py                                                     70      2    97%   40, 111
+invenio_rdm_records/services/schemas/record_communities.py                                         24     12    50%   32-51
+invenio_rdm_records/services/schemas/review.py                                                     12      0   100%
+invenio_rdm_records/services/schemas/stats.py                                                      10      0   100%
+invenio_rdm_records/services/schemas/tombstone.py                                                  21      0   100%
+invenio_rdm_records/services/schemas/utils.py                                                      17     17     0%   7-34
+invenio_rdm_records/services/schemas/versions.py                                                    4      0   100%
+invenio_rdm_records/services/search_params.py                                                      45     14    69%   23, 50-53, 67-68, 71-74, 103-107
+invenio_rdm_records/services/services.py                                                          325    148    54%   124-157, 163-169, 204, 229, 237, 243, 259-308, 313-352, 357-384, 396-401, 406-442, 454-467, 479-492, 504-508, 520-528, 594, 608, 631-632, 637, 676, 684, 697-700, 727-732, 753-757, 792, 827, 836, 865, 897-902, 909-923
+invenio_rdm_records/services/signals/__init__.py                                                    2      0   100%
+invenio_rdm_records/services/signals/signals.py                                                     4      0   100%
+invenio_rdm_records/services/sort.py                                                                8      2    75%   23-24
+invenio_rdm_records/services/stats/__init__.py                                                      2      2     0%   6-8
+invenio_rdm_records/services/stats/permissions.py                                                  16     16     0%   6-52
+invenio_rdm_records/services/storage/service.py                                                    94     45    52%   59, 81, 128-136, 143-165, 169-199, 203-204, 208-218
+invenio_rdm_records/services/tasks.py                                                              54     34    37%   41-54, 60-90, 96
+invenio_rdm_records/services/vcs/__init__.py                                                        0      0   100%
+invenio_rdm_records/services/vcs/metadata.py                                                       83     83     0%   6-183
+invenio_rdm_records/services/vcs/release.py                                                       199    199     0%   7-467
+invenio_rdm_records/services/vcs/utils.py                                                           4      4     0%   6-19
+invenio_rdm_records/tokens/__init__.py                                                              3      0   100%
+invenio_rdm_records/tokens/errors.py                                                               18      0   100%
+invenio_rdm_records/tokens/permissions.py                                                           5      0   100%
+invenio_rdm_records/tokens/resource_access.py                                                      41     28    32%   36-90
+invenio_rdm_records/tokens/scopes.py                                                                4      0   100%
+invenio_rdm_records/utils.py                                                                       90     31    66%   30-50, 72, 97-98, 110-115, 125-142, 148-149
+invenio_rdm_records/views.py                                                                       71     17    76%   74-75, 116-122, 127-148, 164-172
+invenio_rdm_records/webpack.py                                                                      2      2     0%   9-11
+TOTAL                                                                                           13692   4163    70%
+=========================== short test summary info ============================
+FAILED tests/resources/serializers/test_csl_serializer.py::test_string_citation_serializer - AssertionError: assert 'Nielsen, L. ...eniordm.1234.' == 'Nielsen, L. ...eniordm.1234.'
+  - Nielsen, L. H., and B. Tom. InvenioRDM. Version v1.0, InvenioRDM, 2018–Sept. 2020, https://handle.test.datacite.org/10.1234/inveniordm.1234
+  ?               --
+  + Nielsen, L. H.and B. Tom. InvenioRDM. Version v1.0, InvenioRDM, 2018–Sept. 2020, https://handle.test.datacite.org/10.1234/inveniordm.1234
+====== 1 failed, 280 passed, 2 skipped, 227 warnings in 261.17s (0:04:21) ======
+ Container docker_services_cli-redis-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-opensearch-1  Stopping
+ Container docker_services_cli-rabbitmq-1  Stopping
+ Container docker_services_cli-redis-1  Stopped
+ Container docker_services_cli-redis-1  Removing
+ Container docker_services_cli-redis-1  Removed
+ Container docker_services_cli-opensearch-1  Stopped
+ Container docker_services_cli-opensearch-1  Removing
+ Container docker_services_cli-opensearch-1  Removed
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-postgresql-1  Removed
+ Container docker_services_cli-rabbitmq-1  Stopped
+ Container docker_services_cli-rabbitmq-1  Removing
+ Container docker_services_cli-rabbitmq-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

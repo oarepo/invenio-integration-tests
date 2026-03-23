@@ -1,0 +1,136 @@
+ rabbitmq Pulling 
+ postgresql Pulling 
+ rabbitmq Pulled 
+ postgresql Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-rabbitmq-1  Creating
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-rabbitmq-1  Created
+ Container docker_services_cli-rabbitmq-1  Starting
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-postgresql-1  Started
+ Container docker_services_cli-rabbitmq-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/original
+configfile: pyproject.toml
+testpaths: tests, invenio_oauthclient
+plugins: cov-7.1.0, pydocstyle-2.4.0, invenio-4.0.2, github-actions-annotate-failures-0.4.2, pycodestyle-2.5.0, flask-1.3.0, isort-4.0.0, black-0.6.0
+collected 159 items
+tests/test_admin.py 
+                                                    [  0%]
+tests/test_alembic.py 
+                                                  [  1%]
+tests/test_app.py ......s....                                            [  8%]
+tests/test_base_handlers.py ..                                           [  9%]
+tests/test_contrib_cern_openid.py 
+                                 [ 13%]
+tests/test_contrib_cern_openid_rest.py 
+                           [ 17%]
+tests/test_contrib_eosc_aai.py 
+                                  [ 22%]
+tests/test_contrib_github.py .......                                     [ 27%]
+tests/test_contrib_github_rest.py .......                                [ 31%]
+tests/test_contrib_globus.py .......                                     [ 35%]
+tests/test_contrib_keycloak.py 
+                              [ 43%]
+tests/test_contrib_orcid.py ......                                       [ 47%]
+tests/test_contrib_orcid_rest.py ......                                  [ 50%]
+tests/test_examples_app.py ssssss                                        [ 54%]
+tests/test_handlers_rest.py ...........................                  [ 71%]
+tests/test_handlers_ui.py .........                                      [ 77%]
+tests/test_models.py ....                                                [ 79%]
+tests/test_refresh.py .                                                  [ 80%]
+tests/test_utils.py ..............                                       [ 89%]
+tests/test_views.py .........                                            [ 94%]
+tests/test_views_rest.py ........                                        [100%]
+=============================== warnings summary ===============================
+invenio_oauthclient/contrib/cern.py:157
+    warn(
+tests/test_admin.py::test_admin
+    admin.add_view(user_view(user_model, db.session, **remote_account_adminview))
+tests/test_alembic.py::test_alembic
+    util.warn_deprecated(
+tests/test_alembic.py::test_alembic
+tests/test_alembic.py::test_alembic
+    current_date = datetime.utcnow()
+tests/test_alembic.py::test_alembic
+tests/test_alembic.py::test_alembic
+    insp = Inspector.from_engine(ctx.connection.engine)
+tests/test_contrib_cern_openid.py::test_fetch_extra_data
+tests/test_contrib_cern_openid.py::test_account_info
+tests/test_contrib_cern_openid.py::test_account_setup
+tests/test_contrib_cern_openid.py::test_account_info_not_allowed_account
+tests/test_contrib_cern_openid_rest.py::test_fetch_extra_data
+tests/test_contrib_cern_openid_rest.py::test_account_info_rest
+tests/test_contrib_cern_openid_rest.py::test_account_setup
+tests/test_contrib_cern_openid_rest.py::test_account_info_not_allowed_account
+tests/test_contrib_cern_openid_rest.py::test_identity_changed
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 4 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2
+    return self._jws.encode(
+tests/test_contrib_eosc_aai.py::test_account_info
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oauthclient/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2
+    return self._jws.encode(
+    now = datetime.utcnow()
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+Name                                                                               Stmts   Miss  Cover   Missing
+invenio_oauthclient/__init__.py                                                        5      0   100%
+invenio_oauthclient/_compat.py                                                        21      2    90%   13-14
+invenio_oauthclient/admin.py                                                          28      1    96%   79
+invenio_oauthclient/alembic/7def990b852e_add_expires_at_and_refresh_token_to_.py      14      0   100%
+invenio_oauthclient/alembic/44ab9963e8cf_create_oauthclient_branch.py                 10      1    90%   23
+invenio_oauthclient/alembic/97bbc733896c_create_oauthclient_tables.py                 23      0   100%
+invenio_oauthclient/alembic/1758275763_extra_data_jsonb.py                            12      0   100%
+invenio_oauthclient/alembic/__init__.py                                                0      0   100%
+invenio_oauthclient/alembic/aaa265b0afa6_move_useridentity_to_acconuts.py             14      0   100%
+invenio_oauthclient/alembic/bff1f190b9bd_add_timestamp_oauthclient.py                 27      0   100%
+invenio_oauthclient/alembic/edf0c0907f40_change_datetime_types.py                     15      0   100%
+invenio_oauthclient/config.py                                                         23      0   100%
+invenio_oauthclient/contrib/__init__.py                                                0      0   100%
+invenio_oauthclient/contrib/cern.py                                                  182    110    40%   278-285, 290-292, 301-315, 320-324, 331-347, 352-357, 369-378, 383-390, 395-420, 433-438, 443-450, 460-474, 479-480, 485-489, 494-511, 529-545
+invenio_oauthclient/contrib/cern_openid.py                                           159      6    96%   173-175, 194, 231, 325
+invenio_oauthclient/contrib/eosc_aai.py                                              104     11    89%   138-145, 327-329, 370-374
+invenio_oauthclient/contrib/github.py                                                 79      0   100%
+invenio_oauthclient/contrib/globus.py                                                 85      3    96%   319-323
+invenio_oauthclient/contrib/keycloak/__init__.py                                       3      0   100%
+invenio_oauthclient/contrib/keycloak/handlers.py                                      47      4    91%   143-146
+invenio_oauthclient/contrib/keycloak/helpers.py                                       44      0   100%
+invenio_oauthclient/contrib/keycloak/settings.py                                      25      0   100%
+invenio_oauthclient/contrib/openaire_aai.py                                           71     26    63%   142, 209, 243-248, 257-271, 279-280, 288-292, 302-317
+invenio_oauthclient/contrib/orcid.py                                                  70      0   100%
+invenio_oauthclient/contrib/settings.py                                               31      2    94%   94, 127
+invenio_oauthclient/errors.py                                                         34      0   100%
+invenio_oauthclient/ext.py                                                            95     19    80%   151, 213-215, 220-227, 236-253, 261-273
+invenio_oauthclient/handlers/__init__.py                                               9      0   100%
+invenio_oauthclient/handlers/authorized.py                                            96      9    91%   131, 187, 200, 205, 229, 235-236, 246, 252
+invenio_oauthclient/handlers/base.py                                                  14      0   100%
+invenio_oauthclient/handlers/decorators.py                                            19      0   100%
+invenio_oauthclient/handlers/refresh.py                                               14      0   100%
+invenio_oauthclient/handlers/rest.py                                                 104      5    95%   129, 131, 282-283, 287
+invenio_oauthclient/handlers/token.py                                                 73      1    99%   130
+invenio_oauthclient/handlers/ui.py                                                    99      9    91%   68, 70, 214-222, 225
+invenio_oauthclient/handlers/utils.py                                                 81     10    88%   105, 119-125, 129-135, 156, 162-168
+invenio_oauthclient/models.py                                                         99      2    98%   152, 203
+invenio_oauthclient/oauth.py                                                          65      0   100%
+invenio_oauthclient/proxies.py                                                         3      0   100%
+invenio_oauthclient/signals.py                                                         8      0   100%
+invenio_oauthclient/tasks.py                                                           5      0   100%
+invenio_oauthclient/utils.py                                                         101      3    97%   49, 88, 206
+invenio_oauthclient/views/__init__.py                                                  3      0   100%
+invenio_oauthclient/views/client.py                                                  137     31    77%   52-82, 138, 174, 181-187, 196, 208-216, 297-305
+invenio_oauthclient/views/settings.py                                                 27      0   100%
+TOTAL                                                                               2178    255    88%
+================= 152 passed, 7 skipped, 35 warnings in 35.40s =================
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-rabbitmq-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-postgresql-1  Removed
+ Container docker_services_cli-rabbitmq-1  Stopped
+ Container docker_services_cli-rabbitmq-1  Removing
+ Container docker_services_cli-rabbitmq-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

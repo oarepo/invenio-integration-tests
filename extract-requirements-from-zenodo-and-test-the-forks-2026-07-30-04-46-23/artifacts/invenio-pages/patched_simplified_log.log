@@ -1,0 +1,115 @@
+ opensearch Pulling 
+ postgresql Pulling 
+ redis Pulling 
+ redis Pulled 
+ opensearch Pulled 
+ postgresql Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-redis-1  Creating
+ Container docker_services_cli-opensearch-1  Creating
+ Container docker_services_cli-opensearch-1  Created
+ Container docker_services_cli-redis-1  Created
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-opensearch-1  Starting
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-redis-1  Starting
+ Container docker_services_cli-redis-1  Started
+ Container docker_services_cli-postgresql-1  Started
+ Container docker_services_cli-opensearch-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-pages/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_pages
+plugins: cov-7.1.0, pydocstyle-2.4.0, invenio-4.0.2, github-actions-annotate-failures-0.4.2, pycodestyle-2.5.0, flask-1.3.0, isort-4.0.0, black-0.6.0
+collected 39 items
+tests/alembic/test_alembic.py .                                          [  2%]
+tests/records/test_records.py 
+                                   [ 23%]
+tests/resources/test_resources.py 
+                              [ 46%]
+tests/services/test_services.py 
+                            [ 79%]
+tests/test_invenio_pages.py ..                                           [ 84%]
+tests/test_views.py ssssss                                               [100%]
+=============================== warnings summary ===============================
+tests/records/test_records.py::test_page_repr
+tests/resources/test_resources.py::test_page_content
+tests/services/test_services.py::test_page_read
+    self.init_app(app)
+tests/records/test_records.py::test_page_versions
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-pages/patched/tests/records/test_records.py:24: SAWarning: nested transaction already deassociated from connection
+    db.session.commit()
+tests/records/test_records.py::test_create
+tests/resources/test_resources.py::test_create
+tests/resources/test_resources.py::test_delete
+tests/resources/test_resources.py::test_delete_denied
+tests/services/test_services.py::test_create
+tests/services/test_services.py::test_delete
+tests/services/test_services.py::test_delete_denied
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-pages/patched/invenio_pages/records/models.py:53: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+tests/resources/test_resources.py::test_create
+tests/resources/test_resources.py::test_delete
+tests/resources/test_resources.py::test_delete_denied
+tests/services/test_services.py::test_create
+tests/services/test_services.py::test_delete
+tests/services/test_services.py::test_delete_denied
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-pages/patched/.venv/lib/python3.14/site-packages/invenio_db/uow.py:189: SAWarning: nested transaction already deassociated from connection
+    self.session.commit()
+tests/resources/test_resources.py::test_create
+tests/services/test_services.py::test_create
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-pages/patched/.venv/lib/python3.14/site-packages/invenio_db/uow.py:200: SAWarning: nested transaction already deassociated from connection
+    self.session.rollback()
+tests/resources/test_resources.py::test_delete
+tests/services/test_services.py::test_delete
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-pages/patched/invenio_pages/records/models.py:122: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+Name                                                                    Stmts   Miss  Cover   Missing
+invenio_pages/__init__.py                                                   4      0   100%
+invenio_pages/administration/__init__.py                                    0      0   100%
+invenio_pages/administration/views/__init__.py                              0      0   100%
+invenio_pages/administration/views/pages.py                                40      0   100%
+invenio_pages/alembic/08a5708005b7_change_datetime_types.py                13      0   100%
+invenio_pages/alembic/9fae3c5404d9_remove_has_custom_view_to_pages.py      12      0   100%
+invenio_pages/alembic/98e0a418340d_create_invenio_pages_branch.py          10      0   100%
+invenio_pages/alembic/145402e8523a_create_pages_table.py                   28      0   100%
+invenio_pages/alembic/1737449793_add_language_and_new_uq.py                16      0   100%
+invenio_pages/alembic/__init__.py                                           0      0   100%
+invenio_pages/alembic/b0f93ca4a147_add_has_custom_view_to_pages.py         14      0   100%
+invenio_pages/config.py                                                    17      0   100%
+invenio_pages/ext.py                                                       53      7    87%   54-62, 71
+invenio_pages/proxies.py                                                    6      0   100%
+invenio_pages/records/__init__.py                                           2      0   100%
+invenio_pages/records/errors.py                                             7      0   100%
+invenio_pages/records/models.py                                            81      3    96%   77-78, 139
+invenio_pages/resources/__init__.py                                         3      0   100%
+invenio_pages/resources/config.py                                          11      0   100%
+invenio_pages/resources/resource.py                                        38      0   100%
+invenio_pages/services/__init__.py                                          4      0   100%
+invenio_pages/services/config.py                                           22      0   100%
+invenio_pages/services/permissions.py                                       9      0   100%
+invenio_pages/services/results.py                                          38      0   100%
+invenio_pages/services/schemas.py                                          21      0   100%
+invenio_pages/services/service.py                                          67      2    97%   114, 128
+invenio_pages/views.py                                                     37     20    46%   29, 34-48, 53-60, 76-83, 100-110
+TOTAL                                                                     553     32    94%
+================== 33 passed, 6 skipped, 21 warnings in 4.40s ==================
+ Container docker_services_cli-redis-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-opensearch-1  Stopping
+ Container docker_services_cli-opensearch-1  Stopped
+ Container docker_services_cli-opensearch-1  Removing
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-redis-1  Stopped
+ Container docker_services_cli-redis-1  Removing
+ Container docker_services_cli-redis-1  Removed
+ Container docker_services_cli-opensearch-1  Removed
+ Container docker_services_cli-postgresql-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

@@ -1,0 +1,104 @@
+ rabbitmq Pulling 
+ postgresql Pulling 
+ opensearch Pulling 
+ redis Pulling 
+ redis Pulled 
+ rabbitmq Pulled 
+ postgresql Pulled 
+ opensearch Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-rabbitmq-1  Creating
+ Container docker_services_cli-opensearch-1  Creating
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-redis-1  Creating
+ Container docker_services_cli-opensearch-1  Created
+ Container docker_services_cli-redis-1  Created
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-rabbitmq-1  Created
+ Container docker_services_cli-opensearch-1  Starting
+ Container docker_services_cli-rabbitmq-1  Starting
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-redis-1  Starting
+ Container docker_services_cli-redis-1  Started
+ Container docker_services_cli-rabbitmq-1  Started
+ Container docker_services_cli-postgresql-1  Started
+ Container docker_services_cli-opensearch-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-audit-logs/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_audit_logs
+plugins: isort-4.0.0, black-0.6.0, invenio-4.0.2, pydocstyle-2.4.0, cov-7.1.0, pycodestyle-2.5.0, flask-1.3.0, github-actions-annotate-failures-0.4.2
+collected 9 items
+tests/services/test_action_builder.py 
+                                 [ 22%]
+tests/services/test_service.py 
+                                      [ 66%]
+tests/test_alembic.py 
+                                                  [ 77%]
+tests/test_invenio_audit_logs.py ..                                      [100%]
+=============================== warnings summary ===============================
+tests/services/test_action_builder.py::test_audit_log_builder_with_metadata
+tests/services/test_service.py::test_audit_log_create
+tests/services/test_service.py::test_audit_log_create_identity_mismatch
+tests/services/test_service.py::test_audit_log_create
+tests/test_alembic.py::test_alembic
+    self.init_app(app)
+tests/test_alembic.py::test_alembic
+    util.warn_deprecated(
+tests/test_alembic.py::test_alembic
+    super().alter_column(
+tests/test_alembic.py::test_alembic
+    insp = Inspector.from_engine(ctx.connection.engine)
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+Name                                                                Stmts   Miss  Cover   Missing
+invenio_audit_logs/__init__.py                                          3      0   100%
+invenio_audit_logs/alembic/42fa8d3bbc0c_change_datetime_types.py       13      0   100%
+invenio_audit_logs/alembic/1743073617_create_audit_logs_branch.py      10      0   100%
+invenio_audit_logs/alembic/1743073720_create_audit_logs_table.py       12      0   100%
+invenio_audit_logs/config.py                                           11      0   100%
+invenio_audit_logs/ext.py                                              30      0   100%
+invenio_audit_logs/proxies.py                                          10      0   100%
+invenio_audit_logs/records/__init__.py                                  2      0   100%
+invenio_audit_logs/records/api.py                                      22      0   100%
+invenio_audit_logs/records/mappings/__init__.py                         0      0   100%
+invenio_audit_logs/records/mappings/templates/__init__.py               0      0   100%
+invenio_audit_logs/records/mappings/templates/os-v1/__init__.py         0      0   100%
+invenio_audit_logs/records/mappings/templates/os-v2/__init__.py         0      0   100%
+invenio_audit_logs/records/models.py                                    9      0   100%
+invenio_audit_logs/records/systemfields/__init__.py                     2      0   100%
+invenio_audit_logs/records/systemfields/action.py                      45     10    78%   22, 32-34, 38-40, 50, 75-76
+invenio_audit_logs/resources/__init__.py                                3      0   100%
+invenio_audit_logs/resources/config.py                                 16      0   100%
+invenio_audit_logs/resources/resource.py                               26      4    85%   47-52, 59-63
+invenio_audit_logs/services/__init__.py                                 6      0   100%
+invenio_audit_logs/services/action.py                                  32      4    88%   29, 61, 66, 70
+invenio_audit_logs/services/config.py                                  45      1    98%   39
+invenio_audit_logs/services/permissions.py                             10      0   100%
+invenio_audit_logs/services/results.py                                 52      4    92%   65, 72-75
+invenio_audit_logs/services/schema.py                                  43      3    93%   69, 79, 155
+invenio_audit_logs/services/service.py                                 41      4    90%   124-138
+invenio_audit_logs/services/uow.py                                     15      0   100%
+invenio_audit_logs/views.py                                             5      0   100%
+TOTAL                                                                 463     30    94%
+======================== 9 passed, 8 warnings in 4.49s =========================
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-redis-1  Stopping
+ Container docker_services_cli-opensearch-1  Stopping
+ Container docker_services_cli-rabbitmq-1  Stopping
+ Container docker_services_cli-redis-1  Stopped
+ Container docker_services_cli-redis-1  Removing
+ Container docker_services_cli-redis-1  Removed
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-postgresql-1  Removed
+ Container docker_services_cli-opensearch-1  Stopped
+ Container docker_services_cli-opensearch-1  Removing
+ Container docker_services_cli-opensearch-1  Removed
+ Container docker_services_cli-rabbitmq-1  Stopped
+ Container docker_services_cli-rabbitmq-1  Removing
+ Container docker_services_cli-rabbitmq-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

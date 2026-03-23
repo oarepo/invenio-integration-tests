@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "c4b92fd",
+    "message": "release: v14.1.0"
+  },
+  {
+    "hash": "285f9a7",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "f1276d3",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "4b2779d",
+    "message": "release: v14.0.1"
+  },
+  {
+    "hash": "4160479",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "7d2d664",
+    "message": "chore(licenses): fix some SPDX license headers"
+  },
+  {
+    "hash": "fe341b4",
+    "message": "fix(comments): resolve collisions in allowed tags configuration"
+  },
+  {
+    "hash": "8df40e8",
+    "message": "i18n: push translations"
+  },
+  {
+    "hash": "9e40d5a",
+    "message": "fix(i18n): update variable naming in  translations"
+  },
+  {
+    "hash": "08dd01d",
+    "message": "i18n: push translations (#620)"
+  },
+  {
+    "hash": "de87f12",
+    "message": "fix(CI): include maint branch for tests workflow"
+  },
+  {
+    "hash": "62e810a",
+    "message": "i18n: Static request actions (#598)"
+  },
+  {
+    "hash": "d6e2bca",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "29079ee",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "f089e48",
+    "message": "release: v14.0.0"
+  },
+  {
+    "hash": "18046d1",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "5b2dd9f",
+    "message": "fix(tests): passing expires_at as datetime, not as string"
+  },
+  {
+    "hash": "d5c2b8e",
+    "message": "fix: preserve redirect responses for S3 downloads"
+  },
+  {
+    "hash": "7bc3ff7",
+    "message": "i18n: update string formatting"
+  },
+  {
+    "hash": "f6b0c89",
+    "message": "release: v13.0.0"
+  },
+  {
+    "hash": "115e4d3",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "a945cf6",
+    "message": "feat: introduced SameAs to make the policy extendable"
+  },
+  {
+    "hash": "f02baf1",
+    "message": "feat: Extra context for permission checks"
+  },
+  {
+    "hash": "3ceaf41",
+    "message": "release: v12.6.2"
+  },
+  {
+    "hash": "2813f66",
+    "message": "fix(comments): null ref for deleted comments"
+  },
+  {
+    "hash": "47064e1",
+    "message": "release: v12.6.1"
+  },
+  {
+    "hash": "98f9012",
+    "message": "fix(comments): ensure \"show less\" button is hidden for comments <200px height"
+  },
+  {
+    "hash": "adc4bac",
+    "message": "\ud83d\udce6 release: v12.6.0"
+  },
+  {
+    "hash": "8f8a436",
+    "message": "labels: add quota increase label"
+  },
+  {
+    "hash": "345fb59",
+    "message": "\ud83d\udce6 release: v12.5.2"
+  },
+  {
+    "hash": "8c6708a",
+    "message": "fix: only render super when using dashboard base template"
+  },
+  {
+    "hash": "89585f5",
+    "message": "release: v12.5.1"
+  },
+  {
+    "hash": "6ea1ce6",
+    "message": "fix(links): set anchor only if Endpointlink supports it"
+  },
+  {
+    "hash": "fcd2a9f",
+    "message": "fix(docstring): typo"
+  },
+  {
+    "hash": "392ff50",
+    "message": ":package: release: v12.5.0"
+  },
+  {
+    "hash": "d4c287d",
+    "message": "feat: RequestTypeDependentEndpointLink dynamically assigns anchor"
+  },
+  {
+    "hash": "38888f9",
+    "message": "release: v12.4.0"
+  },
+  {
+    "hash": "b86dac0",
+    "message": "formatting: fix formatting"
+  },
+  {
+    "hash": "b7de89a",
+    "message": "ui(translations): mark action values as translatable"
+  },
+  {
+    "hash": "c96bcbc",
+    "message": "fix(TimelineEventBody): For each comment, render mathjax only for itself   * Rendering mathjax on the whole page for each comment slowed down the UI re-draw exponentionally as more and more comments were loaded. This fix makes sure that only the newly loaded comments or the re-edited comments are re-typesetted."
+  },
+  {
+    "hash": "83bde01",
+    "message": "fix: wide community logo in request metadata"
+  },
+  {
+    "hash": "fc3739a",
+    "message": "fix: event entrypoint incorrectly pointed to request type registry"
+  },
+  {
+    "hash": "d772c9e",
+    "message": "chore: replace usage of Link by EndpointLink"
+  },
+  {
+    "hash": "1d8b37b",
+    "message": "fix: add missing alembic script"
+  },
+  {
+    "hash": "bcbf67f",
+    "message": "release: v12.3.1"
+  },
+  {
+    "hash": "cd7a165",
+    "message": "fix(RequestMetadata): pass required props to the <Overridable>"
+  },
+  {
+    "hash": "547ede9",
+    "message": "release: v12.3.0"
+  },
+  {
+    "hash": "01b7f41",
+    "message": "tests: skip alembic test"
+  },
+  {
+    "hash": "62e54bb",
+    "message": "fix(timeline): prevent infinite re-rendering of comment editor"
+  },
+  {
+    "hash": "55c3b0a",
+    "message": "fix(files): Add 'not found' handler for file UI endpoint"
+  }
+]

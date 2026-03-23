@@ -1,0 +1,11 @@
+{
+  "UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.": 1,
+  "DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.": 1,
+  "DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.": 1,
+  "DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.": 1,
+  "LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)": 1,
+  "DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.": 1,
+  "UserWarning: Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmvrwv9:": 1,
+  "DeprecationWarning: context_schema will in future only be set if and only if context is given.": 2,
+  "SAWarning: nested transaction already deassociated from connection": 6
+}

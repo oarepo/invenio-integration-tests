@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-celery/original
+configfile: pyproject.toml
+testpaths: tests, invenio_celery
+plugins: cov-7.1.0, pydocstyle-2.4.0, invenio-4.0.2, github-actions-annotate-failures-0.4.2, pycodestyle-2.5.0, flask-1.3.0, isort-4.0.0, black-ng-0.4.1
+collected 12 items
+tests/test_invenio_celery.py ............                                [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+Name                         Stmts   Miss  Cover   Missing
+invenio_celery/__init__.py       4      0   100%
+invenio_celery/config.py        11      0   100%
+invenio_celery/ext.py           61      1    98%   41
+TOTAL                           76      1    99%
+============================== 12 passed in 0.81s ==============================

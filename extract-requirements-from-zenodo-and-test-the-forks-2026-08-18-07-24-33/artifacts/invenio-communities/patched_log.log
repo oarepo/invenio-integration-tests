@@ -1,0 +1,717 @@
+ opensearch Pulling 
+ postgresql Pulling 
+ redis Pulling 
+ b0a0cf830b12 Pulling fs layer 
+ dda3d8fbd5ed Pulling fs layer 
+ 283a477db7bb Pulling fs layer 
+ 91d2729fa4d5 Pulling fs layer 
+ 9739ced65621 Pulling fs layer 
+ ae3bb1b347a4 Pulling fs layer 
+ f8406d9c00ea Pulling fs layer 
+ c199bff16b05 Pulling fs layer 
+ e0d55fdb4d15 Pulling fs layer 
+ 91d2729fa4d5 Waiting 
+ c1cb13b19080 Pulling fs layer 
+ 9739ced65621 Waiting 
+ 873532e5f8c7 Pulling fs layer 
+ 050d9f8c3b1c Pulling fs layer 
+ 710e142705f8 Pulling fs layer 
+ cb628c265f09 Pulling fs layer 
+ f8406d9c00ea Waiting 
+ ae3bb1b347a4 Waiting 
+ c1cb13b19080 Waiting 
+ c199bff16b05 Waiting 
+ 873532e5f8c7 Waiting 
+ 050d9f8c3b1c Waiting 
+ e0d55fdb4d15 Waiting 
+ 710e142705f8 Waiting 
+ cb628c265f09 Waiting 
+ 039e6f9f9752 Pulling fs layer 
+ 5b03f5a6cdec Pulling fs layer 
+ ced91743e468 Pulling fs layer 
+ 709eacfa0183 Pulling fs layer 
+ bd9e4bd718ad Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ c846c34d5449 Pulling fs layer 
+ 039e6f9f9752 Waiting 
+ bd9e4bd718ad Waiting 
+ ced91743e468 Waiting 
+ 709eacfa0183 Waiting 
+ 4f4fb700ef54 Waiting 
+ 5b03f5a6cdec Waiting 
+ f9dd052e142d Pulling fs layer 
+ e8c6d4883897 Pulling fs layer 
+ 648eb81b3252 Pulling fs layer 
+ eb77aa907276 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 0ffa8f8aba1e Pulling fs layer 
+ 2e81b9cb93cd Pulling fs layer 
+ 648eb81b3252 Waiting 
+ eb77aa907276 Waiting 
+ 2e81b9cb93cd Waiting 
+ 4f4fb700ef54 Waiting 
+ f9dd052e142d Waiting 
+ 0ffa8f8aba1e Waiting 
+ e8c6d4883897 Waiting 
+ dda3d8fbd5ed Downloading [==================================================>]  1.165kB/1.165kB
+ dda3d8fbd5ed Verifying Checksum 
+ dda3d8fbd5ed Download complete 
+ 283a477db7bb Downloading [>                                                  ]  48.51kB/4.533MB
+ b0a0cf830b12 Downloading [>                                                  ]  294.3kB/29.15MB
+ 283a477db7bb Verifying Checksum 
+ 283a477db7bb Download complete 
+ b0a0cf830b12 Downloading [============================================>      ]  25.95MB/29.15MB
+ b0a0cf830b12 Verifying Checksum 
+ b0a0cf830b12 Download complete 
+ b0a0cf830b12 Extracting [>                                                  ]  294.9kB/29.15MB
+ 91d2729fa4d5 Downloading [>                                                  ]  15.74kB/1.45MB
+ 91d2729fa4d5 Verifying Checksum 
+ 91d2729fa4d5 Download complete 
+ 9739ced65621 Downloading [>                                                  ]  81.28kB/8.069MB
+ 9739ced65621 Verifying Checksum 
+ 9739ced65621 Download complete 
+ b0a0cf830b12 Extracting [===========>                                       ]  6.783MB/29.15MB
+ ae3bb1b347a4 Downloading [>                                                  ]  15.74kB/1.196MB
+ ae3bb1b347a4 Verifying Checksum 
+ ae3bb1b347a4 Download complete 
+ b0a0cf830b12 Extracting [====================>                              ]   11.8MB/29.15MB
+ f8406d9c00ea Downloading [==================================================>]     116B/116B
+ f8406d9c00ea Download complete 
+ c199bff16b05 Downloading [==================================================>]  3.145kB/3.145kB
+ c199bff16b05 Verifying Checksum 
+ c199bff16b05 Download complete 
+ b0a0cf830b12 Extracting [===================================>               ]  20.94MB/29.15MB
+ e0d55fdb4d15 Downloading [>                                                  ]  535.9kB/109MB
+ c1cb13b19080 Downloading [=================>                                 ]  3.479kB/9.925kB
+ c1cb13b19080 Downloading [==================================================>]  9.925kB/9.925kB
+ c1cb13b19080 Verifying Checksum 
+ c1cb13b19080 Download complete 
+ 873532e5f8c7 Downloading [==================================================>]     128B/128B
+ 873532e5f8c7 Verifying Checksum 
+ 873532e5f8c7 Download complete 
+ e0d55fdb4d15 Downloading [=====================>                             ]  46.76MB/109MB
+ b0a0cf830b12 Extracting [==========================================>        ]  24.77MB/29.15MB
+ e0d55fdb4d15 Downloading [==========================================>        ]  92.38MB/109MB
+ e0d55fdb4d15 Verifying Checksum 
+ e0d55fdb4d15 Download complete 
+ b0a0cf830b12 Extracting [================================================>  ]  28.02MB/29.15MB
+ 050d9f8c3b1c Downloading [==================================================>]     169B/169B
+ 050d9f8c3b1c Verifying Checksum 
+ 050d9f8c3b1c Download complete 
+ 710e142705f8 Downloading [================================>                  ]  3.502kB/5.421kB
+ 710e142705f8 Downloading [==================================================>]  5.421kB/5.421kB
+ 710e142705f8 Verifying Checksum 
+ 710e142705f8 Download complete 
+ b0a0cf830b12 Extracting [================================================>  ]  28.31MB/29.15MB
+ cb628c265f09 Downloading [==================================================>]     184B/184B
+ cb628c265f09 Verifying Checksum 
+ cb628c265f09 Download complete 
+ b0a0cf830b12 Extracting [==================================================>]  29.15MB/29.15MB
+ 5b03f5a6cdec Downloading [==================================================>]  1.103kB/1.103kB
+ 5b03f5a6cdec Verifying Checksum 
+ 5b03f5a6cdec Download complete 
+ 039e6f9f9752 Downloading [>                                                  ]  294.3kB/28.23MB
+ 039e6f9f9752 Verifying Checksum 
+ 039e6f9f9752 Download complete 
+ ced91743e468 Downloading [==================================================>]     875B/875B
+ ced91743e468 Verifying Checksum 
+ ced91743e468 Download complete 
+ 039e6f9f9752 Extracting [>                                                  ]  294.9kB/28.23MB
+ b0a0cf830b12 Pull complete 
+ dda3d8fbd5ed Extracting [==================================================>]  1.165kB/1.165kB
+ dda3d8fbd5ed Extracting [==================================================>]  1.165kB/1.165kB
+ 039e6f9f9752 Extracting [===========>                                       ]  6.488MB/28.23MB
+ 709eacfa0183 Downloading [>                                                  ]  163.2kB/15.35MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Download complete 
+ bd9e4bd718ad Downloading [==================================================>]      97B/97B
+ bd9e4bd718ad Verifying Checksum 
+ bd9e4bd718ad Download complete 
+ 039e6f9f9752 Extracting [===================>                               ]  11.21MB/28.23MB
+ 709eacfa0183 Downloading [========>                                          ]  2.621MB/15.35MB
+ 709eacfa0183 Verifying Checksum 
+ 709eacfa0183 Download complete 
+ 039e6f9f9752 Extracting [=================================>                 ]  19.17MB/28.23MB
+ c846c34d5449 Downloading [==================================================>]     597B/597B
+ c846c34d5449 Verifying Checksum 
+ c846c34d5449 Download complete 
+ 039e6f9f9752 Extracting [==========================================>        ]  23.89MB/28.23MB
+ f9dd052e142d Downloading [>                                                  ]  523.6kB/52.33MB
+ e8c6d4883897 Downloading [>                                                  ]  49.15kB/4.398MB
+ f9dd052e142d Downloading [=====>                                             ]  5.242MB/52.33MB
+ 039e6f9f9752 Extracting [================================================>  ]  27.13MB/28.23MB
+ 648eb81b3252 Downloading [==================================================>]  1.561kB/1.561kB
+ 648eb81b3252 Verifying Checksum 
+ 648eb81b3252 Download complete 
+ e8c6d4883897 Downloading [=================>                                 ]  1.562MB/4.398MB
+ e8c6d4883897 Verifying Checksum 
+ e8c6d4883897 Download complete 
+ f9dd052e142d Downloading [=====================================>             ]   38.8MB/52.33MB
+ f9dd052e142d Verifying Checksum 
+ f9dd052e142d Download complete 
+ 039e6f9f9752 Extracting [================================================>  ]  27.43MB/28.23MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ 039e6f9f9752 Extracting [==================================================>]  28.23MB/28.23MB
+ f9dd052e142d Extracting [>                                                  ]  524.3kB/52.33MB
+ 0ffa8f8aba1e Downloading [==================================================>]     226B/226B
+ 0ffa8f8aba1e Verifying Checksum 
+ 0ffa8f8aba1e Download complete 
+ eb77aa907276 Downloading [>                                                  ]  532.9kB/907.7MB
+ eb77aa907276 Downloading [>                                                  ]  1.609MB/907.7MB
+ f9dd052e142d Extracting [=>                                                 ]  1.049MB/52.33MB
+ 2e81b9cb93cd Downloading [==================================================>]  1.859kB/1.859kB
+ 2e81b9cb93cd Verifying Checksum 
+ 2e81b9cb93cd Download complete 
+ eb77aa907276 Downloading [>                                                  ]   2.68MB/907.7MB
+ 039e6f9f9752 Pull complete 
+ f9dd052e142d Extracting [=>                                                 ]  1.573MB/52.33MB
+ eb77aa907276 Downloading [>                                                  ]  5.894MB/907.7MB
+ 5b03f5a6cdec Extracting [==================================================>]  1.103kB/1.103kB
+ 5b03f5a6cdec Extracting [==================================================>]  1.103kB/1.103kB
+ f9dd052e142d Extracting [===>                                               ]  3.146MB/52.33MB
+ eb77aa907276 Downloading [>                                                  ]  11.21MB/907.7MB
+ eb77aa907276 Downloading [>                                                  ]  12.28MB/907.7MB
+ f9dd052e142d Extracting [=====>                                             ]  5.243MB/52.33MB
+ eb77aa907276 Downloading [=>                                                 ]  21.86MB/907.7MB
+ eb77aa907276 Downloading [=>                                                 ]  33.05MB/907.7MB
+ eb77aa907276 Downloading [===>                                               ]  59.67MB/907.7MB
+ f9dd052e142d Extracting [======>                                            ]  6.816MB/52.33MB
+ eb77aa907276 Downloading [=====>                                             ]  100.8MB/907.7MB
+ f9dd052e142d Extracting [=============>                                     ]  13.63MB/52.33MB
+ eb77aa907276 Downloading [=======>                                           ]  138.2MB/907.7MB
+ 5b03f5a6cdec Pull complete 
+ f9dd052e142d Extracting [==================>                                ]   19.4MB/52.33MB
+ ced91743e468 Extracting [==================================================>]     875B/875B
+ ced91743e468 Extracting [==================================================>]     875B/875B
+ eb77aa907276 Downloading [=========>                                         ]    174MB/907.7MB
+ f9dd052e142d Extracting [=========================>                         ]  26.21MB/52.33MB
+ eb77aa907276 Downloading [===========>                                       ]  215.1MB/907.7MB
+ f9dd052e142d Extracting [===========================>                       ]  28.84MB/52.33MB
+ eb77aa907276 Downloading [==============>                                    ]  266.3MB/907.7MB
+ f9dd052e142d Extracting [============================>                      ]  29.36MB/52.33MB
+ eb77aa907276 Downloading [=================>                                 ]  313.2MB/907.7MB
+ eb77aa907276 Downloading [==================>                                ]  340.4MB/907.7MB
+ f9dd052e142d Extracting [=============================>                     ]  30.41MB/52.33MB
+ eb77aa907276 Downloading [====================>                              ]  369.2MB/907.7MB
+ f9dd052e142d Extracting [================================>                  ]  33.55MB/52.33MB
+ eb77aa907276 Downloading [=====================>                             ]  391.1MB/907.7MB
+ eb77aa907276 Downloading [========================>                          ]  435.9MB/907.7MB
+ f9dd052e142d Extracting [===================================>               ]   36.7MB/52.33MB
+ eb77aa907276 Downloading [=========================>                         ]  470.1MB/907.7MB
+ f9dd052e142d Extracting [====================================>              ]  38.27MB/52.33MB
+ eb77aa907276 Downloading [===========================>                       ]  503.2MB/907.7MB
+ f9dd052e142d Extracting [========================================>          ]  42.47MB/52.33MB
+ eb77aa907276 Downloading [=============================>                     ]  536.4MB/907.7MB
+ f9dd052e142d Extracting [============================================>      ]  46.14MB/52.33MB
+ eb77aa907276 Downloading [===============================>                   ]    569MB/907.7MB
+ eb77aa907276 Downloading [=================================>                 ]  609.5MB/907.7MB
+ eb77aa907276 Downloading [====================================>              ]  659.7MB/907.7MB
+ f9dd052e142d Extracting [=================================================> ]  51.38MB/52.33MB
+ eb77aa907276 Downloading [======================================>            ]  707.6MB/907.7MB
+ f9dd052e142d Extracting [==================================================>]  52.33MB/52.33MB
+ eb77aa907276 Downloading [========================================>          ]  741.2MB/907.7MB
+ eb77aa907276 Downloading [==========================================>        ]  773.8MB/907.7MB
+ eb77aa907276 Downloading [===========================================>       ]  796.2MB/907.7MB
+ f9dd052e142d Pull complete 
+ eb77aa907276 Downloading [==============================================>    ]  837.8MB/907.7MB
+ eb77aa907276 Downloading [================================================>  ]  887.9MB/907.7MB
+ eb77aa907276 Verifying Checksum 
+ eb77aa907276 Download complete 
+ e8c6d4883897 Extracting [>                                                  ]  65.54kB/4.398MB
+ e8c6d4883897 Extracting [==>                                                ]  262.1kB/4.398MB
+ e8c6d4883897 Extracting [========>                                          ]  720.9kB/4.398MB
+ e8c6d4883897 Extracting [=========>                                         ]    852kB/4.398MB
+ e8c6d4883897 Extracting [==============>                                    ]  1.311MB/4.398MB
+ e8c6d4883897 Extracting [==================>                                ]  1.638MB/4.398MB
+ e8c6d4883897 Extracting [===================>                               ]  1.704MB/4.398MB
+ e8c6d4883897 Extracting [====================>                              ]  1.769MB/4.398MB
+ e8c6d4883897 Extracting [====================>                              ]  1.835MB/4.398MB
+ e8c6d4883897 Extracting [=====================>                             ]  1.901MB/4.398MB
+ e8c6d4883897 Extracting [======================>                            ]  1.966MB/4.398MB
+ e8c6d4883897 Extracting [=======================>                           ]  2.032MB/4.398MB
+ e8c6d4883897 Extracting [=======================>                           ]  2.097MB/4.398MB
+ e8c6d4883897 Extracting [========================>                          ]  2.163MB/4.398MB
+ e8c6d4883897 Extracting [=========================>                         ]  2.228MB/4.398MB
+ e8c6d4883897 Extracting [==========================>                        ]  2.294MB/4.398MB
+ e8c6d4883897 Extracting [==========================>                        ]  2.359MB/4.398MB
+ e8c6d4883897 Extracting [===========================>                       ]  2.425MB/4.398MB
+ e8c6d4883897 Extracting [============================>                      ]   2.49MB/4.398MB
+ e8c6d4883897 Extracting [==============================>                    ]  2.687MB/4.398MB
+ e8c6d4883897 Extracting [================================>                  ]  2.818MB/4.398MB
+ e8c6d4883897 Extracting [==================================>                ]  3.015MB/4.398MB
+ e8c6d4883897 Extracting [=====================================>             ]  3.342MB/4.398MB
+ e8c6d4883897 Extracting [=======================================>           ]  3.473MB/4.398MB
+ e8c6d4883897 Extracting [========================================>          ]  3.539MB/4.398MB
+ e8c6d4883897 Extracting [==================================================>]  4.398MB/4.398MB
+ ced91743e468 Pull complete 
+ e8c6d4883897 Pull complete 
+ dda3d8fbd5ed Pull complete 
+ 709eacfa0183 Extracting [>                                                  ]  163.8kB/15.35MB
+ 648eb81b3252 Extracting [==================================================>]  1.561kB/1.561kB
+ 648eb81b3252 Extracting [==================================================>]  1.561kB/1.561kB
+ 283a477db7bb Extracting [>                                                  ]  65.54kB/4.533MB
+ 648eb81b3252 Pull complete 
+ eb77aa907276 Extracting [>                                                  ]  557.1kB/907.7MB
+ 709eacfa0183 Extracting [===================>                               ]  5.898MB/15.35MB
+ 283a477db7bb Extracting [==============================================>    ]   4.26MB/4.533MB
+ 283a477db7bb Extracting [==================================================>]  4.533MB/4.533MB
+ eb77aa907276 Extracting [=>                                                 ]  18.38MB/907.7MB
+ 709eacfa0183 Extracting [==========================================>        ]  12.94MB/15.35MB
+ eb77aa907276 Extracting [=>                                                 ]  30.08MB/907.7MB
+ eb77aa907276 Extracting [==>                                                ]  37.32MB/907.7MB
+ eb77aa907276 Extracting [==>                                                ]  44.56MB/907.7MB
+ eb77aa907276 Extracting [==>                                                ]  45.68MB/907.7MB
+ 709eacfa0183 Extracting [=================================================> ]  15.07MB/15.35MB
+ 709eacfa0183 Extracting [==================================================>]  15.35MB/15.35MB
+ eb77aa907276 Extracting [==>                                                ]  47.91MB/907.7MB
+ eb77aa907276 Extracting [===>                                               ]  65.73MB/907.7MB
+ eb77aa907276 Extracting [====>                                              ]  81.89MB/907.7MB
+ eb77aa907276 Extracting [=====>                                             ]   94.7MB/907.7MB
+ 283a477db7bb Pull complete 
+ 91d2729fa4d5 Extracting [=>                                                 ]  32.77kB/1.45MB
+ eb77aa907276 Extracting [=====>                                             ]  102.5MB/907.7MB
+ eb77aa907276 Extracting [=====>                                             ]  104.7MB/907.7MB
+ eb77aa907276 Extracting [=====>                                             ]  108.6MB/907.7MB
+ eb77aa907276 Extracting [======>                                            ]  109.7MB/907.7MB
+ 91d2729fa4d5 Extracting [=========>                                         ]  262.1kB/1.45MB
+ eb77aa907276 Extracting [======>                                            ]  110.9MB/907.7MB
+ 91d2729fa4d5 Extracting [========================================>          ]   1.18MB/1.45MB
+ eb77aa907276 Extracting [======>                                            ]  115.3MB/907.7MB
+ 91d2729fa4d5 Extracting [==================================================>]   1.45MB/1.45MB
+ 709eacfa0183 Pull complete 
+ eb77aa907276 Extracting [======>                                            ]  123.7MB/907.7MB
+ bd9e4bd718ad Extracting [==================================================>]      97B/97B
+ bd9e4bd718ad Extracting [==================================================>]      97B/97B
+ eb77aa907276 Extracting [=======>                                           ]  131.5MB/907.7MB
+ eb77aa907276 Extracting [=======>                                           ]  133.7MB/907.7MB
+ eb77aa907276 Extracting [=======>                                           ]  140.9MB/907.7MB
+ eb77aa907276 Extracting [========>                                          ]  147.6MB/907.7MB
+ eb77aa907276 Extracting [========>                                          ]  156.5MB/907.7MB
+ eb77aa907276 Extracting [========>                                          ]  158.8MB/907.7MB
+ 91d2729fa4d5 Pull complete 
+ eb77aa907276 Extracting [=========>                                         ]  176.6MB/907.7MB
+ eb77aa907276 Extracting [==========>                                        ]  193.9MB/907.7MB
+ bd9e4bd718ad Pull complete 
+ 9739ced65621 Extracting [>                                                  ]   98.3kB/8.069MB
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ eb77aa907276 Extracting [===========>                                       ]  206.1MB/907.7MB
+ eb77aa907276 Extracting [===========>                                       ]  214.5MB/907.7MB
+ eb77aa907276 Extracting [============>                                      ]  219.5MB/907.7MB
+ eb77aa907276 Extracting [============>                                      ]  223.9MB/907.7MB
+ 9739ced65621 Extracting [=======>                                           ]   1.18MB/8.069MB
+ eb77aa907276 Extracting [============>                                      ]  232.3MB/907.7MB
+ 9739ced65621 Extracting [=============================>                     ]  4.719MB/8.069MB
+ 4f4fb700ef54 Pull complete 
+ eb77aa907276 Extracting [=============>                                     ]  236.2MB/907.7MB
+ 9739ced65621 Extracting [===================================>               ]    5.8MB/8.069MB
+ c846c34d5449 Extracting [==================================================>]     597B/597B
+ c846c34d5449 Extracting [==================================================>]     597B/597B
+ eb77aa907276 Extracting [=============>                                     ]  244.5MB/907.7MB
+ 9739ced65621 Extracting [===========================================>       ]  7.078MB/8.069MB
+ eb77aa907276 Extracting [=============>                                     ]  249.6MB/907.7MB
+ eb77aa907276 Extracting [==============>                                    ]  265.7MB/907.7MB
+ 9739ced65621 Extracting [================================================>  ]  7.766MB/8.069MB
+ 9739ced65621 Extracting [=================================================> ]  7.963MB/8.069MB
+ eb77aa907276 Extracting [===============>                                   ]  274.6MB/907.7MB
+ 9739ced65621 Extracting [==================================================>]  8.069MB/8.069MB
+ c846c34d5449 Pull complete 
+ eb77aa907276 Extracting [================>                                  ]  291.3MB/907.7MB
+ eb77aa907276 Extracting [================>                                  ]  295.8MB/907.7MB
+ redis Pulled 
+ eb77aa907276 Extracting [================>                                  ]  300.8MB/907.7MB
+ 9739ced65621 Pull complete 
+ ae3bb1b347a4 Extracting [=>                                                 ]  32.77kB/1.196MB
+ ae3bb1b347a4 Extracting [==================================================>]  1.196MB/1.196MB
+ ae3bb1b347a4 Extracting [==================================================>]  1.196MB/1.196MB
+ eb77aa907276 Extracting [=================>                                 ]    317MB/907.7MB
+ eb77aa907276 Extracting [==================>                                ]  337.6MB/907.7MB
+ eb77aa907276 Extracting [===================>                               ]  358.2MB/907.7MB
+ eb77aa907276 Extracting [====================>                              ]  366.5MB/907.7MB
+ ae3bb1b347a4 Pull complete 
+ f8406d9c00ea Extracting [==================================================>]     116B/116B
+ f8406d9c00ea Extracting [==================================================>]     116B/116B
+ eb77aa907276 Extracting [====================>                              ]  373.8MB/907.7MB
+ eb77aa907276 Extracting [=====================>                             ]  393.8MB/907.7MB
+ eb77aa907276 Extracting [=======================>                           ]  420.6MB/907.7MB
+ eb77aa907276 Extracting [========================>                          ]  450.1MB/907.7MB
+ eb77aa907276 Extracting [=========================>                         ]  461.8MB/907.7MB
+ eb77aa907276 Extracting [===========================>                       ]  490.8MB/907.7MB
+ eb77aa907276 Extracting [============================>                      ]  520.3MB/907.7MB
+ eb77aa907276 Extracting [==============================>                    ]  549.3MB/907.7MB
+ eb77aa907276 Extracting [===============================>                   ]  578.2MB/907.7MB
+ eb77aa907276 Extracting [=================================>                 ]  604.4MB/907.7MB
+ eb77aa907276 Extracting [==================================>                ]  633.4MB/907.7MB
+ f8406d9c00ea Pull complete 
+ c199bff16b05 Extracting [==================================================>]  3.145kB/3.145kB
+ c199bff16b05 Extracting [==================================================>]  3.145kB/3.145kB
+ eb77aa907276 Extracting [====================================>              ]  661.2MB/907.7MB
+ eb77aa907276 Extracting [======================================>            ]  691.3MB/907.7MB
+ eb77aa907276 Extracting [=======================================>           ]  716.4MB/907.7MB
+ eb77aa907276 Extracting [=========================================>         ]  744.8MB/907.7MB
+ eb77aa907276 Extracting [==========================================>        ]  765.4MB/907.7MB
+ eb77aa907276 Extracting [===========================================>       ]    786MB/907.7MB
+ eb77aa907276 Extracting [============================================>      ]  807.7MB/907.7MB
+ eb77aa907276 Extracting [=============================================>     ]  828.3MB/907.7MB
+ eb77aa907276 Extracting [==============================================>    ]  849.5MB/907.7MB
+ eb77aa907276 Extracting [===============================================>   ]  870.1MB/907.7MB
+ eb77aa907276 Extracting [=================================================> ]  892.4MB/907.7MB
+ eb77aa907276 Extracting [==================================================>]  907.7MB/907.7MB
+ eb77aa907276 Pull complete 
+ c199bff16b05 Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ 0ffa8f8aba1e Extracting [==================================================>]     226B/226B
+ 0ffa8f8aba1e Extracting [==================================================>]     226B/226B
+ 0ffa8f8aba1e Pull complete 
+ 2e81b9cb93cd Extracting [==================================================>]  1.859kB/1.859kB
+ 2e81b9cb93cd Extracting [==================================================>]  1.859kB/1.859kB
+ 2e81b9cb93cd Pull complete 
+ e0d55fdb4d15 Extracting [>                                                  ]  557.1kB/109MB
+ opensearch Pulled 
+ e0d55fdb4d15 Extracting [===>                                               ]  7.799MB/109MB
+ e0d55fdb4d15 Extracting [======>                                            ]  13.93MB/109MB
+ e0d55fdb4d15 Extracting [=========>                                         ]  21.73MB/109MB
+ e0d55fdb4d15 Extracting [=============>                                     ]  29.52MB/109MB
+ e0d55fdb4d15 Extracting [=================>                                 ]  38.99MB/109MB
+ e0d55fdb4d15 Extracting [=====================>                             ]  47.91MB/109MB
+ e0d55fdb4d15 Extracting [=========================>                         ]  54.59MB/109MB
+ e0d55fdb4d15 Extracting [============================>                      ]  62.39MB/109MB
+ e0d55fdb4d15 Extracting [=================================>                 ]  72.97MB/109MB
+ e0d55fdb4d15 Extracting [=====================================>             ]  81.89MB/109MB
+ e0d55fdb4d15 Extracting [=========================================>         ]   90.8MB/109MB
+ e0d55fdb4d15 Extracting [============================================>      ]  96.37MB/109MB
+ e0d55fdb4d15 Extracting [==============================================>    ]  100.3MB/109MB
+ e0d55fdb4d15 Extracting [==============================================>    ]  100.8MB/109MB
+ e0d55fdb4d15 Extracting [===============================================>   ]  103.1MB/109MB
+ e0d55fdb4d15 Extracting [================================================>  ]  105.3MB/109MB
+ e0d55fdb4d15 Extracting [=================================================> ]  107.5MB/109MB
+ e0d55fdb4d15 Extracting [==================================================>]    109MB/109MB
+ e0d55fdb4d15 Pull complete 
+ c1cb13b19080 Extracting [==================================================>]  9.925kB/9.925kB
+ c1cb13b19080 Extracting [==================================================>]  9.925kB/9.925kB
+ c1cb13b19080 Pull complete 
+ 873532e5f8c7 Extracting [==================================================>]     128B/128B
+ 873532e5f8c7 Extracting [==================================================>]     128B/128B
+ 873532e5f8c7 Pull complete 
+ 050d9f8c3b1c Extracting [==================================================>]     169B/169B
+ 050d9f8c3b1c Extracting [==================================================>]     169B/169B
+ 050d9f8c3b1c Pull complete 
+ 710e142705f8 Extracting [==================================================>]  5.421kB/5.421kB
+ 710e142705f8 Extracting [==================================================>]  5.421kB/5.421kB
+ 710e142705f8 Pull complete 
+ cb628c265f09 Extracting [==================================================>]     184B/184B
+ cb628c265f09 Extracting [==================================================>]     184B/184B
+ cb628c265f09 Pull complete 
+ postgresql Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-redis-1  Creating
+ Container docker_services_cli-opensearch-1  Creating
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-redis-1  Created
+ Container docker_services_cli-opensearch-1  Created
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-redis-1  Starting
+ Container docker_services_cli-opensearch-1  Starting
+ Container docker_services_cli-redis-1  Started
+ Container docker_services_cli-postgresql-1  Started
+ Container docker_services_cli-opensearch-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_communities
+plugins: Faker-40.36.0, isort-4.0.0, black-0.6.0, invenio-4.0.2, pydocstyle-2.4.0, cov-7.1.0, pycodestyle-2.5.0, flask-1.3.0, github-actions-annotate-failures-0.4.2
+collected 317 items
+::warning file=../../../../../../../../../opt/hostedtoolcache/Python/3.14.2/x64/lib/python3.14/importlib/__init__.py,line=88::CommunityRelationMixin has been moved to invenio_rdm_records.records.models. Importing from invenio_communities.records.records.models is deprecated and will be removed in a future release.
+
+tests/cache/test_identity_redis_cache.py ....                            [  1%]
+tests/communities/test_alembic.py s                                      [  1%]
+tests/communities/test_cli.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.                                         [  2%]
+tests/communities/test_collections_permissions.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+...                   [  3%]
+tests/communities/test_community_ui_serializer.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+                      [  3%]
+tests/communities/test_components.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.....                              [  5%]
+tests/communities/test_parent_community.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.....                        [  7%]
+tests/communities/test_relations_organizations.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.....                 [  9%]
+tests/communities/test_relations_types.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.....                         [ 11%]
+tests/communities/test_resources.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+..................                  [ 17%]
+tests/communities/test_services.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.....................                [ 24%]
+tests/communities/test_subcommunities.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+....                           [ 25%]
+tests/communities/test_tombstone.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+......                              [ 28%]
+tests/communities/test_ui.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+                                           [ 28%]
+tests/members/test_members_components.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+....                           [ 29%]
+tests/members/test_members_group_notifications.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.................     [ 35%]
+tests/members/test_members_group_notifications_resource.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+............ [ 39%]
+                                                                         [ 39%]
+tests/members/test_members_no_groups.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.......                         [ 42%]
+tests/members/test_members_notifications.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.........                   [ 45%]
+tests/members/test_members_resource.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.................                [ 51%]
+tests/members/test_members_services.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+................................ [ 61%]
+........................................................................ [ 84%]
+..........................                                               [ 92%]
+tests/test_alembic.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oauthclient/alembic/bff1f190b9bd_add_timestamp_oauthclient.py,line=22::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+                                                  [ 92%]
+tests/test_notifications.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+                                            [ 93%]
+tests/test_permissions.py .::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+.....................                         [100%]
+
+=============================== warnings summary ===============================
+../../../../../../../../../opt/hostedtoolcache/Python/3.14.2/x64/lib/python3.14/importlib/__init__.py:88
+  /opt/hostedtoolcache/Python/3.14.2/x64/lib/python3.14/importlib/__init__.py:88: DeprecationWarning: CommunityRelationMixin has been moved to invenio_rdm_records.records.models. Importing from invenio_communities.records.records.models is deprecated and will be removed in a future release.
+    return _bootstrap._gcd_import(name[level:], package, level)
+
+tests/communities/test_cli.py: 1 warning
+tests/communities/test_collections_permissions.py: 1 warning
+tests/communities/test_community_ui_serializer.py: 1 warning
+tests/communities/test_components.py: 1 warning
+tests/communities/test_parent_community.py: 1 warning
+tests/communities/test_relations_organizations.py: 1 warning
+tests/communities/test_relations_types.py: 1 warning
+tests/communities/test_resources.py: 1 warning
+tests/communities/test_services.py: 1 warning
+tests/communities/test_subcommunities.py: 1 warning
+tests/communities/test_tombstone.py: 1 warning
+tests/communities/test_ui.py: 1 warning
+tests/members/test_members_components.py: 1 warning
+tests/members/test_members_group_notifications.py: 1 warning
+tests/members/test_members_group_notifications_resource.py: 1 warning
+tests/members/test_members_no_groups.py: 1 warning
+tests/members/test_members_notifications.py: 1 warning
+tests/members/test_members_resource.py: 1 warning
+tests/members/test_members_services.py: 1 warning
+tests/test_alembic.py: 1 warning
+tests/test_notifications.py: 1 warning
+tests/test_permissions.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py:24: FutureWarning: CSRF validation will be enabled by default in the version 1.3.x
+    self.init_app(app)
+
+tests/communities/test_cli.py: 1 warning
+tests/communities/test_collections_permissions.py: 1 warning
+tests/communities/test_community_ui_serializer.py: 1 warning
+tests/communities/test_components.py: 1 warning
+tests/communities/test_parent_community.py: 1 warning
+tests/communities/test_relations_organizations.py: 1 warning
+tests/communities/test_relations_types.py: 1 warning
+tests/communities/test_resources.py: 1 warning
+tests/communities/test_services.py: 1 warning
+tests/communities/test_subcommunities.py: 1 warning
+tests/communities/test_tombstone.py: 1 warning
+tests/communities/test_ui.py: 1 warning
+tests/members/test_members_components.py: 1 warning
+tests/members/test_members_group_notifications.py: 1 warning
+tests/members/test_members_group_notifications_resource.py: 1 warning
+tests/members/test_members_no_groups.py: 1 warning
+tests/members/test_members_notifications.py: 1 warning
+tests/members/test_members_resource.py: 1 warning
+tests/members/test_members_services.py: 1 warning
+tests/test_alembic.py: 1 warning
+tests/test_notifications.py: 1 warning
+tests/test_permissions.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oaiserver/ext.py:183: UserWarning: Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmzvulz:
+    warnings.warn(
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/alembic/config.py:572: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-communities/patched/.venv/lib/python3.14/site-packages/invenio_oauthclient/alembic/bff1f190b9bd_add_timestamp_oauthclient.py:22: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    current_date = datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+
+Name                                                                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------------------------------------------
+invenio_communities/__init__.py                                                         4      0   100%
+invenio_communities/administration/__init__.py                                          0      0   100%
+invenio_communities/administration/communities.py                                      42      1    98%   73
+invenio_communities/alembic/02cd82910727_update_role_id_type_upgrade.py                13      1    92%   66
+invenio_communities/alembic/5b478fe7ef7f_create_featured_communities_table.py          12      1    92%   50
+invenio_communities/alembic/5c68d45c80f0_add_deletion_status_to_communities.py         27      8    70%   25-37, 63
+invenio_communities/alembic/37b21951084c_update_role_id_type_downgrade.py              13      4    69%   23-47
+invenio_communities/alembic/72b37bb4119c_create_indeces_for_bucket_id.py               11      2    82%   33-36
+invenio_communities/alembic/90642d415317_create_communities_branch.py                   8      1    88%   20
+invenio_communities/alembic/1777209602_removed_index_by_file_id_added_indices_.py      13      3    77%   45-55
+invenio_communities/alembic/__init__.py                                                 0      0   100%
+invenio_communities/alembic/a3f5a8635cbb_remove_version_table.py                       22      6    73%   44-107
+invenio_communities/alembic/c3feb26c7041_change_datetime_types.py                      15      4    73%   37-46
+invenio_communities/alembic/de9c14cbb0b2_create_communities_tables.py                  24      7    71%   173-188
+invenio_communities/alembic/dfbc96c5211f_add_group_notification_preference.py          16      2    88%   58-59
+invenio_communities/alembic/f701a32e6fbe_create_communities_members_table.py           14      2    86%   71-72
+invenio_communities/alembic/fbe746957cfc_create_member_tables.py                       36     13    64%   153-192
+invenio_communities/cache/__init__.py                                                   0      0   100%
+invenio_communities/cache/cache.py                                                     18      0   100%
+invenio_communities/cache/redis.py                                                     29      1    97%   59
+invenio_communities/cli.py                                                             76     21    72%   42-44, 51-57, 64-69, 94-95, 103-107, 119-121
+invenio_communities/communities/__init__.py                                             3      0   100%
+invenio_communities/communities/dumpers/__init__.py                                     0      0   100%
+invenio_communities/communities/dumpers/featured.py                                    16      0   100%
+invenio_communities/communities/entity_resolvers.py                                    32      9    72%   30-43, 64, 75
+invenio_communities/communities/records/__init__.py                                     0      0   100%
+invenio_communities/communities/records/api.py                                         45      0   100%
+invenio_communities/communities/records/jsonschemas/__init__.py                         0      0   100%
+invenio_communities/communities/records/mappings/__init__.py                            0      0   100%
+invenio_communities/communities/records/mappings/os-v1/__init__.py                      0      0   100%
+invenio_communities/communities/records/mappings/os-v2/__init__.py                      0      0   100%
+invenio_communities/communities/records/mappings/v7/__init__.py                         0      0   100%
+invenio_communities/communities/records/models.py                                      22      0   100%
+invenio_communities/communities/records/systemfields/__init__.py                        0      0   100%
+invenio_communities/communities/records/systemfields/access.py                        151     14    91%   131, 143, 149, 154, 165, 182, 194, 240, 264, 284-291, 304
+invenio_communities/communities/records/systemfields/children.py                       50      3    94%   26, 69, 72
+invenio_communities/communities/records/systemfields/deletion_status.py                59      6    90%   53, 57, 66, 71-74
+invenio_communities/communities/records/systemfields/is_verified.py                    11      0   100%
+invenio_communities/communities/records/systemfields/parent_community.py               53      2    96%   58-59
+invenio_communities/communities/records/systemfields/pidslug.py                        44      3    93%   36, 46, 62
+invenio_communities/communities/records/systemfields/tombstone.py                      96      4    96%   40, 136, 142, 174
+invenio_communities/communities/resources/__init__.py                                   3      0   100%
+invenio_communities/communities/resources/args.py                                       5      0   100%
+invenio_communities/communities/resources/config.py                                    21      0   100%
+invenio_communities/communities/resources/resource.py                                  91      6    93%   68-73, 84-91, 157-163
+invenio_communities/communities/resources/serializer.py                                 5      0   100%
+invenio_communities/communities/resources/ui_schema.py                                 77     17    78%   30-31, 46-57, 119-123, 130
+invenio_communities/communities/schema.py                                             124      0   100%
+invenio_communities/communities/services/__init__.py                                    4      0   100%
+invenio_communities/communities/services/components.py                                189     10    95%   41, 52, 60, 75, 255, 281-282, 325, 329, 346
+invenio_communities/communities/services/config.py                                     52      2    96%   76-80
+invenio_communities/communities/services/facets.py                                      6      0   100%
+invenio_communities/communities/services/links.py                                      30      0   100%
+invenio_communities/communities/services/results.py                                    37      3    92%   72, 76, 96
+invenio_communities/communities/services/search_params.py                              14      1    93%   22
+invenio_communities/communities/services/service.py                                   259     21    92%   122, 325-326, 493, 500, 540-567, 654-658, 694-700, 736
+invenio_communities/communities/services/sort.py                                       10      2    80%   27-28
+invenio_communities/communities/services/uow.py                                        14      0   100%
+invenio_communities/config.py                                                          62      0   100%
+invenio_communities/errors.py                                                          29      2    93%   62, 94
+invenio_communities/ext.py                                                             76     12    84%   137-138, 143-191
+invenio_communities/fixtures/__init__.py                                                0      0   100%
+invenio_communities/fixtures/demo.py                                                    5      0   100%
+invenio_communities/fixtures/tasks.py                                                  42     13    69%   33-34, 37-38, 40-45, 71-74
+invenio_communities/generators.py                                                     181     24    87%   70, 103-108, 148-149, 197-202, 206-207, 211-212, 232, 236, 280, 290, 294, 360, 374, 392
+invenio_communities/members/__init__.py                                                 4      0   100%
+invenio_communities/members/errors.py                                                   3      0   100%
+invenio_communities/members/records/__init__.py                                         3      0   100%
+invenio_communities/members/records/api.py                                            105      2    98%   101-104
+invenio_communities/members/records/dumpers.py                                         13      0   100%
+invenio_communities/members/records/mappings/__init__.py                                0      0   100%
+invenio_communities/members/records/mappings/os-v1/__init__.py                          0      0   100%
+invenio_communities/members/records/mappings/os-v2/__init__.py                          0      0   100%
+invenio_communities/members/records/mappings/v7/__init__.py                             0      0   100%
+invenio_communities/members/records/models.py                                          59      2    97%   103-104
+invenio_communities/members/resources/__init__.py                                       3      0   100%
+invenio_communities/members/resources/config.py                                        13      0   100%
+invenio_communities/members/resources/resource.py                                      68      0   100%
+invenio_communities/members/services/__init__.py                                        3      0   100%
+invenio_communities/members/services/components.py                                     45      9    80%   29, 32, 36-43, 64
+invenio_communities/members/services/config.py                                         50      0   100%
+invenio_communities/members/services/facets.py                                          7      0   100%
+invenio_communities/members/services/fields.py                                         22      8    64%   34-41
+invenio_communities/members/services/links.py                                          65      3    95%   17, 110, 200
+invenio_communities/members/services/request.py                                        85      0   100%
+invenio_communities/members/services/schemas.py                                        95      1    99%   76
+invenio_communities/members/services/service.py                                       238      6    97%   363, 492, 626, 630, 634, 638
+invenio_communities/notifications/__init__.py                                           0      0   100%
+invenio_communities/notifications/builders.py                                         108      1    99%   398
+invenio_communities/notifications/generators.py                                        35      1    97%   63
+invenio_communities/patch_info.py                                                       6      2    67%   92-94
+invenio_communities/permissions.py                                                     52      0   100%
+invenio_communities/proxies.py                                                          8      0   100%
+invenio_communities/records/__init__.py                                                 0      0   100%
+invenio_communities/records/records/__init__.py                                         0      0   100%
+invenio_communities/records/records/models.py                                          19      3    84%   33, 42, 51
+invenio_communities/records/records/systemfields/__init__.py                            2      0   100%
+invenio_communities/records/records/systemfields/communities/__init__.py                0      0   100%
+invenio_communities/records/records/systemfields/communities/context.py                 4      1    75%   23
+invenio_communities/records/records/systemfields/communities/field.py                  40     29    28%   20-23, 30-31, 39-47, 53-55, 59-106, 110-113
+invenio_communities/records/records/systemfields/communities/manager.py               101     72    29%   24-29, 36-40, 47-50, 61-80, 84-98, 103-106, 111-122, 127, 134, 138-139, 144-153, 158, 163-165, 170, 179-182, 186, 194-200, 204-212
+invenio_communities/requests/user_moderation/__init__.py                                2      0   100%
+invenio_communities/requests/user_moderation/actions.py                                43     31    28%   29-57, 67-89, 99-103, 112-121
+invenio_communities/requests/user_moderation/tasks.py                                  16      8    50%   16-22, 28-32
+invenio_communities/roles.py                                                           61      1    98%   76
+invenio_communities/searchapp.py                                                        5      1    80%   14
+invenio_communities/subcommunities/__init__.py                                          3      0   100%
+invenio_communities/subcommunities/resources/__init__.py                                3      0   100%
+invenio_communities/subcommunities/resources/config.py                                 20      0   100%
+invenio_communities/subcommunities/resources/resource.py                               18      0   100%
+invenio_communities/subcommunities/services/__init__.py                                 4      0   100%
+invenio_communities/subcommunities/services/config.py                                  22      0   100%
+invenio_communities/subcommunities/services/errors.py                                   2      0   100%
+invenio_communities/subcommunities/services/request.py                                 67     16    76%   47-54, 93-105, 113-125, 134-141, 184, 197
+invenio_communities/subcommunities/services/schema.py                                  16      1    94%   46
+invenio_communities/subcommunities/services/service.py                                 62     11    82%   42, 52, 81, 116, 133, 163-172
+invenio_communities/tasks.py                                                            5      1    80%   17
+invenio_communities/utils.py                                                           55      5    91%   102, 105-108
+invenio_communities/views/__init__.py                                                   3      0   100%
+invenio_communities/views/api.py                                                       11      0   100%
+invenio_communities/views/communities.py                                              184    115    38%   169, 179-191, 196, 201, 209-210, 218-219, 231-260, 269-277, 296-309, 329-334, 346-371, 388-398, 417-421, 439-443, 455-459, 472-476, 488-492, 506-509, 522-525, 539-543, 556-559, 571-580
+invenio_communities/views/decorators.py                                                27     10    63%   23-33, 46-52
+invenio_communities/views/template_loader.py                                           24      2    92%   41-42
+invenio_communities/views/ui.py                                                       104     45    57%   51, 56-67, 78-81, 86, 97-100, 105-108, 113-120, 149-151, 156-166, 170, 279-281, 286-296, 305
+invenio_communities/webpack.py                                                          2      0   100%
+-----------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                4326    618    86%
+=========== 316 passed, 1 skipped, 47 warnings in 437.66s (0:07:17) ============
+ Container docker_services_cli-opensearch-1  Stopping
+ Container docker_services_cli-redis-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-redis-1  Stopped
+ Container docker_services_cli-redis-1  Removing
+ Container docker_services_cli-opensearch-1  Stopped
+ Container docker_services_cli-opensearch-1  Removing
+ Container docker_services_cli-redis-1  Removed
+ Container docker_services_cli-opensearch-1  Removed
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-postgresql-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

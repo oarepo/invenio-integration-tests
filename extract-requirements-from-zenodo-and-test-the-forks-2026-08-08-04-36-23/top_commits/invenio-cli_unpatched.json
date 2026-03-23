@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "2480661",
+    "message": "release: v1.12.2"
+  },
+  {
+    "hash": "abc807b",
+    "message": "chore: make invenio-cli init rdm default to v14 cookiecutter"
+  },
+  {
+    "hash": "f760ce4",
+    "message": "\ud83d\udce6 release: v1.12.1"
+  },
+  {
+    "hash": "4790318",
+    "message": "fix(requirements): require pnpm v11.x"
+  },
+  {
+    "hash": "74d13a2",
+    "message": "fix(config): default to NPM if `javascript_package_manager` is unset"
+  },
+  {
+    "hash": "18fb121",
+    "message": "release: v1.12.0"
+  },
+  {
+    "hash": "a28ed41",
+    "message": "chore: require node v24 for InvenioRDM v14"
+  },
+  {
+    "hash": "0db351d",
+    "message": "fix: show available version as string instead of integer array"
+  },
+  {
+    "hash": "d03c149",
+    "message": "chore: add node/npm minimum requirements for InvenioRDM v14"
+  },
+  {
+    "hash": "dd24842",
+    "message": "chore: fix linter complaints about f-strings without placeholders"
+  },
+  {
+    "hash": "acb94cd",
+    "message": "fix: gracefully handle not finding a valid InvenioRDM project"
+  },
+  {
+    "hash": "643abad",
+    "message": "feat: extend `check-requirements -d` to also consider PNPM"
+  },
+  {
+    "hash": "4cc3cdf",
+    "message": "feat: extend `check-requirements` to also accept uv"
+  },
+  {
+    "hash": "c8a5d45",
+    "message": "fix: handle `FileNotFoundError` if `pipenv` is not installed"
+  },
+  {
+    "hash": "696402d",
+    "message": "chore: fix some messages"
+  },
+  {
+    "hash": "c06298f",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "182a17e",
+    "message": "fix: update get_db_type and get_search_type methods"
+  },
+  {
+    "hash": "8d511c2",
+    "message": "cli: fix db type to 'postgresql' in config"
+  },
+  {
+    "hash": "f292d47",
+    "message": "fix: simplify get_search_type method"
+  },
+  {
+    "hash": "5dac875",
+    "message": "fix: update search type handling in CLI config"
+  },
+  {
+    "hash": "c7d7468",
+    "message": "feat: default js package manager to PNPM"
+  },
+  {
+    "hash": "52d3dd7",
+    "message": "config: add support for custom package managers in CLI configuration"
+  },
+  {
+    "hash": "d76ea66",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "47ea8ca",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "fa5ee57",
+    "message": ":package: release: v1.11.0"
+  },
+  {
+    "hash": "e1eed02",
+    "message": "fix(review): condition inverted"
+  },
+  {
+    "hash": "9f67b16",
+    "message": "feat: introduced no-op service helper."
+  },
+  {
+    "hash": "ab583a0",
+    "message": "fix(run): keep invenio-cli run [OPTIONS] backwards compatibility"
+  },
+  {
+    "hash": "cace592",
+    "message": "fix(run): don't override SITE_API/UI_URL settings with listening hosts/port [+]"
+  },
+  {
+    "hash": "470b0ec",
+    "message": "release: v1.10.0"
+  },
+  {
+    "hash": "8183b74",
+    "message": "assets: add lock command"
+  },
+  {
+    "hash": "22fcd5e",
+    "message": "assets: add package lock file"
+  },
+  {
+    "hash": "dcacfd3",
+    "message": "chore: black 26.1.0 formatting"
+  },
+  {
+    "hash": "e738f2c",
+    "message": "release: v1.9.2"
+  },
+  {
+    "hash": "3739e05",
+    "message": "cli: pass all values to config_parser as strings"
+  },
+  {
+    "hash": "0c33342",
+    "message": "\ud83d\udce6 release: v1.9.1"
+  },
+  {
+    "hash": "750443c",
+    "message": "versions: fix pyproject.toml app dependency version detection"
+  },
+  {
+    "hash": "8aeeae5",
+    "message": "release: v1.9.0"
+  },
+  {
+    "hash": "b91b4a4",
+    "message": "cookiecutter: make v13 the default"
+  },
+  {
+    "hash": "45fb325",
+    "message": "readme: fix ci badge"
+  },
+  {
+    "hash": "b9fa29b",
+    "message": "docs: update CONTRIBUTING.rst w/ modern links/process"
+  },
+  {
+    "hash": "2c16dfc",
+    "message": "release: v1.8.0"
+  },
+  {
+    "hash": "0e751fb",
+    "message": "update: remove db extra for v13"
+  },
+  {
+    "hash": "ff013c5",
+    "message": "cli: print warning when unable to determine RDM version"
+  },
+  {
+    "hash": "5e4c9db",
+    "message": "cli: only run jobs scheduler if in RDM v13+"
+  },
+  {
+    "hash": "04ca9d7",
+    "message": "cli: fix passing --jobs-scheduler option"
+  },
+  {
+    "hash": "e91f5c6",
+    "message": "local: add custom Jobs Celery Beat scheduler to `run` commands"
+  },
+  {
+    "hash": "77e8714",
+    "message": "versions: support ref in pipfile"
+  },
+  {
+    "hash": "c7086bd",
+    "message": "fix: vi editing_mode when updating instance path"
+  },
+  {
+    "hash": "7c52487",
+    "message": "release: v1.7.2"
+  }
+]

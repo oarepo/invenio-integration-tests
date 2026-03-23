@@ -1,0 +1,12 @@
+{
+  "DeprecationWarning: subject_nested is deprecated. Use subject_combined instead.": 1,
+  "DeprecationWarning: Call to deprecated setex. (Use 'set' instead.) -- Deprecated since version 2.6.12.": 1,
+  "SAWarning: nested transaction already deassociated from connection": 9,
+  "FutureWarning: CSRF validation will be enabled by default in the version 1.3.x": 1,
+  "DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.": 1,
+  "SADeprecationWarning: The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)": 3,
+  "UserWarning: autoincrement and existing_autoincrement only make sense for MySQL": 1,
+  "DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).": 1,
+  "InsecureKeyLengthWarning: The HMAC key is 10 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.": 2,
+  "InsecureKeyLengthWarning: The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.": 2
+}

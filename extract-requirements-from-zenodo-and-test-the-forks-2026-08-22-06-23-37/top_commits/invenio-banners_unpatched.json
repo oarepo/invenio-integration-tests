@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "7ded067",
+    "message": "release: v7.1.0"
+  },
+  {
+    "hash": "fa89351",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "690b4fa",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "ebbf90e",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "656ac70",
+    "message": "release: v7.0.1"
+  },
+  {
+    "hash": "b1e1514",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "7f4bafe",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "0c7f703",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "f6e1e5b",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "a64a098",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "1568a28",
+    "message": "fix(tests): alembic migration test"
+  },
+  {
+    "hash": "7c1726c",
+    "message": "ui(translations): mark string as translatable"
+  },
+  {
+    "hash": "eaeef64",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "86eb76b",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "e2101cc",
+    "message": "refactor: use invenio-db Timestamp"
+  },
+  {
+    "hash": "19d97cf",
+    "message": "validation: ensure `banner_id` is an Integer"
+  },
+  {
+    "hash": "df679ae",
+    "message": "fix(black): update style to match Black 26"
+  },
+  {
+    "hash": "5f383c8",
+    "message": "refactor(links): replace Link usage by EndpointLink"
+  },
+  {
+    "hash": "d278354",
+    "message": "\ud83d\udce6 release: v5.2.1"
+  },
+  {
+    "hash": "cf91f6a",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "8435fae",
+    "message": "fix: partially initialized module"
+  },
+  {
+    "hash": "0cc33ba",
+    "message": "compatibility(312): distutils removed"
+  },
+  {
+    "hash": "cb1ec4e",
+    "message": "i18n: pulled translations (#62)"
+  },
+  {
+    "hash": "121d3e5",
+    "message": "chore: remove unused variable `request_extra_args`"
+  },
+  {
+    "hash": "6c577b7",
+    "message": "release: v5.2.0"
+  },
+  {
+    "hash": "1824348",
+    "message": "global: replace depreacted datetime `utcnow()` with `now(timezone.utc)`"
+  },
+  {
+    "hash": "b6a8f33",
+    "message": "search: add query params `active` and  `url_path` for search"
+  },
+  {
+    "hash": "f57f298",
+    "message": "search: add None as default value for search filters"
+  },
+  {
+    "hash": "79d2d21",
+    "message": "release: v5.1.1"
+  },
+  {
+    "hash": "9191ef8",
+    "message": "fix: *.mo not included into build"
+  },
+  {
+    "hash": "23ab2ff",
+    "message": "release: v5.1.0"
+  },
+  {
+    "hash": "819364f",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "1c5137a",
+    "message": "i18n: force pull langs"
+  },
+  {
+    "hash": "cbd25a0",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "f490fb8",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "b037cd3",
+    "message": "fix(tests): add configuration"
+  },
+  {
+    "hash": "bdf5165",
+    "message": "i18n: add translation entry point (#48)"
+  },
+  {
+    "hash": "3d10685",
+    "message": "fix: setuptools moved from dash to underscore"
+  },
+  {
+    "hash": "68b4184",
+    "message": "i18n: removed deprecated messages"
+  },
+  {
+    "hash": "515fb76",
+    "message": "release: v4.1.1"
+  },
+  {
+    "hash": "6959b0b",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "c985ffa",
+    "message": "i18n: mark missing strings for translation"
+  },
+  {
+    "hash": "e638527",
+    "message": "release: v4.1.0"
+  },
+  {
+    "hash": "fff1156",
+    "message": "templates: pass ui classes through macro parameters"
+  },
+  {
+    "hash": "7308cd9",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "686df71",
+    "message": "fix: make github actions work again"
+  },
+  {
+    "hash": "bb7e35d",
+    "message": "setup: change to reusable workflows"
+  },
+  {
+    "hash": "e046b51",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "3a415ee",
+    "message": "release: v3.2.0"
+  },
+  {
+    "hash": "cb87dc2",
+    "message": "feat(tests): add test for html banner message"
+  }
+]

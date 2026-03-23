@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "4c3b5b7",
+    "message": "release: v6.1.0"
+  },
+  {
+    "hash": "ae303ee",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "676a14d",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "384aceb",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "ecd4292",
+    "message": "release: v6.0.2"
+  },
+  {
+    "hash": "43bfd2e",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "07c19ae",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "c3c5185",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "fa3ef26",
+    "message": "release: v6.0.1"
+  },
+  {
+    "hash": "98721ac",
+    "message": "fix(Actions): dropdown component initialisation"
+  },
+  {
+    "hash": "fef1337",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "aa0a09e",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "58b9d35",
+    "message": "release: v5.2.0"
+  },
+  {
+    "hash": "7eb5a49",
+    "message": "permissions: keep backwards compat for users with administration-access only"
+  },
+  {
+    "hash": "01cc5fe",
+    "message": "permissions: add get_permission() for menu visibility control"
+  },
+  {
+    "hash": "2ebd5ba",
+    "message": "permissions: add new permission to control administration menu"
+  },
+  {
+    "hash": "e046e4a",
+    "message": "feat(menu): add conditional visibility control for menu items"
+  },
+  {
+    "hash": "814cd5d",
+    "message": "release: v5.1.1"
+  },
+  {
+    "hash": "88ba080",
+    "message": "fields: allow to pass type in form config"
+  },
+  {
+    "hash": "cd83efb",
+    "message": "release: v5.1.0"
+  },
+  {
+    "hash": "828a73e",
+    "message": "feat: add range facets for date aggregations"
+  },
+  {
+    "hash": "c938e40",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "a06f308",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "9d75c90",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "50cdd6a",
+    "message": ":package: release: v4.4.0"
+  },
+  {
+    "hash": "48e36e1",
+    "message": "feat: integrate administration endpoints to invenio_url_for"
+  },
+  {
+    "hash": "12d5d65",
+    "message": "fix(ui): transpile error"
+  },
+  {
+    "hash": "2f36ea5",
+    "message": "\ud83d\udce6 release: v4.3.2"
+  },
+  {
+    "hash": "a87b1c6",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "052f2e0",
+    "message": "tests: add option to keep services in `run-tests.sh`"
+  },
+  {
+    "hash": "381280b",
+    "message": "webpack: respect `COLLECT_STATIC_ROOT` when copying tinymce"
+  },
+  {
+    "hash": "9bfcbd7",
+    "message": "fix: typo in search empty resources message"
+  },
+  {
+    "hash": "cb07e3e",
+    "message": "release: v4.3.1"
+  },
+  {
+    "hash": "efc8266",
+    "message": "i18n: pulled translations (#263)"
+  },
+  {
+    "hash": "cdb93e9",
+    "message": "index: change welcome message to be non RDM-specific"
+  },
+  {
+    "hash": "1343057",
+    "message": "fix: missing changelog"
+  },
+  {
+    "hash": "998bf42",
+    "message": "release: v4.3.0"
+  },
+  {
+    "hash": "5839fce",
+    "message": "theme: move TinyMCE from invenio-app-rdm to invenio-administration"
+  },
+  {
+    "hash": "f31bbb6",
+    "message": "ui: fix recursive import of header_login.html"
+  },
+  {
+    "hash": "e406bfd",
+    "message": "release: v4.2.0"
+  },
+  {
+    "hash": "bfd9d0c",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "bdfa194",
+    "message": "release: v4.1.0"
+  },
+  {
+    "hash": "613fb3a",
+    "message": "chores: replaced importlib_xyz with importlib"
+  },
+  {
+    "hash": "0c7458c",
+    "message": "i18n: run js compile_catalog"
+  },
+  {
+    "hash": "6056ec3",
+    "message": "i18n: run js extract msgs"
+  },
+  {
+    "hash": "f3f5f80",
+    "message": "i18n: DeleteModal replace Trans component with i18next"
+  },
+  {
+    "hash": "bbabb62",
+    "message": "i18n: DeleteModalTrigger replace Trans component with i18next"
+  },
+  {
+    "hash": "e47995b",
+    "message": "i18n: update ResultsPerPage label to use i18next for translation"
+  },
+  {
+    "hash": "97718eb",
+    "message": "i18n: refactor compile catalog"
+  },
+  {
+    "hash": "7670dcf",
+    "message": "i18n: force pull translations"
+  }
+]

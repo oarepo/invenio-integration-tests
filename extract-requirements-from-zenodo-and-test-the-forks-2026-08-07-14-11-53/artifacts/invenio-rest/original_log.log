@@ -1,0 +1,72 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rest/original
+configfile: pyproject.toml
+testpaths: tests, invenio_rest
+plugins: black-0.6.0, cov-7.1.0, pydocstyle-2.4.0, pycodestyle-2.5.0, github-actions-annotate-failures-0.4.2, isort-4.0.0, flask-1.3.0, invenio-4.0.2
+collected 37 items
+
+tests/test_csrf.py ..::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                        [ 37%]
+tests/test_decorators.py .::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                               [ 40%]
+tests/test_errors.py .::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                                   [ 43%]
+tests/test_invenio_rest.py ..::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-rest/original/tests/test_invenio_rest.py,line=40::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+............::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                             [ 89%]
+tests/test_serializer.py .::warning file=workdir/tests/invenio-rest/original/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+..                                             [ 97%]
+invenio_rest/__init__.py .::warning file=workdir/tests/invenio-rest/original/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                               [100%]
+
+=============================== warnings summary ===============================
+tests/test_csrf.py: 13 warnings
+tests/test_decorators.py: 1 warning
+tests/test_errors.py: 1 warning
+tests/test_invenio_rest.py: 5 warnings
+invenio_rest/__init__.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rest/original/invenio_rest/ext.py:24: FutureWarning: CSRF validation will be enabled by default in the version 1.3.x
+    self.init_app(app)
+
+tests/test_invenio_rest.py::test_init
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rest/original/tests/test_invenio_rest.py:40: FutureWarning: CSRF validation will be enabled by default in the version 1.3.x
+    ext.init_app(app)
+
+tests/test_serializer.py::test_serialize_pretty
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rest/original/invenio_rest/serializer.py:96: DeprecationWarning: context_schema will in future only be set if and only if context is given.
+    clear_context = _init_context(kwargs)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+
+Name                         Stmts   Miss  Cover   Missing
+----------------------------------------------------------
+invenio_rest/__init__.py         6      0   100%
+invenio_rest/config.py          13      0   100%
+invenio_rest/csrf.py           146      7    95%   69-70, 146, 177, 193-194, 267
+invenio_rest/decorators.py      13      0   100%
+invenio_rest/errors.py          66      1    98%   76
+invenio_rest/ext.py             40      2    95%   44-46
+invenio_rest/serializer.py      62     20    68%   23-30, 43-50, 61, 105-110, 114-119, 123-128
+invenio_rest/views.py          110      7    94%   39, 43-45, 165-166, 320
+----------------------------------------------------------
+TOTAL                          456     37    92%
+======================= 37 passed, 23 warnings in 0.77s ========================

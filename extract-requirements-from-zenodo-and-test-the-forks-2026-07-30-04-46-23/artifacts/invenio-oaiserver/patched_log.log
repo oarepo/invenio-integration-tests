@@ -1,0 +1,755 @@
+extracting messages from invenio_oaiserver/__init__.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/admin.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/config.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/errors.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/ext.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/fetchers.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/minters.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/models.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/patch_info.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/percolator.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/provider.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/proxies.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/query.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/receivers.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/response.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/resumption_token.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/utils.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/verbs.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/alembic/5d25c1981985_add_system_created_field.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/alembic/759d47cbdba7_create_oaiserver_branch.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/alembic/e655021de0de_create_oiaserver_tables.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/alembic/f9b1e3f7d3b1_change_datetime_types.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/schemas/__init__.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/search/__init__.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/search/component_templates/__init__.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/search/component_templates/os-v2/__init__.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/search/component_templates/v7/__init__.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/views/__init__.py (encoding="utf-8")
+extracting messages from invenio_oaiserver/views/server.py (encoding="utf-8")
+writing PO template file to /dev/null
+ postgresql Pulling 
+ opensearch Pulling 
+ rabbitmq Pulling 
+ 20043066d3d5 Pulling fs layer 
+ 3fadc669ef11 Pulling fs layer 
+ 7084ac8f4ab6 Pulling fs layer 
+ beb0d870d438 Pulling fs layer 
+ d63c4408fdb7 Pulling fs layer 
+ efa05c660812 Pulling fs layer 
+ f4e7f62f4b80 Pulling fs layer 
+ 5e1c03b67a78 Pulling fs layer 
+ 14e6209d5fa8 Pulling fs layer 
+ d686b50ce172 Pulling fs layer 
+ efa05c660812 Waiting 
+ f4e7f62f4b80 Waiting 
+ 5e1c03b67a78 Waiting 
+ 14e6209d5fa8 Waiting 
+ d686b50ce172 Waiting 
+ beb0d870d438 Waiting 
+ d63c4408fdb7 Waiting 
+ f9dd052e142d Pulling fs layer 
+ e8c6d4883897 Pulling fs layer 
+ 648eb81b3252 Pulling fs layer 
+ eb77aa907276 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 0ffa8f8aba1e Pulling fs layer 
+ 2e81b9cb93cd Pulling fs layer 
+ f9dd052e142d Waiting 
+ e8c6d4883897 Waiting 
+ 648eb81b3252 Waiting 
+ eb77aa907276 Waiting 
+ 4f4fb700ef54 Waiting 
+ 0ffa8f8aba1e Waiting 
+ b0a0cf830b12 Pulling fs layer 
+ dda3d8fbd5ed Pulling fs layer 
+ 283a477db7bb Pulling fs layer 
+ 91d2729fa4d5 Pulling fs layer 
+ 9739ced65621 Pulling fs layer 
+ ae3bb1b347a4 Pulling fs layer 
+ f8406d9c00ea Pulling fs layer 
+ c199bff16b05 Pulling fs layer 
+ e0d55fdb4d15 Pulling fs layer 
+ c1cb13b19080 Pulling fs layer 
+ 873532e5f8c7 Pulling fs layer 
+ 050d9f8c3b1c Pulling fs layer 
+ 710e142705f8 Pulling fs layer 
+ cb628c265f09 Pulling fs layer 
+ b0a0cf830b12 Waiting 
+ dda3d8fbd5ed Waiting 
+ 283a477db7bb Waiting 
+ 91d2729fa4d5 Waiting 
+ 9739ced65621 Waiting 
+ 873532e5f8c7 Waiting 
+ ae3bb1b347a4 Waiting 
+ 050d9f8c3b1c Waiting 
+ 710e142705f8 Waiting 
+ f8406d9c00ea Waiting 
+ cb628c265f09 Waiting 
+ c199bff16b05 Waiting 
+ e0d55fdb4d15 Waiting 
+ c1cb13b19080 Waiting 
+ 7084ac8f4ab6 Downloading [>                                                  ]  81.28kB/7.468MB
+ 3fadc669ef11 Downloading [>                                                  ]  441.7kB/43.48MB
+ 20043066d3d5 Downloading [>                                                  ]  310.6kB/29.72MB
+ 7084ac8f4ab6 Verifying Checksum 
+ 7084ac8f4ab6 Download complete 
+ 3fadc669ef11 Downloading [==========================>                        ]     23MB/43.48MB
+ beb0d870d438 Downloading [==================>                                ]  3.501kB/9.462kB
+ beb0d870d438 Downloading [==================================================>]  9.462kB/9.462kB
+ beb0d870d438 Verifying Checksum 
+ beb0d870d438 Download complete 
+ 20043066d3d5 Downloading [===============================>                   ]  18.68MB/29.72MB
+ 20043066d3d5 Verifying Checksum 
+ 20043066d3d5 Download complete 
+ 3fadc669ef11 Verifying Checksum 
+ 3fadc669ef11 Download complete 
+ d63c4408fdb7 Downloading [>                                                  ]  228.7kB/21.31MB
+ efa05c660812 Download complete 
+ 20043066d3d5 Extracting [>                                                  ]  327.7kB/29.72MB
+ f4e7f62f4b80 Downloading [==================================================>]     109B/109B
+ f4e7f62f4b80 Verifying Checksum 
+ f4e7f62f4b80 Download complete 
+ 5e1c03b67a78 Downloading [==================================================>]     620B/620B
+ 5e1c03b67a78 Verifying Checksum 
+ 5e1c03b67a78 Download complete 
+ 14e6209d5fa8 Downloading [==================================================>]     833B/833B
+ 14e6209d5fa8 Verifying Checksum 
+ 14e6209d5fa8 Download complete 
+ d63c4408fdb7 Downloading [=========================================>         ]  17.66MB/21.31MB
+ d63c4408fdb7 Verifying Checksum 
+ d63c4408fdb7 Download complete 
+ d686b50ce172 Downloading [>                                                  ]  130.4kB/12.47MB
+ 20043066d3d5 Extracting [========>                                          ]  4.915MB/29.72MB
+ f9dd052e142d Downloading [>                                                  ]    533kB/52.33MB
+ e8c6d4883897 Downloading [>                                                  ]  49.15kB/4.398MB
+ d686b50ce172 Verifying Checksum 
+ d686b50ce172 Download complete 
+ e8c6d4883897 Verifying Checksum 
+ e8c6d4883897 Download complete 
+ 20043066d3d5 Extracting [=============>                                     ]  8.192MB/29.72MB
+ 648eb81b3252 Downloading [==================================================>]  1.561kB/1.561kB
+ 648eb81b3252 Verifying Checksum 
+ 648eb81b3252 Download complete 
+ f9dd052e142d Downloading [==================>                                ]  19.49MB/52.33MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ eb77aa907276 Downloading [>                                                  ]  539.6kB/907.7MB
+ 0ffa8f8aba1e Downloading [==================================================>]     226B/226B
+ 0ffa8f8aba1e Verifying Checksum 
+ 0ffa8f8aba1e Download complete 
+ 20043066d3d5 Extracting [=================>                                 ]  10.49MB/29.72MB
+ f9dd052e142d Downloading [===========================================>       ]  45.34MB/52.33MB
+ f9dd052e142d Verifying Checksum 
+ f9dd052e142d Download complete 
+ 2e81b9cb93cd Downloading [==================================================>]  1.859kB/1.859kB
+ 2e81b9cb93cd Verifying Checksum 
+ 2e81b9cb93cd Download complete 
+ eb77aa907276 Downloading [=>                                                 ]  21.34MB/907.7MB
+ f9dd052e142d Extracting [>                                                  ]  524.3kB/52.33MB
+ dda3d8fbd5ed Downloading [==================================================>]  1.165kB/1.165kB
+ dda3d8fbd5ed Verifying Checksum 
+ dda3d8fbd5ed Download complete 
+ b0a0cf830b12 Downloading [>                                                  ]  294.3kB/29.15MB
+ 20043066d3d5 Extracting [=========================>                         ]  15.07MB/29.72MB
+ 283a477db7bb Downloading [>                                                  ]  48.51kB/4.533MB
+ eb77aa907276 Downloading [==>                                                ]  49.45MB/907.7MB
+ f9dd052e142d Extracting [=>                                                 ]  1.049MB/52.33MB
+ 20043066d3d5 Extracting [=================================>                 ]  19.66MB/29.72MB
+ b0a0cf830b12 Downloading [=====================>                             ]  12.39MB/29.15MB
+ 283a477db7bb Verifying Checksum 
+ 283a477db7bb Download complete 
+ eb77aa907276 Downloading [====>                                              ]  79.67MB/907.7MB
+ 91d2729fa4d5 Downloading [>                                                  ]  15.74kB/1.45MB
+ b0a0cf830b12 Verifying Checksum 
+ b0a0cf830b12 Download complete 
+ 20043066d3d5 Extracting [====================================>              ]  21.95MB/29.72MB
+ f9dd052e142d Extracting [===>                                               ]  3.146MB/52.33MB
+ b0a0cf830b12 Extracting [>                                                  ]  294.9kB/29.15MB
+ 91d2729fa4d5 Verifying Checksum 
+ 91d2729fa4d5 Download complete 
+ 9739ced65621 Downloading [>                                                  ]  81.92kB/8.069MB
+ eb77aa907276 Downloading [=====>                                             ]  107.7MB/907.7MB
+ ae3bb1b347a4 Downloading [>                                                  ]  15.74kB/1.196MB
+ 20043066d3d5 Extracting [=========================================>         ]   24.9MB/29.72MB
+ 9739ced65621 Downloading [=======================================>           ]  6.361MB/8.069MB
+ 9739ced65621 Verifying Checksum 
+ 9739ced65621 Download complete 
+ b0a0cf830b12 Extracting [====>                                              ]  2.359MB/29.15MB
+ eb77aa907276 Downloading [=======>                                           ]  135.3MB/907.7MB
+ ae3bb1b347a4 Verifying Checksum 
+ ae3bb1b347a4 Download complete 
+ f8406d9c00ea Downloading [==================================================>]     116B/116B
+ f8406d9c00ea Verifying Checksum 
+ f8406d9c00ea Download complete 
+ f9dd052e142d Extracting [====>                                              ]  4.719MB/52.33MB
+ c199bff16b05 Downloading [==================================================>]  3.145kB/3.145kB
+ c199bff16b05 Verifying Checksum 
+ c199bff16b05 Download complete 
+ eb77aa907276 Downloading [=========>                                         ]    165MB/907.7MB
+ b0a0cf830b12 Extracting [=========>                                         ]  5.308MB/29.15MB
+ c1cb13b19080 Downloading [=================>                                 ]  3.501kB/9.925kB
+ c1cb13b19080 Downloading [==================================================>]  9.925kB/9.925kB
+ c1cb13b19080 Verifying Checksum 
+ c1cb13b19080 Download complete 
+ e0d55fdb4d15 Downloading [>                                                  ]  539.6kB/109MB
+ 873532e5f8c7 Downloading [==================================================>]     128B/128B
+ eb77aa907276 Downloading [==========>                                        ]  194.6MB/907.7MB
+ 873532e5f8c7 Verifying Checksum 
+ 873532e5f8c7 Download complete 
+ b0a0cf830b12 Extracting [==============>                                    ]  8.258MB/29.15MB
+ f9dd052e142d Extracting [=====>                                             ]  5.243MB/52.33MB
+ e0d55fdb4d15 Downloading [=====>                                             ]  11.72MB/109MB
+ 050d9f8c3b1c Downloading [==================================================>]     169B/169B
+ 050d9f8c3b1c Verifying Checksum 
+ 050d9f8c3b1c Download complete 
+ 20043066d3d5 Extracting [==========================================>        ]  25.56MB/29.72MB
+ eb77aa907276 Downloading [============>                                      ]  220.1MB/907.7MB
+ 710e142705f8 Downloading [================================>                  ]  3.501kB/5.421kB
+ 710e142705f8 Downloading [==================================================>]  5.421kB/5.421kB
+ 710e142705f8 Verifying Checksum 
+ 710e142705f8 Download complete 
+ e0d55fdb4d15 Downloading [=================>                                 ]  37.78MB/109MB
+ b0a0cf830b12 Extracting [================>                                  ]  9.732MB/29.15MB
+ f9dd052e142d Extracting [======>                                            ]  6.816MB/52.33MB
+ cb628c265f09 Downloading [==================================================>]     184B/184B
+ cb628c265f09 Verifying Checksum 
+ cb628c265f09 Download complete 
+ 20043066d3d5 Extracting [=============================================>     ]  26.87MB/29.72MB
+ eb77aa907276 Downloading [=============>                                     ]  244.5MB/907.7MB
+ e0d55fdb4d15 Downloading [============================>                      ]  62.73MB/109MB
+ f9dd052e142d Extracting [========>                                          ]  8.913MB/52.33MB
+ eb77aa907276 Downloading [===============>                                   ]  272.6MB/907.7MB
+ b0a0cf830b12 Extracting [==================>                                ]  10.91MB/29.15MB
+ 20043066d3d5 Extracting [==============================================>    ]  27.85MB/29.72MB
+ e0d55fdb4d15 Downloading [========================================>          ]  88.27MB/109MB
+ eb77aa907276 Downloading [================>                                  ]  294.9MB/907.7MB
+ b0a0cf830b12 Extracting [=====================>                             ]  12.68MB/29.15MB
+ f9dd052e142d Extracting [===========>                                       ]  11.53MB/52.33MB
+ e0d55fdb4d15 Verifying Checksum 
+ e0d55fdb4d15 Download complete 
+ 20043066d3d5 Extracting [================================================>  ]  28.84MB/29.72MB
+ eb77aa907276 Downloading [=================>                                 ]  321.4MB/907.7MB
+ b0a0cf830b12 Extracting [===========================>                       ]  16.22MB/29.15MB
+ f9dd052e142d Extracting [===============>                                   ]  15.73MB/52.33MB
+ eb77aa907276 Downloading [===================>                               ]  348.4MB/907.7MB
+ b0a0cf830b12 Extracting [===================================>               ]  20.64MB/29.15MB
+ f9dd052e142d Extracting [===================>                               ]  19.92MB/52.33MB
+ 20043066d3d5 Extracting [=================================================> ]  29.49MB/29.72MB
+ eb77aa907276 Downloading [====================>                              ]    376MB/907.7MB
+ b0a0cf830b12 Extracting [========================================>          ]  23.89MB/29.15MB
+ f9dd052e142d Extracting [=======================>                           ]  24.12MB/52.33MB
+ eb77aa907276 Downloading [======================>                            ]  407.8MB/907.7MB
+ 20043066d3d5 Extracting [==================================================>]  29.72MB/29.72MB
+ f9dd052e142d Extracting [=========================>                         ]  26.74MB/52.33MB
+ eb77aa907276 Downloading [========================>                          ]  439.1MB/907.7MB
+ f9dd052e142d Extracting [===========================>                       ]  28.31MB/52.33MB
+ eb77aa907276 Downloading [=========================>                         ]  470.9MB/907.7MB
+ b0a0cf830b12 Extracting [==========================================>        ]  24.77MB/29.15MB
+ 20043066d3d5 Pull complete 
+ eb77aa907276 Downloading [===========================>                       ]    499MB/907.7MB
+ b0a0cf830b12 Extracting [===============================================>   ]  27.43MB/29.15MB
+ f9dd052e142d Extracting [============================>                      ]  29.36MB/52.33MB
+ 3fadc669ef11 Extracting [>                                                  ]  458.8kB/43.48MB
+ eb77aa907276 Downloading [=============================>                     ]  527.6MB/907.7MB
+ b0a0cf830b12 Extracting [===============================================>   ]  27.72MB/29.15MB
+ 3fadc669ef11 Extracting [=====>                                             ]  5.046MB/43.48MB
+ eb77aa907276 Downloading [==============================>                    ]  556.7MB/907.7MB
+ b0a0cf830b12 Extracting [================================================>  ]  28.02MB/29.15MB
+ 3fadc669ef11 Extracting [===========>                                       ]  10.09MB/43.48MB
+ f9dd052e142d Extracting [=============================>                     ]  30.41MB/52.33MB
+ eb77aa907276 Downloading [================================>                  ]    587MB/907.7MB
+ 3fadc669ef11 Extracting [===============>                                   ]  13.76MB/43.48MB
+ f9dd052e142d Extracting [===============================>                   ]  32.51MB/52.33MB
+ eb77aa907276 Downloading [=================================>                 ]  614.1MB/907.7MB
+ 3fadc669ef11 Extracting [====================>                              ]  17.89MB/43.48MB
+ eb77aa907276 Downloading [===================================>               ]  641.1MB/907.7MB
+ f9dd052e142d Extracting [===============================>                   ]  33.03MB/52.33MB
+ 3fadc669ef11 Extracting [=========================>                         ]  22.02MB/43.48MB
+ eb77aa907276 Downloading [====================================>              ]  667.1MB/907.7MB
+ 3fadc669ef11 Extracting [==============================>                    ]  26.61MB/43.48MB
+ b0a0cf830b12 Extracting [================================================>  ]  28.31MB/29.15MB
+ eb77aa907276 Downloading [======================================>            ]  696.2MB/907.7MB
+ f9dd052e142d Extracting [=================================>                 ]   34.6MB/52.33MB
+ 3fadc669ef11 Extracting [================================>                  ]  28.44MB/43.48MB
+ b0a0cf830b12 Extracting [=================================================> ]   28.9MB/29.15MB
+ eb77aa907276 Downloading [========================================>          ]  727.5MB/907.7MB
+ f9dd052e142d Extracting [==================================>                ]  36.18MB/52.33MB
+ 3fadc669ef11 Extracting [====================================>              ]  31.65MB/43.48MB
+ eb77aa907276 Downloading [=========================================>         ]  757.2MB/907.7MB
+ b0a0cf830b12 Extracting [==================================================>]  29.15MB/29.15MB
+ f9dd052e142d Extracting [===================================>               ]  37.22MB/52.33MB
+ b0a0cf830b12 Pull complete 
+ dda3d8fbd5ed Extracting [==================================================>]  1.165kB/1.165kB
+ dda3d8fbd5ed Extracting [==================================================>]  1.165kB/1.165kB
+ eb77aa907276 Downloading [===========================================>       ]  784.2MB/907.7MB
+ 3fadc669ef11 Extracting [========================================>          ]  34.87MB/43.48MB
+ f9dd052e142d Extracting [====================================>              ]  37.75MB/52.33MB
+ eb77aa907276 Downloading [============================================>      ]  811.7MB/907.7MB
+ 3fadc669ef11 Extracting [==============================================>    ]  40.37MB/43.48MB
+ 3fadc669ef11 Extracting [==================================================>]  43.48MB/43.48MB
+ f9dd052e142d Extracting [======================================>            ]  39.85MB/52.33MB
+ eb77aa907276 Downloading [==============================================>    ]  840.3MB/907.7MB
+ f9dd052e142d Extracting [========================================>          ]  42.47MB/52.33MB
+ eb77aa907276 Downloading [================================================>  ]  872.1MB/907.7MB
+ f9dd052e142d Extracting [===========================================>       ]  45.09MB/52.33MB
+ eb77aa907276 Downloading [=================================================> ]    905MB/907.7MB
+ eb77aa907276 Verifying Checksum 
+ eb77aa907276 Download complete 
+ f9dd052e142d Extracting [=============================================>     ]  47.71MB/52.33MB
+ f9dd052e142d Extracting [=================================================> ]  51.38MB/52.33MB
+ f9dd052e142d Extracting [=================================================> ]   51.9MB/52.33MB
+ f9dd052e142d Extracting [==================================================>]  52.33MB/52.33MB
+ f9dd052e142d Pull complete 
+ e8c6d4883897 Extracting [>                                                  ]  65.54kB/4.398MB
+ e8c6d4883897 Extracting [========>                                          ]  720.9kB/4.398MB
+ e8c6d4883897 Extracting [=========>                                         ]    852kB/4.398MB
+ e8c6d4883897 Extracting [==============>                                    ]  1.311MB/4.398MB
+ e8c6d4883897 Extracting [==================>                                ]  1.638MB/4.398MB
+ e8c6d4883897 Extracting [===================>                               ]  1.704MB/4.398MB
+ e8c6d4883897 Extracting [====================>                              ]  1.769MB/4.398MB
+ e8c6d4883897 Extracting [========================>                          ]  2.163MB/4.398MB
+ e8c6d4883897 Extracting [============================>                      ]   2.49MB/4.398MB
+ e8c6d4883897 Extracting [================================>                  ]  2.884MB/4.398MB
+ dda3d8fbd5ed Pull complete 
+ 3fadc669ef11 Pull complete 
+ 283a477db7bb Extracting [>                                                  ]  65.54kB/4.533MB
+ 7084ac8f4ab6 Extracting [>                                                  ]   98.3kB/7.468MB
+ e8c6d4883897 Extracting [=====================================>             ]  3.342MB/4.398MB
+ 283a477db7bb Extracting [================================================>  ]  4.391MB/4.533MB
+ 7084ac8f4ab6 Extracting [===========>                                       ]  1.769MB/7.468MB
+ 283a477db7bb Extracting [==================================================>]  4.533MB/4.533MB
+ e8c6d4883897 Extracting [==============================================>    ]  4.063MB/4.398MB
+ e8c6d4883897 Extracting [==================================================>]  4.398MB/4.398MB
+ 7084ac8f4ab6 Extracting [==============================================>    ]   6.98MB/7.468MB
+ 7084ac8f4ab6 Extracting [==================================================>]  7.468MB/7.468MB
+ 7084ac8f4ab6 Extracting [==================================================>]  7.468MB/7.468MB
+ e8c6d4883897 Pull complete 
+ 283a477db7bb Pull complete 
+ 648eb81b3252 Extracting [==================================================>]  1.561kB/1.561kB
+ 648eb81b3252 Extracting [==================================================>]  1.561kB/1.561kB
+ 91d2729fa4d5 Extracting [=>                                                 ]  32.77kB/1.45MB
+ 7084ac8f4ab6 Pull complete 
+ beb0d870d438 Extracting [==================================================>]  9.462kB/9.462kB
+ beb0d870d438 Extracting [==================================================>]  9.462kB/9.462kB
+ 648eb81b3252 Pull complete 
+ 91d2729fa4d5 Extracting [==================================================>]   1.45MB/1.45MB
+ 91d2729fa4d5 Pull complete 
+ 9739ced65621 Extracting [>                                                  ]   98.3kB/8.069MB
+ eb77aa907276 Extracting [>                                                  ]  557.1kB/907.7MB
+ beb0d870d438 Pull complete 
+ 9739ced65621 Extracting [===================>                               ]  3.146MB/8.069MB
+ eb77aa907276 Extracting [>                                                  ]  14.48MB/907.7MB
+ d63c4408fdb7 Extracting [>                                                  ]  229.4kB/21.31MB
+ eb77aa907276 Extracting [=>                                                 ]  30.64MB/907.7MB
+ 9739ced65621 Extracting [=============================>                     ]  4.719MB/8.069MB
+ d63c4408fdb7 Extracting [=======>                                           ]  3.211MB/21.31MB
+ eb77aa907276 Extracting [==>                                                ]  44.56MB/907.7MB
+ 9739ced65621 Extracting [====================================>              ]  5.898MB/8.069MB
+ d63c4408fdb7 Extracting [=================>                                 ]  7.569MB/21.31MB
+ eb77aa907276 Extracting [===>                                               ]  61.28MB/907.7MB
+ 9739ced65621 Extracting [=================================================> ]  7.963MB/8.069MB
+ 9739ced65621 Extracting [==================================================>]  8.069MB/8.069MB
+ d63c4408fdb7 Extracting [======================>                            ]  9.404MB/21.31MB
+ eb77aa907276 Extracting [====>                                              ]  74.09MB/907.7MB
+ 9739ced65621 Pull complete 
+ ae3bb1b347a4 Extracting [=>                                                 ]  32.77kB/1.196MB
+ d63c4408fdb7 Extracting [===========================>                       ]  11.93MB/21.31MB
+ ae3bb1b347a4 Extracting [==================================================>]  1.196MB/1.196MB
+ ae3bb1b347a4 Extracting [==================================================>]  1.196MB/1.196MB
+ ae3bb1b347a4 Pull complete 
+ d63c4408fdb7 Extracting [=================================>                 ]  14.45MB/21.31MB
+ eb77aa907276 Extracting [====>                                              ]  81.89MB/907.7MB
+ f8406d9c00ea Extracting [==================================================>]     116B/116B
+ f8406d9c00ea Extracting [==================================================>]     116B/116B
+ f8406d9c00ea Pull complete 
+ c199bff16b05 Extracting [==================================================>]  3.145kB/3.145kB
+ c199bff16b05 Extracting [==================================================>]  3.145kB/3.145kB
+ c199bff16b05 Pull complete 
+ eb77aa907276 Extracting [=====>                                             ]  91.36MB/907.7MB
+ d63c4408fdb7 Extracting [=====================================>             ]  15.83MB/21.31MB
+ e0d55fdb4d15 Extracting [>                                                  ]  557.1kB/109MB
+ eb77aa907276 Extracting [=====>                                             ]  98.04MB/907.7MB
+ e0d55fdb4d15 Extracting [==>                                                ]  5.014MB/109MB
+ d63c4408fdb7 Extracting [========================================>          ]   17.2MB/21.31MB
+ eb77aa907276 Extracting [=====>                                             ]  104.2MB/907.7MB
+ d63c4408fdb7 Extracting [===========================================>       ]  18.58MB/21.31MB
+ e0d55fdb4d15 Extracting [===>                                               ]  8.356MB/109MB
+ eb77aa907276 Extracting [======>                                            ]  111.4MB/907.7MB
+ d63c4408fdb7 Extracting [=============================================>     ]   19.5MB/21.31MB
+ e0d55fdb4d15 Extracting [=====>                                             ]  11.14MB/109MB
+ eb77aa907276 Extracting [======>                                            ]  118.1MB/907.7MB
+ e0d55fdb4d15 Extracting [======>                                            ]  14.48MB/109MB
+ eb77aa907276 Extracting [======>                                            ]  125.3MB/907.7MB
+ e0d55fdb4d15 Extracting [========>                                          ]  17.83MB/109MB
+ eb77aa907276 Extracting [=======>                                           ]    132MB/907.7MB
+ d63c4408fdb7 Extracting [================================================>  ]  20.87MB/21.31MB
+ e0d55fdb4d15 Extracting [=========>                                         ]  21.73MB/109MB
+ d63c4408fdb7 Extracting [==================================================>]  21.31MB/21.31MB
+ eb77aa907276 Extracting [=======>                                           ]  137.6MB/907.7MB
+ eb77aa907276 Extracting [=======>                                           ]  139.8MB/907.7MB
+ e0d55fdb4d15 Extracting [==========>                                        ]  23.95MB/109MB
+ eb77aa907276 Extracting [========>                                          ]  145.9MB/907.7MB
+ e0d55fdb4d15 Extracting [============>                                      ]   27.3MB/109MB
+ eb77aa907276 Extracting [========>                                          ]  152.1MB/907.7MB
+ e0d55fdb4d15 Extracting [================>                                  ]  35.09MB/109MB
+ d63c4408fdb7 Pull complete 
+ efa05c660812 Extracting [==================================================>]     189B/189B
+ efa05c660812 Extracting [==================================================>]     189B/189B
+ eb77aa907276 Extracting [========>                                          ]  157.6MB/907.7MB
+ e0d55fdb4d15 Extracting [==================>                                ]  40.67MB/109MB
+ efa05c660812 Pull complete 
+ f4e7f62f4b80 Extracting [==================================================>]     109B/109B
+ f4e7f62f4b80 Extracting [==================================================>]     109B/109B
+ f4e7f62f4b80 Pull complete 
+ eb77aa907276 Extracting [========>                                          ]  158.2MB/907.7MB
+ 5e1c03b67a78 Extracting [==================================================>]     620B/620B
+ 5e1c03b67a78 Extracting [==================================================>]     620B/620B
+ e0d55fdb4d15 Extracting [====================>                              ]  45.12MB/109MB
+ 5e1c03b67a78 Pull complete 
+ 14e6209d5fa8 Extracting [==================================================>]     833B/833B
+ 14e6209d5fa8 Extracting [==================================================>]     833B/833B
+ 14e6209d5fa8 Pull complete 
+ d686b50ce172 Extracting [>                                                  ]  131.1kB/12.47MB
+ eb77aa907276 Extracting [=========>                                         ]  165.4MB/907.7MB
+ e0d55fdb4d15 Extracting [=======================>                           ]  51.25MB/109MB
+ d686b50ce172 Extracting [=============>                                     ]  3.408MB/12.47MB
+ eb77aa907276 Extracting [=========>                                         ]  177.1MB/907.7MB
+ e0d55fdb4d15 Extracting [========================>                          ]  53.48MB/109MB
+ d686b50ce172 Extracting [======================>                            ]  5.505MB/12.47MB
+ eb77aa907276 Extracting [==========>                                        ]  189.4MB/907.7MB
+ e0d55fdb4d15 Extracting [==========================>                        ]  56.82MB/109MB
+ d686b50ce172 Extracting [==========================>                        ]  6.554MB/12.47MB
+ eb77aa907276 Extracting [===========>                                       ]  203.9MB/907.7MB
+ e0d55fdb4d15 Extracting [============================>                      ]  61.28MB/109MB
+ d686b50ce172 Extracting [===========================>                       ]  6.947MB/12.47MB
+ eb77aa907276 Extracting [===========>                                       ]  211.7MB/907.7MB
+ e0d55fdb4d15 Extracting [===============================>                   ]  67.96MB/109MB
+ d686b50ce172 Extracting [====================================>              ]  9.044MB/12.47MB
+ eb77aa907276 Extracting [============>                                      ]  219.5MB/907.7MB
+ e0d55fdb4d15 Extracting [=================================>                 ]  74.09MB/109MB
+ d686b50ce172 Extracting [=========================================>         ]  10.35MB/12.47MB
+ eb77aa907276 Extracting [============>                                      ]  227.8MB/907.7MB
+ e0d55fdb4d15 Extracting [====================================>              ]   79.1MB/109MB
+ d686b50ce172 Extracting [==============================================>    ]  11.67MB/12.47MB
+ eb77aa907276 Extracting [============>                                      ]    234MB/907.7MB
+ e0d55fdb4d15 Extracting [=======================================>           ]  85.79MB/109MB
+ d686b50ce172 Extracting [==================================================>]  12.47MB/12.47MB
+ eb77aa907276 Extracting [=============>                                     ]  240.1MB/907.7MB
+ e0d55fdb4d15 Extracting [=========================================>         ]  91.36MB/109MB
+ eb77aa907276 Extracting [=============>                                     ]  248.4MB/907.7MB
+ e0d55fdb4d15 Extracting [==========================================>        ]  93.03MB/109MB
+ eb77aa907276 Extracting [==============>                                    ]  255.7MB/907.7MB
+ e0d55fdb4d15 Extracting [==========================================>        ]  93.59MB/109MB
+ eb77aa907276 Extracting [===============>                                   ]    273MB/907.7MB
+ eb77aa907276 Extracting [===============>                                   ]    283MB/907.7MB
+ e0d55fdb4d15 Extracting [============================================>      ]  96.93MB/109MB
+ eb77aa907276 Extracting [===============>                                   ]  290.2MB/907.7MB
+ d686b50ce172 Pull complete 
+ e0d55fdb4d15 Extracting [============================================>      ]  97.48MB/109MB
+ eb77aa907276 Extracting [================>                                  ]  294.1MB/907.7MB
+ rabbitmq Pulled 
+ eb77aa907276 Extracting [=================>                                 ]  311.4MB/907.7MB
+ e0d55fdb4d15 Extracting [==============================================>    ]  100.3MB/109MB
+ eb77aa907276 Extracting [==================>                                ]  327.5MB/907.7MB
+ e0d55fdb4d15 Extracting [===============================================>   ]  103.1MB/109MB
+ eb77aa907276 Extracting [===================>                               ]  345.9MB/907.7MB
+ e0d55fdb4d15 Extracting [===============================================>   ]  104.2MB/109MB
+ eb77aa907276 Extracting [===================>                               ]  360.4MB/907.7MB
+ e0d55fdb4d15 Extracting [================================================>  ]  105.3MB/109MB
+ eb77aa907276 Extracting [====================>                              ]    366MB/907.7MB
+ e0d55fdb4d15 Extracting [=================================================> ]    107MB/109MB
+ eb77aa907276 Extracting [====================>                              ]  372.1MB/907.7MB
+ eb77aa907276 Extracting [=====================>                             ]    386MB/907.7MB
+ eb77aa907276 Extracting [======================>                            ]  403.9MB/907.7MB
+ e0d55fdb4d15 Extracting [=================================================> ]  107.5MB/109MB
+ eb77aa907276 Extracting [=======================>                           ]  426.1MB/907.7MB
+ e0d55fdb4d15 Extracting [=================================================> ]  108.6MB/109MB
+ eb77aa907276 Extracting [========================>                          ]  449.5MB/907.7MB
+ e0d55fdb4d15 Extracting [==================================================>]    109MB/109MB
+ eb77aa907276 Extracting [=========================>                         ]  468.5MB/907.7MB
+ eb77aa907276 Extracting [===========================>                       ]  494.7MB/907.7MB
+ eb77aa907276 Extracting [============================>                      ]  520.3MB/907.7MB
+ eb77aa907276 Extracting [==============================>                    ]  544.8MB/907.7MB
+ eb77aa907276 Extracting [===============================>                   ]  572.7MB/907.7MB
+ eb77aa907276 Extracting [================================>                  ]  597.7MB/907.7MB
+ eb77aa907276 Extracting [==================================>                ]  621.1MB/907.7MB
+ eb77aa907276 Extracting [===================================>               ]  648.4MB/907.7MB
+ e0d55fdb4d15 Pull complete 
+ c1cb13b19080 Extracting [==================================================>]  9.925kB/9.925kB
+ c1cb13b19080 Extracting [==================================================>]  9.925kB/9.925kB
+ eb77aa907276 Extracting [====================================>              ]  665.1MB/907.7MB
+ c1cb13b19080 Pull complete 
+ 873532e5f8c7 Extracting [==================================================>]     128B/128B
+ 873532e5f8c7 Extracting [==================================================>]     128B/128B
+ eb77aa907276 Extracting [=====================================>             ]    683MB/907.7MB
+ 873532e5f8c7 Pull complete 
+ 050d9f8c3b1c Extracting [==================================================>]     169B/169B
+ 050d9f8c3b1c Extracting [==================================================>]     169B/169B
+ 050d9f8c3b1c Pull complete 
+ 710e142705f8 Extracting [==================================================>]  5.421kB/5.421kB
+ eb77aa907276 Extracting [======================================>            ]  706.9MB/907.7MB
+ 710e142705f8 Pull complete 
+ cb628c265f09 Extracting [==================================================>]     184B/184B
+ cb628c265f09 Extracting [==================================================>]     184B/184B
+ cb628c265f09 Pull complete 
+ postgresql Pulled 
+ eb77aa907276 Extracting [========================================>          ]  727.5MB/907.7MB
+ eb77aa907276 Extracting [=========================================>         ]  749.8MB/907.7MB
+ eb77aa907276 Extracting [==========================================>        ]  771.5MB/907.7MB
+ eb77aa907276 Extracting [===========================================>       ]  792.1MB/907.7MB
+ eb77aa907276 Extracting [============================================>      ]  812.7MB/907.7MB
+ eb77aa907276 Extracting [=============================================>     ]  832.8MB/907.7MB
+ eb77aa907276 Extracting [===============================================>   ]    854MB/907.7MB
+ eb77aa907276 Extracting [================================================>  ]  875.1MB/907.7MB
+ eb77aa907276 Extracting [=================================================> ]  897.4MB/907.7MB
+ eb77aa907276 Extracting [==================================================>]  907.7MB/907.7MB
+ eb77aa907276 Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ 0ffa8f8aba1e Extracting [==================================================>]     226B/226B
+ 0ffa8f8aba1e Extracting [==================================================>]     226B/226B
+ 0ffa8f8aba1e Pull complete 
+ 2e81b9cb93cd Extracting [==================================================>]  1.859kB/1.859kB
+ 2e81b9cb93cd Extracting [==================================================>]  1.859kB/1.859kB
+ 2e81b9cb93cd Pull complete 
+ opensearch Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-opensearch-1  Creating
+ Container docker_services_cli-rabbitmq-1  Creating
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-opensearch-1  Created
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-rabbitmq-1  Created
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-opensearch-1  Starting
+ Container docker_services_cli-rabbitmq-1  Starting
+ Container docker_services_cli-postgresql-1  Started
+ Container docker_services_cli-rabbitmq-1  Started
+ Container docker_services_cli-opensearch-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_oaiserver
+plugins: cov-7.1.0, pydocstyle-2.4.0, invenio-4.0.2, github-actions-annotate-failures-0.4.2, pycodestyle-2.5.0, flask-1.3.0, isort-4.0.0, black-0.6.0
+collected 36 items
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py,line=2::pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py,line=3148::Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py,line=2::Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py,line=2560::Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+
+tests/test_admin.py .::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/sqla/view.py,line=1119::The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+                                                    [  2%]
+tests/test_alembic.py .::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/alembic/config.py,line=580::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+                                                  [  5%]
+tests/test_app.py ..                                                     [ 11%]
+tests/test_invenio_oaiserver.py ..::warning file=workdir/tests/invenio-oaiserver/patched/invenio_oaiserver/ext.py,line=183::Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmvrwv9:
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.s                                   [ 27%]
+tests/test_percolator.py ..::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+                                            [ 38%]
+tests/test_verbs.py .::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py,line=260::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py,line=341::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+..::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py,line=418::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py,line=652::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py,line=962::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.                               [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    __import__('pkg_resources').declare_namespace(__name__)
+
+.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:3148
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:3148: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    __import__('pkg_resources').declare_namespace(__name__)
+
+.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:2560
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:2560: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(parent)
+
+tests/test_admin.py::test_admin
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/sqla/view.py:1119: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    return self.session.query(self.model).get(tools.iterdecode(id))
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/alembic/config.py:580: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_invenio_oaiserver.py::test_init
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/invenio_oaiserver/ext.py:183: UserWarning: Please specify the OAISERVER_ID_PREFIX configuration.default value is: oai:runnervmvrwv9:
+    warnings.warn(
+
+tests/test_invenio_oaiserver.py: 2 warnings
+tests/test_verbs.py: 48 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py:114: DeprecationWarning: context_schema will in future only be set if and only if context is given.
+    clear_context = _init_context(kwargs)
+
+tests/test_percolator.py: 3 warnings
+tests/test_verbs.py: 8 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:330: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_verbs.py::test_getrecord
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py:260: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_verbs.py::test_getrecord_with_about
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py:341: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_verbs.py::test_listmetadataformats_record
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py:418: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_verbs.py::test_listrecords
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py:652: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_verbs.py::test_listrecords
+tests/test_verbs.py::test_listrecords
+tests/test_verbs.py::test_listrecords
+tests/test_verbs.py::test_listrecords
+tests/test_verbs.py::test_listrecords
+tests/test_verbs.py::test_listrecords
+tests/test_verbs.py::test_listrecords
+tests/test_verbs.py::test_list_sets_long
+tests/test_verbs.py::test_list_sets_long
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py:96: DeprecationWarning: context_schema will in future only be set if and only if context is given.
+    clear_context = _init_context(kwargs)
+
+tests/test_verbs.py::test_listidentifiers
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-oaiserver/patched/tests/test_verbs.py:962: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+
+Name                                                                 Stmts   Miss  Cover   Missing
+--------------------------------------------------------------------------------------------------
+invenio_oaiserver/__init__.py                                            4      0   100%
+invenio_oaiserver/admin.py                                              21      3    86%   47-49
+invenio_oaiserver/alembic/5d25c1981985_add_system_created_field.py      10      1    90%   32
+invenio_oaiserver/alembic/759d47cbdba7_create_oaiserver_branch.py       10      1    90%   23
+invenio_oaiserver/alembic/e655021de0de_create_oiaserver_tables.py       12      2    83%   37-38
+invenio_oaiserver/alembic/f9b1e3f7d3b1_change_datetime_types.py         13      3    77%   28-30
+invenio_oaiserver/config.py                                             58      0   100%
+invenio_oaiserver/errors.py                                              3      0   100%
+invenio_oaiserver/ext.py                                                87      4    95%   90-91, 97-98
+invenio_oaiserver/fetchers.py                                           17      2    88%   25, 39
+invenio_oaiserver/minters.py                                            13      0   100%
+invenio_oaiserver/models.py                                             24      1    96%   80
+invenio_oaiserver/patch_info.py                                          6      2    67%   44-46
+invenio_oaiserver/percolator.py                                         72      9    88%   64, 72-73, 86, 113-134, 141, 173
+invenio_oaiserver/provider.py                                           16      0   100%
+invenio_oaiserver/proxies.py                                             4      0   100%
+invenio_oaiserver/query.py                                              61      1    98%   22
+invenio_oaiserver/receivers.py                                           9      1    89%   30
+invenio_oaiserver/response.py                                          187      4    98%   146-150, 243
+invenio_oaiserver/resumption_token.py                                   35      0   100%
+invenio_oaiserver/schemas/__init__.py                                    0      0   100%
+invenio_oaiserver/search/__init__.py                                     0      0   100%
+invenio_oaiserver/search/component_templates/__init__.py                 0      0   100%
+invenio_oaiserver/search/component_templates/os-v2/__init__.py           0      0   100%
+invenio_oaiserver/search/component_templates/v7/__init__.py              0      0   100%
+invenio_oaiserver/utils.py                                              90      2    98%   94, 197
+invenio_oaiserver/verbs.py                                              71      5    93%   46-48, 55, 62
+invenio_oaiserver/views/__init__.py                                      0      0   100%
+invenio_oaiserver/views/server.py                                       56     10    82%   21-23, 56, 60-67, 89
+--------------------------------------------------------------------------------------------------
+TOTAL                                                                  879     51    94%
+================= 35 passed, 1 skipped, 82 warnings in 19.17s ==================
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-rabbitmq-1  Stopping
+ Container docker_services_cli-opensearch-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-postgresql-1  Removed
+ Container docker_services_cli-opensearch-1  Stopped
+ Container docker_services_cli-opensearch-1  Removing
+ Container docker_services_cli-opensearch-1  Removed
+ Container docker_services_cli-rabbitmq-1  Stopped
+ Container docker_services_cli-rabbitmq-1  Removing
+ Container docker_services_cli-rabbitmq-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

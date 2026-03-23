@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "35f1fbf",
+    "message": "release: v6.1.0"
+  },
+  {
+    "hash": "3c612bc",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "fb12994",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "61c7fca",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "428bd8e",
+    "message": "release: v6.0.1"
+  },
+  {
+    "hash": "2ad7544",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "9333c83",
+    "message": "chore(cleanup): remove outdated and unnecessary files"
+  },
+  {
+    "hash": "b5dd10d",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "58c4116",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "3637b0e",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "1f46b4e",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "d2971ce",
+    "message": "release: v5.1.0"
+  },
+  {
+    "hash": "730633e",
+    "message": "fix(validation): use invenio-accounts `validate_username` method"
+  },
+  {
+    "hash": "0f5561c",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "193e036",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "4f29387",
+    "message": "\ud83d\udce6 release: v4.1.1"
+  },
+  {
+    "hash": "18efe53",
+    "message": "i18n: pulled translations (#188)"
+  },
+  {
+    "hash": "7ee9d7d",
+    "message": "release: v4.1.0"
+  },
+  {
+    "hash": "6a1d9f6",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "e848e60",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "be0fac0",
+    "message": "fix: setuptools require underscores instead of dashes"
+  },
+  {
+    "hash": "5f7234d",
+    "message": "Removed obsolete languages"
+  },
+  {
+    "hash": "3bae146",
+    "message": "i18n: unified gettext formatting"
+  },
+  {
+    "hash": "39e8793",
+    "message": "update CHANGES.rst"
+  },
+  {
+    "hash": "8c20107",
+    "message": "fixed 404 issue when pressing cancel"
+  },
+  {
+    "hash": "87cb05b",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "0ffc759",
+    "message": "tests: apply changes for sqlalchemy>=2.0"
+  },
+  {
+    "hash": "4e4efa2",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "ad9a2ea",
+    "message": "release: v3.0.1"
+  },
+  {
+    "hash": "f1e8c85",
+    "message": "setup: change to reusable workflows"
+  },
+  {
+    "hash": "871cb57",
+    "message": "setup: pin dependencies"
+  },
+  {
+    "hash": "bbbaca3",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "1794934",
+    "message": "tests: check existing username case-insensitive"
+  },
+  {
+    "hash": "29d0b5b",
+    "message": "chore: fix typo in release notes"
+  },
+  {
+    "hash": "908b27d",
+    "message": "release: v3.0.0"
+  },
+  {
+    "hash": "64d0ade",
+    "message": "fix: tests"
+  },
+  {
+    "hash": "ec1ece3",
+    "message": "setup: update dependencies"
+  },
+  {
+    "hash": "7312269",
+    "message": "tests: fix"
+  },
+  {
+    "hash": "94dafbd",
+    "message": "fix: profile active"
+  },
+  {
+    "hash": "0f0396d",
+    "message": "menu: use current_menu"
+  },
+  {
+    "hash": "7d74dc1",
+    "message": "doc: improve documentation"
+  },
+  {
+    "hash": "ba2647e",
+    "message": "setup: use pytest-black-ng instead of pytest-black"
+  },
+  {
+    "hash": "fd9a6f5",
+    "message": "refactor: fix deprecation warnings"
+  },
+  {
+    "hash": "5db75fc",
+    "message": "views: remove breadcrumb usage"
+  },
+  {
+    "hash": "79bf174",
+    "message": "global: migrate to (api_)finalize_app"
+  },
+  {
+    "hash": "35845fe",
+    "message": "ci: remove mysql5 which is end-of-life"
+  },
+  {
+    "hash": "7aed361",
+    "message": "tests: skip alembic tests"
+  },
+  {
+    "hash": "6352152",
+    "message": "fix: black formatting"
+  },
+  {
+    "hash": "f0b0393",
+    "message": "ci: remove include and exclude to avoid missing requirements-level"
+  },
+  {
+    "hash": "47e4cc3",
+    "message": "CI: update test matrix"
+  }
+]

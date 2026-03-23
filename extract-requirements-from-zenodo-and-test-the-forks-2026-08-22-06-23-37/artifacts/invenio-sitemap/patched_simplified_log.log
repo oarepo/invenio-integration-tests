@@ -1,0 +1,69 @@
+ rabbitmq Pulling 
+ redis Pulling 
+ postgresql Pulling 
+ opensearch Pulling 
+ redis Pulled 
+ rabbitmq Pulled 
+ postgresql Pulled 
+ opensearch Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-opensearch-1  Creating
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-redis-1  Creating
+ Container docker_services_cli-rabbitmq-1  Creating
+ Container docker_services_cli-opensearch-1  Created
+ Container docker_services_cli-rabbitmq-1  Created
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-redis-1  Created
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-opensearch-1  Starting
+ Container docker_services_cli-redis-1  Starting
+ Container docker_services_cli-rabbitmq-1  Starting
+ Container docker_services_cli-redis-1  Started
+ Container docker_services_cli-postgresql-1  Started
+ Container docker_services_cli-rabbitmq-1  Started
+ Container docker_services_cli-opensearch-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-sitemap/patched
+configfile: pyproject.toml
+testpaths: docs, tests, invenio_sitemap
+plugins: isort-4.0.0, black-0.6.0, invenio-4.0.2, pydocstyle-2.4.0, cov-7.1.0, pycodestyle-2.5.0, flask-1.3.0, github-actions-annotate-failures-0.4.2
+collected 19 items
+tests/test_cache.py .                                                    [  5%]
+tests/test_invenio_sitemap.py ....                                       [ 26%]
+tests/test_sitemap.py ......                                             [ 57%]
+tests/test_sitemap_index.py ....                                         [ 78%]
+tests/test_sitemap_root.py ....                                          [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+Name                          Stmts   Miss  Cover   Missing
+invenio_sitemap/__init__.py       6      0   100%
+invenio_sitemap/cache.py         34      1    97%   55
+invenio_sitemap/config.py         6      0   100%
+invenio_sitemap/ext.py           12      0   100%
+invenio_sitemap/sitemap.py        6      0   100%
+invenio_sitemap/tasks.py         49      1    98%   62
+invenio_sitemap/utils.py         13      0   100%
+invenio_sitemap/views.py         31      0   100%
+TOTAL                           157      2    99%
+============================== 19 passed in 5.40s ==============================
+ Container docker_services_cli-redis-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-rabbitmq-1  Stopping
+ Container docker_services_cli-opensearch-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-redis-1  Stopped
+ Container docker_services_cli-redis-1  Removing
+ Container docker_services_cli-redis-1  Removed
+ Container docker_services_cli-postgresql-1  Removed
+ Container docker_services_cli-opensearch-1  Stopped
+ Container docker_services_cli-opensearch-1  Removing
+ Container docker_services_cli-opensearch-1  Removed
+ Container docker_services_cli-rabbitmq-1  Stopped
+ Container docker_services_cli-rabbitmq-1  Removing
+ Container docker_services_cli-rabbitmq-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

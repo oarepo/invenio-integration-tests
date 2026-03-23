@@ -1,0 +1,81 @@
+ rabbitmq Pulling 
+ redis Pulling 
+ opensearch Pulling 
+ postgresql Pulling 
+ redis Pulled 
+ rabbitmq Pulled 
+ postgresql Pulled 
+ opensearch Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-opensearch-1  Creating
+ Container docker_services_cli-redis-1  Creating
+ Container docker_services_cli-rabbitmq-1  Creating
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-opensearch-1  Created
+ Container docker_services_cli-redis-1  Created
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-rabbitmq-1  Created
+ Container docker_services_cli-opensearch-1  Starting
+ Container docker_services_cli-rabbitmq-1  Starting
+ Container docker_services_cli-redis-1  Starting
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-redis-1  Started
+ Container docker_services_cli-postgresql-1  Started
+ Container docker_services_cli-opensearch-1  Started
+ Container docker_services_cli-rabbitmq-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-notifications/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_notifications
+plugins: cov-7.1.0, pydocstyle-2.4.0, invenio-4.0.2, github-actions-annotate-failures-0.4.2, pycodestyle-2.5.0, flask-1.3.0, isort-4.0.0, black-0.6.0
+collected 9 items
+tests/test_invenio_notifications.py .........                            [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+Name                                                      Stmts   Miss  Cover   Missing
+invenio_notifications/__init__.py                             4      0   100%
+invenio_notifications/backends/__init__.py                    3      0   100%
+invenio_notifications/backends/base.py                        7      1    86%   18
+invenio_notifications/backends/email.py                      30      3    90%   78-90
+invenio_notifications/backends/utils/__init__.py              2      0   100%
+invenio_notifications/backends/utils/loaders.py              14      8    43%   31-59
+invenio_notifications/config.py                              11      0   100%
+invenio_notifications/errors.py                               7      2    71%   19, 32
+invenio_notifications/ext.py                                 32      6    81%   46, 62-63, 68-78
+invenio_notifications/manager.py                             20     14    30%   18-19, 31-33, 45-56, 65
+invenio_notifications/models.py                               9      2    78%   20, 37
+invenio_notifications/patch_info.py                           6      2    67%   43-45
+invenio_notifications/proxies.py                              6      0   100%
+invenio_notifications/registry.py                             6      1    83%   17
+invenio_notifications/services/__init__.py                    4      0   100%
+invenio_notifications/services/builders.py                   38     15    61%   129, 134-137, 142-145, 150-152, 157-160
+invenio_notifications/services/filters.py                    17      9    47%   20, 28-29, 36-43
+invenio_notifications/services/generators/__init__.py         4      0   100%
+invenio_notifications/services/generators/backends.py        13      4    69%   18, 26-28
+invenio_notifications/services/generators/context.py         17      6    65%   20, 28, 32-35
+invenio_notifications/services/generators/recipients.py      16      8    50%   20, 28-29, 33, 37-43
+invenio_notifications/services/uow.py                         7      2    71%   16, 20
+invenio_notifications/tasks.py                                9      2    78%   19, 29
+invenio_notifications/views.py                               14     10    29%   12-19, 24-44
+TOTAL                                                       296     95    68%
+============================== 9 passed in 3.13s ===============================
+ Container docker_services_cli-redis-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-rabbitmq-1  Stopping
+ Container docker_services_cli-opensearch-1  Stopping
+ Container docker_services_cli-redis-1  Stopped
+ Container docker_services_cli-redis-1  Removing
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-postgresql-1  Removed
+ Container docker_services_cli-redis-1  Removed
+ Container docker_services_cli-opensearch-1  Stopped
+ Container docker_services_cli-opensearch-1  Removing
+ Container docker_services_cli-opensearch-1  Removed
+ Container docker_services_cli-rabbitmq-1  Stopped
+ Container docker_services_cli-rabbitmq-1  Removing
+ Container docker_services_cli-rabbitmq-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

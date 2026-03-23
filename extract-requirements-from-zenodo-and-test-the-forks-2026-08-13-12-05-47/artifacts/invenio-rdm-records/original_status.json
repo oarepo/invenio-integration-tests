@@ -1,0 +1,191 @@
+{
+  "dependencies": [],
+  "package": {
+    "github_entry": {
+      "_extra": {},
+      "default_branch": null,
+      "exclude": [
+        "invenio-xrootd",
+        "invenio-swh"
+      ],
+      "extras": [
+        "tests",
+        "opensearch2",
+        "s3",
+        "devs",
+        "s3fs",
+        "oaipmh",
+        "rdf",
+        "sparql",
+        "postgresql",
+        "admin"
+      ],
+      "freeze": [
+        "setuptools<82.0.0"
+      ],
+      "include": [
+        "invenio-.*",
+        "pytest-invenio",
+        "citeproc-py-styles"
+      ],
+      "install": [],
+      "org": "inveniosoftware",
+      "package_map": {},
+      "slow_packages": {
+        "invenio-rdm-records": [
+          "tests/resources/test_iiif_image_api.py",
+          "tests/resources/test_resources_review.py",
+          "tests/services/test_rdm_service.py"
+        ]
+      },
+      "test": [
+        "./run-tests.sh"
+      ]
+    },
+    "patched_reference": {
+      "actual_version": "32.2.0",
+      "base": null,
+      "branch": null,
+      "commit": "e18f932cba4455ed72f5642334b573766db832d6",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-rdm-records",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-rdm-records"
+    },
+    "patches": [
+      {
+        "actual_version": "32.2.0",
+        "base": "v32.2.0",
+        "branch": "oarepo-feature-configurable-service-resource-from-32.2.0",
+        "commit": "854c9db9e5a3444d9b49a517741db41231e0f620",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-rdm-records",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "5cebcf8704498dfc37f4f92f49328f5eea36b5bd",
+            "854c9db9e5a3444d9b49a517741db41231e0f620"
+          ],
+          "source_branch": "oarepo-feature-configurable-service-resource-from-32.2.0",
+          "source_org": "oarepo",
+          "source_repo": "invenio-rdm-records"
+        },
+        "repo": "invenio-rdm-records",
+        "versions": [
+          {
+            "operator": ">=",
+            "version": "32.2.0"
+          }
+        ]
+      },
+      {
+        "actual_version": "19.5.4",
+        "base": "v19.5.4",
+        "branch": "oarepo-feature-kwargs",
+        "commit": "6591fdb83eaaa71a1e415c84e1686366711d6e65",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-rdm-records",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "6591fdb83eaaa71a1e415c84e1686366711d6e65"
+          ],
+          "source_branch": "oarepo-feature-kwargs",
+          "source_org": "oarepo",
+          "source_repo": "invenio-rdm-records"
+        },
+        "repo": "invenio-rdm-records",
+        "versions": []
+      },
+      {
+        "actual_version": "19.5.4",
+        "base": "v19.5.4",
+        "branch": "oarepo-feature-pids-component-permission-check-args",
+        "commit": "1bc15caf62fec864d1cd099439bb39ceb3d26d05",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-rdm-records",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "1bc15caf62fec864d1cd099439bb39ceb3d26d05"
+          ],
+          "source_branch": "oarepo-feature-pids-component-permission-check-args",
+          "source_org": "oarepo",
+          "source_repo": "invenio-rdm-records"
+        },
+        "repo": "invenio-rdm-records",
+        "versions": []
+      },
+      {
+        "actual_version": "22.7.3",
+        "base": "v22.7.3",
+        "branch": "oarepo-feature-review-service-components",
+        "commit": "5891ed4256866bf61afec4dea60e56e689c39fd1",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-rdm-records",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "5891ed4256866bf61afec4dea60e56e689c39fd1"
+          ],
+          "source_branch": "oarepo-feature-review-service-components",
+          "source_org": "oarepo",
+          "source_repo": "invenio-rdm-records"
+        },
+        "repo": "invenio-rdm-records",
+        "versions": []
+      },
+      {
+        "actual_version": "22.7.3",
+        "base": "v22.7.3",
+        "branch": "oarepo-feature-review-before-doi-assign",
+        "commit": "874a809f2ab458b49f2e8c7aae0b4cdd5a2f859b",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-rdm-records",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "874a809f2ab458b49f2e8c7aae0b4cdd5a2f859b"
+          ],
+          "source_branch": "oarepo-feature-review-before-doi-assign",
+          "source_org": "oarepo",
+          "source_repo": "invenio-rdm-records"
+        },
+        "repo": "invenio-rdm-records",
+        "versions": []
+      }
+    ],
+    "reference": {
+      "actual_version": "32.2.0",
+      "base": null,
+      "branch": "v32.2.0",
+      "commit": "e18f932cba4455ed72f5642334b573766db832d6",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-rdm-records",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-rdm-records"
+    },
+    "unpatched_reference": {
+      "actual_version": "32.2.0",
+      "base": null,
+      "branch": null,
+      "commit": "e18f932cba4455ed72f5642334b573766db832d6",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-rdm-records",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-rdm-records"
+    }
+  },
+  "status": "failed"
+}
