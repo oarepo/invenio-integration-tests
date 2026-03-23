@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "e40bf6e",
+    "message": "release: v8.3.1"
+  },
+  {
+    "hash": "d619fab",
+    "message": "fix(i18n): include *.mo files in distribution"
+  },
+  {
+    "hash": "d08d6de",
+    "message": "release: v8.3.0"
+  },
+  {
+    "hash": "8bd9aa3",
+    "message": "feat: support unmanaged roles with distinct id and name"
+  },
+  {
+    "hash": "42b06f1",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "7d40c25",
+    "message": "release: v8.2.1"
+  },
+  {
+    "hash": "f228bbc",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "aefc3a8",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "174a0f2",
+    "message": "chore(cleanup): remove outdated and unnecessary file"
+  },
+  {
+    "hash": "59cd6c6",
+    "message": "release: v8.2.0"
+  },
+  {
+    "hash": "8f0cf6a",
+    "message": "feat: enforce Role id and name are equal"
+  },
+  {
+    "hash": "17420e3",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "6cef679",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "1457083",
+    "message": "release: v8.1.0"
+  },
+  {
+    "hash": "edc5caa",
+    "message": "feat: adapt for pluggable password validation"
+  },
+  {
+    "hash": "86d8f17",
+    "message": "release: v8.0.0"
+  },
+  {
+    "hash": "14accea",
+    "message": "fix: update password generation and remove passlib dependency"
+  },
+  {
+    "hash": "df38c16",
+    "message": "fix(ui): reorder menu in user settings"
+  },
+  {
+    "hash": "f6d9328",
+    "message": "feat(users): add username option to create user"
+  },
+  {
+    "hash": "a2e98d0",
+    "message": "fix: not adding user_id if configuration prevents it"
+  },
+  {
+    "hash": "53aa61a",
+    "message": "fix: better dependencies after communities tests"
+  },
+  {
+    "hash": "a6c735c",
+    "message": "fix: conditional dependency to invenio-communities"
+  },
+  {
+    "hash": "4864654",
+    "message": "fix: Added a comment to the alembic file"
+  },
+  {
+    "hash": "eaece16",
+    "message": "fix: unskipping alembic test"
+  },
+  {
+    "hash": "d9c20b5",
+    "message": "fix: handle Alembic dependency on invenio-access"
+  },
+  {
+    "hash": "6e8d571",
+    "message": "\ud83d\udce6 release: v7.2.1"
+  },
+  {
+    "hash": "97c188d",
+    "message": "Add missing `limits` dependency"
+  },
+  {
+    "hash": "41cbd5a",
+    "message": "\ud83d\udce6 release: v7.2.0"
+  },
+  {
+    "hash": "79ed7fc",
+    "message": "feat(auth): add per-account auth rate limits"
+  },
+  {
+    "hash": "9e8fe3a",
+    "message": "release: v7.1.0"
+  },
+  {
+    "hash": "921a0dd",
+    "message": "chore: compatibility webargs > 6.0.0"
+  },
+  {
+    "hash": "cf24fa0",
+    "message": "chore: remove usage of python2 compat"
+  },
+  {
+    "hash": "f97e700",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "c7080d2",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "a0fd021",
+    "message": "fix: DeprecationWarning: get_user"
+  },
+  {
+    "hash": "e247382",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "3c943ca",
+    "message": "fix(cli): rollback failed db calls"
+  },
+  {
+    "hash": "91e749d",
+    "message": "release: v6.2.3"
+  },
+  {
+    "hash": "a8cffbc",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "a683cb3",
+    "message": "chore(setup): pin dependencies"
+  },
+  {
+    "hash": "3de42e9",
+    "message": "\ud83d\udce6 release: v6.2.2"
+  },
+  {
+    "hash": "ce66a58",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "e2ffe99",
+    "message": "tests: extend support to Python 3.14"
+  },
+  {
+    "hash": "49d7aae",
+    "message": "\ud83d\udce6 release: v6.2.1"
+  },
+  {
+    "hash": "7c716bb",
+    "message": "fix(user): allow properties to be accessed via the class"
+  },
+  {
+    "hash": "398e423",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "5ec844d",
+    "message": "release: v6.2.0"
+  },
+  {
+    "hash": "e63a62b",
+    "message": "i18n: force pull translations"
+  },
+  {
+    "hash": "1ee149e",
+    "message": "docs: update transifex-client installation instructions"
+  },
+  {
+    "hash": "2a2dd5f",
+    "message": "i18n: extract msgs"
+  }
+]

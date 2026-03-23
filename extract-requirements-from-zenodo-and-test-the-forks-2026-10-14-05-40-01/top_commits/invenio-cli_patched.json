@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "8ecd74b",
+    "message": "fix:  use os.sep when stripping project path from translation output"
+  },
+  {
+    "hash": "0e2985d",
+    "message": "cli: normalize paths in extracted translation files"
+  },
+  {
+    "hash": "e5395cf",
+    "message": "Extending cli with custom steps and commands"
+  },
+  {
+    "hash": "a292797",
+    "message": "cli: add extensible steps mechanism via entry points"
+  },
+  {
+    "hash": "ec55f67",
+    "message": "cli: support customizable docker environment"
+  },
+  {
+    "hash": "445b740",
+    "message": "get rdm version from oarepo pyproject toml"
+  },
+  {
+    "hash": "fe658f0",
+    "message": "Custom cert and key path"
+  },
+  {
+    "hash": "811977d",
+    "message": "feat: respecting UV_PROJECT_ENVIRONMENT"
+  },
+  {
+    "hash": "25f2820",
+    "message": "release: v1.13.0"
+  },
+  {
+    "hash": "7ef11aa",
+    "message": "chore(readme): improve customization text"
+  },
+  {
+    "hash": "289ca9a",
+    "message": "fix(rpc): use the server as soon as the instance path is known"
+  },
+  {
+    "hash": "c869167",
+    "message": "refactor(rpc): drop the client-side ping"
+  },
+  {
+    "hash": "dcb8e04",
+    "message": "fix(versions): make cli_config optional in rdm_version"
+  },
+  {
+    "hash": "036f4ff",
+    "message": "fix(services): stream docker compose output and fail on errors"
+  },
+  {
+    "hash": "f13daf8",
+    "message": "fix(rpc): connect directly instead of pinging before each call"
+  },
+  {
+    "hash": "21673b9",
+    "message": "feat(rpc): apply env when spawning the server"
+  },
+  {
+    "hash": "11bcf08",
+    "message": "feat(rpc): stream output via fd passing and unify command ops"
+  },
+  {
+    "hash": "7be6da9",
+    "message": "feat(rpc): route services setup through the RPC server"
+  },
+  {
+    "hash": "f8b0c77",
+    "message": "feat(rpc): let CommandStep execute RPC calls"
+  },
+  {
+    "hash": "293f0b3",
+    "message": "fix(rpc): parse use_rpc as a boolean and document the socket setup"
+  },
+  {
+    "hash": "1afc6c1",
+    "message": "refactor(rpc): talk to the RPC server directly over its socket"
+  },
+  {
+    "hash": "21b5d17",
+    "message": "feat(rpc): make the use configurable"
+  },
+  {
+    "hash": "6ed5d8c",
+    "message": "feat(config): configure app-rdm version"
+  },
+  {
+    "hash": "07f54f6",
+    "message": "feat: add data path"
+  },
+  {
+    "hash": "39ab96d",
+    "message": "README: add new features"
+  },
+  {
+    "hash": "587f551",
+    "message": "fix: warning"
+  },
+  {
+    "hash": "1439e6f",
+    "message": "feat: rpc-server"
+  },
+  {
+    "hash": "722c221",
+    "message": "run: allow changing of celery pool implementation"
+  },
+  {
+    "hash": "2480661",
+    "message": "release: v1.12.2"
+  },
+  {
+    "hash": "abc807b",
+    "message": "chore: make invenio-cli init rdm default to v14 cookiecutter"
+  },
+  {
+    "hash": "f760ce4",
+    "message": "\ud83d\udce6 release: v1.12.1"
+  },
+  {
+    "hash": "4790318",
+    "message": "fix(requirements): require pnpm v11.x"
+  },
+  {
+    "hash": "74d13a2",
+    "message": "fix(config): default to NPM if `javascript_package_manager` is unset"
+  },
+  {
+    "hash": "18fb121",
+    "message": "release: v1.12.0"
+  },
+  {
+    "hash": "a28ed41",
+    "message": "chore: require node v24 for InvenioRDM v14"
+  },
+  {
+    "hash": "0db351d",
+    "message": "fix: show available version as string instead of integer array"
+  },
+  {
+    "hash": "d03c149",
+    "message": "chore: add node/npm minimum requirements for InvenioRDM v14"
+  },
+  {
+    "hash": "dd24842",
+    "message": "chore: fix linter complaints about f-strings without placeholders"
+  },
+  {
+    "hash": "acb94cd",
+    "message": "fix: gracefully handle not finding a valid InvenioRDM project"
+  },
+  {
+    "hash": "643abad",
+    "message": "feat: extend `check-requirements -d` to also consider PNPM"
+  },
+  {
+    "hash": "4cc3cdf",
+    "message": "feat: extend `check-requirements` to also accept uv"
+  },
+  {
+    "hash": "c8a5d45",
+    "message": "fix: handle `FileNotFoundError` if `pipenv` is not installed"
+  },
+  {
+    "hash": "696402d",
+    "message": "chore: fix some messages"
+  },
+  {
+    "hash": "c06298f",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "182a17e",
+    "message": "fix: update get_db_type and get_search_type methods"
+  },
+  {
+    "hash": "8d511c2",
+    "message": "cli: fix db type to 'postgresql' in config"
+  },
+  {
+    "hash": "f292d47",
+    "message": "fix: simplify get_search_type method"
+  },
+  {
+    "hash": "5dac875",
+    "message": "fix: update search type handling in CLI config"
+  },
+  {
+    "hash": "c7d7468",
+    "message": "feat: default js package manager to PNPM"
+  },
+  {
+    "hash": "52d3dd7",
+    "message": "config: add support for custom package managers in CLI configuration"
+  }
+]

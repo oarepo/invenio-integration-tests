@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-jsonschemas/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_jsonschemas
+plugins: isort-4.0.0, black-0.6.0, invenio-4.0.2, pydocstyle-2.4.0, cov-7.1.0, pycodestyle-2.5.0, flask-1.3.0, github-actions-annotate-failures-0.4.2
+collected 22 items
+
+tests/test_invenio_jsonschemas.py ......sss............                  [ 95%]
+invenio_jsonschemas/__init__.py .                                        [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+
+Name                                  Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------
+invenio_jsonschemas/__init__.py           5      0   100%
+invenio_jsonschemas/config.py            22      0   100%
+invenio_jsonschemas/errors.py            10      0   100%
+invenio_jsonschemas/ext.py              138     18    87%   27-28, 85-87, 120, 127, 170-173, 178-181, 200, 268-269
+invenio_jsonschemas/jsonresolver.py       8      0   100%
+invenio_jsonschemas/patch_info.py         6      2    67%   48-50
+invenio_jsonschemas/proxies.py            7      0   100%
+invenio_jsonschemas/utils.py             26      1    96%   47
+invenio_jsonschemas/views.py             21     10    52%   32-56
+-------------------------------------------------------------------
+TOTAL                                   243     31    87%
+======================== 19 passed, 3 skipped in 0.59s =========================

@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "bb3fa55",
+    "message": "release: v9.1.0"
+  },
+  {
+    "hash": "b0aa725",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "a81ad48",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "7b27d37",
+    "message": "chore(licenses): fix some SPDX license headers"
+  },
+  {
+    "hash": "872ebe7",
+    "message": "release: v9.0.3"
+  },
+  {
+    "hash": "50043a8",
+    "message": "fix(i18n): update Transifex config"
+  },
+  {
+    "hash": "966050c",
+    "message": "release: v9.0.2"
+  },
+  {
+    "hash": "d4c6326",
+    "message": "i18n: fix outdated transifex config for UI"
+  },
+  {
+    "hash": "3d3f028",
+    "message": "Release maint-v9.0.1"
+  },
+  {
+    "hash": "669b8fb",
+    "message": "fix(i18n): support pyproject extraction"
+  },
+  {
+    "hash": "b048c28",
+    "message": "i18n: update string format to use %()s instead"
+  },
+  {
+    "hash": "35efdf1",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "3eb04d5",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "e136a01",
+    "message": "release: v9.0.0"
+  },
+  {
+    "hash": "49dc86e",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "7c96fe3",
+    "message": "fix: alembic migrations"
+  },
+  {
+    "hash": "188e846",
+    "message": "release: v8.1.1"
+  },
+  {
+    "hash": "b19d77f",
+    "message": "fix: correct URL for collection"
+  },
+  {
+    "hash": "05c108a",
+    "message": "release: v8.1.0"
+  },
+  {
+    "hash": "3e5f737",
+    "message": "ext: abstract records_service dependency from CollectionsService"
+  },
+  {
+    "hash": "2b2db7c",
+    "message": "tests: fixtures: OpenAIRE resource type consistent format"
+  },
+  {
+    "hash": "5e5b9a6",
+    "message": "release: v8.0.2"
+  },
+  {
+    "hash": "0febc49",
+    "message": "translations: init translation mechanism related boilerplate"
+  },
+  {
+    "hash": "b9ea3f3",
+    "message": "release: v8.0.1"
+  },
+  {
+    "hash": "9379a1a",
+    "message": "fix(translations): add package-lock.json"
+  },
+  {
+    "hash": "a15b38f",
+    "message": "release: v8.0.0"
+  },
+  {
+    "hash": "549f17f",
+    "message": "ui: improve CollectionTreeManager"
+  },
+  {
+    "hash": "aabd689",
+    "message": "eslint: add eslint"
+  },
+  {
+    "hash": "8738beb",
+    "message": "ui: fixes and improvements"
+  },
+  {
+    "hash": "b30adba",
+    "message": "feat(collections): decouple from invenio-communities, rename community_id to namespace_id"
+  },
+  {
+    "hash": "f84e8e9",
+    "message": "feat(collections): add CRUD UI"
+  },
+  {
+    "hash": "27cd342",
+    "message": "collections: add limit for category and collections"
+  },
+  {
+    "hash": "20c6657",
+    "message": "collections: add reorder endpoint"
+  },
+  {
+    "hash": "a51147d",
+    "message": "collections: improve service and resource api"
+  },
+  {
+    "hash": "ce93c69",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "312b9c8",
+    "message": "change(setup): upgrade rdm-records, invenio-checks"
+  },
+  {
+    "hash": "84f02d8",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "a3a4cdf",
+    "message": "change(setup): upgrade invenio-communities, rdm-records"
+  },
+  {
+    "hash": "0c5ee03",
+    "message": "release: v5.0.1"
+  },
+  {
+    "hash": "1ddabcc",
+    "message": "change(setup): remove unused invenio-administration dependency"
+  },
+  {
+    "hash": "07819fa",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "dfc48a7",
+    "message": "change(setup): upgrade invenio-communities, invenio-rdm-records"
+  },
+  {
+    "hash": "c7e2f42",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "64f5495",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "cc7369c",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "a12454b",
+    "message": "refactor: use Timestamp from db"
+  },
+  {
+    "hash": "381106d",
+    "message": "refactor!: replace Link usage by EndpointLink"
+  },
+  {
+    "hash": "406d473",
+    "message": "release: v3.0.1"
+  },
+  {
+    "hash": "941a22d",
+    "message": "Revert \"alembic: depend on communities instead of rdm-records\""
+  },
+  {
+    "hash": "2724f80",
+    "message": "release: v3.0.0"
+  }
+]

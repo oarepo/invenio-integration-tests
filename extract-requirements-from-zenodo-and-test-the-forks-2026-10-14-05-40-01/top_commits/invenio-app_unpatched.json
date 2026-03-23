@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "a10cd2c",
+    "message": "\ud83d\udce6 release: v3.2.1"
+  },
+  {
+    "hash": "b723a3b",
+    "message": "fix: pickle error on macos in celery workers and beat"
+  },
+  {
+    "hash": "7fe18a2",
+    "message": "release: v3.2.0"
+  },
+  {
+    "hash": "458f17a",
+    "message": "feat(rpc): make send app-free and stream its output through fds"
+  },
+  {
+    "hash": "b3a9bba",
+    "message": "refactor(rpc): drop the ping"
+  },
+  {
+    "hash": "3700555",
+    "message": "refactor(rpc): move the server machinery into its own module"
+  },
+  {
+    "hash": "66e6396",
+    "message": "fix(rpc): isolate app context, SIGTERM, and fd restore per request"
+  },
+  {
+    "hash": "cc32837",
+    "message": "feat(rpc): stream command output through passed file descriptors"
+  },
+  {
+    "hash": "81b43c5",
+    "message": "perf(rpc): reuse the app across requests and add a pid file"
+  },
+  {
+    "hash": "3576960",
+    "message": "refactor(rpc): switch to JSON lines over a Unix domain socket"
+  },
+  {
+    "hash": "348acc1",
+    "message": "fix: turn off warning SECRET_KEY"
+  },
+  {
+    "hash": "06c1ee6",
+    "message": "fix: turn off warning for RATELIMIT_STORAGE_URI"
+  },
+  {
+    "hash": "091cfa9",
+    "message": "chore(ext): remove debug warning"
+  },
+  {
+    "hash": "294a726",
+    "message": "feat(cli): add RPCServer commands"
+  },
+  {
+    "hash": "e1db4b3",
+    "message": "release: v3.1.2"
+  },
+  {
+    "hash": "67a6125",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "598c9c1",
+    "message": "chore(cleanup): remove outdated and unnecessary file"
+  },
+  {
+    "hash": "c70034e",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "18a20ad",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "ff2ca4c",
+    "message": "\ud83d\udce6 release: v3.1.1"
+  },
+  {
+    "hash": "5022e3d",
+    "message": "fix(tests): patch correct module level for limiter"
+  },
+  {
+    "hash": "27ab966",
+    "message": "fix(installation): add Python 3.9-compatible Flask-Limiter version"
+  },
+  {
+    "hash": "ed25592",
+    "message": "fix: Limiter cross-test influence"
+  },
+  {
+    "hash": "12e3f79",
+    "message": "fix(tests): flask-limiter constructor change"
+  },
+  {
+    "hash": "4e688d3",
+    "message": "\ud83d\udce6 release: v3.1.0"
+  },
+  {
+    "hash": "485ab13",
+    "message": "feat(ext): provide easier-to-access Flask-Limiter instance"
+  },
+  {
+    "hash": "1e5f767",
+    "message": "feat(ext): provide easier-to-access Flask-Talisman instance"
+  },
+  {
+    "hash": "0d9c958",
+    "message": "chore: remove unused imports and apply linter fixes"
+  },
+  {
+    "hash": "153deda",
+    "message": "release: v3.0.0"
+  },
+  {
+    "hash": "8f12b87",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "56246e0",
+    "message": "tests: extend support to Python 3.14"
+  },
+  {
+    "hash": "fcde4f4",
+    "message": "release: v2.3.0"
+  },
+  {
+    "hash": "84a2b7b",
+    "message": "fix: pkg_resources DeprecationWarning"
+  },
+  {
+    "hash": "8b8950a",
+    "message": "fix: click breaking changes"
+  },
+  {
+    "hash": "735f5bc",
+    "message": ":package: release: v2.2.0"
+  },
+  {
+    "hash": "bc72e3e",
+    "message": "factory: pass converters to create_invenio_apps_builder_factory"
+  },
+  {
+    "hash": "22f9472",
+    "message": ":package: release: v2.1.0"
+  },
+  {
+    "hash": "a07b66a",
+    "message": "limiter/tests: refactor current_user access"
+  },
+  {
+    "hash": "f54df6d",
+    "message": "urls: integrate invenio_url_for mechanism in app factory"
+  },
+  {
+    "hash": "c406742",
+    "message": "limiter: replace usage of `pkg_resources` with import (#94)"
+  },
+  {
+    "hash": "b904bb7",
+    "message": "release: v2.0.0"
+  },
+  {
+    "hash": "d5de223",
+    "message": "factory: change to new TRUSTS_HOSTS from flask"
+  },
+  {
+    "hash": "145d77d",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "452b567",
+    "message": "release: v1.5.1"
+  },
+  {
+    "hash": "7a13252",
+    "message": "setup: change to reusable workflows"
+  },
+  {
+    "hash": "777bdbe",
+    "message": "setup: pin dependencies"
+  },
+  {
+    "hash": "818d249",
+    "message": "config: updated rate limit for password"
+  },
+  {
+    "hash": "b445c78",
+    "message": "security: added default rate limits for endpoints"
+  },
+  {
+    "hash": "7d67d4c",
+    "message": "release: v1.5.0"
+  },
+  {
+    "hash": "c806694",
+    "message": "ci: upgrade tests matrix"
+  }
+]

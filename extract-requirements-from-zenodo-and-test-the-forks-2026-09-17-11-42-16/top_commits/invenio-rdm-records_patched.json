@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "2e00e683",
+    "message": "feat: added quota increase to uppy uploader"
+  },
+  {
+    "hash": "93519a63",
+    "message": "Surface file-modification (grace period) UI in the Uppy uploader"
+  },
+  {
+    "hash": "9f6026f2",
+    "message": "fix(quota): drop parent_id FK so custom models can use record quota"
+  },
+  {
+    "hash": "5e5ae0ce",
+    "message": "deposit: ensure draft review is up-to-date before reserving PID"
+  },
+  {
+    "hash": "d0a92710",
+    "message": "Running extra service components"
+  },
+  {
+    "hash": "6bd1d86b",
+    "message": "Passing additional args in PIDsComponent permission checking"
+  },
+  {
+    "hash": "ccb3f6c6",
+    "message": "feat: added config variables for collections service"
+  },
+  {
+    "hash": "49a4baef",
+    "message": "Configurable resource and service classes"
+  },
+  {
+    "hash": "5dd38520",
+    "message": "\ud83d\udce6 release: v32.3.1"
+  },
+  {
+    "hash": "a7f41595",
+    "message": "fix(custom-fields): add correct landing page search attribute"
+  },
+  {
+    "hash": "3aebbca7",
+    "message": "\ud83d\udce6 release: v32.3.0"
+  },
+  {
+    "hash": "c1100d73",
+    "message": "fix(quota): hide labels in narrow bars"
+  },
+  {
+    "hash": "e6c92650",
+    "message": "feat(quota): refactor quota management logic"
+  },
+  {
+    "hash": "94f6dff5",
+    "message": "fix(access): retain expiry on link updates"
+  },
+  {
+    "hash": "ba831f88",
+    "message": "feat(translations): add Swedish translations for date, relation, and resource types"
+  },
+  {
+    "hash": "5dfdac64",
+    "message": "\ud83d\udce6 release: v32.2.2"
+  },
+  {
+    "hash": "ae0c5763",
+    "message": "fix: update crossref serializer fixture"
+  },
+  {
+    "hash": "40439ece",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "a9d3aad2",
+    "message": "release: v32.2.1"
+  },
+  {
+    "hash": "dab0f4a2",
+    "message": "tests: update citation for bug fixes in citeproc-py 0.10.7"
+  },
+  {
+    "hash": "e18f932c",
+    "message": "release: v32.2.0"
+  },
+  {
+    "hash": "ae595a32",
+    "message": "feat(quota): implement policy evaluation for allowing users"
+  },
+  {
+    "hash": "f5ada06d",
+    "message": "fix(quota): don't cast record id to int"
+  },
+  {
+    "hash": "d2e64a34",
+    "message": "release: v32.1.0"
+  },
+  {
+    "hash": "de4c12e6",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "8a39db22",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "c208c426",
+    "message": "feat(review): review each rec. version class"
+  },
+  {
+    "hash": "df5b2fbe",
+    "message": "release: v32.0.7"
+  },
+  {
+    "hash": "9fa0a38d",
+    "message": "bump commonmeta version"
+  },
+  {
+    "hash": "1462a8fe",
+    "message": "add test"
+  },
+  {
+    "hash": "bbd3ea10",
+    "message": "fix: add IsVersionOf relations to concept doi in crossref serializer"
+  },
+  {
+    "hash": "a1aeb027",
+    "message": "release: 32.0.6"
+  },
+  {
+    "hash": "e43c972b",
+    "message": "mappings: disable draft geometry doc values"
+  },
+  {
+    "hash": "e6a4e25a",
+    "message": "release: v32.0.5"
+  },
+  {
+    "hash": "7554d89c",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "502a587a",
+    "message": "chore(cleanup): remove outdated and unnecessary files"
+  },
+  {
+    "hash": "b23ca605",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "ced4f864",
+    "message": "release: v32.0.4"
+  },
+  {
+    "hash": "758eeef9",
+    "message": "fix: fixed isParentAlreadyPublished not working on /new"
+  },
+  {
+    "hash": "8169affb",
+    "message": "feat: add support for crossref schema 5.5 via commonmeta-py"
+  },
+  {
+    "hash": "95e3e58c",
+    "message": "fix(alembic): alter index safely"
+  },
+  {
+    "hash": "b87d5bdc",
+    "message": "release: v32.0.3"
+  },
+  {
+    "hash": "32cc08ab",
+    "message": "chore(git): ignore uv.lock"
+  },
+  {
+    "hash": "dbad58f0",
+    "message": "release: v32.0.2"
+  },
+  {
+    "hash": "84f2cf94",
+    "message": "fix(iiif): add handlers for more possible IIIF errors"
+  },
+  {
+    "hash": "fa90b223",
+    "message": "fix(iiif): validate expected shape of identifiers"
+  },
+  {
+    "hash": "5dbff1ea",
+    "message": "fix(tests): add tests for invalid identifiers in IIIF endpoints"
+  },
+  {
+    "hash": "93c5372c",
+    "message": "fix(citation): use harvard-cite-them-right and setup _extras in tests"
+  },
+  {
+    "hash": "79a08e9a",
+    "message": "tests: update citation string for csl 1.0.2"
+  },
+  {
+    "hash": "a5f11351",
+    "message": "fix(checks): resolve section labels"
+  }
+]

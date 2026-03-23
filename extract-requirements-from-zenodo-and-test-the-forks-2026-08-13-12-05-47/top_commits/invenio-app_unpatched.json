@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "e1db4b3",
+    "message": "release: v3.1.2"
+  },
+  {
+    "hash": "67a6125",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "598c9c1",
+    "message": "chore(cleanup): remove outdated and unnecessary file"
+  },
+  {
+    "hash": "c70034e",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "18a20ad",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "ff2ca4c",
+    "message": "\ud83d\udce6 release: v3.1.1"
+  },
+  {
+    "hash": "5022e3d",
+    "message": "fix(tests): patch correct module level for limiter"
+  },
+  {
+    "hash": "27ab966",
+    "message": "fix(installation): add Python 3.9-compatible Flask-Limiter version"
+  },
+  {
+    "hash": "ed25592",
+    "message": "fix: Limiter cross-test influence"
+  },
+  {
+    "hash": "12e3f79",
+    "message": "fix(tests): flask-limiter constructor change"
+  },
+  {
+    "hash": "4e688d3",
+    "message": "\ud83d\udce6 release: v3.1.0"
+  },
+  {
+    "hash": "485ab13",
+    "message": "feat(ext): provide easier-to-access Flask-Limiter instance"
+  },
+  {
+    "hash": "1e5f767",
+    "message": "feat(ext): provide easier-to-access Flask-Talisman instance"
+  },
+  {
+    "hash": "0d9c958",
+    "message": "chore: remove unused imports and apply linter fixes"
+  },
+  {
+    "hash": "153deda",
+    "message": "release: v3.0.0"
+  },
+  {
+    "hash": "8f12b87",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "56246e0",
+    "message": "tests: extend support to Python 3.14"
+  },
+  {
+    "hash": "fcde4f4",
+    "message": "release: v2.3.0"
+  },
+  {
+    "hash": "84a2b7b",
+    "message": "fix: pkg_resources DeprecationWarning"
+  },
+  {
+    "hash": "8b8950a",
+    "message": "fix: click breaking changes"
+  },
+  {
+    "hash": "735f5bc",
+    "message": ":package: release: v2.2.0"
+  },
+  {
+    "hash": "bc72e3e",
+    "message": "factory: pass converters to create_invenio_apps_builder_factory"
+  },
+  {
+    "hash": "22f9472",
+    "message": ":package: release: v2.1.0"
+  },
+  {
+    "hash": "a07b66a",
+    "message": "limiter/tests: refactor current_user access"
+  },
+  {
+    "hash": "f54df6d",
+    "message": "urls: integrate invenio_url_for mechanism in app factory"
+  },
+  {
+    "hash": "c406742",
+    "message": "limiter: replace usage of `pkg_resources` with import (#94)"
+  },
+  {
+    "hash": "b904bb7",
+    "message": "release: v2.0.0"
+  },
+  {
+    "hash": "d5de223",
+    "message": "factory: change to new TRUSTS_HOSTS from flask"
+  },
+  {
+    "hash": "145d77d",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "452b567",
+    "message": "release: v1.5.1"
+  },
+  {
+    "hash": "7a13252",
+    "message": "setup: change to reusable workflows"
+  },
+  {
+    "hash": "777bdbe",
+    "message": "setup: pin dependencies"
+  },
+  {
+    "hash": "818d249",
+    "message": "config: updated rate limit for password"
+  },
+  {
+    "hash": "b445c78",
+    "message": "security: added default rate limits for endpoints"
+  },
+  {
+    "hash": "7d67d4c",
+    "message": "release: v1.5.0"
+  },
+  {
+    "hash": "c806694",
+    "message": "ci: upgrade tests matrix"
+  },
+  {
+    "hash": "6e6e231",
+    "message": "setup: upper pin Invenio deps"
+  },
+  {
+    "hash": "35f66e1",
+    "message": "ext: fix typo on compat layer"
+  },
+  {
+    "hash": "12902cc",
+    "message": "installation: bump modules to support python v3.12"
+  },
+  {
+    "hash": "a98c3e0",
+    "message": "release: v1.4.0"
+  },
+  {
+    "hash": "fa9a057",
+    "message": "setup: add invenio-base"
+  },
+  {
+    "hash": "8da535a",
+    "message": "factory: add finalize api entrypoint"
+  },
+  {
+    "hash": "5db9f33",
+    "message": "factory: renamed entrypoint"
+  },
+  {
+    "hash": "cb6aa0a",
+    "message": "app_factory: add init functions entry points"
+  },
+  {
+    "hash": "072c565",
+    "message": "add .git-blame-ignore-revs"
+  },
+  {
+    "hash": "11b2583",
+    "message": "fix docs compatibilty problem with Sphinx>=5.0.0"
+  },
+  {
+    "hash": "096d3b3",
+    "message": "bugfix: the DEBUG has to be set explicitly"
+  },
+  {
+    "hash": "6afc21d",
+    "message": "bugfix use deepcopy to not copy and use the reference"
+  },
+  {
+    "hash": "58f5b26",
+    "message": "bugfix: don't add if value already exists"
+  },
+  {
+    "hash": "2fe9941",
+    "message": "global: clean test infrastructure"
+  }
+]

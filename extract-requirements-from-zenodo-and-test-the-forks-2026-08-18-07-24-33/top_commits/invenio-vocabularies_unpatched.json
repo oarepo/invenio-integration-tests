@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "ef5e833",
+    "message": "release: v13.1.1"
+  },
+  {
+    "hash": "3777ad8",
+    "message": "fix(contrib): display all funders api search results"
+  },
+  {
+    "hash": "dbb559e",
+    "message": "release: v13.1.0"
+  },
+  {
+    "hash": "c882b68",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "d92446d",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "c9fa814",
+    "message": "release: v13.0.1"
+  },
+  {
+    "hash": "081308d",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "0dd318e",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "a5f36cc",
+    "message": "fix(datastreams): OpenAIREHTTPReader allowing to match several tar filenames"
+  },
+  {
+    "hash": "b7cbcd4",
+    "message": "fix(contrib): adding custom funders"
+  },
+  {
+    "hash": "7b9f4f6",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "d3ccbd6",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "484266c",
+    "message": "funding: make funding item button order match"
+  },
+  {
+    "hash": "783e47d",
+    "message": "fix(datastreams): fix OAIPMHReader default parameters"
+  },
+  {
+    "hash": "f45fad6",
+    "message": "release: v13.0.0"
+  },
+  {
+    "hash": "4fa8ce3",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "d918815",
+    "message": "fix(schema): use SanitizedUnicode for i18n_strings values"
+  },
+  {
+    "hash": "11dc770",
+    "message": "release: v12.0.0"
+  },
+  {
+    "hash": "61fb785",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "9ea6328",
+    "message": "release: v11.1.2"
+  },
+  {
+    "hash": "f3550cd",
+    "message": "fix(datastreams): replace f-strings in logging calls with %s formatting   * Sentry groups issues by the unformatted message template. Using f-strings causes each unique interpolated value to create a separate issue, making error tracking noisy and ungrouped."
+  },
+  {
+    "hash": "8c99659",
+    "message": "fix(datastreams): Log ORCID read errors as warnings * This will fix the issue of read errors getting logged to sentry due to wrongly being marked as errors. Because we should only mark issues as ERROR/EXCEPTION when there are bugs in the code but most read errors are due to the data from ORCID being incomplete"
+  },
+  {
+    "hash": "e20793f",
+    "message": "\ud83d\udce6 release: v11.1.1"
+  },
+  {
+    "hash": "fc20829",
+    "message": "fix(names): skip invalid ORCID entries"
+  },
+  {
+    "hash": "935a99b",
+    "message": "\ud83d\udce6 release: v11.1.0"
+  },
+  {
+    "hash": "be71648",
+    "message": "feat: added run_subtasks flag in datastream writer"
+  },
+  {
+    "hash": "8f90b75",
+    "message": "release: v11.0.1"
+  },
+  {
+    "hash": "427a06e",
+    "message": "fix(setup): register orcid names job"
+  },
+  {
+    "hash": "8655ec5",
+    "message": "service: fix read_all permission from search -> read"
+  },
+  {
+    "hash": "77db728",
+    "message": "release: v11.0.0"
+  },
+  {
+    "hash": "0d442d3",
+    "message": "change(setup): bump invenio-jobs"
+  },
+  {
+    "hash": "cbec9be",
+    "message": "jobs: registered job to import euroscivoc subjects"
+  },
+  {
+    "hash": "3ea5377",
+    "message": "awards: updated config with openaire funder prefix"
+  },
+  {
+    "hash": "08375f4",
+    "message": "fix(black): for python3.9"
+  },
+  {
+    "hash": "ac7ccf2",
+    "message": "\ud83d\udce6 release: v10.1.0"
+  },
+  {
+    "hash": "a24fed4",
+    "message": "datastream: formatting and refactor updates"
+  },
+  {
+    "hash": "c464fe4",
+    "message": "datastream: added user agent in reader http request"
+  },
+  {
+    "hash": "fb68221",
+    "message": "orcid: replaced error with warning for missing name"
+  },
+  {
+    "hash": "d56436c",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "48398c6",
+    "message": "refactor: context_schema instead of self.context"
+  },
+  {
+    "hash": "0aea69f",
+    "message": "refactor: deduplicate code ModePIDFieldVocabularyMixin"
+  },
+  {
+    "hash": "1324930",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "bb47095",
+    "message": "refactor: refactor some resource tests for clarity + rm unused imports"
+  },
+  {
+    "hash": "423f878",
+    "message": "chore+fix: replace deprecated usage of Link [+]"
+  },
+  {
+    "hash": "8daca98",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "3dd3a63",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "407db1f",
+    "message": "release: v9.1.2"
+  },
+  {
+    "hash": "5406268",
+    "message": "Updated file pattern in ROR dump (#521)"
+  },
+  {
+    "hash": "befbc80",
+    "message": "fix: ChangedInMarshmallow4Warning"
+  },
+  {
+    "hash": "1a6e16b",
+    "message": "release: v9.1.1"
+  }
+]

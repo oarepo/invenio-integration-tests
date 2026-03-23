@@ -1,0 +1,223 @@
+{
+  "dependencies": [
+    {
+      "github_entry": {
+        "_extra": {},
+        "default_branch": null,
+        "exclude": [
+          "invenio-xrootd",
+          "invenio-swh"
+        ],
+        "extras": [
+          "tests",
+          "opensearch2",
+          "s3",
+          "devs",
+          "s3fs",
+          "oaipmh",
+          "rdf",
+          "sparql",
+          "postgresql",
+          "admin"
+        ],
+        "freeze": [
+          "setuptools<82.0.0"
+        ],
+        "include": [
+          "invenio-.*",
+          "pytest-invenio",
+          "citeproc-py-styles"
+        ],
+        "install": [],
+        "org": "inveniosoftware",
+        "package_map": {},
+        "slow_packages": {
+          "invenio-rdm-records": [
+            "tests/resources/test_iiif_image_api.py",
+            "tests/resources/test_resources_review.py",
+            "tests/services/test_rdm_service.py"
+          ]
+        },
+        "test": [
+          "./run-tests.sh"
+        ]
+      },
+      "patched_reference": {
+        "actual_version": "0.1.6",
+        "base": null,
+        "branch": null,
+        "commit": "b6c4ecf2efad340107e3ce0bfe8b83b942e55579",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "citeproc-py-styles",
+        "pr": null,
+        "pr_info": null,
+        "repo": "citeproc-py-styles"
+      },
+      "patches": [
+        {
+          "actual_version": "0.1.6",
+          "base": "v0.1.6",
+          "branch": "oarepo-feature-czech-iso-citation-from-0.1.6",
+          "commit": "63242cb2f0f6e6dd1a44d4561616bdc1795ab964",
+          "commits_from_version": null,
+          "org": "oarepo",
+          "package": "citeproc-py-styles",
+          "pr": null,
+          "pr_info": {
+            "commits": [
+              "d981609528b75aa7f1cdc7f56105328be0bbab83",
+              "513d1a7958cb88556eb18ea889a3fcd0244ff19c",
+              "a75772f9468ec0f95cde6a45ddf5aa9b5062dae7",
+              "63242cb2f0f6e6dd1a44d4561616bdc1795ab964"
+            ],
+            "source_branch": "oarepo-feature-czech-iso-citation-from-0.1.6",
+            "source_org": "oarepo",
+            "source_repo": "citeproc-py-styles"
+          },
+          "repo": "citeproc-py-styles",
+          "versions": [
+            {
+              "operator": ">=",
+              "version": "0.1.6"
+            }
+          ]
+        }
+      ],
+      "reference": {
+        "actual_version": "0.1.6",
+        "base": null,
+        "branch": "v0.1.6",
+        "commit": "b6c4ecf2efad340107e3ce0bfe8b83b942e55579",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "citeproc-py-styles",
+        "pr": null,
+        "pr_info": null,
+        "repo": "citeproc-py-styles"
+      },
+      "unpatched_reference": {
+        "actual_version": "0.1.6",
+        "base": null,
+        "branch": null,
+        "commit": "b6c4ecf2efad340107e3ce0bfe8b83b942e55579",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "citeproc-py-styles",
+        "pr": null,
+        "pr_info": null,
+        "repo": "citeproc-py-styles"
+      }
+    }
+  ],
+  "package": {
+    "github_entry": {
+      "_extra": {},
+      "default_branch": null,
+      "exclude": [
+        "invenio-xrootd",
+        "invenio-swh"
+      ],
+      "extras": [
+        "tests",
+        "opensearch2",
+        "s3",
+        "devs",
+        "s3fs",
+        "oaipmh",
+        "rdf",
+        "sparql",
+        "postgresql",
+        "admin"
+      ],
+      "freeze": [
+        "setuptools<82.0.0"
+      ],
+      "include": [
+        "invenio-.*",
+        "pytest-invenio",
+        "citeproc-py-styles"
+      ],
+      "install": [],
+      "org": "inveniosoftware",
+      "package_map": {},
+      "slow_packages": {
+        "invenio-rdm-records": [
+          "tests/resources/test_iiif_image_api.py",
+          "tests/resources/test_resources_review.py",
+          "tests/services/test_rdm_service.py"
+        ]
+      },
+      "test": [
+        "./run-tests.sh"
+      ]
+    },
+    "patched_reference": {
+      "actual_version": "0.1.6",
+      "base": null,
+      "branch": null,
+      "commit": "b6c4ecf2efad340107e3ce0bfe8b83b942e55579",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "citeproc-py-styles",
+      "pr": null,
+      "pr_info": null,
+      "repo": "citeproc-py-styles"
+    },
+    "patches": [
+      {
+        "actual_version": "0.1.6",
+        "base": "v0.1.6",
+        "branch": "oarepo-feature-czech-iso-citation-from-0.1.6",
+        "commit": "63242cb2f0f6e6dd1a44d4561616bdc1795ab964",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "citeproc-py-styles",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "d981609528b75aa7f1cdc7f56105328be0bbab83",
+            "513d1a7958cb88556eb18ea889a3fcd0244ff19c",
+            "a75772f9468ec0f95cde6a45ddf5aa9b5062dae7",
+            "63242cb2f0f6e6dd1a44d4561616bdc1795ab964"
+          ],
+          "source_branch": "oarepo-feature-czech-iso-citation-from-0.1.6",
+          "source_org": "oarepo",
+          "source_repo": "citeproc-py-styles"
+        },
+        "repo": "citeproc-py-styles",
+        "versions": [
+          {
+            "operator": ">=",
+            "version": "0.1.6"
+          }
+        ]
+      }
+    ],
+    "reference": {
+      "actual_version": "0.1.6",
+      "base": null,
+      "branch": "v0.1.6",
+      "commit": "b6c4ecf2efad340107e3ce0bfe8b83b942e55579",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "citeproc-py-styles",
+      "pr": null,
+      "pr_info": null,
+      "repo": "citeproc-py-styles"
+    },
+    "unpatched_reference": {
+      "actual_version": "0.1.6",
+      "base": null,
+      "branch": null,
+      "commit": "b6c4ecf2efad340107e3ce0bfe8b83b942e55579",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "citeproc-py-styles",
+      "pr": null,
+      "pr_info": null,
+      "repo": "citeproc-py-styles"
+    }
+  },
+  "status": "success"
+}

@@ -1,0 +1,223 @@
+{
+  "dependencies": [
+    {
+      "github_entry": {
+        "_extra": {},
+        "default_branch": null,
+        "exclude": [
+          "invenio-xrootd",
+          "invenio-swh"
+        ],
+        "extras": [
+          "tests",
+          "opensearch2",
+          "s3",
+          "devs",
+          "s3fs",
+          "oaipmh",
+          "rdf",
+          "sparql",
+          "postgresql",
+          "admin"
+        ],
+        "freeze": [
+          "setuptools<82.0.0"
+        ],
+        "include": [
+          "invenio-.*",
+          "pytest-invenio",
+          "citeproc-py-styles"
+        ],
+        "install": [],
+        "org": "inveniosoftware",
+        "package_map": {},
+        "slow_packages": {
+          "invenio-rdm-records": [
+            "tests/resources/test_iiif_image_api.py",
+            "tests/resources/test_resources_review.py",
+            "tests/services/test_rdm_service.py"
+          ]
+        },
+        "test": [
+          "./run-tests.sh"
+        ]
+      },
+      "patched_reference": {
+        "actual_version": "2.1.1",
+        "base": null,
+        "branch": null,
+        "commit": "9a8253b630a5769b5e5f38ccdaa93433bed9f111",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "invenio-jsonschemas",
+        "pr": null,
+        "pr_info": null,
+        "repo": "invenio-jsonschemas"
+      },
+      "patches": [
+        {
+          "actual_version": "2.0.0",
+          "base": "v2.0.0",
+          "branch": "oarepo-feature-importlib-files",
+          "commit": "bd6d5057f1bcfbad128467b9be8bf774a715f9fe",
+          "commits_from_version": null,
+          "org": "oarepo",
+          "package": "invenio-jsonschemas",
+          "pr": null,
+          "pr_info": {
+            "commits": [
+              "776c7265fa4ed6dfee272b3cb73811796c0b6865",
+              "7159b0c52856e146338dace5d04f1d0cfa891c4a",
+              "65e86a91d4b768cc998ad6ed8ffbf202f4f384d0",
+              "7468a4a9dc71a5d78fbe5761a1677ad2409da466",
+              "cc0811dc68a634e7e5b33d8cc7ab913a390f8896",
+              "e2c9149f6313b492a4a42c1e0f8f88f64bdf7528",
+              "82c6523e5ae89f22b116c99c8ebb7c911741b818",
+              "361613c6a3be4d29538fa6f9e0c1dc6886e0673e",
+              "bd6d5057f1bcfbad128467b9be8bf774a715f9fe"
+            ],
+            "source_branch": "oarepo-feature-importlib-files",
+            "source_org": "oarepo",
+            "source_repo": "invenio-jsonschemas"
+          },
+          "repo": "invenio-jsonschemas",
+          "versions": []
+        }
+      ],
+      "reference": {
+        "actual_version": "2.1.1",
+        "base": null,
+        "branch": "v2.1.1",
+        "commit": "9a8253b630a5769b5e5f38ccdaa93433bed9f111",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "invenio-jsonschemas",
+        "pr": null,
+        "pr_info": null,
+        "repo": "invenio-jsonschemas"
+      },
+      "unpatched_reference": {
+        "actual_version": "2.1.1",
+        "base": null,
+        "branch": null,
+        "commit": "9a8253b630a5769b5e5f38ccdaa93433bed9f111",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "invenio-jsonschemas",
+        "pr": null,
+        "pr_info": null,
+        "repo": "invenio-jsonschemas"
+      }
+    }
+  ],
+  "package": {
+    "github_entry": {
+      "_extra": {},
+      "default_branch": null,
+      "exclude": [
+        "invenio-xrootd",
+        "invenio-swh"
+      ],
+      "extras": [
+        "tests",
+        "opensearch2",
+        "s3",
+        "devs",
+        "s3fs",
+        "oaipmh",
+        "rdf",
+        "sparql",
+        "postgresql",
+        "admin"
+      ],
+      "freeze": [
+        "setuptools<82.0.0"
+      ],
+      "include": [
+        "invenio-.*",
+        "pytest-invenio",
+        "citeproc-py-styles"
+      ],
+      "install": [],
+      "org": "inveniosoftware",
+      "package_map": {},
+      "slow_packages": {
+        "invenio-rdm-records": [
+          "tests/resources/test_iiif_image_api.py",
+          "tests/resources/test_resources_review.py",
+          "tests/services/test_rdm_service.py"
+        ]
+      },
+      "test": [
+        "./run-tests.sh"
+      ]
+    },
+    "patched_reference": {
+      "actual_version": "2.1.1",
+      "base": null,
+      "branch": null,
+      "commit": "9a8253b630a5769b5e5f38ccdaa93433bed9f111",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-jsonschemas",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-jsonschemas"
+    },
+    "patches": [
+      {
+        "actual_version": "2.0.0",
+        "base": "v2.0.0",
+        "branch": "oarepo-feature-importlib-files",
+        "commit": "bd6d5057f1bcfbad128467b9be8bf774a715f9fe",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-jsonschemas",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "776c7265fa4ed6dfee272b3cb73811796c0b6865",
+            "7159b0c52856e146338dace5d04f1d0cfa891c4a",
+            "65e86a91d4b768cc998ad6ed8ffbf202f4f384d0",
+            "7468a4a9dc71a5d78fbe5761a1677ad2409da466",
+            "cc0811dc68a634e7e5b33d8cc7ab913a390f8896",
+            "e2c9149f6313b492a4a42c1e0f8f88f64bdf7528",
+            "82c6523e5ae89f22b116c99c8ebb7c911741b818",
+            "361613c6a3be4d29538fa6f9e0c1dc6886e0673e",
+            "bd6d5057f1bcfbad128467b9be8bf774a715f9fe"
+          ],
+          "source_branch": "oarepo-feature-importlib-files",
+          "source_org": "oarepo",
+          "source_repo": "invenio-jsonschemas"
+        },
+        "repo": "invenio-jsonschemas",
+        "versions": []
+      }
+    ],
+    "reference": {
+      "actual_version": "2.1.1",
+      "base": null,
+      "branch": "v2.1.1",
+      "commit": "9a8253b630a5769b5e5f38ccdaa93433bed9f111",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-jsonschemas",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-jsonschemas"
+    },
+    "unpatched_reference": {
+      "actual_version": "2.1.1",
+      "base": null,
+      "branch": null,
+      "commit": "9a8253b630a5769b5e5f38ccdaa93433bed9f111",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-jsonschemas",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-jsonschemas"
+    }
+  },
+  "status": "success"
+}

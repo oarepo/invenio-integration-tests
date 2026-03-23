@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "f9435c3",
+    "message": "release: v9.1.0"
+  },
+  {
+    "hash": "3032fab",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "49bc8c9",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "dbb3b03",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "f9969d3",
+    "message": "release: v9.0.2"
+  },
+  {
+    "hash": "9261460",
+    "message": "fix(tests): create `Page` fixtures one by one to space out creation"
+  },
+  {
+    "hash": "58c8ece",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "a0547d8",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "c7079f3",
+    "message": "release: v9.0.1"
+  },
+  {
+    "hash": "8bd5c8a",
+    "message": "fix: initialize jinja_env and app so dynamic pages render"
+  },
+  {
+    "hash": "c51313b",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "9fc1bc5",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "d566c57",
+    "message": "release: v9.0.0"
+  },
+  {
+    "hash": "163deb7",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "d62ef93",
+    "message": "release: v8.0.0"
+  },
+  {
+    "hash": "06848f7",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "5b2e08e",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "2d84e85",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "84f2c13",
+    "message": ":package: release: v7.3.0"
+  },
+  {
+    "hash": "3c53692",
+    "message": "refactor!: replace Link usage by EndpointLink"
+  },
+  {
+    "hash": "5b95f87",
+    "message": "\ud83d\udce6 release: v7.2.1"
+  },
+  {
+    "hash": "ba996b6",
+    "message": "i18n: pulled translations (#111)"
+  },
+  {
+    "hash": "3c970ab",
+    "message": "release: v7.2.0"
+  },
+  {
+    "hash": "e266028",
+    "message": "fix: setuptools require underscores instead of dashes"
+  },
+  {
+    "hash": "5258dc7",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "d80d691",
+    "message": "release: v7.1.0"
+  },
+  {
+    "hash": "a6fb64e",
+    "message": "chore: fix classmethod argument names"
+  },
+  {
+    "hash": "e786c7a",
+    "message": "service: simplify search filtering logic"
+  },
+  {
+    "hash": "2c43b2b",
+    "message": "fix: SADeprecationWarning"
+  },
+  {
+    "hash": "ed66c36",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "b742094",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "732b7da",
+    "message": "fix: marshmallow DeprecationWarning"
+  },
+  {
+    "hash": "44764ad",
+    "message": "fix: add configuration"
+  },
+  {
+    "hash": "77918d3",
+    "message": "fix: setuptools require underscores instead of dashes"
+  },
+  {
+    "hash": "2e5c4d3",
+    "message": "i18n: removed deprecated messages"
+  },
+  {
+    "hash": "23163f9",
+    "message": "\ud83d\udce6 release: v6.0.0"
+  },
+  {
+    "hash": "9b06291",
+    "message": "global: add i18n support via \"lang\" column (#99)"
+  },
+  {
+    "hash": "5a0aa47",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "1ccf092",
+    "message": "comp: make compatible to flask-sqlalchemy>=3.1"
+  },
+  {
+    "hash": "2994637",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "64ee3ee",
+    "message": "release: v4.1.2"
+  },
+  {
+    "hash": "190acc4",
+    "message": "setup: change to reusable workflows"
+  },
+  {
+    "hash": "7f859bb",
+    "message": "setup: pin dependencies"
+  },
+  {
+    "hash": "c8fd785",
+    "message": "release: v4.1.1"
+  },
+  {
+    "hash": "75b15b3",
+    "message": "fix: add compatibility layer to move to flask>=3"
+  },
+  {
+    "hash": "5018909",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "813caae",
+    "message": "\ud83d\udce6 release: v4.1.0"
+  },
+  {
+    "hash": "9924301",
+    "message": "ci: use reusable workflows"
+  },
+  {
+    "hash": "abee454",
+    "message": "http headers: use and adjust vnd.inveniordm.v1+json http accept header"
+  },
+  {
+    "hash": "584ce65",
+    "message": "setup: update dependencies"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "dependencies": [],
+  "package": {
+    "github_entry": {
+      "_extra": {},
+      "default_branch": null,
+      "exclude": [
+        "invenio-xrootd",
+        "invenio-swh"
+      ],
+      "extras": [
+        "tests",
+        "opensearch2",
+        "s3",
+        "devs",
+        "s3fs",
+        "oaipmh",
+        "rdf",
+        "sparql",
+        "postgresql",
+        "admin"
+      ],
+      "freeze": [
+        "setuptools<82.0.0"
+      ],
+      "include": [
+        "invenio-.*",
+        "pytest-invenio",
+        "citeproc-py-styles"
+      ],
+      "install": [],
+      "org": "inveniosoftware",
+      "package_map": {},
+      "slow_packages": {
+        "invenio-rdm-records": [
+          "tests/resources/test_iiif_image_api.py",
+          "tests/resources/test_resources_review.py",
+          "tests/services/test_rdm_service.py"
+        ]
+      },
+      "test": [
+        "./run-tests.sh"
+      ]
+    },
+    "patched_reference": null,
+    "patches": [],
+    "reference": {
+      "actual_version": "4.1.0",
+      "base": null,
+      "branch": "v4.1.0",
+      "commit": "2ea18c9a0b084d978d7e0cad48c0fb0bb99ef9a9",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-formatter",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-formatter"
+    },
+    "unpatched_reference": {
+      "actual_version": "4.1.0",
+      "base": null,
+      "branch": null,
+      "commit": "2ea18c9a0b084d978d7e0cad48c0fb0bb99ef9a9",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-formatter",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-formatter"
+    }
+  },
+  "status": "skipped"
+}

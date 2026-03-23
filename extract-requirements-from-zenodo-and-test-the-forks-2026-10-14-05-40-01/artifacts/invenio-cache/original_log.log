@@ -1,0 +1,111 @@
+ redis Pulling 
+ 7fd1ebe418b5 Pulling fs layer 
+ ec5b838b30d5 Pulling fs layer 
+ 6988465984f0 Pulling fs layer 
+ faaaf6ba362b Pulling fs layer 
+ c1162fec059b Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 88b125c05b23 Pulling fs layer 
+ faaaf6ba362b Waiting 
+ c1162fec059b Waiting 
+ 4f4fb700ef54 Waiting 
+ 88b125c05b23 Waiting 
+ 6988465984f0 Downloading [==================================================>]     874B/874B
+ 6988465984f0 Verifying Checksum 
+ 6988465984f0 Download complete 
+ ec5b838b30d5 Downloading [==================================================>]  1.103kB/1.103kB
+ ec5b838b30d5 Verifying Checksum 
+ ec5b838b30d5 Download complete 
+ 7fd1ebe418b5 Downloading [>                                                  ]  294.3kB/28.25MB
+ 7fd1ebe418b5 Downloading [=====>                                             ]  2.949MB/28.25MB
+ c1162fec059b Downloading [==================================================>]      96B/96B
+ c1162fec059b Verifying Checksum 
+ c1162fec059b Download complete 
+ faaaf6ba362b Downloading [>                                                  ]  179.6kB/17.64MB
+ 7fd1ebe418b5 Downloading [======================================>            ]  21.82MB/28.25MB
+ 7fd1ebe418b5 Verifying Checksum 
+ 7fd1ebe418b5 Download complete 
+ 7fd1ebe418b5 Extracting [>                                                  ]  294.9kB/28.25MB
+ faaaf6ba362b Downloading [======>                                            ]  2.342MB/17.64MB
+ 7fd1ebe418b5 Extracting [===========>                                       ]  6.488MB/28.25MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ faaaf6ba362b Downloading [=============================================>     ]  16.22MB/17.64MB
+ faaaf6ba362b Verifying Checksum 
+ faaaf6ba362b Download complete 
+ 88b125c05b23 Downloading [==================================================>]     601B/601B
+ 88b125c05b23 Verifying Checksum 
+ 88b125c05b23 Download complete 
+ 7fd1ebe418b5 Extracting [==================>                                ]  10.62MB/28.25MB
+ 7fd1ebe418b5 Extracting [===============================>                   ]  17.69MB/28.25MB
+ 7fd1ebe418b5 Extracting [==========================================>        ]  23.89MB/28.25MB
+ 7fd1ebe418b5 Extracting [================================================>  ]  27.13MB/28.25MB
+ 7fd1ebe418b5 Extracting [================================================>  ]  27.43MB/28.25MB
+ 7fd1ebe418b5 Extracting [==================================================>]  28.25MB/28.25MB
+ 7fd1ebe418b5 Pull complete 
+ ec5b838b30d5 Extracting [==================================================>]  1.103kB/1.103kB
+ ec5b838b30d5 Extracting [==================================================>]  1.103kB/1.103kB
+ ec5b838b30d5 Pull complete 
+ 6988465984f0 Extracting [==================================================>]     874B/874B
+ 6988465984f0 Extracting [==================================================>]     874B/874B
+ 6988465984f0 Pull complete 
+ faaaf6ba362b Extracting [>                                                  ]  196.6kB/17.64MB
+ faaaf6ba362b Extracting [============>                                      ]  4.522MB/17.64MB
+ faaaf6ba362b Extracting [=============>                                     ]  4.915MB/17.64MB
+ faaaf6ba362b Extracting [===================================>               ]  12.39MB/17.64MB
+ faaaf6ba362b Extracting [==================================================>]  17.64MB/17.64MB
+ faaaf6ba362b Pull complete 
+ c1162fec059b Extracting [==================================================>]      96B/96B
+ c1162fec059b Extracting [==================================================>]      96B/96B
+ c1162fec059b Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ 88b125c05b23 Extracting [==================================================>]     601B/601B
+ 88b125c05b23 Extracting [==================================================>]     601B/601B
+ 88b125c05b23 Pull complete 
+ redis Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-redis-1  Creating
+ Container docker_services_cli-redis-1  Created
+ Container docker_services_cli-redis-1  Starting
+ Container docker_services_cli-redis-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-cache/original
+configfile: pyproject.toml
+testpaths: tests, invenio_cache
+plugins: flask-1.3.0, invenio-4.0.3, pycodestyle-2.5.0, platformdirs-4.13.0, mock-3.16.0, github-actions-annotate-failures-0.4.2, isort-4.0.0, cov-7.1.0, pydocstyle-2.4.0, black-0.6.0
+collected 15 items
+
+tests/test_bccache.py .                                                  [  6%]
+tests/test_decorator.py ..                                               [ 20%]
+tests/test_invenio_cache.py .......                                      [ 66%]
+tests/test_locks.py ....                                                 [ 93%]
+invenio_cache/__init__.py .                                              [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+invenio_cache/__init__.py         7      0   100%
+invenio_cache/_compat.py          4      0   100%
+invenio_cache/bccache.py          7      0   100%
+invenio_cache/config.py           8      0   100%
+invenio_cache/decorators.py      46      0   100%
+invenio_cache/errors.py          14      1    93%   17
+invenio_cache/ext.py             28      0   100%
+invenio_cache/lock.py            70     11    84%   66, 76, 80, 84, 88, 153, 202, 210-215, 218
+invenio_cache/proxies.py          7      0   100%
+-----------------------------------------------------------
+TOTAL                           191     12    94%
+============================== 15 passed in 0.60s ==============================
+ Container docker_services_cli-redis-1  Stopping
+ Container docker_services_cli-redis-1  Stopped
+ Container docker_services_cli-redis-1  Removing
+ Container docker_services_cli-redis-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

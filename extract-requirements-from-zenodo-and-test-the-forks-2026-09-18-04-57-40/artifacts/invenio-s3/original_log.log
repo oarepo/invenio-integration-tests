@@ -1,0 +1,189 @@
+ rustfs Pulling 
+ 55afa1ecc21d Already exists 
+ fc60adad4a1d Pulling fs layer 
+ 2db50cf901eb Pulling fs layer 
+ eebc17ed47f7 Pulling fs layer 
+ a43ede1efa93 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ e993fc96bab5 Pulling fs layer 
+ 4f4fb700ef54 Waiting 
+ a43ede1efa93 Waiting 
+ e993fc96bab5 Waiting 
+ 2db50cf901eb Downloading [=>                                                 ]  3.499kB/104.8kB
+ 2db50cf901eb Downloading [==================================================>]  104.8kB/104.8kB
+ 2db50cf901eb Verifying Checksum 
+ 2db50cf901eb Download complete 
+ fc60adad4a1d Downloading [>                                                  ]  64.97kB/6.296MB
+ eebc17ed47f7 Downloading [>                                                  ]  532.9kB/99.41MB
+ fc60adad4a1d Downloading [================>                                  ]  2.097MB/6.296MB
+ a43ede1efa93 Downloading [=============================================>     ]  3.531kB/3.881kB
+ a43ede1efa93 Downloading [==================================================>]  3.881kB/3.881kB
+ a43ede1efa93 Verifying Checksum 
+ a43ede1efa93 Download complete 
+ fc60adad4a1d Verifying Checksum 
+ fc60adad4a1d Download complete 
+ fc60adad4a1d Extracting [>                                                  ]  65.54kB/6.296MB
+ eebc17ed47f7 Downloading [===>                                               ]  6.954MB/99.41MB
+ eebc17ed47f7 Downloading [================>                                  ]  33.61MB/99.41MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Download complete 
+ e993fc96bab5 Downloading [==================================================>]     982B/982B
+ e993fc96bab5 Download complete 
+ fc60adad4a1d Extracting [======>                                            ]  786.4kB/6.296MB
+ eebc17ed47f7 Downloading [=======================================>           ]  78.99MB/99.41MB
+ fc60adad4a1d Extracting [======================================>            ]   4.85MB/6.296MB
+ eebc17ed47f7 Verifying Checksum 
+ eebc17ed47f7 Download complete 
+ fc60adad4a1d Extracting [=================================================> ]  6.226MB/6.296MB
+ fc60adad4a1d Extracting [=================================================> ]  6.291MB/6.296MB
+ fc60adad4a1d Extracting [==================================================>]  6.296MB/6.296MB
+ fc60adad4a1d Pull complete 
+ 2db50cf901eb Extracting [===============>                                   ]  32.77kB/104.8kB
+ 2db50cf901eb Extracting [==================================================>]  104.8kB/104.8kB
+ 2db50cf901eb Pull complete 
+ eebc17ed47f7 Extracting [>                                                  ]  557.1kB/99.41MB
+ eebc17ed47f7 Extracting [=====>                                             ]  10.58MB/99.41MB
+ eebc17ed47f7 Extracting [==========>                                        ]  20.61MB/99.41MB
+ eebc17ed47f7 Extracting [===============>                                   ]  30.64MB/99.41MB
+ eebc17ed47f7 Extracting [====================>                              ]  40.67MB/99.41MB
+ eebc17ed47f7 Extracting [=========================>                         ]  50.69MB/99.41MB
+ eebc17ed47f7 Extracting [==============================>                    ]  60.72MB/99.41MB
+ eebc17ed47f7 Extracting [===================================>               ]   71.3MB/99.41MB
+ eebc17ed47f7 Extracting [=========================================>         ]  82.44MB/99.41MB
+ eebc17ed47f7 Extracting [==============================================>    ]  93.03MB/99.41MB
+ eebc17ed47f7 Extracting [==================================================>]  99.41MB/99.41MB
+ eebc17ed47f7 Pull complete 
+ a43ede1efa93 Extracting [==================================================>]  3.881kB/3.881kB
+ a43ede1efa93 Extracting [==================================================>]  3.881kB/3.881kB
+ a43ede1efa93 Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ e993fc96bab5 Extracting [==================================================>]     982B/982B
+ e993fc96bab5 Extracting [==================================================>]     982B/982B
+ e993fc96bab5 Pull complete 
+ rustfs Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-rustfs-1  Creating
+ Container docker_services_cli-rustfs-1  Created
+ Container docker_services_cli-rustfs-1  Starting
+ Container docker_services_cli-rustfs-1  Started
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-s3/original
+configfile: setup.cfg
+testpaths: tests, invenio_s3
+plugins: flask-1.3.0, isort-4.0.0, pydocstyle-2.4.0, cov-7.1.0, pycodestyle-2.5.0, black-0.6.0, github-actions-annotate-failures-0.4.2, invenio-4.0.2
+collected 36 items / 1 deselected / 35 selected
+
+tests/test_invenio_s3.py ..                                              [  5%]
+tests/test_multipart.py .::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+                                              [ 14%]
+tests/test_storage.py .::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+.::warning file=workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py,line=165::The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+                     [100%]
+
+=============================== warnings summary ===============================
+tests/test_multipart.py::test_multipart_flow
+tests/test_storage.py::test_factory
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py:24: FutureWarning: CSRF validation will be enabled by default in the version 1.3.x
+    self.init_app(app)
+
+tests/test_multipart.py: 3 warnings
+tests/test_storage.py: 69 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-s3/original/.venv/lib/python3.14/site-packages/invenio_files_rest/storage/pyfs.py:165: DeprecationWarning: The _get_fs method is deprecated and will be removed. Please implement the abstract FileStorage instead of extending the PyFSFileStorage class.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+
+Name                             Stmts   Miss  Cover   Missing
+--------------------------------------------------------------
+invenio_s3/__init__.py               4      0   100%
+invenio_s3/config.py                20      0   100%
+invenio_s3/ext.py                   25      0   100%
+invenio_s3/helpers.py               43      8    81%   34, 36, 71, 94-98
+invenio_s3/multipart_client.py      47      3    94%   79, 174-180
+invenio_s3/storage.py              119      1    99%   251
+--------------------------------------------------------------
+TOTAL                              258     12    95%
+========== 35 passed, 1 deselected, 74 warnings in 155.66s (0:02:35) ===========
+ Container docker_services_cli-rustfs-1  Stopping
+ Container docker_services_cli-rustfs-1  Stopped
+ Container docker_services_cli-rustfs-1  Removing
+ Container docker_services_cli-rustfs-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "4c116555",
+    "message": "release: v14.0.0"
+  },
+  {
+    "hash": "e1d9319f",
+    "message": "release: v14.0.0rc6"
+  },
+  {
+    "hash": "42189f00",
+    "message": "upgrade: avoid dropping populated github and webhooks tables"
+  },
+  {
+    "hash": "86e026ea",
+    "message": "release: v14.0.0rc5"
+  },
+  {
+    "hash": "d31e01eb",
+    "message": "previewer: enable ZIP preview for draft records"
+  },
+  {
+    "hash": "7f67cf95",
+    "message": "release: v14.0.0rc4"
+  },
+  {
+    "hash": "3481b495",
+    "message": "fix(administration): role ui depends on groups"
+  },
+  {
+    "hash": "f8c5686f",
+    "message": "release: v14.0.0rc3"
+  },
+  {
+    "hash": "5f6c01c3",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "412b60cb",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "7caab9ff",
+    "message": "chore(v14/migration): restructure script"
+  },
+  {
+    "hash": "d02ac223",
+    "message": "config: fix citation styles for Vancouver and Chicago with csl 1.0.2"
+  },
+  {
+    "hash": "12390d21",
+    "message": "fix: unify command with documentation"
+  },
+  {
+    "hash": "241b7807",
+    "message": "fix: adding server default for system_created"
+  },
+  {
+    "hash": "54be449c",
+    "message": "fix: migration step for removal of user_id column from the transaction table"
+  },
+  {
+    "hash": "aaec0a58",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "d6874227",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "984462ce",
+    "message": "Backport admin role ui fix (#3503)"
+  },
+  {
+    "hash": "bca0a2f2",
+    "message": "chore(migration): add request parent for commenting"
+  },
+  {
+    "hash": "bdf196ef",
+    "message": "chore(migration): replace print with secho"
+  },
+  {
+    "hash": "2ec2263f",
+    "message": "release: v14.0.0rc2"
+  },
+  {
+    "hash": "e7d31d43",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "0133d142",
+    "message": "refactor(views): Move get_record_requests to RecordCommunitiesService"
+  },
+  {
+    "hash": "a1df0983",
+    "message": "release: v14.0.0rc1"
+  },
+  {
+    "hash": "ccdc5e68",
+    "message": "release: v14.0.0b11.dev4"
+  },
+  {
+    "hash": "992fbaf2",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "40b950ea",
+    "message": "feat(records): deposit form compatibility with per-record-version review requests"
+  },
+  {
+    "hash": "7fdc11a5",
+    "message": "release: v14.0.0b11.dev3"
+  },
+  {
+    "hash": "2ef77ebc",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "c991610a",
+    "message": "fix: corrected config variable name * replaced CONTAINER_ITEM_PREVIEWER_PREFERENCE   variable name with   PREVIEWER_CONTAINER_ITEM_PREFERENCE   inside config * the code already used PREVIEWER_*"
+  },
+  {
+    "hash": "df059a2b",
+    "message": "fix: prevent overflow of long values and links in details and sidebar"
+  },
+  {
+    "hash": "cd23c779",
+    "message": "chore: remove duplicate function definition in tests"
+  },
+  {
+    "hash": "55e9cce3",
+    "message": "chore: apply some linter fixes"
+  },
+  {
+    "hash": "bc6f2e2d",
+    "message": "chore: replace `type(...) == str` with `type(...) is str`"
+  },
+  {
+    "hash": "f0c404b0",
+    "message": "chore: fix __all__ tuple in audit_logs"
+  },
+  {
+    "hash": "a8e80750",
+    "message": "feat(users): add last login details to admin ui"
+  },
+  {
+    "hash": "e3171ad9",
+    "message": "i18n: v14 wrap missing strings"
+  },
+  {
+    "hash": "aab76c27",
+    "message": "feat(mshp-req): integrate membership request notifications"
+  },
+  {
+    "hash": "caaa0ce5",
+    "message": "\ud83d\udce6 release: v14.0.0b11.dev2"
+  },
+  {
+    "hash": "27a08d7f",
+    "message": "files: hide archive button over the size cap"
+  },
+  {
+    "hash": "51bdcf65",
+    "message": "refactor: add comment to permissions' extra params"
+  },
+  {
+    "hash": "504d054e",
+    "message": "fix: enable community owner to remove it from record"
+  },
+  {
+    "hash": "63fe8fc5",
+    "message": "release: v14.0.0b11.dev1"
+  },
+  {
+    "hash": "ac985d3b",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "55a60527",
+    "message": "release: v14.0.0b11.dev0"
+  },
+  {
+    "hash": "ce43f302",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "fe020162",
+    "message": "feat: UI support for zip content previewing"
+  },
+  {
+    "hash": "61003945",
+    "message": "fix(alembic): script for preparing migration from 13 -> 14"
+  },
+  {
+    "hash": "4b5c56dd",
+    "message": "deposits: switch to standard get syntax"
+  },
+  {
+    "hash": "1a70d527",
+    "message": "deposit: add default values for custom fields on deposit form"
+  }
+]

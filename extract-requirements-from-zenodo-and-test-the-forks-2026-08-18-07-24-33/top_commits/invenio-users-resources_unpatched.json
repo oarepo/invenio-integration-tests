@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "6faa998",
+    "message": "release: v12.1.0"
+  },
+  {
+    "hash": "f9591a5",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "f07d17c",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "b577d95",
+    "message": "release: v12.0.1"
+  },
+  {
+    "hash": "6d8ffef",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "5abf11c",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "4361e78",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "19ac2b4",
+    "message": "release: v12.0.0"
+  },
+  {
+    "hash": "f457681",
+    "message": "fix: increase groups search max result window"
+  },
+  {
+    "hash": "08eb90d",
+    "message": "fix(groups): keep group ids aligned"
+  },
+  {
+    "hash": "327cf0c",
+    "message": "feat(users): expose login metadata"
+  },
+  {
+    "hash": "aabd895",
+    "message": "release: v11.0.0"
+  },
+  {
+    "hash": "651d87d",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "0a0574a",
+    "message": "feat(users)!: add admin role management backend"
+  },
+  {
+    "hash": "81f2894",
+    "message": "\ud83d\udce6 release: v10.5.0"
+  },
+  {
+    "hash": "6225d44",
+    "message": "feat(moderation): allow passing `data` and `actor_id` to block action"
+  },
+  {
+    "hash": "e6f4ac3",
+    "message": "release: v10.4.1"
+  },
+  {
+    "hash": "cc81a86",
+    "message": "fix(resolve): handle None given as user_id"
+  },
+  {
+    "hash": "6152b49",
+    "message": "\ud83d\udce6 release: v10.4.0"
+  },
+  {
+    "hash": "ff70ea2",
+    "message": "search: fix finding of usernames with dash"
+  },
+  {
+    "hash": "e85556f",
+    "message": "tests: username with a dash"
+  },
+  {
+    "hash": "df4297d",
+    "message": "search: improve with CompositeSuggestQueryParser"
+  },
+  {
+    "hash": "671463f",
+    "message": "tests: precise assertions on user search results"
+  },
+  {
+    "hash": "e6af6f5",
+    "message": "release: v10.3.0"
+  },
+  {
+    "hash": "e6fb2c8",
+    "message": "fix(groups): resolve role by id instead of name"
+  },
+  {
+    "hash": "7f982dc",
+    "message": "\ud83d\udce6 release: v10.2.0"
+  },
+  {
+    "hash": "85c6766",
+    "message": "fix(roles): block escalation to protected roles"
+  },
+  {
+    "hash": "8ceb965",
+    "message": "Add proper superadmin permissions checks and protection"
+  },
+  {
+    "hash": "e4c19b3",
+    "message": "feat(groups): enforce validation and protect group updates"
+  },
+  {
+    "hash": "1f5a0f8",
+    "message": "fix(groups): clarify usage of group id and name"
+  },
+  {
+    "hash": "54d0c4c",
+    "message": "fix(users): improve role handling and group validation"
+  },
+  {
+    "hash": "441d496",
+    "message": "fix(schemas): move description validation to schema"
+  },
+  {
+    "hash": "7faff42",
+    "message": "feat(admin): add groups CRUD and role-aware views"
+  },
+  {
+    "hash": "f91f767",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "92e98bd",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "ef4d329",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "0c1cabc",
+    "message": "fix: DeprecationWarning"
+  },
+  {
+    "hash": "4d96be7",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "2b86319",
+    "message": "refactor: move to context_schema"
+  },
+  {
+    "hash": "ed32a58",
+    "message": "chore: replace deprecated logger.warn->warning"
+  },
+  {
+    "hash": "043afac",
+    "message": "chore+fix: replace usage of Link by EndpointLink and co. [+]"
+  },
+  {
+    "hash": "3178c33",
+    "message": "Update release date for version v9.0.3"
+  },
+  {
+    "hash": "c8bf952",
+    "message": "release: v9.0.3"
+  },
+  {
+    "hash": "3035f0a",
+    "message": "setup: bump oauthclient major version"
+  },
+  {
+    "hash": "cff2f68",
+    "message": "feat: add user creation endpoint"
+  },
+  {
+    "hash": "ad68d08",
+    "message": "release: v9.0.2"
+  },
+  {
+    "hash": "01637aa",
+    "message": "fix(services.config): Boost full_name for better results"
+  },
+  {
+    "hash": "7c93641",
+    "message": "\ud83d\udce6 release: v9.0.1"
+  },
+  {
+    "hash": "bdffa5b",
+    "message": "fix(entity_resolvers): handle `None` user entity"
+  },
+  {
+    "hash": "8c2ecae",
+    "message": "release: vv9.0.0"
+  }
+]
