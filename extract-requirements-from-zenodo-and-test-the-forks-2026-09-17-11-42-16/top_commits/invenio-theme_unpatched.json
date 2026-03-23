@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "4da1591",
+    "message": "release: v4.9.0"
+  },
+  {
+    "hash": "40f56a1",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "8b54f9c",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "4f31514",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "98d8237",
+    "message": "release: v4.8.1"
+  },
+  {
+    "hash": "15df9d1",
+    "message": "fix(publish): use the right translation step in the publication workflow"
+  },
+  {
+    "hash": "637486b",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "c972620",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "4472af2",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "031ca2a",
+    "message": "release: v4.8.0"
+  },
+  {
+    "hash": "334a769",
+    "message": "refactor: shorten logic"
+  },
+  {
+    "hash": "176659d",
+    "message": "bug: prevent title | title"
+  },
+  {
+    "hash": "6adf6ac",
+    "message": "UX: Add THEME_SITENAME as a suffix in <head>"
+  },
+  {
+    "hash": "ee0a35f",
+    "message": "release: v4.7.0"
+  },
+  {
+    "hash": "db0197f",
+    "message": "collections: adds css required for collection CRUD UI"
+  },
+  {
+    "hash": "71d049e",
+    "message": "site: add collections rules"
+  },
+  {
+    "hash": "45a9966",
+    "message": "release: 4.6.0"
+  },
+  {
+    "hash": "ae0a9e1",
+    "message": "site: add logs display rules"
+  },
+  {
+    "hash": "a144f00",
+    "message": "chore: reformat black"
+  },
+  {
+    "hash": "74dfa06",
+    "message": "css: add flex rules"
+  },
+  {
+    "hash": "d963540",
+    "message": "release: v4.5.0"
+  },
+  {
+    "hash": "7b3c6e8",
+    "message": "css: reduce margin on blockquotes site-wide"
+  },
+  {
+    "hash": "36f2fe0",
+    "message": "tests: extend support to Python 3.14"
+  },
+  {
+    "hash": "59a7359",
+    "message": "release: v4.4.3"
+  },
+  {
+    "hash": "e3b14fe",
+    "message": "fix(form): remove * from label help text when field required"
+  },
+  {
+    "hash": "c61a344",
+    "message": "\ud83d\udce6 release: v4.4.2"
+  },
+  {
+    "hash": "f67d936",
+    "message": "i18n: pulled translations (#420)"
+  },
+  {
+    "hash": "7fd8960",
+    "message": "views: use .get() for THEME_FRONTPAGE to avoid hard dependency"
+  },
+  {
+    "hash": "25f18f8",
+    "message": "release: v4.4.1"
+  },
+  {
+    "hash": "e85508b",
+    "message": "theme: move styles from invenio-app-rdm to invenio-theme"
+  },
+  {
+    "hash": "f0f7aaa",
+    "message": "release: v4.4.0"
+  },
+  {
+    "hash": "f595885",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "24a9724",
+    "message": "fix: translation only applied on app start"
+  },
+  {
+    "hash": "d8d01c8",
+    "message": "release: v4.3.0"
+  },
+  {
+    "hash": "75c72ab",
+    "message": "css: add small and italic"
+  },
+  {
+    "hash": "f5873bf",
+    "message": "app: register error handling in ext.py (app loading)"
+  },
+  {
+    "hash": "eb72de7",
+    "message": "release: v4.2.0"
+  },
+  {
+    "hash": "08f53ba",
+    "message": "overrides: add table and grid log values"
+  },
+  {
+    "hash": "365b1e2",
+    "message": "i18n: removed deprecated messages"
+  },
+  {
+    "hash": "911b26c",
+    "message": "fix: setuptools require underscores instead of dashes"
+  },
+  {
+    "hash": "63a2d85",
+    "message": "theme: set breakpoint for low resolution screens"
+  },
+  {
+    "hash": "7a9e8a2",
+    "message": "release: v4.1.1"
+  },
+  {
+    "hash": "17fbc88",
+    "message": "fix: ModuleWarning: Deprecation Warning"
+  },
+  {
+    "hash": "c325177",
+    "message": "release: v4.1.0"
+  },
+  {
+    "hash": "b277bb9",
+    "message": "theme: expand generator classes"
+  },
+  {
+    "hash": "cb8646d",
+    "message": "\ud83d\udce6 release: v4.0.1"
+  },
+  {
+    "hash": "af4c393",
+    "message": "form: some UI fixed for the deposit form"
+  },
+  {
+    "hash": "0c2fcf0",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "60b39db",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "1e9bf73",
+    "message": "release: v3.5.1"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "f3354c9",
+    "message": "release: v1.4.0"
+  },
+  {
+    "hash": "b455984",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "0b28cb8",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "1dd6309",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "15b645a",
+    "message": "release: v1.3.1"
+  },
+  {
+    "hash": "c0706df",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "097a303",
+    "message": "chore(packaging): exclude .git-blame-ignore-revs from distribution"
+  },
+  {
+    "hash": "5338a88",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "174f486",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "39a1018",
+    "message": "chore: apply clearer naming to generators"
+  },
+  {
+    "hash": "7fe0738",
+    "message": "chore: add more information in the README"
+  },
+  {
+    "hash": "f2c1923",
+    "message": "chore: use relative imports for the same package"
+  },
+  {
+    "hash": "c0f3949",
+    "message": "chore: split notification generators into their own files"
+  },
+  {
+    "hash": "3a03b4b",
+    "message": "chore: add more documentation to the various moving parts"
+  },
+  {
+    "hash": "e0c8ed0",
+    "message": "chore: re-export some utilities"
+  },
+  {
+    "hash": "d633538",
+    "message": "release: v1.3.0"
+  },
+  {
+    "hash": "715b182",
+    "message": "fix: log warning if group has no valid email"
+  },
+  {
+    "hash": "3d50095",
+    "message": "email: use name as email for groups"
+  },
+  {
+    "hash": "78d30c7",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "2cfd0f0",
+    "message": "chore: reformat black"
+  },
+  {
+    "hash": "14829bb",
+    "message": "\ud83d\udce6 release: v1.2.3"
+  },
+  {
+    "hash": "39db40b",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "e2bef0d",
+    "message": "\ud83d\udce6 release: v1.2.2"
+  },
+  {
+    "hash": "53e89d2",
+    "message": "i18n: pulled translations (#42)"
+  },
+  {
+    "hash": "35a75a0",
+    "message": "\ud83d\udce6 release: v1.2.1"
+  },
+  {
+    "hash": "4af063f",
+    "message": "fix: return notif when entity ref is none"
+  },
+  {
+    "hash": "6bacf71",
+    "message": "release: v1.2.0"
+  },
+  {
+    "hash": "6ef6d46",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "b0f4a49",
+    "message": "release: v1.1.0"
+  },
+  {
+    "hash": "94d49c9",
+    "message": "chores: replaced importlib_xyz with importlib"
+  },
+  {
+    "hash": "18d2373",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "52d3f9a",
+    "message": "fix: setuptools compatibility"
+  },
+  {
+    "hash": "133675a",
+    "message": "release: v1.0.0"
+  },
+  {
+    "hash": "129d93d",
+    "message": "setup: bump major dependencies"
+  },
+  {
+    "hash": "d46af59",
+    "message": "release: v0.6.1"
+  },
+  {
+    "hash": "6608910",
+    "message": "setup: change to reusable workflows"
+  },
+  {
+    "hash": "a0697a0",
+    "message": "setup: pin dependencies"
+  },
+  {
+    "hash": "86c9070",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "4747f8d",
+    "message": "release: v0.6.0"
+  },
+  {
+    "hash": "0f5b7d8",
+    "message": "relase: v0.5.0"
+  },
+  {
+    "hash": "4b72998",
+    "message": "installation: upgrade records-resources"
+  },
+  {
+    "hash": "17733b1",
+    "message": "update: dependencies"
+  },
+  {
+    "hash": "afc30fa",
+    "message": "menu: use current_menu"
+  },
+  {
+    "hash": "7d87568",
+    "message": "setup: change to pytest-black-ng"
+  },
+  {
+    "hash": "9c66973",
+    "message": "init: move menu and breadcrumb into finalize_app"
+  },
+  {
+    "hash": "2c9fa7a",
+    "message": "Fix transifex config"
+  },
+  {
+    "hash": "7b01398",
+    "message": "release: v0.4.0"
+  },
+  {
+    "hash": "bea1700",
+    "message": "backends: set email reply to field"
+  },
+  {
+    "hash": "e313e78",
+    "message": "generators: add conditional recipient generator"
+  },
+  {
+    "hash": "cfd1e70",
+    "message": "release: v0.3.0"
+  }
+]

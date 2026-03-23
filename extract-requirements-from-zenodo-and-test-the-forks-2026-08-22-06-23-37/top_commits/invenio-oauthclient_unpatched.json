@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "3dd31cb",
+    "message": "release: v8.1.0"
+  },
+  {
+    "hash": "685db25",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "cde53c2",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "7081e6a",
+    "message": "release: v8.0.1"
+  },
+  {
+    "hash": "db91e20",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "b61dd4a",
+    "message": "chore(cleanup): remove outdated and unnecessary file"
+  },
+  {
+    "hash": "2d2a687",
+    "message": "chore(format): settle disagreement between isort and black"
+  },
+  {
+    "hash": "9755d1e",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "d031f8f",
+    "message": "chore(licenses): fix some SPDX license headers"
+  },
+  {
+    "hash": "34272c8",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "068107a",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "ddce555",
+    "message": "release: v8.0.0"
+  },
+  {
+    "hash": "cadd53a",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "289531a",
+    "message": "fix: bad downstream dependency in alembic"
+  },
+  {
+    "hash": "e6b5074",
+    "message": "fix(ui): reorder menu in user settings"
+  },
+  {
+    "hash": "c8162e6",
+    "message": "release: v7.0.1"
+  },
+  {
+    "hash": "e372210",
+    "message": "fix(logout): remove unmanage_roles from session"
+  },
+  {
+    "hash": "976a07b",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "6e29fe2",
+    "message": "chore(tests): add admin"
+  },
+  {
+    "hash": "a1ae9b7",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "af10d1e",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "177c056",
+    "message": "release: v6.1.2"
+  },
+  {
+    "hash": "f026b97",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "0fa2efb",
+    "message": "chore(setup): pin dependencies"
+  },
+  {
+    "hash": "51c81c6",
+    "message": "\ud83d\udce6 release: v6.1.1"
+  },
+  {
+    "hash": "f71eb78",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "7e3600f",
+    "message": "fix(refresh): allow non-compliant access token response type"
+  },
+  {
+    "hash": "df76a5c",
+    "message": "release: v6.1.0"
+  },
+  {
+    "hash": "c87b26a",
+    "message": "feat(oauth2): support for refresh tokens"
+  },
+  {
+    "hash": "22577ff",
+    "message": "feat: link-only remotes"
+  },
+  {
+    "hash": "21363a0",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "e7d6457",
+    "message": "perf(models): change `extra_data` to `JSONB`"
+  },
+  {
+    "hash": "cdcabc2",
+    "message": "\ud83d\udce6 release: v5.3.1"
+  },
+  {
+    "hash": "f2dd710",
+    "message": "i18n: pulled translations (#363)"
+  },
+  {
+    "hash": "bce320a",
+    "message": "\ud83d\udce6 release: v5.3.0"
+  },
+  {
+    "hash": "46b02c2",
+    "message": "feat(contrib): add EOSC EU Node AAI OIDC provider"
+  },
+  {
+    "hash": "2debc7b",
+    "message": "release: v5.2.0"
+  },
+  {
+    "hash": "f58703e",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "66b83fd",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "72ab148",
+    "message": "fix app allowed hosts (#356)"
+  },
+  {
+    "hash": "ac3d86e",
+    "message": "fix: pkg_resources DeprecationWarning"
+  },
+  {
+    "hash": "35fdd5a",
+    "message": "fix: setuptools require underscores instead of dashes"
+  },
+  {
+    "hash": "274f6ff",
+    "message": "i18n: removed deprecated messages"
+  },
+  {
+    "hash": "0ca34fe",
+    "message": "fix: i18n-unrelated keycloak test missing app fixture"
+  },
+  {
+    "hash": "47ab80a",
+    "message": "Fix: i18n: added gettext to places where it was missing"
+  },
+  {
+    "hash": "2472820",
+    "message": "inline(docs):fix"
+  },
+  {
+    "hash": "1082018",
+    "message": "release: v5.1.0"
+  },
+  {
+    "hash": "39cbd40",
+    "message": "fix: DeprecationWarning:"
+  },
+  {
+    "hash": "69baf41",
+    "message": "fix: TypeError"
+  },
+  {
+    "hash": "5fc520a",
+    "message": "setup: move to flask-oauthlib-invenio"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "6eb8e56",
+    "message": "release: v10.1.0"
+  },
+  {
+    "hash": "8387f0c",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "6f88475",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "fa1241c",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "32d4620",
+    "message": "release: v10.0.1"
+  },
+  {
+    "hash": "13fb652",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "47c8b8d",
+    "message": "chore(license): update license headers to use SPDX"
+  },
+  {
+    "hash": "9e335ae",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "649f73e",
+    "message": "chore(license): update license headers to use SPDX"
+  },
+  {
+    "hash": "67c6584",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "f684d22",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "242f532",
+    "message": "fix(tests): alembic tests"
+  },
+  {
+    "hash": "0bd2cc6",
+    "message": "release: v9.0.2"
+  },
+  {
+    "hash": "64dbf4e",
+    "message": "fix(auditlog): don't require session to accomodate API calls"
+  },
+  {
+    "hash": "d791047",
+    "message": "release: v9.0.1"
+  },
+  {
+    "hash": "f682f49",
+    "message": "fix(request-context): provide fallback metadata for non-request ops"
+  },
+  {
+    "hash": "37f7c8f",
+    "message": "\ud83d\udce6 release: v9.0.0"
+  },
+  {
+    "hash": "ad7614e",
+    "message": "refactor(auditlog): RequestContext using X-Forwarded-for & flask session"
+  },
+  {
+    "hash": "84e76f5",
+    "message": "refactor(auditlog): Add parent_pid to draft actions"
+  },
+  {
+    "hash": "1f44e5a",
+    "message": "refactor(auditlog): Define metadata schema dynamically"
+  },
+  {
+    "hash": "7d7bfdd",
+    "message": "release: v8.0.1"
+  },
+  {
+    "hash": "6cb339c",
+    "message": "fix(api): Cleanup next_draft_id in versions state only on latest draft"
+  },
+  {
+    "hash": "d31f8dc",
+    "message": "fix(media-files): Skip sync when draft files doesn't have a bucket"
+  },
+  {
+    "hash": "8e8f87d",
+    "message": "release: v8.0.0"
+  },
+  {
+    "hash": "dd5c340",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "4973655",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "3d19f7d",
+    "message": "fix: DeprecationWarning from invenio-indexer"
+  },
+  {
+    "hash": "275a4ff",
+    "message": "fix: RemovedInMarshmallow4Warning"
+  },
+  {
+    "hash": "56a81ee",
+    "message": "fix: JSONSCHEMAS_HOST warning"
+  },
+  {
+    "hash": "d9ed258",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "0bf7fad",
+    "message": "\ud83d\udce6 release: v7.3.1"
+  },
+  {
+    "hash": "ffbbfe1",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "ebf542f",
+    "message": "release: v7.3.0"
+  },
+  {
+    "hash": "78bbfe2",
+    "message": "refactor(tests): test conditional lock_edit_published_files for files"
+  },
+  {
+    "hash": "0c59cd5",
+    "message": "fix(components): Fix file enabling on metadata-only record"
+  },
+  {
+    "hash": "bf49952",
+    "message": "refactor: remove deprecated usage of Link (and derivatives)"
+  },
+  {
+    "hash": "95e7ca1",
+    "message": "i18n: pulled translations (#315)"
+  },
+  {
+    "hash": "0788844",
+    "message": "tests: bump invenio-users-resources"
+  },
+  {
+    "hash": "ad8b339",
+    "message": "release: v7.2.0"
+  },
+  {
+    "hash": "b76bd4b",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "63f23b4",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "44b9cc0",
+    "message": "release: v7.1.2"
+  },
+  {
+    "hash": "75db847",
+    "message": "fix: Bug in import files from published record permissions"
+  },
+  {
+    "hash": "f78ae5e",
+    "message": "\ud83d\udce6 release: v7.1.1"
+  },
+  {
+    "hash": "16343da",
+    "message": "auditlog: fix context injection"
+  },
+  {
+    "hash": "56ea7cc",
+    "message": "fix: translation only applied on app start"
+  },
+  {
+    "hash": "391a537",
+    "message": "\ud83d\udce6 release: v7.1.0"
+  },
+  {
+    "hash": "e708cda",
+    "message": "services: added errors in read_draft method"
+  },
+  {
+    "hash": "41abdf1",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "b71cba3",
+    "message": "setup: bump major dependencies"
+  }
+]
