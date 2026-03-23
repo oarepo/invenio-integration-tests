@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "bb7824c",
+    "message": "release: v10.1.1"
+  },
+  {
+    "hash": "45a0207",
+    "message": "fix: subtasks_closed db-side default"
+  },
+  {
+    "hash": "e413d2a",
+    "message": "release: v10.1.0"
+  },
+  {
+    "hash": "241407b",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "f006bb8",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "4a60054",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "4a53b02",
+    "message": "release: v10.0.1"
+  },
+  {
+    "hash": "f0ebdc3",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "cf00a20",
+    "message": "chore(packaging): exclude .git-blame-ignore-revs from distribution"
+  },
+  {
+    "hash": "7c4ba51",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "1a175e0",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "6beffd4",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "435375c",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "b6befca",
+    "message": "ui: add delete button"
+  },
+  {
+    "hash": "c62d505",
+    "message": "i18n: update format strings for error messages"
+  },
+  {
+    "hash": "8de980b",
+    "message": "release: v9.0.0"
+  },
+  {
+    "hash": "609c863",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "7774e20",
+    "message": "chore: switch to opensearch2 in tests"
+  },
+  {
+    "hash": "b9292e1",
+    "message": "fix(tests): alembic bug workaround"
+  },
+  {
+    "hash": "48e9f12",
+    "message": "fix: Using server defaults in model"
+  },
+  {
+    "hash": "c007827",
+    "message": "fix: added missing alembic dependency on invenio-accounts"
+  },
+  {
+    "hash": "3777cd2",
+    "message": "release: v8.0.1"
+  },
+  {
+    "hash": "92153e6",
+    "message": "fix(alembic): recipes down versions and branch merge"
+  },
+  {
+    "hash": "ad0563a",
+    "message": "release: v8.0.0"
+  },
+  {
+    "hash": "8f23a9b",
+    "message": "utils: enable translations in status messages"
+  },
+  {
+    "hash": "3a1b43c",
+    "message": "logs: fix logs ordering, group by subtask"
+  },
+  {
+    "hash": "a402542",
+    "message": "release: v7.1.0"
+  },
+  {
+    "hash": "07c7fb6",
+    "message": "notifications: Enabled email notifications on jobs"
+  },
+  {
+    "hash": "0d27164",
+    "message": "\ud83d\udce6 release: v7.0.1"
+  },
+  {
+    "hash": "96c36d9",
+    "message": "jobs: updated last_success condition and update_run"
+  },
+  {
+    "hash": "74388a6",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "5b2fc13",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "faf6c58",
+    "message": "chore(black): update formatting to >= 26.0"
+  },
+  {
+    "hash": "daba421",
+    "message": "fix: ChangedInMarshmallow4Warning"
+  },
+  {
+    "hash": "88cd571",
+    "message": "fix: RemovedInMarshmallow4Warning"
+  },
+  {
+    "hash": "25f2b66",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "8960871",
+    "message": "feat: commandline client for jobs"
+  },
+  {
+    "hash": "bb689bd",
+    "message": "feat: add delete button to job detail in administration"
+  },
+  {
+    "hash": "a11f18b",
+    "message": "feat: option to edit job args * new run_args column in jobs table * new JobEditSchema for admin edit page * new custom setter for Jobs run_args * updated Run.create with new conditions * updated Job schema with a pre-load adapter * updated scheduler arguments pass"
+  },
+  {
+    "hash": "cf99978",
+    "message": "chore: deprecate Link usage"
+  },
+  {
+    "hash": "9f8207e",
+    "message": "\ud83d\udce6 release: v6.1.0"
+  },
+  {
+    "hash": "041006c",
+    "message": "fix: Handle large log results in job details admin panel"
+  },
+  {
+    "hash": "9446d12",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "f0d3c77",
+    "message": "Feature/subtasks tracking (#104)"
+  },
+  {
+    "hash": "a252524",
+    "message": "fix: Add missing successCallback prop"
+  },
+  {
+    "hash": "ec07763",
+    "message": "fix(job-context): set context inside execute_run"
+  },
+  {
+    "hash": "d71b144",
+    "message": "fix(scheduler): add missing job context"
+  },
+  {
+    "hash": "21c6133",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "2d7d319",
+    "message": "setup: bump invenio-users-resources"
+  },
+  {
+    "hash": "bc19edf",
+    "message": "release: v4.3.2"
+  }
+]

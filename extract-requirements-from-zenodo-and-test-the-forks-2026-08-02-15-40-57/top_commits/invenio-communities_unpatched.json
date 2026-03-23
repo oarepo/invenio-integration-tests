@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "07e99ea9",
+    "message": "release: v28.2.0"
+  },
+  {
+    "hash": "b3292f3f",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "7397b7af",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "b2e7bebc",
+    "message": "release: v28.1.2"
+  },
+  {
+    "hash": "8f0a42ec",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "cedaccac",
+    "message": "release: v28.1.1"
+  },
+  {
+    "hash": "e5d4bb0a",
+    "message": "chore(tests): add test run for maint-*"
+  },
+  {
+    "hash": "a7067c97",
+    "message": "fix(alembic): alter index safely"
+  },
+  {
+    "hash": "c18a2f73",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "822d8393",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "d36137ae",
+    "message": "release: v28.1.0"
+  },
+  {
+    "hash": "33b587d5",
+    "message": "feat(manager): Add API to search accepted community requests"
+  },
+  {
+    "hash": "041e207d",
+    "message": "refactor(models): Deprecate CommunityRelationMixin class   * Moved the import to invenio-rdm-records https://github.com/inveniosoftware/invenio-rdm-records/pull/2361   * Corresponding tests moved to invenio-rdm-records"
+  },
+  {
+    "hash": "7634f5cb",
+    "message": "template: pages: fix missing titles (about and curation policy)"
+  },
+  {
+    "hash": "1ebd1aa1",
+    "message": "fix: custom fields serialization"
+  },
+  {
+    "hash": "0592bf85",
+    "message": "feat: added overridable blocks around community invitations modal"
+  },
+  {
+    "hash": "ded08b56",
+    "message": "release: v28.0.0"
+  },
+  {
+    "hash": "d0184334",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "22a21561",
+    "message": "feat: add member name to kommunity member removal modal"
+  },
+  {
+    "hash": "aa74db95",
+    "message": "feat: added blocks to communities templates"
+  },
+  {
+    "hash": "f2254a0b",
+    "message": "fix(ui): new community form typo"
+  },
+  {
+    "hash": "0824825e",
+    "message": "release: v27.0.0"
+  },
+  {
+    "hash": "d5c6d688",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "db4a1058",
+    "message": "fix: moved dependency to depends_on"
+  },
+  {
+    "hash": "df6edab8",
+    "message": "feat: introduced SameAs to make the policy extendable"
+  },
+  {
+    "hash": "5821035e",
+    "message": "fix: tests in subcommunities"
+  },
+  {
+    "hash": "f8032a44",
+    "message": "fix(mshp-req): display discussion link on communiy header correctly [+]"
+  },
+  {
+    "hash": "69add959",
+    "message": "fix(inv): use appropriate link in invitation notification"
+  },
+  {
+    "hash": "40473b20",
+    "message": "feat(mshp-req): notify upon each membership request action"
+  },
+  {
+    "hash": "79d3f47d",
+    "message": "feat(inv): use backend self_html for frontend invitation link"
+  },
+  {
+    "hash": "fb1ea985",
+    "message": "feat: generalize error message for AlreadyMemberError"
+  },
+  {
+    "hash": "b9308752",
+    "message": "feat(inv): cancel invitations from community invitations search"
+  },
+  {
+    "hash": "62d30894",
+    "message": "feat(mshp-req): display membership requests on community dashboard"
+  },
+  {
+    "hash": "e166aa29",
+    "message": "build(deps-dev): bump minimatch"
+  },
+  {
+    "hash": "8dd6c907",
+    "message": "build(deps-dev): bump lodash"
+  },
+  {
+    "hash": "639b5c94",
+    "message": "fix(mshp-req): enforce action permissions"
+  },
+  {
+    "hash": "3acca976",
+    "message": "feat(mshp-req): accept,decline,cancel,upate role of membership requests [+]"
+  },
+  {
+    "hash": "c7bdfb7d",
+    "message": "refactor: allow overriding members service components"
+  },
+  {
+    "hash": "1ee47ecc",
+    "message": "fix(community-themes): only request theme CSS for themed communities"
+  },
+  {
+    "hash": "757f2fe3",
+    "message": "fix(mshp-req): generate proper self_html link for requests JSON API"
+  },
+  {
+    "hash": "674084ba",
+    "message": "feat(mshp-req)!: search membership requests - modifies mapping!"
+  },
+  {
+    "hash": "eb9b0164",
+    "message": "feat: add request.type to communitymembers indices + refactor for clarity"
+  },
+  {
+    "hash": "f3669531",
+    "message": "fix(deps): bump invenio-requests since tests assume v12.3.x at least"
+  },
+  {
+    "hash": "9b23ec95",
+    "message": "feat(mshp-req): add permission to search membership requests"
+  },
+  {
+    "hash": "52e2decc",
+    "message": "feat(mshp-req): don't show community membership request in community requests"
+  },
+  {
+    "hash": "d9eae8fc",
+    "message": ":package: release: v26.1.1"
+  },
+  {
+    "hash": "1d6b50c1",
+    "message": "fix(inv): show discussion for invitation requests by generating self_html"
+  },
+  {
+    "hash": "954ba3f6",
+    "message": "\ud83d\udce6 release: v26.1.0"
+  },
+  {
+    "hash": "64ec5cd3",
+    "message": "feat(moderation): handle `actor_id` and `note` in user block callback"
+  },
+  {
+    "hash": "f0ce5b6e",
+    "message": "fix(components): handle tombstone `removed_by` value"
+  }
+]

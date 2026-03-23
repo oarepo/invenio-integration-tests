@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "11badfc",
+    "message": "release: v10.2.0"
+  },
+  {
+    "hash": "0dfa9f1",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "7e3d750",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "561bdd6",
+    "message": "release: v10.1.1"
+  },
+  {
+    "hash": "da35836",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "ef25a73",
+    "message": "chore(licenses): fix some SPDX license headers"
+  },
+  {
+    "hash": "f03da2f",
+    "message": "\ud83d\udce6 release: v10.1.0"
+  },
+  {
+    "hash": "3291770",
+    "message": "I18n add translation support for invenio-checks (#49)"
+  },
+  {
+    "hash": "958dfb3",
+    "message": "fix: don't add None community_id from global check runs to community_ids set"
+  },
+  {
+    "hash": "b204e2c",
+    "message": "chore(packaging): exclude .git-blame-ignore-revs from distribution"
+  },
+  {
+    "hash": "e60965a",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "cec453a",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "2b4c47a",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "840907d",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "e6da225",
+    "message": "release: v9.0.0"
+  },
+  {
+    "hash": "1001c9c",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "0493950",
+    "message": "fix: migrations for choices"
+  },
+  {
+    "hash": "b441cdb",
+    "message": "feat: allow empty community_id for check config"
+  },
+  {
+    "hash": "d2d8252",
+    "message": "release: v8.2.0"
+  },
+  {
+    "hash": "1c76864",
+    "message": "feat(rules): add min/max operators"
+  },
+  {
+    "hash": "e99b905",
+    "message": "\ud83d\udce6 release: v8.1.0"
+  },
+  {
+    "hash": "9aa76b6",
+    "message": "feat: support metadata check error paths"
+  },
+  {
+    "hash": "f0b389d",
+    "message": "release: v8.0.1"
+  },
+  {
+    "hash": "4d86331",
+    "message": "chore: upgrade depenndencies"
+  },
+  {
+    "hash": "d502e95",
+    "message": "\ud83d\udce6 release: v8.0.0"
+  },
+  {
+    "hash": "0d50c56",
+    "message": "chore(setup): bump major version of invenio-drafts-resources"
+  },
+  {
+    "hash": "744c4e2",
+    "message": "release: v7.0.0"
+  },
+  {
+    "hash": "52bf8d5",
+    "message": "fix(alembic): add missing revision ID"
+  },
+  {
+    "hash": "df3292c",
+    "message": "release: v6.0.0"
+  },
+  {
+    "hash": "f01b15e",
+    "message": "change(setup): bump invenio-jobs, communities"
+  },
+  {
+    "hash": "99d94e8",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "8a1fc47",
+    "message": "change(installation): upgrade invenio-communities"
+  },
+  {
+    "hash": "a48042c",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "494d706",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "4a75fd3",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "da53af5",
+    "message": "release: v3.0.0"
+  },
+  {
+    "hash": "0e7dd77",
+    "message": "chore(setup): bump major version of invenio-communities"
+  },
+  {
+    "hash": "1a67cac",
+    "message": "\ud83d\udce6 release: v2.0.0"
+  },
+  {
+    "hash": "36a88f1",
+    "message": "installation: bump invenio-communities"
+  },
+  {
+    "hash": "a3c4535",
+    "message": "release: v1.0.0"
+  },
+  {
+    "hash": "efb300d",
+    "message": "setup: bump invenio-communities"
+  },
+  {
+    "hash": "e23cc8b",
+    "message": "\ud83d\udce6 release: v0.6.3"
+  },
+  {
+    "hash": "f644680",
+    "message": "api: fix check run model initialization"
+  },
+  {
+    "hash": "ae166a6",
+    "message": "release: v0.6.2"
+  },
+  {
+    "hash": "d38d9c5",
+    "message": "chores: replaced importlib_xyz with importlib"
+  },
+  {
+    "hash": "ce37909",
+    "message": "\ud83d\udce6 release: v0.6.1"
+  },
+  {
+    "hash": "d82920c",
+    "message": "fix: components: fix feature flag application to direct methods only"
+  },
+  {
+    "hash": "60526fc",
+    "message": "\ud83d\udce6 release: v0.6.0"
+  },
+  {
+    "hash": "bd223a3",
+    "message": "components: handle error-severity results on publish and draft review submit"
+  },
+  {
+    "hash": "84b7ddc",
+    "message": "components: refactor feature flag application"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "SyntaxWarning: \"\\?\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\?\"? A raw string is also an option.": 1,
+  "SyntaxWarning: \"is\" with 'int' literal. Did you mean \"==\"?": 1,
+  "FutureWarning: CSRF validation will be enabled by default in the version 1.3.x": 1,
+  "UserWarning: Set configuration variable SECRET_KEY with random string": 1,
+  "SAWarning: nested transaction already deassociated from connection": 4,
+  "DeprecationWarning: context_schema will in future only be set if and only if context is given.": 2,
+  "DeprecationWarning: The patch() method is deprecated and will be removed.": 1
+}

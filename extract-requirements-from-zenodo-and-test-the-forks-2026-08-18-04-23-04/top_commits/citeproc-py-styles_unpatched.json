@@ -1,0 +1,142 @@
+[
+  {
+    "hash": "b6c4ecf",
+    "message": "release: v0.1.6"
+  },
+  {
+    "hash": "3d0121c",
+    "message": "tests: update test for apa"
+  },
+  {
+    "hash": "63d0a3e",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "6e85d1c",
+    "message": "chore(cleanup): remove outdated and unnecessary file"
+  },
+  {
+    "hash": "40da9d7",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "490fc6b",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "6471b7f",
+    "message": "release: v0.1.5"
+  },
+  {
+    "hash": "3bde661",
+    "message": "styles: update to last csl 1.0.1 update"
+  },
+  {
+    "hash": "7ee262b",
+    "message": "release: v0.1.4"
+  },
+  {
+    "hash": "f7241f8",
+    "message": "fix: replaced pkg_resources with importlib.resources"
+  },
+  {
+    "hash": "e7c7d66",
+    "message": "setup: change to reusable workflows"
+  },
+  {
+    "hash": "8b2ec89",
+    "message": "release: v0.1.3"
+  },
+  {
+    "hash": "eb11e70",
+    "message": "citations generation: update style files (#22)"
+  },
+  {
+    "hash": "f3581e0",
+    "message": "global: migrate from Travis CI to GitHub Actions"
+  },
+  {
+    "hash": "ff0b65f",
+    "message": "release: v0.1.2"
+  },
+  {
+    "hash": "5dc5c78",
+    "message": "global: remove python 2"
+  },
+  {
+    "hash": "a1e2431",
+    "message": "release: v0.1.1"
+  },
+  {
+    "hash": "4347243",
+    "message": "docs: added badges to README file"
+  },
+  {
+    "hash": "3c86199",
+    "message": "global: removed MAINTAINERS file"
+  },
+  {
+    "hash": "bba1011",
+    "message": "global: Updated AUTHORS.rst"
+  },
+  {
+    "hash": "d5798b2",
+    "message": "global: add allow_failures to travis config"
+  },
+  {
+    "hash": "e2d70de",
+    "message": "global: license change and files cleanup"
+  },
+  {
+    "hash": "b3f40f3",
+    "message": "travis: remove python 3.3 and 3.4 from test matrix"
+  },
+  {
+    "hash": "7e1f5e1",
+    "message": "tests: fix imports sorting"
+  },
+  {
+    "hash": "ebae3dc",
+    "message": "global: add allow_failures to travis config"
+  },
+  {
+    "hash": "2753ce9",
+    "message": "global: remove unused files"
+  },
+  {
+    "hash": "7f5fd0c",
+    "message": "installation: removed pytest-cache dependency"
+  },
+  {
+    "hash": "bcb34a6",
+    "message": "global: license change to MIT License"
+  },
+  {
+    "hash": "2536f01",
+    "message": "docs: new maintainer"
+  },
+  {
+    "hash": "cc26b4f",
+    "message": "docs: MAINTAINERS file and LGTM configuration"
+  },
+  {
+    "hash": "2f5cdd6",
+    "message": "global: inveniosoftware.org"
+  },
+  {
+    "hash": "e81fedb",
+    "message": "version: post-release bump"
+  },
+  {
+    "hash": "b9a797a",
+    "message": "release: v0.1.0"
+  },
+  {
+    "hash": "eec6979",
+    "message": "global: lxml parsing"
+  },
+  {
+    "hash": "ff7ba4e",
+    "message": "global: initial commit"
+  }
+]

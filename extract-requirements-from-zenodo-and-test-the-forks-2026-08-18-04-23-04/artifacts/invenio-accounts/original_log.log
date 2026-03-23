@@ -1,0 +1,535 @@
+extracting messages from invenio_accounts/__init__.py (encoding="utf-8")
+extracting messages from invenio_accounts/admin.py (encoding="utf-8")
+extracting messages from invenio_accounts/api.py (encoding="utf-8")
+extracting messages from invenio_accounts/cli.py (encoding="utf-8")
+extracting messages from invenio_accounts/config.py (encoding="utf-8")
+extracting messages from invenio_accounts/datastore.py (encoding="utf-8")
+extracting messages from invenio_accounts/domains.py (encoding="utf-8")
+extracting messages from invenio_accounts/errors.py (encoding="utf-8")
+extracting messages from invenio_accounts/ext.py (encoding="utf-8")
+extracting messages from invenio_accounts/forms.py (encoding="utf-8")
+extracting messages from invenio_accounts/hash.py (encoding="utf-8")
+extracting messages from invenio_accounts/limiter.py (encoding="utf-8")
+extracting messages from invenio_accounts/models.py (encoding="utf-8")
+extracting messages from invenio_accounts/proxies.py (encoding="utf-8")
+extracting messages from invenio_accounts/sessions.py (encoding="utf-8")
+extracting messages from invenio_accounts/signals.py (encoding="utf-8")
+extracting messages from invenio_accounts/tasks.py (encoding="utf-8")
+extracting messages from invenio_accounts/testutils.py (encoding="utf-8")
+extracting messages from invenio_accounts/utils.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/037afe10e9ff_add_user_moderation_fields.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/23e196599f9f_change_datetime_types.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/62efc52773d4_create_useridentity_table.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/6ec5ce377ca3_create_domains.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/843bc79c426f_create_accounts_branch.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/999dcbd19ace_users_versioning.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/dfbdf43a3e96_separate_login_info.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/e12419831262_add_new_columns_on_sessionactivity.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/eb9743315a9d_add_userprofile.py (encoding="utf-8")
+extracting messages from invenio_accounts/alembic/f2522cdd5fcd_change_accountsrole_primary_key_to_string.py (encoding="utf-8")
+extracting messages from invenio_accounts/context_processors/__init__.py (encoding="utf-8")
+extracting messages from invenio_accounts/context_processors/jwt.py (encoding="utf-8")
+extracting messages from invenio_accounts/profiles/__init__.py (encoding="utf-8")
+extracting messages from invenio_accounts/profiles/dicts.py (encoding="utf-8")
+extracting messages from invenio_accounts/profiles/schemas.py (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/_macros.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/base.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/base_cover.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/change_password.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/forgot_password.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/jwt.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/login_user.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/register_user.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/reset_password.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/send_confirmation.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/send_login.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/settings/base.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/invenio_accounts/settings/security.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/security/email/change_notice_rest.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/_macros.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/base.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/base_cover.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/change_password.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/forgot_password.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/jwt.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/login_user.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/register_user.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/reset_password.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/send_confirmation.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/send_login.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/settings/base.html (encoding="utf-8")
+extracting messages from invenio_accounts/templates/semantic-ui/invenio_accounts/settings/security.html (encoding="utf-8")
+extracting messages from invenio_accounts/views/__init__.py (encoding="utf-8")
+extracting messages from invenio_accounts/views/rest.py (encoding="utf-8")
+extracting messages from invenio_accounts/views/security.py (encoding="utf-8")
+extracting messages from invenio_accounts/views/settings.py (encoding="utf-8")
+writing PO template file to /dev/null
+ redis Pulling 
+ postgresql Pulling 
+ b0a0cf830b12 Pulling fs layer 
+ dda3d8fbd5ed Pulling fs layer 
+ 283a477db7bb Pulling fs layer 
+ 91d2729fa4d5 Pulling fs layer 
+ 9739ced65621 Pulling fs layer 
+ ae3bb1b347a4 Pulling fs layer 
+ f8406d9c00ea Pulling fs layer 
+ c199bff16b05 Pulling fs layer 
+ e0d55fdb4d15 Pulling fs layer 
+ c1cb13b19080 Pulling fs layer 
+ 873532e5f8c7 Pulling fs layer 
+ 050d9f8c3b1c Pulling fs layer 
+ 710e142705f8 Pulling fs layer 
+ cb628c265f09 Pulling fs layer 
+ 9739ced65621 Waiting 
+ ae3bb1b347a4 Waiting 
+ f8406d9c00ea Waiting 
+ 050d9f8c3b1c Waiting 
+ 710e142705f8 Waiting 
+ cb628c265f09 Waiting 
+ c199bff16b05 Waiting 
+ c1cb13b19080 Waiting 
+ 91d2729fa4d5 Waiting 
+ 873532e5f8c7 Waiting 
+ e0d55fdb4d15 Waiting 
+ 039e6f9f9752 Pulling fs layer 
+ 5b03f5a6cdec Pulling fs layer 
+ ced91743e468 Pulling fs layer 
+ 709eacfa0183 Pulling fs layer 
+ bd9e4bd718ad Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ c846c34d5449 Pulling fs layer 
+ 039e6f9f9752 Waiting 
+ 5b03f5a6cdec Waiting 
+ ced91743e468 Waiting 
+ bd9e4bd718ad Waiting 
+ 4f4fb700ef54 Waiting 
+ 709eacfa0183 Waiting 
+ c846c34d5449 Waiting 
+ dda3d8fbd5ed Downloading [==================================================>]  1.165kB/1.165kB
+ dda3d8fbd5ed Verifying Checksum 
+ dda3d8fbd5ed Download complete 
+ 283a477db7bb Downloading [>                                                  ]  48.51kB/4.533MB
+ b0a0cf830b12 Downloading [>                                                  ]  294.2kB/29.15MB
+ 91d2729fa4d5 Downloading [>                                                  ]  15.74kB/1.45MB
+ 283a477db7bb Verifying Checksum 
+ 283a477db7bb Download complete 
+ 91d2729fa4d5 Verifying Checksum 
+ 91d2729fa4d5 Download complete 
+ b0a0cf830b12 Downloading [=========================================>         ]  24.18MB/29.15MB
+ 9739ced65621 Downloading [>                                                  ]  81.28kB/8.069MB
+ b0a0cf830b12 Verifying Checksum 
+ b0a0cf830b12 Download complete 
+ ae3bb1b347a4 Downloading [>                                                  ]  15.74kB/1.196MB
+ b0a0cf830b12 Extracting [>                                                  ]  294.9kB/29.15MB
+ ae3bb1b347a4 Verifying Checksum 
+ ae3bb1b347a4 Download complete 
+ f8406d9c00ea Downloading [==================================================>]     116B/116B
+ f8406d9c00ea Verifying Checksum 
+ f8406d9c00ea Download complete 
+ 9739ced65621 Verifying Checksum 
+ 9739ced65621 Download complete 
+ c199bff16b05 Downloading [==================================================>]  3.145kB/3.145kB
+ c199bff16b05 Verifying Checksum 
+ c199bff16b05 Download complete 
+ c1cb13b19080 Downloading [=================>                                 ]  3.502kB/9.925kB
+ c1cb13b19080 Downloading [==================================================>]  9.925kB/9.925kB
+ c1cb13b19080 Verifying Checksum 
+ c1cb13b19080 Download complete 
+ e0d55fdb4d15 Downloading [>                                                  ]  537.3kB/109MB
+ b0a0cf830b12 Extracting [==========>                                        ]  5.898MB/29.15MB
+ 873532e5f8c7 Downloading [==================================================>]     128B/128B
+ 050d9f8c3b1c Downloading [==================================================>]     169B/169B
+ 050d9f8c3b1c Verifying Checksum 
+ 050d9f8c3b1c Download complete 
+ 710e142705f8 Downloading [================================>                  ]  3.501kB/5.421kB
+ 710e142705f8 Downloading [==================================================>]  5.421kB/5.421kB
+ 710e142705f8 Verifying Checksum 
+ 710e142705f8 Download complete 
+ cb628c265f09 Verifying Checksum 
+ cb628c265f09 Download complete 
+ e0d55fdb4d15 Downloading [===========>                                       ]  25.08MB/109MB
+ b0a0cf830b12 Extracting [================>                                  ]  9.732MB/29.15MB
+ 5b03f5a6cdec Download complete 
+ 039e6f9f9752 Downloading [>                                                  ]  294.3kB/28.23MB
+ ced91743e468 Downloading [==================================================>]     875B/875B
+ ced91743e468 Download complete 
+ e0d55fdb4d15 Downloading [==========================>                        ]  57.03MB/109MB
+ b0a0cf830b12 Extracting [====================>                              ]  12.09MB/29.15MB
+ 039e6f9f9752 Downloading [=================================>                 ]  19.17MB/28.23MB
+ 709eacfa0183 Downloading [>                                                  ]  163.2kB/15.35MB
+ 039e6f9f9752 Verifying Checksum 
+ 039e6f9f9752 Download complete 
+ e0d55fdb4d15 Downloading [=======================================>           ]  85.28MB/109MB
+ b0a0cf830b12 Extracting [===========================>                       ]  15.93MB/29.15MB
+ 039e6f9f9752 Extracting [>                                                  ]  294.9kB/28.23MB
+ bd9e4bd718ad Downloading [==================================================>]      97B/97B
+ bd9e4bd718ad Verifying Checksum 
+ bd9e4bd718ad Download complete 
+ 709eacfa0183 Verifying Checksum 
+ 709eacfa0183 Download complete 
+ e0d55fdb4d15 Verifying Checksum 
+ e0d55fdb4d15 Download complete 
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ c846c34d5449 Downloading [==================================================>]     597B/597B
+ c846c34d5449 Verifying Checksum 
+ c846c34d5449 Download complete 
+ 039e6f9f9752 Extracting [======>                                            ]  3.539MB/28.23MB
+ b0a0cf830b12 Extracting [====================================>              ]  21.23MB/29.15MB
+ 039e6f9f9752 Extracting [===============>                                   ]  8.552MB/28.23MB
+ b0a0cf830b12 Extracting [==========================================>        ]  24.77MB/29.15MB
+ 039e6f9f9752 Extracting [===================>                               ]  11.21MB/28.23MB
+ 039e6f9f9752 Extracting [===============================>                   ]  17.69MB/28.23MB
+ b0a0cf830b12 Extracting [===============================================>   ]  27.72MB/29.15MB
+ 039e6f9f9752 Extracting [=========================================>         ]  23.59MB/28.23MB
+ 039e6f9f9752 Extracting [==========================================>        ]  23.89MB/28.23MB
+ b0a0cf830b12 Extracting [================================================>  ]  28.31MB/29.15MB
+ 039e6f9f9752 Extracting [===============================================>   ]  26.84MB/28.23MB
+ b0a0cf830b12 Extracting [==================================================>]  29.15MB/29.15MB
+ b0a0cf830b12 Pull complete 
+ dda3d8fbd5ed Extracting [==================================================>]  1.165kB/1.165kB
+ dda3d8fbd5ed Extracting [==================================================>]  1.165kB/1.165kB
+ 039e6f9f9752 Extracting [================================================>  ]  27.43MB/28.23MB
+ 039e6f9f9752 Extracting [==================================================>]  28.23MB/28.23MB
+ 039e6f9f9752 Pull complete 
+ 5b03f5a6cdec Extracting [==================================================>]  1.103kB/1.103kB
+ 5b03f5a6cdec Extracting [==================================================>]  1.103kB/1.103kB
+ 5b03f5a6cdec Pull complete 
+ ced91743e468 Extracting [==================================================>]     875B/875B
+ ced91743e468 Extracting [==================================================>]     875B/875B
+ ced91743e468 Pull complete 
+ 709eacfa0183 Extracting [>                                                  ]  163.8kB/15.35MB
+ 709eacfa0183 Extracting [=>                                                 ]  327.7kB/15.35MB
+ 709eacfa0183 Extracting [==================>                                ]  5.734MB/15.35MB
+ 709eacfa0183 Extracting [=========================================>         ]  12.78MB/15.35MB
+ 709eacfa0183 Extracting [==========================================>        ]  13.11MB/15.35MB
+ 709eacfa0183 Extracting [==================================================>]  15.35MB/15.35MB
+ dda3d8fbd5ed Pull complete 
+ 709eacfa0183 Pull complete 
+ 283a477db7bb Extracting [>                                                  ]  65.54kB/4.533MB
+ bd9e4bd718ad Extracting [==================================================>]      97B/97B
+ bd9e4bd718ad Extracting [==================================================>]      97B/97B
+ bd9e4bd718ad Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ c846c34d5449 Extracting [==================================================>]     597B/597B
+ c846c34d5449 Extracting [==================================================>]     597B/597B
+ c846c34d5449 Pull complete 
+ redis Pulled 
+ 283a477db7bb Extracting [==================================================>]  4.533MB/4.533MB
+ 283a477db7bb Pull complete 
+ 91d2729fa4d5 Extracting [=>                                                 ]  32.77kB/1.45MB
+ 91d2729fa4d5 Extracting [==================================================>]   1.45MB/1.45MB
+ 91d2729fa4d5 Pull complete 
+ 9739ced65621 Extracting [>                                                  ]   98.3kB/8.069MB
+ 9739ced65621 Extracting [========================>                          ]   4.03MB/8.069MB
+ 9739ced65621 Extracting [======================================>            ]  6.193MB/8.069MB
+ 9739ced65621 Extracting [==================================================>]  8.069MB/8.069MB
+ 9739ced65621 Pull complete 
+ ae3bb1b347a4 Extracting [=>                                                 ]  32.77kB/1.196MB
+ ae3bb1b347a4 Extracting [==================================================>]  1.196MB/1.196MB
+ ae3bb1b347a4 Extracting [==================================================>]  1.196MB/1.196MB
+ ae3bb1b347a4 Pull complete 
+ f8406d9c00ea Extracting [==================================================>]     116B/116B
+ f8406d9c00ea Extracting [==================================================>]     116B/116B
+ f8406d9c00ea Pull complete 
+ c199bff16b05 Extracting [==================================================>]  3.145kB/3.145kB
+ c199bff16b05 Extracting [==================================================>]  3.145kB/3.145kB
+ c199bff16b05 Pull complete 
+ e0d55fdb4d15 Extracting [>                                                  ]  557.1kB/109MB
+ e0d55fdb4d15 Extracting [===>                                               ]  7.242MB/109MB
+ e0d55fdb4d15 Extracting [====>                                              ]  10.58MB/109MB
+ e0d55fdb4d15 Extracting [=======>                                           ]  16.15MB/109MB
+ e0d55fdb4d15 Extracting [=========>                                         ]  21.73MB/109MB
+ e0d55fdb4d15 Extracting [============>                                      ]   27.3MB/109MB
+ e0d55fdb4d15 Extracting [================>                                  ]  35.65MB/109MB
+ e0d55fdb4d15 Extracting [====================>                              ]  44.01MB/109MB
+ e0d55fdb4d15 Extracting [=======================>                           ]  51.81MB/109MB
+ e0d55fdb4d15 Extracting [=========================>                         ]  56.26MB/109MB
+ e0d55fdb4d15 Extracting [=============================>                     ]  64.06MB/109MB
+ e0d55fdb4d15 Extracting [=================================>                 ]  73.53MB/109MB
+ e0d55fdb4d15 Extracting [=====================================>             ]  81.89MB/109MB
+ e0d55fdb4d15 Extracting [=========================================>         ]  90.24MB/109MB
+ e0d55fdb4d15 Extracting [==========================================>        ]  93.59MB/109MB
+ e0d55fdb4d15 Extracting [============================================>      ]  97.48MB/109MB
+ e0d55fdb4d15 Extracting [==============================================>    ]  101.4MB/109MB
+ e0d55fdb4d15 Extracting [===============================================>   ]  103.6MB/109MB
+ e0d55fdb4d15 Extracting [================================================>  ]  105.3MB/109MB
+ e0d55fdb4d15 Extracting [=================================================> ]  107.5MB/109MB
+ e0d55fdb4d15 Extracting [==================================================>]    109MB/109MB
+ e0d55fdb4d15 Pull complete 
+ c1cb13b19080 Extracting [==================================================>]  9.925kB/9.925kB
+ c1cb13b19080 Extracting [==================================================>]  9.925kB/9.925kB
+ c1cb13b19080 Pull complete 
+ 873532e5f8c7 Extracting [==================================================>]     128B/128B
+ 873532e5f8c7 Extracting [==================================================>]     128B/128B
+ 873532e5f8c7 Pull complete 
+ 050d9f8c3b1c Extracting [==================================================>]     169B/169B
+ 050d9f8c3b1c Extracting [==================================================>]     169B/169B
+ 050d9f8c3b1c Pull complete 
+ 710e142705f8 Extracting [==================================================>]  5.421kB/5.421kB
+ 710e142705f8 Extracting [==================================================>]  5.421kB/5.421kB
+ 710e142705f8 Pull complete 
+ cb628c265f09 Extracting [==================================================>]     184B/184B
+ cb628c265f09 Extracting [==================================================>]     184B/184B
+ cb628c265f09 Pull complete 
+ postgresql Pulled 
+ Network docker_services_cli_default  Creating
+ Network docker_services_cli_default  Created
+ Container docker_services_cli-redis-1  Creating
+ Container docker_services_cli-postgresql-1  Creating
+ Container docker_services_cli-postgresql-1  Created
+ Container docker_services_cli-redis-1  Created
+ Container docker_services_cli-postgresql-1  Starting
+ Container docker_services_cli-redis-1  Starting
+ Container docker_services_cli-redis-1  Started
+ Container docker_services_cli-postgresql-1  Started
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py,line=2::pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py,line=3148::Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py,line=2::Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py,line=2560::Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+============================= test session starts ==============================
+platform linux -- Python 3.14.2, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original
+configfile: pyproject.toml
+testpaths: tests, invenio_accounts
+plugins: isort-4.0.0, black-0.6.0, invenio-4.0.2, pydocstyle-2.4.0, cov-7.1.0, pycodestyle-2.5.0, flask-1.3.0, github-actions-annotate-failures-0.4.2
+collected 107 items / 1 skipped
+
+tests/test_admin.py .::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/wtforms/fields/core.py,line=399::Flags should be stored in dicts and not in tuples. The next version of WTForms will abandon support for flags in tuples.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/wtforms/fields/core.py,line=399::Flags should be stored in dicts and not in tuples. The next version of WTForms will abandon support for flags in tuples.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/wtforms/fields/core.py,line=399::Flags should be stored in dicts and not in tuples. The next version of WTForms will abandon support for flags in tuples.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/wtforms/fields/core.py,line=399::Flags should be stored in dicts and not in tuples. The next version of WTForms will abandon support for flags in tuples.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_admin/contrib/sqla/view.py,line=1119::The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_admin/contrib/sqla/view.py,line=1119::The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+                                                  [  2%]
+tests/test_alembic.py .::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py,line=192::autoincrement and existing_autoincrement only make sense for MySQL
+::warning file=workdir/tests/invenio-accounts/original/invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py,line=100::The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+                                                  [  3%]
+tests/test_auth_ratelimit.py .....::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                     [ 10%]
+tests/test_cli.py ....::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+                                                   [ 14%]
+tests/test_forms.py ..                                                   [ 15%]
+tests/test_hash.py .....::warning file=workdir/tests/invenio-accounts/original/tests/test_hash.py,line=145::the method passlib.context.CryptContext.encrypt() is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0, use CryptContext.hash() instead.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py,line=1589::CryptContext.hash(): 'scheme' keyword is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py,line=1612::passing settings to invenio_aes_encrypted_email.hash() is deprecated, and won't be supported in Passlib 2.0; use 'invenio_aes_encrypted_email.using(**settings).hash(secret)' instead
+.::warning file=workdir/tests/invenio-accounts/original/tests/test_hash.py,line=145::the method passlib.context.CryptContext.encrypt() is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0, use CryptContext.hash() instead.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py,line=1589::CryptContext.hash(): 'scheme' keyword is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py,line=1612::passing settings to invenio_aes_encrypted_email.hash() is deprecated, and won't be supported in Passlib 2.0; use 'invenio_aes_encrypted_email.using(**settings).hash(secret)' instead
+..::warning file=workdir/tests/invenio-accounts/original/tests/test_hash.py,line=145::the method passlib.context.CryptContext.encrypt() is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0, use CryptContext.hash() instead.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py,line=1589::CryptContext.hash(): 'scheme' keyword is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py,line=1612::passing settings to invenio_aes_encrypted_email.hash() is deprecated, and won't be supported in Passlib 2.0; use 'invenio_aes_encrypted_email.using(**settings).hash(secret)' instead
+..::warning file=workdir/tests/invenio-accounts/original/tests/test_hash.py,line=145::the method passlib.context.CryptContext.encrypt() is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0, use CryptContext.hash() instead.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py,line=1589::CryptContext.hash(): 'scheme' keyword is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py,line=1612::passing settings to invenio_aes_encrypted_email.hash() is deprecated, and won't be supported in Passlib 2.0; use 'invenio_aes_encrypted_email.using(**settings).hash(secret)' instead
+                                            [ 25%]
+tests/test_invenio_accounts.py .....::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py,line=192::autoincrement and existing_autoincrement only make sense for MySQL
+......::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py,line=208::get_user method is deprecated, user get_user_by_email/get_user_by_id
+......                         [ 41%]
+tests/test_models.py ........                                            [ 48%]
+tests/test_schemas.py ...                                                [ 51%]
+tests/test_sessions.py ...ss.....                                        [ 60%]
+tests/test_tasks.py ....                                                 [ 64%]
+tests/test_template_context_processors.py .::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=147::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=147::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+                             [ 66%]
+tests/test_token_duration.py ...                                         [ 69%]
+tests/test_utils.py ......::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=147::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=368::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=147::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=368::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.                                             [ 76%]
+tests/test_validated_dicts.py ...                                        [ 79%]
+tests/test_views.py ......                                               [ 85%]
+tests/test_views_rest.py .::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.::warning file=workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    __import__('pkg_resources').declare_namespace(__name__)
+
+.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:3148
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:3148: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    __import__('pkg_resources').declare_namespace(__name__)
+
+.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:2560
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:2560: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(parent)
+
+tests/test_admin.py: 11 warnings
+tests/test_auth_ratelimit.py: 2 warnings
+tests/test_cli.py: 6 warnings
+tests/test_invenio_accounts.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_security/datastore.py:208: DeprecationWarning: get_user method is deprecated, user get_user_by_email/get_user_by_id
+    warnings.warn(
+
+tests/test_admin.py::test_admin_createuser
+tests/test_admin.py::test_admin_createuser
+tests/test_admin.py::test_admin_createuser
+tests/test_admin.py::test_admin_createuser
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/wtforms/fields/core.py:399: DeprecationWarning: Flags should be stored in dicts and not in tuples. The next version of WTForms will abandon support for flags in tuples.
+    return self.field_class(*self.args, **kw)
+
+tests/test_admin.py::test_admin_sessions
+tests/test_admin.py::test_admin_sessions
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/flask_admin/contrib/sqla/view.py:1119: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    return self.session.query(self.model).get(tools.iterdecode(id))
+
+tests/test_alembic.py::test_alembic
+tests/test_invenio_accounts.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/alembic/config.py:572: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_alembic.py::test_alembic
+tests/test_invenio_accounts.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py:192: UserWarning: autoincrement and existing_autoincrement only make sense for MySQL
+    super().alter_column(
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py:100: SADeprecationWarning: The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+    insp = Inspector.from_engine(ctx.connection.engine)
+
+tests/test_auth_ratelimit.py: 2 warnings
+tests/test_views_rest.py: 16 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/invenio_rest/ext.py:24: FutureWarning: CSRF validation will be enabled by default in the version 1.3.x
+    self.init_app(app)
+
+tests/test_hash.py::test_unicode_regression
+tests/test_hash.py::test_invenio_aes_encrypted_email
+tests/test_hash.py::test_legacy_user_login
+tests/test_hash.py::test_monkey_patch_legacy
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/tests/test_hash.py:145: DeprecationWarning: the method passlib.context.CryptContext.encrypt() is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0, use CryptContext.hash() instead.
+    encrypted_password = ctx.encrypt(
+
+tests/test_hash.py::test_unicode_regression
+tests/test_hash.py::test_invenio_aes_encrypted_email
+tests/test_hash.py::test_legacy_user_login
+tests/test_hash.py::test_monkey_patch_legacy
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py:1589: DeprecationWarning: CryptContext.hash(): 'scheme' keyword is deprecated as of Passlib 1.7, and will be removed in Passlib 2.0
+    warn(
+
+tests/test_hash.py::test_unicode_regression
+tests/test_hash.py::test_invenio_aes_encrypted_email
+tests/test_hash.py::test_legacy_user_login
+tests/test_hash.py::test_monkey_patch_legacy
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/passlib/context.py:1612: DeprecationWarning: passing settings to invenio_aes_encrypted_email.hash() is deprecated, and won't be supported in Passlib 2.0; use 'invenio_aes_encrypted_email.using(**settings).hash(secret)' instead
+    return self.hash(*args, **kwds)
+
+tests/test_template_context_processors.py::test_context_processor_jwt
+tests/test_template_context_processors.py::test_context_processor_jwt_token
+tests/test_utils.py::test_jwt_token
+tests/test_utils.py::test_jwt_expired_token
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    return self._jws.encode(
+
+tests/test_utils.py::test_jwt_token
+tests/test_utils.py::test_jwt_expired_token
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-accounts/original/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    decoded = self.decode_complete(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.2-final-0 ________________
+
+Name                                                                                 Stmts   Miss  Cover   Missing
+------------------------------------------------------------------------------------------------------------------
+invenio_accounts/__init__.py                                                            11      4    64%   43-49
+invenio_accounts/admin.py                                                              122      8    93%   80, 200-206
+invenio_accounts/alembic/6ec5ce377ca3_create_domains.py                                 18      0   100%
+invenio_accounts/alembic/23e196599f9f_change_datetime_types.py                          23      0   100%
+invenio_accounts/alembic/037afe10e9ff_add_user_moderation_fields.py                     14      0   100%
+invenio_accounts/alembic/62efc52773d4_create_useridentity_table.py                      11      0   100%
+invenio_accounts/alembic/843bc79c426f_create_accounts_branch.py                          8      0   100%
+invenio_accounts/alembic/999dcbd19ace_users_versioning.py                               33      0   100%
+invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py                         31      0   100%
+invenio_accounts/alembic/dfbdf43a3e96_separate_login_info.py                            26      0   100%
+invenio_accounts/alembic/e12419831262_add_new_columns_on_sessionactivity.py             22      0   100%
+invenio_accounts/alembic/eb9743315a9d_add_userprofile.py                                20      0   100%
+invenio_accounts/alembic/f2522cdd5fcd_change_accountsrole_primary_key_to_string.py      50     11    78%   37, 46, 64-73, 126-133
+invenio_accounts/api.py                                                                 40      9    78%   51-53, 57-59, 63-65
+invenio_accounts/cli.py                                                                128     15    88%   66, 74, 95-100, 181-188
+invenio_accounts/config.py                                                             152      0   100%
+invenio_accounts/context_processors/__init__.py                                          0      0   100%
+invenio_accounts/context_processors/jwt.py                                              10      0   100%
+invenio_accounts/datastore.py                                                           82     23    72%   26-32, 36-41, 85-91, 107, 112, 116, 119-122
+invenio_accounts/domains.py                                                             15      3    80%   26-28
+invenio_accounts/errors.py                                                               7      2    71%   24-25
+invenio_accounts/ext.py                                                                143     24    83%   64, 71, 100-105, 180, 328-329, 339-341, 346-348, 353-364, 372-375, 383-394
+invenio_accounts/forms.py                                                               75      3    96%   52, 125, 136
+invenio_accounts/hash.py                                                                55      0   100%
+invenio_accounts/limiter.py                                                             23      2    91%   13, 20
+invenio_accounts/models.py                                                             347     26    93%   249-250, 277, 279-284, 292, 301, 303-308, 316, 344, 497-502, 513-517, 526-527, 532-533
+invenio_accounts/profiles/__init__.py                                                    3      0   100%
+invenio_accounts/profiles/dicts.py                                                      50      2    96%   49-50
+invenio_accounts/profiles/schemas.py                                                    25      0   100%
+invenio_accounts/proxies.py                                                             15      0   100%
+invenio_accounts/sessions.py                                                            62      2    97%   54, 132
+invenio_accounts/signals.py                                                              6      0   100%
+invenio_accounts/tasks.py                                                               40     12    70%   54-55, 83-153
+invenio_accounts/testutils.py                                                           37      6    84%   110-115, 124
+invenio_accounts/utils.py                                                              134      8    94%   88, 139, 155, 243-244, 249-250, 273
+invenio_accounts/views/__init__.py                                                       2      0   100%
+invenio_accounts/views/rest.py                                                         286     14    95%   70, 172-175, 177, 183-185, 278, 335, 366, 437, 439, 479, 573
+invenio_accounts/views/security.py                                                      31      2    94%   45, 59
+invenio_accounts/views/settings.py                                                      18      0   100%
+------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                 2175    176    92%
+============ 105 passed, 3 skipped, 71 warnings in 85.81s (0:01:25) ============
+ Container docker_services_cli-redis-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopping
+ Container docker_services_cli-postgresql-1  Stopped
+ Container docker_services_cli-postgresql-1  Removing
+ Container docker_services_cli-postgresql-1  Removed
+ Container docker_services_cli-redis-1  Stopped
+ Container docker_services_cli-redis-1  Removing
+ Container docker_services_cli-redis-1  Removed
+ Network docker_services_cli_default  Removing
+ Network docker_services_cli_default  Removed

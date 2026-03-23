@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "a48cc40",
+    "message": "release: v4.0.2"
+  },
+  {
+    "hash": "78a314f",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "c6e93c8",
+    "message": "chore(git-blame): ignore SPDX license header commit"
+  },
+  {
+    "hash": "67b7bc1",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "4d354d2",
+    "message": "release: v4.0.1"
+  },
+  {
+    "hash": "9bb94ff",
+    "message": "fix: forcing nested transactions"
+  },
+  {
+    "hash": "f4dedee",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "5667a29",
+    "message": "chore(black): fix compatiblity with >=26"
+  },
+  {
+    "hash": "955af4c",
+    "message": "fix: use now instead of utcnow"
+  },
+  {
+    "hash": "5e89b2e",
+    "message": "Replace SQLAlchemy pool with NullPool"
+  },
+  {
+    "hash": "c58a52a",
+    "message": "release: v3.4.2"
+  },
+  {
+    "hash": "8f65dd7",
+    "message": "fix: use importlib_metadata <python3.10"
+  },
+  {
+    "hash": "73fa5c1",
+    "message": "release: v3.4.1"
+  },
+  {
+    "hash": "32bd6bb",
+    "message": "fix: importlib_metadata legacy"
+  },
+  {
+    "hash": "3ae85bb",
+    "message": "release: v3.4.0"
+  },
+  {
+    "hash": "407a9fe",
+    "message": "fix: pkg_resources DeprecationWarning"
+  },
+  {
+    "hash": "26adcf9",
+    "message": "\ud83d\udce6 release: v3.3.1"
+  },
+  {
+    "hash": "f96a29f",
+    "message": "installation: pin snowballstemmer to <3.x"
+  },
+  {
+    "hash": "d6fde9f",
+    "message": ":package: release: v3.3.0"
+  },
+  {
+    "hash": "2f17c09",
+    "message": "fixtures: add set_app_config_fn_scoped"
+  },
+  {
+    "hash": "1b3a95e",
+    "message": "\ud83d\udce6 release: v3.2.0"
+  },
+  {
+    "hash": "023cae7",
+    "message": "user: add `base_url` parameter for user auth client calls"
+  },
+  {
+    "hash": "c89d1ef",
+    "message": "\ud83d\udce6 release: v3.1.0"
+  },
+  {
+    "hash": "e8fcdb1",
+    "message": "fixtures: add fixture for cache_uri"
+  },
+  {
+    "hash": "59065c5",
+    "message": "release: v3.0.0"
+  },
+  {
+    "hash": "f9ac6fd",
+    "message": "fix: tests"
+  },
+  {
+    "hash": "3a1d090",
+    "message": "setup: bump invenio dependencies"
+  },
+  {
+    "hash": "cd516cb",
+    "message": "setup: remove pytest pin"
+  },
+  {
+    "hash": "a957dfa",
+    "message": "global: add compatibility to sqlalchemy >= 2.0"
+  },
+  {
+    "hash": "9b34395",
+    "message": "fixtures: apply new sqlalchemy session rollback handling"
+  },
+  {
+    "hash": "ca8830c",
+    "message": "ci: use reusable workflow for PyPI publishing"
+  },
+  {
+    "hash": "7fe40c0",
+    "message": "ci: use reusable workflows"
+  },
+  {
+    "hash": "1b7109e",
+    "message": "fixtures: add \"search_hosts\""
+  },
+  {
+    "hash": "d03d0b5",
+    "message": "\ud83d\udce6 release: v2.2.1"
+  },
+  {
+    "hash": "8e746a0",
+    "message": "installation: pin importlib-metadata<8.0.0"
+  },
+  {
+    "hash": "b89a27a",
+    "message": "release: v2.2.0"
+  },
+  {
+    "hash": "b427666",
+    "message": "setup: bump coverage"
+  },
+  {
+    "hash": "f457126",
+    "message": "installation: add GitHub action annotations"
+  },
+  {
+    "hash": "db7546a",
+    "message": "relase: v2.1.7"
+  },
+  {
+    "hash": "cd5dcc1",
+    "message": "fixtures: use unlogged tables for PostgreSQL"
+  },
+  {
+    "hash": "8c92458",
+    "message": "release: v2.1.6"
+  },
+  {
+    "hash": "8bc410e",
+    "message": "tests: skip E2E browser test"
+  },
+  {
+    "hash": "acef793",
+    "message": "fixtures: don't expire session objects on commit"
+  },
+  {
+    "hash": "f4f2bc5",
+    "message": "release: v2.1.5"
+  },
+  {
+    "hash": "fd05b62",
+    "message": "installation: pin Flask<2.3.0"
+  },
+  {
+    "hash": "fd8fcb3",
+    "message": "release: v2.1.4"
+  },
+  {
+    "hash": "bdccfa0",
+    "message": "user: fix identity id"
+  },
+  {
+    "hash": "37a614d",
+    "message": "update release notes"
+  },
+  {
+    "hash": "9c3e129",
+    "message": "Revert \"db: upgrade flask-sqlalchemy\""
+  },
+  {
+    "hash": "795d947",
+    "message": "Revert \"release: v2.1.3\""
+  }
+]
