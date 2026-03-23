@@ -1,0 +1,15 @@
+tests/services/test_rdm_service.py
+tests/services/test_record_deletion.py
+tests/services/test_record_deletion_request.py
+tests/services/test_service_access.py
+tests/services/test_service_collection_records.py
+tests/services/test_service_communities.py
+tests/services/test_service_community_records.py
+tests/services/test_service_record_communities.py
+tests/services/test_service_review.py
+tests/services/test_service_tasks.py
+tests/services/test_sort.py
+tests/test_alembic.py
+tests/test_invenio_rdm_records.py
+tests/tokens/test_feature_flag.py
+tests/tokens/test_resource_access.py

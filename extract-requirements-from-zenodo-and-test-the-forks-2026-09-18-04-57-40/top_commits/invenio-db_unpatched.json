@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "c62aa6f",
+    "message": "release: v2.6.0"
+  },
+  {
+    "hash": "a125b96",
+    "message": "fix(alembic): ignore the new \"checkconstraint_byname\" plugin for now"
+  },
+  {
+    "hash": "38d52f8",
+    "message": "feat(tests): Comparing server defaults in alembic tests"
+  },
+  {
+    "hash": "37de9d3",
+    "message": "release: v2.5.2"
+  },
+  {
+    "hash": "08b9071",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "a0534be",
+    "message": "chore(cleanup): remove outdated and unnecessary files"
+  },
+  {
+    "hash": "6506b38",
+    "message": "chore(format): reformat with black"
+  },
+  {
+    "hash": "f180dac",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "eb41881",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "b529070",
+    "message": "release: v2.5.1"
+  },
+  {
+    "hash": "af2a329",
+    "message": "fix(options): empty string is valid"
+  },
+  {
+    "hash": "11633f5",
+    "message": "fix(timezone): undo the changes for writing datetimes to the database."
+  },
+  {
+    "hash": "1c4c145",
+    "message": "fix(timezone): the implementation now converts all timezones different from UTC to UTC as we cannot expect every PostgreSQL instance can be configured to UTC."
+  },
+  {
+    "hash": "7b5d5be",
+    "message": "release: v2.5.0"
+  },
+  {
+    "hash": "0f273f0",
+    "message": "test: when the database is dropped all open connections in the pool get invalid."
+  },
+  {
+    "hash": "5d70596",
+    "message": "feat(alembic): safely create alembic_version table"
+  },
+  {
+    "hash": "4e6db7b",
+    "message": "release: v2.4.0"
+  },
+  {
+    "hash": "71cafb6",
+    "message": "fix(db): remove hacks, move PostgreSQL timezone config to ext.py"
+  },
+  {
+    "hash": "523cbb6",
+    "message": "fix(sqlite): avoid running PRAGMA in multi-engine environments"
+  },
+  {
+    "hash": "b3a8b26",
+    "message": "fix(utc): add warning if libpq options are specified without a timezone"
+  },
+  {
+    "hash": "0edf4f8",
+    "message": "fix(utc): move DB config override to _apply_driver_defaults"
+  },
+  {
+    "hash": "23d27ae",
+    "message": "release: v2.3.0"
+  },
+  {
+    "hash": "b96b601",
+    "message": "tests(utc): add unit tests for UTCDateTime and Postgres configured time zone"
+  },
+  {
+    "hash": "5cff5b6",
+    "message": "docs(sphinx): ignore unresolved Flask-Alembic type refs"
+  },
+  {
+    "hash": "d9278fc",
+    "message": "feat(alembic): set lock_timeout with retry on migration connections"
+  },
+  {
+    "hash": "5549140",
+    "message": "fix(config): use UTC for PostgreSQL"
+  },
+  {
+    "hash": "1f845ba",
+    "message": "release: v2.2.1"
+  },
+  {
+    "hash": "81cb5b7",
+    "message": "fix(setup): pin sqlalchemy-continuum"
+  },
+  {
+    "hash": "27e7643",
+    "message": "release: v2.2.0"
+  },
+  {
+    "hash": "b8ce9ac",
+    "message": "chore(black): apply changes for black>=26"
+  },
+  {
+    "hash": "04c4990",
+    "message": "fix: str of datetime"
+  },
+  {
+    "hash": "9a77042",
+    "message": "change(utc): use always timezone.utc"
+  },
+  {
+    "hash": "891bf45",
+    "message": "fix: docs reference target not found"
+  },
+  {
+    "hash": "ef20252",
+    "message": "db: add Timestamp class"
+  },
+  {
+    "hash": "91c9685",
+    "message": "UTCDateTime: handle more cases"
+  },
+  {
+    "hash": "5212d79",
+    "message": "db: fix warning"
+  },
+  {
+    "hash": "8885f7e",
+    "message": "fix: docs reference target not found"
+  },
+  {
+    "hash": "8029a9b",
+    "message": "shared: add UTCDateTime column type"
+  },
+  {
+    "hash": "de17cc5",
+    "message": "chore: add nitpick_ignore to fix CI"
+  },
+  {
+    "hash": "513660c",
+    "message": "release: v2.1.2"
+  },
+  {
+    "hash": "783684c",
+    "message": "fix(setup): upper pin Flask-Alembic"
+  },
+  {
+    "hash": "abce01f",
+    "message": "release: v2.1.1"
+  },
+  {
+    "hash": "e0e3d8c",
+    "message": "fix(setup): pin sqlalchemy-utils"
+  },
+  {
+    "hash": "a6c8b53",
+    "message": "release: v2.1.0"
+  },
+  {
+    "hash": "3346eb1",
+    "message": "workflows: switch to centralized workflows"
+  },
+  {
+    "hash": "6141eed",
+    "message": "release: v2.1.0"
+  },
+  {
+    "hash": "bada2c9",
+    "message": "chores: replaced importlib_xyz with importlib"
+  },
+  {
+    "hash": "61166d8",
+    "message": "release: v2.0.0"
+  },
+  {
+    "hash": "92e73b2",
+    "message": "uow: possible solution for the rollback problem"
+  },
+  {
+    "hash": "085a2b6",
+    "message": "fix: select of BinaryExpressions"
+  }
+]

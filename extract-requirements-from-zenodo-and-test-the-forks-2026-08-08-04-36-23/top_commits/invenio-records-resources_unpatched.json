@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "b92081f",
+    "message": "release: v10.2.1"
+  },
+  {
+    "hash": "f9d452c",
+    "message": "fix: retry multipart checksum computation"
+  },
+  {
+    "hash": "54d9ca6",
+    "message": "release: v10.2.0"
+  },
+  {
+    "hash": "4c089fa",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "e1303bd",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "280c8a3",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "9885bd5",
+    "message": "release: v10.1.1"
+  },
+  {
+    "hash": "3fd28b2",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "604f623",
+    "message": "chore(cleanup): remove outdated and unnecessary files"
+  },
+  {
+    "hash": "18b2755",
+    "message": "fix(performance): replace deepcopy with shallow copy for link expansion"
+  },
+  {
+    "hash": "b7508fc",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "a9b99f8",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "8603150",
+    "message": "chore(git-blame): fix commit hash for SPDX header change"
+  },
+  {
+    "hash": "8d03a7c",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "51232fd",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "840da76",
+    "message": "\ud83d\udce6 release: v10.1.0"
+  },
+  {
+    "hash": "63e8a34",
+    "message": "files: limit archive download by total file size"
+  },
+  {
+    "hash": "a34216f",
+    "message": "release: v10.0.0"
+  },
+  {
+    "hash": "376ea68",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "d2396a9",
+    "message": "feat: add suport for listing and extracing items from containers"
+  },
+  {
+    "hash": "88930b5",
+    "message": "fix(tests): Added alembic test"
+  },
+  {
+    "hash": "07d211e",
+    "message": "feat: Passing more context to permissions and components"
+  },
+  {
+    "hash": "a285b12",
+    "message": "\ud83d\udce6 release: v9.3.0"
+  },
+  {
+    "hash": "279dd56",
+    "message": "feat(facets): add hard_bounds and dynamic bounds to DateFacet"
+  },
+  {
+    "hash": "e8f2d65",
+    "message": "feat(facets): add Facet base class with post_filter and prepare_aggregation"
+  },
+  {
+    "hash": "fc98a3f",
+    "message": ":package: release: v9.2.0"
+  },
+  {
+    "hash": "8b7ad35",
+    "message": "feat: set anchor for EndpointLink dynamically"
+  },
+  {
+    "hash": "6b6da94",
+    "message": "ui(translations): mark string as translatable"
+  },
+  {
+    "hash": "1a772dd",
+    "message": "factories: add \"search_alias\" for index field"
+  },
+  {
+    "hash": "45611a9",
+    "message": "release: v9.1.0"
+  },
+  {
+    "hash": "a61383d",
+    "message": "tests: add DateFacet tests"
+  },
+  {
+    "hash": "9d25108",
+    "message": "feat(facets): add DateFacet for date histogram ranges"
+  },
+  {
+    "hash": "a8b47a5",
+    "message": "release: v9.0.0"
+  },
+  {
+    "hash": "c018967",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "14c17c9",
+    "message": "fix: DeprecationWarning from invenio-indexer"
+  },
+  {
+    "hash": "b29745e",
+    "message": "chore: remove warnings"
+  },
+  {
+    "hash": "ce387e0",
+    "message": "fix: RemovedInMarshmallow4Warning"
+  },
+  {
+    "hash": "094714b",
+    "message": "fix: RemovedInMarshmallow4Warning"
+  },
+  {
+    "hash": "ffe861d",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "92bac2e",
+    "message": "fix: removed dependency on PyFilesystem2"
+  },
+  {
+    "hash": "48ee786",
+    "message": "refactor: remove context usage"
+  },
+  {
+    "hash": "c12c574",
+    "message": "fix: avoid deepcopy in EndpointLink bc of possible problematic context content"
+  },
+  {
+    "hash": "1939994",
+    "message": "fix: black formatting"
+  },
+  {
+    "hash": "d511460",
+    "message": "fix: re-add removed import"
+  },
+  {
+    "hash": "77d064f",
+    "message": "feat: expose FileEndpointLink at services import level"
+  },
+  {
+    "hash": "573de21",
+    "message": "feat: add support for anchor in EndpointLink"
+  },
+  {
+    "hash": "feade7f",
+    "message": "refactor: use EndpointLink in RecordTypeFactory [+]"
+  },
+  {
+    "hash": "ee95371",
+    "message": "release: v8.8.0"
+  },
+  {
+    "hash": "39bcb9b",
+    "message": "fix(files-svc): clean up broken FileInstances when an upload fails"
+  },
+  {
+    "hash": "32b854c",
+    "message": "fix(files-mgr): remember file information before write operations"
+  }
+]

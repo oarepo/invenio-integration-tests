@@ -1,0 +1,471 @@
+{
+  "dependencies": [
+    {
+      "github_entry": {
+        "_extra": {},
+        "default_branch": null,
+        "exclude": [
+          "invenio-xrootd",
+          "invenio-swh"
+        ],
+        "extras": [
+          "tests",
+          "opensearch2",
+          "s3",
+          "devs",
+          "s3fs",
+          "oaipmh",
+          "rdf",
+          "sparql",
+          "postgresql",
+          "admin"
+        ],
+        "freeze": [
+          "setuptools<82.0.0"
+        ],
+        "include": [
+          "invenio-.*",
+          "pytest-invenio",
+          "citeproc-py-styles"
+        ],
+        "install": [],
+        "org": "inveniosoftware",
+        "package_map": {},
+        "slow_packages": {
+          "invenio-rdm-records": [
+            "tests/resources/test_iiif_image_api.py",
+            "tests/resources/test_resources_review.py",
+            "tests/services/test_rdm_service.py"
+          ]
+        },
+        "test": [
+          "./run-tests.sh"
+        ]
+      },
+      "patched_reference": {
+        "actual_version": "1.12.2",
+        "base": null,
+        "branch": null,
+        "commit": "24806614cf8a915e5cb05fb3c55d71eb1f3c555a",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": null,
+        "repo": "invenio-cli"
+      },
+      "patches": [
+        {
+          "actual_version": "1.12.0",
+          "base": "v1.12.0",
+          "branch": "oarepo-feature-uv-project-environment-from-1.12.0",
+          "commit": "6eff551df9c0031ffa2639ace7243cd994b64b91",
+          "commits_from_version": null,
+          "org": "oarepo",
+          "package": "invenio-cli",
+          "pr": null,
+          "pr_info": {
+            "commits": [
+              "6eff551df9c0031ffa2639ace7243cd994b64b91"
+            ],
+            "source_branch": "oarepo-feature-uv-project-environment-from-1.12.0",
+            "source_org": "oarepo",
+            "source_repo": "invenio-cli"
+          },
+          "repo": "invenio-cli",
+          "versions": [
+            {
+              "operator": ">=",
+              "version": "1.12.0"
+            }
+          ]
+        },
+        {
+          "actual_version": "1.12.0",
+          "base": "v1.12.0",
+          "branch": "oarepo-feature-custom-cert-path-from-1.12.0",
+          "commit": "d0e6b7e6a5421457f4f344dbfaff7476ed009b7e",
+          "commits_from_version": null,
+          "org": "oarepo",
+          "package": "invenio-cli",
+          "pr": null,
+          "pr_info": {
+            "commits": [
+              "d0e6b7e6a5421457f4f344dbfaff7476ed009b7e"
+            ],
+            "source_branch": "oarepo-feature-custom-cert-path-from-1.12.0",
+            "source_org": "oarepo",
+            "source_repo": "invenio-cli"
+          },
+          "repo": "invenio-cli",
+          "versions": [
+            {
+              "operator": ">=",
+              "version": "1.12.0"
+            }
+          ]
+        },
+        {
+          "actual_version": "1.12.0",
+          "base": "v1.12.0",
+          "branch": "oarepo-feature-rdm-version-oarepo-from-1.12.0",
+          "commit": "0ed9adef629d4f93ddc79e162f0b24f796402207",
+          "commits_from_version": null,
+          "org": "oarepo",
+          "package": "invenio-cli",
+          "pr": null,
+          "pr_info": {
+            "commits": [
+              "0ed9adef629d4f93ddc79e162f0b24f796402207"
+            ],
+            "source_branch": "oarepo-feature-rdm-version-oarepo-from-1.12.0",
+            "source_org": "oarepo",
+            "source_repo": "invenio-cli"
+          },
+          "repo": "invenio-cli",
+          "versions": [
+            {
+              "operator": ">=",
+              "version": "1.12.0"
+            }
+          ]
+        },
+        {
+          "actual_version": "1.12.0",
+          "base": "v1.12.0",
+          "branch": "oarepo-feature-docker-service-config-from-1.12.0",
+          "commit": "6cc1cd4b053a29eb5aba1ae6e12513f64e81b6fa",
+          "commits_from_version": null,
+          "org": "oarepo",
+          "package": "invenio-cli",
+          "pr": null,
+          "pr_info": {
+            "commits": [
+              "6cc1cd4b053a29eb5aba1ae6e12513f64e81b6fa"
+            ],
+            "source_branch": "oarepo-feature-docker-service-config-from-1.12.0",
+            "source_org": "oarepo",
+            "source_repo": "invenio-cli"
+          },
+          "repo": "invenio-cli",
+          "versions": [
+            {
+              "operator": ">=",
+              "version": "1.12.0"
+            }
+          ]
+        },
+        {
+          "actual_version": "1.12.0",
+          "base": "v1.12.0",
+          "branch": "oarepo-feature-cli-extensions-from-1.12.0",
+          "commit": "549cfb16fa9e24697ae1c1a46b5dc47572c0d799",
+          "commits_from_version": null,
+          "org": "oarepo",
+          "package": "invenio-cli",
+          "pr": null,
+          "pr_info": {
+            "commits": [
+              "be5faa6ee3843d4b861fa47ef0efee962c7af099",
+              "549cfb16fa9e24697ae1c1a46b5dc47572c0d799"
+            ],
+            "source_branch": "oarepo-feature-cli-extensions-from-1.12.0",
+            "source_org": "oarepo",
+            "source_repo": "invenio-cli"
+          },
+          "repo": "invenio-cli",
+          "versions": [
+            {
+              "operator": ">=",
+              "version": "1.12.0"
+            }
+          ]
+        },
+        {
+          "actual_version": "1.12.0",
+          "base": "v1.12.0",
+          "branch": "oarepo-feature-babel-paths-from-1.12.0",
+          "commit": "e6fd1f1eaa85e2ecd508d08869c49adea647659c",
+          "commits_from_version": null,
+          "org": "oarepo",
+          "package": "invenio-cli",
+          "pr": null,
+          "pr_info": {
+            "commits": [
+              "4a71dc861b6e1bb90a3d8724d4cf4ab5a2736e59",
+              "e6fd1f1eaa85e2ecd508d08869c49adea647659c"
+            ],
+            "source_branch": "oarepo-feature-babel-paths-from-1.12.0",
+            "source_org": "oarepo",
+            "source_repo": "invenio-cli"
+          },
+          "repo": "invenio-cli",
+          "versions": [
+            {
+              "operator": ">=",
+              "version": "1.12.0"
+            }
+          ]
+        }
+      ],
+      "reference": {
+        "actual_version": "1.12.2",
+        "base": null,
+        "branch": "v1.12.2",
+        "commit": "24806614cf8a915e5cb05fb3c55d71eb1f3c555a",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": null,
+        "repo": "invenio-cli"
+      },
+      "unpatched_reference": {
+        "actual_version": "1.12.2",
+        "base": null,
+        "branch": null,
+        "commit": "24806614cf8a915e5cb05fb3c55d71eb1f3c555a",
+        "commits_from_version": [],
+        "org": "inveniosoftware",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": null,
+        "repo": "invenio-cli"
+      }
+    }
+  ],
+  "package": {
+    "github_entry": {
+      "_extra": {},
+      "default_branch": null,
+      "exclude": [
+        "invenio-xrootd",
+        "invenio-swh"
+      ],
+      "extras": [
+        "tests",
+        "opensearch2",
+        "s3",
+        "devs",
+        "s3fs",
+        "oaipmh",
+        "rdf",
+        "sparql",
+        "postgresql",
+        "admin"
+      ],
+      "freeze": [
+        "setuptools<82.0.0"
+      ],
+      "include": [
+        "invenio-.*",
+        "pytest-invenio",
+        "citeproc-py-styles"
+      ],
+      "install": [],
+      "org": "inveniosoftware",
+      "package_map": {},
+      "slow_packages": {
+        "invenio-rdm-records": [
+          "tests/resources/test_iiif_image_api.py",
+          "tests/resources/test_resources_review.py",
+          "tests/services/test_rdm_service.py"
+        ]
+      },
+      "test": [
+        "./run-tests.sh"
+      ]
+    },
+    "patched_reference": {
+      "actual_version": "1.12.2",
+      "base": null,
+      "branch": null,
+      "commit": "24806614cf8a915e5cb05fb3c55d71eb1f3c555a",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-cli",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-cli"
+    },
+    "patches": [
+      {
+        "actual_version": "1.12.0",
+        "base": "v1.12.0",
+        "branch": "oarepo-feature-uv-project-environment-from-1.12.0",
+        "commit": "6eff551df9c0031ffa2639ace7243cd994b64b91",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "6eff551df9c0031ffa2639ace7243cd994b64b91"
+          ],
+          "source_branch": "oarepo-feature-uv-project-environment-from-1.12.0",
+          "source_org": "oarepo",
+          "source_repo": "invenio-cli"
+        },
+        "repo": "invenio-cli",
+        "versions": [
+          {
+            "operator": ">=",
+            "version": "1.12.0"
+          }
+        ]
+      },
+      {
+        "actual_version": "1.12.0",
+        "base": "v1.12.0",
+        "branch": "oarepo-feature-custom-cert-path-from-1.12.0",
+        "commit": "d0e6b7e6a5421457f4f344dbfaff7476ed009b7e",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "d0e6b7e6a5421457f4f344dbfaff7476ed009b7e"
+          ],
+          "source_branch": "oarepo-feature-custom-cert-path-from-1.12.0",
+          "source_org": "oarepo",
+          "source_repo": "invenio-cli"
+        },
+        "repo": "invenio-cli",
+        "versions": [
+          {
+            "operator": ">=",
+            "version": "1.12.0"
+          }
+        ]
+      },
+      {
+        "actual_version": "1.12.0",
+        "base": "v1.12.0",
+        "branch": "oarepo-feature-rdm-version-oarepo-from-1.12.0",
+        "commit": "0ed9adef629d4f93ddc79e162f0b24f796402207",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "0ed9adef629d4f93ddc79e162f0b24f796402207"
+          ],
+          "source_branch": "oarepo-feature-rdm-version-oarepo-from-1.12.0",
+          "source_org": "oarepo",
+          "source_repo": "invenio-cli"
+        },
+        "repo": "invenio-cli",
+        "versions": [
+          {
+            "operator": ">=",
+            "version": "1.12.0"
+          }
+        ]
+      },
+      {
+        "actual_version": "1.12.0",
+        "base": "v1.12.0",
+        "branch": "oarepo-feature-docker-service-config-from-1.12.0",
+        "commit": "6cc1cd4b053a29eb5aba1ae6e12513f64e81b6fa",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "6cc1cd4b053a29eb5aba1ae6e12513f64e81b6fa"
+          ],
+          "source_branch": "oarepo-feature-docker-service-config-from-1.12.0",
+          "source_org": "oarepo",
+          "source_repo": "invenio-cli"
+        },
+        "repo": "invenio-cli",
+        "versions": [
+          {
+            "operator": ">=",
+            "version": "1.12.0"
+          }
+        ]
+      },
+      {
+        "actual_version": "1.12.0",
+        "base": "v1.12.0",
+        "branch": "oarepo-feature-cli-extensions-from-1.12.0",
+        "commit": "549cfb16fa9e24697ae1c1a46b5dc47572c0d799",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "be5faa6ee3843d4b861fa47ef0efee962c7af099",
+            "549cfb16fa9e24697ae1c1a46b5dc47572c0d799"
+          ],
+          "source_branch": "oarepo-feature-cli-extensions-from-1.12.0",
+          "source_org": "oarepo",
+          "source_repo": "invenio-cli"
+        },
+        "repo": "invenio-cli",
+        "versions": [
+          {
+            "operator": ">=",
+            "version": "1.12.0"
+          }
+        ]
+      },
+      {
+        "actual_version": "1.12.0",
+        "base": "v1.12.0",
+        "branch": "oarepo-feature-babel-paths-from-1.12.0",
+        "commit": "e6fd1f1eaa85e2ecd508d08869c49adea647659c",
+        "commits_from_version": null,
+        "org": "oarepo",
+        "package": "invenio-cli",
+        "pr": null,
+        "pr_info": {
+          "commits": [
+            "4a71dc861b6e1bb90a3d8724d4cf4ab5a2736e59",
+            "e6fd1f1eaa85e2ecd508d08869c49adea647659c"
+          ],
+          "source_branch": "oarepo-feature-babel-paths-from-1.12.0",
+          "source_org": "oarepo",
+          "source_repo": "invenio-cli"
+        },
+        "repo": "invenio-cli",
+        "versions": [
+          {
+            "operator": ">=",
+            "version": "1.12.0"
+          }
+        ]
+      }
+    ],
+    "reference": {
+      "actual_version": "1.12.2",
+      "base": null,
+      "branch": "v1.12.2",
+      "commit": "24806614cf8a915e5cb05fb3c55d71eb1f3c555a",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-cli",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-cli"
+    },
+    "unpatched_reference": {
+      "actual_version": "1.12.2",
+      "base": null,
+      "branch": null,
+      "commit": "24806614cf8a915e5cb05fb3c55d71eb1f3c555a",
+      "commits_from_version": [],
+      "org": "inveniosoftware",
+      "package": "invenio-cli",
+      "pr": null,
+      "pr_info": null,
+      "repo": "invenio-cli"
+    }
+  },
+  "status": "success"
+}

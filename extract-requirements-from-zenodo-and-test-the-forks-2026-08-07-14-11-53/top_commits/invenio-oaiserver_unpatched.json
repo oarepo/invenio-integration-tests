@@ -1,0 +1,202 @@
+[
+  {
+    "hash": "9981b22",
+    "message": "release: v5.1.0"
+  },
+  {
+    "hash": "c937707",
+    "message": "fix(build): include mo files"
+  },
+  {
+    "hash": "fe44a11",
+    "message": "fix(ci): run tests on maint-*"
+  },
+  {
+    "hash": "3e8e7f8",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "3c82e5e",
+    "message": "release: v5.0.1"
+  },
+  {
+    "hash": "d022242",
+    "message": "chore(setup): migrate from setuptools to hatchling"
+  },
+  {
+    "hash": "9341643",
+    "message": "chore(licenses): fix some SPDX license headers"
+  },
+  {
+    "hash": "7e8a4e1",
+    "message": "chore(git-blame): ignore the SPDX license header commit"
+  },
+  {
+    "hash": "8d09087",
+    "message": "chore(licenses): update license headers to use SPDX"
+  },
+  {
+    "hash": "e15a849",
+    "message": "release: v5.0.0"
+  },
+  {
+    "hash": "c754e37",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "d2faa0d",
+    "message": "fix: adding server-side default for system_created"
+  },
+  {
+    "hash": "2e25e60",
+    "message": "feat(tests): added test for alembic migration"
+  },
+  {
+    "hash": "30072f7",
+    "message": "\ud83d\udce6 release: v4.1.0"
+  },
+  {
+    "hash": "8adc629",
+    "message": "refactor: address review feedback"
+  },
+  {
+    "hash": "fac0312",
+    "message": "tests: clear serializer caches in about serializer test"
+  },
+  {
+    "hash": "4931dea",
+    "message": "feat: add support for OAI about serializer"
+  },
+  {
+    "hash": "9dbeaa4",
+    "message": "release: v4.0.1"
+  },
+  {
+    "hash": "098e5f0",
+    "message": "chore: compatibility webargs > 6.0.0"
+  },
+  {
+    "hash": "38b6071",
+    "message": "fix(tests): PendingDeprecationWarning"
+  },
+  {
+    "hash": "543d1a9",
+    "message": "release: v4.0.0"
+  },
+  {
+    "hash": "4b84518",
+    "message": "chore(setup): bump dependencies"
+  },
+  {
+    "hash": "d40e105",
+    "message": "fix(chore): DeprecationWarning stdlib"
+  },
+  {
+    "hash": "8d3bd36",
+    "message": "\ud83d\udce6 release: v3.7.4"
+  },
+  {
+    "hash": "ef4989e",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "a1f464c",
+    "message": "\ud83d\udce6 release: v3.7.3"
+  },
+  {
+    "hash": "ab652a4",
+    "message": "i18n: pulled translations (#270)"
+  },
+  {
+    "hash": "7664555",
+    "message": "\ud83d\udce6 release: v3.7.2"
+  },
+  {
+    "hash": "c20c6cf",
+    "message": "component_templates: add ElasticSearch v7"
+  },
+  {
+    "hash": "601e527",
+    "message": "\ud83d\udce6 release: v3.7.1"
+  },
+  {
+    "hash": "4ed7304",
+    "message": "chore: format and lint"
+  },
+  {
+    "hash": "9c6af07",
+    "message": "verbs: fix name conflict with base class `validate` method"
+  },
+  {
+    "hash": "bc5b0a4",
+    "message": "global: fix usage of `from` argument"
+  },
+  {
+    "hash": "52cdaf0",
+    "message": "tests: add more thorough from/until testing"
+  },
+  {
+    "hash": "0b351cf",
+    "message": "release: v3.7.0"
+  },
+  {
+    "hash": "8b23590",
+    "message": "i18n: pulled translations"
+  },
+  {
+    "hash": "c0c9ed8",
+    "message": "i18n:push translations"
+  },
+  {
+    "hash": "5df37d9",
+    "message": "release: v3.6.0"
+  },
+  {
+    "hash": "f7866bd",
+    "message": "fix: pkg_resources DeprecationWarning"
+  },
+  {
+    "hash": "3ba4d7b",
+    "message": "release: v3.5.0"
+  },
+  {
+    "hash": "ec51ae6",
+    "message": "fix: serialization of from parameter"
+  },
+  {
+    "hash": "7cd2086",
+    "message": "tests: check from data and until date in responses"
+  },
+  {
+    "hash": "e510c8b",
+    "message": "\ud83d\udce6 release: v3.4.0"
+  },
+  {
+    "hash": "f2ed1d9",
+    "message": "component_templates: allow the usage of component_templates instead of mappings for the definition of the records (#254)"
+  },
+  {
+    "hash": "0f0ff69",
+    "message": "fix: setuptools require underscores instead of dashes"
+  },
+  {
+    "hash": "80f6ba6",
+    "message": "i18n: removed deprecated messages"
+  },
+  {
+    "hash": "dfc6627",
+    "message": "\ud83d\udce6 release: v3.3.1"
+  },
+  {
+    "hash": "1d9eb9e",
+    "message": "chore: fix CHANGES.rst bullet formatting"
+  },
+  {
+    "hash": "fa8f925",
+    "message": "\ud83d\udce6 release: v3.3.0"
+  },
+  {
+    "hash": "4cc2668",
+    "message": "tests: explictly test for warnings"
+  }
+]
