@@ -1,0 +1,1049 @@
+ Image postgres:18 Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ Image redis:7 Pulling 
+ Image rabbitmq:3-management Pulling 
+ b978112db001 Pulling fs layer 0B
+ dd051e1b8c92 Pulling fs layer 0B
+ 94e14de0ef29 Pulling fs layer 0B
+ 1978793cfccf Pulling fs layer 0B
+ 5d1a2e57c29a Pulling fs layer 0B
+ e68f2e5c8d50 Pulling fs layer 0B
+ b46efb987f9d Pulling fs layer 0B
+ f43705d71c46 Pulling fs layer 0B
+ 1af2d1c5b5d7 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ d8fc8030308a Pulling fs layer 0B
+ 0ce236742155 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 00e404135f98 Pulling fs layer 0B
+ eac25292b613 Pulling fs layer 0B
+ bcc75ab4e010 Pulling fs layer 0B
+ 37fb86c2a767 Pulling fs layer 0B
+ e9dd37612d7b Pulling fs layer 0B
+ 369949eb0229 Pulling fs layer 0B
+ 7e0f86eb8508 Pulling fs layer 0B
+ da434b32d480 Pulling fs layer 0B
+ fcd0e9514062 Pulling fs layer 0B
+ a28de24f57c0 Pulling fs layer 0B
+ 6d141360b363 Pulling fs layer 0B
+ fc6c21aca07c Pulling fs layer 0B
+ cbe0afc9eb7b Pulling fs layer 0B
+ 2a59118cca0e Pulling fs layer 0B
+ 3fadc669ef11 Pulling fs layer 0B
+ f4e7f62f4b80 Pulling fs layer 0B
+ d63c4408fdb7 Pulling fs layer 0B
+ 5e1c03b67a78 Pulling fs layer 0B
+ 20043066d3d5 Pulling fs layer 0B
+ beb0d870d438 Pulling fs layer 0B
+ efa05c660812 Pulling fs layer 0B
+ 14e6209d5fa8 Pulling fs layer 0B
+ d686b50ce172 Pulling fs layer 0B
+ 7084ac8f4ab6 Pulling fs layer 0B
+ dd051e1b8c92 Downloading 3.146MB
+ 4f4fb700ef54 Already exists 0B
+ 1978793cfccf Downloading 2.047kB
+ cbe0afc9eb7b Downloading 19.43kB
+ 4f4fb700ef54 Already exists 0B
+ 94e14de0ef29 Download complete 0B
+ 5e1c03b67a78 Download complete 0B
+ d8fc8030308a Download complete 0B
+ e9dd37612d7b Download complete 0B
+ 369949eb0229 Downloading 1.049MB
+ 0ce236742155 Downloading 1.049MB
+ 14e6209d5fa8 Download complete 0B
+ d686b50ce172 Downloading 1.049MB
+ e68f2e5c8d50 Download complete 0B
+ f43705d71c46 Downloading 1.049MB
+ 00e404135f98 Download complete 0B
+ fc6c21aca07c Download complete 0B
+ bcc75ab4e010 Download complete 0B
+ beb0d870d438 Download complete 0B
+ 37fb86c2a767 Downloading 1.049MB
+ d63c4408fdb7 Downloading 1.049MB
+ 1af2d1c5b5d7 Download complete 0B
+ 1978793cfccf Download complete 0B
+ 5d1a2e57c29a Downloading 2.097MB
+ b46efb987f9d Downloading 1.049MB
+ b978112db001 Download complete 0B
+ dd051e1b8c92 Downloading 6.291MB
+ efa05c660812 Download complete 0B
+ a28de24f57c0 Download complete 0B
+ 6d141360b363 Download complete 0B
+ f4e7f62f4b80 Download complete 0B
+ cbe0afc9eb7b Download complete 0B
+ 2a59118cca0e Download complete 0B
+ eac25292b613 Download complete 0B
+ 37fb86c2a767 Downloading 4.194MB
+ d686b50ce172 Downloading 4.194MB
+ 7084ac8f4ab6 Downloading 3.146MB
+ 3fadc669ef11 Downloading 4.194MB
+ d63c4408fdb7 Downloading 4.194MB
+ dd051e1b8c92 Downloading 9.437MB
+ f43705d71c46 Downloading 4.194MB
+ b46efb987f9d Download complete 0B
+ 0ce236742155 Downloading 4.194MB
+ 5d1a2e57c29a Downloading 6.291MB
+ 7ec4c696b8bb Download complete 0B
+ 20043066d3d5 Downloading 4.194MB
+ 7e0f86eb8508 Download complete 0B
+ fcd0e9514062 Downloading 4.194MB
+ 2f3707deb487 Downloading 52.48kB
+ 369949eb0229 Downloading 4.194MB
+ da434b32d480 Downloading 4.194MB
+ 5d1a2e57c29a Downloading 9.437MB
+ 0ce236742155 Downloading 7.34MB
+ d686b50ce172 Downloading 8.389MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ 3fadc669ef11 Downloading 7.34MB
+ d63c4408fdb7 Downloading 8.389MB
+ 369949eb0229 Download complete 0B
+ 997e218b00c5 Download complete 0B
+ dd051e1b8c92 Downloading 13.63MB
+ 713b18672f38 Downloading 2.097MB
+ f43705d71c46 Downloading 8.389MB
+ da434b32d480 Download complete 0B
+ 37fb86c2a767 Downloading 8.389MB
+ fcd0e9514062 Downloading 7.34MB
+ 16ef6b12768c Download complete 0B
+ 20043066d3d5 Downloading 7.34MB
+ 2f3707deb487 Download complete 0B
+ a82d2da6710e Downloading 3.146MB
+ 5d1a2e57c29a Downloading 14.68MB
+ 0ce236742155 Downloading 12.58MB
+ 20043066d3d5 Downloading 12.58MB
+ a82d2da6710e Download complete 0B
+ 37fb86c2a767 Downloading 14.68MB
+ fcd0e9514062 Downloading 13.63MB
+ dd051e1b8c92 Downloading 18.87MB
+ d686b50ce172 Download complete 0B
+ 713b18672f38 Download complete 0B
+ f43705d71c46 Downloading 13.63MB
+ 7084ac8f4ab6 Download complete 0B
+ 3fadc669ef11 Downloading 14.68MB
+ d63c4408fdb7 Downloading 14.68MB
+ 20043066d3d5 Downloading 20.97MB
+ 3fadc669ef11 Downloading 23.07MB
+ d63c4408fdb7 Downloading 21.31MB
+ dd051e1b8c92 Downloading 27.26MB
+ 0ce236742155 Downloading 20.97MB
+ f43705d71c46 Download complete 0B
+ 5d1a2e57c29a Downloading 22.02MB
+ 37fb86c2a767 Downloading 22.02MB
+ fcd0e9514062 Downloading 22.02MB
+ 20043066d3d5 Downloading 29.72MB
+ 3fadc669ef11 Downloading 32.51MB
+ 0ce236742155 Downloading 29.36MB
+ 5d1a2e57c29a Downloading 30.41MB
+ dd051e1b8c92 Download complete 0B
+ d63c4408fdb7 Download complete 0B
+ 37fb86c2a767 Download complete 0B
+ fcd0e9514062 Downloading 30.41MB
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 5d1a2e57c29a Downloading 36.7MB
+ 0ce236742155 Downloading 36.7MB
+ fcd0e9514062 Downloading 36.7MB
+ 20043066d3d5 Download complete 0B
+ 3fadc669ef11 Downloading 38.8MB
+ 20043066d3d5 Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 46.14MB
+ 5d1a2e57c29a Downloading 45.09MB
+ fcd0e9514062 Downloading 44.04MB
+ 3fadc669ef11 Download complete 0B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 54.53MB
+ 5d1a2e57c29a Downloading 54.53MB
+ fcd0e9514062 Downloading 54.53MB
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ fcd0e9514062 Downloading 65.01MB
+ 0ce236742155 Downloading 67.11MB
+ 5d1a2e57c29a Download complete 0B
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ fcd0e9514062 Downloading 72.35MB
+ 0ce236742155 Downloading 77.59MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 84.93MB
+ fcd0e9514062 Downloading 83.89MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 95.42MB
+ fcd0e9514062 Downloading 93.32MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 104.9MB
+ fcd0e9514062 Downloading 102.8MB
+ 5d1a2e57c29a Extracting 1B
+ 20043066d3d5 Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 116.4MB
+ fcd0e9514062 Downloading 113.2MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ fcd0e9514062 Download complete 0B
+ 0ce236742155 Downloading 131.1MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 145.8MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 161.5MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 179.3MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 196.1MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 208.7MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 223.3MB
+ dd051e1b8c92 Extracting 2B
+ 5d1a2e57c29a Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 237MB
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 5d1a2e57c29a Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 252.7MB
+ 5d1a2e57c29a Extracting 2B
+ 20043066d3d5 Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 267.4MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 282.1MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 296.7MB
+ 20043066d3d5 Extracting 2B
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 3B
+ 37fb86c2a767 Extracting 3B
+ 0ce236742155 Downloading 311.4MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 3B
+ 20043066d3d5 Extracting 3B
+ 37fb86c2a767 Extracting 3B
+ 0ce236742155 Downloading 324MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 3B
+ 20043066d3d5 Pull complete 0B
+ 37fb86c2a767 Extracting 3B
+ 0ce236742155 Downloading 341.8MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 37fb86c2a767 Pull complete 0B
+ 0ce236742155 Downloading 353.4MB
+ e9dd37612d7b Pull complete 0B
+ 94e14de0ef29 Pull complete 0B
+ e68f2e5c8d50 Pull complete 0B
+ 5d1a2e57c29a Extracting 3B
+ f43705d71c46 Extracting 1B
+ 369949eb0229 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 366MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 369949eb0229 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 381.7MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 369949eb0229 Extracting 1B
+ 0ce236742155 Downloading 396.4MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 369949eb0229 Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 411MB
+ 5d1a2e57c29a Extracting 3B
+ f43705d71c46 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 7e0f86eb8508 Pull complete 0B
+ da434b32d480 Extracting 1B
+ 0ce236742155 Downloading 425.7MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ da434b32d480 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 441.5MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ da434b32d480 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 457.2MB
+ 4f4fb700ef54 Pull complete 0B
+ 1af2d1c5b5d7 Pull complete 0B
+ b978112db001 Extracting 1B
+ f43705d71c46 Pull complete 0B
+ 5d1a2e57c29a Extracting 3B
+ da434b32d480 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ b978112db001 Pull complete 0B
+ Image redis:7 Pulled 
+ 0ce236742155 Downloading 474MB
+ 5d1a2e57c29a Extracting 3B
+ da434b32d480 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 490.7MB
+ 3fadc669ef11 Extracting 1B
+ da434b32d480 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 0ce236742155 Downloading 508.6MB
+ bcc75ab4e010 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 3fadc669ef11 Extracting 2B
+ da434b32d480 Pull complete 0B
+ 0ce236742155 Downloading 526.4MB
+ bcc75ab4e010 Pull complete 0B
+ a28de24f57c0 Pull complete 0B
+ 6d141360b363 Pull complete 0B
+ fcd0e9514062 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 3fadc669ef11 Extracting 2B
+ 0ce236742155 Downloading 546.3MB
+ fcd0e9514062 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 3fadc669ef11 Extracting 2B
+ 0ce236742155 Downloading 565.2MB
+ fcd0e9514062 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 3fadc669ef11 Extracting 2B
+ 0ce236742155 Downloading 582MB
+ 5d1a2e57c29a Extracting 4B
+ fcd0e9514062 Extracting 1B
+ 7084ac8f4ab6 Extracting 1B
+ 3fadc669ef11 Pull complete 0B
+ 0ce236742155 Downloading 600.8MB
+ fcd0e9514062 Extracting 1B
+ 7084ac8f4ab6 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 0ce236742155 Downloading 620.8MB
+ fcd0e9514062 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 7084ac8f4ab6 Extracting 1B
+ 0ce236742155 Downloading 638.6MB
+ fcd0e9514062 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 7084ac8f4ab6 Pull complete 0B
+ 0ce236742155 Downloading 655.4MB
+ beb0d870d438 Pull complete 0B
+ 5d1a2e57c29a Extracting 4B
+ d63c4408fdb7 Extracting 1B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Downloading 675.3MB
+ fcd0e9514062 Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 0ce236742155 Downloading 690MB
+ fcd0e9514062 Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 5d1a2e57c29a Pull complete 0B
+ 0ce236742155 Downloading 705.7MB
+ d63c4408fdb7 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ b46efb987f9d Extracting 1B
+ 0ce236742155 Downloading 720.4MB
+ b46efb987f9d Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Downloading 740.3MB
+ b46efb987f9d Pull complete 0B
+ d63c4408fdb7 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Downloading 760.2MB
+ d8fc8030308a Pull complete 0B
+ fcd0e9514062 Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 783.3MB
+ d63c4408fdb7 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Downloading 802.2MB
+ fcd0e9514062 Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 825.2MB
+ 5e1c03b67a78 Extracting 1B
+ efa05c660812 Pull complete 0B
+ f4e7f62f4b80 Pull complete 0B
+ fcd0e9514062 Extracting 2B
+ d63c4408fdb7 Pull complete 0B
+ 0ce236742155 Downloading 843.1MB
+ 5e1c03b67a78 Pull complete 0B
+ 14e6209d5fa8 Pull complete 0B
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Downloading 864MB
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Downloading 885MB
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Downloading 902.8MB
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Downloading 923.8MB
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 950MB
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 3B
+ d686b50ce172 Pull complete 0B
+ Image rabbitmq:3-management Pulled 
+ 0ce236742155 Downloading 969.9MB
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 993MB
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 1.017GB
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 1.046GB
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 1.071GB
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 1.096GB
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ fcd0e9514062 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ fcd0e9514062 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ fcd0e9514062 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ fcd0e9514062 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ fcd0e9514062 Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ cbe0afc9eb7b Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ cbe0afc9eb7b Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ fc6c21aca07c Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 2a59118cca0e Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ 2a59118cca0e Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ eac25292b613 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ eac25292b613 Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ Image postgres:18 Pulled 
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Download complete 0B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 4f4fb700ef54 Extracting 1B
+ 0ce236742155 Pull complete 0B
+ 4f4fb700ef54 Pull complete 0B
+ 00e404135f98 Pull complete 0B
+ 1978793cfccf Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-postgresql-1 Started 
+ Container docker_services_cli-redis-1 Started 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-rabbitmq-1 Started 
+::warning file=workdir/tests/invenio-rdm-records/patched/invenio_rdm_records/services/facets.py,line=72::subject_nested is deprecated. Use subject_combined instead.
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched
+configfile: pyproject.toml
+plugins: Faker-40.54.0, cov-7.1.0, platformdirs-4.14.5, isort-4.0.0, flask-1.3.0, mock-3.17.0, pycodestyle-2.5.0, github-actions-annotate-failures-0.4.2, pydocstyle-2.4.0, black-0.6.0, invenio-4.0.3
+collected 130 items
+
+tests/services/test_rdm_service.py ..................                    [ 13%]
+tests/services/test_record_deletion.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+..                               [ 16%]
+tests/services/test_record_deletion_request.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+........                 [ 23%]
+tests/services/test_service_access.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+..................                [ 37%]
+tests/services/test_service_collection_records.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+....                  [ 41%]
+tests/services/test_service_communities.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+..                           [ 43%]
+tests/services/test_service_community_records.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.........              [ 51%]
+tests/services/test_service_record_communities.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+.......               [ 57%]
+tests/services/test_service_review.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+...............................   [ 82%]
+tests/services/test_service_tasks.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+..                                 [ 84%]
+tests/services/test_sort.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                            [ 85%]
+tests/test_alembic.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+::warning file=workdir/tests/invenio-rdm-records/patched/invenio_rdm_records/alembic/a3957490361d_remove_pidrelations_tables.py,line=19::The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_oauthclient/alembic/bff1f190b9bd_add_timestamp_oauthclient.py,line=22::datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py,line=193::autoincrement and existing_autoincrement only make sense for MySQL
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_oauthclient/alembic/97bbc733896c_create_oauthclient_tables.py,line=71::The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py,line=100::The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+                                                  [ 86%]
+tests/test_invenio_rdm_records.py ..::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                     [ 87%]
+tests/tokens/test_feature_flag.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                      [ 88%]
+tests/tokens/test_resource_access.py .::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 10 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 10 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+.::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=149::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+::warning file=workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py,line=370::The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+                     [100%]
+
+=============================== warnings summary ===============================
+invenio_rdm_records/services/facets.py:72
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/invenio_rdm_records/services/facets.py:72: DeprecationWarning: subject_nested is deprecated. Use subject_combined instead.
+    warn(
+
+tests/services/test_record_deletion.py: 1 warning
+tests/services/test_record_deletion_request.py: 1 warning
+tests/services/test_service_access.py: 1 warning
+tests/services/test_service_collection_records.py: 1 warning
+tests/services/test_service_communities.py: 1 warning
+tests/services/test_service_community_records.py: 1 warning
+tests/services/test_service_record_communities.py: 1 warning
+tests/services/test_service_review.py: 1 warning
+tests/services/test_service_tasks.py: 1 warning
+tests/services/test_sort.py: 1 warning
+tests/test_alembic.py: 1 warning
+tests/test_invenio_rdm_records.py: 1 warning
+tests/tokens/test_feature_flag.py: 1 warning
+tests/tokens/test_resource_access.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py:24: FutureWarning: CSRF validation will be enabled by default in the version 1.3.x
+    self.init_app(app)
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/alembic/config.py:572: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/invenio_rdm_records/alembic/a3957490361d_remove_pidrelations_tables.py:19: SADeprecationWarning: The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+    inspector = Inspector.from_engine(ctx.connection.engine)
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_oauthclient/alembic/bff1f190b9bd_add_timestamp_oauthclient.py:22: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    current_date = datetime.utcnow()
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py:193: UserWarning: autoincrement and existing_autoincrement only make sense for MySQL
+    super().alter_column(
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_oauthclient/alembic/97bbc733896c_create_oauthclient_tables.py:71: SADeprecationWarning: The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+    insp = Inspector.from_engine(ctx.connection.engine)
+
+tests/test_alembic.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py:100: SADeprecationWarning: The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+    insp = Inspector.from_engine(ctx.connection.engine)
+
+tests/tokens/test_resource_access.py::test_rat_validation_failed
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 10 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    return self._jws.encode(
+
+tests/tokens/test_resource_access.py::test_rat_validation_failed
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:370: InsecureKeyLengthWarning: The HMAC key is 10 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    decoded = self.decode_complete(
+
+tests/tokens/test_resource_access.py: 14 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    return self._jws.encode(
+
+tests/tokens/test_resource_access.py: 11 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-rdm-records/patched/.venv/lib/python3.14/site-packages/jwt/api_jwt.py:370: InsecureKeyLengthWarning: The HMAC key is 9 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+    decoded = self.decode_complete(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                                                            Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------------------------------------------------------
+invenio_rdm_records/__init__.py                                                                     3      0   100%
+invenio_rdm_records/access_requests_ui/__init__.py                                                  0      0   100%
+invenio_rdm_records/access_requests_ui/views.py                                                    31     31     0%   6-60
+invenio_rdm_records/administration/__init__.py                                                      0      0   100%
+invenio_rdm_records/administration/views/__init__.py                                                0      0   100%
+invenio_rdm_records/administration/views/oai.py                                                    52      0   100%
+invenio_rdm_records/alembic/0cf260eb8e97_create_table_for_secret_links.py                          13      0   100%
+invenio_rdm_records/alembic/4a15e8671f4d_create_rdm_records_tables.py                              30      0   100%
+invenio_rdm_records/alembic/8ed1a438601c_migrate_secret_links.py                                    8      0   100%
+invenio_rdm_records/alembic/9e0ac518b9df_create_records_communities_m2m_table.py                   11      0   100%
+invenio_rdm_records/alembic/88d1463de5c0_create_parent_record_table.py                             30      0   100%
+invenio_rdm_records/alembic/912251a56a49_change_datetime_types.py                                  23      0   100%
+invenio_rdm_records/alembic/2186256e8d9b_add_deletion_status_to_rdmrecords.py                      31      7    77%   25-37
+invenio_rdm_records/alembic/1746626978_drop_rdmrecordquota_user_id_unique_.py                       9      0   100%
+invenio_rdm_records/alembic/1777274324_merge_pidrelations_tables_removal.py                         6      0   100%
+invenio_rdm_records/alembic/1777278349_column_defaults_and_files_indices.py                        65      0   100%
+invenio_rdm_records/alembic/1780576627_create_record_id_index_in_rdm_parents_community.py          10      0   100%
+invenio_rdm_records/alembic/__init__.py                                                             0      0   100%
+invenio_rdm_records/alembic/a2a6819f14f1_create_files_and_media_files_versioning_.py               26      0   100%
+invenio_rdm_records/alembic/a6bfa06b1a6d_add_origin_and_description_to_secret_links.py             12      0   100%
+invenio_rdm_records/alembic/a3957490361d_remove_pidrelations_tables.py                             14      1    93%   22
+invenio_rdm_records/alembic/b822ba22c688_create_rdm_records_branch.py                               8      0   100%
+invenio_rdm_records/alembic/cfcb8cb78708_create_access_request_tokens_table.py                     13      0   100%
+invenio_rdm_records/alembic/faf0cefa79a0_create_record_quota_tables.py                             13      0   100%
+invenio_rdm_records/alembic/ff9bec971d30_add_indexes.py                                            31      0   100%
+invenio_rdm_records/alembic/ff860d48fb4b_create_media_files_table.py                               28      0   100%
+invenio_rdm_records/alembic/ffd725001655_add_field_to_record_consent_to_share_.py                  10      0   100%
+invenio_rdm_records/auditlog/__init__.py                                                            0      0   100%
+invenio_rdm_records/auditlog/actions.py                                                            36      0   100%
+invenio_rdm_records/auditlog/context.py                                                            15      9    40%   16-20, 28-35
+invenio_rdm_records/checks/__init__.py                                                              0      0   100%
+invenio_rdm_records/checks/requests.py                                                             72     72     0%   6-155
+invenio_rdm_records/cli.py                                                                        187    187     0%   8-445
+invenio_rdm_records/collections/__init__.py                                                         0      0   100%
+invenio_rdm_records/collections/tasks.py                                                           16     16     0%   6-27
+invenio_rdm_records/config.py                                                                     210      1    99%   76
+invenio_rdm_records/contrib/__init__.py                                                             0      0   100%
+invenio_rdm_records/contrib/codemeta/__init__.py                                                    2      0   100%
+invenio_rdm_records/contrib/codemeta/custom_fields.py                                              10      0   100%
+invenio_rdm_records/contrib/codemeta/processors.py                                                 15     12    20%   13-30
+invenio_rdm_records/contrib/imprint/__init__.py                                                     2      0   100%
+invenio_rdm_records/contrib/imprint/custom_fields.py                                               15      2    87%   27, 45
+invenio_rdm_records/contrib/imprint/processors.py                                                  56     46    18%   22-39, 47-91
+invenio_rdm_records/contrib/journal/__init__.py                                                     3      0   100%
+invenio_rdm_records/contrib/journal/custom_fields.py                                               15      2    87%   27, 45
+invenio_rdm_records/contrib/journal/processors.py                                                 107     86    20%   21-44, 52-84, 92-120, 135-152, 160-184
+invenio_rdm_records/contrib/journal/sort.py                                                         2      0   100%
+invenio_rdm_records/contrib/meeting/__init__.py                                                     3      0   100%
+invenio_rdm_records/contrib/meeting/custom_fields.py                                               17      2    88%   35, 60
+invenio_rdm_records/contrib/meeting/processors.py                                                  31     21    32%   14-34, 49-60
+invenio_rdm_records/contrib/meeting/sort.py                                                         2      0   100%
+invenio_rdm_records/contrib/thesis/__init__.py                                                      2      2     0%   6-12
+invenio_rdm_records/contrib/thesis/custom_fields.py                                                14     14     0%   13-59
+invenio_rdm_records/ext.py                                                                        178      2    99%   139, 342
+invenio_rdm_records/fixtures/__init__.py                                                           25     25     0%   7-75
+invenio_rdm_records/fixtures/communities.py                                                        12     12     0%   6-27
+invenio_rdm_records/fixtures/demo.py                                                              112    112     0%   7-351
+invenio_rdm_records/fixtures/fixture.py                                                            28     28     0%   6-60
+invenio_rdm_records/fixtures/records.py                                                             5      5     0%   7-17
+invenio_rdm_records/fixtures/tasks.py                                                             118    118     0%   8-234
+invenio_rdm_records/fixtures/users.py                                                              44     44     0%   7-79
+invenio_rdm_records/fixtures/vocabularies.py                                                      212    212     0%   10-432
+invenio_rdm_records/jobs/__init__.py                                                                0      0   100%
+invenio_rdm_records/jobs/jobs.py                                                                    4      0   100%
+invenio_rdm_records/notifications/__init__.py                                                       0      0   100%
+invenio_rdm_records/notifications/builders.py                                                     151     11    93%   75, 108, 140, 173, 207, 252, 285, 320, 358, 403, 563
+invenio_rdm_records/notifications/vcs.py                                                           54     54     0%   10-164
+invenio_rdm_records/oai.py                                                                         59     59     0%   7-153
+invenio_rdm_records/oaiserver/__init__.py                                                           0      0   100%
+invenio_rdm_records/oaiserver/resources/__init__.py                                                 0      0   100%
+invenio_rdm_records/oaiserver/resources/config.py                                                  19      0   100%
+invenio_rdm_records/oaiserver/resources/resources.py                                               46     14    70%   50-55, 61-65, 72-76, 84-89, 95-99, 105-109
+invenio_rdm_records/oaiserver/services/__init__.py                                                  0      0   100%
+invenio_rdm_records/oaiserver/services/config.py                                                   28      0   100%
+invenio_rdm_records/oaiserver/services/errors.py                                                   17      6    65%   15-16, 24, 37, 45, 55
+invenio_rdm_records/oaiserver/services/permissions.py                                               9      0   100%
+invenio_rdm_records/oaiserver/services/results.py                                                  59     35    41%   18-22, 27, 32-44, 48-49, 72-78, 82, 86, 91, 96-107, 112, 123-134
+invenio_rdm_records/oaiserver/services/schema.py                                                   18      0   100%
+invenio_rdm_records/oaiserver/services/services.py                                                115     72    37%   37-41, 45-49, 63, 68, 75-76, 80-89, 94-107, 119-134, 143-146, 155-181, 193-208, 218-224, 228-246, 257-261
+invenio_rdm_records/oaiserver/services/uow.py                                                      14      6    57%   15-16, 20, 28-29, 33
+invenio_rdm_records/patch_info.py                                                                   6      6     0%   3-172
+invenio_rdm_records/proxies.py                                                                     18      0   100%
+invenio_rdm_records/records/__init__.py                                                             2      0   100%
+invenio_rdm_records/records/api.py                                                                147      6    96%   311, 366, 380-390
+invenio_rdm_records/records/dumpers/__init__.py                                                     8      0   100%
+invenio_rdm_records/records/dumpers/access.py                                                      22      8    64%   36-37, 41-47
+invenio_rdm_records/records/dumpers/combined_subjects.py                                           21      5    76%   44-48
+invenio_rdm_records/records/dumpers/edtf.py                                                        50      7    86%   55-57, 105-107, 122-123
+invenio_rdm_records/records/dumpers/locations.py                                                   24     15    38%   31-42, 49-52
+invenio_rdm_records/records/dumpers/pids.py                                                        17     13    24%   22-28, 32-39
+invenio_rdm_records/records/dumpers/statistics.py                                                  21      2    90%   44-45
+invenio_rdm_records/records/dumpers/subject_hierarchy.py                                           31     19    39%   67-84, 87-93, 96
+invenio_rdm_records/records/jsonschemas/__init__.py                                                 0      0   100%
+invenio_rdm_records/records/mappings/__init__.py                                                    0      0   100%
+invenio_rdm_records/records/mappings/os-v1/__init__.py                                              0      0   100%
+invenio_rdm_records/records/mappings/os-v2/__init__.py                                              0      0   100%
+invenio_rdm_records/records/mappings/v7/__init__.py                                                 0      0   100%
+invenio_rdm_records/records/models.py                                                              96      1    99%   185
+invenio_rdm_records/records/processors/base.py                                                      8      3    62%   12, 16, 21
+invenio_rdm_records/records/processors/tiles.py                                                    74     53    28%   23, 43, 48, 53-55, 59-78, 88-138, 148-179
+invenio_rdm_records/records/stats/__init__.py                                                       2      0   100%
+invenio_rdm_records/records/stats/api.py                                                           25      3    88%   21, 28, 44
+invenio_rdm_records/records/stats/templates/__init__.py                                             0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/__init__.py                                0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_file_download/__init__.py             0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_file_download/os-v1/__init__.py       0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_file_download/os-v2/__init__.py       0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_file_download/v7/__init__.py          0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_record_view/__init__.py               0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_record_view/os-v1/__init__.py         0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_record_view/os-v2/__init__.py         0      0   100%
+invenio_rdm_records/records/stats/templates/aggregations/aggr_record_view/v7/__init__.py            0      0   100%
+invenio_rdm_records/records/stats/templates/events/__init__.py                                      0      0   100%
+invenio_rdm_records/records/stats/templates/events/file_download/__init__.py                        0      0   100%
+invenio_rdm_records/records/stats/templates/events/file_download/os-v1/__init__.py                  0      0   100%
+invenio_rdm_records/records/stats/templates/events/file_download/os-v2/__init__.py                  0      0   100%
+invenio_rdm_records/records/stats/templates/events/file_download/v7/__init__.py                     0      0   100%
+invenio_rdm_records/records/stats/templates/events/record_view/__init__.py                          0      0   100%
+invenio_rdm_records/records/stats/templates/events/record_view/os-v1/__init__.py                    0      0   100%
+invenio_rdm_records/records/stats/templates/events/record_view/os-v2/__init__.py                    0      0   100%
+invenio_rdm_records/records/stats/templates/events/record_view/v7/__init__.py                       0      0   100%
+invenio_rdm_records/records/systemfields/__init__.py                                                8      0   100%
+invenio_rdm_records/records/systemfields/access/__init__.py                                         8      0   100%
+invenio_rdm_records/records/systemfields/access/access_settings.py                                 10      1    90%   28
+invenio_rdm_records/records/systemfields/access/embargo.py                                         62     14    77%   19, 33, 56-58, 74-79, 86, 96, 100, 106, 117
+invenio_rdm_records/records/systemfields/access/field/__init__.py                                   3      0   100%
+invenio_rdm_records/records/systemfields/access/field/parent.py                                   112     24    79%   66, 86, 101-106, 140-141, 146-147, 150-153, 157-158, 171, 206-213, 226
+invenio_rdm_records/records/systemfields/access/field/record.py                                   103      7    93%   67, 122-123, 141, 147-149, 185
+invenio_rdm_records/records/systemfields/access/grants.py                                         122     32    74%   43-45, 48-50, 53, 89-90, 96, 106-115, 123-126, 139-147, 186, 205-209, 223, 228, 238, 242, 258, 271-272
+invenio_rdm_records/records/systemfields/access/links.py                                           62     35    44%   17-28, 32, 36-42, 46, 50-53, 57, 61, 65, 76, 80-84, 88, 92-93, 97-100, 111-119
+invenio_rdm_records/records/systemfields/access/owners.py                                          50     15    70%   28, 31-33, 36, 49, 60, 63, 73, 77-80, 84, 88, 92
+invenio_rdm_records/records/systemfields/access/protection.py                                      44      7    84%   39-40, 58-59, 69, 77, 83
+invenio_rdm_records/records/systemfields/deletion_status.py                                        61      6    90%   36, 45, 54, 58, 67, 75
+invenio_rdm_records/records/systemfields/draft_status.py                                           25      2    92%   92-93
+invenio_rdm_records/records/systemfields/has_draftcheck.py                                         21      0   100%
+invenio_rdm_records/records/systemfields/is_verified.py                                            12      1    92%   21
+invenio_rdm_records/records/systemfields/statistics.py                                             27      2    93%   32-33
+invenio_rdm_records/records/systemfields/tombstone.py                                             126     12    90%   41, 80, 131, 138-141, 162, 171, 177, 219, 225-226
+invenio_rdm_records/requests/__init__.py                                                            8      0   100%
+invenio_rdm_records/requests/access/__init__.py                                                     4      0   100%
+invenio_rdm_records/requests/access/models.py                                                      49     14    71%   63, 67, 82, 87, 92, 116-135
+invenio_rdm_records/requests/access/permissions.py                                                  4      0   100%
+invenio_rdm_records/requests/access/requests.py                                                   123     63    49%   48-54, 62-70, 78-84, 92-101, 109-114, 122-136, 144-195, 210-239, 244-260, 339-347, 351-358
+invenio_rdm_records/requests/access/tasks.py                                                        8      8     0%   7-21
+invenio_rdm_records/requests/base.py                                                                7      0   100%
+invenio_rdm_records/requests/community_inclusion.py                                                53     16    70%   52-88, 130
+invenio_rdm_records/requests/community_submission.py                                               92     11    88%   82, 130-132, 160-162, 195-197, 250
+invenio_rdm_records/requests/decorators.py                                                         18      0   100%
+invenio_rdm_records/requests/entity_resolvers.py                                                   91     11    88%   61, 69, 157, 161, 165-166, 170, 174, 198, 202, 206
+invenio_rdm_records/requests/file_modification.py                                                  46     15    67%   23-34, 38, 56-62, 102-103, 114
+invenio_rdm_records/requests/quota_increase.py                                                     42     14    67%   22-33, 41-50, 83-84, 95
+invenio_rdm_records/requests/record_deletion.py                                                    72      8    89%   71, 95-98, 105, 119-125, 173
+invenio_rdm_records/requests/subcommunities.py                                                      7      0   100%
+invenio_rdm_records/requests/user_moderation/__init__.py                                            2      0   100%
+invenio_rdm_records/requests/user_moderation/actions.py                                            31     21    32%   29-53, 70-77, 92-95
+invenio_rdm_records/requests/user_moderation/tasks.py                                              33     18    45%   22-33, 39-50, 56-62, 68-72
+invenio_rdm_records/requests/user_moderation/utils.py                                              20     16    20%   15-44
+invenio_rdm_records/resources/__init__.py                                                           4      0   100%
+invenio_rdm_records/resources/args.py                                                               8      0   100%
+invenio_rdm_records/resources/config.py                                                           137      6    96%   71-73, 81-83
+invenio_rdm_records/resources/deserializers/__init__.py                                             2      0   100%
+invenio_rdm_records/resources/deserializers/errors.py                                               1      0   100%
+invenio_rdm_records/resources/deserializers/rocrate/__init__.py                                    38     28    26%   23-32, 36-60
+invenio_rdm_records/resources/deserializers/rocrate/schema.py                                      73     50    32%   16-18, 42-45, 58-59, 70-112, 118-127, 133-136
+invenio_rdm_records/resources/errors.py                                                            23      8    65%   22, 37-52
+invenio_rdm_records/resources/iiif.py                                                             165     69    58%   163-164, 172-176, 193-194, 210, 219, 228-231, 240-244, 253-257, 280-329, 346, 360-362, 371, 375-390, 405-419
+invenio_rdm_records/resources/resources.py                                                        347    123    65%   43-54, 107-111, 122-129, 138-170, 177-183, 190-196, 206-213, 220-237, 244-252, 259-267, 274-280, 289-294, 301-308, 314-319, 326-336, 346-353, 360-367, 373-383, 389-394, 422-429, 436-449, 455-465, 473-483, 489-495, 523-531, 562-568, 574-579, 583, 590-596, 601-606, 613-617, 644-650, 658-667, 675-683, 691-699, 704-709, 717-722, 747-755, 760-766, 774-780, 788-796, 825-831, 841-849
+invenio_rdm_records/resources/serializers/__init__.py                                              17      0   100%
+invenio_rdm_records/resources/serializers/bibtex/__init__.py                                        9      1    89%   28
+invenio_rdm_records/resources/serializers/bibtex/schema.py                                        166    106    36%   83, 87-90, 94-116, 120-121, 130, 137, 144, 153-158, 165, 172, 179, 186, 190-194, 199-210, 229-236, 243-248, 252-257, 262, 288-314, 318-330, 333-338
+invenio_rdm_records/resources/serializers/bibtex/schema_formats.py                                 27      0   100%
+invenio_rdm_records/resources/serializers/cff/__init__.py                                           8      2    75%   18-19
+invenio_rdm_records/resources/serializers/cff/schema.py                                           148    113    24%   17-45, 50-57, 94-108, 112-127, 131-133, 137-138, 149-162, 166-176, 183-190, 199-208, 216-232, 239-243, 247-253
+invenio_rdm_records/resources/serializers/codemeta/__init__.py                                      7      1    86%   19
+invenio_rdm_records/resources/serializers/codemeta/schema.py                                       34     22    35%   29-50, 54-64
+invenio_rdm_records/resources/serializers/crossref/__init__.py                                     60     47    22%   43, 62-111, 127-183
+invenio_rdm_records/resources/serializers/csl/__init__.py                                          63     13    79%   69, 91-93, 140-157, 164
+invenio_rdm_records/resources/serializers/csl/schema.py                                            75     13    83%   64, 79, 83-84, 89-99, 112-113, 121-122
+invenio_rdm_records/resources/serializers/csv/__init__.py                                           4      0   100%
+invenio_rdm_records/resources/serializers/datacite/__init__.py                                     19      3    84%   20, 37-38
+invenio_rdm_records/resources/serializers/datacite/schema.py                                      600    391    35%   52-53, 76-86, 97-138, 160-167, 205-206, 210-219, 226-255, 259, 263, 269-281, 285-318, 322-327, 332-369, 373-472, 476-529, 533-554, 558-594, 599-659, 697, 717, 722-738, 756, 763, 768-773, 783-795, 804-808, 817, 829, 850-854, 870-901, 928, 943-947, 962-1010, 1019-1036, 1044-1055, 1063-1065, 1069, 1103-1140
+invenio_rdm_records/resources/serializers/datapackage/__init__.py                                   6      0   100%
+invenio_rdm_records/resources/serializers/datapackage/schema.py                                    65     46    29%   30-35, 39-53, 57-66, 70-84
+invenio_rdm_records/resources/serializers/dcat/__init__.py                                        105     84    20%   36-37, 47-54, 58-94, 98-143, 147-151, 155-197, 201-221
+invenio_rdm_records/resources/serializers/dcat/schema.py                                           45     36    20%   22-52, 56-93
+invenio_rdm_records/resources/serializers/dublincore/__init__.py                                   12      1    92%   20
+invenio_rdm_records/resources/serializers/dublincore/schema.py                                    115     80    30%   59-69, 73-81, 85-115, 119-139, 143-154, 158-178, 182-187, 191-203, 207-212, 216-217
+invenio_rdm_records/resources/serializers/errors.py                                                 2      0   100%
+invenio_rdm_records/resources/serializers/geojson/__init__.py                                       6      0   100%
+invenio_rdm_records/resources/serializers/geojson/schema.py                                        12      7    42%   19-36
+invenio_rdm_records/resources/serializers/iiif/__init__.py                                         15      0   100%
+invenio_rdm_records/resources/serializers/iiif/schema.py                                           76     17    78%   23, 35, 132-150, 200-203, 208, 218-219
+invenio_rdm_records/resources/serializers/marcxml/__init__.py                                      13      1    92%   38
+invenio_rdm_records/resources/serializers/marcxml/schema.py                                       298    233    22%   57-83, 90-114, 118-119, 123-144, 148-153, 157-164, 168-173, 177-184, 201-218, 222-246, 250-265, 269-274, 282-304, 308-315, 319-320, 324-325, 329-330, 335-363, 367-380, 384-407, 414-426, 433, 443-451, 455-462, 466-471, 475-480, 484-493, 497-531
+invenio_rdm_records/resources/serializers/schemaorg/__init__.py                                     7      0   100%
+invenio_rdm_records/resources/serializers/schemaorg/schema.py                                     270    187    31%   34-54, 73-80, 91-92, 99, 113-148, 207-210, 214-224, 228-232, 236-237, 241-253, 257, 261, 270-278, 286-290, 294, 299-303, 310-316, 323-336, 347-405, 409-412, 416-419, 423-429, 433-434, 438-445, 449-454, 457, 462-475, 479-494, 504-507, 516, 520-524
+invenio_rdm_records/resources/serializers/schemas.py                                               51     38    25%   18-19, 23-27, 31-56, 60-61, 65-69, 73, 79-82, 86
+invenio_rdm_records/resources/serializers/signposting/__init__.py                                  21     11    48%   18, 28-37
+invenio_rdm_records/resources/serializers/signposting/schema.py                                   107     66    38%   36-53, 57-63, 68-77, 81-95, 104-113, 124-144, 148-165, 178, 191-195, 208, 224-225, 229-230, 238, 259, 263, 281-293
+invenio_rdm_records/resources/serializers/ui/__init__.py                                            6      0   100%
+invenio_rdm_records/resources/serializers/ui/fields.py                                             55     29    47%   24, 29, 34, 44, 57-59, 64-119, 124-127, 132, 145-152
+invenio_rdm_records/resources/serializers/ui/schema.py                                            254    137    46%   39-42, 58-89, 97-102, 107-114, 210-323, 348-349, 354-361, 443-458, 463-470, 475-478
+invenio_rdm_records/resources/serializers/utils.py                                                 29     17    41%   32, 43-54, 62-69
+invenio_rdm_records/resources/stats/__init__.py                                                     2      2     0%   6-14
+invenio_rdm_records/resources/stats/event_builders.py                                              50     50     0%   14-155
+invenio_rdm_records/secret_links/__init__.py                                                        3      0   100%
+invenio_rdm_records/secret_links/errors.py                                                          6      1    83%   20
+invenio_rdm_records/secret_links/models.py                                                         84     43    49%   59-60, 64-73, 78, 83-86, 91-94, 99-104, 116-140, 149-156, 167-178
+invenio_rdm_records/secret_links/permissions.py                                                     4      0   100%
+invenio_rdm_records/secret_links/serializers.py                                                    41     25    39%   39-51, 63-76, 85-95, 107-111, 124
+invenio_rdm_records/secret_links/signals.py                                                         6      0   100%
+invenio_rdm_records/services/__init__.py                                                            8      0   100%
+invenio_rdm_records/services/access/__init__.py                                                     2      0   100%
+invenio_rdm_records/services/access/service.py                                                    379    200    47%   57, 61, 84, 99, 104, 138-191, 196-246, 260-267, 282-295, 313-364, 374-410, 427-432, 436-439, 473, 484, 529-547, 566-631, 654, 667-706, 710-732, 736-745, 755-808, 821-855, 863-921, 938-971, 1077-1078
+invenio_rdm_records/services/communities/__init__.py                                                2      0   100%
+invenio_rdm_records/services/communities/components.py                                             24      0   100%
+invenio_rdm_records/services/communities/moderation.py                                             40      8    80%   19, 23, 27, 43-50
+invenio_rdm_records/services/communities/service.py                                               192     60    69%   69, 86, 100, 106, 175, 190-203, 224-232, 305-316, 328-355, 369-389, 479, 503-547
+invenio_rdm_records/services/community_inclusion/__init__.py                                        2      0   100%
+invenio_rdm_records/services/community_inclusion/service.py                                        28      2    93%   41, 55
+invenio_rdm_records/services/community_records/__init__.py                                          2      0   100%
+invenio_rdm_records/services/community_records/service.py                                          51      4    92%   79-80, 137-138
+invenio_rdm_records/services/components/__init__.py                                                14      0   100%
+invenio_rdm_records/services/components/access.py                                                  36      5    86%   32-34, 46-47
+invenio_rdm_records/services/components/custom_fields.py                                            5      0   100%
+invenio_rdm_records/services/components/files.py                                                   23      3    87%   53-55
+invenio_rdm_records/services/components/internal_notes.py                                          34     10    71%   22, 49-58, 62-63
+invenio_rdm_records/services/components/metadata.py                                                22      0   100%
+invenio_rdm_records/services/components/pids.py                                                   148      2    99%   107, 310
+invenio_rdm_records/services/components/record_deletion.py                                         34      1    97%   60
+invenio_rdm_records/services/components/record_files.py                                             8      0   100%
+invenio_rdm_records/services/components/review.py                                                  34      0   100%
+invenio_rdm_records/services/components/signal.py                                                   6      6     0%   6-17
+invenio_rdm_records/services/components/vcs.py                                                     15     15     0%   6-34
+invenio_rdm_records/services/components/verified.py                                                48      8    83%   38, 44, 60-67
+invenio_rdm_records/services/config.py                                                            263      3    99%   297, 317-318
+invenio_rdm_records/services/customizations.py                                                     31      0   100%
+invenio_rdm_records/services/decorators.py                                                         13      1    92%   23
+invenio_rdm_records/services/dummy.py                                                              10      3    70%   12, 28, 32
+invenio_rdm_records/services/errors.py                                                             75     11    85%   49, 98, 103, 175, 187, 192-198, 226-227, 232
+invenio_rdm_records/services/facets.py                                                             22      1    95%   95
+invenio_rdm_records/services/files/__init__.py                                                      2      0   100%
+invenio_rdm_records/services/files/service.py                                                      14      3    79%   20-24
+invenio_rdm_records/services/generators.py                                                        215     35    84%   58, 71-76, 92, 108, 134-139, 143-144, 148-149, 169, 173, 184, 205, 244, 257, 266, 285, 298, 308, 324, 350, 386, 402, 410-413, 421, 429
+invenio_rdm_records/services/github/__init__.py                                                     0      0   100%
+invenio_rdm_records/services/github/metadata.py                                                    83     83     0%   6-180
+invenio_rdm_records/services/github/release.py                                                    116    116     0%   7-247
+invenio_rdm_records/services/github/utils.py                                                        4      4     0%   6-19
+invenio_rdm_records/services/iiif/__init__.py                                                       2      0   100%
+invenio_rdm_records/services/iiif/converter.py                                                     63     45    29%   11, 15-17, 27, 32, 40, 57-69, 75-99, 103-115
+invenio_rdm_records/services/iiif/service.py                                                       81     57    30%   21-23, 28, 32-34, 53-58, 65-70, 76, 84-90, 93-124, 135-142, 159-184
+invenio_rdm_records/services/iiif/storage.py                                                       69     40    42%   29-34, 38, 42, 46, 65-71, 75-88, 95, 100-114, 118, 131, 135-148
+invenio_rdm_records/services/iiif/tasks.py                                                         31     23    26%   17-30, 40-56
+invenio_rdm_records/services/permissions.py                                                        99      0   100%
+invenio_rdm_records/services/pids/__init__.py                                                       3      0   100%
+invenio_rdm_records/services/pids/errors.py                                                         8      2    75%   17, 27
+invenio_rdm_records/services/pids/manager.py                                                      162     19    88%   32-33, 62, 79, 115, 126, 164, 171, 198-199, 217, 221, 236, 262, 283, 309-310, 323-324
+invenio_rdm_records/services/pids/providers/__init__.py                                             6      0   100%
+invenio_rdm_records/services/pids/providers/base.py                                                82     21    74%   37, 42, 67, 81, 100-101, 106, 119, 128, 155-160, 166-169, 203-213
+invenio_rdm_records/services/pids/providers/crossref.py                                           140    100    29%   39, 45, 49-50, 57-78, 86-111, 120-186, 220, 225, 229, 239-252, 262-271, 280-300, 310-344, 350-356
+invenio_rdm_records/services/pids/providers/datacite.py                                           152     46    70%   57, 65, 70, 77, 87, 97-105, 138-155, 184, 186, 190, 197-203, 229-235, 238, 246-248, 259, 262-268, 291-293, 297, 313-314
+invenio_rdm_records/services/pids/providers/external.py                                            48     13    73%   35-38, 45-53, 73, 84-88, 93, 104, 113-115
+invenio_rdm_records/services/pids/providers/oai.py                                                 15      1    93%   44
+invenio_rdm_records/services/pids/service.py                                                      103     22    79%   81-82, 85, 89-90, 122-128, 140-147, 247-255, 269
+invenio_rdm_records/services/pids/tasks.py                                                          6      0   100%
+invenio_rdm_records/services/queryparser.py                                                         5      3    40%   11-13
+invenio_rdm_records/services/request_policies.py                                                  155     54    65%   27, 31, 57, 87, 103-104, 110-113, 117-121, 132-134, 138, 149-156, 163-177, 192-193, 197, 215-225, 249, 254, 265, 288-295, 304-310, 326, 335-341
+invenio_rdm_records/services/requests/__init__.py                                                   2      0   100%
+invenio_rdm_records/services/requests/service.py                                                   14      7    50%   21, 34-45
+invenio_rdm_records/services/result_items.py                                                      100     41    59%   19-21, 29-34, 39, 44-58, 62-66, 74-77, 81, 85, 90-102, 108-114, 142, 150-152, 160, 189, 210-213
+invenio_rdm_records/services/results.py                                                            57     20    65%   29, 33, 37, 41, 54, 58, 62-71, 75, 119-120, 124-133, 137
+invenio_rdm_records/services/review/__init__.py                                                     3      0   100%
+invenio_rdm_records/services/review/links.py                                                       10      1    90%   16
+invenio_rdm_records/services/review/policy.py                                                       8      1    88%   40
+invenio_rdm_records/services/review/service.py                                                    113      7    94%   58, 76, 85, 187, 205, 223, 251
+invenio_rdm_records/services/schemas/__init__.py                                                    4      0   100%
+invenio_rdm_records/services/schemas/access.py                                                     41      4    90%   37, 46, 63, 77
+invenio_rdm_records/services/schemas/community_records.py                                          21      2    90%   44, 48
+invenio_rdm_records/services/schemas/fields.py                                                     21      8    62%   23-26, 39-42
+invenio_rdm_records/services/schemas/files.py                                                      52      0   100%
+invenio_rdm_records/services/schemas/metadata.py                                                  179     41    77%   72-78, 117-118, 122-123, 138, 140, 152-161, 187, 207-211, 234, 239, 244-252, 274, 282-289, 304, 338-344
+invenio_rdm_records/services/schemas/parent/__init__.py                                            28      2    93%   24-25
+invenio_rdm_records/services/schemas/parent/access.py                                              44      0   100%
+invenio_rdm_records/services/schemas/parent/communities.py                                          9      0   100%
+invenio_rdm_records/services/schemas/pids.py                                                        6      0   100%
+invenio_rdm_records/services/schemas/quota.py                                                       6      0   100%
+invenio_rdm_records/services/schemas/record.py                                                     70      2    97%   40, 111
+invenio_rdm_records/services/schemas/record_communities.py                                         24      3    88%   34, 47, 51
+invenio_rdm_records/services/schemas/review.py                                                     12      0   100%
+invenio_rdm_records/services/schemas/stats.py                                                      10      0   100%
+invenio_rdm_records/services/schemas/tombstone.py                                                  21      0   100%
+invenio_rdm_records/services/schemas/utils.py                                                      17     17     0%   7-34
+invenio_rdm_records/services/schemas/versions.py                                                    4      0   100%
+invenio_rdm_records/services/search_params.py                                                      45      5    89%   103-107
+invenio_rdm_records/services/services.py                                                          325    117    64%   111, 135, 181-182, 204, 229, 237, 243, 313-352, 357-384, 396-401, 426, 434, 504-508, 520-528, 594, 608, 631-632, 637, 678-684, 697-700, 732, 753-757, 769-800, 814-840, 845-893, 897-902, 909-923
+invenio_rdm_records/services/signals/__init__.py                                                    2      0   100%
+invenio_rdm_records/services/signals/signals.py                                                     4      0   100%
+invenio_rdm_records/services/sort.py                                                                8      0   100%
+invenio_rdm_records/services/stats/__init__.py                                                      2      2     0%   6-8
+invenio_rdm_records/services/stats/permissions.py                                                  16     16     0%   6-52
+invenio_rdm_records/services/storage/service.py                                                    94     65    31%   36-50, 56-59, 63-69, 73-81, 85, 93-97, 102, 106, 110-120, 128-136, 143-165, 169-199, 203-204, 208-218
+invenio_rdm_records/services/tasks.py                                                              54     24    56%   51-53, 60-90, 96
+invenio_rdm_records/services/vcs/__init__.py                                                        0      0   100%
+invenio_rdm_records/services/vcs/metadata.py                                                       83     83     0%   6-183
+invenio_rdm_records/services/vcs/release.py                                                       199    199     0%   7-467
+invenio_rdm_records/services/vcs/utils.py                                                           4      4     0%   6-19
+invenio_rdm_records/tokens/__init__.py                                                              3      0   100%
+invenio_rdm_records/tokens/errors.py                                                               18      0   100%
+invenio_rdm_records/tokens/permissions.py                                                           5      0   100%
+invenio_rdm_records/tokens/resource_access.py                                                      41      4    90%   41-42, 75, 86
+invenio_rdm_records/tokens/scopes.py                                                                4      0   100%
+invenio_rdm_records/utils.py                                                                       90     30    67%   30-50, 72, 94-95, 97-98, 101-115, 136-139, 142, 148-149
+invenio_rdm_records/views.py                                                                       71     17    76%   74-75, 116-122, 127-148, 164-172
+invenio_rdm_records/webpack.py                                                                      2      2     0%   9-11
+-----------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                           13756   5701    59%
+================= 130 passed, 48 warnings in 230.55s (0:03:50) =================
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

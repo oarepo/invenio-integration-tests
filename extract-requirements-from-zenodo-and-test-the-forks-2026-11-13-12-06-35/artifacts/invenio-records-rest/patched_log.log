@@ -1,0 +1,1167 @@
+ Image rabbitmq:3-management Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ Image redis:7 Pulling 
+ Image postgres:18 Pulling 
+ d686b50ce172 Pulling fs layer 0B
+ d63c4408fdb7 Pulling fs layer 0B
+ efa05c660812 Pulling fs layer 0B
+ 3fadc669ef11 Pulling fs layer 0B
+ beb0d870d438 Pulling fs layer 0B
+ 5e1c03b67a78 Pulling fs layer 0B
+ 14e6209d5fa8 Pulling fs layer 0B
+ 20043066d3d5 Pulling fs layer 0B
+ 7084ac8f4ab6 Pulling fs layer 0B
+ f4e7f62f4b80 Pulling fs layer 0B
+ 37fb86c2a767 Pulling fs layer 0B
+ 54d27a158f33 Pulling fs layer 0B
+ da492ba3da26 Pulling fs layer 0B
+ 0f4e9e89c4f1 Pulling fs layer 0B
+ c7260c2ff2f1 Pulling fs layer 0B
+ 40460eaf9c40 Pulling fs layer 0B
+ d7059c4e68bc Pulling fs layer 0B
+ 203041b645ed Pulling fs layer 0B
+ a0801e4a92e2 Pulling fs layer 0B
+ dc561e7040ab Pulling fs layer 0B
+ c522c10deb9e Pulling fs layer 0B
+ 886ba731412b Pulling fs layer 0B
+ a2377f1d223b Pulling fs layer 0B
+ 1978793cfccf Pulling fs layer 0B
+ 00e404135f98 Pulling fs layer 0B
+ d8fc8030308a Pulling fs layer 0B
+ 5d1a2e57c29a Pulling fs layer 0B
+ b46efb987f9d Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 0ce236742155 Pulling fs layer 0B
+ b978112db001 Pulling fs layer 0B
+ dd051e1b8c92 Pulling fs layer 0B
+ f43705d71c46 Pulling fs layer 0B
+ 1af2d1c5b5d7 Pulling fs layer 0B
+ 94e14de0ef29 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ e68f2e5c8d50 Pulling fs layer 0B
+ b978112db001 Download complete 0B
+ 1978793cfccf Download complete 0B
+ 54d27a158f33 Download complete 0B
+ 4f4fb700ef54 Already exists 0B
+ 4f4fb700ef54 Already exists 0B
+ 14e6209d5fa8 Download complete 0B
+ f4e7f62f4b80 Download complete 0B
+ efa05c660812 Download complete 0B
+ beb0d870d438 Downloading 9.462kB
+ c7260c2ff2f1 Downloading 3.146MB
+ 00e404135f98 Download complete 0B
+ 5e1c03b67a78 Download complete 0B
+ d686b50ce172 Downloading 2.097MB
+ d63c4408fdb7 Downloading 2.097MB
+ 40460eaf9c40 Download complete 0B
+ e68f2e5c8d50 Download complete 0B
+ f43705d71c46 Downloading 1.049MB
+ d8fc8030308a Download complete 0B
+ 3fadc669ef11 Downloading 4.194MB
+ 7084ac8f4ab6 Downloading 3.146MB
+ 20043066d3d5 Downloading 1.049MB
+ d7059c4e68bc Download complete 0B
+ 1af2d1c5b5d7 Download complete 0B
+ 94e14de0ef29 Downloading 1.1kB
+ 203041b645ed Download complete 0B
+ beb0d870d438 Download complete 0B
+ dc561e7040ab Download complete 0B
+ c522c10deb9e Download complete 0B
+ 37fb86c2a767 Downloading 1.049MB
+ a0801e4a92e2 Download complete 0B
+ c7260c2ff2f1 Downloading 6.291MB
+ 37fb86c2a767 Downloading 4.194MB
+ a2377f1d223b Downloading 3.146MB
+ 886ba731412b Downloading 2.097MB
+ 5d1a2e57c29a Downloading 2.097MB
+ b46efb987f9d Downloading 2.097MB
+ 0ce236742155 Downloading 3.146MB
+ 734401bb022b Download complete 0B
+ 997e218b00c5 Download complete 0B
+ dd051e1b8c92 Downloading 2.097MB
+ f43705d71c46 Downloading 4.194MB
+ 7ec4c696b8bb Download complete 0B
+ d686b50ce172 Downloading 5.243MB
+ d63c4408fdb7 Downloading 5.243MB
+ 3fadc669ef11 Downloading 7.34MB
+ 7084ac8f4ab6 Downloading 6.291MB
+ 20043066d3d5 Downloading 4.194MB
+ 94e14de0ef29 Download complete 0B
+ da492ba3da26 Download complete 0B
+ 0f4e9e89c4f1 Download complete 0B
+ 37fb86c2a767 Downloading 8.389MB
+ a2377f1d223b Downloading 7.34MB
+ dd051e1b8c92 Downloading 6.291MB
+ f43705d71c46 Downloading 7.34MB
+ 5d1a2e57c29a Downloading 6.291MB
+ d686b50ce172 Downloading 9.437MB
+ d63c4408fdb7 Downloading 9.437MB
+ 16ef6b12768c Downloading 1.049MB
+ 3fadc669ef11 Downloading 11.53MB
+ 886ba731412b Download complete 0B
+ 74d8c6acba64 Downloading 3.146MB
+ c7260c2ff2f1 Downloading 10.49MB
+ b46efb987f9d Download complete 0B
+ 0ce236742155 Downloading 7.34MB
+ 7084ac8f4ab6 Download complete 0B
+ 20043066d3d5 Downloading 8.389MB
+ dd051e1b8c92 Downloading 11.53MB
+ f43705d71c46 Downloading 12.58MB
+ 0ce236742155 Downloading 12.58MB
+ 5d1a2e57c29a Downloading 11.53MB
+ d63c4408fdb7 Downloading 13.63MB
+ 713b18672f38 Download complete 0B
+ 74d8c6acba64 Download complete 0B
+ c7260c2ff2f1 Downloading 15.73MB
+ 37fb86c2a767 Downloading 13.63MB
+ 16ef6b12768c Download complete 0B
+ 3fadc669ef11 Downloading 15.73MB
+ 20043066d3d5 Downloading 12.58MB
+ d686b50ce172 Download complete 0B
+ a2377f1d223b Download complete 0B
+ 5d1a2e57c29a Downloading 17.83MB
+ 0ce236742155 Downloading 18.87MB
+ dd051e1b8c92 Downloading 18.87MB
+ c7260c2ff2f1 Downloading 23.07MB
+ 37fb86c2a767 Downloading 19.92MB
+ 20043066d3d5 Downloading 19.92MB
+ d63c4408fdb7 Downloading 19.92MB
+ 3fadc669ef11 Downloading 23.07MB
+ f43705d71c46 Download complete 0B
+ 0ce236742155 Downloading 26.21MB
+ 5d1a2e57c29a Downloading 27.26MB
+ c7260c2ff2f1 Downloading 30.41MB
+ 37fb86c2a767 Downloading 29.36MB
+ dd051e1b8c92 Downloading 26.21MB
+ d63c4408fdb7 Download complete 0B
+ 3fadc669ef11 Downloading 33.55MB
+ 20043066d3d5 Downloading 29.36MB
+ 0ce236742155 Downloading 33.55MB
+ 5d1a2e57c29a Downloading 34.6MB
+ 3fadc669ef11 Downloading 40.89MB
+ c7260c2ff2f1 Downloading 39.85MB
+ 37fb86c2a767 Download complete 0B
+ 20043066d3d5 Download complete 0B
+ dd051e1b8c92 Download complete 0B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ c7260c2ff2f1 Downloading 49.28MB
+ 5d1a2e57c29a Downloading 44.04MB
+ 0ce236742155 Downloading 41.94MB
+ 3fadc669ef11 Download complete 0B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 51.38MB
+ 5d1a2e57c29a Downloading 54.64MB
+ c7260c2ff2f1 Downloading 58.72MB
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ c7260c2ff2f1 Downloading 69.21MB
+ 5d1a2e57c29a Download complete 0B
+ 0ce236742155 Downloading 63.96MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ c7260c2ff2f1 Downloading 80.74MB
+ 0ce236742155 Downloading 77.59MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 88.08MB
+ c7260c2ff2f1 Downloading 89.13MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ c7260c2ff2f1 Downloading 103.8MB
+ 0ce236742155 Downloading 103.8MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ c7260c2ff2f1 Downloading 115.3MB
+ 0ce236742155 Downloading 114.3MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 132.1MB
+ c7260c2ff2f1 Download complete 0B
+ 5d1a2e57c29a Extracting 1B
+ 20043066d3d5 Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 144.7MB
+ 5d1a2e57c29a Extracting 1B
+ 20043066d3d5 Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 163.6MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 181.4MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 196.1MB
+ 20043066d3d5 Extracting 2B
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 211.8MB
+ 5d1a2e57c29a Extracting 1B
+ 20043066d3d5 Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 227.5MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 244.3MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 263.2MB
+ dd051e1b8c92 Extracting 2B
+ 5d1a2e57c29a Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 277.9MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 292.6MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 310.4MB
+ dd051e1b8c92 Extracting 2B
+ 5d1a2e57c29a Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 331.4MB
+ dd051e1b8c92 Extracting 2B
+ 5d1a2e57c29a Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 0ce236742155 Downloading 351.3MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 3B
+ 20043066d3d5 Extracting 3B
+ 37fb86c2a767 Extracting 3B
+ 0ce236742155 Downloading 375.4MB
+ dd051e1b8c92 Extracting 3B
+ 5d1a2e57c29a Extracting 2B
+ 20043066d3d5 Extracting 3B
+ 37fb86c2a767 Extracting 3B
+ 0ce236742155 Downloading 393.2MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 3B
+ 20043066d3d5 Extracting 3B
+ 37fb86c2a767 Extracting 3B
+ 0ce236742155 Downloading 405.8MB
+ 5d1a2e57c29a Extracting 3B
+ dd051e1b8c92 Extracting 3B
+ 20043066d3d5 Extracting 3B
+ 37fb86c2a767 Extracting 3B
+ 0ce236742155 Downloading 419.4MB
+ 5d1a2e57c29a Extracting 3B
+ dd051e1b8c92 Extracting 3B
+ 20043066d3d5 Pull complete 0B
+ 37fb86c2a767 Extracting 3B
+ 0ce236742155 Downloading 433.1MB
+ 54d27a158f33 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 886ba731412b Extracting 1B
+ dd051e1b8c92 Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 37fb86c2a767 Pull complete 0B
+ 0ce236742155 Downloading 445.6MB
+ 54d27a158f33 Pull complete 0B
+ e68f2e5c8d50 Extracting 1B
+ 94e14de0ef29 Pull complete 0B
+ dd051e1b8c92 Pull complete 0B
+ 5d1a2e57c29a Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 886ba731412b Extracting 1B
+ 0ce236742155 Downloading 460.3MB
+ e68f2e5c8d50 Pull complete 0B
+ 5d1a2e57c29a Extracting 3B
+ f43705d71c46 Extracting 1B
+ 886ba731412b Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 475MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 3fadc669ef11 Extracting 1B
+ 886ba731412b Extracting 1B
+ 0ce236742155 Downloading 488.6MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ da492ba3da26 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 886ba731412b Pull complete 0B
+ 0ce236742155 Downloading 504.4MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ da492ba3da26 Pull complete 0B
+ a2377f1d223b Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 518MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ a2377f1d223b Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 536.9MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ a2377f1d223b Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 552.6MB
+ b978112db001 Extracting 1B
+ 4f4fb700ef54 Pull complete 0B
+ 1af2d1c5b5d7 Pull complete 0B
+ f43705d71c46 Pull complete 0B
+ 5d1a2e57c29a Extracting 4B
+ a2377f1d223b Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 559.9MB
+ b978112db001 Pull complete 0B
+ 5d1a2e57c29a Extracting 4B
+ a2377f1d223b Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ Image redis:7 Pulled 
+ 0ce236742155 Downloading 575.7MB
+ 5d1a2e57c29a Extracting 4B
+ 3fadc669ef11 Extracting 1B
+ a2377f1d223b Pull complete 0B
+ 0ce236742155 Downloading 591.4MB
+ 5d1a2e57c29a Extracting 4B
+ 0f4e9e89c4f1 Extracting 1B
+ 3fadc669ef11 Extracting 2B
+ 0ce236742155 Downloading 609.2MB
+ d7059c4e68bc Pull complete 0B
+ a0801e4a92e2 Pull complete 0B
+ 5d1a2e57c29a Extracting 4B
+ 0f4e9e89c4f1 Pull complete 0B
+ 3fadc669ef11 Extracting 2B
+ c7260c2ff2f1 Extracting 1B
+ 0ce236742155 Downloading 629.1MB
+ 5d1a2e57c29a Extracting 4B
+ c7260c2ff2f1 Extracting 1B
+ 3fadc669ef11 Extracting 2B
+ 0ce236742155 Downloading 641.7MB
+ 5d1a2e57c29a Extracting 4B
+ c7260c2ff2f1 Extracting 1B
+ 3fadc669ef11 Extracting 2B
+ 0ce236742155 Downloading 662.7MB
+ 5d1a2e57c29a Extracting 4B
+ c7260c2ff2f1 Extracting 1B
+ 3fadc669ef11 Extracting 2B
+ 0ce236742155 Downloading 683.7MB
+ c7260c2ff2f1 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 3fadc669ef11 Pull complete 0B
+ 0ce236742155 Downloading 703.6MB
+ 5d1a2e57c29a Extracting 4B
+ c7260c2ff2f1 Extracting 1B
+ 7084ac8f4ab6 Extracting 1B
+ 0ce236742155 Downloading 725.6MB
+ c7260c2ff2f1 Extracting 1B
+ 7084ac8f4ab6 Extracting 1B
+ 5d1a2e57c29a Extracting 5B
+ 0ce236742155 Downloading 748.7MB
+ c7260c2ff2f1 Extracting 1B
+ 5d1a2e57c29a Extracting 5B
+ 7084ac8f4ab6 Extracting 1B
+ 0ce236742155 Downloading 769.7MB
+ c7260c2ff2f1 Extracting 1B
+ 5d1a2e57c29a Extracting 5B
+ 7084ac8f4ab6 Extracting 1B
+ 0ce236742155 Downloading 787.5MB
+ c7260c2ff2f1 Extracting 1B
+ 5d1a2e57c29a Extracting 5B
+ beb0d870d438 Pull complete 0B
+ 7084ac8f4ab6 Pull complete 0B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 805.3MB
+ c7260c2ff2f1 Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 5d1a2e57c29a Extracting 5B
+ 0ce236742155 Downloading 821MB
+ c7260c2ff2f1 Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ b46efb987f9d Extracting 1B
+ 5d1a2e57c29a Pull complete 0B
+ 0ce236742155 Downloading 835.7MB
+ b46efb987f9d Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ c7260c2ff2f1 Extracting 2B
+ 0ce236742155 Downloading 855.6MB
+ c7260c2ff2f1 Extracting 2B
+ b46efb987f9d Extracting 1B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 873.5MB
+ c7260c2ff2f1 Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 891.3MB
+ c7260c2ff2f1 Extracting 2B
+ d8fc8030308a Pull complete 0B
+ b46efb987f9d Pull complete 0B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 912.3MB
+ c7260c2ff2f1 Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 936.4MB
+ c7260c2ff2f1 Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 959.4MB
+ c7260c2ff2f1 Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 982.5MB
+ c7260c2ff2f1 Extracting 2B
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 1.002GB
+ 14e6209d5fa8 Pull complete 0B
+ f4e7f62f4b80 Pull complete 0B
+ efa05c660812 Pull complete 0B
+ c7260c2ff2f1 Extracting 2B
+ 5e1c03b67a78 Pull complete 0B
+ d686b50ce172 Extracting 1B
+ d63c4408fdb7 Pull complete 0B
+ 0ce236742155 Downloading 1.022GB
+ d686b50ce172 Extracting 1B
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.046GB
+ d686b50ce172 Extracting 1B
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.07GB
+ d686b50ce172 Extracting 1B
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.092GB
+ d686b50ce172 Extracting 1B
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ d686b50ce172 Extracting 1B
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ d686b50ce172 Pull complete 0B
+ c7260c2ff2f1 Extracting 3B
+ Image rabbitmq:3-management Pulled 
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Extracting 3B
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Extracting 4B
+ 0ce236742155 Downloading 1.1GB
+ c7260c2ff2f1 Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ 40460eaf9c40 Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ 203041b645ed Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ 203041b645ed Pull complete 0B
+ dc561e7040ab Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ dc561e7040ab Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ c522c10deb9e Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ Image postgres:18 Pulled 
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Download complete 0B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 1B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 0ce236742155 Extracting 7B
+ 1978793cfccf Pull complete 0B
+ 4f4fb700ef54 Pull complete 0B
+ 00e404135f98 Pull complete 0B
+ 0ce236742155 Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-postgresql-1 Started 
+ Container docker_services_cli-redis-1 Started 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-rabbitmq-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_records_rest
+plugins: cov-7.1.0, platformdirs-4.14.5, isort-4.0.0, flask-1.3.0, pycodestyle-2.5.0, github-actions-annotate-failures-0.4.2, pydocstyle-2.4.0, black-0.6.0, invenio-4.0.3
+collected 131 items
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/pyld/jsonld.py,line=4413::"\?" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\?"? A raw string is also an option.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/pyld/jsonld.py,line=577::"is" with 'int' literal. Did you mean "=="?
+
+tests/test_custom_endpoints.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                                        [  1%]
+tests/test_custom_fields.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=96::context_schema will in future only be set if and only if context is given.
+                                           [  3%]
+tests/test_error_handlers.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                           [  3%]
+tests/test_ext.py ..                                                     [  5%]
+tests/test_facets.py ....::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                         [ 13%]
+tests/test_index_prefixing.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=491::nested transaction already deassociated from connection
+                                         [ 15%]
+tests/test_links.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                                                   [ 16%]
+tests/test_marshmallow_contrib.py ...                                    [ 19%]
+tests/test_marshmallow_loader.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py,line=114::context_schema will in future only be set if and only if context is given.
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+                                  [ 23%]
+tests/test_permissions.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                                              [ 24%]
+tests/test_pid_resolver.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                                             [ 25%]
+tests/test_serializer_base.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.                                         [ 26%]
+tests/test_serializer_citeproc.py ....::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                   [ 29%]
+tests/test_serializer_csv.py ...                                         [ 32%]
+tests/test_serializer_datacite.py ....                                   [ 35%]
+tests/test_serializer_dc.py ..                                           [ 36%]
+tests/test_serializer_json.py ...::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                        [ 38%]
+tests/test_serializer_jsonld.py ..                                       [ 40%]
+tests/test_serializer_marshmallow.py ...                                 [ 42%]
+tests/test_serializer_response.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                     [ 44%]
+tests/test_sorter.py ......::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                             [ 49%]
+tests/test_utils.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                               [ 54%]
+tests/test_views_item_delete.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=491::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=491::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=491::nested transaction already deassociated from connection
+                                     [ 57%]
+tests/test_views_item_get.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                                        [ 60%]
+tests/test_views_item_patch.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=491::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=491::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=403::The patch() method is deprecated and will be removed.
+                                  [ 66%]
+tests/test_views_item_put.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=491::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=491::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=438::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                                  [ 74%]
+tests/test_views_list_post.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                   [ 80%]
+tests/test_views_options.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+                                           [ 81%]
+tests/test_views_search.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                          [ 96%]
+tests/test_views_serializers.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+.::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                                       [ 98%]
+tests/test_views_suggesters.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py,line=71::Set configuration variable SECRET_KEY with random string
+::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py,line=330::nested transaction already deassociated from connection
+::warning file=workdir/tests/invenio-records-rest/patched/tests/helpers.py,line=26::nested transaction already deassociated from connection
+                                         [ 99%]
+invenio_records_rest/__init__.py .::warning file=workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                       [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/pyld/jsonld.py:4413
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/pyld/jsonld.py:4413: SyntaxWarning: "\?" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\?"? A raw string is also an option.
+    and re.match('.*[:/\?#\[\]@]$', id_)
+
+.venv/lib/python3.14/site-packages/pyld/jsonld.py:577
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/pyld/jsonld.py:577: SyntaxWarning: "is" with 'int' literal. Did you mean "=="?
+    if len(output) is 1 and output[0] == '':
+
+tests/test_custom_endpoints.py: 2 warnings
+tests/test_custom_fields.py: 1 warning
+tests/test_error_handlers.py: 1 warning
+tests/test_facets.py: 8 warnings
+tests/test_index_prefixing.py: 2 warnings
+tests/test_links.py: 2 warnings
+tests/test_marshmallow_loader.py: 5 warnings
+tests/test_permissions.py: 1 warning
+tests/test_pid_resolver.py: 1 warning
+tests/test_serializer_base.py: 1 warning
+tests/test_serializer_citeproc.py: 1 warning
+tests/test_serializer_json.py: 1 warning
+tests/test_serializer_response.py: 2 warnings
+tests/test_sorter.py: 2 warnings
+tests/test_utils.py: 6 warnings
+tests/test_views_item_delete.py: 4 warnings
+tests/test_views_item_get.py: 4 warnings
+tests/test_views_item_patch.py: 8 warnings
+tests/test_views_item_put.py: 10 warnings
+tests/test_views_list_post.py: 8 warnings
+tests/test_views_options.py: 2 warnings
+tests/test_views_search.py: 20 warnings
+tests/test_views_serializers.py: 2 warnings
+tests/test_views_suggesters.py: 1 warning
+invenio_records_rest/__init__.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py:24: FutureWarning: CSRF validation will be enabled by default in the version 1.3.x
+    self.init_app(app)
+
+tests/test_custom_endpoints.py: 2 warnings
+tests/test_custom_fields.py: 1 warning
+tests/test_error_handlers.py: 1 warning
+tests/test_facets.py: 8 warnings
+tests/test_index_prefixing.py: 2 warnings
+tests/test_links.py: 2 warnings
+tests/test_marshmallow_loader.py: 5 warnings
+tests/test_permissions.py: 1 warning
+tests/test_pid_resolver.py: 1 warning
+tests/test_serializer_base.py: 1 warning
+tests/test_serializer_citeproc.py: 1 warning
+tests/test_serializer_json.py: 1 warning
+tests/test_serializer_response.py: 2 warnings
+tests/test_sorter.py: 2 warnings
+tests/test_utils.py: 6 warnings
+tests/test_views_item_delete.py: 4 warnings
+tests/test_views_item_get.py: 4 warnings
+tests/test_views_item_patch.py: 8 warnings
+tests/test_views_item_put.py: 10 warnings
+tests/test_views_list_post.py: 8 warnings
+tests/test_views_options.py: 2 warnings
+tests/test_views_search.py: 20 warnings
+tests/test_views_serializers.py: 2 warnings
+tests/test_views_suggesters.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_config/default.py:71: UserWarning: Set configuration variable SECRET_KEY with random string
+    warnings.warn(
+
+tests/test_custom_endpoints.py: 2 warnings
+tests/test_index_prefixing.py: 1 warning
+tests/test_links.py: 2 warnings
+tests/test_marshmallow_loader.py: 2 warnings
+tests/test_permissions.py: 1 warning
+tests/test_pid_resolver.py: 1 warning
+tests/test_serializer_base.py: 1 warning
+tests/test_views_item_delete.py: 4 warnings
+tests/test_views_item_get.py: 4 warnings
+tests/test_views_item_patch.py: 8 warnings
+tests/test_views_item_put.py: 10 warnings
+tests/test_views_list_post.py: 4 warnings
+tests/test_views_search.py: 20 warnings
+tests/test_views_serializers.py: 2 warnings
+tests/test_views_suggesters.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:330: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_custom_endpoints.py: 2 warnings
+tests/test_links.py: 2 warnings
+tests/test_permissions.py: 1 warning
+tests/test_pid_resolver.py: 1 warning
+tests/test_serializer_base.py: 1 warning
+tests/test_views_item_delete.py: 4 warnings
+tests/test_views_item_get.py: 4 warnings
+tests/test_views_item_patch.py: 6 warnings
+tests/test_views_item_put.py: 8 warnings
+tests/test_views_search.py: 20 warnings
+tests/test_views_serializers.py: 2 warnings
+tests/test_views_suggesters.py: 1 warning
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/tests/helpers.py:26: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_custom_fields.py::test_custom_generated_fields
+tests/test_custom_fields.py::test_custom_generated_fields
+tests/test_marshmallow_loader.py::test_marshmallow_errors
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py:114: DeprecationWarning: context_schema will in future only be set if and only if context is given.
+    clear_context = _init_context(kwargs)
+
+tests/test_custom_fields.py::test_custom_generated_fields
+tests/test_custom_fields.py::test_custom_generated_fields
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/serializer.py:96: DeprecationWarning: context_schema will in future only be set if and only if context is given.
+    clear_context = _init_context(kwargs)
+
+tests/test_index_prefixing.py::test_api_views
+tests/test_views_item_delete.py::test_valid_delete
+tests/test_views_item_delete.py::test_delete_deleted
+tests/test_views_item_delete.py::test_delete_with_sqldatabase_error
+tests/test_views_item_patch.py::test_patch_deleted[application/json-patch+json]
+tests/test_views_item_patch.py::test_patch_deleted[application/json-patch+json;charset=utf-8]
+tests/test_views_item_put.py::test_put_on_deleted[application/json]
+tests/test_views_item_put.py::test_put_on_deleted[application/json;charset=utf-8]
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:491: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_marshmallow_loader.py: 1 warning
+tests/test_views_item_patch.py: 4 warnings
+tests/test_views_item_put.py: 6 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:438: SAWarning: nested transaction already deassociated from connection
+    with db.session.begin_nested():
+
+tests/test_views_item_patch.py: 12 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-rest/patched/.venv/lib/python3.14/site-packages/invenio_records/api.py:403: DeprecationWarning: The patch() method is deprecated and will be removed.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                          Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------------------
+invenio_records_rest/__init__.py                                  4      0   100%
+invenio_records_rest/_compat.py                                  11      5    55%   17-23
+invenio_records_rest/config.py                                   29      0   100%
+invenio_records_rest/errors.py                                  110     13    88%   34-37, 54, 107-109, 190-192, 258-262
+invenio_records_rest/ext.py                                      52      1    98%   107
+invenio_records_rest/facets.py                                  102     22    78%   26-50, 116, 162-165, 184-187, 235
+invenio_records_rest/links.py                                    13      0   100%
+invenio_records_rest/loaders/__init__.py                          8      0   100%
+invenio_records_rest/loaders/marshmallow.py                      45      5    89%   52, 82-84, 101
+invenio_records_rest/proxies.py                                   4      0   100%
+invenio_records_rest/query.py                                    25      3    88%   34-39
+invenio_records_rest/schemas/__init__.py                          2      0   100%
+invenio_records_rest/schemas/fields/__init__.py                   8      0   100%
+invenio_records_rest/schemas/fields/datetime.py                  11      4    64%   16-19
+invenio_records_rest/schemas/fields/generated.py                 23      7    70%   26-49
+invenio_records_rest/schemas/fields/marshmallow_contrib.py       38      7    82%   14-15, 21, 71, 130-132
+invenio_records_rest/schemas/fields/persistentidentifier.py       9      0   100%
+invenio_records_rest/schemas/fields/sanitizedhtml.py             11      0   100%
+invenio_records_rest/schemas/fields/sanitizedunicode.py          14      0   100%
+invenio_records_rest/schemas/fields/trimmedstring.py              5      0   100%
+invenio_records_rest/schemas/json.py                             61     27    56%   22-30, 63-70, 75-92, 109, 117-118
+invenio_records_rest/serializers/__init__.py                      9      0   100%
+invenio_records_rest/serializers/base.py                         36      7    81%   32, 47, 57, 79, 92, 111, 121
+invenio_records_rest/serializers/citeproc.py                     65      7    89%   28-31, 91-93, 110-111
+invenio_records_rest/serializers/csv.py                          66      3    95%   49, 130, 134
+invenio_records_rest/serializers/datacite.py                     43      0   100%
+invenio_records_rest/serializers/dc.py                           15      0   100%
+invenio_records_rest/serializers/json.py                         15      0   100%
+invenio_records_rest/serializers/jsonld.py                       32      4    88%   40-43
+invenio_records_rest/serializers/marshmallow.py                  20      0   100%
+invenio_records_rest/serializers/response.py                     27      0   100%
+invenio_records_rest/sorter.py                                   48      0   100%
+invenio_records_rest/utils.py                                    99      1    99%   163
+invenio_records_rest/views.py                                   342     14    96%   109-111, 122, 286, 291, 294, 435, 475, 736, 741, 899, 942, 979
+-------------------------------------------------------------------------------------------
+TOTAL                                                          1402    130    91%
+====================== 131 passed, 344 warnings in 30.51s ======================
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

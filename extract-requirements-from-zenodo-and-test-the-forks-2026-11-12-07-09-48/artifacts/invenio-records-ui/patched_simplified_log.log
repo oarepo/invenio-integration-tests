@@ -1,0 +1,24 @@
+ Image postgres:18 Pulling 
+ Image postgres:18 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-postgresql-1 Started 
+ImportError while loading conftest '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/patched/tests/conftest.py'
+tests/conftest.py:18: in <module>
+    from invenio_pidstore import InvenioPIDStore
+venv/lib/python3.14/site-packages/invenio_pidstore/__init__.py:363: in <module>
+    from .ext import InvenioPIDStore
+venv/lib/python3.14/site-packages/invenio_pidstore/ext.py:16: in <module>
+    from .models import PersistentIdentifier, logger
+venv/lib/python3.14/site-packages/invenio_pidstore/models.py:13: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-postgresql-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

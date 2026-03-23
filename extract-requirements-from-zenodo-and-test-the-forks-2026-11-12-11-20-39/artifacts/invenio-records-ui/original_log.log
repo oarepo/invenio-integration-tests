@@ -1,0 +1,163 @@
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-postgresql-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original
+configfile: pyproject.toml
+testpaths: tests, invenio_records_ui
+plugins: cov-7.1.0, platformdirs-4.14.5, isort-4.0.0, flask-1.3.0, pycodestyle-2.5.0, github-actions-annotate-failures-0.4.2, pydocstyle-2.4.0, black-0.6.0, invenio-4.0.3
+collected 0 items / 9 errors
+
+==================================== ERRORS ====================================
+______________ ERROR collecting tests/test_invenio_records_ui.py _______________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/tests/test_invenio_records_ui.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_invenio_records_ui.py:15: in <module>
+    from invenio_access import InvenioAccess
+.venv/lib/python3.14/site-packages/invenio_access/__init__.py:425: in <module>
+    from .ext import InvenioAccess
+.venv/lib/python3.14/site-packages/invenio_access/ext.py:7: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+______________ ERROR collecting tests/test_invenio_records_ui.py _______________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/tests/test_invenio_records_ui.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_invenio_records_ui.py:15: in <module>
+    from invenio_access import InvenioAccess
+.venv/lib/python3.14/site-packages/invenio_access/__init__.py:425: in <module>
+    from .ext import InvenioAccess
+.venv/lib/python3.14/site-packages/invenio_access/ext.py:7: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+_____________________ ERROR collecting tests/test_utils.py _____________________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/tests/test_utils.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_utils.py:9: in <module>
+    from invenio_records_ui.utils import obj_or_import_string
+invenio_records_ui/__init__.py:299: in <module>
+    from .ext import InvenioRecordsUI
+invenio_records_ui/ext.py:9: in <module>
+    from .utils import obj_or_import_string
+invenio_records_ui/utils.py:8: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+_____________________ ERROR collecting tests/test_utils.py _____________________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/tests/test_utils.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_utils.py:9: in <module>
+    from invenio_records_ui.utils import obj_or_import_string
+invenio_records_ui/__init__.py:299: in <module>
+    from .ext import InvenioRecordsUI
+invenio_records_ui/ext.py:9: in <module>
+    from .utils import obj_or_import_string
+invenio_records_ui/utils.py:8: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+_______________ ERROR collecting invenio_records_ui/__init__.py ________________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/invenio_records_ui/__init__.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+invenio_records_ui/__init__.py:299: in <module>
+    from .ext import InvenioRecordsUI
+invenio_records_ui/ext.py:9: in <module>
+    from .utils import obj_or_import_string
+invenio_records_ui/utils.py:8: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+__________________ ERROR collecting invenio_records_ui/ext.py __________________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/invenio_records_ui/ext.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+invenio_records_ui/__init__.py:299: in <module>
+    from .ext import InvenioRecordsUI
+invenio_records_ui/ext.py:9: in <module>
+    from .utils import obj_or_import_string
+invenio_records_ui/utils.py:8: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+________________ ERROR collecting invenio_records_ui/signals.py ________________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/invenio_records_ui/signals.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+invenio_records_ui/__init__.py:299: in <module>
+    from .ext import InvenioRecordsUI
+invenio_records_ui/ext.py:9: in <module>
+    from .utils import obj_or_import_string
+invenio_records_ui/utils.py:8: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+_________________ ERROR collecting invenio_records_ui/utils.py _________________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/invenio_records_ui/utils.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+invenio_records_ui/__init__.py:299: in <module>
+    from .ext import InvenioRecordsUI
+invenio_records_ui/ext.py:9: in <module>
+    from .utils import obj_or_import_string
+invenio_records_ui/utils.py:8: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+_________________ ERROR collecting invenio_records_ui/views.py _________________
+ImportError while importing test module '/home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-records-ui/original/invenio_records_ui/views.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+invenio_records_ui/__init__.py:299: in <module>
+    from .ext import InvenioRecordsUI
+invenio_records_ui/ext.py:9: in <module>
+    from .utils import obj_or_import_string
+invenio_records_ui/utils.py:8: in <module>
+    import six
+E   ModuleNotFoundError: No module named 'six'
+=========================== short test summary info ============================
+ERROR tests/test_invenio_records_ui.py
+ERROR tests/test_invenio_records_ui.py
+ERROR tests/test_utils.py
+ERROR tests/test_utils.py
+ERROR invenio_records_ui/__init__.py
+ERROR invenio_records_ui/ext.py
+ERROR invenio_records_ui/signals.py
+ERROR invenio_records_ui/utils.py
+ERROR invenio_records_ui/views.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 9 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 9 errors in 0.26s ===============================
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-postgresql-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 

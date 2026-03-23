@@ -1,0 +1,883 @@
+ Image postgres:18 Pulling 
+ Image redis:7 Pulling 
+ Image opensearchproject/opensearch:3.9.0 Pulling 
+ Image rabbitmq:3-management Pulling 
+ b46efb987f9d Pulling fs layer 0B
+ 1978793cfccf Pulling fs layer 0B
+ d8fc8030308a Pulling fs layer 0B
+ 0ce236742155 Pulling fs layer 0B
+ 5d1a2e57c29a Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 00e404135f98 Pulling fs layer 0B
+ eac25292b613 Pulling fs layer 0B
+ da434b32d480 Pulling fs layer 0B
+ bcc75ab4e010 Pulling fs layer 0B
+ 7e0f86eb8508 Pulling fs layer 0B
+ a28de24f57c0 Pulling fs layer 0B
+ 37fb86c2a767 Pulling fs layer 0B
+ 6d141360b363 Pulling fs layer 0B
+ e9dd37612d7b Pulling fs layer 0B
+ fc6c21aca07c Pulling fs layer 0B
+ 369949eb0229 Pulling fs layer 0B
+ fcd0e9514062 Pulling fs layer 0B
+ 2a59118cca0e Pulling fs layer 0B
+ cbe0afc9eb7b Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ 5d1a2e57c29a Downloading 2.097MB
+ 00e404135f98 Downloading 228B
+ b46efb987f9d Downloading 2.097MB
+ d8fc8030308a Downloading 1.56kB
+ eac25292b613 Download complete 0B
+ da434b32d480 Downloading 2.097MB
+ 37fb86c2a767 Downloading 3.146MB
+ 6d141360b363 Download complete 0B
+ 0ce236742155 Downloading 7.34MB
+ 5d1a2e57c29a Downloading 17.83MB
+ e9dd37612d7b Download complete 0B
+ fcd0e9514062 Downloading 1.049MB
+ cbe0afc9eb7b Downloading 19.43kB
+ 7e0f86eb8508 Downloading 1.257MB
+ 00e404135f98 Download complete 0B
+ bcc75ab4e010 Download complete 0B
+ b46efb987f9d Download complete 0B
+ a28de24f57c0 Download complete 0B
+ 2a59118cca0e Downloading 6.107kB
+ 1978793cfccf Download complete 0B
+ d8fc8030308a Download complete 0B
+ cbe0afc9eb7b Download complete 0B
+ 369949eb0229 Downloading 6.443MB
+ 7e0f86eb8508 Download complete 0B
+ 2f3707deb487 Downloading 52.48kB
+ a82d2da6710e Downloading 2.097MB
+ 0ce236742155 Downloading 16.78MB
+ 5d1a2e57c29a Downloading 29.36MB
+ fc6c21aca07c Download complete 0B
+ 2a59118cca0e Download complete 0B
+ da434b32d480 Downloading 8.204MB
+ 37fb86c2a767 Downloading 13.63MB
+ fcd0e9514062 Downloading 11.53MB
+ b978112db001 Pulling fs layer 0B
+ dd051e1b8c92 Pulling fs layer 0B
+ 1af2d1c5b5d7 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ f43705d71c46 Pulling fs layer 0B
+ 94e14de0ef29 Pulling fs layer 0B
+ e68f2e5c8d50 Pulling fs layer 0B
+ fcd0e9514062 Downloading 24.12MB
+ 369949eb0229 Download complete 0B
+ 2f3707deb487 Downloading 52.48kB
+ a82d2da6710e Downloading 5.963MB
+ da434b32d480 Download complete 0B
+ 37fb86c2a767 Downloading 26.21MB
+ 0ce236742155 Downloading 29.36MB
+ 5d1a2e57c29a Downloading 40.89MB
+ d686b50ce172 Pulling fs layer 0B
+ 20043066d3d5 Pulling fs layer 0B
+ 3fadc669ef11 Pulling fs layer 0B
+ 7084ac8f4ab6 Pulling fs layer 0B
+ beb0d870d438 Pulling fs layer 0B
+ d63c4408fdb7 Pulling fs layer 0B
+ 5e1c03b67a78 Pulling fs layer 0B
+ 14e6209d5fa8 Pulling fs layer 0B
+ 4f4fb700ef54 Already exists 0B
+ f4e7f62f4b80 Pulling fs layer 0B
+ efa05c660812 Pulling fs layer 0B
+ fcd0e9514062 Downloading 39.85MB
+ 2f3707deb487 Download complete 0B
+ a82d2da6710e Download complete 0B
+ 37fb86c2a767 Downloading 29.86MB
+ 0ce236742155 Downloading 45.09MB
+ 5d1a2e57c29a Downloading 54.64MB
+ dd051e1b8c92 Downloading 9.437MB
+ f43705d71c46 Downloading 3.146MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ b978112db001 Downloading 597B
+ 0ce236742155 Downloading 48.23MB
+ 5d1a2e57c29a Downloading 54.64MB
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 10.49MB
+ f43705d71c46 Downloading 4.194MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 44.04MB
+ 1af2d1c5b5d7 Downloading 97B
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 11.53MB
+ f43705d71c46 Downloading 6.291MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 0ce236742155 Downloading 49.28MB
+ 5d1a2e57c29a Downloading 54.64MB
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 61.87MB
+ 0ce236742155 Downloading 69.21MB
+ 5d1a2e57c29a Downloading 54.64MB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 93.32MB
+ 0ce236742155 Downloading 100.7MB
+ 5d1a2e57c29a Downloading 54.64MB
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ b978112db001 Downloading 597B
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 112.2MB
+ 0ce236742155 Downloading 117.4MB
+ 5d1a2e57c29a Downloading 54.64MB
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ b978112db001 Downloading 597B
+ d686b50ce172 Downloading 7.34MB
+ fcd0e9514062 Downloading 115.4MB
+ 37fb86c2a767 Downloading 29.86MB
+ 0ce236742155 Downloading 141.6MB
+ 5d1a2e57c29a Downloading 54.64MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ d686b50ce172 Downloading 12.47MB
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 115.4MB
+ 0ce236742155 Downloading 163.6MB
+ 5d1a2e57c29a Downloading 54.64MB
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ b978112db001 Downloading 597B
+ d686b50ce172 Downloading 12.47MB
+ fcd0e9514062 Downloading 115.4MB
+ 37fb86c2a767 Downloading 29.86MB
+ 0ce236742155 Downloading 184.5MB
+ 5d1a2e57c29a Downloading 54.64MB
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ d686b50ce172 Downloading 12.47MB
+ fcd0e9514062 Downloading 115.4MB
+ 37fb86c2a767 Downloading 29.86MB
+ 0ce236742155 Downloading 195MB
+ 5d1a2e57c29a Downloading 54.64MB
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ d686b50ce172 Downloading 12.47MB
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 115.4MB
+ 0ce236742155 Downloading 232.8MB
+ 5d1a2e57c29a Downloading 54.64MB
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ d686b50ce172 Downloading 12.47MB
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 115.4MB
+ 0ce236742155 Downloading 271.6MB
+ 5d1a2e57c29a Downloading 54.64MB
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ d686b50ce172 Downloading 12.47MB
+ 20043066d3d5 Downloading 5.243MB
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 115.4MB
+ 0ce236742155 Downloading 303MB
+ 5d1a2e57c29a Downloading 54.64MB
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ d686b50ce172 Downloading 12.47MB
+ 20043066d3d5 Downloading 29.72MB
+ 37fb86c2a767 Downloading 29.86MB
+ fcd0e9514062 Downloading 115.4MB
+ 0ce236742155 Downloading 328.2MB
+ 5d1a2e57c29a Downloading 54.64MB
+ 1af2d1c5b5d7 Downloading 97B
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ d686b50ce172 Downloading 12.47MB
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Downloading 7.468MB
+ 14e6209d5fa8 Downloading 833B
+ efa05c660812 Downloading 189B
+ f4e7f62f4b80 Downloading 109B
+ 3fadc669ef11 Downloading 16.78MB
+ fcd0e9514062 Downloading 115.4MB
+ 37fb86c2a767 Downloading 29.86MB
+ 0ce236742155 Downloading 358.6MB
+ 5d1a2e57c29a Downloading 54.64MB
+ b978112db001 Downloading 597B
+ dd051e1b8c92 Downloading 28.25MB
+ f43705d71c46 Downloading 15.36MB
+ 94e14de0ef29 Downloading 1.1kB
+ e68f2e5c8d50 Downloading 873B
+ 1af2d1c5b5d7 Downloading 97B
+ 5e1c03b67a78 Downloading 620B
+ d686b50ce172 Download complete 0B
+ 20043066d3d5 Downloading 29.72MB
+ 7084ac8f4ab6 Download complete 0B
+ 14e6209d5fa8 Download complete 0B
+ efa05c660812 Download complete 0B
+ f4e7f62f4b80 Download complete 0B
+ 3fadc669ef11 Downloading 41.94MB
+ beb0d870d438 Downloading 9.462kB
+ 37fb86c2a767 Download complete 0B
+ b978112db001 Download complete 0B
+ dd051e1b8c92 Download complete 0B
+ f43705d71c46 Download complete 0B
+ 94e14de0ef29 Download complete 0B
+ fcd0e9514062 Download complete 0B
+ e68f2e5c8d50 Download complete 0B
+ 5d1a2e57c29a Download complete 0B
+ 0ce236742155 Downloading 378.5MB
+ 1af2d1c5b5d7 Download complete 0B
+ 5e1c03b67a78 Download complete 0B
+ 20043066d3d5 Download complete 0B
+ 3fadc669ef11 Downloading 43.48MB
+ beb0d870d438 Downloading 9.462kB
+ d63c4408fdb7 Downloading 2.097MB
+ dd051e1b8c92 Extracting 1B
+ 5d1a2e57c29a Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 391.1MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ beb0d870d438 Downloading 9.462kB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 406.8MB
+ 5d1a2e57c29a Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 3fadc669ef11 Downloading 43.48MB
+ beb0d870d438 Downloading 9.462kB
+ d63c4408fdb7 Downloading 21.31MB
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 424.7MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 0ce236742155 Downloading 427.8MB
+ 5d1a2e57c29a Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 713b18672f38 Downloading 2.373MB
+ dd051e1b8c92 Extracting 1B
+ 3fadc669ef11 Download complete 0B
+ beb0d870d438 Download complete 0B
+ d63c4408fdb7 Download complete 0B
+ 7ec4c696b8bb Downloading 11.09kB
+ 20043066d3d5 Extracting 1B
+ 7ec4c696b8bb Download complete 0B
+ 16ef6b12768c Downloading 3.088MB
+ 0ce236742155 Downloading 433.1MB
+ 713b18672f38 Download complete 0B
+ 997e218b00c5 Download complete 0B
+ 20043066d3d5 Extracting 1B
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 16ef6b12768c Download complete 0B
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 449.8MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 467.7MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 486.5MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 503.3MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 522.2MB
+ 5d1a2e57c29a Extracting 1B
+ dd051e1b8c92 Extracting 1B
+ 37fb86c2a767 Extracting 1B
+ 20043066d3d5 Extracting 1B
+ 0ce236742155 Downloading 544.2MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 565.2MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 583MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 602.9MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 619.7MB
+ dd051e1b8c92 Extracting 2B
+ 5d1a2e57c29a Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 639.6MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 656.4MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 679.5MB
+ 5d1a2e57c29a Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 704.6MB
+ dd051e1b8c92 Extracting 2B
+ 5d1a2e57c29a Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ 20043066d3d5 Extracting 2B
+ 0ce236742155 Downloading 710.9MB
+ 5d1a2e57c29a Extracting 2B
+ 37fb86c2a767 Extracting 2B
+ dd051e1b8c92 Extracting 2B
+ 20043066d3d5 Extracting 3B
+ 0ce236742155 Downloading 722.5MB
+ 5d1a2e57c29a Extracting 3B
+ dd051e1b8c92 Extracting 3B
+ 20043066d3d5 Extracting 3B
+ 0ce236742155 Downloading 741.3MB
+ 5d1a2e57c29a Extracting 3B
+ dd051e1b8c92 Extracting 3B
+ 37fb86c2a767 Pull complete 0B
+ 20043066d3d5 Pull complete 0B
+ 0ce236742155 Downloading 764.4MB
+ 5d1a2e57c29a Extracting 3B
+ dd051e1b8c92 Extracting 3B
+ e9dd37612d7b Extracting 1B
+ 0ce236742155 Downloading 789.6MB
+ 5d1a2e57c29a Extracting 3B
+ dd051e1b8c92 Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 814.7MB
+ e9dd37612d7b Pull complete 0B
+ 5d1a2e57c29a Extracting 3B
+ 369949eb0229 Extracting 1B
+ 94e14de0ef29 Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 832.6MB
+ 5d1a2e57c29a Extracting 3B
+ 369949eb0229 Extracting 1B
+ e68f2e5c8d50 Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 845.2MB
+ 5d1a2e57c29a Extracting 3B
+ 369949eb0229 Extracting 1B
+ f43705d71c46 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 864MB
+ 369949eb0229 Extracting 1B
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 0ce236742155 Downloading 870.3MB
+ f43705d71c46 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 0ce236742155 Downloading 874.5MB
+ f43705d71c46 Extracting 1B
+ 5d1a2e57c29a Extracting 3B
+ 369949eb0229 Pull complete 0B
+ 3fadc669ef11 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 889.2MB
+ 5d1a2e57c29a Extracting 4B
+ f43705d71c46 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 912.3MB
+ 5d1a2e57c29a Extracting 4B
+ f43705d71c46 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 936.4MB
+ 5d1a2e57c29a Extracting 4B
+ f43705d71c46 Extracting 1B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 961.5MB
+ 5d1a2e57c29a Extracting 4B
+ 3fadc669ef11 Extracting 1B
+ 0ce236742155 Downloading 989.9MB
+ 5d1a2e57c29a Extracting 4B
+ f43705d71c46 Pull complete 0B
+ 3fadc669ef11 Extracting 2B
+ 0ce236742155 Downloading 1.015GB
+ 7e0f86eb8508 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 1af2d1c5b5d7 Pull complete 0B
+ 3fadc669ef11 Pull complete 0B
+ 0ce236742155 Downloading 1.041GB
+ 7e0f86eb8508 Pull complete 0B
+ 4f4fb700ef54 Extracting 1B
+ 5d1a2e57c29a Extracting 4B
+ 0ce236742155 Downloading 1.074GB
+ 5d1a2e57c29a Pull complete 0B
+ 4f4fb700ef54 Pull complete 0B
+ 7084ac8f4ab6 Extracting 1B
+ 0ce236742155 Downloading 1.096GB
+ b46efb987f9d Extracting 1B
+ b978112db001 Pull complete 0B
+ da434b32d480 Extracting 1B
+ 7084ac8f4ab6 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ b46efb987f9d Extracting 1B
+ da434b32d480 Extracting 1B
+ Image redis:7 Pulled 
+ 7084ac8f4ab6 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ da434b32d480 Extracting 1B
+ b46efb987f9d Extracting 1B
+ 7084ac8f4ab6 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ da434b32d480 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ b46efb987f9d Pull complete 0B
+ da434b32d480 Extracting 1B
+ 7084ac8f4ab6 Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ da434b32d480 Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ d8fc8030308a Extracting 1B
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ d8fc8030308a Extracting 1B
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ d8fc8030308a Extracting 1B
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ d8fc8030308a Extracting 1B
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ d8fc8030308a Pull complete 0B
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Extracting 2B
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Extracting 2B
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Extracting 2B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ beb0d870d438 Pull complete 0B
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 1B
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 1B
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 2B
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Extracting 2B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ bcc75ab4e010 Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ 0ce236742155 Downloading 1.1GB
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ d63c4408fdb7 Extracting 1B
+ a28de24f57c0 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ d63c4408fdb7 Extracting 1B
+ 0ce236742155 Downloading 1.1GB
+ d63c4408fdb7 Extracting 1B
+ a28de24f57c0 Pull complete 0B
+ 0ce236742155 Downloading 1.1GB
+ efa05c660812 Pull complete 0B
+ f4e7f62f4b80 Extracting 1B
+ d63c4408fdb7 Pull complete 0B
+ 6d141360b363 Pull complete 0B
+ 0ce236742155 Download complete 0B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ f4e7f62f4b80 Pull complete 0B
+ 5e1c03b67a78 Pull complete 0B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ d686b50ce172 Extracting 1B
+ 14e6209d5fa8 Pull complete 0B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ d686b50ce172 Extracting 1B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ d686b50ce172 Pull complete 0B
+ Image rabbitmq:3-management Pulled 
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ fcd0e9514062 Extracting 1B
+ 0ce236742155 Extracting 1B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Extracting 2B
+ 0ce236742155 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Extracting 2B
+ fcd0e9514062 Extracting 2B
+ 0ce236742155 Extracting 2B
+ fcd0e9514062 Extracting 3B
+ 0ce236742155 Extracting 3B
+ fcd0e9514062 Pull complete 0B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ cbe0afc9eb7b Pull complete 0B
+ 0ce236742155 Extracting 3B
+ eac25292b613 Pull complete 0B
+ fc6c21aca07c Pull complete 0B
+ 2a59118cca0e Pull complete 0B
+ Image postgres:18 Pulled 
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 3B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 4B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 5B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Extracting 6B
+ 0ce236742155 Pull complete 0B
+ 4f4fb700ef54 Extracting 1B
+ 4f4fb700ef54 Extracting 1B
+ 4f4fb700ef54 Pull complete 0B
+ 00e404135f98 Pull complete 0B
+ 1978793cfccf Pull complete 0B
+ Image opensearchproject/opensearch:3.9.0 Pulled 
+ Network docker_services_cli_default Creating 
+ Network docker_services_cli_default Created 
+ Container docker_services_cli-rabbitmq-1 Creating 
+ Container docker_services_cli-postgresql-1 Creating 
+ Container docker_services_cli-redis-1 Creating 
+ Container docker_services_cli-opensearch-1 Creating 
+ Container docker_services_cli-redis-1 Created 
+ Container docker_services_cli-opensearch-1 Created 
+ Container docker_services_cli-rabbitmq-1 Created 
+ Container docker_services_cli-postgresql-1 Created 
+ Container docker_services_cli-redis-1 Starting 
+ Container docker_services_cli-postgresql-1 Starting 
+ Container docker_services_cli-rabbitmq-1 Starting 
+ Container docker_services_cli-opensearch-1 Starting 
+ Container docker_services_cli-redis-1 Started 
+ Container docker_services_cli-postgresql-1 Started 
+ Container docker_services_cli-opensearch-1 Started 
+ Container docker_services_cli-rabbitmq-1 Started 
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched
+configfile: pyproject.toml
+testpaths: tests, invenio_files_rest
+plugins: cov-7.1.0, platformdirs-4.14.5, isort-4.0.0, flask-1.3.0, pycodestyle-2.5.0, github-actions-annotate-failures-0.4.2, pydocstyle-2.4.0, black-0.6.0, invenio-4.0.3
+collected 221 items
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py,line=2::pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py,line=3148::Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py,line=2::Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py,line=2560::Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.%0AImplementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+
+tests/test_admin.py ..::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py,line=76::Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+                                                   [  0%]
+tests/test_cli.py .::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+                                                      [  1%]
+tests/test_helpers.py .                                                  [  1%]
+tests/test_invenio_files_rest.py ...::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/alembic/config.py,line=572::No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py,line=193::autoincrement and existing_autoincrement only make sense for MySQL
+::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py,line=100::The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+                                     [  3%]
+tests/test_limiters.py .                                                 [  3%]
+tests/test_models.py ..................::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+..::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+..::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+..::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+....::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+...........::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+         [ 23%]
+tests/test_models_multipart.py ...::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+                                      [ 24%]
+tests/test_request.py .                                                  [ 25%]
+tests/test_serializer.py .                                               [ 25%]
+tests/test_signals.py .                                                  [ 26%]
+tests/test_storage.py ...................                                [ 34%]
+tests/test_tasks.py .......                                              [ 38%]
+tests/test_views_bucket.py .....................                         [ 47%]
+tests/test_views_location.py ......                                      [ 50%]
+tests/test_views_multipart.py .................................::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+.::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py,line=714::Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+........ [ 69%]
+.......                                                                  [ 72%]
+tests/test_views_objectversion.py ...........::warning file=workdir/tests/invenio-files-rest/patched/invenio_files_rest/helpers.py,line=323::This streaming does not support multiple storage backends.
+........................... [ 89%]
+......................                                                   [ 99%]
+invenio_files_rest/__init__.py .::warning file=workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py,line=24::CSRF validation will be enabled by default in the version 1.3.x
+                                         [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    __import__('pkg_resources').declare_namespace(__name__)
+
+.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:3148
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:3148: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('sphinxcontrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(pkg)
+
+.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/flask_admin/contrib/__init__.py:2: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin.contrib')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    __import__('pkg_resources').declare_namespace(__name__)
+
+.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:2560
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/pkg_resources/__init__.py:2560: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('flask_admin')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    declare_namespace(parent)
+
+tests/test_admin.py: 12 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_admin/ext.py:76: PendingDeprecationWarning: Usage of model and modelview kwargs are deprecated in favor of view_class, args and kwargs.
+    warnings.warn(
+
+tests/test_cli.py: 1 warning
+tests/test_models.py: 10 warnings
+tests/test_models_multipart.py: 2 warnings
+tests/test_views_multipart.py: 2 warnings
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/invenio_files_rest/models.py:714: SAWarning: Object of type <ObjectVersion> not in session, add operation along 'Bucket.objects' will not proceed (This warning originated from the Session 'autoflush' process, which was invoked automatically in response to a user-initiated operation. Consider using ``no_autoflush`` context manager if this warning happened while initializing objects.)
+    return db.session.query(cls).filter_by(id=file_id).one_or_none()
+
+tests/test_invenio_files_rest.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/alembic/config.py:572: DeprecationWarning: No path_separator found in configuration; falling back to legacy splitting on spaces/commas for version_locations.  Consider adding path_separator=os to Alembic config.
+    util.warn_deprecated(
+
+tests/test_invenio_files_rest.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/alembic/ddl/postgresql.py:193: UserWarning: autoincrement and existing_autoincrement only make sense for MySQL
+    super().alter_column(
+
+tests/test_invenio_files_rest.py::test_alembic
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_accounts/alembic/9848d0149abd_create_accounts_tables.py:100: SADeprecationWarning: The from_engine() method on Inspector is deprecated and will be removed in a future release.  Please use the sqlalchemy.inspect() function on an Engine or Connection in order to acquire an Inspector. (deprecated since: 1.4)
+    insp = Inspector.from_engine(ctx.connection.engine)
+
+tests/test_views_objectversion.py::test_get_with_x_sendfile
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/invenio_files_rest/helpers.py:323: UserWarning: This streaming does not support multiple storage backends.
+    warnings.warn("This streaming does not support multiple storage backends.")
+
+invenio_files_rest/__init__.py::invenio_files_rest
+  /home/runner/work/invenio-integration-tests/invenio-integration-tests/workdir/tests/invenio-files-rest/patched/.venv/lib/python3.14/site-packages/invenio_rest/ext.py:24: FutureWarning: CSRF validation will be enabled by default in the version 1.3.x
+    self.init_app(app)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.8-final-0 ________________
+
+Name                                                                                  Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------------------------------------------
+invenio_files_rest/__init__.py                                                            4      0   100%
+invenio_files_rest/admin.py                                                             116     13    89%   333-349
+invenio_files_rest/alembic/2e97565eba72_create_files_rest_tables.py                      34      0   100%
+invenio_files_rest/alembic/8ae99b034410_create_files_objecttags_table.py                 22      3    86%   23-24, 62
+invenio_files_rest/alembic/08e4a71525b6_change_datetime_types.py                         15      0   100%
+invenio_files_rest/alembic/52ce868f33c3_create_files_rest_branch.py                       6      0   100%
+invenio_files_rest/alembic/a29271fd78f8_create_files_object_partial_unique_index.py      12      0   100%
+invenio_files_rest/alembic/e172c837b036_add_indexes.py                                   21      0   100%
+invenio_files_rest/alembic/f741aa746a7d_alter_files_files_last_check_column_to_.py       10      0   100%
+invenio_files_rest/app.py                                                                 4      0   100%
+invenio_files_rest/cli.py                                                                66      0   100%
+invenio_files_rest/config.py                                                             52      0   100%
+invenio_files_rest/errors.py                                                             65      4    94%   24, 49-50, 54
+invenio_files_rest/ext.py                                                                52      1    98%   82
+invenio_files_rest/formparser.py                                                         24      7    71%   30, 34, 49, 60, 64-66
+invenio_files_rest/helpers.py                                                           119      6    95%   178-184, 198
+invenio_files_rest/limiters.py                                                           25      0   100%
+invenio_files_rest/models.py                                                            704     23    97%   112, 537-542, 706, 1016-1018, 1400, 1458, 1586, 1623-1630, 1636, 1727-1730
+invenio_files_rest/permissions.py                                                        61      1    98%   129
+invenio_files_rest/proxies.py                                                             6      0   100%
+invenio_files_rest/serializer.py                                                        123      2    98%   299, 332
+invenio_files_rest/signals.py                                                             8      0   100%
+invenio_files_rest/storage/__init__.py                                                    3      0   100%
+invenio_files_rest/storage/base.py                                                       93      4    96%   114-119
+invenio_files_rest/storage/pyfs.py                                                      127     10    92%   53, 74, 86, 112, 122, 134, 226-229
+invenio_files_rest/tasks.py                                                             123     19    85%   103-104, 113, 236-238, 254, 256, 263-265, 271-280
+invenio_files_rest/utils.py                                                              20      1    95%   30
+invenio_files_rest/views.py                                                             312     15    95%   50-53, 55, 68, 85-91, 310, 719, 774, 776
+invenio_files_rest/wrappers.py                                                            4      0   100%
+-------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                  2231    109    95%
+================= 221 passed, 36 warnings in 87.52s (0:01:27) ==================
+ Container docker_services_cli-redis-1 Stopping 
+ Container docker_services_cli-postgresql-1 Stopping 
+ Container docker_services_cli-opensearch-1 Stopping 
+ Container docker_services_cli-rabbitmq-1 Stopping 
+ Container docker_services_cli-redis-1 Stopped 
+ Container docker_services_cli-redis-1 Removing 
+ Container docker_services_cli-redis-1 Removed 
+ Container docker_services_cli-opensearch-1 Stopped 
+ Container docker_services_cli-opensearch-1 Removing 
+ Container docker_services_cli-opensearch-1 Removed 
+ Container docker_services_cli-postgresql-1 Stopped 
+ Container docker_services_cli-postgresql-1 Removing 
+ Container docker_services_cli-postgresql-1 Removed 
+ Container docker_services_cli-rabbitmq-1 Stopped 
+ Container docker_services_cli-rabbitmq-1 Removing 
+ Container docker_services_cli-rabbitmq-1 Removed 
+ Network docker_services_cli_default Removing 
+ Network docker_services_cli_default Removed 
