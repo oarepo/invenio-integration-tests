@@ -77,7 +77,7 @@ jobs:
       patches: ${{ needs.prepare.outputs.patches }}
       patch-mode: "pinned"
       test-mode: "stop-on-success" # do not run unpatched tests if the patches are ok
-      skip-tests: true
+      skip-tests: false
 
   upload_patches_to_pypi:
     needs: run_invenio_testrig
