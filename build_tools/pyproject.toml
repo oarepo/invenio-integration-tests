@@ -6,12 +6,14 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "pyyaml>=6.0.2",
-    "semver>=3.0.2",
+
     "typer>=0.12.5",
     "toml>=0.10.2",
     "configupdater",
     "tomli",
     "tomli-w",
+    "rich>=13.0.0",
+    "packaging>=24.0",
     "setuptools<82.0.0",
 ]
 
