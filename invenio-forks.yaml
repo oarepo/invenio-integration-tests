@@ -21,41 +21,38 @@ packages:
             name: invenio_app_rdm
             _value: invenio_app_rdm.theme.views:create_blueprint
 
-          - group: invenio_base.blueprints
-            name: invenio_app_rdm_requests
-            _value: invenio_app_rdm.requests_ui.views:create_ui_blueprint
+          # - group: invenio_base.blueprints
+          #   name: invenio_app_rdm_requests
+          #   _value: invenio_app_rdm.requests_ui.views:create_ui_blueprint
+          # - group: invenio_base.blueprints
+          #   name: invenio_app_rdm_communities
+          #   _value: invenio_app_rdm.communities_ui.views:create_ui_blueprint
+          # - group: invenio_base.blueprints
+          #   name: invenio_app_rdm_users
+          #   _value: invenio_app_rdm.users_ui.views:create_ui_blueprint
 
-          - group: invenio_base.blueprints
-            name: invenio_app_rdm_communities
-            _value: invenio_app_rdm.communities_ui.views:create_ui_blueprint
-
-          - group: invenio_base.blueprints
-            name: invenio_app_rdm_users
-            _value: invenio_app_rdm.users_ui.views:create_ui_blueprint
-
-            # - group: invenio_base.blueprints
-            #   name: invenio_app_rdm_administration
-            #   _value: invenio_app_rdm.administration.views:create_ui_blueprint
+          # - group: invenio_base.blueprints
+          #   name: invenio_app_rdm_administration
+          #   _value: invenio_app_rdm.administration.views:create_ui_blueprint
 
           - group: invenio_base.blueprints
             name: invenio_redirector
             _value: invenio_app_rdm.redirector.views:create_blueprint
 
+          # this needs to be excluded as we provide our own config
           - group: invenio_config.module
             name: invenio_app_rdm
             _value: invenio_app_rdm.config
 
-            # - group: invenio_i18n.translations
-            #   name: messages
-            #   _value: invenio_app_rdm
-
-            # - group: invenio_assets.webpack
-            #   name: invenio_app_rdm_theme
-            #   _value: invenio_app_rdm.theme.webpack:theme
-
-          - group: invenio_previewer.previewers
-            name: iiif_simple
-            _value: invenio_app_rdm.records_ui.previewer.iiif_simple
+          # - group: invenio_i18n.translations
+          #   name: messages
+          #   _value: invenio_app_rdm
+          # - group: invenio_assets.webpack
+          #   name: invenio_app_rdm_theme
+          #   _value: invenio_app_rdm.theme.webpack:theme
+          # - group: invenio_previewer.previewers
+          #   name: iiif_simple
+          #   _value: invenio_app_rdm.records_ui.previewer.iiif_simple
 
           - group: invenio_celery.tasks
             name: invenio_app_rdm
