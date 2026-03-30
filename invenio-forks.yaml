@@ -35,9 +35,9 @@ packages:
           #   name: invenio_app_rdm_administration
           #   _value: invenio_app_rdm.administration.views:create_ui_blueprint
 
-          - group: invenio_base.blueprints
-            name: invenio_redirector
-            _value: invenio_app_rdm.redirector.views:create_blueprint
+          # - group: invenio_base.blueprints
+          #   name: invenio_redirector
+          #   _value: invenio_app_rdm.redirector.views:create_blueprint
 
           # this needs to be excluded as we provide our own config
           - group: invenio_config.module
@@ -54,12 +54,13 @@ packages:
           #   name: iiif_simple
           #   _value: invenio_app_rdm.records_ui.previewer.iiif_simple
 
-          - group: invenio_celery.tasks
-            name: invenio_app_rdm
-            _value: invenio_app_rdm.tasks
+          # - group: invenio_celery.tasks
+          #   name: invenio_app_rdm
+          #   _value: invenio_app_rdm.tasks
 
           # - group: invenio_administration.views is allowed
 
+          # TODO: not sure if this should be enabled, so keeping it disabled
           - group: invenio_base.finalize_app
             name: invenio_app_rdm
             _value: invenio_app_rdm.ext:finalize_app
@@ -161,65 +162,65 @@ packages:
           #   name: rdm-records
           #   _value: invenio_rdm_records.cli:rdm_records
 
-          - group: invenio_base.apps
-            name: invenio_rdm_records
-            _value: invenio_rdm_records:InvenioRDMRecords
+          # - group: invenio_base.apps
+          #   name: invenio_rdm_records
+          #   _value: invenio_rdm_records:InvenioRDMRecords
 
-          - group: invenio_base.api_apps
-            name: invenio_rdm_records
-            _value: invenio_rdm_records:InvenioRDMRecords
+          # - group: invenio_base.api_apps
+          #   name: invenio_rdm_records
+          #   _value: invenio_rdm_records:InvenioRDMRecords
 
-          - group: invenio_base.blueprints
-            name: invenio_rdm_records_ext
-            _value: invenio_rdm_records.views:blueprint
+          # - group: invenio_base.blueprints
+          #   name: invenio_rdm_records_ext
+          #   _value: invenio_rdm_records.views:blueprint
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records
-            _value: invenio_rdm_records.views:create_records_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records
+          #   _value: invenio_rdm_records.views:create_records_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_draft_files
-            _value: invenio_rdm_records.views:create_draft_files_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_draft_files
+          #   _value: invenio_rdm_records.views:create_draft_files_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_draft_media_files
-            _value: invenio_rdm_records.views:create_draft_media_files_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_draft_media_files
+          #   _value: invenio_rdm_records.views:create_draft_media_files_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_ext
-            _value: invenio_rdm_records.views:blueprint
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_ext
+          #   _value: invenio_rdm_records.views:blueprint
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_parent_links
-            _value: invenio_rdm_records.views:create_parent_record_links_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_parent_links
+          #   _value: invenio_rdm_records.views:create_parent_record_links_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_parent_grants
-            _value: invenio_rdm_records.views:create_parent_grants_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_parent_grants
+          #   _value: invenio_rdm_records.views:create_parent_grants_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_user_access
-            _value: invenio_rdm_records.views:create_grant_user_access_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_user_access
+          #   _value: invenio_rdm_records.views:create_grant_user_access_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_group_access
-            _value: invenio_rdm_records.views:create_grant_group_access_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_group_access
+          #   _value: invenio_rdm_records.views:create_grant_group_access_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_record_files
-            _value: invenio_rdm_records.views:create_record_files_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_record_files
+          #   _value: invenio_rdm_records.views:create_record_files_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_rdm_records_record_media_files
-            _value: invenio_rdm_records.views:create_record_media_files_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_rdm_records_record_media_files
+          #   _value: invenio_rdm_records.views:create_record_media_files_bp
 
           - group: invenio_base.api_blueprints
             name: invenio_rdm_community_records
             _value: invenio_rdm_records.views:create_community_records_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_oaipmh_server
-            _value: invenio_rdm_records.views:create_oaipmh_server_blueprint_from_app
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_oaipmh_server
+          #   _value: invenio_rdm_records.views:create_oaipmh_server_blueprint_from_app
 
           - group: invenio_base.api_blueprints
             name: invenio_rdm_record_communities
@@ -229,45 +230,45 @@ packages:
             name: invenio_rdm_record_requests
             _value: invenio_rdm_records.views:create_record_requests_bp
 
-          - group: invenio_base.api_blueprints
-            name: invenio_iiif
-            _value: invenio_rdm_records.views:create_iiif_bp
+          # - group: invenio_base.api_blueprints
+          #   name: invenio_iiif
+          #   _value: invenio_rdm_records.views:create_iiif_bp
 
-          - group: invenio_base.finalize_app
-            name: invenio_rdm_records
-            _value: invenio_rdm_records.ext:finalize_app
+          # - group: invenio_base.finalize_app
+          #   name: invenio_rdm_records
+          #   _value: invenio_rdm_records.ext:finalize_app
 
-          - group: invenio_base.api_finalize_app
-            name: invenio_rdm_records
-            _value: invenio_rdm_records.ext:api_finalize_app
+          # - group: invenio_base.api_finalize_app
+          #   name: invenio_rdm_records
+          #   _value: invenio_rdm_records.ext:api_finalize_app
 
-          - group: invenio_celery.tasks
-            name: invenio_rdm_records_fixtures
-            _value: invenio_rdm_records.fixtures.tasks
+          # - group: invenio_celery.tasks
+          #   name: invenio_rdm_records_fixtures
+          #   _value: invenio_rdm_records.fixtures.tasks
 
-          - group: invenio_celery.tasks
-            name: invenio_rdm_records_services
-            _value: invenio_rdm_records.services.tasks
+          # - group: invenio_celery.tasks
+          #   name: invenio_rdm_records_services
+          #   _value: invenio_rdm_records.services.tasks
 
-          - group: invenio_celery.tasks
-            name: invenio_rdm_records_access_requests
-            _value: invenio_rdm_records.requests.access.tasks
+          # - group: invenio_celery.tasks
+          #   name: invenio_rdm_records_access_requests
+          #   _value: invenio_rdm_records.requests.access.tasks
 
-          - group: invenio_celery.tasks
-            name: invenio_rdm_records_iiif
-            _value: invenio_rdm_records.services.iiif.tasks
+          # - group: invenio_celery.tasks
+          #   name: invenio_rdm_records_iiif
+          #   _value: invenio_rdm_records.services.iiif.tasks
 
-          - group: invenio_celery.tasks
-            name: invenio_rdm_records_user_moderation
-            _value: invenio_rdm_records.requests.user_moderation.tasks
+          # - group: invenio_celery.tasks
+          #   name: invenio_rdm_records_user_moderation
+          #   _value: invenio_rdm_records.requests.user_moderation.tasks
 
-          - group: invenio_db.models
-            name: invenio_rdm_records
-            _value: invenio_rdm_records.records.models
+          # - group: invenio_db.models
+          #   name: invenio_rdm_records
+          #   _value: invenio_rdm_records.records.models
 
-          - group: invenio_db.alembic
-            name: invenio_rdm_records
-            _value: invenio_rdm_records:alembic
+          # - group: invenio_db.alembic
+          #   name: invenio_rdm_records
+          #   _value: invenio_rdm_records:alembic
 
           # - group: invenio_jsonschemas.schemas
           #   name: invenio_rdm_records
@@ -313,45 +314,45 @@ packages:
             name: email
             _value: invenio_rdm_records.requests.entity_resolvers:EmailResolver
 
-          - group: invenio_administration.views
-            name: invenio_rdm_records_oai_list
-            _value: invenio_rdm_records.administration.views.oai:OaiPmhListView
+          # - group: invenio_administration.views
+          #   name: invenio_rdm_records_oai_list
+          #   _value: invenio_rdm_records.administration.views.oai:OaiPmhListView
 
-          - group: invenio_administration.views
-            name: invenio_rdm_records_oai_edit
-            _value: invenio_rdm_records.administration.views.oai:OaiPmhEditView
+          # - group: invenio_administration.views
+          #   name: invenio_rdm_records_oai_edit
+          #   _value: invenio_rdm_records.administration.views.oai:OaiPmhEditView
 
-          - group: invenio_administration.views
-            name: invenio_rdm_records_oai_create
-            _value: invenio_rdm_records.administration.views.oai:OaiPmhCreateView
+          # - group: invenio_administration.views
+          #   name: invenio_rdm_records_oai_create
+          #   _value: invenio_rdm_records.administration.views.oai:OaiPmhCreateView
 
-          - group: invenio_administration.views
-            name: invenio_rdm_records_details
-            _value: invenio_rdm_records.administration.views.oai:OaiPmhDetailView
+          # - group: invenio_administration.views
+          #   name: invenio_rdm_records_details
+          #   _value: invenio_rdm_records.administration.views.oai:OaiPmhDetailView
 
           # - group: invenio_assets.webpack
           #   name: invenio_rdm_records
           #   _value: invenio_rdm_records.webpack:theme
 
-          - group: invenio_oauth2server.scopes
-            name: tokens_generate_scope
-            _value: invenio_rdm_records.tokens.scopes:tokens_generate_scope
+          # - group: invenio_oauth2server.scopes
+          #   name: tokens_generate_scope
+          #   _value: invenio_rdm_records.tokens.scopes:tokens_generate_scope
 
-          - group: invenio_users_resources.moderation.actions
-            name: block
-            _value: invenio_rdm_records.requests.user_moderation.actions:on_block
+          # - group: invenio_users_resources.moderation.actions
+          #   name: block
+          #   _value: invenio_rdm_records.requests.user_moderation.actions:on_block
 
-          - group: invenio_users_resources.moderation.actions
-            name: restore
-            _value: invenio_rdm_records.requests.user_moderation.actions:on_restore
+          # - group: invenio_users_resources.moderation.actions
+          #   name: restore
+          #   _value: invenio_rdm_records.requests.user_moderation.actions:on_restore
 
-          - group: invenio_users_resources.moderation.actions
-            name: approve
-            _value: invenio_rdm_records.requests.user_moderation.actions:on_approve
+          # - group: invenio_users_resources.moderation.actions
+          #   name: approve
+          #   _value: invenio_rdm_records.requests.user_moderation.actions:on_approve
 
-          - group: invenio_jobs.jobs
-            name: update_expired_embargos
-            _value: invenio_rdm_records.jobs.jobs:update_expired_embargos_cls
+          # - group: invenio_jobs.jobs
+          #   name: update_expired_embargos
+          #   _value: invenio_rdm_records.jobs.jobs:update_expired_embargos_cls
 
     tests:
       - testopts: "--deselect tests/services/test_service_review.py::test_delete_draft_unsubmitted"
