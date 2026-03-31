@@ -306,13 +306,13 @@ packages:
           #   name: file_modification
           #   _value: invenio_rdm_records.requests.file_modification:get_request_type
 
-          - group: invenio_requests.entity_resolvers
-            name: records
-            _value: invenio_rdm_records.requests.entity_resolvers:RDMRecordResolver
+          # - group: invenio_requests.entity_resolvers
+          #   name: records
+          #   _value: invenio_rdm_records.requests.entity_resolvers:RDMRecordResolver
 
-          - group: invenio_requests.entity_resolvers
-            name: email
-            _value: invenio_rdm_records.requests.entity_resolvers:EmailResolver
+          # - group: invenio_requests.entity_resolvers
+          #   name: email
+          #   _value: invenio_rdm_records.requests.entity_resolvers:EmailResolver
 
           # - group: invenio_administration.views
           #   name: invenio_rdm_records_oai_list
