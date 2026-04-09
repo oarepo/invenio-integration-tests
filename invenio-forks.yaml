@@ -156,6 +156,8 @@ packages:
         base: v22.7.3
       - name: oarepo-feature-review-before-doi-assign
         base: v22.7.3
+      - name: oarepo-feature-community-header
+        base: v28.0.0
     entrypoints:
       - remove:
           # - group: flask.commands
