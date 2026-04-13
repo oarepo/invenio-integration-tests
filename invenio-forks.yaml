@@ -148,6 +148,10 @@ packages:
     features:
       - name: oarepo-feature-configurable-service-resource
         base: v19.5.4
+        invenio-version: "<28.2.0"
+      - name: oarepo-feature-configurable-service-resource-from-28.2.0
+        base: v28.2.0
+        invenio-version: ">=28.2.0"
       - name: oarepo-feature-kwargs
         base: v19.5.4
       - name: oarepo-feature-pids-component-permission-check-args
