@@ -206,7 +206,7 @@ def find_distributions(workdir: Path):
 
     found_distributions: dict[str, Any] = {}
 
-    for pkg_name, pkg_info in config.tested_packages.items():
+    for pkg_name, pkg_info in config.runtime.tested_packages.items():
         if not pkg_info.patches:
             continue
         patched_dir = workdir / "cloned_repos" / "patched" / pkg_name
@@ -386,15 +386,15 @@ def oarepo_version(workdir: Path, major: bool):
     which is used to determine the branch of oarepo to use for the patches."""
     config = Config.load(workdir)
     # find version of invenio-app-rdm inside "packages" part and take the major
-    if "invenio-app-rdm" in config.tested_packages:
-        app_rdm_actual_version = config.tested_packages[
+    if "invenio-app-rdm" in config.runtime.tested_packages:
+        app_rdm_actual_version = config.runtime.tested_packages[
             "invenio-app-rdm"
         ].reference.actual_version
         if app_rdm_actual_version is None:
             raise ValueError("invenio-app-rdm does not have an actual version resolved")
         app_rdm_version = Version(app_rdm_actual_version)
     else:
-        app_rdm_version = Version(config.packages["invenio-app-rdm"])
+        app_rdm_version = Version(config.runtime.packages["invenio-app-rdm"])
 
     if major:
         print(app_rdm_version.major)
@@ -412,15 +412,15 @@ def update_oarepo(workdir: Path, ignored_dependencies: str | None):
     """Update the version in the __init__.py of the patched packages to include the oarepo suffix, so that they can be uploaded to the CESNET GitLab PyPI registry with the correct version."""
     config = Config.load(workdir)
     # find version of invenio-app-rdm inside "packages" part and take the major
-    if "invenio-app-rdm" in config.tested_packages:
-        app_rdm_actual_version = config.tested_packages[
+    if "invenio-app-rdm" in config.runtime.tested_packages:
+        app_rdm_actual_version = config.runtime.tested_packages[
             "invenio-app-rdm"
         ].reference.actual_version
         if app_rdm_actual_version is None:
             raise ValueError("invenio-app-rdm does not have an actual version resolved")
         app_rdm_version = Version(app_rdm_actual_version)
     else:
-        app_rdm_version = Version(config.packages["invenio-app-rdm"])
+        app_rdm_version = Version(config.runtime.packages["invenio-app-rdm"])
 
     oarepo_branch = f"rdm-{app_rdm_version.major}"
     # clone the oarepo repository and checkout the branch corresponding
@@ -471,7 +471,7 @@ __version__ = "{oarepo_version}"
     )
 
     # add all the dependencies to the requirements section of pyproject.toml
-    dependencies = {**config.packages}
+    dependencies = {**config.runtime.packages}
     for pkg_name, pkg_info in extra_data(config)["found_distributions"].items():
         dependencies[pkg_name] = pkg_info["full_version"]
 
