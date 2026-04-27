@@ -112,8 +112,7 @@ def upload_original(workdir: Path, package: str | None):
     cesnet_pypi_client = GitLabPyPIClient(CESNET_GITLAB_PYPI_URL)
     pypi_client = PyPIClient("https://pypi.org/")
 
-    config_path = workdir / "config.json"
-    config = Config.load(config_path)
+    config = Config.load(workdir)
 
     # click.secho(f"🔍 Fetching packages from {CESNET_GITLAB_PYPI_URL}...", fg="cyan")
     # packages = set(cesnet_pypi_client.list_packages())
@@ -168,8 +167,7 @@ def update_entrypoints(workdir: Path):
     integration_tests_config_path = workdir / "integration-tests-config.json"
     integration_tests_config = json.loads(integration_tests_config_path.read_text())
 
-    config_path = workdir / "config.json"
-    config = Config.load(config_path)
+    config = Config.load(workdir)
 
     entrypoints = integration_tests_config.get("entrypoints", {})
     for pkg_name, pkg_entrypoints in entrypoints.items():
@@ -202,8 +200,7 @@ def find_distributions(workdir: Path):
     The patched distributions at CESNET gitlab registry are always in the format:
     <base_version>+oarepo.ordinal_starting with 1.<hash_of_patch_info>
     """
-    config_path = workdir / "config.json"
-    config = Config.load(config_path)
+    config = Config.load(workdir)
 
     cesnet_pypi_client = GitLabPyPIClient(CESNET_GITLAB_PYPI_URL)
 
@@ -291,7 +288,7 @@ def find_distributions(workdir: Path):
 def build_distributions(workdir: Path):
     (workdir / "dist").mkdir(exist_ok=True)
 
-    config = Config.load(workdir / "config.json")
+    config = Config.load(workdir)
     for pkg_name, build_info in (
         extra_data(config).get("found_distributions", {}).items()
     ):
@@ -387,7 +384,7 @@ def upload_distributions(workdir: Path):
 def oarepo_version(workdir: Path, major: bool):
     """Print the major version of invenio-app-rdm that is being tested,
     which is used to determine the branch of oarepo to use for the patches."""
-    config = Config.load(workdir / "config.json")
+    config = Config.load(workdir)
     # find version of invenio-app-rdm inside "packages" part and take the major
     if "invenio-app-rdm" in config.tested_packages:
         app_rdm_actual_version = config.tested_packages[
@@ -413,7 +410,7 @@ def oarepo_version(workdir: Path, major: bool):
 )
 def update_oarepo(workdir: Path, ignored_dependencies: str | None):
     """Update the version in the __init__.py of the patched packages to include the oarepo suffix, so that they can be uploaded to the CESNET GitLab PyPI registry with the correct version."""
-    config = Config.load(workdir / "config.json")
+    config = Config.load(workdir)
     # find version of invenio-app-rdm inside "packages" part and take the major
     if "invenio-app-rdm" in config.tested_packages:
         app_rdm_actual_version = config.tested_packages[
