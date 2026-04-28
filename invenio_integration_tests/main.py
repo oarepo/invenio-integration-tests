@@ -279,7 +279,9 @@ def find_distributions(workdir: Path):
 
         found_distributions[pkg_name] = pkg_rec
     print("📊 Found distributions:", json.dumps(found_distributions, indent=2))
-    extra_data(config.runtime)["found_distributions"] = found_distributions
+
+    # TODO: not ideal, but config.runtime at the moment is not extensible
+    extra_data(config.user)["found_distributions"] = found_distributions
     config.save()
 
 
@@ -290,7 +292,7 @@ def build_distributions(workdir: Path):
 
     config = Config.load(workdir)
     for pkg_name, build_info in (
-        extra_data(config.runtime).get("found_distributions", {}).items()
+        extra_data(config.user).get("found_distributions", {}).items()
     ):
         if build_info.get("match"):
             click.secho(
@@ -472,7 +474,7 @@ __version__ = "{oarepo_version}"
 
     # add all the dependencies to the requirements section of pyproject.toml
     dependencies = {**config.runtime.packages}
-    for pkg_name, pkg_info in extra_data(config.runtime)["found_distributions"].items():
+    for pkg_name, pkg_info in extra_data(config.user)["found_distributions"].items():
         dependencies[pkg_name] = pkg_info["full_version"]
 
     if ignored_dependencies:
