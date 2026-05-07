@@ -109,34 +109,44 @@ def setup(input_config: Path, workdir: Path):
 def upload_original(workdir: Path, package: str | None):
     """Upload original packages to the package registry."""
 
+    config = Config.load(workdir)
+
     cesnet_pypi_client = GitLabPyPIClient(CESNET_GITLAB_PYPI_URL)
     pypi_client = PyPIClient("https://pypi.org/")
 
-    config = Config.load(workdir)
+    click.secho(f"🔍 Fetching packages from {CESNET_GITLAB_PYPI_URL}...", fg="cyan")
+    packages = set(cesnet_pypi_client.list_packages())
+    click.secho(f"✅ Found {len(packages)} packages:{', '.join(packages)}", fg="green")
 
-    # click.secho(f"🔍 Fetching packages from {CESNET_GITLAB_PYPI_URL}...", fg="cyan")
-    # packages = set(cesnet_pypi_client.list_packages())
-    # click.secho(f"✅ Found {len(packages)} packages:{", ".join(packages)}", fg="green")
+    # add all patched packages to the set of packages to upload, we will check their versions later
+    for pkg_name, pkg_info in config.runtime.tested_packages.items():
+        if pkg_info.patches:
+            packages.add(pkg_name)
 
-    # # add all patched packages to the set of packages to upload, we will check their versions later
-    # for pkg_name, pkg_info in config.tested_packages.items():
-    #     if pkg_info.patches:
-    #         packages.add(pkg_name)
-
-    packages = set()
     packages.add("oarepo")
+    for exc in ("oarepo-app",):
+        if exc in packages:
+            packages.remove(exc)
 
     packages_to_upload: set[tuple[str, str]] = set()
     for pkg in packages:
         if package and pkg.lower() != package.lower():
             continue
-        click.secho(f"📦 Fetching uploaded versions for package {pkg}...", fg="cyan")
-        uploaded_packages = cesnet_pypi_client.get_package_versions(pkg)
-        click.secho(f"📦 Fetching versions from PyPI for package {pkg}...", fg="cyan")
-        pypi_packages = pypi_client.get_package_versions(pkg)
-        packages_to_upload.update(
-            (pkg, version) for version in set(pypi_packages) - set(uploaded_packages)
-        )
+        try:
+            click.secho(
+                f"📦 Fetching uploaded versions for package {pkg}...", fg="cyan"
+            )
+            uploaded_packages = cesnet_pypi_client.get_package_versions(pkg)
+            click.secho(
+                f"📦 Fetching versions from PyPI for package {pkg}...", fg="cyan"
+            )
+            pypi_packages = pypi_client.get_package_versions(pkg)
+            packages_to_upload.update(
+                (pkg, version)
+                for version in set(pypi_packages) - set(uploaded_packages)
+            )
+        except Exception as e:
+            click.secho(f"❌ Failed to fetch versions for package {pkg}: {e}", fg="red")
 
     click.secho(
         f"📤 {len(packages_to_upload)} packages to upload:\n{'\n'.join(f'{pkg}=={version}' for pkg, version in packages_to_upload)}",
