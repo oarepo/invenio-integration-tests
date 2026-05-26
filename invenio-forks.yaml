@@ -143,6 +143,8 @@ packages:
     features:
       - name: oarepo-feature-removed-webpack-aliases
         base: v12.0.12
+      - name: oarepo-feature-request-view
+        base: v14.0.0b10.dev7
 
   - name: invenio-rdm-records
     features:
