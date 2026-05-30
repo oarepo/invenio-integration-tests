@@ -178,11 +178,18 @@ packages:
 
   - name: invenio-requests
     features:
+      - name: oarepo-feature-kwargs-from-13.0.0
+        base: v13.0.0
+        invenio-version: ">=13.0.0"
       - name: oarepo-feature-kwargs-from-12.2.1
         base: v12.2.1
+        invenio-version: ">=12.2.1<13.0.0"
       - name: oarepo-feature-refresh-and-configs-from-12.3.0
         base: v12.3.0
         invenio-version: ">=12.3.0"
+      - name: oarepo-feature-refresh-and-configs
+        base: v10.0.1
+        invenio-version: "<12.3.0"
       - name: oarepo-feature-refresh-and-configs
         base: v10.0.1
         invenio-version: "<12.3.0"
