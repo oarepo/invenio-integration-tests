@@ -183,7 +183,7 @@ packages:
         invenio-version: ">=13.0.0"
       - name: oarepo-feature-kwargs-from-12.2.1
         base: v12.2.1
-        invenio-version: ">=12.2.1<13.0.0"
+        invenio-version: ">=12.2.1,<13.0.0"
       - name: oarepo-feature-refresh-and-configs-from-12.3.0
         base: v12.3.0
         invenio-version: ">=12.3.0"
