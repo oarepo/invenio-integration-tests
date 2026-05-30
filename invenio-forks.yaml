@@ -167,8 +167,12 @@ packages:
 
   - name: invenio-records-resources
     features:
+      - name: oarepo-feature-kwargs-from-10.0.0
+        base: v10.0.0
+        invenio-version: ">=10.0.0"
       - name: oarepo-feature-kwargs-from-8.6.0
         base: v8.6.0
+        invenio-version: ">=8.6.0,<10.0.0"
       - name: oarepo-feature-lenient-labelled-facets
         base: v8.8.0
 
