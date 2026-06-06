@@ -51,6 +51,7 @@ def setup(input_config: Path, workdir: Path):
 
     packages = config.pop("packages", [])
     supported_invenio_version = config.pop("invenio-version", None)
+    dependency_markers = config.pop("dependency-markers", {})
     patches = []
     entrypoints = {}
     for package_def in packages:
@@ -93,6 +94,7 @@ def setup(input_config: Path, workdir: Path):
                 "invenio-version": supported_invenio_version,
                 "patches": patches,
                 "entrypoints": entrypoints,
+                "dependency-markers": dependency_markers,
             },
             f,
             indent=2,
@@ -482,6 +484,13 @@ __version__ = "{oarepo_version}"
 """.strip()
     )
 
+    # load dependency markers from the integration-tests-config.json
+    integration_tests_config_path = workdir / "integration-tests-config.json"
+    dependency_markers: dict[str, str] = {}
+    if integration_tests_config_path.exists():
+        with integration_tests_config_path.open() as f:
+            dependency_markers = json.load(f).get("dependency-markers", {})
+
     # add all the dependencies to the requirements section of pyproject.toml
     dependencies = {**config.runtime.packages}
     for pkg_name, pkg_info in extra_data(config.user)["found_distributions"].items():
@@ -492,7 +501,10 @@ __version__ = "{oarepo_version}"
             dependencies.pop(dep, None)
 
     pyproject["project"]["dependencies"] = [
-        f"{pkg_name}=={version}" for pkg_name, version in dependencies.items()
+        f"{pkg_name}=={version}; {dependency_markers[pkg_name]}"
+        if pkg_name in dependency_markers
+        else f"{pkg_name}=={version}"
+        for pkg_name, version in dependencies.items()
     ]
 
     # write the updated pyproject.toml back to the file
