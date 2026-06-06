@@ -1,5 +1,8 @@
 invenio-version: 14.0.0b5.dev3
 
+dependency-markers:
+  backports-zstd: "python_version < '3.14'"
+
 packages:
   - name: invenio-administration
     features:
