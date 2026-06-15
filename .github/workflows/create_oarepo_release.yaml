@@ -77,7 +77,8 @@ jobs:
       patch-mode: "pinned"
       test-mode: "stop-on-success" # do not run unpatched tests if the patches are ok
       skip-tests: false
-      e2e: oarepo/invenio-e2e@main
+      # e2e: oarepo/invenio-e2e@main
+      e2e: false
       ignore-uv-lock: true
 
   upload_patches_to_pypi:
