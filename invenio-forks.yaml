@@ -150,12 +150,15 @@ packages:
       - name: oarepo-feature-disable-communities-ui-from-21.0.0
         base: v21.0.0
         invenio-version: ">=21.0.0,<25.0.0"
+      - name: oarepo-feature-enable-email-invitations-from-28.1.0
+        base: v28.1.0
+        invenio-version: ">=28.1.0"
+      - name: oarepo-feature-enable-email-invitations-from-27.0.0
+        base: v27.0.0
+        invenio-version: ">=27.0.0,<28.1.0"
       - name: oarepo-feature-enable-email-invitations-from-25.0.0
         base: v25.0.0
         invenio-version: ">=25.0.0,<27.0.0"
-      - name: oarepo-feature-enable-email-invitations-from-27.0.0
-        base: v27.0.0
-        invenio-version: ">=27.0.0"
       - name: oarepo-feature-enable-email-invitations-from-19.1.0
         base: v19.1.0
         invenio-version: "<25.0.0"
