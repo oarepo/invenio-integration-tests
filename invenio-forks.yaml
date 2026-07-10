@@ -213,14 +213,14 @@ packages:
       - name: oarepo-feature-importlib
         base: v3.1.0
 
-  # - name: citeproc-py-styles
-  #   features:
-  #     - name: oarepo-feature-czech-iso-citation-from-0.1.5
-  #       base: v0.1.5
-  #       invenio-version: ">=0.1.5,<0.1.6"
-  #     - name: oarepo-feature-czech-iso-citation-from-0.1.6
-  #       base: v0.1.6
-  #       invenio-version: ">=0.1.6"
+  - name: citeproc-py-styles
+    features:
+      - name: oarepo-feature-czech-iso-citation-from-0.1.5
+        base: v0.1.5
+        invenio-version: ">=0.1.5,<0.1.6"
+      - name: oarepo-feature-czech-iso-citation-from-0.1.6
+        base: v0.1.6
+        invenio-version: ">=0.1.6"
 
   - name: invenio-vocabularies
     features:
