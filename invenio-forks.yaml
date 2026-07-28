@@ -168,6 +168,10 @@ packages:
         invenio-version: "<25.0.0"
       - name: oarepo-feature-administration-in-tests-from-19.1.0
         base: v19.1.0
+        invenio-version: "<28.2.0"
+      - name: oarepo-feature-administration-in-tests-from-28.2.0
+        base: v28.2.0
+        invenio-version: ">=28.2.0"
 
   - name: invenio-drafts-resources
     depends:
