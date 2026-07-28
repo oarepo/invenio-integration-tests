@@ -238,6 +238,10 @@ packages:
         base: v9.0.0
       - name: oarepo-feature-harvest-record
         base: v9.1.2
+        invenio-version: "<13.1.0"
+      - name: oarepo-feature-harvest-record-from-13.1.0
+        base: v13.1.0
+        invenio-version: ">=13.1.0"
 
   - name: invenio-oaiserver
     features:
