@@ -10,7 +10,7 @@ packages:
         base: v3.1.2
         invenio-version: "<6.0.2"
       - name: oarepo-feature-multiple-ui-changes-from-6.0.2
-        base v6.0.2
+        base: v6.0.2
         invenio-version: ">=6.0.2"
 
   - name: invenio-app-rdm
