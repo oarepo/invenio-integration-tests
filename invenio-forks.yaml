@@ -145,7 +145,7 @@ packages:
 
   - name: invenio-communities
     features:
-      - name: community-role-in-requests-search
+      - name: oarepo-feature-community-role-in-requests-search
         base: v28.1.0
       - name: oarepo-feature-disable-communities-ui-from-28.1.0
         base: v28.1.0
