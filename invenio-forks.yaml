@@ -250,9 +250,5 @@ packages:
 
   - name: invenio-notifications
     features:
-      - name: oarepo-feature-lazy-strings-from-1.3.0
+      - name: oarepo-feature-configurability
         base: v1.3.0
-        invenio-version: ">=1.3.0"
-      - name: oarepo-feature-lazy-strings
-        base: v1.2.2
-        invenio-version: "<1.3.0"
