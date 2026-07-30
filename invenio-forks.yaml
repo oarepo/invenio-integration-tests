@@ -24,7 +24,7 @@ packages:
       - name: oarepo-feature-babel-paths-from-1.12.0
         base: v1.12.0
         invenio-version: ">=1.12.0"
-  
+
   - name: invenio-administration
     features:
       - name: oarepo-feature-multiple-ui-changes-from-3.1.2
@@ -160,6 +160,8 @@ packages:
       - name: oarepo-feature-review-before-doi-assign
         base: v22.7.3
       - name: oarepo-feature-quota-drop-parent-fk
+        base: v32.0.0
+      - name: oarepo-feature-file-modification-uppy
         base: v32.0.0
     entrypoints:
       - remove:
