@@ -131,6 +131,8 @@ packages:
         base: v22.7.3
       - name: oarepo-feature-review-before-doi-assign
         base: v22.7.3
+      - name: oarepo-feature-quota-drop-parent-fk
+        base: v32.0.0
     entrypoints:
       - remove:
           - group: invenio_search.mappings
