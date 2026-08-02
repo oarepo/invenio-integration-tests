@@ -125,6 +125,27 @@ def upload_original(workdir: Path, package: str | None):
         if pkg_info.patches:
             packages.add(pkg_name)
 
+    # Also add all packages from invenio-forks.yaml (via integration-tests-config.json)
+    # This ensures packages like invenio-cli that aren't runtime dependencies are still uploaded
+    config_file = workdir / "integration-tests-config.json"
+    if config_file.exists():
+        with config_file.open() as f:
+            config_data = json.load(f)
+            for patch_spec in config_data.get("patches", []):
+                # Extract package name from patch spec
+                # Format: org/package@feature[base]version or just package@feature[base]version
+                if "/" in patch_spec:
+                    # Format: org/package@feature[base]version
+                    pkg = patch_spec.split("/")[1].split("@")[0]
+                else:
+                    # Format: package@feature[base]version
+                    pkg = patch_spec.split("@")[0]
+                packages.add(pkg)
+                click.secho(
+                    f"📦 Added package '{pkg}' from configuration (patch: {patch_spec})",
+                    fg="blue",
+                )
+
     packages.add("oarepo")
     for exc in ("oarepo-app",):
         if exc in packages:
