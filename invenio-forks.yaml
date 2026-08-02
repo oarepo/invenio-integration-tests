@@ -4,6 +4,27 @@ dependency-markers:
   backports-zstd: "python_version < '3.14'"
 
 packages:
+  - name: invenio-cli
+    features:
+      - name: oarepo-feature-uv-project-environment-from-1.12.0
+        base: v1.12.0
+        invenio-version: ">=1.12.0"
+      - name: oarepo-feature-custom-cert-path-from-1.12.0
+        base: v1.12.0
+        invenio-version: ">=1.12.0"
+      - name: oarepo-feature-rdm-version-oarepo-from-1.12.0
+        base: v1.12.0
+        invenio-version: ">=1.12.0"
+      - name: oarepo-feature-docker-service-config-from-1.12.0
+        base: v1.12.0
+        invenio-version: ">=1.12.0"
+      - name: oarepo-feature-cli-extensions-from-1.12.0
+        base: v1.12.0
+        invenio-version: ">=1.12.0"
+      - name: oarepo-feature-babel-paths-from-1.12.0
+        base: v1.12.0
+        invenio-version: ">=1.12.0"
+  
   - name: invenio-administration
     features:
       - name: oarepo-feature-multiple-ui-changes-from-3.1.2
