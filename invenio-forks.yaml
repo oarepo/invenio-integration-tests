@@ -135,6 +135,10 @@ packages:
         base: v12.0.12
       - name: oarepo-feature-request-view
         base: v14.0.0b10.dev7
+        invenio-version: ">=v14.0.0b10.dev7,<14.0.0"
+      - name: oarepo-feature-request-view-from-14.0.0
+        base: v14.0.0
+        invenio-version: ">=14.0.0"
 
   - name: invenio-rdm-records
     features:
