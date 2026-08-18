@@ -163,8 +163,6 @@ packages:
         base: v32.0.0
       - name: oarepo-feature-file-modification-uppy
         base: v32.0.0
-      - name: oarepo-feature-review-service-index-on-create
-        base: v23.0.0
     entrypoints:
       - remove:
           - group: invenio_search.mappings
