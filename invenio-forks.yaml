@@ -155,7 +155,7 @@ packages:
         base: v19.5.4
       - name: oarepo-feature-pids-component-permission-check-args
         base: v19.5.4
-      - name: oarepo-feature-review-service-components
+      - name: oarepo-feature--service-components
         base: v22.7.3
       - name: oarepo-feature-review-before-doi-assign
         base: v22.7.3
@@ -163,7 +163,7 @@ packages:
         base: v32.0.0
       - name: oarepo-feature-file-modification-uppy
         base: v32.0.0
-      - name: review-service-index-on-create
+      - name: oarepo-feature-review-service-index-on-create
         base: v23.0.0
     entrypoints:
       - remove:
