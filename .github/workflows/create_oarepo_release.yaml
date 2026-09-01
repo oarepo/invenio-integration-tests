@@ -93,7 +93,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Download the workdir artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: workdir
 
@@ -105,7 +105,7 @@ jobs:
           ls -la workdir
 
       - name: Download the integration-tests-config artifact and put it to the workdir
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: integration-tests-config
 
