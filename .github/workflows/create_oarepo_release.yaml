@@ -39,7 +39,7 @@ jobs:
       patches: ${{ steps.set-repository.outputs.patches }}
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Prepare python and tools
         uses: ./.github/actions/action-install-tools
@@ -85,7 +85,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Prepare python and tools
         uses: ./.github/actions/action-install-tools
@@ -166,7 +166,7 @@ jobs:
           echo "Going to create release for OARepo version $OAREPO_VERSION and $RDM_VERSION"
 
       - name: Checkout oarepo/oarepo under workdir/oarepo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: "oarepo/oarepo"
           ref: "rdm-${{ env.OAREPO_VERSION }}"
