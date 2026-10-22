@@ -292,3 +292,8 @@ packages:
     features:
       - name: oarepo-feature-configurability
         base: v1.3.0
+
+  - name: invenio-db
+    features:
+      - name: oarepo-feature-fix-alembic-migration
+        base: v2.6.1
