@@ -20,10 +20,10 @@ on:
       python:
         description: Python version
         required: true
-        default: "3.14.2"
+        default: "3.14.8"
 
 env:
-  PYTHON_VERSION: ${{ github.event.inputs.python || '3.14.2' }}
+  PYTHON_VERSION: ${{ github.event.inputs.python || '3.14.8' }}
   REFERENCE_REPO: "oarepo/inveniordm-reference-repo@rdm-14"
   IGNORED_DEPENDENCIES: latest-build,latest-build-instance,pywin32,coverage,pytest,pytest-cov,pytest-flask,pytest-github-actions-annotate-failures,pytest-invenio,pytest-isort,pytest-pycodestyle,pytest-pydocstyle,faker,selenium,docker,docker-services-cli,check-manifest,isort,pycodestyle,pydocstyle,ruff,types-beautifulsoup4,types-certifi,types-dateparser,types-html5lib,types-pyyaml,types-urllib3,types-webencodings,types-xmltodict,mypy-extensions,build,pyproject-hooks,setuptools,distlib,cookiecutter,invenio-cli,ipython,ipython-pygments-lexers,pdbpp,fancycompleter,pyreadline3,pyrepl,flask-debugtoolbar,flask-shell-ipython,pipenv,pipfile,virtualenv,jupyter-client,jupyter-core,jupyterlab-pygments,nbclient,nbconvert,nbformat,pywin32,watchdog
 permissions:
@@ -37,6 +37,8 @@ jobs:
     outputs:
       base_repository: ${{ steps.set-repository.outputs.base_repository }}
       patches: ${{ steps.set-repository.outputs.patches }}
+      # env context is not available in "with" of reusable workflow calls, so pass it via outputs
+      python_version: ${{ env.PYTHON_VERSION }}
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
@@ -72,7 +74,7 @@ jobs:
       name: Extract requirements from Zenodo and test the forks
       repository: ${{ needs.prepare.outputs.base_repository }}
       disable-codestyle-checks: true
-      python-version: 3.14.2
+      python-version: ${{ needs.prepare.outputs.python_version }}
       patches: ${{ needs.prepare.outputs.patches }}
       patch-mode: "pinned"
       test-mode: "stop-on-success" # do not run unpatched tests if the patches are ok
