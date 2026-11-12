@@ -130,12 +130,32 @@ class PyPIClient(BasePyPIClient):
 
         return non_yanked_versions
 
+    @override
+    def download_package(self, package_name: str, version: str, destination: Path):
+        # Fetch the release files directly instead of using pip download, which
+        # needs to build sdist metadata (and fails without the build backend)
+        # and only picks the wheel matching the current platform.
+        import hashlib
 
-class GitLabPyPIClient(PyPIClient):
+        import httpx
+
+        url = f"{self.base_url}/pypi/{package_name}/{version}/json"
+        response = httpx.get(url)
+        response.raise_for_status()
+
+        for file in response.json()["urls"]:
+            content = httpx.get(file["url"], follow_redirects=True).raise_for_status().content
+            expected_sha256 = file.get("digests", {}).get("sha256")
+            if expected_sha256 and hashlib.sha256(content).hexdigest() != expected_sha256:
+                raise RuntimeError(f"Checksum mismatch for {file['filename']}")
+            (destination / file["filename"]).write_bytes(content)
+
+
+class GitLabPyPIClient(BasePyPIClient):
 
     @override
     def get_package_versions(self, package_name: str) -> list[str]:
-        versions = subprocess.check_output(
+        result = subprocess.run(
             [
                 "pip",
                 "index",
@@ -149,5 +169,13 @@ class GitLabPyPIClient(PyPIClient):
                 f"{self.base_url}/simple",
             ],
             text=True,
+            capture_output=True,
         )
-        return json.loads(versions)["versions"]
+        if result.returncode != 0:
+            # package has not been uploaded to the registry yet
+            if "No matching distribution found" in result.stderr:
+                return []
+            raise subprocess.CalledProcessError(
+                result.returncode, result.args, result.stdout, result.stderr
+            )
+        return json.loads(result.stdout)["versions"]
