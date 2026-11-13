@@ -262,6 +262,11 @@ packages:
     features:
       - name: oarepo-feature-importlib
         base: v3.1.0
+        invenio-version: "<3.1.3"
+      - name: oarepo-feature-importlib-from-3.1.3
+        base: v3.1.3
+        invenio-version: ">=3.1.3"
+      
 
   - name: citeproc-py-styles
     features:
