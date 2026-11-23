@@ -39,6 +39,10 @@ packages:
       - name: oarepo-feature-multiple-ui-changes-from-6.0.2
         base: v6.0.2
         invenio-version: ">=6.0.2"
+      # TinyMCE 6 -> HugeRTE backport; upstream switched in 8.0.0
+      - name: oarepo-feature-hugerte-from-6.1.1
+        base: v6.1.1
+        invenio-version: ">=6.1.1,<8.0.0"
 
   - name: invenio-app-rdm
     entrypoints:
@@ -145,6 +149,10 @@ packages:
       - name: oarepo-feature-request-view-from-14.0.0
         base: v14.0.0
         invenio-version: ">=14.0.0"
+      # TinyMCE 6 -> HugeRTE backport; upstream switched in 15.0.0b7.dev0
+      - name: oarepo-feature-hugerte-from-14.0.6
+        base: v14.0.6
+        invenio-version: ">=14.0.6,<15.0.0b7.dev0"
 
   - name: invenio-rdm-records
     features:
@@ -169,6 +177,10 @@ packages:
         base: v32.0.0
       - name: oarepo-feature-file-modification-uppy
         base: v32.0.0
+      # TinyMCE 6 -> HugeRTE backport; upstream switched in 37.0.0
+      - name: oarepo-feature-hugerte-from-32.2.2
+        base: v32.2.2
+        invenio-version: ">=32.2.2,<37.0.0"
       # - name: oarepo-feature-pin-commonmeta
       #   base: v32.3.2
     entrypoints:
@@ -214,6 +226,10 @@ packages:
       - name: oarepo-feature-administration-in-tests-from-28.2.0
         base: v28.2.0
         invenio-version: ">=28.2.0"
+      # TinyMCE 6 -> HugeRTE backport; upstream switched in 30.0.0
+      - name: oarepo-feature-hugerte-from-28.3.0
+        base: v28.3.0
+        invenio-version: ">=28.3.0,<30.0.0"
 
   - name: invenio-drafts-resources
     depends:
@@ -252,6 +268,10 @@ packages:
       - name: oarepo-feature-refresh-and-configs
         base: v10.0.1
         invenio-version: "<12.3.0"
+      # TinyMCE 6 -> HugeRTE backport; upstream switched in 16.0.0
+      - name: oarepo-feature-hugerte-from-14.1.1
+        base: v14.1.1
+        invenio-version: ">=14.1.1,<16.0.0"
 
   - name: invenio-jsonschemas
     features:
