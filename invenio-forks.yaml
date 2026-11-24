@@ -168,7 +168,7 @@ packages:
         invenio-version: ">=37.0.3"
       - name: oarepo-feature-file-modification-uppy
         base: v32.0.0
-        invenio-version: ">=32.0.0"
+        invenio-version: "<37.0.3"
       - name: oarepo-feature-file-modification-uppy-from-37.0.3
         base: v37.0.3
         invenio-version: ">=37.0.3"
