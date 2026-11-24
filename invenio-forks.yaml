@@ -166,6 +166,12 @@ packages:
       - name: oarepo-feature-review-before-doi-assign-from-37.0.3
         base: v37.0.3
         invenio-version: ">=37.0.3"
+      - name: oarepo-feature-file-modification-uppy
+        base: v32.0.0
+        invenio-version: ">=32.0.0"
+      - name: oarepo-feature-file-modification-uppy-from-37.0.3
+        base: v37.0.3
+        invenio-version: ">=37.0.3"
       - name: oarepo-feature-kwargs
         base: v19.5.4
       - name: oarepo-feature-pids-component-permission-check-args
@@ -173,8 +179,6 @@ packages:
       - name: oarepo-feature-review-service-components
         base: v22.7.3
       - name: oarepo-feature-quota-drop-parent-fk
-        base: v32.0.0
-      - name: oarepo-feature-file-modification-uppy
         base: v32.0.0
       # - name: oarepo-feature-pin-commonmeta
       #   base: v32.3.2
