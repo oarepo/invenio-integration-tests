@@ -39,6 +39,9 @@ packages:
       - name: oarepo-feature-multiple-ui-changes-from-6.0.2
         base: v6.0.2
         invenio-version: ">=6.0.2"
+      - name: oarepo-feature-multiple-ui-changes-from-8.0.1
+        base: v8.0.1
+        invenio-version: ">=8.0.1"
 
   - name: invenio-app-rdm
     entrypoints:
