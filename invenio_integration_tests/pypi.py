@@ -35,9 +35,9 @@ class BasePyPIClient(abc.ABC):
             self.base_url = self.base_url[:-1]
 
     def list_packages(self) -> set[str]:
-        import httpx
+        import httpx2
 
-        response = httpx.get(f"{self.base_url}/simple")
+        response = httpx2.get(f"{self.base_url}/simple")
         response.raise_for_status()
         parser = PackageParser()
         parser.feed(response.text)
@@ -109,11 +109,11 @@ class PyPIClient(BasePyPIClient):
 
     @override
     def get_package_versions(self, package_name: str) -> list[str]:
-        import httpx
+        import httpx2
 
         # PyPI JSON API endpoint
         url = f"{self.base_url}/pypi/{package_name}/json"
-        response = httpx.get(url)
+        response = httpx2.get(url)
         response.raise_for_status()
         data = response.json()
 
@@ -137,14 +137,14 @@ class PyPIClient(BasePyPIClient):
         # and only picks the wheel matching the current platform.
         import hashlib
 
-        import httpx
+        import httpx2
 
         url = f"{self.base_url}/pypi/{package_name}/{version}/json"
-        response = httpx.get(url)
+        response = httpx2.get(url)
         response.raise_for_status()
 
         for file in response.json()["urls"]:
-            content = httpx.get(file["url"], follow_redirects=True).raise_for_status().content
+            content = httpx2.get(file["url"], follow_redirects=True).raise_for_status().content
             expected_sha256 = file.get("digests", {}).get("sha256")
             if expected_sha256 and hashlib.sha256(content).hexdigest() != expected_sha256:
                 raise RuntimeError(f"Checksum mismatch for {file['filename']}")
